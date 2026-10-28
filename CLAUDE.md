@@ -16,9 +16,9 @@ App web instalable (PWA, React 19 + TypeScript + Vite) de Adam para practicar ex
 - `src/banco/<examen>/*.ts`: ejercicios; cada archivo exporta una lista y se suma en `src/banco/index.ts` (`BANCO`, `partesDe`, `destrezasDe`).
 - `src/motor/corregir.ts`: corrección pura (`normaliza`, `corrigeEjercicio` con `aciertos`/`total`/`pendientes`, `cuentaPalabras`, `palabrasRedaccion`); redacción y speaking no se corrigen solos (`evaluable: false`). `src/motor/examen.ts`: montar examen/parte y «vistos» en localStorage.
 - `src/pantallas/`: Inicio → Ejercicio (reloj, huecos tocables, entradas) → Resultado (texto corregido en verde/rojo y explicaciones).
-- `src/componentes/`: `TextoHuecos`, `Temporizador`, `Instalar` (guía de añadir a inicio en iPhone/Android), `Redaccion` (writing: contador, elegir tarea, enviar a Adam, modelo y criterios), `Hablar` (speaking: reloj por fases, grabar con el micro, hoja de ideas).
+- `src/componentes/`: `TextoHuecos`, `Temporizador`, `Instalar` (guía de añadir a inicio en iPhone/Android), `Redaccion` (writing: contador, elegir N tareas, réplicas del diálogo de la PAU, enviar a Adam, modelo y criterios), `Hablar` (speaking: reloj por fases, grabar con el micro, hoja de ideas), `VerdaderoFalso` (PAU 1: TRUE/FALSE + prueba copiada).
 - `src/motor/entregas.ts`: palabras por bandas, texto para compartir, entregas en localStorage, compartir (Web Share → portapapeles + WhatsApp).
-- `scripts/iconos.py`: iconos de `public/` con Pillow.
+- `scripts/iconos.py`: iconos de `public/` con Pillow. `public/img/`: logo de Kate (`logo.png`, fondo transparente) y las 5 viñetas de nota (`nota-1..5.jpg`, de «WTF» a «At least you listen to me!», elegidas por `vinetaDe` en `corregir.ts` según el porcentaje). Vienen de las imágenes que dejó Adam en Descargas (28/10).
 - Audios del listening: `node scripts/exportar-guiones.mjs` (guiones del banco → `salida/guiones.json`) y `python scripts/audios.py` (edge-tts + ffmpeg → `public/audio/<id>.mp3`, con caché en `node_modules/.cache/english-lab/tts`; `--forzar` rehace). `src/componentes/Reproductor.tsx` los reproduce o, si faltan, lee el guion con la voz del móvil.
 - `scripts/capturas.mjs`: capturas para los bocetos del loop (playwright-core fuera del repo, variable `PLAYWRIGHT_CORE`).
 

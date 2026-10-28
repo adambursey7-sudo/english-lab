@@ -24,9 +24,12 @@ export function Inicio({ onEmpezar }: { onEmpezar: (lista: Ejercicio[]) => void 
     <div className="app">
       <header className="cabecera">
         <div className="cabecera-dentro">
-          <div>
-            <div className="sub">English Lab</div>
-            <div className="titulo">¿Qué practicamos hoy?</div>
+          <div className="marca">
+            <img className="logo" src={`${import.meta.env.BASE_URL}img/logo.png`} alt="Kate’s English Academy" width="56" height="56" />
+            <div>
+              <div className="sub">English Lab</div>
+              <div className="titulo">¿Qué practicamos hoy?</div>
+            </div>
           </div>
         </div>
       </header>

@@ -1,11 +1,12 @@
 import { useState } from 'react';
 import type { Ejercicio, Item, Respuestas } from '../banco/tipos';
-import { NOMBRES_EXAMEN, TIPOS_EVALUABLES } from '../banco/tipos';
+import { NOMBRES_EXAMEN, TIPOS_EVALUABLES, etiquetaParte } from '../banco/tipos';
 import { EntradaHablar } from '../componentes/Hablar';
 import { EntradaRedaccion } from '../componentes/Redaccion';
 import { Reproductor } from '../componentes/Reproductor';
 import { Temporizador } from '../componentes/Temporizador';
 import { TextoHuecos } from '../componentes/TextoHuecos';
+import { EntradaVerdaderoFalso } from '../componentes/VerdaderoFalso';
 import { comunesDe, cuentaPalabras, letra } from '../motor/corregir';
 import { guardarEntrega } from '../motor/entregas';
 
@@ -21,10 +22,15 @@ interface Props {
 export function PantallaEjercicio({ ejercicio, posicion, respuestas, onCambia, onSiguiente, onSalir }: Props) {
   const [activo, setActivo] = useState<number | null>(null);
   const [confirmarSalida, setConfirmarSalida] = useState(false);
-  // Con «elige 1 de 3», la tarea abierta: la que ya tenga texto o la que se elija.
-  const [elegida, setElegida] = useState<number | null>(() => ejercicio.items.find((i) => (respuestas[i.n] ?? '').trim() !== '')?.n ?? null);
+  // Con «elige 1 de 3» o «3 de 5», las tareas abiertas: las que ya tengan texto o las que se elijan, hasta `elegir`.
+  const [elegidas, setElegidas] = useState<number[]>(() => ejercicio.items.filter((i) => (respuestas[i.n] ?? '').trim() !== '').map((i) => i.n));
   const contestados = ejercicio.items.filter((i) => (respuestas[i.n] ?? '').trim() !== '').length;
   const porContestar = ejercicio.elegir ?? ejercicio.items.length;
+  const cupoLleno = ejercicio.elegir !== undefined && elegidas.length >= ejercicio.elegir;
+  const quitar = (n: number) => {
+    setElegidas((l) => l.filter((x) => x !== n));
+    if ((respuestas[n] ?? '') !== '') onCambia(n, '');
+  };
   const ultimo = posicion.i === posicion.total;
   const seCorrige = ejercicio.items.some((i) => TIPOS_EVALUABLES.has(i.tipo));
 
@@ -47,7 +53,7 @@ export function PantallaEjercicio({ ejercicio, posicion, respuestas, onCambia, o
               {NOMBRES_EXAMEN[ejercicio.examen]}
               {posicion.total > 1 ? ` · ${posicion.i} de ${posicion.total}` : ''}
             </div>
-            <div className="titulo">Part {ejercicio.parte} · {ejercicio.nombreParte}</div>
+            <div className="titulo">{etiquetaParte(ejercicio.examen, ejercicio.parte)} · {ejercicio.nombreParte}</div>
           </div>
           <Temporizador minutos={ejercicio.minutos} />
         </div>
@@ -67,7 +73,8 @@ export function PantallaEjercicio({ ejercicio, posicion, respuestas, onCambia, o
                 const item = ejercicio.items.find((i) => i.n === n);
                 const valor = respuestas[n] ?? '';
                 const conLetra = item?.tipo === 'opciones' || item?.tipo === 'emparejar';
-                const mostrado = conLetra ? (valor === '' ? '' : letra(Number(valor))) : valor;
+                // En el diálogo de la PAU la réplica puede ser larga: en el hueco se enseña recortada.
+                const mostrado = conLetra ? (valor === '' ? '' : letra(Number(valor))) : valor.length > 34 ? `${valor.slice(0, 32).trimEnd()}…` : valor;
                 return (
                   <>
                     <button type="button" className={`hueco${activo === n ? ' activo' : ''}${item?.tipo === 'emparejar' ? ' parrafo' : ''}`} onClick={() => irA(n)} aria-label={`Hueco ${n}`}>
@@ -144,8 +151,10 @@ export function PantallaEjercicio({ ejercicio, posicion, respuestas, onCambia, o
                 onCambia={(v) => onCambia(item.n, v)}
                 comunes={comunesDe(ejercicio, item)}
                 elegible={ejercicio.elegir !== undefined}
-                abierta={ejercicio.elegir === undefined || elegida === item.n}
-                onElegir={() => setElegida(item.n)}
+                abierta={ejercicio.elegir === undefined || elegidas.includes(item.n)}
+                cupoLleno={cupoLleno}
+                onElegir={() => setElegidas((l) => (l.includes(item.n) ? l : [...l, item.n]))}
+                onQuitar={() => quitar(item.n)}
               />
             </div>
           ))}
@@ -176,10 +185,12 @@ interface PropsItem {
   comunes?: string[];
   elegible?: boolean;
   abierta?: boolean;
+  cupoLleno?: boolean;
   onElegir?: () => void;
+  onQuitar?: () => void;
 }
 
-function ItemEntrada({ item, valor, onCambia, comunes = [], elegible, abierta, onElegir }: PropsItem) {
+function ItemEntrada({ item, valor, onCambia, comunes = [], elegible, abierta, cupoLleno, onElegir, onQuitar }: PropsItem) {
   if (item.tipo === 'emparejar') {
     const cortas = comunes.every((o) => o.length <= 24);
     return (
@@ -273,16 +284,15 @@ function ItemEntrada({ item, valor, onCambia, comunes = [], elegible, abierta, o
   }
 
   if (item.tipo === 'redaccion') {
-    return <EntradaRedaccion item={item} valor={valor} onCambia={onCambia} elegible={elegible} abierta={abierta} onElegir={onElegir} />;
+    return <EntradaRedaccion item={item} valor={valor} onCambia={onCambia} elegible={elegible} abierta={abierta} cupoLleno={cupoLleno} onElegir={onElegir} onQuitar={onQuitar} />;
   }
 
   if (item.tipo === 'hablar') {
     return <EntradaHablar item={item} valor={valor} onCambia={onCambia} />;
   }
 
-  if (item.tipo !== 'transformacion') {
-    // Verdadero/falso de la PAU tiene pantalla propia (bloque 3 del loop).
-    return <p className="silencio">Este tipo de ejercicio llega en una próxima versión.</p>;
+  if (item.tipo === 'verdaderoFalso') {
+    return <EntradaVerdaderoFalso item={item} valor={valor} onCambia={onCambia} />;
   }
 
   const palabras = cuentaPalabras(valor);

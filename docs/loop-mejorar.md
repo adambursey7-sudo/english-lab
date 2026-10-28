@@ -151,13 +151,11 @@ Telegram con el enlace de los bocetos y cómo probarlo en el iPhone. Parar el lo
   y 2 del examen 1 con audio). **Bloque 2 cerrado.**
 - Vuelta 7 (28/10): 3c hecho (Listening Parts 3 y 4 del examen 1 con audio; listas por tarea en el modelo).
 - Vuelta 8 (28/10): 3a hecho (Reading Parts 5 y 8). **Examen 1 de C1 completo en las cuatro destrezas.**
-- Vuelta 9 (28/10): **PARADA por Adam a mitad** («para el loop»). Quedó hecho y con commit: banco de la PAU
-  examen 1 entero (`src/banco/pau/examen-1.ts`: texto + preguntas 1–3, diálogo, 5 situaciones, 2 redacciones),
-  `etiquetaParte` («Pregunta N» en la PAU) y el inicio elige la destreza válida al cambiar de examen. **Falta de
-  3e:** pantalla de verdadero/falso con prueba copiada (hoy sale el aviso «llega en una próxima versión»), elegir
-  3 de 5 situaciones (hoy solo se abre una), cuadro compacto para las réplicas del diálogo, etiqueta en las
-  pantallas de Ejercicio/Resultado y en el script de capturas. **Siguiente al reanudar: terminar 3e.** Después:
-  bloque 4 (diseño B), 5 (PDF), 6 (más exámenes), 7, 8.
+- Vuelta 9 (28/10): parada por Adam a mitad y **reanudada el mismo día**: 3e hecho (pantalla de verdadero/falso,
+  elegir 3 de 5, diálogo compacto, etiquetas «Pregunta N», capturas de la PAU). Encargo de Adam a mitad de vuelta,
+  hecho: logo de Kate en el inicio y 5 viñetas de nota en la corrección (`public/img/`). **Examen 1 de la PAU
+  completo. Bloque 3 cerrado.** Siguiente: bloque 4 (diseño B «aula moderna»), 5 (PDF), 6 (más exámenes), 7, 8.
+  Pendiente de Adam: nombre de la app (el logo dice «Kate’s English Academy»).
 
 ## Decisiones de Adam
 - 28/10 (vuelta 1): **estilo B «aula moderna» para la app y C «examen oficial» para el cuadernillo en PDF**, como
@@ -298,3 +296,25 @@ Telegram con el enlace de los bocetos y cómo probarlo en el iPhone. Parar el lo
   secciones de 180–200 palabras.
 - Capturas: `docs/loop-mejorar/capturas/3a/`.
 - Cómo probarlo: Inicio → Reading & Use of English → «Montar un examen completo · 90 min» recorre las 8 partes.
+
+### Vuelta 9 · 3e. PAU examen 1 completo (+ logo y viñetas de Kate)
+- Hecho: `src/componentes/VerdaderoFalso.tsx` (TRUE/FALSE + prueba copiada; respuesta «TRUE\\nprueba»). `Ejercicio.tsx`:
+  `elegidas` (N tareas, cupo lleno, «Cambiar» quita y borra), hueco recortado para réplicas largas, etiqueta con
+  `etiquetaParte`. `Redaccion.tsx`: réplicas (`dialogue`) y situaciones en cuadro compacto `.campo.replica`,
+  «Elegir esta situación», `ResultadoReplica`. `TextoHuecos.tsx`: líneas de diálogo con el hablante en negrita.
+  `Resultado.tsx`: viñeta de Kate (`vinetaDe`, `FRASES_VINETA` en `corregir.ts`), afirmación y matiz amarillo en
+  verdadero/falso, `EnviarDialogo` (todas las réplicas juntas, `textoEjercicioParaCompartir` en `entregas.ts`), hueco
+  `.libre` para texto libre. `Inicio.tsx`: logo (`public/img/logo.png`, fondo transparente por relleno desde las
+  esquinas; variante `logo-kate-libro.jpg` guardada por si la prefiere). Viñetas `public/img/nota-1..5.jpg`
+  recortadas de la lámina de Adam (Descargas, 28/10 16:46). `scripts/capturas.mjs` recorre la PAU (`prueba/1`…).
+- Comprobado: typecheck limpio; 24 tests (nuevos: `vinetaDe`, texto del diálogo para compartir); capturas de las 4
+  partes de la PAU, inicio claro/oscuro y corrección revisadas.
+- Falló: el primer test se escribió con saltos de línea reales (heredoc de Python), arreglado; la copia de
+  playwright-core del scratchpad antiguo estaba incompleta, se usa la de `cff25d67…/scratchpad/pw`; la corrección
+  del diálogo pintaba el modelo entero dentro del texto como si fuera un fallo, arreglado en la misma vuelta.
+- Mejorable (apuntado en los bocetos): prueba copiada «contiene/contenida» en vez de igual; viñeta neutra en Writing
+  y Speaking; nombre de la app vs. logo de Kate; huecos del diálogo pequeños.
+- Capturas: `docs/loop-mejorar/capturas/3e/`.
+- Cómo probarlo: Inicio → PAU · Inglés → «Preguntas 1–3»: toca TRUE/FALSE y copia la prueba; «Pregunta 4»: escribe
+  las réplicas y «Terminar» → «Enviar el diálogo a Adam»; «Pregunta 5»: elige tres situaciones. Haz un Part 1 de C1
+  y mira la viñeta de Kate según la nota.

@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { avisoPalabras, bandaPalabras, formatoReloj, textoParaCompartir } from './entregas';
+import { avisoPalabras, bandaPalabras, formatoReloj, textoEjercicioParaCompartir, textoParaCompartir } from './entregas';
 import type { Ejercicio, ItemRedaccion } from '../banco/tipos';
 
 const item: ItemRedaccion = { n: 2, tipo: 'redaccion', tipoTexto: 'review', enunciado: 'x', minPalabras: 220, maxPalabras: 260, modelo: 'm', criterios: ['c'] };
@@ -33,5 +33,14 @@ describe('reloj', () => {
     expect(formatoReloj(125)).toBe('2:05');
     expect(formatoReloj(0)).toBe('0:00');
     expect(formatoReloj(-3)).toBe('0:00');
+  });
+});
+
+describe('texto de un ejercicio entero para compartir', () => {
+  it('junta las réplicas contestadas con la etiqueta de la PAU', () => {
+    const replica = (n: number): ItemRedaccion => ({ n, tipo: 'redaccion', tipoTexto: 'dialogue', enunciado: `Hueco ${n}`, minPalabras: 2, maxPalabras: 25, modelo: 'm', criterios: [] });
+    const dialogo: Ejercicio = { id: 'd', examen: 'pau', destreza: 'prueba', parte: 4, nombreParte: 'Complete a conversation', instrucciones: '', minutos: 10, items: [replica(1), replica(2), replica(3)] };
+    const t = textoEjercicioParaCompartir(dialogo, { 1: 'Where would you like to go?', 3: ' Me too! ' });
+    expect(t).toBe(['PAU · Inglés · Pregunta 4 · Complete a conversation', '', '1. Where would you like to go?', '3. Me too!'].join('\n'));
   });
 });

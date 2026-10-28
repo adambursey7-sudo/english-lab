@@ -149,3 +149,23 @@ export function palabrasRedaccion(texto: string): number {
   const limpia = texto.trim();
   return limpia === '' ? 0 : limpia.split(/\s+/).length;
 }
+
+/** Viñeta de Kate según la nota sobre 10 (los dibujos de Adam): 1 «WTF are you doing?» (hasta 3), 2 «You must be joking» (3–4), 3 «You can do better» (5–6), 4 «Not bad, but not very good» (7–8), 5 «At least you listen to me!» (9–10). */
+export type Vineta = 1 | 2 | 3 | 4 | 5;
+
+export const FRASES_VINETA: Record<Vineta, string> = {
+  1: 'WTF are you doing?',
+  2: 'You must be joking',
+  3: 'You can do better',
+  4: 'Not bad, but not very good',
+  5: 'At least you listen to me!',
+};
+
+export function vinetaDe(porcentaje: number): Vineta {
+  const nota = porcentaje / 10;
+  if (nota >= 9) return 5;
+  if (nota >= 7) return 4;
+  if (nota >= 5) return 3;
+  if (nota > 3) return 2;
+  return 1;
+}

@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { alternativasDe, comunesDe, corrigeEjercicio, corrigeItem, cuentaPalabras, normaliza, palabrasRedaccion, textoRespuesta } from './corregir';
+import { alternativasDe, comunesDe, corrigeEjercicio, corrigeItem, cuentaPalabras, normaliza, palabrasRedaccion, textoRespuesta, vinetaDe } from './corregir';
 import { elegir, montarExamen, practicarParte } from './examen';
 import { BANCO, partesDe } from '../banco';
 import { TIPOS_EVALUABLES, type Ejercicio, type Item } from '../banco/tipos';
@@ -194,5 +194,20 @@ describe('montar exámenes', () => {
     expect(elegir([a, b], ['a'], () => 0)?.id).toBe('b');
     expect(elegir([a, b], ['b', 'a'], () => 0)?.id).toBe('b');
     expect(elegir([], [])).toBeUndefined();
+  });
+});
+
+describe('vinetaDe', () => {
+  it('elige la viñeta de Kate por la nota sobre 10', () => {
+    expect(vinetaDe(0)).toBe(1);
+    expect(vinetaDe(30)).toBe(1);
+    expect(vinetaDe(35)).toBe(2);
+    expect(vinetaDe(49)).toBe(2);
+    expect(vinetaDe(50)).toBe(3);
+    expect(vinetaDe(69)).toBe(3);
+    expect(vinetaDe(70)).toBe(4);
+    expect(vinetaDe(89)).toBe(4);
+    expect(vinetaDe(90)).toBe(5);
+    expect(vinetaDe(100)).toBe(5);
   });
 });

@@ -67,18 +67,29 @@ for (const pedido of (process.argv[4] ?? '').split(',').filter(Boolean)) {
   const [destreza, parte] = pedido.includes('/') ? pedido.split('/') : ['reading-use', pedido];
   const nombre = `07-${destreza === 'reading-use' ? 'parte' : destreza}-${parte}`;
   await pagina.goto(url, { waitUntil: 'networkidle' });
-  if (destreza !== 'reading-use') await pagina.locator('.ficha', { hasText: CHIPS[destreza] }).first().click();
-  await pagina.locator('.tarjeta', { hasText: `Part ${parte} ·` }).first().click();
+  // La PAU es otro examen: su ficha va primero. Sus partes se llaman «Preguntas 1–3» y «Pregunta N».
+  if (destreza === 'prueba') await pagina.locator('.ficha', { hasText: 'PAU' }).first().click();
+  else if (destreza !== 'reading-use') await pagina.locator('.ficha', { hasText: CHIPS[destreza] }).first().click();
+  const etiqueta = destreza === 'prueba' ? (parte === '1' ? 'Preguntas 1–3 ·' : `Pregunta ${parte} ·`) : `Part ${parte} ·`;
+  await pagina.locator('.tarjeta', { hasText: etiqueta }).first().click();
   await pagina.waitForSelector('.item');
   await foto(nombre);
   const primera = pagina.locator('.item').first();
   const letraBtn = primera.locator('.letra-btn');
-  const elegir = primera.locator('button', { hasText: 'Elegir esta tarea' });
-  if ((await letraBtn.count()) > 0) await letraBtn.nth(1).click();
-  else if ((await primera.locator('.opcion').count()) > 0) await primera.locator('.opcion').nth(1).click();
+  const elegir = primera.locator('button', { hasText: /^Elegir esta/ });
+  const corta = primera.locator('textarea.replica');
+  if ((await letraBtn.count()) > 0) {
+    await letraBtn.nth(1).click();
+    // Verdadero/falso de la PAU: además, la prueba copiada del texto.
+    if ((await corta.count()) > 0) await corta.fill('The library started with forty objects donated by local families');
+  } else if ((await primera.locator('.opcion').count()) > 0) await primera.locator('.opcion').nth(1).click();
   else if ((await elegir.count()) > 0) {
     await elegir.click();
-    await primera.locator('textarea').fill('This is a sample answer written to see how the counter and the layout behave. '.repeat(4));
+    if ((await corta.count()) > 0) await corta.fill('I don’t agree with you. Phones are really distracting, and most of us would end up chatting.');
+    else await primera.locator('textarea').fill('This is a sample answer written to see how the counter and the layout behave. '.repeat(4));
+  } else if ((await corta.count()) > 0) {
+    await corta.fill('Where would you like to go?');
+    await pagina.locator('.item').nth(1).locator('textarea').fill('how are we getting there');
   } else if ((await primera.locator('textarea').count()) > 0) {
     await primera.locator('textarea').fill('This is a sample answer written to see how the counter and the layout behave. '.repeat(4));
   } else if ((await primera.locator('.reloj-hablar .btn').count()) > 0) {

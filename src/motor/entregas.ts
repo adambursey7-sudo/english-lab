@@ -1,5 +1,5 @@
-import type { Ejercicio, ItemRedaccion } from '../banco/tipos';
-import { NOMBRES_EXAMEN } from '../banco/tipos';
+import type { Ejercicio, ItemRedaccion, Respuestas } from '../banco/tipos';
+import { NOMBRES_EXAMEN, etiquetaParte } from '../banco/tipos';
 import { palabrasRedaccion } from './corregir';
 
 /** Cómo va el número de palabras respecto a lo que pide la tarea. */
@@ -28,8 +28,18 @@ export function avisoPalabras(n: number, min: number, max: number): string {
 /** Texto que se manda a Adam (WhatsApp, compartir del móvil): qué tarea era y lo escrito. */
 export function textoParaCompartir(ejercicio: Ejercicio, item: ItemRedaccion, texto: string, nombre = ''): string {
   const quien = nombre.trim() ? `${nombre.trim()} · ` : '';
-  const cabecera = `${quien}${NOMBRES_EXAMEN[ejercicio.examen]} · Part ${ejercicio.parte} · ${ejercicio.nombreParte} (${item.tipoTexto}, tarea ${item.n})`;
+  const cabecera = `${quien}${NOMBRES_EXAMEN[ejercicio.examen]} · ${etiquetaParte(ejercicio.examen, ejercicio.parte)} · ${ejercicio.nombreParte} (${item.tipoTexto}, tarea ${item.n})`;
   return `${cabecera}\n${palabrasRedaccion(texto)} palabras\n\n${texto.trim()}`;
+}
+
+/** Todas las respuestas cortas de un ejercicio juntas (diálogo y situaciones de la PAU), para mandarlas de una vez. */
+export function textoEjercicioParaCompartir(ejercicio: Ejercicio, respuestas: Respuestas, nombre = ''): string {
+  const quien = nombre.trim() ? `${nombre.trim()} · ` : '';
+  const cabecera = `${quien}${NOMBRES_EXAMEN[ejercicio.examen]} · ${etiquetaParte(ejercicio.examen, ejercicio.parte)} · ${ejercicio.nombreParte}`;
+  const lineas = ejercicio.items
+    .filter((i): i is ItemRedaccion => i.tipo === 'redaccion' && (respuestas[i.n] ?? '').trim() !== '')
+    .map((i) => `${i.n}. ${(respuestas[i.n] ?? '').trim()}`);
+  return `${cabecera}\n\n${lineas.join('\n')}`;
 }
 
 export interface Entrega {

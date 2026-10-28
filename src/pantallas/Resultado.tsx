@@ -1,8 +1,10 @@
+import { useState } from 'react';
 import type { Ejercicio, Respuestas } from '../banco/tipos';
-import { NOMBRES_EXAMEN } from '../banco/tipos';
+import { NOMBRES_EXAMEN, etiquetaParte } from '../banco/tipos';
 import { TextoHuecos } from '../componentes/TextoHuecos';
-import { alternativasDe, comunesDe, corrigeEjercicio, letra, textoRespuesta, type ItemCorregido } from '../motor/corregir';
-import { ResultadoRedaccion } from '../componentes/Redaccion';
+import { FRASES_VINETA, alternativasDe, comunesDe, corrigeEjercicio, letra, partesVerdaderoFalso, textoRespuesta, vinetaDe, type ItemCorregido } from '../motor/corregir';
+import { ResultadoRedaccion, ResultadoReplica } from '../componentes/Redaccion';
+import { compartir, textoEjercicioParaCompartir } from '../motor/entregas';
 
 interface Props {
   lista: Ejercicio[];
@@ -42,6 +44,9 @@ export function Resultado({ lista, respuestas, onRepetir, onInicio }: Props) {
           </div>
         ) : (
           <div className="hoja nota-grande">
+            <div className="vineta-nota">
+              <img src={`${import.meta.env.BASE_URL}img/nota-${vinetaDe(porcentaje)}.jpg`} alt={FRASES_VINETA[vinetaDe(porcentaje)]} />
+            </div>
             <div className="cifra">
               {aciertos} <span>de {total}</span>
             </div>
@@ -54,7 +59,7 @@ export function Resultado({ lista, respuestas, onRepetir, onInicio }: Props) {
         {corregidos.map((c) => (
           <section key={c.ejercicio.id} style={{ display: 'grid', gap: 12 }}>
             <h2>
-              Part {c.ejercicio.parte} · {c.ejercicio.nombreParte}
+              {etiquetaParte(c.ejercicio.examen, c.ejercicio.parte)} · {c.ejercicio.nombreParte}
               {c.total > 0 && <span className="silencio"> · {c.aciertos}/{c.total}</span>}
             </h2>
 
@@ -67,6 +72,11 @@ export function Resultado({ lista, respuestas, onRepetir, onInicio }: Props) {
                     const ic = c.items.find((x) => x.item.n === n);
                     if (!ic) return null;
                     const it = ic.item;
+                    // Réplica del diálogo (PAU): texto libre, no hay bien ni mal; en el hueco va lo que escribió, recortado.
+                    if (it.tipo === 'redaccion') {
+                      const escrito = ic.respuesta.trim();
+                      return <span className="hueco libre"><span className="num">{n}</span>{escrito ? (escrito.length > 34 ? `${escrito.slice(0, 32).trimEnd()}…` : escrito) : '……'}</span>;
+                    }
                     const conLetra = it.tipo === 'opciones' || it.tipo === 'emparejar';
                     const tuya = conLetra ? (ic.respuesta === '' ? '' : letra(Number(ic.respuesta))) : ic.respuesta;
                     const buena = it.tipo === 'opciones' || it.tipo === 'emparejar' ? letra(it.correcta) : ic.solucion;
@@ -109,8 +119,15 @@ export function Resultado({ lista, respuestas, onRepetir, onInicio }: Props) {
               </details>
             )}
 
+            {c.ejercicio.items.some((i) => i.tipo === 'redaccion' && i.tipoTexto === 'dialogue') && (
+              <EnviarDialogo ejercicio={c.ejercicio} respuestas={respuestas[c.ejercicio.id] ?? {}} />
+            )}
+
             <div className="items">
               {c.items.map((ic) => {
+                if (ic.item.tipo === 'redaccion' && ic.item.tipoTexto === 'dialogue') {
+                  return <ResultadoReplica key={ic.item.n} item={ic.item} texto={ic.respuesta} />;
+                }
                 if (ic.item.tipo === 'redaccion') {
                   if (c.ejercicio.elegir !== undefined && ic.respuesta.trim() === '') return null;
                   return <ResultadoRedaccion key={ic.item.n} ejercicio={c.ejercicio} item={ic.item} texto={ic.respuesta} />;
@@ -138,14 +155,37 @@ export function Resultado({ lista, respuestas, onRepetir, onInicio }: Props) {
   );
 }
 
+/** Diálogo de la PAU: un solo botón para mandarle a Adam todas las réplicas juntas. */
+function EnviarDialogo({ ejercicio, respuestas }: { ejercicio: Ejercicio; respuestas: Respuestas }) {
+  const [aviso, setAviso] = useState('');
+  const escritas = ejercicio.items.filter((i) => i.tipo === 'redaccion' && (respuestas[i.n] ?? '').trim() !== '').length;
+  if (escritas === 0) return <p className="silencio pequeno">No has escrito ninguna réplica. Abajo tienes una respuesta modelo para cada hueco.</p>;
+  const enviar = async () => {
+    const que = await compartir(textoEjercicioParaCompartir(ejercicio, respuestas), 'English Lab · diálogo');
+    setAviso(que === 'compartido' ? 'Enviado.' : que === 'copiado' ? 'Texto copiado y WhatsApp abierto: pégalo en el chat de Adam.' : 'No se pudo compartir: copia el texto a mano.');
+  };
+  return (
+    <div className="fila" style={{ display: 'flex', flexWrap: 'wrap', gap: 8, alignItems: 'center' }}>
+      <button type="button" className="btn chico" onClick={enviar}>Enviar el diálogo a Adam</button>
+      <span className="silencio pequeno">{aviso || `${escritas} de ${ejercicio.items.length} réplicas. Compáralas con el modelo mientras Adam las corrige.`}</span>
+    </div>
+  );
+}
+
 function ResultadoItem({ ic, comunes = [] }: { ic: ItemCorregido; comunes?: string[] }) {
   const tuya = textoRespuesta(ic, comunes);
   const buena = ic.item.tipo === 'opciones' ? `${letra(ic.item.correcta)} ${ic.solucion}` : ic.solucion;
   const alternativas = alternativasDe(ic.item);
+  // Verdadero/falso: acertar TRUE/FALSE sin la prueba (o con una prueba que no vale) no puntúa en la PAU; se avisa.
+  const matizVF = ic.item.tipo === 'verdaderoFalso' && !ic.correcto && partesVerdaderoFalso(ic.respuesta).valor === ic.item.correcta
+    ? (partesVerdaderoFalso(ic.respuesta).prueba.trim() === '' ? 'TRUE/FALSE bien, pero sin prueba copiada no puntúa.' : 'TRUE/FALSE bien, pero la prueba copiada no es la que lo demuestra.')
+    : '';
   return (
     <div className={`resultado-item${ic.correcto ? '' : ' mal'}`}>
       {ic.item.pregunta && ic.item.tipo !== 'emparejar' && <p className="pregunta">{ic.item.pregunta}</p>}
       {ic.item.pregunta && ic.item.tipo === 'emparejar' && !/^Gap \d+$/.test(ic.item.pregunta) && <p className="pregunta">{ic.item.pregunta}</p>}
+      {ic.item.tipo === 'verdaderoFalso' && <p className="afirmacion">{ic.item.afirmacion}</p>}
+      {matizVF && <span className="matiz">{matizVF}</span>}
       <div className="fila">
         <span className="num" style={{ fontWeight: 700 }}>{ic.item.n}</span>
         <span className={`marca ${ic.correcto ? 'ok' : 'ko'}`}>{ic.correcto ? '✓' : '✗'}</span>

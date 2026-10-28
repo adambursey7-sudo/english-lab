@@ -268,3 +268,30 @@ input { font: inherit; color: inherit; }
 .aviso .cerrar { justify-self: end; }
 
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+
+/* PAU: verdadero/falso con prueba, réplicas del diálogo y situaciones (vuelta 9) */
+.vf { display: grid; gap: 10px; }
+.vf-botones .letra-btn { font-size: 15px; letter-spacing: 0.06em; min-width: 92px; }
+.letra-btn[aria-pressed='true'] { border-color: var(--ink); background: var(--marker); color: var(--marker-ink); }
+.campo.replica { min-height: 56px; line-height: 1.5; resize: vertical; font-family: var(--body); font-size: 16px; }
+.fila-contador { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.replica-item .cabeza { align-items: baseline; }
+.replica-item .pregunta.pequeno { font-size: 14px; color: var(--ink2); }
+.texto .dialogo { display: grid; gap: 6px; }
+.texto .dialogo .linea { display: block; }
+.texto .hablante { font-weight: 700; color: var(--ink2); }
+.resultado-item .afirmacion { font-size: 15.5px; }
+.resultado-item .matiz { font-size: 14px; color: var(--marker-ink); background: var(--marker); padding: 2px 8px; border-radius: 4px; justify-self: start; }
+.resultado-replica { display: grid; gap: 4px; padding: 8px 12px; border-left: 3px solid var(--ink2); background: var(--paper2); border: 1px solid var(--line); border-left-width: 3px; border-radius: 0 8px 8px 0; }
+.resultado-replica .fila { display: flex; gap: 10px; align-items: baseline; flex-wrap: wrap; }
+.resultado-replica .modelo-corto { font-family: var(--display); font-size: 15.5px; color: var(--ok); }
+.resultado-replica .explica { font-size: 14px; color: var(--ink2); }
+
+/* Logo en el inicio (Kate) */
+.marca { display: flex; align-items: center; gap: 12px; min-width: 0; }
+.marca .logo { width: 56px; height: 56px; border-radius: 50%; flex: none; object-fit: contain; background: #fff; }
+
+/* Nota con la viñeta de Kate: de «WTF» (1) a «At least you listen to me» (5) */
+.vineta-nota { border-radius: var(--radio); overflow: hidden; border: 1px solid var(--line); background: var(--paper2); }
+.vineta-nota img { display: block; width: 100%; height: auto; }
+.hueco.libre { border-color: var(--ink2); font-family: var(--body); font-size: 14px; text-align: left; }
