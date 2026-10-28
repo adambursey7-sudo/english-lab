@@ -140,7 +140,9 @@ Telegram con el enlace de los bocetos y cómo probarlo en el iPhone. Parar el lo
 - Vuelta 1 (28/10): 1a hecho. Página de bocetos: https://claude.ai/artifact/Qy1nZpguQL2g38Msth8XpA (republicar al
   mismo enlace; copiar `docs/loop-mejorar/bocetos/` y las capturas al scratchpad de la sesión antes de publicar).
   Avisado Adam por Telegram para que elija estilo (A cuaderno, B aula moderna [recomendado], C examen oficial).
-  Adam confirma B para la app y C para el PDF. **Siguiente: 1b (formatos de internet → `docs/formatos.md`).**
+  Adam confirma B para la app y C para el PDF.
+- Vuelta 2 (28/10): 1b hecho (`docs/formatos.md`, fuentes en `C:\dev\english-lab-fuentes\`). **Bloque 1 cerrado.**
+  **Siguiente: 2a (modelo del banco: tipos de item nuevos + tests).**
 
 ## Decisiones de Adam
 - 28/10 (vuelta 1): **estilo B «aula moderna» para la app y C «examen oficial» para el cuadernillo en PDF**, como
@@ -165,3 +167,20 @@ Telegram con el enlace de los bocetos y cómo probarlo en el iPhone. Parar el lo
   parte»; historial de resultados.
 - Capturas: `docs/loop-mejorar/capturas/1a/`.
 - Cómo probarlo: abrir la página de bocetos en el móvil y elegir estilo.
+
+### Vuelta 2 · 1b. Formatos de los exámenes
+- Hecho: bajadas a `C:\dev\english-lab-fuentes\` (fuera del repo) el manual del C1 Advanced de Cambridge (94 págs.,
+  texto extraído con pypdf a `handbook.txt`) y, de la PAU de Canarias, el modelo 2026, el modelo resuelto, los exámenes
+  de junio (ciencias) y julio de 2026 y los criterios de corrección 2026-27. `docs/formatos.md`: tablas de las 8 partes
+  de Reading & Use (preguntas, puntos, longitud de textos), Writing (tareas, escalas de corrección, enunciado tipo del
+  essay), Listening (4 partes, guion completo del supervisor con pausas y «twice», instrucciones impresas), Speaking
+  (tiempos y frases del interlocutor), y las 6 preguntas de la PAU con enunciados oficiales y criterios de calificación
+  al detalle (lo que vale 0). Mapa del banco: PAU como destreza única `prueba` con 6 partes (1–3 comparten texto en un
+  ejercicio con tres bloques); `examenNumero` en cada ejercicio para montar exámenes enteros en PDF. Entrada en los
+  bocetos con el mapa del banco en SVG.
+- Comprobado: nada de código tocado; typecheck y tests iguales.
+- Falló: el manual no se podía leer por WebFetch (pesa 16 MB); se bajó con curl y se extrajo con pypdf.
+- Decisiones para el bloque 2: banda estimada del C1 por porcentaje (≥ 80 A, 70–79 B, 60–69 C, 45–59 B2); fotos del
+  Speaking como dibujos o descripciones; PAU 4–6 con respuesta modelo y rúbrica, sin corrección automática.
+- Capturas: ninguna (sin UI); mapa en los bocetos.
+- Cómo probarlo: leer `docs/formatos.md`; en los bocetos, el mapa de la vuelta 2.
