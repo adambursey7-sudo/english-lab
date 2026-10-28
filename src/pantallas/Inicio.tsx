@@ -37,7 +37,7 @@ export function Inicio({ onEmpezar }: { onEmpezar: (lista: Ejercicio[]) => void 
       <header className="cabecera aula">
         <div className="cabecera-dentro">
           <div className="marca">
-            <img className="logo" src={`${import.meta.env.BASE_URL}img/logo.png`} alt="Kate’s English Academy" width="56" height="56" />
+            <img className="logo" src={`${import.meta.env.BASE_URL}img/logo.png`} alt="Aprende Inglés con Kate" width="60" height="70" />
             <div>
               <div className="sub">English Lab</div>
               <div className="titulo">¿Qué practicamos hoy?</div>

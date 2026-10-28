@@ -311,8 +311,8 @@ Telegram con el enlace de los bocetos y cómo probarlo en el iPhone. Parar el lo
   «Elegir esta situación», `ResultadoReplica`. `TextoHuecos.tsx`: líneas de diálogo con el hablante en negrita.
   `Resultado.tsx`: viñeta de Kate (`vinetaDe`, `FRASES_VINETA` en `corregir.ts`), afirmación y matiz amarillo en
   verdadero/falso, `EnviarDialogo` (todas las réplicas juntas, `textoEjercicioParaCompartir` en `entregas.ts`), hueco
-  `.libre` para texto libre. `Inicio.tsx`: logo (`public/img/logo.png`, fondo transparente por relleno desde las
-  esquinas; variante `logo-kate-libro.jpg` guardada por si la prefiere). Viñetas `public/img/nota-1..5.jpg`
+  `.libre` para texto libre. `Inicio.tsx`: logo (`public/img/logo.png`; desde el 28/10 noche es la lámina «Aprende Inglés con Kate»
+  que eligió Adam, sin la «C» de la esquina; el redondo queda en `logo-redondo.png`). Viñetas `public/img/nota-1..5.jpg`
   recortadas de la lámina de Adam (Descargas, 28/10 16:46). `scripts/capturas.mjs` recorre la PAU (`prueba/1`…).
 - Comprobado: typecheck limpio; 24 tests (nuevos: `vinetaDe`, texto del diálogo para compartir); capturas de las 4
   partes de la PAU, inicio claro/oscuro y corrección revisadas.

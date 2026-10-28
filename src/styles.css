@@ -289,7 +289,7 @@ input { font: inherit; color: inherit; }
 
 /* Logo en el inicio (Kate) */
 .marca { display: flex; align-items: center; gap: 12px; min-width: 0; }
-.marca .logo { width: 56px; height: 56px; border-radius: 50%; flex: none; object-fit: contain; background: #fff; }
+.marca .logo { width: auto; height: 64px; border-radius: 12px; flex: none; object-fit: contain; background: #ece6da; }
 
 /* Nota con la viñeta de Kate: de «WTF» (1) a «At least you listen to me» (5) */
 .vineta-nota { border-radius: var(--radio); overflow: hidden; border: 1px solid var(--line); background: var(--paper2); }
@@ -327,7 +327,7 @@ input { font: inherit; color: inherit; }
 .cabecera.aula .sub { color: var(--navy-ink2); }
 .cabecera.aula .titulo { font-size: 22px; white-space: normal; }
 .cabecera.aula .racha { font-size: 13px; color: var(--navy-ink2); margin-top: 2px; }
-.cabecera.aula .marca .logo { width: 60px; height: 60px; box-shadow: 0 0 0 3px rgba(255,255,255,.18); }
+.cabecera.aula .marca .logo { height: 70px; box-shadow: 0 0 0 3px rgba(255,255,255,.18); }
 
 .contenido.inicio { gap: 22px; padding-top: 18px; }
 .contenido.inicio .fichas .ficha { font-weight: 600; }
