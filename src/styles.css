@@ -388,3 +388,27 @@ input { font: inherit; color: inherit; }
 .fila-botones { display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; gap: 8px; }
 .fila-botones .btn { padding-inline: 8px; font-size: 15px; }
 .cabecera.aula.compacta .sub { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+/* Intro: el vídeo del logo de Kate a pantalla completa. Fondo del mismo crema que el vídeo para que no se vea el borde
+   en pantallas apaisadas (ordenador). */
+.intro {
+  position: fixed; inset: 0; z-index: 50;
+  background: #ece6d1;
+  display: flex; align-items: center; justify-content: center;
+  opacity: 1; transition: opacity 0.45s ease;
+}
+.intro.saliendo { opacity: 0; pointer-events: none; }
+.intro-video { width: 100%; height: 100%; object-fit: contain; display: block; }
+.intro-botones {
+  position: absolute; left: 0; right: 0; bottom: calc(44px + env(safe-area-inset-bottom));
+  display: flex; justify-content: center; gap: 10px;
+}
+.intro-btn { width: auto; min-height: 44px; padding: 8px 20px; border-radius: 999px; background: #1b2742; border-color: #1b2742; color: #fff; }
+.intro-btn.sec { background: rgba(255,255,255,0.75); color: #1b2742; border-color: rgba(27,39,66,0.35); }
+.intro-credito {
+  position: absolute; left: 0; right: 0; bottom: calc(14px + env(safe-area-inset-bottom));
+  text-align: center; font-size: 11px; color: rgba(27,39,66,0.55); padding: 0 16px;
+}
+@media (prefers-reduced-motion: reduce) {
+  .intro { transition: none; }
+}

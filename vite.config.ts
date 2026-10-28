@@ -9,8 +9,8 @@ export default defineConfig(({ mode }) => ({
     react(),
     VitePWA({
       registerType: 'autoUpdate',
-      // La app entera (banco de ejercicios incluido) se guarda al instalarla: funciona sin conexión.
-      workbox: { globPatterns: ['**/*.{js,css,html,svg,png,ico,woff2}'] },
+      // La app entera (banco de ejercicios incluido y vídeo de la intro) se guarda al instalarla: funciona sin conexión.
+      workbox: { globPatterns: ['**/*.{js,css,html,svg,png,ico,woff2}', 'intro/*.mp4'] },
       manifest: {
         name: 'English Lab',
         short_name: 'English Lab',

@@ -357,3 +357,11 @@ Telegram con el enlace de los bocetos y cómo probarlo en el iPhone. Parar el lo
 - Capturas: `docs/loop-mejorar/capturas/4b/`.
 - Cómo probarlo: haz un Part 1 y corrige: pastilla con la banda, «Por qué» plegado en los aciertos y «Siguiente
   parte · Part 2» abajo.
+
+### Extra (28/10, fuera del loop) · Intro con vídeo y música
+- Hecho: `Intro.tsx` + `public/intro/intro.mp4` (vídeo del logo de Kate de Descargas, 8 s, 720p, 0,9 MB) con la música
+  «Carefree» de Kevin MacLeod (CC BY 4.0) mezclada con ffmpeg. Sale cada vez que se abre la app (móvil y PC), fondo
+  crema igual que el vídeo para el apaisado, botones «Oír» (si el navegador bloquea el sonido) y «Saltar», crédito abajo,
+  salida con fundido; vigilante de 3,5 s por si el vídeo no arranca. Precaché de la PWA ampliada al mp4.
+- Comprobado: typecheck y build limpios; en Chrome (390×844 y 1280×800) arranca con sonido y a los 8 s aparece el inicio.
+- Pendiente: probar en el iPhone (ahí seguramente arranque en silencio y haya que tocar «Oír»).

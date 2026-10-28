@@ -4,6 +4,7 @@ import { apuntarVistos } from './motor/examen';
 import { Inicio } from './pantallas/Inicio';
 import { PantallaEjercicio } from './pantallas/Ejercicio';
 import { Resultado } from './pantallas/Resultado';
+import { Intro } from './componentes/Intro';
 
 type Estado =
   | { pantalla: 'inicio' }
@@ -12,12 +13,18 @@ type Estado =
 
 export function App() {
   const [estado, setEstado] = useState<Estado>({ pantalla: 'inicio' });
+  // La intro (vídeo con música) sale cada vez que se abre la app, en el móvil y en el ordenador.
+  const [intro, setIntro] = useState(true);
   const paso = estado.pantalla === 'ejercicio' ? estado.i : -1;
 
   // Cada pantalla nueva empieza arriba del todo (si no, se hereda el scroll de la anterior).
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [estado.pantalla, paso]);
+
+  if (intro) {
+    return <Intro onFin={() => setIntro(false)} />;
+  }
 
   if (estado.pantalla === 'inicio') {
     return <Inicio onEmpezar={(lista) => setEstado({ pantalla: 'ejercicio', lista, i: 0, respuestas: {} })} />;
