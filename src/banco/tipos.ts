@@ -23,6 +23,8 @@ export interface ItemOpciones extends ItemBase {
 export interface ItemEmparejar extends ItemBase {
   tipo: 'emparejar';
   correcta: number;
+  /** Si el ejercicio tiene varias listas (`listas`), de cuál elige este item; si falta, de `opcionesComunes`. */
+  lista?: number;
   explicacion: string;
 }
 
@@ -143,6 +145,8 @@ export interface Ejercicio {
   secciones?: Seccion[];
   /** Lista común de la que eligen los items `emparejar` (A, B, C… por orden). */
   opcionesComunes?: string[];
+  /** Varias listas con título (Listening Part 4: Task One y Task Two); cada item `emparejar` dice con `lista` cuál usa. */
+  listas?: { titulo: string; opciones: string[] }[];
   /** El alumno solo responde a N de los items (Writing Part 2: 1 de 3; PAU 5: 3 de 5). */
   elegir?: number;
   audio?: Audio;

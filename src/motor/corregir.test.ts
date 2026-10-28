@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { alternativasDe, corrigeEjercicio, corrigeItem, cuentaPalabras, normaliza, palabrasRedaccion, textoRespuesta } from './corregir';
+import { alternativasDe, comunesDe, corrigeEjercicio, corrigeItem, cuentaPalabras, normaliza, palabrasRedaccion, textoRespuesta } from './corregir';
 import { elegir, montarExamen, practicarParte } from './examen';
 import { BANCO, partesDe } from '../banco';
 import { TIPOS_EVALUABLES, type Ejercicio, type Item } from '../banco/tipos';
@@ -47,6 +47,12 @@ describe('corrigeItem', () => {
     expect(corrigeItem(transformacion, 'did I realize').correcto).toBe(true);
     expect(corrigeItem(transformacion, 'I realised').correcto).toBe(false);
     expect(corrigeItem(transformacion, 'x').solucion).toBe('did I realise');
+  });
+  it('comunesDe elige la lista del item o la común', () => {
+    const e = { opcionesComunes: ['x', 'y'], listas: [{ titulo: 'Task One', opciones: ['a', 'b'] }, { titulo: 'Task Two', opciones: ['c'] }] };
+    expect(comunesDe(e, emparejar)).toEqual(['x', 'y']);
+    expect(comunesDe(e, { ...emparejar, lista: 1 })).toEqual(['c']);
+    expect(comunesDe({}, { ...emparejar, lista: 3 })).toEqual([]);
   });
   it('emparejar: elige de la lista común y la solución lleva la letra', () => {
     expect(corrigeItem(emparejar, '2', comunes).correcto).toBe(true);
@@ -134,7 +140,7 @@ describe('banco', () => {
             expect(item.opciones[item.correcta], donde).toBeDefined();
             break;
           case 'emparejar':
-            expect(e.opcionesComunes?.[item.correcta], `${donde}: falta en opcionesComunes`).toBeDefined();
+            expect(comunesDe(e, item)[item.correcta], `${donde}: falta en la lista de opciones`).toBeDefined();
             break;
           case 'palabra':
             expect(item.correctas.length, donde).toBeGreaterThan(0);

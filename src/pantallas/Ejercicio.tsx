@@ -6,7 +6,7 @@ import { EntradaRedaccion } from '../componentes/Redaccion';
 import { Reproductor } from '../componentes/Reproductor';
 import { Temporizador } from '../componentes/Temporizador';
 import { TextoHuecos } from '../componentes/TextoHuecos';
-import { cuentaPalabras, letra } from '../motor/corregir';
+import { comunesDe, cuentaPalabras, letra } from '../motor/corregir';
 import { guardarEntrega } from '../motor/entregas';
 
 interface Props {
@@ -99,6 +99,26 @@ export function PantallaEjercicio({ ejercicio, posicion, respuestas, onCambia, o
           </div>
         )}
 
+        {ejercicio.listas && (
+          <div className="hoja comunes">
+            {ejercicio.listas.map((l, k) => (
+              <div key={k} className="lista-tarea">
+                <div className="eyebrow">{l.titulo}</div>
+                {l.opciones.map((o, i) => {
+                  const usadaEn = ejercicio.items.find((it) => it.tipo === 'emparejar' && it.lista === k && respuestas[it.n] === String(i));
+                  return (
+                    <div key={i} className={`comun${usadaEn ? ' usada' : ''}`}>
+                      <span className="letra-grande">{letra(i)}</span>
+                      <span className="comun-texto">{o}</span>
+                      {usadaEn && <span className="comun-donde">→ {usadaEn.n}</span>}
+                    </div>
+                  );
+                })}
+              </div>
+            ))}
+          </div>
+        )}
+
         {ejercicio.opcionesComunes && ejercicio.opcionesComunes.some((o) => o.length > 24) && (
           <div className="hoja comunes">
             <div className="eyebrow">{ejercicio.parte === 7 && ejercicio.destreza === 'reading-use' ? 'Párrafos que faltan (sobra uno)' : 'Opciones'}</div>
@@ -122,7 +142,7 @@ export function PantallaEjercicio({ ejercicio, posicion, respuestas, onCambia, o
                 item={item}
                 valor={respuestas[item.n] ?? ''}
                 onCambia={(v) => onCambia(item.n, v)}
-                comunes={ejercicio.opcionesComunes}
+                comunes={comunesDe(ejercicio, item)}
                 elegible={ejercicio.elegir !== undefined}
                 abierta={ejercicio.elegir === undefined || elegida === item.n}
                 onElegir={() => setElegida(item.n)}
@@ -167,6 +187,7 @@ function ItemEntrada({ item, valor, onCambia, comunes = [], elegible, abierta, o
         <div className="cabeza">
           <span className="num">{item.n}</span>
           {item.pregunta && !/^Gap \d+$/.test(item.pregunta) && <span className="pregunta">{item.pregunta}</span>}
+          {item.lista !== undefined && <span className="tipo-texto">Task {item.lista + 1}</span>}
         </div>
         <div className="letras" role="group" aria-label={`Pregunta ${item.n}`}>
           {comunes.map((o, i) => {

@@ -144,6 +144,8 @@ input { font: inherit; color: inherit; }
   background: var(--ink); color: var(--paper2); font-family: var(--display); font-weight: 700; font-size: 16px;
 }
 .comunes { gap: 10px; }
+.lista-tarea { display: grid; gap: 8px; }
+.lista-tarea + .lista-tarea { padding-top: 12px; border-top: 1px solid var(--line); }
 .comun { display: grid; grid-template-columns: 30px 1fr auto; gap: 10px; align-items: start; font-size: 15.5px; line-height: 1.55; }
 .comun.usada { opacity: 0.55; }
 .comun.usada .comun-texto { text-decoration: line-through; text-decoration-color: var(--ink2); }

@@ -1,7 +1,7 @@
 import type { Ejercicio, Respuestas } from '../banco/tipos';
 import { NOMBRES_EXAMEN } from '../banco/tipos';
 import { TextoHuecos } from '../componentes/TextoHuecos';
-import { alternativasDe, corrigeEjercicio, letra, textoRespuesta, type ItemCorregido } from '../motor/corregir';
+import { alternativasDe, comunesDe, corrigeEjercicio, letra, textoRespuesta, type ItemCorregido } from '../motor/corregir';
 import { ResultadoRedaccion } from '../componentes/Redaccion';
 
 interface Props {
@@ -123,7 +123,7 @@ export function Resultado({ lista, respuestas, onRepetir, onInicio }: Props) {
                     </div>
                   );
                 }
-                return <ResultadoItem key={ic.item.n} ic={ic} comunes={c.ejercicio.opcionesComunes} />;
+                return <ResultadoItem key={ic.item.n} ic={ic} comunes={comunesDe(c.ejercicio, ic.item)} />;
               })}
             </div>
           </section>

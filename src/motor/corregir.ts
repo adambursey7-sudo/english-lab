@@ -93,8 +93,14 @@ export interface EjercicioCorregido {
   pendientes: number;
 }
 
+/** La lista de la que elige un item `emparejar`: la suya (`listas[lista]`) o la común del ejercicio. */
+export function comunesDe(ejercicio: Pick<Ejercicio, 'opcionesComunes' | 'listas'>, item: Item): string[] {
+  if (item.tipo === 'emparejar' && item.lista !== undefined) return ejercicio.listas?.[item.lista]?.opciones ?? [];
+  return ejercicio.opcionesComunes ?? [];
+}
+
 export function corrigeEjercicio(ejercicio: Ejercicio, respuestas: Respuestas): EjercicioCorregido {
-  const items = ejercicio.items.map((item) => corrigeItem(item, respuestas[item.n], ejercicio.opcionesComunes));
+  const items = ejercicio.items.map((item) => corrigeItem(item, respuestas[item.n], comunesDe(ejercicio, item)));
   const evaluables = items.filter((i) => i.evaluable);
   return {
     ejercicio,

@@ -148,8 +148,9 @@ Telegram con el enlace de los bocetos y cómo probarlo en el iPhone. Parar el lo
 - Vuelta 5 (28/10): 2c hecho (Writing y Speaking) **y con ello 3b y 3d también** (examen 1 de Writing y Speaking
   escritos).
 - Vuelta 6 (28/10): 2d hecho (reproductor, respaldo de voz, generador de mp3) y la mitad de 3c (Listening Parts 1
-  y 2 del examen 1 con audio). **Bloque 2 cerrado.** **Siguiente: 3c (Listening Parts 3 y 4 del examen 1 con
-  audio).** Después: 3a (Reading Parts 5 y 8), 3e (PAU), bloque 4.
+  y 2 del examen 1 con audio). **Bloque 2 cerrado.**
+- Vuelta 7 (28/10): 3c hecho (Listening Parts 3 y 4 del examen 1 con audio; listas por tarea en el modelo).
+  **Siguiente: 3a (Reading Parts 5 y 8 del examen 1).** Después: 3e (PAU examen 1), bloque 4 (diseño B).
 
 ## Decisiones de Adam
 - 28/10 (vuelta 1): **estilo B «aula moderna» para la app y C «examen oficial» para el cuadernillo en PDF**, como
@@ -265,3 +266,17 @@ Telegram con el enlace de los bocetos y cómo probarlo en el iPhone. Parar el lo
 - Capturas: `docs/loop-mejorar/capturas/2d/`.
 - Cómo probarlo: Inicio → Listening → Part 1: play, se oye al supervisor y los tres extractos (dos veces cada uno).
   Para regenerar audios: `node scripts/exportar-guiones.mjs` y `python scripts/audios.py` (`--forzar` para rehacer).
+
+### Vuelta 7 · 3c. Listening Parts 3 y 4
+- Hecho: modelo: `Ejercicio.listas` (`{ titulo, opciones }[]`) e `ItemEmparejar.lista` (índice); `comunesDe(ejercicio,
+  item)` en `corregir.ts` (usado por `corrigeEjercicio`, Ejercicio, Resultado y el test del banco). Ejercicio.tsx
+  pinta las listas con título y tacha las usadas por tarea; cada pregunta enseña «Task 1/2». Banco:
+  `c1-lis-3-repair-cafe-1` (entrevista a dos personas, Q15–20 A–D, 4 voces) y `c1-lis-4-solo-journeys-1` (5
+  hablantes, Task One = motivo, Task Two = lo que ganaron, Q21–30, 6 voces). Audios: 9,0 min (3,1 MB) y 8,7 min
+  (3,0 MB); `public/audio` pesa 12 MB con los cuatro.
+- Comprobado: typecheck limpio; 22 tests (nuevo: `comunesDe`); mp3 decodifican sin errores; capturas de Part 3 y 4.
+- Falló: nada.
+- Mejorable (4b): Part 4 en cinco filas (hablante → Task 1 + Task 2); reproductor pegado más compacto.
+- Capturas: `docs/loop-mejorar/capturas/3c/`.
+- Cómo probarlo: Inicio → Listening → Part 4: play, elige letra de cada tarea por hablante y corrige.
+  «Montar un examen completo» de Listening ya junta las 4 partes (≈ 32 min de audio).
