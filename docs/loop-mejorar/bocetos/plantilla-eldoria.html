@@ -1,0 +1,873 @@
+<title>Bocetos Eldoria bonita</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alegreya+SC:wght@500;700&family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@500&display=swap">
+<style>
+/* Diario de bocetos: una entrada por cada cambio visible, la más nueva arriba; cada captura lleva chinchetas numeradas que remiten a la lista «Mejorable». */
+:root {
+  --piedra: #16121a;      /* fondo, roca de la cueva */
+  --losa: #221c26;        /* superficie de cada entrada */
+  --veta: #3a3040;        /* bordes */
+  --hueso: #ece4d8;       /* texto */
+  --ceniza: #a99db0;      /* texto secundario */
+  --antorcha: #e3b55a;    /* acento: oro y antorcha */
+  --brasa: #e0706b;       /* mejorable */
+  --musgo: #5fc9a8;       /* hecho */
+  --f-titulo: "Alegreya SC", Georgia, serif;
+  --f-texto: "Barlow", system-ui, sans-serif;
+  --f-dato: "Barlow Condensed", "Arial Narrow", sans-serif;
+  color-scheme: dark;
+}
+body { background: var(--piedra); color: var(--hueso); font: 16px/1.55 var(--f-texto); }
+.pagina { max-width: 1100px; margin: 0 auto; padding-block: 32px 64px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  display: grid; gap: 40px; }
+header { display: grid; gap: 6px; }
+h1 { font: 700 clamp(30px, 5vw, 44px)/1.1 var(--f-titulo); color: var(--antorcha); margin: 0; text-wrap: balance; }
+header p { margin: 0; color: var(--ceniza); max-width: 65ch; }
+.boceto { background: var(--losa); border: 1px solid var(--veta); border-radius: 10px; padding: 24px; display: grid; gap: 24px; }
+.cabeza { display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px 16px; }
+h2 { font: 700 26px/1.2 var(--f-titulo); margin: 0; }
+.sello { font: 500 14px var(--f-dato); letter-spacing: .06em; text-transform: uppercase; color: var(--ceniza); }
+h3 { font: 500 15px var(--f-dato); letter-spacing: .08em; text-transform: uppercase; color: var(--antorcha); margin: 0 0 8px; }
+.par { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+@media (max-width: 720px) { .par { grid-template-columns: 1fr; } }
+figure { margin: 0; display: grid; gap: 8px; min-width: 0; }
+figcaption { font-size: 14px; color: var(--ceniza); }
+figcaption b { color: var(--hueso); font-weight: 600; }
+.lienzo { position: relative; border-radius: 6px; overflow: hidden; border: 1px solid var(--veta); }
+.lienzo img { display: block; width: 100%; height: auto; }
+.pin { position: absolute; width: 28px; height: 28px; margin: -14px 0 0 -14px; border-radius: 50%;
+  background: var(--brasa); color: var(--piedra); font: 600 15px/28px var(--f-dato); text-align: center;
+  box-shadow: 0 0 0 3px rgba(22,18,26,.7), 0 0 14px var(--brasa); }
+.etiqueta { display: inline-block; font: 500 13px var(--f-dato); letter-spacing: .06em; text-transform: uppercase;
+  padding: 1px 8px; border-radius: 4px; border: 1px solid currentColor; }
+.hecho { color: var(--musgo); }
+.mejora { color: var(--brasa); }
+.listas { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+@media (max-width: 720px) { .listas { grid-template-columns: 1fr; } }
+ul, ol { margin: 0; padding-left: 22px; display: grid; gap: 6px; }
+ol.mejorable li::marker { color: var(--brasa); font-family: var(--f-dato); font-weight: 500; }
+li { max-width: 60ch; }
+.panel { max-width: 640px; }
+/* Ideas: un esquema SVG (en puntos del iPhone, 844×390) encima de la captura. */
+.lienzo svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+.lienzo svg text { font: 600 11px var(--f-texto); fill: var(--hueso); paint-order: stroke; stroke: rgba(22,18,26,.85); stroke-width: 3px; }
+.idea { display: grid; gap: 12px; padding-top: 8px; border-top: 1px solid var(--veta); }
+.idea h3 { margin: 0; }
+.recomiendo { color: var(--musgo); }
+.pros { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+@media (max-width: 720px) { .pros { grid-template-columns: 1fr; } }
+/* Cuadrícula de objetos: miniatura, nombre, acción y la prueba que permite. */
+.rejilla { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 12px; }
+.ficha { background: var(--piedra); border: 1px solid var(--veta); border-radius: 8px; padding: 10px; display: grid; gap: 4px; align-content: start; }
+.ficha img, .ficha .caja { width: 96px; height: 96px; justify-self: center; object-fit: contain; }
+.ficha .caja { display: grid; place-items: center; border: 2px dashed var(--veta); border-radius: 6px; color: var(--ceniza); font: 500 13px var(--f-dato); text-align: center; padding: 4px; }
+.ficha b { font-weight: 600; font-size: 15px; }
+.ficha .accion { font: 500 14px var(--f-dato); color: var(--antorcha); }
+.ficha small { color: var(--ceniza); font-size: 13px; line-height: 1.35; }
+</style>
+
+<div class="pagina">
+  <header>
+    <h1>Bocetos de Eldoria bonita</h1>
+    <p>Cómo va el loop «Eldoria bonita»: que la cueva se vea y suene bonita en el móvil y la TV sin que pese. Decorado en salas y pasillos, más luz, marco en las puertas de la TV, música y ambiente, el virote y el golpe de cada arma, y fps y memoria medidos en cada paso. Las capturas del móvil son de un iPhone en horizontal (2532×1170); las de la TV, a 1920×1080.</p>
+  </header>
+
+
+  <!-- ENTRADAS: el loop añade cada boceto nuevo justo debajo de esta línea -->
+
+  <article class="boceto" id="b17">
+    <div class="cabeza">
+      <h2>Boceto 17 · Cierre: cambios y mejoras para el próximo loop</h2>
+      <span class="sello">22 oct 2026 · 11:32–13:55 · sin unir a main</span>
+    </div>
+
+    <p>Todo está en la rama <code>loop/bonito</code>, listo para unir con un avance rápido (<code>docs/loop-bonito/union.md</code>). 1755 tests y typecheck limpios; e2e de cueva, visuales y mazmorra en verde (el <code>visual-calidad</code> de siempre, 4/5). No he podido probar nada en el iPhone real ni oír el sonido.</p>
+
+    <div class="par">
+      <figure><div class="lienzo"><img src="img/b9-minimapa.jpg" alt="Móvil con el minimapa" loading="lazy"></div><figcaption><b>Minimapa</b> y objetivo en el móvil.</figcaption></figure>
+      <figure><div class="lienzo"><img src="img/b15-tarjeta.jpg" alt="Tarjeta de pista encogida junto a Examinar" loading="lazy"></div><figcaption><b>Tarjeta encogida</b> y aro estrecho.</figcaption></figure>
+    </div>
+
+    <div class="listas">
+      <div>
+        <h3><span class="etiqueta hecho">Cambios</span></h3>
+        <ul>
+          <li><b>Nitidez:</b> suavizado de bordes y 2 píxeles por punto en el móvil, anisotropía, detalles de suelo, adorno con tope de peso y antorchas de relleno en salas grandes.</li>
+          <li><b>Paneles:</b> minimapa, objetivo de la sala, tira del grupo y objeto cercano en el móvil; objetivo y marco de puertas en la TV.</li>
+          <li><b>Jugabilidad:</b> virote propio, golpe por arma, aros estrechos, tarjeta de pista que no tapa «Examinar…».</li>
+          <li><b>Sonido:</b> momentos de música <code>cueva</code> y <code>mazmorra</code> y ambiente sintetizado (pasos, goteo, antorchas).</li>
+          <li><b>Ya estaba:</b> polvo y niebla suave.</li>
+        </ul>
+      </div>
+      <div>
+        <h3><span class="etiqueta mejora">Mejoras para el próximo loop</span></h3>
+        <ol class="mejorable">
+          <li>Probar en el iPhone real los 2 píxeles por punto y el suavizado (fps y calor); si va justo, bajar el tope a 1,5.</li>
+          <li>Oír el ambiente y los fundidos de música; pistas de <code>cueva</code> y <code>mazmorra</code> (Suno o CC0).</li>
+          <li>Minimapa con las salas que descubre todo el grupo (el máster podría mandarlas) y también en la TV si hace falta.</li>
+          <li>Charco de luz cálida bajo cada antorcha de relleno y marcador del objeto cercano en la escena 3D.</li>
+          <li>Destello al clavarse el virote y revisar a la vista los perfiles pesada, ligera y puños.</li>
+          <li>Juntar objetivo y objeto cercano en una línea si el HUD se queda corto en un móvil pequeño.</li>
+          <li>Marco de las puertas pegado al muro en la TV y selector de adorno en el editor de cuevas.</li>
+        </ol>
+      </div>
+    </div>
+  </article>
+
+  <article class="boceto" id="b16">
+    <div class="cabeza">
+      <h2>Boceto 16 · B4, polvo y niebla suave: ya estaban</h2>
+      <span class="sello">22 oct 2026 · paso B4 · sin cambios de código</span>
+    </div>
+
+    <p>Al ir a hacer este paso he visto que ya está hecho de un loop anterior (visual y cámara), con sus tests, así que no lo toco ni lo duplico. <b>Polvo:</b> 90 motas en un solo <code>Points</code> alrededor de la cámara, que se apaga con la calidad 1. <b>Niebla:</b> por alturas, en el mismo shader (una neblina clara pegada al suelo que no pasa de 2 u de alto, de modo que no tapa objetos ni héroes, y otra fina arriba, junto a la bóveda). Las motas se ven en la captura de la luz de relleno del boceto 7.</p>
+
+    <figure class="panel" style="max-width:none">
+      <div class="lienzo">
+        <img src="img/b7-luz-galeria.jpg" alt="Móvil en la galería: motas de polvo flotando en la luz de las antorchas y neblina baja al fondo" loading="lazy">
+        <span class="pin" style="left:68%;top:46%">1</span>
+        <span class="pin" style="left:82%;top:34%">2</span>
+      </div>
+      <figcaption><b>1:</b> motas de polvo en la luz. <b>2:</b> la neblina baja del fondo.</figcaption>
+    </figure>
+
+    <div class="listas">
+      <div>
+        <h3><span class="etiqueta hecho">Hecho</span></h3>
+        <ul><li>Comprobado en <code>luz.ts</code> y <code>luz.test.ts</code> (<code>nieblaAltura</code>, <code>crearPolvo</code>) y en la escena (<code>puntosPolvo.visible = calidad.ambiente</code>).</li></ul>
+      </div>
+      <div>
+        <h3><span class="etiqueta mejora">Mejorable</span></h3>
+        <ol class="mejorable">
+          <li>El polvo se reparte por toda la caja de 14 u: se podría juntar más en los conos de luz de las antorchas, pero costaría un cálculo por mota y por ahora no merece el peso.</li>
+        </ol>
+      </div>
+    </div>
+  </article>
+
+  <article class="boceto" id="b15">
+    <div class="cabeza">
+      <h2>Boceto 15 · E3, aros estrechos y la tarjeta que no tapa «Examinar…»</h2>
+      <span class="sello">22 oct 2026 · paso E3</span>
+    </div>
+
+    <p>Dos arreglos de los «mejorables» del boceto 10 de mazmorras 2. <b>Aros del suelo:</b> el radio pasa de 0,76 a 0,40 (el mismo grosor fino): dos héroes pegados, que se separan 0,81 u, ya no se pisan los aros (un test lo comprueba con la separación real). La guardia y el aro del objeto que se examina siguen del tamaño de antes. <b>Tarjeta de pista:</b> cuando sale «Examinar…» (hay un objeto a mano), se encoge a 12 rem de ancho, 3 líneas como mucho y algo más transparente; sin objeto a mano, la grande de siempre.</p>
+
+    <figure class="panel" style="max-width:none">
+      <div class="lienzo">
+        <img src="img/b15-tarjeta.jpg" alt="Móvil pegado al escudo: la tarjeta de pista, estrecha, bajo la vida; «Examinar escudo de los peregrinos» a su derecha sin tapar; el aro del héroe, fino" loading="lazy">
+        <span class="pin" style="left:17%;top:36%">1</span>
+        <span class="pin" style="left:41%;top:22%">2</span>
+        <span class="pin" style="left:38%;top:80%">3</span>
+      </div>
+      <figcaption><b>1:</b> la tarjeta encogida. <b>2:</b> «Examinar…», entero. <b>3:</b> el aro, más pequeño.</figcaption>
+    </figure>
+
+    <div class="listas">
+      <div>
+        <h3><span class="etiqueta hecho">Hecho</span></h3>
+        <ul>
+          <li><code>ARO</code> más estrecho (+ <code>grande</code> para la guardia y el objeto) y un test de que dos héroes juntos no se pisan.</li>
+          <li><code>mazmorra-carteles-e2e</code> 6/6, con un paso nuevo: encogida y sin chocar con la ventanita.</li>
+          <li>592 tests de la cueva y tsc limpios.</li>
+        </ul>
+      </div>
+      <div>
+        <h3><span class="etiqueta mejora">Mejorable</span></h3>
+        <ol class="mejorable">
+          <li>La tarjeta compacta puede cortar pistas largas (3 líneas): se lee entera al apartarse del objeto.</li>
+          <li>La captura es de un solo héroe: con dos juntos se vería mejor el aro; la prueba lo cubre con números.</li>
+        </ol>
+      </div>
+    </div>
+  </article>
+
+  <article class="boceto" id="b14">
+    <div class="cabeza">
+      <h2>Boceto 14 · E2, un golpe distinto para cada arma</h2>
+      <span class="sello">22 oct 2026 · paso E2</span>
+    </div>
+
+    <p>Con el mismo botón Atacar, cada perfil de arma se mueve a su manera, también en los modelos que traen su propio clip de ataque: la pesada arma el brazo y baja en un tajo lento y ancho (0,9 s); la media, el golpe de siempre; la ligera, una estocada rápida hacia delante (0,25 s); los puños, dos golpes seguidos con cada lado; y la de distancia tensa hacia atrás y suelta. El móvil lo sabe porque ahora cada héroe lleva su perfil en lo que le manda el máster.</p>
+
+    <figure class="panel" style="max-width:none">
+      <div class="lienzo">
+        <img src="img/b14-golpe-tira.jpg" alt="Tres fotos seguidas de Rull disparando: se echa atrás tensando, abre el brazo y suelta hacia delante" loading="lazy">
+        <span class="pin" style="left:17%;top:46%">1</span>
+        <span class="pin" style="left:52%;top:30%">2</span>
+        <span class="pin" style="left:82%;top:44%">3</span>
+      </div>
+      <figcaption><b>Rull (distancia), una foto cada 130 ms.</b> 1: se prepara. 2: tensa hacia atrás con el brazo abierto. 3: suelta hacia delante.</figcaption>
+    </figure>
+
+    <div class="listas">
+      <div>
+        <h3><span class="etiqueta hecho">Hecho</span></h3>
+        <ul>
+          <li><code>golpeArma.ts</code> (puro, 5 tests: duraciones, continuidad, pesada vs ligera, dos golpes de los puños, tensar y soltar), campo <code>arma</code> en <code>HeroeEnCueva</code> y la pose en <code>escena.ts</code> (sin coste de dibujo).</li>
+          <li>591 tests de la cueva y tsc limpios. <code>bonito-capturas.mjs</code> acepta <code>GOLPE=1</code>.</li>
+        </ul>
+      </div>
+      <div>
+        <h3><span class="etiqueta mejora">Mejorable</span></h3>
+        <ol class="mejorable">
+          <li>Solo he visto el de distancia (Rull). Los otros cuatro perfiles están probados en datos, no a la vista: <code>mazmorra-heroes-e2e</code> con los 11 los recorre en el cierre.</li>
+          <li>La pose se suma al clip del modelo: en alguno puede verse exagerada; si lo ves así, se baja la amplitud.</li>
+        </ol>
+      </div>
+    </div>
+  </article>
+
+  <article class="boceto" id="b13">
+    <div class="cabeza">
+      <h2>Boceto 13 · E1, el virote propio</h2>
+      <span class="sello">22 oct 2026 · paso E1</span>
+    </div>
+
+    <p>El disparo de los héroes de distancia ya no es una bola cian como el conjuro: es una flecha (asta de madera, punta de hierro, plumas rojas) con una estela fina detrás, orientada hacia donde va. El máster marca ahora cada proyectil que es un virote y su rumbo; los móviles lo pintan como flecha y la TV, como una línea con punta y estela. El conjuro sigue siendo el orbe cian con sus chispas.</p>
+
+    <div class="par">
+      <figure>
+        <div class="lienzo">
+          <img src="img/b13-virote-movil.jpg" alt="Móvil: una flecha con plumas cruza la esquina superior izquierda sobre el suelo de losas" loading="lazy">
+          <span class="pin" style="left:12%;top:8%">1</span>
+        </div>
+        <figcaption><b>Móvil.</b> La flecha, arriba a la izquierda. La captura se tomó con el héroe de espaldas a la cámara a mitad de giro: la flecha va hacia donde mira.</figcaption>
+      </figure>
+      <figure>
+        <div class="lienzo">
+          <img src="img/b13-virote-tv.jpg" alt="TV: abajo, una línea con punta blanca y estela, el virote en el plano" loading="lazy">
+          <span class="pin" style="left:41%;top:92%">2</span>
+        </div>
+        <figcaption><b>TV.</b> El virote como línea con punta y estela tenue (en la captura, el resto estaba ya más allá del plano).</figcaption>
+      </figure>
+    </div>
+
+    <div class="listas">
+      <div>
+        <h3><span class="etiqueta hecho">Hecho</span></h3>
+        <ul>
+          <li><code>virote.ts</code> (puro, 2 tests), campos <code>v</code> y <code>a</code> en el estado (un test de <code>mundo</code>), una malla instanciada (+1 dibujo, +1 la estela, solo si hay flechas en vuelo).</li>
+          <li>585 tests de la cueva y tsc limpios; <code>bonito-capturas.mjs</code> acepta <code>VIROTE=1</code>.</li>
+        </ul>
+      </div>
+      <div>
+        <h3><span class="etiqueta mejora">Mejorable</span></h3>
+        <ol class="mejorable">
+          <li>La captura no es un disparo real de un héroe de distancia, sino virotes puestos en el mundo; el e2e de los 11 héroes lo cubre en el cierre.</li>
+          <li>Falta un destello al clavarse (como el del conjuro al apagarse).</li>
+        </ol>
+      </div>
+    </div>
+  </article>
+
+  <article class="boceto" id="b12">
+    <div class="cabeza">
+      <h2>Boceto 12 · P4, el objeto cercano para examinar</h2>
+      <span class="sello">22 oct 2026 · paso P4</span>
+    </div>
+
+    <p>Cuando hay un objeto sin usar a menos de 10 pasos pero aún no lo tienes a mano, el HUD lo dice en una línea bajo el objetivo: una flecha hacia donde está respecto a la cámara, su nombre y a cuánto queda (de 2 en 2). En cuanto lo tienes pegado, la línea se va y sale la ventanita de «Interactuar» de siempre. No avisa de puertas, de lo fijo, de lo ya usado ni de lo que está dentro de un contenedor cerrado.</p>
+
+    <figure class="panel" style="max-width:none">
+      <div class="lienzo">
+        <img src="img/b12-cercano.jpg" alt="Móvil: bajo la vida, «Examinar los objetos (2)» y «↑ palanca del titiritero · 6 m»; la palanca se ve al fondo del pasillo" loading="lazy">
+        <span class="pin" style="left:15%;top:28%">1</span>
+        <span class="pin" style="left:45%;top:25%">2</span>
+      </div>
+      <figcaption><b>1:</b> la línea nueva. <b>2:</b> la palanca, justo delante a 6 pasos. El minimapa (arriba a la derecha) ya enseña la sala pisada.</figcaption>
+    </figure>
+
+    <div class="listas">
+      <div>
+        <h3><span class="etiqueta hecho">Hecho</span></h3>
+        <ul>
+          <li><code>cercanos.ts</code> (puro, 4 tests: orden, exclusiones, contenedor, flechas con la cámara) y <code>HudCueva.cercano</code>.</li>
+          <li>583 tests de la cueva y tsc limpios. <code>bonito-capturas.mjs</code> acepta <code>CERCA=1</code>.</li>
+        </ul>
+      </div>
+      <div>
+        <h3><span class="etiqueta mejora">Mejorable</span></h3>
+        <ol class="mejorable">
+          <li>El HUD de arriba a la izquierda ya lleva cinco líneas con el grupo y la pista: en horizontal pequeño se puede juntar objetivo y objeto cercano en una sola.</li>
+          <li>No hay marcador sobre el objeto en la escena 3D (solo la flecha del HUD): un destello suave sobre el objeto sería lo siguiente, si no pesa.</li>
+        </ol>
+      </div>
+    </div>
+  </article>
+
+  <article class="boceto" id="b11">
+    <div class="cabeza">
+      <h2>Boceto 11 · P3, la tira del grupo en el móvil</h2>
+      <span class="sello">22 oct 2026 · paso P3</span>
+    </div>
+
+    <p>Bajo tu vida, una tira pequeña con los demás héroes: su nombre con su color y una barra fina de vida. Primero los caídos (tachados y apagados) y luego los más tocados; como mucho cuatro. Así sabes a quién ayudar sin mirar a la TV. La TV ya tiene una tarjeta por héroe con su vida y «Caído», así que no se toca.</p>
+
+    <figure class="panel" style="max-width:none">
+      <div class="lienzo">
+        <img src="img/b11-grupo.jpg" alt="Panel del móvil: debajo de la vida de Rull, Kura tachado con la barra vacía y Mixtape con la barra al 35 %" loading="lazy">
+        <span class="pin" style="left:20%;top:73%">1</span>
+        <span class="pin" style="left:34%;top:78%">2</span>
+      </div>
+      <figcaption><b>Prueba con tres héroes.</b> 1: Kura, caído. 2: Mixtape con poca vida.</figcaption>
+    </figure>
+
+    <div class="listas">
+      <div>
+        <h3><span class="etiqueta hecho">Hecho</span></h3>
+        <ul>
+          <li><code>grupoMini.ts</code> (puro, 3 tests) y <code>HudCueva.grupo</code>; la barra solo repinta el HUD al cambiar de 5 en 5 %.</li>
+          <li>579 tests de la cueva y tsc limpios. <code>bonito-capturas.mjs</code> acepta <code>HEROES=3</code>.</li>
+        </ul>
+      </div>
+      <div>
+        <h3><span class="etiqueta mejora">Mejorable</span></h3>
+        <ol class="mejorable">
+          <li>Solo vida y caído: faltan estados (guardia, esquiva) si son útiles.</li>
+          <li>En el iPhone no he comprobado si la tira se mezcla con la pista (sale debajo, en el mismo sitio).</li>
+        </ol>
+      </div>
+    </div>
+  </article>
+
+  <article class="boceto" id="b10">
+    <div class="cabeza">
+      <h2>Boceto 10 · P2, el objetivo de la sala</h2>
+      <span class="sello">22 oct 2026 · paso P2</span>
+    </div>
+
+    <p>Una línea que dice qué queda por hacer en la sala donde estás: «Derrota a los esbirros (N)», si no hay, «Examina los objetos (N)», y si no queda nada, «Sala despejada: sigue adelante». En el móvil va bajo la vida, en una línea (no tapa la vista); en la TV, en el panel de la derecha con el nombre de la sala. Solo usa lo que ya se ve: no cuenta puertas, lo que está dentro de un contenedor sin abrir, lo repetible ni salas sin pisar, y no dice dónde está la salida.</p>
+
+    <div class="par">
+      <figure>
+        <div class="lienzo">
+          <img src="img/b10-objetivo-movil.jpg" alt="Panel del móvil con la vida y debajo la línea «Examina los objetos (2)»" loading="lazy">
+          <span class="pin" style="left:30%;top:63%">1</span>
+        </div>
+        <figcaption><b>Móvil.</b> Un triángulo dorado y el objetivo, bajo la vida.</figcaption>
+      </figure>
+      <figure>
+        <div class="lienzo">
+          <img src="img/b10-objetivo-tv.jpg" alt="TV: abajo a la derecha, el nombre de la sala y «Examina los objetos de la sala (2)»" loading="lazy">
+          <span class="pin" style="left:84%;top:89%">2</span>
+        </div>
+        <figcaption><b>TV.</b> El nombre de la sala (de la sala del primer héroe en pie) y su objetivo, sobre «esbirros a la vista».</figcaption>
+      </figure>
+    </div>
+
+    <div class="listas">
+      <div>
+        <h3><span class="etiqueta hecho">Hecho</span></h3>
+        <ul>
+          <li><code>objetivoSala.ts</code> (puro, 3 tests), campo <code>objetivo</code> en el HUD del móvil y panel de la TV.</li>
+          <li>576 tests de la cueva y tsc limpios; <code>mazmorra-tv-e2e</code> 5/5 con el panel nuevo.</li>
+        </ul>
+      </div>
+      <div>
+        <h3><span class="etiqueta mejora">Mejorable</span></h3>
+        <ol class="mejorable">
+          <li>En el móvil la línea no lleva el nombre de la sala (no cabía): sale al mantener el dedo sobre ella (<code>title</code>), poco útil en táctil.</li>
+          <li>La TV muestra el objetivo de una sola sala, la del primer héroe: con el grupo repartido, se podría poner una línea por héroe.</li>
+        </ol>
+      </div>
+    </div>
+  </article>
+
+  <article class="boceto" id="b9">
+    <div class="cabeza">
+      <h2>Boceto 9 · P1, el minimapa del móvil</h2>
+      <span class="sello">22 oct 2026 · paso P1</span>
+    </div>
+
+    <p>Un círculo pequeño bajo el aviso de la esquina derecha: las salas por las que ha pasado mi héroe, giradas con la cámara (lo de delante, arriba), una flecha dorada en el centro, los demás héroes en azul y una «N» que marca el norte. No enseña salas sin pisar, objetos ni trampas. Se pinta él solo cuatro veces por segundo y no recibe toques: la mitad derecha sigue girando la cámara. En la TV no hace falta: ya es un plano.</p>
+
+    <figure class="panel" style="max-width:none">
+      <div class="lienzo">
+        <img src="img/b9-minimapa.jpg" alt="Móvil en la galería: arriba a la derecha, un círculo con la sala pisada, una flecha dorada y una N" loading="lazy">
+        <span class="pin" style="left:93%;top:28%">1</span>
+      </div>
+      <figcaption><b>Esquina derecha.</b> El minimapa con la sala de entrada y la «N» abajo a la derecha: la cámara mira hacia el sur.</figcaption>
+    </figure>
+
+    <div class="listas">
+      <div>
+        <h3><span class="etiqueta hecho">Hecho</span></h3>
+        <ul>
+          <li><code>minimapa.ts</code> (puro, 4 tests: salas pisadas, adelante arriba, derecha a la derecha, giro puro), <code>Minimapa.tsx</code> y <code>plano()</code> en la escena.</li>
+          <li>573 tests de la cueva y tsc limpios.</li>
+        </ul>
+      </div>
+      <div>
+        <h3><span class="etiqueta mejora">Mejorable</span></h3>
+        <ol class="mejorable">
+          <li>Solo sabe de las salas que pisa mi héroe, no de las que han pisado los demás: el máster podría mandar las descubiertas de la TV.</li>
+          <li>Ocupa la esquina del aviso «Pantalla completa» cuando se encoge: mirar con el iPhone si estorba al arrastrar.</li>
+          <li>No he medido su coste: pinta 4 veces por segundo con un lienzo de 88 px, debería ser despreciable.</li>
+        </ol>
+      </div>
+    </div>
+  </article>
+
+  <article class="boceto" id="b8">
+    <div class="cabeza">
+      <h2>Boceto 8 · N4, marco de piedra en las puertas de la TV</h2>
+      <span class="sello">22 oct 2026 · paso N4</span>
+    </div>
+
+    <p>Las puertas y rejas de la TV ya no son solo una raya en un hueco: llevan una jamba de piedra a cada lado y una franja tenue de dintel sobre el hueco. Salen en cuanto se ve la puerta, también desde la sala de al lado, y no destapan el pasillo ni la casilla de la salida (la prueba lo comprueba).</p>
+
+    <figure class="panel" style="max-width:none">
+      <div class="lienzo">
+        <img src="img/b8-marco-tv.jpg" alt="TV: la puerta de la salida a la derecha de la sala, con una jamba de piedra arriba y otra abajo" loading="lazy">
+        <span class="pin" style="left:68%;top:66%">1</span>
+        <span class="pin" style="left:15%;top:66%">2</span>
+      </div>
+      <figcaption><b>TV, desde la sala de las velas.</b> La puerta de salida (derecha) con su marco; el cartel «P» de la izquierda es la palanca.</figcaption>
+    </figure>
+
+    <div class="listas">
+      <div>
+        <h3><span class="etiqueta hecho">Hecho</span></h3>
+        <ul>
+          <li><code>pintarMarco</code> en <code>objetosTV.ts</code>: jambas y dintel en puertas y rejas; <code>__objetosTV.marcos()</code> para las pruebas.</li>
+          <li><code>mazmorra-tv-e2e</code> 5/5: la salida lleva marco desde la sala de al lado y las ocultas no lo llevan.</li>
+          <li>569 tests de la cueva y tsc limpios. La TV es un lienzo 2D: no cambia nada del móvil.</li>
+        </ul>
+      </div>
+      <div>
+        <h3><span class="etiqueta mejora">Mejorable</span></h3>
+        <ol class="mejorable">
+          <li>El marco flota algo separado de la línea de pared (la puerta ya estaba así colocada): se puede pegar al muro.</li>
+          <li>Dintel muy tenue: se subirá un poco si en la tele se pierde.</li>
+        </ol>
+      </div>
+    </div>
+  </article>
+
+  <article class="boceto" id="b7">
+    <div class="cabeza">
+      <h2>Boceto 7 · N3, las salas grandes se alumbran solas</h2>
+      <span class="sello">22 oct 2026 · paso N3 · opción A</span>
+    </div>
+
+    <p>Si una sala grande se queda con una punta a oscuras (alguna casilla a más de 3 de toda luz), el juego le pone antorchas de pared donde más sombra cubren, hasta 4 por sala. Respeta lo que hayas cambiado a mano en las paredes y no se pega a un adorno. Son llama y halo (casi gratis): las luces de verdad siguen siendo las 3 más cercanas al héroe. En los mapas de prueba salió una antorcha nueva por mapa.</p>
+
+    <div class="par">
+      <figure>
+        <div class="lienzo">
+          <img src="img/b7-luz-galeria.jpg" alt="Móvil en la galería: sala bien alumbrada con tres antorchas en la pared del fondo" loading="lazy">
+          <span class="pin" style="left:61%;top:17%">1</span>
+        </div>
+        <figcaption><b>Galería del péndulo.</b> La antorcha del medio es la nueva: la pared del fondo ya no deja un hueco negro.</figcaption>
+      </figure>
+      <figure>
+        <div class="lienzo">
+          <img src="img/b7-luz-santuario.jpg" alt="Móvil en el santuario del pozo mirando a la antorcha nueva" loading="lazy">
+          <span class="pin" style="left:50%;top:30%">2</span>
+        </div>
+        <figcaption><b>Santuario del pozo.</b> La antorcha de relleno alumbra el fondo del atrio.</figcaption>
+      </figure>
+    </div>
+
+    <div class="listas">
+      <div>
+        <h3><span class="etiqueta hecho">Hecho</span></h3>
+        <ul>
+          <li><code>luzSalas.ts</code> (puro, con tests) y su uso en <code>construirMapa</code>: sirve igual en móvil, TV y mapa del máster.</li>
+          <li>El aviso «sala a oscuras» del editor cuenta ya con esa luz: solo avisa de salas enormes o con las paredes cambiadas a mano.</li>
+          <li>1 723 tests y tsc limpios; medida: +280 triángulos, mismos dibujos (15–18), 21–23 fps, 41–46 MB.</li>
+        </ul>
+      </div>
+      <div>
+        <h3><span class="etiqueta mejora">Mejorable</span></h3>
+        <ol class="mejorable">
+          <li>Falta el charco de luz cálida en el suelo bajo cada antorcha nueva (es lo que haría la sala más viva): lo dejo para otra vuelta si sobra tiempo.</li>
+          <li>La sombra blanda bajo el héroe ya existe; no hay más sombras reales por peso.</li>
+        </ol>
+      </div>
+    </div>
+  </article>
+
+  <article class="boceto" id="b6">
+    <div class="cabeza">
+      <h2>Boceto 6 · N2, bordes limpios y texturas más nítidas</h2>
+      <span class="sello">22 oct 2026 · paso N2 · opción A</span>
+    </div>
+
+    <p>El móvil ahora suaviza los bordes (MSAA) y dibuja hasta con 2 píxeles por punto (antes 1,5), con anisotropía 4 en las texturas del kit y de los detalles. Los dos recortes son el mismo punto de la galería, ampliados ×1,5, con la calidad entera (la captura sale antes de que la calidad automática baje).</p>
+
+    <div class="par">
+      <figure>
+        <div class="lienzo">
+          <img src="img/b6-antes.jpg" alt="Antes: bordes de la estatua y de los bloques en escalera, manchados" loading="lazy">
+          <span class="pin" style="left:30%;top:20%">1</span>
+        </div>
+        <figcaption><b>Antes.</b> Siluetas en escalera y el emblema del pedestal blando.</figcaption>
+      </figure>
+      <figure>
+        <div class="lienzo">
+          <img src="img/b6-despues.jpg" alt="Después: bordes suaves y el relieve del pedestal más claro" loading="lazy">
+          <span class="pin" style="left:30%;top:20%">2</span>
+        </div>
+        <figcaption><b>Después.</b> Bordes continuos y el relieve del pedestal se lee.</figcaption>
+      </figure>
+    </div>
+
+    <table style="border-collapse:collapse;font:15px var(--f-dato);width:100%;max-width:720px">
+      <thead><tr style="color:var(--antorcha);text-align:left"><th>Mapa</th><th>Móvil fps</th><th>Memoria</th><th>Dibujos</th><th>Calidad</th></tr></thead>
+      <tbody>
+        <tr><td>Galería</td><td>19 (antes 19)</td><td>38 MB (35)</td><td>17 (17)</td><td>2 (2)</td></tr>
+        <tr><td>Santuario</td><td>22 (21)</td><td>46 MB (41)</td><td>18 (18)</td><td>2 (2)</td></tr>
+        <tr><td>Sarcófago</td><td>21 (22)</td><td>40 MB (51)</td><td>14 (15)</td><td>2 (2)</td></tr>
+      </tbody>
+    </table>
+    <p style="margin:0;color:var(--ceniza);font-size:14px">Ojo: en el Chrome sin ventana de este portátil la calidad automática baja sola al nivel 2 (1 píxel por punto), así que estos fps no miden lo que costará en tu iPhone. Si en el iPhone va lento, baja sola; si quieres, dímelo y dejo el tope en 1,5.</p>
+
+    <div class="listas">
+      <div>
+        <h3><span class="etiqueta hecho">Hecho</span></h3>
+        <ul>
+          <li>Suavizado de bordes, tope de 2 píxeles por punto y anisotropía 4.</li>
+          <li>563 tests de la cueva y tsc limpios; sin errores en la medida.</li>
+          <li>El script de capturas acepta <code>ESPERA</code> y <code>PAUSA</code> para sacar la calidad entera.</li>
+        </ul>
+      </div>
+      <div>
+        <h3><span class="etiqueta mejora">Mejorable</span></h3>
+        <ol class="mejorable">
+          <li>No sé cuánto cuesta en el iPhone real: hay que probarlo ahí (la bajada automática lo protege).</li>
+          <li>Los bordes de los héroes y las llamas ya salen limpios; el texto del HUD no cambia.</li>
+        </ol>
+      </div>
+    </div>
+  </article>
+
+  <article class="boceto" id="b5">
+    <div class="cabeza">
+      <h2>Boceto 5 · N1, por qué se ve borroso en el iPhone</h2>
+      <span class="sello">22 oct 2026 · paso N1 · diseño</span>
+    </div>
+
+    <p>Un recorte de la captura del móvil, ampliado: los bordes de los muros y de la antorcha salen en escalera y las superficies, blandas. La causa: el móvil dibuja sin suavizado de bordes y a 1,5 píxeles por punto, y tu iPhone tiene 3, así que la imagen se estira al doble.</p>
+
+    <figure class="panel" style="max-width:none">
+      <div class="lienzo">
+        <img src="img/b5-nitidez-ampliada.jpg" alt="Recorte ampliado del móvil: bordes dentados en un pilar y una antorcha" loading="lazy">
+        <span class="pin" style="left:50%;top:50%">1</span>
+        <span class="pin" style="left:79%;top:32%">2</span>
+      </div>
+      <figcaption><b>Zoom ×2 sobre la galería.</b> Escalones en el borde del pilar y la antorcha.</figcaption>
+    </figure>
+
+    <section class="idea">
+      <h3>Opciones <span class="etiqueta recomiendo">A, la que recomiendo</span></h3>
+      <ul>
+        <li><b>A ·</b> Suavizado de bordes (MSAA, barato en la GPU del iPhone) y hasta 2 píxeles por punto, que baja solo si los fps caen (ya lo hace la calidad automática). Más anisotropía en las texturas.</li>
+        <li><b>B ·</b> Solo el suavizado: bordes limpios, pero sigue algo blando.</li>
+        <li><b>C ·</b> 3 píxeles por punto: nítido del todo, cuatro veces los píxeles; no cabe en un iPhone medio.</li>
+      </ul>
+    </section>
+
+    <div class="listas">
+      <div>
+        <h3><span class="etiqueta hecho">Hecho</span></h3>
+        <ul><li>Causa localizada y anotada en <code>diseno.md</code>; no se ha tocado código.</li></ul>
+      </div>
+      <div>
+        <h3><span class="etiqueta mejora">Mejorable</span></h3>
+        <ol class="mejorable">
+          <li>El Chrome del portátil va a 19–22 fps y puede bajar la calidad solo: la medida del paso siguiente anota el nivel y los píxeles por punto, no solo los fps.</li>
+          <li>Los bordes de la antorcha en escalera: los quita el suavizado (N2).</li>
+        </ol>
+      </div>
+    </div>
+  </article>
+
+  <article class="boceto" id="b4">
+    <div class="cabeza">
+      <h2>Boceto 4 · B3, detalles de suelo y pared</h2>
+      <span class="sello">22 oct 2026 · paso B3</span>
+    </div>
+
+    <p>El suelo y los muros ya no son lisos: grietas, musgo, charcos, huesos y piedrecillas repartidos por casilla, y humedad y raíces al pie de los muros. Todo va en una sola malla con un atlas (+1 dibujo). En la TV, marcas tenues sin colores de juego para que el musgo no se confunda con los esbirros. La prueba de la TV pasa (5/5) y los fps del móvil siguen en 19–22.</p>
+
+    <div class="par">
+      <figure>
+        <div class="lienzo">
+          <img src="img/b4-detalles-movil.jpg" alt="Móvil en la galería: musgo verde y manchas en el suelo del fondo, losas con variación" loading="lazy">
+          <span class="pin" style="left:48%;top:44%">1</span>
+        </div>
+        <figcaption><b>Móvil: musgo y manchas en el suelo.</b> Se leen sin pelearse con el héroe ni con los botones.</figcaption>
+      </figure>
+      <figure>
+        <div class="lienzo">
+          <img src="img/b4-detalles-tv.jpg" alt="TV en la galería: losas con marcas tenues" loading="lazy">
+          <span class="pin" style="left:50%;top:50%">2</span>
+        </div>
+        <figcaption><b>TV: marcas tenues.</b> Solo en salas descubiertas, en grises y marrones.</figcaption>
+      </figure>
+    </div>
+
+    <h3>Hecho</h3>
+    <ul><li>Detalles por código, sin texturas nuevas que bajar: +1 dibujo, memoria dentro del margen.</li><li>Tope de 320 detalles por mapa.</li></ul>
+    <h3>Mejorable</h3>
+    <ul><li>① Los detalles del suelo se notan poco con la luz baja del fondo: se subirá su contraste en el paso de luz (N3).</li></ul>
+  </article>
+
+  <article class="boceto" id="b3">
+    <div class="cabeza">
+      <h2>Boceto 3 · B2, el tope de peso de cada mapa</h2>
+      <span class="sello">22 oct 2026 · paso B2</span>
+    </div>
+
+    <p>Cada mapa tiene un tope de lo que el móvil baja y dibuja de Meshy: 2,2 MB y 48 000 triángulos (unos cuatro modelos medianos), contando lo que pusiste tú y el adorno. El adorno que no cabe se queda fuera solo, y si lo que pusiste ya se pasa, el editor te avisa. Un test revisa los 13 mapas de prueba y falla si alguno se pasa. Y lo mejorable del boceto 2: la cadena ya no repite adorno, y el adorno sale más apagado que lo que se usa.</p>
+
+    <div class="par">
+      <figure>
+        <div class="lienzo">
+          <img src="img/b3-estatua.jpg" alt="Móvil en la galería: la estatua guardiana de adorno, más oscura que antes, en la esquina" loading="lazy">
+          <span class="pin" style="left:43%;top:32%">1</span>
+        </div>
+        <figcaption><b>Galería: estatua de adorno, más apagada.</b> Se lee como parte de la sala, no como algo que se pueda usar (compárala con la del boceto 2).</figcaption>
+      </figure>
+      <figure>
+        <div class="lienzo">
+          <img src="img/b3-altar.jpg" alt="Móvil en el santuario: un altar ritual de adorno en la esquina de la capilla" loading="lazy">
+          <span class="pin" style="left:43%;top:40%">2</span>
+        </div>
+        <figcaption><b>Santuario: el altar ritual.</b> Antes salía un sarcófago, que en el mapa siguiente es el cofre final: ya no se adelanta.</figcaption>
+      </figure>
+    </div>
+
+    <table style="border-collapse:collapse;font:15px var(--f-dato);width:100%;max-width:720px">
+      <thead><tr style="color:var(--antorcha);text-align:left"><th>Mapa</th><th>Meshy</th><th>Peso</th><th>Triángulos</th></tr></thead>
+      <tbody>
+        <tr><td>Galería</td><td>péndulo, palanca + estatua de adorno</td><td>1,45 MB</td><td>27 000</td></tr>
+        <tr><td>Santuario</td><td>cofre, pozo + altar de adorno</td><td>1,39 MB</td><td>31 800</td></tr>
+        <tr><td>Sarcófago</td><td>jaula, atril, sarcófago (sin adorno: ya lleva tres)</td><td>1,31 MB</td><td>35 500</td></tr>
+        <tr><td>Templo de los guardianes</td><td>4 modelos tuyos (el más cargado)</td><td>2,06 MB</td><td>43 600</td></tr>
+      </tbody>
+    </table>
+
+    <div class="listas">
+      <div>
+        <h3><span class="etiqueta hecho">Hecho</span></h3>
+        <ul>
+          <li><code>peso.ts</code>: lo que pesa cada modelo de Meshy (el test comprueba que cuadra con tu carpeta), el tope y qué adorno cabe.</li>
+          <li>Campo <code>adornos</code> en la cueva guardada: qué adorno sale en cada mapa (vacío, ninguno). La cadena de prueba ya no repite: estatua, altar y ninguno.</li>
+          <li>El adorno sale un 38 % más oscuro.</li>
+          <li>Aviso del editor «Pesa mucho para el móvil» (no salta en ningún mapa de prueba).</li>
+          <li>17 tests nuevos (1714), tsc limpio; e2e de decorado 9/9 y del editor 13/13. Medida sin cambios: 21 fps, mismos dibujos.</li>
+        </ul>
+      </div>
+      <div>
+        <h3><span class="etiqueta mejora">Mejorable</span></h3>
+        <ol class="mejorable">
+          <li>La estatua apagada queda algo oscura de lejos; cuando entre la luz de relleno (C1) se repasa.</li>
+          <li>El campo <code>adornos</code> aún no se elige desde el editor (solo a mano o por defecto): queda para el próximo loop.</li>
+          <li>El barril pegado a la cámara tapa la vista al girar (ya pasaba, no es del relleno): lo apunto para el próximo loop.</li>
+        </ol>
+      </div>
+    </div>
+  </article>
+
+  <article class="boceto" id="b2">
+    <div class="cabeza">
+      <h2>Boceto 2 · B1, el adorno que rellena las salas</h2>
+      <span class="sello">22 oct 2026 · paso B1 · opción A</span>
+    </div>
+
+    <p>Las salas ya no están vacías. Cada mapa lleva, solo, una o dos piezas de Meshy de adorno en las esquinas de sus salas grandes (distintas de un mapa al siguiente y nunca una que el mapa ya use) y estandartes, trofeos, columnas y escombros del kit junto a las paredes. No se usan: no sale el aro ni «Interactuar». Lo del kit va fundido con el resto del nivel, así que no añade ni un dibujo.</p>
+
+    <div class="par">
+      <figure>
+        <div class="lienzo">
+          <img src="img/b2-pozo.jpg" alt="Móvil en la galería del péndulo: un pozo ceremonial de Meshy en la esquina de la sala, bajo una antorcha" loading="lazy">
+          <span class="pin" style="left:43%;top:35%">1</span>
+        </div>
+        <figcaption><b>Galería del péndulo.</b> El pozo ceremonial, de adorno, en la esquina de la sala de entrada.</figcaption>
+      </figure>
+      <figure>
+        <div class="lienzo">
+          <img src="img/b2-estatua.jpg" alt="Móvil en la galería: la estatua guardiana de Meshy en otra esquina" loading="lazy">
+        </div>
+        <figcaption><b>Galería del péndulo.</b> La estatua guardiana en la segunda sala.</figcaption>
+      </figure>
+      <figure>
+        <div class="lienzo">
+          <img src="img/b2-trofeo.jpg" alt="Móvil: un escudo con dos espadas colgado en la pared, y la estatua a la izquierda" loading="lazy">
+          <span class="pin" style="left:44%;top:32%">2</span>
+        </div>
+        <figcaption><b>Trofeo de pared.</b> Al principio salía enterrado en el suelo; ya cuelga a 1,6 u.</figcaption>
+      </figure>
+      <figure>
+        <div class="lienzo">
+          <img src="img/b2-sarcofago.jpg" alt="Móvil en el santuario del pozo: un sarcófago de Meshy en la esquina de la capilla" loading="lazy">
+          <span class="pin" style="left:26%;top:64%">3</span>
+        </div>
+        <figcaption><b>Santuario del pozo.</b> Un sarcófago de adorno en la capilla. El santuario está tan lleno de objetos que solo caben tres piezas.</figcaption>
+      </figure>
+    </div>
+    <figure class="panel">
+      <div class="lienzo">
+        <img src="img/b2-tv.jpg" alt="TV del santuario: la huella gris del sarcófago en una esquina y unas piedras en la otra" loading="lazy">
+        <span class="pin" style="left:28%;top:74%">4</span>
+      </div>
+      <figcaption><b>TV.</b> El adorno sale en gris, sin letra (no se confunde con lo que se usa), y solo en salas descubiertas.</figcaption>
+    </figure>
+
+    <table style="border-collapse:collapse;font:15px var(--f-dato);width:100%;max-width:720px">
+      <thead><tr style="color:var(--antorcha);text-align:left"><th>Mapa</th><th>Móvil fps</th><th>Memoria</th><th>Dibujos</th><th>Triángulos</th></tr></thead>
+      <tbody>
+        <tr><td>Galería</td><td>20 (antes 19)</td><td>44 MB (50)</td><td>16 (16)</td><td>49 800 (48 600)</td></tr>
+        <tr><td>Santuario</td><td>21 (19)</td><td>41 MB (35)</td><td>17 (17)</td><td>49 600 (49 600)</td></tr>
+        <tr><td>Sarcófago</td><td>19 (21)</td><td>43 MB (46)</td><td>13 (13)</td><td>44 700 (43 500)</td></tr>
+      </tbody>
+    </table>
+    <p style="margin:0;color:var(--ceniza);font-size:14px">Dentro del tope: los mismos dibujos, unos 1 000 triángulos más y la memoria dentro del margen de 20 MB. Lo que cambia de una pasada a otra es ruido del portátil.</p>
+
+    <div class="listas">
+      <div>
+        <h3><span class="etiqueta hecho">Hecho</span></h3>
+        <ul>
+          <li><code>relleno.ts</code>: el reparto, igual en tu PC, los móviles, la TV y el editor (depende solo del nombre del mapa y de su planta, no de lo secreto).</li>
+          <li>Nunca estorba: lo que choca va en esquinas de salas de 2×2 o más (3×3 para Meshy), deja libre el centro de la casilla y se aparta de la entrada y de los objetos.</li>
+          <li>Si tu campaña no tiene el modelo, la pieza sale como un bloque de piedra, sin nombre.</li>
+          <li>6 tests nuevos (1697 en total), tsc limpio; e2e de decorado y TV en verde.</li>
+        </ul>
+      </div>
+      <div>
+        <h3><span class="etiqueta mejora">Mejorable</span></h3>
+        <ol class="mejorable">
+          <li>El pozo de adorno se parece al pozo que se usa en el santuario: en B2 bajo un poco su brillo para que se lea «de adorno».</li>
+          <li>La estatua sale en la galería y en el sarcófago (no seguidos, pero se repite): en B2, que no se repita en toda la cadena.</li>
+          <li>El santuario casi no tiene sitio: lo rellenarán los detalles de suelo (B3).</li>
+          <li>La TV: el suelo sigue a cuadros lisos (B3).</li>
+        </ol>
+      </div>
+    </div>
+  </article>
+
+  <article class="boceto" id="b1">
+    <div class="cabeza">
+      <h2>Boceto 1 · A1, cómo está y qué propongo</h2>
+      <span class="sello">22 oct 2026 · paso A1 · diseño y medida</span>
+    </div>
+
+    <p>Antes de tocar nada: capturas reales de los tres mapas de prueba tal como están en tu <code>main</code>, la medida de partida (fps y memoria) y, para cada punto, dos o tres maneras de hacerlo con la que recomiendo. El loop sigue con la recomendada; si prefieres otra, déjalo en un comentario.</p>
+
+    <section class="idea">
+      <h3>Cómo está ahora</h3>
+      <div class="par">
+        <figure>
+          <div class="lienzo">
+            <img src="img/b1-galeria-movil.jpg" alt="Móvil en la entrada de la galería del péndulo: suelo de losas vacío y el fondo de la sala casi negro" loading="lazy">
+            <span class="pin" style="left:55%;top:27%">1</span>
+            <span class="pin" style="left:62%;top:52%">2</span>
+            <span class="pin" style="left:38%;top:84%">3</span>
+          </div>
+          <figcaption><b>Móvil, galería del péndulo.</b> Una antorcha junto al héroe y el resto de la sala casi a oscuras; el suelo, vacío.</figcaption>
+        </figure>
+        <figure>
+          <div class="lienzo">
+            <img src="img/b1-santuario-tv.jpg" alt="TV con el santuario del pozo: cuadrícula lisa, dos objetos con letra y un hueco de puerta sin marco" loading="lazy">
+            <span class="pin" style="left:40%;top:60%">4</span>
+            <span class="pin" style="left:67%;top:51%">5</span>
+          </div>
+          <figcaption><b>TV, santuario del pozo.</b> Un mapa 2D: cuadros lisos, objetos con letra y la puerta como un hueco en la pared.</figcaption>
+        </figure>
+      </div>
+      <table style="border-collapse:collapse;font:15px var(--f-dato);width:100%;max-width:720px">
+        <thead><tr style="color:var(--antorcha);text-align:left"><th>Mapa</th><th>Móvil fps</th><th>Memoria</th><th>Dibujos</th><th>TV fps</th></tr></thead>
+        <tbody>
+          <tr><td>Galería del péndulo</td><td>19 (mín 18)</td><td>50 MB</td><td>16</td><td>57</td></tr>
+          <tr><td>Santuario del pozo</td><td>19 (mín 17)</td><td>35 MB</td><td>17</td><td>68</td></tr>
+          <tr><td>Cámara del sarcófago</td><td>21 (mín 18)</td><td>46 MB</td><td>13</td><td>38</td></tr>
+        </tbody>
+      </table>
+      <p style="margin:0;color:var(--ceniza);font-size:14px">Medido en el Chrome sin ventana de este portátil, que no llega a 25 fps (lo de siempre). Sirve para comparar paso a paso. Tope del loop: no perder más de un 10 % de fps ni subir más de 20 MB.</p>
+    </section>
+
+    <section class="idea">
+      <h3>1 · Rellenar salas y pasillos <span class="etiqueta recomiendo">A, la que recomiendo</span></h3>
+      <figure>
+        <div class="lienzo">
+          <img src="img/b1-sarcofago-movil.jpg" alt="Móvil en la cámara del sarcófago con el decorado propuesto dibujado encima" loading="lazy">
+          <svg viewBox="0 0 1400 647" aria-hidden="true">
+            <rect x="640" y="215" width="70" height="55" rx="6" fill="rgba(227,181,90,.18)" stroke="#e3b55a" stroke-width="2" stroke-dasharray="8 6"/>
+            <text x="560" y="205" style="font-size:20px">Barriles y escombros del kit</text>
+            <path d="M1010 120 l40 -40 l40 40 v90 h-80z" fill="rgba(95,201,168,.15)" stroke="#5fc9a8" stroke-width="2" stroke-dasharray="8 6"/>
+            <text x="930" y="245" style="font-size:20px;fill:#5fc9a8">Estatua de Meshy de adorno</text>
+            <ellipse cx="900" cy="420" rx="70" ry="16" fill="rgba(169,157,176,.18)" stroke="#a99db0" stroke-width="2"/>
+            <ellipse cx="1080" cy="360" rx="45" ry="10" fill="rgba(169,157,176,.18)" stroke="#a99db0" stroke-width="2"/>
+            <text x="820" y="465" style="font-size:20px">Grietas, musgo, charcos (un atlas)</text>
+            <g fill="#ece4d8" opacity=".75"><circle cx="520" cy="160" r="2.5"/><circle cx="560" cy="240" r="2"/><circle cx="600" cy="140" r="3"/><circle cx="480" cy="210" r="2"/><circle cx="640" cy="300" r="2.5"/></g>
+            <text x="430" y="120" style="font-size:20px">Polvo en la luz</text>
+          </svg>
+        </div>
+        <figcaption><b>A · Kit para lo menudo + 1–2 piezas de Meshy por mapa.</b> Barriles, escombros, velas, estandartes y armas rotas del kit (ya cargado, 0 KB de más) con instancias; en cada mapa una o dos piezas de Meshy distintas, solo de adorno (sin aro ni «Interactuar»), pegadas a paredes y esquinas, nunca en el paso. Tope por mapa: 1,2 MB de Meshy y 25 000 triángulos, con un test que falla si se pasa.</figcaption>
+      </figure>
+      <ul>
+        <li><b>B ·</b> Solo el kit: lo más ligero, pero no usa el decorado de tu carpeta.</li>
+        <li><b>C ·</b> Meshy simplificado para meter más modelos por mapa: lo guardo por si el tope no da.</li>
+      </ul>
+    </section>
+
+    <section class="idea">
+      <h3>2 · Luz y puertas de la TV <span class="etiqueta recomiendo">A, la que recomiendo</span></h3>
+      <figure>
+        <div class="lienzo">
+          <img src="img/b1-galeria-tv.jpg" alt="TV de la galería del péndulo, vista desde arriba, donde irá el marco de piedra de las puertas" loading="lazy">
+        </div>
+        <figcaption><b>A · Antorchas de relleno solas y charcos de luz falsos.</b> En salas de más de 3×3, antorchas de pared cada ~2 casillas (solo llama y halo, sin luz de verdad) y un disco cálido en el suelo bajo cada una: alumbra sin pesar. Siguen 3 luces de verdad, las más cercanas. En la TV, jambas y dintel de piedra en puertas, rejas y salidas, y textura suave en el suelo.</figcaption>
+      </figure>
+      <ul>
+        <li><b>B ·</b> Más luces de verdad: lo más bonito, pero cada una cuesta en cada píxel del móvil.</li>
+        <li><b>C ·</b> Luz horneada: lo mejor en móvil, pero hay que hornear cada mapa del editor (otro loop).</li>
+      </ul>
+    </section>
+
+    <section class="idea">
+      <h3>3 · Música y ambiente <span class="etiqueta recomiendo">A, la que recomiendo</span></h3>
+      <ul>
+        <li><b>A ·</b> Momentos nuevos <code>cueva</code> y <code>mazmorra</code>, y los de siempre <code>combate</code> y <code>victoria</code> (manda lo que elegiste en «Mesa → Sonido»). Suenan en la TV con fundido de ~2 s y no se cortan si la pista no cambia. Para las que faltan, dos pistas CC0 de OpenGameArt («Dungeon Ambience» y «Loopable Dungeon Ambience»), apuntadas con su licencia, y su encargo de Suno por si prefieres las tuyas. Goteo y antorchas sintetizados en la TV y pasos muy bajos en cada móvil (0 KB).</li>
+        <li><b>B ·</b> Música por capas que sube con el peligro: no hay pistas en capas.</li>
+        <li><b>C ·</b> Solo en tu PC: la mesa no la oiría.</li>
+      </ul>
+    </section>
+
+    <section class="idea">
+      <h3>4 · Lo del boceto 10 <span class="etiqueta recomiendo">A, la que recomiendo</span></h3>
+      <ul>
+        <li><b>Virote:</b> flecha fina de madera con punta de hierro y estela corta; el conjuro sigue siendo la bola cian.</li>
+        <li><b>Golpe por arma:</b> el mismo clip con otro ritmo y giro: pesada, tajo lento y ancho; ligera, estocada rápida; puños, dos golpes; distancia, tensar y soltar.</li>
+        <li><b>Aros del suelo:</b> más estrechos y finos; los de los demás, algo más transparentes.</li>
+        <li><b>Tarjeta de pista:</b> cuando sale «Examinar…», se encoge a una línea encima del botón.</li>
+      </ul>
+    </section>
+
+    <div class="listas">
+      <div>
+        <h3><span class="etiqueta hecho">Hecho</span></h3>
+        <ul>
+          <li>Plan en <code>docs/loop-bonito.md</code> y rama propia (<code>loop/bonito</code>).</li>
+          <li>Leído el render de la cueva, la TV, el kit, el decorado de Meshy y la música de <code>src/musica</code>.</li>
+          <li>Script nuevo <code>medir-cueva-e2e.mjs</code>: fps, memoria y dibujos del móvil y la TV en cada mapa.</li>
+          <li><code>diseno.md</code> con las opciones; <code>medidas.md</code> con la línea de partida.</li>
+        </ul>
+      </div>
+      <div>
+        <h3><span class="etiqueta mejora">Mejorable</span></h3>
+        <ol class="mejorable">
+          <li>El fondo de las salas se queda casi negro: solo alumbra la antorcha más cercana (C1).</li>
+          <li>Suelo de losas vacío, sin un solo detalle (B1–B3).</li>
+          <li>Los aros del suelo son anchos (E2).</li>
+          <li>La TV: cuadros lisos, sin textura ni decorado (B1, B3).</li>
+          <li>Las puertas de la TV son un hueco sin marco (C2).</li>
+        </ol>
+      </div>
+    </div>
+  </article>
+</div>
