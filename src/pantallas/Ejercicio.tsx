@@ -278,7 +278,7 @@ function ItemEntrada({ item, valor, onCambia, comunes = [], elegible, abierta, c
           autoComplete="off"
           autoCapitalize="none"
           spellCheck={false}
-          placeholder={item.raiz ? `Forma de ${item.raiz}` : 'Una sola palabra'}
+          placeholder={item.raiz ? `Forma de ${item.raiz}` : item.maxPalabras ? `Copia hasta ${item.maxPalabras} palabras del texto` : item.frase ? 'Una palabra o frase corta' : 'Una sola palabra'}
           value={valor}
           onChange={(e) => onCambia(e.target.value)}
         />

@@ -42,6 +42,23 @@ export function montarExamen(examen: Examen, destreza: Destreza, vistos: string[
   });
 }
 
+/** Números de examen completos que hay en el banco para esa destreza (examen 1, 2…), ordenados. */
+export function numerosExamen(examen: Examen, destreza: Destreza): number[] {
+  const numeros = ejerciciosDe(examen, destreza).map((e) => e.examenNumero).filter((n): n is number => n !== undefined);
+  return [...new Set(numeros)].sort((a, b) => a - b);
+}
+
+/** El examen número N tal cual: todas sus partes en orden (una por parte). Si falta una parte, se rellena con otra del banco. */
+export function montarExamenNumero(examen: Examen, destreza: Destreza, numero: number, vistos: string[] = leerVistos(), azar: () => number = Math.random): Ejercicio[] {
+  const todos = ejerciciosDe(examen, destreza);
+  const partes = [...new Set(todos.map((e) => e.parte))].sort((a, b) => a - b);
+  return partes.flatMap((parte) => {
+    const propio = todos.find((e) => e.parte === parte && e.examenNumero === numero);
+    const elegido = propio ?? elegir(todos.filter((e) => e.parte === parte), vistos, azar);
+    return elegido ? [elegido] : [];
+  });
+}
+
 /** Solo una parte, para practicarla suelta. */
 export function practicarParte(examen: Examen, destreza: Destreza, parte: number, vistos: string[] = leerVistos(), azar: () => number = Math.random): Ejercicio[] {
   const elegido = elegir(ejerciciosDe(examen, destreza).filter((e) => e.parte === parte), vistos, azar);

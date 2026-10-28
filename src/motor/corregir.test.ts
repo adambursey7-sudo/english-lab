@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { alternativasDe, comunesDe, corrigeEjercicio, corrigeItem, cuentaPalabras, normaliza, palabrasRedaccion, textoRespuesta, vinetaDe, bandaDe } from './corregir';
-import { elegir, montarExamen, practicarParte } from './examen';
+import { elegir, montarExamen, practicarParte, montarExamenNumero, numerosExamen } from './examen';
 import { BANCO, partesDe } from '../banco';
 import { TIPOS_EVALUABLES, type Ejercicio, type Item } from '../banco/tipos';
 
@@ -184,6 +184,14 @@ describe('montar exámenes', () => {
   it('un examen de C1 Use of English lleva una parte de cada, en orden', () => {
     const lista = montarExamen('c1', 'reading-use', [], () => 0);
     expect(lista.map((e) => e.parte)).toEqual(partesDe('c1', 'reading-use').map((p) => p.parte));
+  });
+  it('un examen numerado trae sus propias partes en orden', () => {
+    for (const n of numerosExamen('c1', 'reading-use')) {
+      const lista = montarExamenNumero('c1', 'reading-use', n, [], () => 0);
+      expect(lista.map((e) => e.parte)).toEqual(partesDe('c1', 'reading-use').map((p) => p.parte));
+      expect(lista.every((e) => e.examenNumero === n), `examen ${n} mezcla partes de otro`).toBe(true);
+    }
+    expect(numerosExamen('pau', 'prueba').length).toBeGreaterThan(0);
   });
   it('practicar una parte devuelve solo esa', () => {
     expect(practicarParte('c1', 'reading-use', 3, []).map((e) => e.parte)).toEqual([3]);

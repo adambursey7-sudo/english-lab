@@ -9,13 +9,13 @@ const TEXTO =
   'Not everyone was convinced at first. Some older members complained that the library was becoming a shop, and a local hardware store worried about losing customers. However, the owner of the store, Dan Fletcher, now admits that the opposite has happened. “People borrow a tool, discover they like doing things themselves, and then come to me to buy materials,” he says. “My sales have actually gone up.”\n\n' +
   'The project has also had an unexpected social effect. Because members must return items in person, they often stay to chat, and a group of them has started a monthly repair evening where volunteers help fix broken objects for free. Ruth believes this is the real success of the scheme. “We wanted to save people money,” she says. “What we did not expect was to give them a reason to talk to their neighbours.” The town council is now studying whether to open a second library of things on the other side of the river.';
 
-const CRITERIOS_PAU_CORTOS = [
+export const CRITERIOS_PAU_CORTOS = [
   'Lo que escribo encaja con la situación o con la conversación (si el hueco acaba en «?», es una pregunta).',
   'Sin errores de gramática ni de ortografía: cada error baja la nota (0,25 → 0,20 → 0,15 → 0).',
   'Ni muy corto ni muy largo: en las situaciones, entre 10 y 25 palabras.',
 ];
 
-const CRITERIOS_PAU_REDACCION = [
+export const CRITERIOS_PAU_REDACCION = [
   'Presentación: párrafos claros, puntuación correcta.',
   'Organización: estructura del tipo de texto (email; for & against; opinion essay), registro adecuado, ideas enlazadas con conectores.',
   'Contenido: me ciño al tema, ideas suficientes y variadas, sin repeticiones.',

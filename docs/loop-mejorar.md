@@ -164,6 +164,11 @@ Telegram con el enlace de los bocetos y cómo probarlo en el iPhone. Parar el lo
   Siguiente: 4c (detalles: transiciones, iconos, foco y accesibilidad, «Mis resultados», tablet a dos columnas,
   reproductor compacto).
 
+- Vuelta 12 (28/10, noche, fuera del loop, a petición de Adam «meter los exámenes que faltan»): **6a, 6b y 6d hechos**
+  (C1 examen 2 completo con audios; PAU exámenes 2 y 3) escritos por cuatro agentes en paralelo, más el selector
+  «Examen 1 / Examen 2 / Mezcla» en el inicio. Siguiente: 4c, 5 (PDF), 6c (C1 examen 3), 6e… El revisor de calidad
+  (solo lectura) de cada examen nuevo queda pendiente para la siguiente vuelta.
+
 ## Decisiones de Adam
 - 28/10 (vuelta 1): **estilo B «aula moderna» para la app y C «examen oficial» para el cuadernillo en PDF**, como
   recomendaba Claude. El bloque 4 aplica B; el bloque 5 aplica C al PDF. Ya no hay que esperar a la vuelta 8.
@@ -340,6 +345,24 @@ Telegram con el enlace de los bocetos y cómo probarlo en el iPhone. Parar el lo
   «media» → «mejores notas»; «Mis resultados» y dos columnas en tablet (4c).
 - Capturas: `docs/loop-mejorar/capturas/4a/`.
 - Cómo probarlo: abrir la app: haz un Part 1 y vuelve al inicio; la tarjeta de Reading y el Part 1 enseñan tu nota.
+
+### Vuelta 12 · 6a, 6b y 6d. Examen 2 de C1 y exámenes 2 y 3 de la PAU
+- Hecho: banco nuevo en `src/banco/c1/reading-use-2.ts` (Parts 1–8: siestas, canciones tristes, segunda mano,
+  transformaciones, «The ferry home», turismo masivo, el faro, cambiar de ciudad), `listening-2.ts` (festival de cine
+  / reparto en bici / mudanza; apicultor urbano; escuela de música; hobbies abandonados) con sus 4 mp3 en
+  `public/audio/*-2.mp3`, `writing-2.ts` (essay voluntariado; report transporte, letter parque, review app de
+  idiomas), `speaking-2.ts` (tecnología al aire libre, celebraciones, bienestar de los jóvenes) y
+  `src/banco/pau/examen-2.ts` (huerto escolar) y `examen-3.ts` (nadadores de invierno). Use of English del examen 1
+  ya lleva `examenNumero: 1`. `motor/examen.ts`: `numerosExamen` y `montarExamenNumero` (examen N tal cual, en
+  orden); el inicio enseña las fichas «Examen 1 / Examen 2 / Mezcla» cuando hay más de uno. Casilla de la PAU 2 dice
+  «Copia hasta 10 palabras del texto» (antes «Una sola palabra»).
+- Comprobado: typecheck limpio; 30 tests (nuevo: cada examen numerado trae solo sus partes en orden); banco de 48
+  ejercicios y 259 preguntas; capturas del inicio (C1 con Examen 2, PAU con Examen 3), Part 1 del examen 2 y el texto
+  de la PAU 3.
+- Falló: la voz `en-ZA-LeahNeural` de edge-tts no devuelve audio (cambiada por Sonia); una transformación salió con
+  7 palabras y el test la cazó (arreglada por el agente).
+- Mejorable: pasar el revisor de calidad por los exámenes nuevos (regla del bloque 6); los extractos de la Part 1 del
+  Listening 2 son un poco largos (≈ 200 palabras); Parts 2 y 3 del Reading 2 un poco cortas (≈ 170).
 
 ### Vuelta 11 · 4b. Ejercicio y Corrección
 - Hecho: `Temporizador.tsx` (clase `poco` a ≤ 2 min). `corregir.ts`: `bandaDe(examen, porcentaje)` (C1: Grade A ≥ 80,

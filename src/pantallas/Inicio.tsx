@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { destrezasDe, partesDe } from '../banco';
 import { NOMBRES_DESTREZA, NOMBRES_EXAMEN, etiquetaParte, type Destreza, type Ejercicio, type Examen } from '../banco/tipos';
 import { Instalar } from '../componentes/Instalar';
-import { minutosDe, montarExamen, practicarParte } from '../motor/examen';
+import { minutosDe, montarExamen, montarExamenNumero, numerosExamen, practicarParte } from '../motor/examen';
 import { hechosEstaSemana, leerHistorial, mejorDeParte, porcentaje, resumenDestreza } from '../motor/historial';
 
 const EXAMENES: Examen[] = ['c1', 'pau'];
@@ -25,11 +25,15 @@ export function Inicio({ onEmpezar }: { onEmpezar: (lista: Ejercicio[]) => void 
   const [examen, setExamen] = useState<Examen>('c1');
   const [destrezaElegida, setDestreza] = useState<Destreza>('reading-use');
   const [historial] = useState(leerHistorial);
+  /** Qué examen completo: un número concreto o 'azar' (una parte de cada, al azar). */
+  const [numeroElegido, setNumero] = useState<number | 'azar'>(1);
   // Al cambiar de examen, la destreza tiene que existir en él (la PAU solo tiene «prueba»).
   const destreza = DESTREZAS[examen].includes(destrezaElegida) ? destrezaElegida : DESTREZAS[examen][0];
   const disponibles = destrezasDe(examen);
   const partes = partesDe(examen, destreza);
-  const examenCompleto = montarExamen(examen, destreza);
+  const numeros = numerosExamen(examen, destreza);
+  const numero = numeroElegido !== 'azar' && !numeros.includes(numeroElegido) ? (numeros[0] ?? 'azar') : numeroElegido;
+  const examenCompleto = numero === 'azar' ? montarExamen(examen, destreza) : montarExamenNumero(examen, destreza, numero);
   const semana = hechosEstaSemana(historial);
 
   return (
@@ -65,6 +69,14 @@ export function Inicio({ onEmpezar }: { onEmpezar: (lista: Ejercicio[]) => void 
               </p>
             </div>
             <button className="btn chico" onClick={() => onEmpezar(examenCompleto)}>Empezar</button>
+            {numeros.length > 1 && (
+              <div className="numeros fichas" role="group" aria-label="Qué examen">
+                {numeros.map((n) => (
+                  <button key={n} className="ficha mini" aria-pressed={numero === n} onClick={() => setNumero(n)}>Examen {n}</button>
+                ))}
+                <button className="ficha mini" aria-pressed={numero === 'azar'} onClick={() => setNumero('azar')}>Mezcla</button>
+              </div>
+            )}
           </section>
         )}
 

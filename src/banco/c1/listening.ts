@@ -3,10 +3,10 @@ import type { Ejercicio, LineaGuion } from '../tipos';
 // Cambridge C1 Advanced · Listening. Guiones redactados de cero; el supervisor lee las instrucciones como en el examen.
 // Formato oficial y guion tipo en docs/formatos.md. Los mp3 se generan con scripts/audios.py (edge-tts + ffmpeg).
 
-const SUPERVISOR = { id: 'sup', descripcion: 'Supervisor', voz: 'en-GB-LibbyNeural' };
+export const SUPERVISOR = { id: 'sup', descripcion: 'Supervisor', voz: 'en-GB-LibbyNeural' };
 
 /** Un trozo que en el examen se oye dos veces: aviso, pausa, audio, pausa, «again», audio, pausa. */
-function dosVeces(lineas: LineaGuion[], antes: number, entre = 5000, despues = 5000): LineaGuion[] {
+export function dosVeces(lineas: LineaGuion[], antes: number, entre = 5000, despues = 5000): LineaGuion[] {
   return [{ pausa: antes }, ...lineas, { pausa: entre }, { quien: 'sup', texto: 'Now you will hear it again.' }, { pausa: 1500 }, ...lineas, { pausa: despues }];
 }
 

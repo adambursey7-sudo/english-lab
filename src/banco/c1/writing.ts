@@ -3,7 +3,7 @@ import type { Ejercicio } from '../tipos';
 // Cambridge C1 Advanced · Writing. Part 1: essay obligatorio. Part 2: elegir una de tres (email/letter, proposal, report, review).
 // Formato oficial en docs/formatos.md. Redactado de cero; nombres de programas, lugares y personas inventados.
 
-const CRITERIOS_C1 = [
+export const CRITERIOS_C1 = [
   'Content: he hecho todo lo que pide la tarea (cada punto del enunciado) y quien lo lea queda bien informado.',
   'Communicative Achievement: el registro es el adecuado para el lector (formal con el tutor o el director; cercano con un amigo) y sigo las convenciones del tipo de texto.',
   'Organisation: párrafos claros con una idea cada uno, introducción y cierre, conectores variados (however, on balance, provided that, what is more…).',

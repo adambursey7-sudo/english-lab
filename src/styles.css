@@ -342,6 +342,9 @@ input { font: inherit; color: inherit; }
 .examen-completo h2 { font-size: 19px; }
 .examen-completo .silencio { font-size: 14px; line-height: 1.4; margin-top: 2px; }
 .examen-completo .btn { background: var(--tono); border-color: var(--tono); color: #fff; }
+.examen-completo .numeros { grid-column: 1 / -1; gap: 6px; }
+.ficha.mini { min-height: 32px; padding: 4px 11px; font-size: 13.5px; }
+.examen-completo .ficha.mini[aria-pressed='true'] { background: var(--tono); border-color: var(--tono); color: #fff; }
 
 .destrezas { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
 .destrezas.una { grid-template-columns: 1fr; }
