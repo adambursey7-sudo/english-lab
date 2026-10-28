@@ -1,9 +1,12 @@
 import { useState } from 'react';
 import type { Ejercicio, Item, Respuestas } from '../banco/tipos';
-import { NOMBRES_EXAMEN } from '../banco/tipos';
+import { NOMBRES_EXAMEN, TIPOS_EVALUABLES } from '../banco/tipos';
+import { EntradaHablar } from '../componentes/Hablar';
+import { EntradaRedaccion } from '../componentes/Redaccion';
 import { Temporizador } from '../componentes/Temporizador';
 import { TextoHuecos } from '../componentes/TextoHuecos';
 import { cuentaPalabras, letra } from '../motor/corregir';
+import { guardarEntrega } from '../motor/entregas';
 
 interface Props {
   ejercicio: Ejercicio;
@@ -17,8 +20,17 @@ interface Props {
 export function PantallaEjercicio({ ejercicio, posicion, respuestas, onCambia, onSiguiente, onSalir }: Props) {
   const [activo, setActivo] = useState<number | null>(null);
   const [confirmarSalida, setConfirmarSalida] = useState(false);
+  // Con «elige 1 de 3», la tarea abierta: la que ya tenga texto o la que se elija.
+  const [elegida, setElegida] = useState<number | null>(() => ejercicio.items.find((i) => (respuestas[i.n] ?? '').trim() !== '')?.n ?? null);
   const contestados = ejercicio.items.filter((i) => (respuestas[i.n] ?? '').trim() !== '').length;
+  const porContestar = ejercicio.elegir ?? ejercicio.items.length;
   const ultimo = posicion.i === posicion.total;
+  const seCorrige = ejercicio.items.some((i) => TIPOS_EVALUABLES.has(i.tipo));
+
+  const terminar = () => {
+    for (const i of ejercicio.items) if (i.tipo === 'redaccion') guardarEntrega(ejercicio, i.n, respuestas[i.n] ?? '');
+    onSiguiente();
+  };
 
   const irA = (n: number) => {
     setActivo(n);
@@ -103,14 +115,22 @@ export function PantallaEjercicio({ ejercicio, posicion, respuestas, onCambia, o
         <div className="items">
           {ejercicio.items.map((item) => (
             <div key={item.n} id={`item-${item.n}`} className={`item${activo === item.n ? ' activo' : ''}`} onFocus={() => setActivo(item.n)}>
-              <ItemEntrada item={item} valor={respuestas[item.n] ?? ''} onCambia={(v) => onCambia(item.n, v)} comunes={ejercicio.opcionesComunes} />
+              <ItemEntrada
+                item={item}
+                valor={respuestas[item.n] ?? ''}
+                onCambia={(v) => onCambia(item.n, v)}
+                comunes={ejercicio.opcionesComunes}
+                elegible={ejercicio.elegir !== undefined}
+                abierta={ejercicio.elegir === undefined || elegida === item.n}
+                onElegir={() => setElegida(item.n)}
+              />
             </div>
           ))}
         </div>
 
         <div className="pie">
-          <button className="btn" onClick={onSiguiente}>
-            {ultimo ? 'Corregir' : 'Siguiente parte'} · {contestados}/{ejercicio.items.length} contestadas
+          <button className="btn" onClick={terminar}>
+            {ultimo ? (seCorrige ? 'Corregir' : 'Terminar') : 'Siguiente parte'} · {contestados}/{porContestar} {porContestar === 1 ? 'hecha' : 'hechas'}
           </button>
           {confirmarSalida ? (
             <div className="fila" style={{ display: 'flex', gap: 8 }}>
@@ -126,7 +146,17 @@ export function PantallaEjercicio({ ejercicio, posicion, respuestas, onCambia, o
   );
 }
 
-function ItemEntrada({ item, valor, onCambia, comunes = [] }: { item: Item; valor: string; onCambia: (v: string) => void; comunes?: string[] }) {
+interface PropsItem {
+  item: Item;
+  valor: string;
+  onCambia: (v: string) => void;
+  comunes?: string[];
+  elegible?: boolean;
+  abierta?: boolean;
+  onElegir?: () => void;
+}
+
+function ItemEntrada({ item, valor, onCambia, comunes = [], elegible, abierta, onElegir }: PropsItem) {
   if (item.tipo === 'emparejar') {
     const cortas = comunes.every((o) => o.length <= 24);
     return (
@@ -193,8 +223,16 @@ function ItemEntrada({ item, valor, onCambia, comunes = [] }: { item: Item; valo
     );
   }
 
+  if (item.tipo === 'redaccion') {
+    return <EntradaRedaccion item={item} valor={valor} onCambia={onCambia} elegible={elegible} abierta={abierta} onElegir={onElegir} />;
+  }
+
+  if (item.tipo === 'hablar') {
+    return <EntradaHablar item={item} valor={valor} onCambia={onCambia} />;
+  }
+
   if (item.tipo !== 'transformacion') {
-    // Emparejar, verdadero/falso, redacción y speaking tienen pantalla propia (bloque 2 del loop).
+    // Verdadero/falso de la PAU tiene pantalla propia (bloque 3 del loop).
     return <p className="silencio">Este tipo de ejercicio llega en una próxima versión.</p>;
   }
 

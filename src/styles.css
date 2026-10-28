@@ -160,6 +160,41 @@ input { font: inherit; color: inherit; }
 .plegable summary { cursor: pointer; font-weight: 600; }
 .plegable[open] summary { margin-bottom: 8px; }
 
+/* Writing */
+.redaccion { display: grid; gap: 10px; }
+.tipo-texto { font-size: 13px; color: var(--ink2); font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; }
+.enunciado { display: grid; gap: 8px; font-size: 15.5px; line-height: 1.55; background: var(--paper); border-left: 3px solid var(--line); padding: 10px 12px; border-radius: 0 8px 8px 0; }
+.campo.texto-largo { min-height: 220px; line-height: 1.55; resize: vertical; font-family: var(--body); }
+.contador.banda-bien { color: var(--ok); font-weight: 600; }
+.contador.banda-muchas { color: var(--pen); font-weight: 600; }
+.contador.banda-pocas { color: var(--marker-ink); background: var(--marker); padding: 1px 6px; border-radius: 4px; }
+.resultado-item.pendiente { border-left-color: var(--ink2); background: var(--paper2); border: 1px solid var(--line); border-left-width: 3px; }
+.tu-texto { display: grid; gap: 8px; font-size: 15.5px; line-height: 1.6; max-width: 65ch; }
+.tu-texto.modelo { font-family: var(--display); font-size: 16px; }
+.criterios { list-style: none; padding: 0; display: grid; gap: 8px; }
+.criterios label { display: grid; grid-template-columns: 24px 1fr; gap: 10px; align-items: start; font-size: 14.5px; line-height: 1.45; cursor: pointer; }
+.criterios input { width: 20px; height: 20px; margin-top: 2px; accent-color: var(--ok); }
+
+/* Speaking */
+.hablar { display: grid; gap: 12px; }
+.hablar h3 { font-size: 18px; }
+.examinador { display: grid; gap: 4px; font-family: var(--display); font-size: 16.5px; line-height: 1.5; background: var(--paper); border-left: 3px solid var(--ink); padding: 10px 12px; border-radius: 0 8px 8px 0; }
+.imagenes { display: grid; gap: 8px; }
+.imagen { display: grid; grid-template-columns: 30px 1fr; gap: 10px; align-items: start; border: 1px dashed var(--ink2); border-radius: 8px; padding: 10px; font-size: 14.5px; line-height: 1.5; background: var(--paper); }
+.imagen p { margin: 0; }
+.hoja-ideas {
+  display: grid; gap: 8px; align-items: center; justify-items: center; text-align: center;
+  grid-template-areas: 'i1 i1 i2 i2' 'i5 c c i3' 'i5 c c i3' 'i4 i4 i4 i4'; grid-template-columns: auto 1fr 1fr auto;
+  border: 1.5px solid var(--ink); border-radius: 10px; padding: 14px 10px; background: var(--paper2);
+}
+.hoja-ideas .central { grid-area: c; font-family: var(--display); font-weight: 700; font-size: 17px; line-height: 1.3; padding: 8px; }
+.hoja-ideas .idea { font-size: 14.5px; font-weight: 500; border: 1px solid var(--line); border-radius: 999px; padding: 4px 10px; background: var(--paper); }
+.preguntas-hablar { margin: 0; padding-left: 20px; display: grid; gap: 6px; font-size: 15.5px; line-height: 1.45; }
+.reloj-hablar { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+.reloj-hablar .cuenta { font-family: var(--mono); font-size: 34px; font-weight: 700; font-variant-numeric: tabular-nums; line-height: 1; }
+.reloj-hablar[data-fase='hablando'] .cuenta { color: var(--ok); }
+.reloj-hablar[data-fase='leyendo'] .cuenta { color: var(--marker-ink); }
+
 .items { display: grid; gap: 12px; }
 .item { border: 1px solid var(--line); border-radius: var(--radio); background: var(--paper2); padding: 12px 14px; display: grid; gap: 10px; }
 .item.activo { border-color: var(--ink); box-shadow: 0 0 0 1px var(--ink); }

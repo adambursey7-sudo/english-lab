@@ -16,7 +16,8 @@ App web instalable (PWA, React 19 + TypeScript + Vite) de Adam para practicar ex
 - `src/banco/<examen>/*.ts`: ejercicios; cada archivo exporta una lista y se suma en `src/banco/index.ts` (`BANCO`, `partesDe`, `destrezasDe`).
 - `src/motor/corregir.ts`: corrección pura (`normaliza`, `corrigeEjercicio` con `aciertos`/`total`/`pendientes`, `cuentaPalabras`, `palabrasRedaccion`); redacción y speaking no se corrigen solos (`evaluable: false`). `src/motor/examen.ts`: montar examen/parte y «vistos» en localStorage.
 - `src/pantallas/`: Inicio → Ejercicio (reloj, huecos tocables, entradas) → Resultado (texto corregido en verde/rojo y explicaciones).
-- `src/componentes/`: `TextoHuecos`, `Temporizador`, `Instalar` (guía de añadir a inicio en iPhone/Android).
+- `src/componentes/`: `TextoHuecos`, `Temporizador`, `Instalar` (guía de añadir a inicio en iPhone/Android), `Redaccion` (writing: contador, elegir tarea, enviar a Adam, modelo y criterios), `Hablar` (speaking: reloj por fases, grabar con el micro, hoja de ideas).
+- `src/motor/entregas.ts`: palabras por bandas, texto para compartir, entregas en localStorage, compartir (Web Share → portapapeles + WhatsApp).
 - `scripts/iconos.py`: iconos de `public/` con Pillow.
 
 ## Comandos

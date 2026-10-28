@@ -144,8 +144,9 @@ Telegram con el enlace de los bocetos y cómo probarlo en el iPhone. Parar el lo
 - Vuelta 2 (28/10): 1b hecho (`docs/formatos.md`, fuentes en `C:\dev\english-lab-fuentes\`). **Bloque 1 cerrado.**
 - Vuelta 3 (28/10): 2a hecho (modelo del banco ampliado, corrección con «pendiente», tests).
 - Vuelta 4 (28/10): 2b hecho (pantallas de secciones, lista común, emparejar y huecos de párrafo) con los
-  ejercicios del examen 1 de Part 6 y Part 7 ya escritos. **Siguiente: 2c (pantallas de Writing y Speaking).**
-  Ojo: 3a queda reducido a Part 5 y Part 8 (los otros dos ya están).
+  ejercicios del examen 1 de Part 6 y Part 7 ya escritos. Ojo: 3a queda reducido a Part 5 y Part 8.
+- Vuelta 5 (28/10): 2c hecho (Writing y Speaking) **y con ello 3b y 3d también** (examen 1 de Writing y Speaking
+  escritos). **Siguiente: 2d (pantalla de Listening con reproductor y respaldo de voz).**
 
 ## Decisiones de Adam
 - 28/10 (vuelta 1): **estilo B «aula moderna» para la app y C «examen oficial» para el cuadernillo en PDF**, como
@@ -218,3 +219,24 @@ Telegram con el enlace de los bocetos y cómo probarlo en el iPhone. Parar el lo
 - Mejorable (para 4b): elegir el párrafo desde el propio hueco; dos columnas en tablet.
 - Cómo probarlo: Inicio → Reading & Use of English → «Part 6 · Cross-text multiple matching» o «Part 7 · Gapped
   text»; contesta tocando letras y corrige.
+
+### Vuelta 5 · 2c (+ 3b y 3d). Writing y Speaking
+- Hecho: `src/componentes/Redaccion.tsx` (`EntradaRedaccion` con contador por bandas y «Elegir esta tarea»;
+  `ResultadoRedaccion` con tu texto, «Enviar a Adam», modelo y explicación plegados, lista de criterios con casillas).
+  `src/componentes/Hablar.tsx` (`EntradaHablar`: frase del examinador, imágenes descritas, hoja de ideas en CSS grid,
+  preguntas, reloj por fases leer→hablar, grabar con `MediaRecorder` (mp4 o webm), escuchar y compartir el audio).
+  `src/motor/entregas.ts` (`bandaPalabras`, `avisoPalabras`, `textoParaCompartir`, `guardarEntrega`/`leerEntregas`
+  en localStorage, `compartir` con Web Share → portapapeles + wa.me, `formatoReloj`) con tests. `Ejercicio.tsx`:
+  `elegir` (una tarea abierta), botón «Terminar · 1/1 hecha» cuando nada se corrige solo, guarda entregas al
+  terminar. `Resultado.tsx`: cabecera «Guardado/Terminado» si no hay nada evaluable, aviso de textos pendientes,
+  tarjetas de redacción y de speaking. Banco: `c1/writing.ts` (essay `c1-wri-1-schools-work` y set
+  `c1-wri-2-set-1` con review, proposal y email, modelos de 231–242 palabras) y `c1/speaking.ts` (4 partes:
+  interview, long turn con dos juegos de fotos descritas, collaborative task con hoja, discussion). Capturas: el
+  script acepta `writing/2`, `speaking/3`.
+- Comprobado: typecheck limpio; 21 tests (2 archivos); capturas de Writing 1 y 2 y Speaking 2 y 3 revisadas.
+- Falló: la primera versión del archivo de Writing se cortó a medias (interrumpida); se reescribió entera con otro
+  tema para la review. Ajuste CSS de la hoja de ideas (la pregunta central se partía en 8 líneas).
+- Sin probar en el móvil real: compartir, micro y WhatsApp (pendiente para cuando Adam lo pruebe).
+- Capturas: `docs/loop-mejorar/capturas/2c/`.
+- Cómo probarlo: Inicio → Writing → Part 2, elige una tarea, escribe y «Terminar»; prueba «Enviar a Adam».
+  Speaking → Part 3: «Empezar», lee 15 s y habla 2 min; o «Empezar grabando» y escucha el audio.

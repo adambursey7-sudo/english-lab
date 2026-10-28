@@ -60,22 +60,37 @@ await pagina.waitForSelector('.nota-grande');
 await foto('04-resultado');
 await foto('04-resultado-entera', true);
 
-// Partes sueltas que se pidan (cuarto argumento: "6,7"): se abre cada una, se contesta la primera pregunta y se captura.
-for (const parte of (process.argv[4] ?? '').split(',').filter(Boolean)) {
+// Partes sueltas que se pidan (cuarto argumento: "6,7,writing/2,speaking/3"): se abre cada una, se contesta la primera
+// pregunta y se captura. Sin prefijo es Reading & Use of English.
+const CHIPS = { 'reading-use': 'Reading & Use of English', writing: 'Writing', listening: 'Listening', speaking: 'Speaking', prueba: 'Prueba escrita' };
+for (const pedido of (process.argv[4] ?? '').split(',').filter(Boolean)) {
+  const [destreza, parte] = pedido.includes('/') ? pedido.split('/') : ['reading-use', pedido];
+  const nombre = `07-${destreza === 'reading-use' ? 'parte' : destreza}-${parte}`;
   await pagina.goto(url, { waitUntil: 'networkidle' });
+  if (destreza !== 'reading-use') await pagina.locator('.ficha', { hasText: CHIPS[destreza] }).first().click();
   await pagina.locator('.tarjeta', { hasText: `Part ${parte} ·` }).first().click();
   await pagina.waitForSelector('.item');
-  await foto(`07-parte-${parte}`);
+  await foto(nombre);
   const primera = pagina.locator('.item').first();
   const letraBtn = primera.locator('.letra-btn');
+  const elegir = primera.locator('button', { hasText: 'Elegir esta tarea' });
   if ((await letraBtn.count()) > 0) await letraBtn.nth(1).click();
   else if ((await primera.locator('.opcion').count()) > 0) await primera.locator('.opcion').nth(1).click();
+  else if ((await elegir.count()) > 0) {
+    await elegir.click();
+    await primera.locator('textarea').fill('This is a sample answer written to see how the counter and the layout behave. '.repeat(4));
+  } else if ((await primera.locator('textarea').count()) > 0) {
+    await primera.locator('textarea').fill('This is a sample answer written to see how the counter and the layout behave. '.repeat(4));
+  } else if ((await primera.locator('.reloj-hablar .btn').count()) > 0) {
+    await primera.locator('.reloj-hablar .btn').first().click();
+    await pagina.waitForTimeout(1200);
+  }
   await primera.scrollIntoViewIfNeeded();
-  await foto(`07-parte-${parte}-contestando`);
-  await foto(`07-parte-${parte}-entera`, true);
+  await foto(`${nombre}-contestando`);
+  await foto(`${nombre}-entera`, true);
   await pagina.locator('.pie .btn').first().click();
   await pagina.waitForSelector('.nota-grande');
-  await foto(`07-parte-${parte}-resultado-entera`, true);
+  await foto(`${nombre}-resultado-entera`, true);
 }
 
 // Modo oscuro del inicio.

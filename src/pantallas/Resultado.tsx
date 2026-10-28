@@ -2,6 +2,7 @@ import type { Ejercicio, Respuestas } from '../banco/tipos';
 import { NOMBRES_EXAMEN } from '../banco/tipos';
 import { TextoHuecos } from '../componentes/TextoHuecos';
 import { alternativasDe, corrigeEjercicio, letra, textoRespuesta, type ItemCorregido } from '../motor/corregir';
+import { ResultadoRedaccion } from '../componentes/Redaccion';
 
 interface Props {
   lista: Ejercicio[];
@@ -15,6 +16,8 @@ export function Resultado({ lista, respuestas, onRepetir, onInicio }: Props) {
   const aciertos = corregidos.reduce((n, c) => n + c.aciertos, 0);
   const total = corregidos.reduce((n, c) => n + c.total, 0);
   const porcentaje = total === 0 ? 0 : Math.round((aciertos / total) * 100);
+  const pendientes = corregidos.reduce((n, c) => n + c.pendientes, 0);
+  const soloLibre = total === 0;
 
   return (
     <div className="app">
@@ -28,18 +31,31 @@ export function Resultado({ lista, respuestas, onRepetir, onInicio }: Props) {
       </header>
 
       <main className="contenido">
-        <div className="hoja nota-grande">
-          <div className="cifra">
-            {aciertos} <span>de {total}</span>
+        {soloLibre ? (
+          <div className="hoja nota-grande">
+            <div className="cifra" style={{ fontSize: 28 }}>{pendientes > 0 ? 'Guardado' : 'Terminado'}</div>
+            <p className="silencio">
+              {pendientes > 0
+                ? 'Esta parte no se corrige sola: mándasela a Adam con el botón y, mientras, compárala con el modelo.'
+                : 'Esta parte no se corrige sola. Lee «Cómo hacerlo bien» y repítela cuando quieras.'}
+            </p>
           </div>
-          <div className="barra" aria-hidden="true"><div style={{ width: `${porcentaje}%` }} /></div>
-          <p className="silencio">{frase(porcentaje)}</p>
-        </div>
+        ) : (
+          <div className="hoja nota-grande">
+            <div className="cifra">
+              {aciertos} <span>de {total}</span>
+            </div>
+            <div className="barra" aria-hidden="true"><div style={{ width: `${porcentaje}%` }} /></div>
+            <p className="silencio">{frase(porcentaje)}</p>
+            {pendientes > 0 && <p className="silencio pequeno">Además hay {pendientes} {pendientes === 1 ? 'texto' : 'textos'} para que corrija Adam.</p>}
+          </div>
+        )}
 
         {corregidos.map((c) => (
           <section key={c.ejercicio.id} style={{ display: 'grid', gap: 12 }}>
             <h2>
-              Part {c.ejercicio.parte} · {c.ejercicio.nombreParte} <span className="silencio">· {c.aciertos}/{c.total}</span>
+              Part {c.ejercicio.parte} · {c.ejercicio.nombreParte}
+              {c.total > 0 && <span className="silencio"> · {c.aciertos}/{c.total}</span>}
             </h2>
 
             {c.ejercicio.texto && (
@@ -79,7 +95,21 @@ export function Resultado({ lista, respuestas, onRepetir, onInicio }: Props) {
             )}
 
             <div className="items">
-              {c.items.map((ic) => <ResultadoItem key={ic.item.n} ic={ic} comunes={c.ejercicio.opcionesComunes} />)}
+              {c.items.map((ic) => {
+                if (ic.item.tipo === 'redaccion') {
+                  if (c.ejercicio.elegir !== undefined && ic.respuesta.trim() === '') return null;
+                  return <ResultadoRedaccion key={ic.item.n} ejercicio={c.ejercicio} item={ic.item} texto={ic.respuesta} />;
+                }
+                if (ic.item.tipo === 'hablar') {
+                  return (
+                    <div key={ic.item.n} className="resultado-item pendiente">
+                      <div className="fila"><span className="num" style={{ fontWeight: 700 }}>{ic.item.n}</span><span>{ic.item.pregunta ?? c.ejercicio.nombreParte}</span><span className="silencio">{ic.respuesta === 'hecho' ? 'hecha' : 'sin hacer'}</span></div>
+                      {ic.item.modelo && <p className="explica">{ic.item.modelo}</p>}
+                    </div>
+                  );
+                }
+                return <ResultadoItem key={ic.item.n} ic={ic} comunes={c.ejercicio.opcionesComunes} />;
+              })}
             </div>
           </section>
         ))}
