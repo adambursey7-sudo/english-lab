@@ -156,6 +156,9 @@ Telegram con el enlace de los bocetos y cómo probarlo en el iPhone. Parar el lo
   hecho: logo de Kate en el inicio y 5 viñetas de nota en la corrección (`public/img/`). **Examen 1 de la PAU
   completo. Bloque 3 cerrado.** Siguiente: bloque 4 (diseño B «aula moderna»), 5 (PDF), 6 (más exámenes), 7, 8.
   Pendiente de Adam: nombre de la app (el logo dice «Kate’s English Academy»).
+- Vuelta 10 (28/10): 4a hecho (inicio «aula moderna» con historial de resultados, tarjetas de destreza con progreso,
+  mejor nota por parte, instalar discreto). Siguiente: 4b (Ejercicio y Resultado con la misma identidad y el color de
+  la destreza; lectura cómoda; nota tipo examen; botones «Repetir», «Otro de esta parte», «Siguiente parte»).
 
 ## Decisiones de Adam
 - 28/10 (vuelta 1): **estilo B «aula moderna» para la app y C «examen oficial» para el cuadernillo en PDF**, como
@@ -318,3 +321,18 @@ Telegram con el enlace de los bocetos y cómo probarlo en el iPhone. Parar el lo
 - Cómo probarlo: Inicio → PAU · Inglés → «Preguntas 1–3»: toca TRUE/FALSE y copia la prueba; «Pregunta 4»: escribe
   las réplicas y «Terminar» → «Enviar el diálogo a Adam»; «Pregunta 5»: elige tres situaciones. Haz un Part 1 de C1
   y mira la viñeta de Kate según la nota.
+
+### Vuelta 10 · 4a. Inicio «aula moderna»
+- Hecho: `src/motor/historial.ts` (`apuntarResultado`, `leerHistorial`, `mejorNota`, `mejorDeParte`, `resumenDestreza`,
+  `hechosEstaSemana`; localStorage `english-lab.historial`, tope 500) con `historial.test.ts`. `Resultado.tsx` apunta
+  el resultado al entrar. `Inicio.tsx` reescrito: cabecera `.cabecera.aula` (navy, logo, «N ejercicios hechos esta
+  semana»), fichas de examen, `.examen-completo` con botón «Empezar» del color de la destreza, `.destrezas` (tarjetas
+  `.ficha.destreza.tono-<destreza>` con icono SVG propio, lema, barra `.progreso` y «x de y hechas · media z %»),
+  partes con pastilla `.mejor` (bien/regular/mal). `Instalar.tsx` como `<details class="instalar-linea">`. CSS: tonos
+  por destreza claros y oscuros (`--tono-*`), navy. `scripts/capturas.mjs`: captura `08-inicio-progreso` al volver.
+- Comprobado: typecheck limpio; 28 tests; capturas de inicio vacío, con progreso, oscuro, tablet y PAU revisadas.
+- Falló: nada. Ajuste: «media 13 %» partía el «%» (espacio duro).
+- Mejorable (bocetos): identidad en Ejercicio/Resultado (4b); minutos del examen completo (99 vs 90 oficiales);
+  «media» → «mejores notas»; «Mis resultados» y dos columnas en tablet (4c).
+- Capturas: `docs/loop-mejorar/capturas/4a/`.
+- Cómo probarlo: abrir la app: haz un Part 1 y vuelve al inicio; la tarjeta de Reading y el Part 1 enseñan tu nota.

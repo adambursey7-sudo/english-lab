@@ -10,7 +10,10 @@ function esIphone(): boolean {
   return /iPhone|iPad|iPod/.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
 }
 
-/** Aviso de «Añadir a pantalla de inicio» cuando la app se abre en el navegador y no como app. Se cierra una vez y no vuelve. */
+/**
+ * Una línea discreta al final del inicio, «Tenla como una app», que se despliega con las instrucciones de añadirla a
+ * la pantalla de inicio. Solo sale cuando la app se abre en el navegador; «Entendido» la quita para siempre.
+ */
 export function Instalar() {
   const [visto, setVisto] = useState(() => {
     try {
@@ -31,14 +34,14 @@ export function Instalar() {
   };
 
   return (
-    <div className="aviso" role="note">
-      <b>Tenla como una app</b>
+    <details className="instalar-linea">
+      <summary><b>Tenla como una app</b> en tu móvil, con su icono y a pantalla completa. Cómo</summary>
       {esIphone() ? (
-        <p>Toca el botón <b>Compartir</b> (el cuadrado con la flecha) y después <b>Añadir a pantalla de inicio</b>. Te quedará con su icono y a pantalla completa.</p>
+        <p>Toca el botón <b>Compartir</b> (el cuadrado con la flecha) y después <b>Añadir a pantalla de inicio</b>.</p>
       ) : (
         <p>Abre el menú del navegador (los tres puntos) y toca <b>Instalar aplicación</b> o <b>Añadir a pantalla de inicio</b>.</p>
       )}
-      <button className="btn enlace cerrar" onClick={cerrar}>Entendido</button>
-    </div>
+      <button className="btn enlace" onClick={cerrar}>Entendido, no me lo recuerdes más</button>
+    </details>
   );
 }

@@ -1,5 +1,6 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import type { Ejercicio, Respuestas } from '../banco/tipos';
+import { apuntarResultado } from '../motor/historial';
 import { NOMBRES_EXAMEN, etiquetaParte } from '../banco/tipos';
 import { TextoHuecos } from '../componentes/TextoHuecos';
 import { FRASES_VINETA, alternativasDe, comunesDe, corrigeEjercicio, letra, partesVerdaderoFalso, textoRespuesta, vinetaDe, type ItemCorregido } from '../motor/corregir';
@@ -20,6 +21,12 @@ export function Resultado({ lista, respuestas, onRepetir, onInicio }: Props) {
   const porcentaje = total === 0 ? 0 : Math.round((aciertos / total) * 100);
   const pendientes = corregidos.reduce((n, c) => n + c.pendientes, 0);
   const soloLibre = total === 0;
+
+  // Se apunta una vez por corrección, al entrar en la pantalla (el inicio enseña el progreso con esto).
+  useEffect(() => {
+    apuntarResultado(corregidos.map((c) => ({ id: c.ejercicio.id, aciertos: c.aciertos, total: c.total })));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <div className="app">

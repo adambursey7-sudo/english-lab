@@ -295,3 +295,75 @@ input { font: inherit; color: inherit; }
 .vineta-nota { border-radius: var(--radio); overflow: hidden; border: 1px solid var(--line); background: var(--paper2); }
 .vineta-nota img { display: block; width: 100%; height: auto; }
 .hueco.libre { border-color: var(--ink2); font-family: var(--body); font-size: 14px; text-align: left; }
+
+/* Inicio «aula moderna» (vuelta 10): cabecera azul marino, examen completo arriba, una tarjeta por destreza con su color. */
+:root {
+  --tono-reading-use: #2f5bd1; --tono-reading-use-soft: #e6edff;
+  --tono-writing: #1f7a4d; --tono-writing-soft: #e2f3ea;
+  --tono-listening: #d9731a; --tono-listening-soft: #fff0e0;
+  --tono-speaking: #7c4bc9; --tono-speaking-soft: #efe6fb;
+  --tono-prueba: #0f6e74; --tono-prueba-soft: #dff3f4;
+  --navy: #1b2742; --navy2: #2a3a63; --navy-ink: #ffffff; --navy-ink2: #aab6d3;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --tono-reading-use: #7d9bff; --tono-reading-use-soft: #1f2a4a;
+    --tono-writing: #5fcf8f; --tono-writing-soft: #1c3127;
+    --tono-listening: #f0a35e; --tono-listening-soft: #3a2a1a;
+    --tono-speaking: #b795f0; --tono-speaking-soft: #2d2140;
+    --tono-prueba: #5fc8cf; --tono-prueba-soft: #16343a;
+    --navy: #121a2e; --navy2: #1f2b4d;
+  }
+}
+.tono-reading-use { --tono: var(--tono-reading-use); --tono-soft: var(--tono-reading-use-soft); }
+.tono-writing { --tono: var(--tono-writing); --tono-soft: var(--tono-writing-soft); }
+.tono-listening { --tono: var(--tono-listening); --tono-soft: var(--tono-listening-soft); }
+.tono-speaking { --tono: var(--tono-speaking); --tono-soft: var(--tono-speaking-soft); }
+.tono-prueba { --tono: var(--tono-prueba); --tono-soft: var(--tono-prueba-soft); }
+
+.cabecera.aula { background: var(--navy); color: var(--navy-ink); border-bottom: none; position: relative; overflow: hidden; padding-bottom: 18px; }
+.cabecera.aula::after { content: ''; position: absolute; right: -60px; top: -70px; width: 200px; height: 200px; border-radius: 50%; background: var(--navy2); }
+.cabecera.aula .cabecera-dentro { position: relative; z-index: 1; }
+.cabecera.aula .sub { color: var(--navy-ink2); }
+.cabecera.aula .titulo { font-size: 22px; white-space: normal; }
+.cabecera.aula .racha { font-size: 13px; color: var(--navy-ink2); margin-top: 2px; }
+.cabecera.aula .marca .logo { width: 60px; height: 60px; box-shadow: 0 0 0 3px rgba(255,255,255,.18); }
+
+.contenido.inicio { gap: 22px; padding-top: 18px; }
+.contenido.inicio .fichas .ficha { font-weight: 600; }
+.bloque { display: grid; gap: 10px; }
+.bloque h2 { font-size: 19px; }
+
+.examen-completo {
+  display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 12px;
+  background: var(--paper2); border: 1px solid var(--line); border-left: 5px solid var(--tono); border-radius: var(--radio);
+  padding: 14px 14px 14px 16px;
+}
+.examen-completo h2 { font-size: 19px; }
+.examen-completo .silencio { font-size: 14px; line-height: 1.4; margin-top: 2px; }
+.examen-completo .btn { background: var(--tono); border-color: var(--tono); color: #fff; }
+
+.destrezas { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.destrezas.una { grid-template-columns: 1fr; }
+.ficha.destreza {
+  display: grid; grid-template-columns: 1fr; gap: 4px; text-align: left; align-content: start;
+  border-radius: 14px; padding: 12px 12px 12px; min-height: 128px; font-weight: 500; background: var(--paper2);
+}
+.ficha.destreza .icono { display: grid; place-items: center; width: 34px; height: 34px; border-radius: 10px; background: var(--tono-soft); color: var(--tono); margin-bottom: 4px; }
+.ficha.destreza b { font-weight: 600; font-size: 15px; line-height: 1.2; }
+.ficha.destreza small { font-size: 12.5px; color: var(--ink2); line-height: 1.3; }
+.ficha.destreza .progreso { display: block; height: 6px; border-radius: 999px; background: var(--line); overflow: hidden; margin-top: 6px; }
+.ficha.destreza .progreso span { display: block; height: 100%; background: var(--tono); border-radius: 999px; }
+.ficha.destreza .dato { color: var(--tono); font-weight: 600; }
+.ficha.destreza[aria-pressed='true'] { background: var(--paper2); color: var(--ink); border-color: var(--tono); box-shadow: 0 0 0 1.5px var(--tono); }
+.ficha.destreza:disabled { opacity: 0.55; }
+
+.tarjeta .mejor { grid-column: 2; grid-row: 1 / span 2; font-family: var(--display); font-weight: 700; font-size: 15px; padding: 3px 9px; border-radius: 999px; }
+.tarjeta .mejor.bien { color: var(--ok); background: var(--ok-soft); }
+.tarjeta .mejor.regular { color: var(--marker-ink); background: var(--marker); }
+.tarjeta .mejor.mal { color: var(--pen); background: var(--pen-soft); }
+
+.instalar-linea { font-size: 13.5px; color: var(--ink2); }
+.instalar-linea summary { cursor: pointer; }
+.instalar-linea summary b { font-weight: 600; color: var(--ink); }
+.instalar-linea p { margin-top: 6px; }

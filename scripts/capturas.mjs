@@ -60,6 +60,12 @@ await pagina.waitForSelector('.nota-grande');
 await foto('04-resultado');
 await foto('04-resultado-entera', true);
 
+// De vuelta al inicio: ya hay historial, así que las tarjetas enseñan progreso y mejor nota.
+await pagina.locator('.lista .btn', { hasText: 'Otro ejercicio' }).first().click();
+await pagina.waitForSelector('.destrezas');
+await foto('08-inicio-progreso');
+await foto('08-inicio-progreso-entera', true);
+
 // Partes sueltas que se pidan (cuarto argumento: "6,7,writing/2,speaking/3"): se abre cada una, se contesta la primera
 // pregunta y se captura. Sin prefijo es Reading & Use of English.
 const CHIPS = { 'reading-use': 'Reading & Use of English', writing: 'Writing', listening: 'Listening', speaking: 'Speaking', prueba: 'Prueba escrita' };
