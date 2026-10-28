@@ -142,7 +142,8 @@ Telegram con el enlace de los bocetos y cómo probarlo en el iPhone. Parar el lo
   Avisado Adam por Telegram para que elija estilo (A cuaderno, B aula moderna [recomendado], C examen oficial).
   Adam confirma B para la app y C para el PDF.
 - Vuelta 2 (28/10): 1b hecho (`docs/formatos.md`, fuentes en `C:\dev\english-lab-fuentes\`). **Bloque 1 cerrado.**
-  **Siguiente: 2a (modelo del banco: tipos de item nuevos + tests).**
+- Vuelta 3 (28/10): 2a hecho (modelo del banco ampliado, corrección con «pendiente», tests). **Siguiente: 2b
+  (pantallas de Reading 5–8: texto largo con preguntas, emparejar, párrafos en huecos).**
 
 ## Decisiones de Adam
 - 28/10 (vuelta 1): **estilo B «aula moderna» para la app y C «examen oficial» para el cuadernillo en PDF**, como
@@ -184,3 +185,18 @@ Telegram con el enlace de los bocetos y cómo probarlo en el iPhone. Parar el lo
   Speaking como dibujos o descripciones; PAU 4–6 con respuesta modelo y rúbrica, sin corrección automática.
 - Capturas: ninguna (sin UI); mapa en los bocetos.
 - Cómo probarlo: leer `docs/formatos.md`; en los bocetos, el mapa de la vuelta 2.
+
+### Vuelta 3 · 2a. Modelo del banco
+- Hecho: `src/banco/tipos.ts`: destreza `prueba` (PAU); items `opciones`, `emparejar` (de `opcionesComunes` del
+  ejercicio), `palabra` (ahora con `frase` {{n}}, `maxPalabras`, `pregunta`), `transformacion`, `verdaderoFalso`
+  (afirmación + `pruebas`), `redaccion` (tipoTexto, min/max palabras, modelo, criterios) y `hablar` (interlocutor,
+  preguntas, imágenes descritas, pregunta central e ideas, segundos). `TIPOS_EVALUABLES`. Ejercicio: `examenNumero`,
+  `secciones` (letra + texto), `opcionesComunes`, `elegir`, `audio` (archivo, hablantes con voz edge-tts, guion con
+  pausas, veces). `ORDEN_DESTREZAS`. `corregir.ts`: `corrigeItem(item, respuesta, comunes)`, `evaluable`, `pendientes`
+  en `corrigeEjercicio`, `partesVerdaderoFalso` (respuesta «TRUE\nprueba»), `alternativasDe`, `palabrasRedaccion`;
+  `normaliza` quita también comillas y puntuación de los extremos. Inicio: destrezas por examen (PAU solo «Prueba
+  escrita»). Ejercicio/Resultado: aviso provisional para los tipos sin pantalla y explicación opcional.
+- Comprobado: typecheck limpio; 17 tests en verde (nuevos: emparejar, copiar con tope, verdadero/falso, pendientes).
+- Falló: un error de tipos en el test (explicación opcional), arreglado.
+- Capturas: ninguna (nada visible cambia); esquema de tipos en los bocetos.
+- Cómo probarlo: `npm test`; la app sigue igual.

@@ -1,7 +1,7 @@
 import type { Ejercicio, Respuestas } from '../banco/tipos';
 import { NOMBRES_EXAMEN } from '../banco/tipos';
 import { TextoHuecos } from '../componentes/TextoHuecos';
-import { corrigeEjercicio, letra, textoRespuesta, type ItemCorregido } from '../motor/corregir';
+import { alternativasDe, corrigeEjercicio, letra, textoRespuesta, type ItemCorregido } from '../motor/corregir';
 
 interface Props {
   lista: Ejercicio[];
@@ -82,6 +82,7 @@ export function Resultado({ lista, respuestas, onRepetir, onInicio }: Props) {
 function ResultadoItem({ ic }: { ic: ItemCorregido }) {
   const tuya = textoRespuesta(ic);
   const buena = ic.item.tipo === 'opciones' ? `${letra(ic.item.correcta)} ${ic.solucion}` : ic.solucion;
+  const alternativas = alternativasDe(ic.item);
   return (
     <div className={`resultado-item${ic.correcto ? '' : ' mal'}`}>
       <div className="fila">
@@ -89,14 +90,12 @@ function ResultadoItem({ ic }: { ic: ItemCorregido }) {
         <span className={`marca ${ic.correcto ? 'ok' : 'ko'}`}>{ic.correcto ? '✓' : '✗'}</span>
         {!ic.correcto && <span className="tuya">{tuya || 'sin contestar'}</span>}
         <span className="buena">{buena}</span>
-        {ic.item.tipo !== 'opciones' && ic.item.correctas.length > 1 && (
-          <span className="silencio pequeno">también: {ic.item.correctas.slice(1).join(' · ')}</span>
-        )}
+        {alternativas.length > 0 && <span className="silencio pequeno">también: {alternativas.join(' · ')}</span>}
       </div>
       {ic.item.tipo === 'transformacion' && (
         <p className="silencio pequeno">{ic.item.inicio} <b>{ic.solucion}</b> {ic.item.fin}</p>
       )}
-      <p className="explica">{ic.item.explicacion}</p>
+      {'explicacion' in ic.item && ic.item.explicacion && <p className="explica">{ic.item.explicacion}</p>}
     </div>
   );
 }

@@ -5,7 +5,11 @@ import { Instalar } from '../componentes/Instalar';
 import { minutosDe, montarExamen, practicarParte } from '../motor/examen';
 
 const EXAMENES: Examen[] = ['c1', 'pau'];
-const DESTREZAS: Destreza[] = ['reading-use', 'writing', 'listening', 'speaking'];
+/** Papeles que se ofrecen por examen (la PAU solo tiene la prueba escrita). */
+const DESTREZAS: Record<Examen, Destreza[]> = {
+  c1: ['reading-use', 'writing', 'listening', 'speaking'],
+  pau: ['prueba'],
+};
 
 export function Inicio({ onEmpezar }: { onEmpezar: (lista: Ejercicio[]) => void }) {
   const [examen, setExamen] = useState<Examen>('c1');
@@ -42,7 +46,7 @@ export function Inicio({ onEmpezar }: { onEmpezar: (lista: Ejercicio[]) => void 
         <section style={{ display: 'grid', gap: 8 }}>
           <div className="eyebrow">Parte del examen</div>
           <div className="fichas" role="group" aria-label="Destreza">
-            {DESTREZAS.map((d) => (
+            {DESTREZAS[examen].map((d) => (
               <button key={d} className="ficha" aria-pressed={destreza === d} disabled={!disponibles.includes(d)} onClick={() => setDestreza(d)}>
                 {NOMBRES_DESTREZA[d]}
               </button>

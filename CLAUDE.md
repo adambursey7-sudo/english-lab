@@ -12,9 +12,9 @@ App web instalable (PWA, React 19 + TypeScript + Vite) de Adam para practicar ex
 - Listening: guion con quién habla; audios hechos en el PC de Adam con edge-tts (voces variadas, incluida una de niña) y la voz del móvil de respaldo (pendiente).
 
 ## Estructura
-- `src/banco/tipos.ts`: modelo (`Ejercicio`, `Item` = opciones | palabra | transformacion, `Respuestas`). Los huecos del texto van como `{{n}}`.
+- `src/banco/tipos.ts`: modelo (`Ejercicio`, `Item` = opciones | emparejar | palabra | transformacion | verdaderoFalso | redaccion | hablar, `Respuestas`, `Audio` con guion y hablantes). Los huecos del texto van como `{{n}}`; `opcionesComunes` es la lista A, B, C… de los items `emparejar`; `examenNumero` agrupa las partes de un examen completo. Formatos oficiales en `docs/formatos.md`. Loop en marcha: `docs/loop-mejorar.md`.
 - `src/banco/<examen>/*.ts`: ejercicios; cada archivo exporta una lista y se suma en `src/banco/index.ts` (`BANCO`, `partesDe`, `destrezasDe`).
-- `src/motor/corregir.ts`: corrección pura (`normaliza`, `corrigeEjercicio`, `cuentaPalabras`). `src/motor/examen.ts`: montar examen/parte y «vistos» en localStorage.
+- `src/motor/corregir.ts`: corrección pura (`normaliza`, `corrigeEjercicio` con `aciertos`/`total`/`pendientes`, `cuentaPalabras`, `palabrasRedaccion`); redacción y speaking no se corrigen solos (`evaluable: false`). `src/motor/examen.ts`: montar examen/parte y «vistos» en localStorage.
 - `src/pantallas/`: Inicio → Ejercicio (reloj, huecos tocables, entradas) → Resultado (texto corregido en verde/rojo y explicaciones).
 - `src/componentes/`: `TextoHuecos`, `Temporizador`, `Instalar` (guía de añadir a inicio en iPhone/Android).
 - `scripts/iconos.py`: iconos de `public/` con Pillow.

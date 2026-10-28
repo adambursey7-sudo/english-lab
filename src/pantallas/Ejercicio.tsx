@@ -132,6 +132,11 @@ function ItemEntrada({ item, valor, onCambia }: { item: Item; valor: string; onC
     );
   }
 
+  if (item.tipo !== 'transformacion') {
+    // Emparejar, verdadero/falso, redacción y speaking tienen pantalla propia (bloque 2 del loop).
+    return <p className="silencio">Este tipo de ejercicio llega en una próxima versión.</p>;
+  }
+
   const palabras = cuentaPalabras(valor);
   const fuera = palabras > 0 && (palabras < 3 || palabras > 6);
   return (
