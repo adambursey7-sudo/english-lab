@@ -3,24 +3,36 @@ import type { Ejercicio, Respuestas } from '../banco/tipos';
 import { apuntarResultado } from '../motor/historial';
 import { NOMBRES_EXAMEN, etiquetaParte } from '../banco/tipos';
 import { TextoHuecos } from '../componentes/TextoHuecos';
-import { FRASES_VINETA, alternativasDe, comunesDe, corrigeEjercicio, letra, partesVerdaderoFalso, textoRespuesta, vinetaDe, type ItemCorregido } from '../motor/corregir';
+import { FRASES_VINETA, alternativasDe, bandaDe, comunesDe, corrigeEjercicio, letra, partesVerdaderoFalso, textoRespuesta, vinetaDe, type ItemCorregido } from '../motor/corregir';
 import { ResultadoRedaccion, ResultadoReplica } from '../componentes/Redaccion';
 import { compartir, textoEjercicioParaCompartir } from '../motor/entregas';
+import { montarExamen, practicarParte } from '../motor/examen';
+import { partesDe } from '../banco';
 
 interface Props {
   lista: Ejercicio[];
   respuestas: Record<string, Respuestas>;
   onRepetir: () => void;
   onInicio: () => void;
+  /** Empezar otra lista (otro de esta parte, la siguiente parte, otro examen completo). */
+  onEmpezar: (lista: Ejercicio[]) => void;
 }
 
-export function Resultado({ lista, respuestas, onRepetir, onInicio }: Props) {
+export function Resultado({ lista, respuestas, onRepetir, onInicio, onEmpezar }: Props) {
   const corregidos = lista.map((e) => corrigeEjercicio(e, respuestas[e.id] ?? {}));
   const aciertos = corregidos.reduce((n, c) => n + c.aciertos, 0);
   const total = corregidos.reduce((n, c) => n + c.total, 0);
   const porcentaje = total === 0 ? 0 : Math.round((aciertos / total) * 100);
   const pendientes = corregidos.reduce((n, c) => n + c.pendientes, 0);
   const soloLibre = total === 0;
+  const primero = lista[0];
+  const examen = primero?.examen ?? 'c1';
+  const destreza = primero?.destreza ?? 'reading-use';
+  const banda = bandaDe(examen, porcentaje);
+  // Qué se puede hacer después: si era una parte suelta, otra de esa parte y la siguiente; si era un examen, otro.
+  const unaParte = lista.length === 1;
+  const siguiente = unaParte ? partesDe(examen, destreza).find((p) => p.parte > primero.parte) : undefined;
+  const otraDeEsta = unaParte && partesDe(examen, destreza).some((p) => p.parte === primero.parte && p.cuantos > 1);
 
   // Se apunta una vez por corrección, al entrar en la pantalla (el inicio enseña el progreso con esto).
   useEffect(() => {
@@ -30,12 +42,13 @@ export function Resultado({ lista, respuestas, onRepetir, onInicio }: Props) {
 
   return (
     <div className="app">
-      <header className="cabecera">
+      <header className={`cabecera aula compacta tono-${destreza}`}>
         <div className="cabecera-dentro">
           <div>
-            <div className="sub">{NOMBRES_EXAMEN[lista[0]?.examen ?? 'c1']}</div>
+            <div className="sub">{NOMBRES_EXAMEN[examen]}{unaParte ? ` · ${etiquetaParte(examen, primero.parte)}` : ' · examen completo'}</div>
             <div className="titulo">Corrección</div>
           </div>
+          {!soloLibre && <span className="banda-nota">{banda.etiqueta}</span>}
         </div>
       </header>
 
@@ -56,8 +69,10 @@ export function Resultado({ lista, respuestas, onRepetir, onInicio }: Props) {
             </div>
             <div className="cifra">
               {aciertos} <span>de {total}</span>
+              <span className="porcentaje">{porcentaje} %</span>
             </div>
             <div className="barra" aria-hidden="true"><div style={{ width: `${porcentaje}%` }} /></div>
+            <p><b>{banda.etiqueta}.</b> <span className="silencio">{banda.detalle}</span></p>
             <p className="silencio">{frase(porcentaje)}</p>
             {pendientes > 0 && <p className="silencio pequeno">Además hay {pendientes} {pendientes === 1 ? 'texto' : 'textos'} para que corrija Adam.</p>}
           </div>
@@ -153,9 +168,21 @@ export function Resultado({ lista, respuestas, onRepetir, onInicio }: Props) {
           </section>
         ))}
 
-        <div className="lista">
-          <button className="btn" onClick={onInicio}>Otro ejercicio</button>
-          <button className="btn sec" onClick={onRepetir}>Repetir este</button>
+        <div className="acciones">
+          {siguiente ? (
+            <button className="btn" onClick={() => onEmpezar(practicarParte(examen, destreza, siguiente.parte))}>
+              Siguiente parte · {etiquetaParte(examen, siguiente.parte)}
+            </button>
+          ) : unaParte ? (
+            <button className="btn" onClick={onInicio}>Volver al inicio</button>
+          ) : (
+            <button className="btn" onClick={() => onEmpezar(montarExamen(examen, destreza))}>Otro examen completo</button>
+          )}
+          <div className="fila-botones">
+            {otraDeEsta && <button className="btn sec" onClick={() => onEmpezar(practicarParte(examen, destreza, primero.parte))}>Otro de esta parte</button>}
+            <button className="btn sec" onClick={onRepetir}>Repetir</button>
+            {(siguiente || !unaParte) && <button className="btn sec" onClick={onInicio}>Inicio</button>}
+          </div>
         </div>
       </main>
     </div>
@@ -206,7 +233,16 @@ function ResultadoItem({ ic, comunes = [] }: { ic: ItemCorregido; comunes?: stri
       {ic.item.tipo === 'palabra' && ic.item.frase && (
         <p className="silencio pequeno">{ic.item.frase.replace(`{{${ic.item.n}}}`, '____')}</p>
       )}
-      {'explicacion' in ic.item && ic.item.explicacion && <p className="explica">{ic.item.explicacion}</p>}
+      {'explicacion' in ic.item && ic.item.explicacion && (
+        ic.correcto ? (
+          <details className="explica-plegable">
+            <summary>Por qué</summary>
+            <p className="explica">{ic.item.explicacion}</p>
+          </details>
+        ) : (
+          <p className="explica">{ic.item.explicacion}</p>
+        )
+      )}
     </div>
   );
 }

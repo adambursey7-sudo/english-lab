@@ -159,6 +159,10 @@ Telegram con el enlace de los bocetos y cómo probarlo en el iPhone. Parar el lo
 - Vuelta 10 (28/10): 4a hecho (inicio «aula moderna» con historial de resultados, tarjetas de destreza con progreso,
   mejor nota por parte, instalar discreto). Siguiente: 4b (Ejercicio y Resultado con la misma identidad y el color de
   la destreza; lectura cómoda; nota tipo examen; botones «Repetir», «Otro de esta parte», «Siguiente parte»).
+- Vuelta 11 (28/10): 4b hecho (cabecera con color de destreza en Ejercicio y Corrección, reloj grande con aviso,
+  barra de avance, opciones 2×2, banda estimada y nota sobre 10, explicaciones plegadas, botones de seguir).
+  Siguiente: 4c (detalles: transiciones, iconos, foco y accesibilidad, «Mis resultados», tablet a dos columnas,
+  reproductor compacto).
 
 ## Decisiones de Adam
 - 28/10 (vuelta 1): **estilo B «aula moderna» para la app y C «examen oficial» para el cuadernillo en PDF**, como
@@ -336,3 +340,20 @@ Telegram con el enlace de los bocetos y cómo probarlo en el iPhone. Parar el lo
   «media» → «mejores notas»; «Mis resultados» y dos columnas en tablet (4c).
 - Capturas: `docs/loop-mejorar/capturas/4a/`.
 - Cómo probarlo: abrir la app: haz un Part 1 y vuelve al inicio; la tarjeta de Reading y el Part 1 enseñan tu nota.
+
+### Vuelta 11 · 4b. Ejercicio y Corrección
+- Hecho: `Temporizador.tsx` (clase `poco` a ≤ 2 min). `corregir.ts`: `bandaDe(examen, porcentaje)` (C1: Grade A ≥ 80,
+  B ≥ 70, C ≥ 60, Nivel B2 ≥ 45; PAU: nota sobre 10) con test. `Ejercicio.tsx`: cabecera `.cabecera.aula.compacta
+  tono-<destreza>` con `.avance` (contestadas/por contestar), opciones `.cortas` (todas ≤ 14 caracteres) en 2×2.
+  `Resultado.tsx`: misma cabecera con pastilla `.banda-nota`, porcentaje junto a la cifra, frase de la banda,
+  explicación plegada (`details.explica-plegable`) en los aciertos, `.acciones` (Siguiente parte / Volver al inicio /
+  Otro examen completo + Otro de esta parte, Repetir, Inicio) con `onEmpezar` nuevo (App.tsx). CSS de reloj, avance,
+  huecos, 2×2, acciones. `scripts/capturas.mjs`: vuelve al inicio con el botón «Inicio».
+- Comprobado: typecheck limpio; 29 tests; capturas de Part 1, Part 5, Listening 4, PAU 1 y sus correcciones.
+- Falló: el script de capturas buscaba «Otro ejercicio» (botón viejo), arreglado. El subtítulo de la Corrección se
+  partía junto a la pastilla: nowrap con puntos suspensivos.
+- Mejorable (bocetos): «Otro de esta parte» casi nunca sale hasta que crezca el banco; tablet a dos columnas, «Mis
+  resultados» y reproductor compacto (4c).
+- Capturas: `docs/loop-mejorar/capturas/4b/`.
+- Cómo probarlo: haz un Part 1 y corrige: pastilla con la banda, «Por qué» plegado en los aciertos y «Siguiente
+  parte · Part 2» abajo.

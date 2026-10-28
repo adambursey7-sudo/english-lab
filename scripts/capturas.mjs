@@ -61,7 +61,7 @@ await foto('04-resultado');
 await foto('04-resultado-entera', true);
 
 // De vuelta al inicio: ya hay historial, así que las tarjetas enseñan progreso y mejor nota.
-await pagina.locator('.lista .btn', { hasText: 'Otro ejercicio' }).first().click();
+await pagina.locator('.acciones .btn', { hasText: /^(Inicio|Volver al inicio)$/ }).first().click();
 await pagina.waitForSelector('.destrezas');
 await foto('08-inicio-progreso');
 await foto('08-inicio-progreso-entera', true);

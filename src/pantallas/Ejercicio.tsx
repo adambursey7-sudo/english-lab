@@ -46,7 +46,7 @@ export function PantallaEjercicio({ ejercicio, posicion, respuestas, onCambia, o
 
   return (
     <div className="app">
-      <header className="cabecera">
+      <header className={`cabecera aula compacta tono-${ejercicio.destreza}`}>
         <div className="cabecera-dentro">
           <div style={{ minWidth: 0 }}>
             <div className="sub">
@@ -56,6 +56,9 @@ export function PantallaEjercicio({ ejercicio, posicion, respuestas, onCambia, o
             <div className="titulo">{etiquetaParte(ejercicio.examen, ejercicio.parte)} · {ejercicio.nombreParte}</div>
           </div>
           <Temporizador minutos={ejercicio.minutos} />
+        </div>
+        <div className="avance" aria-label={`${contestados} de ${porContestar} contestadas`}>
+          <span style={{ width: `${porContestar === 0 ? 0 : Math.min(100, (contestados / porContestar) * 100)}%` }} />
         </div>
       </header>
 
@@ -222,7 +225,7 @@ function ItemEntrada({ item, valor, onCambia, comunes = [], elegible, abierta, c
           <span className="num">{item.n}</span>
           {item.pregunta && <span className="pregunta">{item.pregunta}</span>}
         </div>
-        <div className="opciones" role="group" aria-label={`Pregunta ${item.n}`}>
+        <div className={`opciones${item.opciones.every((o) => o.length <= 14) ? ' cortas' : ''}`} role="group" aria-label={`Pregunta ${item.n}`}>
           {item.opciones.map((op, i) => (
             <button key={i} type="button" className="opcion" aria-pressed={valor === String(i)} onClick={() => onCambia(valor === String(i) ? '' : String(i))}>
               <span className="letra">{letra(i)}</span>

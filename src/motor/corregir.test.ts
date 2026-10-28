@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { alternativasDe, comunesDe, corrigeEjercicio, corrigeItem, cuentaPalabras, normaliza, palabrasRedaccion, textoRespuesta, vinetaDe } from './corregir';
+import { alternativasDe, comunesDe, corrigeEjercicio, corrigeItem, cuentaPalabras, normaliza, palabrasRedaccion, textoRespuesta, vinetaDe, bandaDe } from './corregir';
 import { elegir, montarExamen, practicarParte } from './examen';
 import { BANCO, partesDe } from '../banco';
 import { TIPOS_EVALUABLES, type Ejercicio, type Item } from '../banco/tipos';
@@ -209,5 +209,17 @@ describe('vinetaDe', () => {
     expect(vinetaDe(89)).toBe(4);
     expect(vinetaDe(90)).toBe(5);
     expect(vinetaDe(100)).toBe(5);
+  });
+});
+
+describe('bandaDe', () => {
+  it('banda estimada del C1 y nota sobre 10 en la PAU', () => {
+    expect(bandaDe('c1', 80).etiqueta).toBe('Grade A');
+    expect(bandaDe('c1', 79).etiqueta).toBe('Grade B');
+    expect(bandaDe('c1', 60).etiqueta).toBe('Grade C');
+    expect(bandaDe('c1', 45).etiqueta).toBe('Nivel B2');
+    expect(bandaDe('c1', 10).etiqueta).toBe('Por debajo de B2');
+    expect(bandaDe('pau', 75).etiqueta).toBe('7,5 sobre 10');
+    expect(bandaDe('pau', 100).etiqueta).toBe('10,0 sobre 10');
   });
 });

@@ -1,4 +1,4 @@
-import type { Ejercicio, Item, Respuestas } from '../banco/tipos';
+import type { Ejercicio, Examen, Item, Respuestas } from '../banco/tipos';
 import { TIPOS_EVALUABLES } from '../banco/tipos';
 
 /** Deja una respuesta escrita lista para comparar: minúsculas, sin espacios de más, sin puntuación de los extremos, comillas rectas. */
@@ -168,4 +168,18 @@ export function vinetaDe(porcentaje: number): Vineta {
   if (nota >= 5) return 3;
   if (nota > 3) return 2;
   return 1;
+}
+
+/** Nota «como en el examen» a partir del porcentaje de lo que se corrige solo: banda estimada del C1 o nota sobre 10 en la PAU. */
+export function bandaDe(examen: Examen, porcentaje: number): { etiqueta: string; detalle: string } {
+  if (examen === 'pau') {
+    const nota = Math.round(porcentaje / 10 * 10) / 10;
+    const texto = nota.toFixed(1).replace('.', ',');
+    return { etiqueta: `${texto} sobre 10`, detalle: nota >= 5 ? 'Aprobado en lo que se corrige solo; el diálogo, las situaciones y la redacción los puntúa Adam.' : 'Por debajo del 5 en lo que se corrige solo; repasa las explicaciones.' };
+  }
+  if (porcentaje >= 80) return { etiqueta: 'Grade A', detalle: 'Estimación: con esto en el examen de verdad serías nivel C2.' };
+  if (porcentaje >= 70) return { etiqueta: 'Grade B', detalle: 'Estimación: aprobado holgado del C1.' };
+  if (porcentaje >= 60) return { etiqueta: 'Grade C', detalle: 'Estimación: justo el aprobado del C1.' };
+  if (porcentaje >= 45) return { etiqueta: 'Nivel B2', detalle: 'Estimación: no llega al C1, pero certificaría B2.' };
+  return { etiqueta: 'Por debajo de B2', detalle: 'Estimación: todavía lejos del aprobado; repasa cada explicación.' };
 }

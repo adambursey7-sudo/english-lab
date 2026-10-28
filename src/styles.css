@@ -367,3 +367,24 @@ input { font: inherit; color: inherit; }
 .instalar-linea summary { cursor: pointer; }
 .instalar-linea summary b { font-weight: 600; color: var(--ink); }
 .instalar-linea p { margin-top: 6px; }
+
+/* Ejercicio y Corrección con la identidad del inicio (vuelta 11) */
+.cabecera.aula.compacta { padding-bottom: 0; }
+.cabecera.aula.compacta::after { display: none; }
+.cabecera.aula.compacta .titulo { font-size: 18px; white-space: nowrap; }
+.cabecera.aula.compacta .cabecera-dentro { padding-bottom: 10px; }
+.cabecera.aula .reloj { font-size: 17px; color: var(--navy-ink); background: var(--navy2); padding: 4px 10px; border-radius: 8px; }
+.cabecera.aula .reloj.poco { background: var(--marker); color: var(--marker-ink); }
+.cabecera.aula .reloj.agotado { background: var(--pen); color: #fff; }
+.avance { height: 4px; background: var(--navy2); margin: 0 calc(-1 * max(16px, env(safe-area-inset-right, 0px))) 0 calc(-1 * max(16px, env(safe-area-inset-left, 0px))); }
+.avance span { display: block; height: 100%; background: var(--tono); transition: width 0.3s ease; }
+.banda-nota { font-family: var(--display); font-weight: 700; font-size: 15px; background: var(--tono); color: #fff; padding: 4px 12px; border-radius: 999px; white-space: nowrap; }
+.nota-grande .cifra .porcentaje { font-size: 20px; color: var(--ink2); font-weight: 600; margin-left: 10px; }
+.opciones.cortas { grid-template-columns: 1fr 1fr; }
+.hueco { font-size: 14px; min-width: 64px; padding: 1px 6px; border-radius: 4px 4px 0 0; background: var(--paper); }
+.explica-plegable summary { cursor: pointer; font-size: 13.5px; color: var(--ink2); font-weight: 600; }
+.explica-plegable .explica { margin-top: 4px; }
+.acciones { display: grid; gap: 10px; }
+.fila-botones { display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; gap: 8px; }
+.fila-botones .btn { padding-inline: 8px; font-size: 15px; }
+.cabecera.aula.compacta .sub { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }

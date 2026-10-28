@@ -56,6 +56,7 @@ export function App() {
       respuestas={estado.respuestas}
       onRepetir={() => setEstado({ pantalla: 'ejercicio', lista: estado.lista, i: 0, respuestas: {} })}
       onInicio={() => setEstado({ pantalla: 'inicio' })}
+      onEmpezar={(lista) => (lista.length > 0 ? setEstado({ pantalla: 'ejercicio', lista, i: 0, respuestas: {} }) : setEstado({ pantalla: 'inicio' }))}
     />
   );
 }
