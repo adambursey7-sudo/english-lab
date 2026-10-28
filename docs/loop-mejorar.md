@@ -150,7 +150,8 @@ Telegram con el enlace de los bocetos y cómo probarlo en el iPhone. Parar el lo
 - Vuelta 6 (28/10): 2d hecho (reproductor, respaldo de voz, generador de mp3) y la mitad de 3c (Listening Parts 1
   y 2 del examen 1 con audio). **Bloque 2 cerrado.**
 - Vuelta 7 (28/10): 3c hecho (Listening Parts 3 y 4 del examen 1 con audio; listas por tarea en el modelo).
-  **Siguiente: 3a (Reading Parts 5 y 8 del examen 1).** Después: 3e (PAU examen 1), bloque 4 (diseño B).
+- Vuelta 8 (28/10): 3a hecho (Reading Parts 5 y 8). **Examen 1 de C1 completo en las cuatro destrezas.**
+  **Siguiente: 3e (PAU examen 1 completo, con pantalla de verdadero/falso).** Después: bloque 4 (diseño B).
 
 ## Decisiones de Adam
 - 28/10 (vuelta 1): **estilo B «aula moderna» para la app y C «examen oficial» para el cuadernillo en PDF**, como
@@ -280,3 +281,14 @@ Telegram con el enlace de los bocetos y cómo probarlo en el iPhone. Parar el lo
 - Capturas: `docs/loop-mejorar/capturas/3c/`.
 - Cómo probarlo: Inicio → Listening → Part 4: play, elige letra de cada tarea por hablante y corrige.
   «Montar un examen completo» de Listening ya junta las 4 partes (≈ 32 min de audio).
+
+### Vuelta 8 · 3a. Reading Parts 5 y 8
+- Hecho: `c1-rue-5-workshop` (extracto de novela de 609 palabras, Q31–36 A–D: sugerencia, referencia, significado
+  de expresión, sentimiento, implicación y actitud global) y `c1-rue-8-learning-to-cook` (4 secciones A–D con
+  nombre, Q47–56, reparto 3/3/2/2, respuesta única comprobada). Sin cambios de código.
+- Comprobado: typecheck limpio; 22 tests; capturas de Part 5 y 8 y de la corrección.
+- Falló: nada.
+- Mejorable (4b): texto y preguntas en dos columnas en tablet; botón «volver al texto» en móvil. Próximos Part 8:
+  secciones de 180–200 palabras.
+- Capturas: `docs/loop-mejorar/capturas/3a/`.
+- Cómo probarlo: Inicio → Reading & Use of English → «Montar un examen completo · 90 min» recorre las 8 partes.
