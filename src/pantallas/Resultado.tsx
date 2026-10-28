@@ -82,6 +82,21 @@ export function Resultado({ lista, respuestas, onRepetir, onInicio }: Props) {
               </div>
             )}
 
+            {c.ejercicio.audio && (
+              <details className="hoja plegable">
+                <summary>Ver la transcripción</summary>
+                <div className="transcripcion">
+                  {c.ejercicio.audio.guion.map((l, i) =>
+                    'quien' in l ? (
+                      <p key={i}>
+                        <b>{c.ejercicio.audio?.hablantes.find((h) => h.id === l.quien)?.descripcion ?? l.quien}:</b> {l.texto}
+                      </p>
+                    ) : null,
+                  )}
+                </div>
+              </details>
+            )}
+
             {c.ejercicio.secciones && (
               <details className="hoja plegable">
                 <summary>Volver a leer los textos</summary>
@@ -140,6 +155,9 @@ function ResultadoItem({ ic, comunes = [] }: { ic: ItemCorregido; comunes?: stri
       </div>
       {ic.item.tipo === 'transformacion' && (
         <p className="silencio pequeno">{ic.item.inicio} <b>{ic.solucion}</b> {ic.item.fin}</p>
+      )}
+      {ic.item.tipo === 'palabra' && ic.item.frase && (
+        <p className="silencio pequeno">{ic.item.frase.replace(`{{${ic.item.n}}}`, '____')}</p>
       )}
       {'explicacion' in ic.item && ic.item.explicacion && <p className="explica">{ic.item.explicacion}</p>}
     </div>

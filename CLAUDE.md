@@ -9,7 +9,7 @@ App web instalable (PWA, React 19 + TypeScript + Vite) de Adam para practicar ex
 - **Alcance ahora:** solo C1 y PAU; meta 200 ejercicios por tipo, empezando por unos 20 exámenes.
 - Ejercicios redactados de cero al estilo de cada examen. Sin marcas ni logos oficiales. Nunca nombres de alumnos en el código.
 - Interfaz en español, ejercicios en inglés. Nombres de código en español.
-- Listening: guion con quién habla; audios hechos en el PC de Adam con edge-tts (voces variadas, incluida una de niña) y la voz del móvil de respaldo (pendiente).
+- Listening: guion con quién habla; audios hechos en el PC de Adam con edge-tts (voces variadas, incluida una joven) con las instrucciones y pausas del examen real, y la voz del móvil de respaldo. Los mp3 no se precachean en la PWA: se descargan al reproducir.
 
 ## Estructura
 - `src/banco/tipos.ts`: modelo (`Ejercicio`, `Item` = opciones | emparejar | palabra | transformacion | verdaderoFalso | redaccion | hablar, `Respuestas`, `Audio` con guion y hablantes). Los huecos del texto van como `{{n}}`; `opcionesComunes` es la lista A, B, C… de los items `emparejar`; `examenNumero` agrupa las partes de un examen completo. Formatos oficiales en `docs/formatos.md`. Loop en marcha: `docs/loop-mejorar.md`.
@@ -19,6 +19,8 @@ App web instalable (PWA, React 19 + TypeScript + Vite) de Adam para practicar ex
 - `src/componentes/`: `TextoHuecos`, `Temporizador`, `Instalar` (guía de añadir a inicio en iPhone/Android), `Redaccion` (writing: contador, elegir tarea, enviar a Adam, modelo y criterios), `Hablar` (speaking: reloj por fases, grabar con el micro, hoja de ideas).
 - `src/motor/entregas.ts`: palabras por bandas, texto para compartir, entregas en localStorage, compartir (Web Share → portapapeles + WhatsApp).
 - `scripts/iconos.py`: iconos de `public/` con Pillow.
+- Audios del listening: `node scripts/exportar-guiones.mjs` (guiones del banco → `salida/guiones.json`) y `python scripts/audios.py` (edge-tts + ffmpeg → `public/audio/<id>.mp3`, con caché en `node_modules/.cache/english-lab/tts`; `--forzar` rehace). `src/componentes/Reproductor.tsx` los reproduce o, si faltan, lee el guion con la voz del móvil.
+- `scripts/capturas.mjs`: capturas para los bocetos del loop (playwright-core fuera del repo, variable `PLAYWRIGHT_CORE`).
 
 ## Comandos
 - `npm run dev` (abierto a la wifi para probar en el iPhone), `npm run build`, `npm run build:pages`, `npm test`, `npm run typecheck`.

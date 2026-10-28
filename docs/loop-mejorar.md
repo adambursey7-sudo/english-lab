@@ -146,7 +146,10 @@ Telegram con el enlace de los bocetos y cómo probarlo en el iPhone. Parar el lo
 - Vuelta 4 (28/10): 2b hecho (pantallas de secciones, lista común, emparejar y huecos de párrafo) con los
   ejercicios del examen 1 de Part 6 y Part 7 ya escritos. Ojo: 3a queda reducido a Part 5 y Part 8.
 - Vuelta 5 (28/10): 2c hecho (Writing y Speaking) **y con ello 3b y 3d también** (examen 1 de Writing y Speaking
-  escritos). **Siguiente: 2d (pantalla de Listening con reproductor y respaldo de voz).**
+  escritos).
+- Vuelta 6 (28/10): 2d hecho (reproductor, respaldo de voz, generador de mp3) y la mitad de 3c (Listening Parts 1
+  y 2 del examen 1 con audio). **Bloque 2 cerrado.** **Siguiente: 3c (Listening Parts 3 y 4 del examen 1 con
+  audio).** Después: 3a (Reading Parts 5 y 8), 3e (PAU), bloque 4.
 
 ## Decisiones de Adam
 - 28/10 (vuelta 1): **estilo B «aula moderna» para la app y C «examen oficial» para el cuadernillo en PDF**, como
@@ -240,3 +243,25 @@ Telegram con el enlace de los bocetos y cómo probarlo en el iPhone. Parar el lo
 - Capturas: `docs/loop-mejorar/capturas/2c/`.
 - Cómo probarlo: Inicio → Writing → Part 2, elige una tarea, escribe y «Terminar»; prueba «Enviar a Adam».
   Speaking → Part 3: «Empezar», lee 15 s y habla 2 min; o «Empezar grabando» y escucha el audio.
+
+### Vuelta 6 · 2d (+ media 3c). Listening
+- Hecho: `src/componentes/Reproductor.tsx` (HEAD al mp3 → modo mp3 con play/pausa, barra, −10/+10 s; si no
+  existe, modo voz con `speechSynthesis` leyendo el guion con voces inglesas distintas por hablante y pausas de
+  ≤ 8 s; pegado arriba). `Ejercicio.tsx`: reproductor si `ejercicio.audio`; `palabra` con `frase` → entrada dentro
+  de la frase. `Resultado.tsx`: «Ver la transcripción» (guion con descripción del hablante) y la frase con hueco en
+  cada corrección. Banco: `c1/listening.ts` con `c1-lis-1-extracts-1` (3 extractos, Q1–6, 7 voces) y
+  `c1-lis-2-rescue-centre-1` (monólogo, Q7–14); función `dosVeces` arma aviso + pausa + audio ×2.
+  `scripts/exportar-guiones.mjs` (compila el banco con el propio Vite en modo SSR a `node_modules/.cache` y escribe
+  `salida/guiones.json`) y `scripts/audios.py` (edge-tts por línea con 4 reintentos y caché por hash en
+  `node_modules/.cache/english-lab/tts`, silencios con ffmpeg, normaliza a 24 kHz mono 48 kbps y une con el concat
+  de ffmpeg a `public/audio/<id>.mp3`). `salida/` en `.gitignore`. Audios: 487 s y 398 s, 2,9 MB y 2,3 MB.
+- Comprobado: typecheck limpio; 21 tests; los mp3 decodifican sin errores (`ffmpeg -f null`); capturas de Part 1
+  y 2 y de la corrección revisadas.
+- Falló: esbuild no está en node_modules (Vite 8 usa rolldown) → el exportador usa `vite.build`; edge-tts dio
+  «NoAudioReceived» una vez → reintentos; la consola cp1252 no imprimía «→» → `reconfigure(utf-8)`; «Scotland» iba
+  en minúscula en la solución.
+- Ojo: ffmpeg avisa «non monotonically increasing dts» al unir; el archivo se oye bien, pero si da problemas en
+  iPhone, unir recodificando (`-c:a libmp3lame`) en vez de `-c copy`.
+- Capturas: `docs/loop-mejorar/capturas/2d/`.
+- Cómo probarlo: Inicio → Listening → Part 1: play, se oye al supervisor y los tres extractos (dos veces cada uno).
+  Para regenerar audios: `node scripts/exportar-guiones.mjs` y `python scripts/audios.py` (`--forzar` para rehacer).

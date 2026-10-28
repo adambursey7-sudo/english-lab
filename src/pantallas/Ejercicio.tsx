@@ -3,6 +3,7 @@ import type { Ejercicio, Item, Respuestas } from '../banco/tipos';
 import { NOMBRES_EXAMEN, TIPOS_EVALUABLES } from '../banco/tipos';
 import { EntradaHablar } from '../componentes/Hablar';
 import { EntradaRedaccion } from '../componentes/Redaccion';
+import { Reproductor } from '../componentes/Reproductor';
 import { Temporizador } from '../componentes/Temporizador';
 import { TextoHuecos } from '../componentes/TextoHuecos';
 import { cuentaPalabras, letra } from '../motor/corregir';
@@ -54,6 +55,8 @@ export function PantallaEjercicio({ ejercicio, posicion, respuestas, onCambia, o
 
       <main className="contenido">
         <p className="instrucciones">{ejercicio.instrucciones}</p>
+
+        {ejercicio.audio && <Reproductor key={ejercicio.id} audio={ejercicio.audio} />}
 
         {ejercicio.texto && (
           <div className="hoja">
@@ -194,6 +197,31 @@ function ItemEntrada({ item, valor, onCambia, comunes = [], elegible, abierta, o
               <span>{op}</span>
             </button>
           ))}
+        </div>
+      </>
+    );
+  }
+
+  if (item.tipo === 'palabra' && item.frase) {
+    // Completar una frase (Listening Part 2): la entrada va dentro de la frase.
+    const [antes, despues] = item.frase.split(`{{${item.n}}}`);
+    return (
+      <>
+        <div className="cabeza"><span className="num">{item.n}</span></div>
+        <div className="frase-hueco">
+          <span>{antes}</span>
+          <input
+            id={`respuesta-${item.n}`}
+            className="campo"
+            type="text"
+            autoComplete="off"
+            autoCapitalize="none"
+            spellCheck={false}
+            placeholder="palabra o frase corta"
+            value={valor}
+            onChange={(e) => onCambia(e.target.value)}
+          />
+          <span>{despues}</span>
         </div>
       </>
     );

@@ -175,6 +175,26 @@ input { font: inherit; color: inherit; }
 .criterios label { display: grid; grid-template-columns: 24px 1fr; gap: 10px; align-items: start; font-size: 14.5px; line-height: 1.45; cursor: pointer; }
 .criterios input { width: 20px; height: 20px; margin-top: 2px; accent-color: var(--ok); }
 
+/* Listening */
+.reproductor {
+  display: grid; grid-template-columns: 64px 1fr; gap: 14px; align-items: center;
+  background: var(--paper2); border: 1px solid var(--line); border-radius: var(--radio); padding: 14px;
+  position: sticky; top: calc(58px + env(safe-area-inset-top, 0px)); z-index: 4;
+}
+.btn-play {
+  width: 64px; height: 64px; border-radius: 50%; border: none; background: var(--ink); color: var(--paper2);
+  font-size: 24px; display: grid; place-items: center; cursor: pointer;
+}
+.reproductor-datos { display: grid; gap: 6px; min-width: 0; }
+.reproductor-titulo { font-weight: 600; }
+.reproductor-barra { height: 8px; border-radius: 999px; background: var(--line); overflow: hidden; cursor: pointer; }
+.reproductor-barra div { height: 100%; background: var(--ink); transition: width 0.25s linear; }
+.reproductor-fila { display: flex; justify-content: space-between; align-items: center; gap: 8px; flex-wrap: wrap; }
+.reproductor-saltos { display: flex; gap: 4px; }
+.frase-hueco { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; font-size: 16.5px; line-height: 1.6; }
+.frase-hueco .campo { flex: 1 1 140px; min-width: 0; max-width: 260px; }
+.transcripcion { display: grid; gap: 8px; font-size: 15px; line-height: 1.55; max-width: 65ch; }
+
 /* Speaking */
 .hablar { display: grid; gap: 12px; }
 .hablar h3 { font-size: 18px; }
