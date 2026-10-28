@@ -50,8 +50,10 @@ export function Resultado({ lista, respuestas, onRepetir, onInicio }: Props) {
                   hueco={(n) => {
                     const ic = c.items.find((x) => x.item.n === n);
                     if (!ic) return null;
-                    const tuya = ic.item.tipo === 'opciones' ? (ic.respuesta === '' ? '' : letra(Number(ic.respuesta))) : ic.respuesta;
-                    const buena = ic.item.tipo === 'opciones' ? letra(ic.item.correcta) : ic.solucion;
+                    const it = ic.item;
+                    const conLetra = it.tipo === 'opciones' || it.tipo === 'emparejar';
+                    const tuya = conLetra ? (ic.respuesta === '' ? '' : letra(Number(ic.respuesta))) : ic.respuesta;
+                    const buena = it.tipo === 'opciones' || it.tipo === 'emparejar' ? letra(it.correcta) : ic.solucion;
                     if (ic.correcto) return <span className="hueco ok"><span className="num">{n}</span>{buena}</span>;
                     return (
                       <>
@@ -64,8 +66,20 @@ export function Resultado({ lista, respuestas, onRepetir, onInicio }: Props) {
               </div>
             )}
 
+            {c.ejercicio.secciones && (
+              <details className="hoja plegable">
+                <summary>Volver a leer los textos</summary>
+                {c.ejercicio.secciones.map((s) => (
+                  <section key={s.letra} className="seccion">
+                    <div className="seccion-cabeza"><span className="letra-grande">{s.letra}</span>{s.titulo && <b>{s.titulo}</b>}</div>
+                    <div className="texto">{s.texto.split(/\n\n+/).map((p, i) => <p key={i}>{p}</p>)}</div>
+                  </section>
+                ))}
+              </details>
+            )}
+
             <div className="items">
-              {c.items.map((ic) => <ResultadoItem key={ic.item.n} ic={ic} />)}
+              {c.items.map((ic) => <ResultadoItem key={ic.item.n} ic={ic} comunes={c.ejercicio.opcionesComunes} />)}
             </div>
           </section>
         ))}
@@ -79,12 +93,14 @@ export function Resultado({ lista, respuestas, onRepetir, onInicio }: Props) {
   );
 }
 
-function ResultadoItem({ ic }: { ic: ItemCorregido }) {
-  const tuya = textoRespuesta(ic);
+function ResultadoItem({ ic, comunes = [] }: { ic: ItemCorregido; comunes?: string[] }) {
+  const tuya = textoRespuesta(ic, comunes);
   const buena = ic.item.tipo === 'opciones' ? `${letra(ic.item.correcta)} ${ic.solucion}` : ic.solucion;
   const alternativas = alternativasDe(ic.item);
   return (
     <div className={`resultado-item${ic.correcto ? '' : ' mal'}`}>
+      {ic.item.pregunta && ic.item.tipo !== 'emparejar' && <p className="pregunta">{ic.item.pregunta}</p>}
+      {ic.item.pregunta && ic.item.tipo === 'emparejar' && !/^Gap \d+$/.test(ic.item.pregunta) && <p className="pregunta">{ic.item.pregunta}</p>}
       <div className="fila">
         <span className="num" style={{ fontWeight: 700 }}>{ic.item.n}</span>
         <span className={`marca ${ic.correcto ? 'ok' : 'ko'}`}>{ic.correcto ? '✓' : '✗'}</span>

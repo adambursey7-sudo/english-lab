@@ -51,10 +51,11 @@ export function PantallaEjercicio({ ejercicio, posicion, respuestas, onCambia, o
               hueco={(n) => {
                 const item = ejercicio.items.find((i) => i.n === n);
                 const valor = respuestas[n] ?? '';
-                const mostrado = item?.tipo === 'opciones' ? (valor === '' ? '' : letra(Number(valor))) : valor;
+                const conLetra = item?.tipo === 'opciones' || item?.tipo === 'emparejar';
+                const mostrado = conLetra ? (valor === '' ? '' : letra(Number(valor))) : valor;
                 return (
                   <>
-                    <button type="button" className={`hueco${activo === n ? ' activo' : ''}`} onClick={() => irA(n)} aria-label={`Hueco ${n}`}>
+                    <button type="button" className={`hueco${activo === n ? ' activo' : ''}${item?.tipo === 'emparejar' ? ' parrafo' : ''}`} onClick={() => irA(n)} aria-label={`Hueco ${n}`}>
                       <span className="num">{n}</span>
                       {mostrado || '……'}
                     </button>
@@ -66,10 +67,43 @@ export function PantallaEjercicio({ ejercicio, posicion, respuestas, onCambia, o
           </div>
         )}
 
+        {ejercicio.secciones && (
+          <div className="hoja">
+            {ejercicio.titulo && !ejercicio.texto && <h3>{ejercicio.titulo}</h3>}
+            {ejercicio.secciones.map((s) => (
+              <section key={s.letra} className="seccion">
+                <div className="seccion-cabeza">
+                  <span className="letra-grande">{s.letra}</span>
+                  {s.titulo && <b>{s.titulo}</b>}
+                </div>
+                <div className="texto">
+                  {s.texto.split(/\n\n+/).map((p, i) => <p key={i}>{p}</p>)}
+                </div>
+              </section>
+            ))}
+          </div>
+        )}
+
+        {ejercicio.opcionesComunes && ejercicio.opcionesComunes.some((o) => o.length > 24) && (
+          <div className="hoja comunes">
+            <div className="eyebrow">{ejercicio.parte === 7 && ejercicio.destreza === 'reading-use' ? 'Párrafos que faltan (sobra uno)' : 'Opciones'}</div>
+            {ejercicio.opcionesComunes.map((o, i) => {
+              const usadaEn = ejercicio.items.find((it) => it.tipo === 'emparejar' && respuestas[it.n] === String(i));
+              return (
+                <div key={i} className={`comun${usadaEn ? ' usada' : ''}`}>
+                  <span className="letra-grande">{letra(i)}</span>
+                  <span className="comun-texto">{o}</span>
+                  {usadaEn && <span className="comun-donde">→ {usadaEn.n}</span>}
+                </div>
+              );
+            })}
+          </div>
+        )}
+
         <div className="items">
           {ejercicio.items.map((item) => (
             <div key={item.n} id={`item-${item.n}`} className={`item${activo === item.n ? ' activo' : ''}`} onFocus={() => setActivo(item.n)}>
-              <ItemEntrada item={item} valor={respuestas[item.n] ?? ''} onCambia={(v) => onCambia(item.n, v)} />
+              <ItemEntrada item={item} valor={respuestas[item.n] ?? ''} onCambia={(v) => onCambia(item.n, v)} comunes={ejercicio.opcionesComunes} />
             </div>
           ))}
         </div>
@@ -92,11 +126,37 @@ export function PantallaEjercicio({ ejercicio, posicion, respuestas, onCambia, o
   );
 }
 
-function ItemEntrada({ item, valor, onCambia }: { item: Item; valor: string; onCambia: (v: string) => void }) {
+function ItemEntrada({ item, valor, onCambia, comunes = [] }: { item: Item; valor: string; onCambia: (v: string) => void; comunes?: string[] }) {
+  if (item.tipo === 'emparejar') {
+    const cortas = comunes.every((o) => o.length <= 24);
+    return (
+      <>
+        <div className="cabeza">
+          <span className="num">{item.n}</span>
+          {item.pregunta && !/^Gap \d+$/.test(item.pregunta) && <span className="pregunta">{item.pregunta}</span>}
+        </div>
+        <div className="letras" role="group" aria-label={`Pregunta ${item.n}`}>
+          {comunes.map((o, i) => {
+            const etiqueta = o.replace(/^(Writer|Section|Speaker|Text|Paragraph) /, '');
+            return (
+              <button key={i} type="button" className="letra-btn" aria-pressed={valor === String(i)} onClick={() => onCambia(valor === String(i) ? '' : String(i))} title={o}>
+                {letra(i)}
+                {cortas && etiqueta !== letra(i) && <small>{etiqueta}</small>}
+              </button>
+            );
+          })}
+        </div>
+      </>
+    );
+  }
+
   if (item.tipo === 'opciones') {
     return (
       <>
-        <div className="cabeza"><span className="num">{item.n}</span></div>
+        <div className="cabeza">
+          <span className="num">{item.n}</span>
+          {item.pregunta && <span className="pregunta">{item.pregunta}</span>}
+        </div>
         <div className="opciones" role="group" aria-label={`Pregunta ${item.n}`}>
           {item.opciones.map((op, i) => (
             <button key={i} type="button" className="opcion" aria-pressed={valor === String(i)} onClick={() => onCambia(valor === String(i) ? '' : String(i))}>
@@ -115,6 +175,7 @@ function ItemEntrada({ item, valor, onCambia }: { item: Item; valor: string; onC
         <div className="cabeza">
           <span className="num">{item.n}</span>
           {item.raiz && <span className="raiz">{item.raiz}</span>}
+          {item.pregunta && <span className="pregunta">{item.pregunta}</span>}
         </div>
         <input
           id={`respuesta-${item.n}`}

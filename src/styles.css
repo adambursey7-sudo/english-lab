@@ -132,6 +132,33 @@ input { font: inherit; color: inherit; }
 .hueco.ko { color: var(--pen); border-color: var(--pen); text-decoration: line-through; }
 .hueco.vacio { color: var(--pen); border-color: var(--pen); }
 .raiz { font-family: var(--mono); font-size: 12px; font-weight: 600; color: var(--ink2); margin-left: 4px; }
+.hueco.parrafo { display: block; min-height: 40px; line-height: 40px; margin: 0; border: 1.5px dashed var(--ink2); border-radius: 8px; font-size: 15px; width: 100%; background: var(--paper); }
+.hueco.parrafo.activo { border-style: solid; }
+
+/* Textos por secciones (Reading 6 y 8) y lista común de opciones (párrafos A–G, lista A–H) */
+.seccion { display: grid; gap: 8px; padding-top: 12px; border-top: 1px solid var(--line); }
+.seccion:first-of-type { border-top: none; padding-top: 0; }
+.seccion-cabeza { display: flex; align-items: center; gap: 10px; }
+.letra-grande {
+  display: inline-grid; place-items: center; width: 30px; height: 30px; border-radius: 8px; flex: none;
+  background: var(--ink); color: var(--paper2); font-family: var(--display); font-weight: 700; font-size: 16px;
+}
+.comunes { gap: 10px; }
+.comun { display: grid; grid-template-columns: 30px 1fr auto; gap: 10px; align-items: start; font-size: 15.5px; line-height: 1.55; }
+.comun.usada { opacity: 0.55; }
+.comun.usada .comun-texto { text-decoration: line-through; text-decoration-color: var(--ink2); }
+.comun-donde { font-family: var(--mono); font-size: 13px; font-weight: 600; color: var(--ink2); white-space: nowrap; }
+.pregunta { font-size: 16px; line-height: 1.45; flex: 1 1 100%; }
+.letras { display: flex; flex-wrap: wrap; gap: 8px; }
+.letra-btn {
+  display: inline-grid; place-items: center; gap: 1px; min-width: 48px; min-height: 48px; padding: 4px 10px;
+  border: 1.5px solid var(--line); border-radius: 10px; background: var(--paper); font-weight: 700; font-size: 18px;
+}
+.letra-btn small { font-size: 11px; font-weight: 500; color: var(--ink2); line-height: 1.1; }
+.letra-btn[aria-pressed='true'] { border-color: var(--ink); background: var(--marker); color: var(--marker-ink); }
+.letra-btn[aria-pressed='true'] small { color: var(--marker-ink); }
+.plegable summary { cursor: pointer; font-weight: 600; }
+.plegable[open] summary { margin-bottom: 8px; }
 
 .items { display: grid; gap: 12px; }
 .item { border: 1px solid var(--line); border-radius: var(--radio); background: var(--paper2); padding: 12px 14px; display: grid; gap: 10px; }

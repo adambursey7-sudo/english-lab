@@ -60,6 +60,24 @@ await pagina.waitForSelector('.nota-grande');
 await foto('04-resultado');
 await foto('04-resultado-entera', true);
 
+// Partes sueltas que se pidan (cuarto argumento: "6,7"): se abre cada una, se contesta la primera pregunta y se captura.
+for (const parte of (process.argv[4] ?? '').split(',').filter(Boolean)) {
+  await pagina.goto(url, { waitUntil: 'networkidle' });
+  await pagina.locator('.tarjeta', { hasText: `Part ${parte} ·` }).first().click();
+  await pagina.waitForSelector('.item');
+  await foto(`07-parte-${parte}`);
+  const primera = pagina.locator('.item').first();
+  const letraBtn = primera.locator('.letra-btn');
+  if ((await letraBtn.count()) > 0) await letraBtn.nth(1).click();
+  else if ((await primera.locator('.opcion').count()) > 0) await primera.locator('.opcion').nth(1).click();
+  await primera.scrollIntoViewIfNeeded();
+  await foto(`07-parte-${parte}-contestando`);
+  await foto(`07-parte-${parte}-entera`, true);
+  await pagina.locator('.pie .btn').first().click();
+  await pagina.waitForSelector('.nota-grande');
+  await foto(`07-parte-${parte}-resultado-entera`, true);
+}
+
 // Modo oscuro del inicio.
 await pagina.emulateMedia({ colorScheme: 'dark' });
 await pagina.goto(url, { waitUntil: 'networkidle' });

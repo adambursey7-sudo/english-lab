@@ -142,8 +142,10 @@ Telegram con el enlace de los bocetos y cómo probarlo en el iPhone. Parar el lo
   Avisado Adam por Telegram para que elija estilo (A cuaderno, B aula moderna [recomendado], C examen oficial).
   Adam confirma B para la app y C para el PDF.
 - Vuelta 2 (28/10): 1b hecho (`docs/formatos.md`, fuentes en `C:\dev\english-lab-fuentes\`). **Bloque 1 cerrado.**
-- Vuelta 3 (28/10): 2a hecho (modelo del banco ampliado, corrección con «pendiente», tests). **Siguiente: 2b
-  (pantallas de Reading 5–8: texto largo con preguntas, emparejar, párrafos en huecos).**
+- Vuelta 3 (28/10): 2a hecho (modelo del banco ampliado, corrección con «pendiente», tests).
+- Vuelta 4 (28/10): 2b hecho (pantallas de secciones, lista común, emparejar y huecos de párrafo) con los
+  ejercicios del examen 1 de Part 6 y Part 7 ya escritos. **Siguiente: 2c (pantallas de Writing y Speaking).**
+  Ojo: 3a queda reducido a Part 5 y Part 8 (los otros dos ya están).
 
 ## Decisiones de Adam
 - 28/10 (vuelta 1): **estilo B «aula moderna» para la app y C «examen oficial» para el cuadernillo en PDF**, como
@@ -200,3 +202,19 @@ Telegram con el enlace de los bocetos y cómo probarlo en el iPhone. Parar el lo
 - Falló: un error de tipos en el test (explicación opcional), arreglado.
 - Capturas: ninguna (nada visible cambia); esquema de tipos en los bocetos.
 - Cómo probarlo: `npm test`; la app sigue igual.
+
+### Vuelta 4 · 2b. Pantallas de Reading (secciones, emparejar, párrafos)
+- Hecho: `Ejercicio.tsx`: bloque de `secciones` (letra grande + texto), bloque de `opcionesComunes` cuando son
+  largas (párrafos A–G) con tachado y «→ 41» al usarlas, botones de letra (`.letra-btn`) para `emparejar` (con
+  etiqueta pequeña solo si dice algo más que la letra), huecos de párrafo como caja (`.hueco.parrafo`), `pregunta`
+  visible en opciones y palabra. `Resultado.tsx`: letras en los huecos de emparejar, textos plegados («Volver a leer
+  los textos»), enunciado de la pregunta en cada corrección, `comunes` a `ResultadoItem`. CSS nuevo. Banco:
+  `src/banco/c1/reading.ts` con `c1-rue-6-remote-work` (4 textos, 37–40) y `c1-rue-7-bus-map` (41–46, sobra A),
+  los dos del examen 1. `scripts/capturas.mjs` acepta un cuarto argumento con partes («6,7») y las recorre.
+- Comprobado: typecheck limpio; 17 tests en verde (el test del banco valida los dos ejercicios nuevos); capturas de
+  Part 6 y Part 7 revisadas, sin errores de página.
+- Falló: un error de tipos en la corrección (narrowing de `correcta`), arreglado.
+- Capturas: `docs/loop-mejorar/capturas/2b/` (07-parte-6*, 07-parte-7*).
+- Mejorable (para 4b): elegir el párrafo desde el propio hueco; dos columnas en tablet.
+- Cómo probarlo: Inicio → Reading & Use of English → «Part 6 · Cross-text multiple matching» o «Part 7 · Gapped
+  text»; contesta tocando letras y corrige.
