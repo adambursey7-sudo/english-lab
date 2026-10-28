@@ -1,0 +1,308 @@
+<title>Bocetos English Lab</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@500;600;700&family=Libre+Franklin:wght@400;500;600&display=swap">
+<style>
+/* Diario de bocetos del loop «English Lab mejor y más bonita»: una entrada por vuelta, la más nueva arriba.
+   Hoja de examen corregida: papel frío, tinta azul marino, boli rojo (mejorable), verde del profe (hecho), subrayador. */
+:root {
+  --papel: #f3f4f1;
+  --hoja: #ffffff;
+  --tinta: #1b2742;
+  --tinta2: #5a647c;
+  --linea: #d6dae1;
+  --boli: #c8372d;
+  --verde: #1f7a4d;
+  --marcador: #ffe66d;
+  --marcador-tinta: #4a3d00;
+  --f-titulo: 'Zilla Slab', Georgia, 'Times New Roman', serif;
+  --f-texto: 'Libre Franklin', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --papel: #161920; --hoja: #1f232d; --tinta: #e8eaf0; --tinta2: #a7aebf; --linea: #363c4a;
+    --boli: #ff7b70; --verde: #5fcf8f; --marcador: #8a7a16; --marcador-tinta: #fff6c2; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --papel: #161920; --hoja: #1f232d; --tinta: #e8eaf0; --tinta2: #a7aebf; --linea: #363c4a;
+  --boli: #ff7b70; --verde: #5fcf8f; --marcador: #8a7a16; --marcador-tinta: #fff6c2; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { background: var(--papel); color: var(--tinta); font: 16px/1.55 var(--f-texto); }
+.pagina { max-width: 1100px; margin: 0 auto; padding-block: 28px 64px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  display: grid; gap: 36px; }
+header.cabecera { display: grid; gap: 6px; }
+h1 { font: 700 clamp(30px, 5vw, 42px)/1.1 var(--f-titulo); margin: 0; text-wrap: balance; }
+header p { margin: 0; color: var(--tinta2); max-width: 65ch; }
+.boceto { background: var(--hoja); border: 1px solid var(--linea); border-radius: 12px; padding: 22px; display: grid; gap: 22px; }
+.cabeza { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 14px; }
+h2 { font: 700 25px/1.2 var(--f-titulo); margin: 0; text-wrap: balance; }
+.sello { font-size: 12.5px; letter-spacing: .1em; text-transform: uppercase; color: var(--tinta2); font-weight: 600; }
+h3 { font-size: 12.5px; letter-spacing: .1em; text-transform: uppercase; color: var(--tinta2); font-weight: 600; margin: 0 0 8px; }
+h4 { font: 600 19px/1.25 var(--f-titulo); margin: 0; }
+p { margin: 0; }
+.galeria { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 14px; }
+figure { margin: 0; display: grid; gap: 8px; min-width: 0; align-content: start; }
+figcaption { font-size: 14px; color: var(--tinta2); }
+figcaption b { color: var(--tinta); font-weight: 600; }
+.lienzo { position: relative; border-radius: 8px; overflow: hidden; border: 1px solid var(--linea); background: var(--papel); }
+.lienzo img { display: block; width: 100%; height: auto; max-width: 100%; }
+.pin { position: absolute; width: 26px; height: 26px; margin: -13px 0 0 -13px; border-radius: 50%;
+  background: var(--boli); color: #fff; font: 600 14px/26px var(--f-texto); text-align: center;
+  box-shadow: 0 0 0 3px rgba(255,255,255,.85); }
+.listas { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+@media (max-width: 720px) { .listas { grid-template-columns: 1fr; } }
+ul, ol { margin: 0; padding-left: 22px; display: grid; gap: 6px; }
+li { max-width: 62ch; }
+ol.mejorable li::marker { color: var(--boli); font-weight: 600; }
+ul.hecho li::marker { color: var(--verde); }
+.etiqueta { display: inline-block; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; font-weight: 600;
+  padding: 2px 9px; border-radius: 999px; border: 1.5px solid currentColor; }
+.etiqueta.ok { color: var(--verde); }
+.etiqueta.mal { color: var(--boli); }
+.etiqueta.reco { color: var(--marcador-tinta); background: var(--marcador); border-color: transparent; }
+/* Tres direcciones: una tarjeta por estilo, con su móvil dibujado. */
+.direcciones { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
+.direccion { border: 1px solid var(--linea); border-radius: 10px; padding: 14px; display: grid; gap: 12px; align-content: start; background: var(--papel); }
+.direccion.elegida { border-color: var(--verde); box-shadow: 0 0 0 1px var(--verde); }
+.direccion svg { width: 100%; height: auto; max-width: 100%; display: block; border-radius: 8px; }
+.direccion .pros { display: grid; gap: 8px; font-size: 14.5px; }
+.direccion .pros b { font-weight: 600; }
+.nota { border-left: 3px solid var(--marcador-tinta); background: var(--marcador); color: var(--marcador-tinta); padding: 10px 14px; border-radius: 0 8px 8px 0; max-width: 70ch; }
+.nota b { font-weight: 600; }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+</style>
+
+<div class="pagina">
+  <header class="cabecera">
+    <h1>Bocetos de English Lab</h1>
+    <p>Diario del loop «English Lab mejor y más bonita» (28/10/2026). Cada vuelta deja aquí sus capturas, lo hecho y lo mejorable con chinchetas. La entrada más nueva va arriba.</p>
+  </header>
+
+  <!-- VUELTA 1 -->
+  <section class="boceto" id="vuelta-1">
+    <div class="cabeza">
+      <h2>Vuelta 1 · La app de hoy y tres estilos para elegir</h2>
+      <span class="sello">28/10 · Auditoría</span>
+    </div>
+
+    <p>Así está la app antes de tocar nada. Funciona bien (una parte suelta, corrección con explicaciones, modo oscuro), pero el inicio está desordenado y el ejercicio obliga a bajar mucho. Las chinchetas rojas remiten a la lista «Mejorable».</p>
+
+    <div class="galeria">
+      <figure>
+        <div class="lienzo">
+          <img src="capturas/1a/01-inicio.jpg" alt="Inicio actual en el móvil">
+          <span class="pin" style="left:50%;top:18%">1</span>
+          <span class="pin" style="left:86%;top:52%">2</span>
+          <span class="pin" style="left:50%;top:96%">3</span>
+        </div>
+        <figcaption><b>Inicio.</b> El aviso de instalar ocupa el primer tercio; el botón de examen completo queda debajo, fuera de la pantalla.</figcaption>
+      </figure>
+      <figure>
+        <div class="lienzo">
+          <img src="capturas/1a/02-ejercicio.jpg" alt="Ejercicio actual: texto con huecos">
+          <span class="pin" style="left:90%;top:4%">4</span>
+          <span class="pin" style="left:50%;top:60%">5</span>
+        </div>
+        <figcaption><b>Ejercicio.</b> El texto se lee bien, pero las preguntas están muy abajo y el reloj es pequeño.</figcaption>
+      </figure>
+      <figure>
+        <div class="lienzo">
+          <img src="capturas/1a/03-ejercicio-contestando.jpg" alt="Ejercicio con dos preguntas contestadas">
+          <span class="pin" style="left:50%;top:45%">6</span>
+        </div>
+        <figcaption><b>Contestando.</b> Cada pregunta mide casi una pantalla: ocho preguntas son ocho pantallas de scroll.</figcaption>
+      </figure>
+      <figure>
+        <div class="lienzo">
+          <img src="capturas/1a/04-resultado.jpg" alt="Resultado actual">
+          <span class="pin" style="left:30%;top:14%">7</span>
+          <span class="pin" style="left:50%;top:52%">8</span>
+        </div>
+        <figcaption><b>Resultado.</b> Sale «1 de 8» sin nota ni banda; el texto corregido repite todo y no hay «siguiente parte».</figcaption>
+      </figure>
+      <figure>
+        <div class="lienzo"><img src="capturas/1a/05-inicio-oscuro.jpg" alt="Inicio en modo oscuro"></div>
+        <figcaption><b>Modo oscuro.</b> Funciona, pero es plano: todo gris, sin acento.</figcaption>
+      </figure>
+      <figure>
+        <div class="lienzo">
+          <img src="capturas/1a/06-inicio-tablet.jpg" alt="Inicio en tablet">
+          <span class="pin" style="left:50%;top:80%">9</span>
+        </div>
+        <figcaption><b>Tablet.</b> La misma columna estirada y media pantalla vacía.</figcaption>
+      </figure>
+    </div>
+
+    <div class="listas">
+      <div>
+        <h3><span class="etiqueta ok">Hecho</span></h3>
+        <ul class="hecho">
+          <li>Rama del loop, plan con 8 bloques y estas capturas automáticas (móvil, oscuro y tablet) para repetirlas en cada vuelta.</li>
+          <li>Revisada la app entera: una parte suelta, examen completo, corrección y explicaciones van bien; no hay errores en la consola.</li>
+          <li>Dibujadas las tres direcciones visuales de abajo para que Adam elija.</li>
+        </ul>
+      </div>
+      <div>
+        <h3><span class="etiqueta mal">Mejorable</span></h3>
+        <ol class="mejorable">
+          <li>El aviso «Tenla como una app» manda demasiado: pasa a una línea discreta abajo.</li>
+          <li>Writing, Listening y Speaking salen apagados sin decir por qué: tarjetas con «en preparación» o, mejor, con ejercicios.</li>
+          <li>«Montar un examen completo» tiene que verse sin bajar: arriba, como acción principal.</li>
+          <li>El reloj es pequeño y no avisa cuando queda poco.</li>
+          <li>Las preguntas van lejos del texto: en el móvil, abrir las opciones al tocar el hueco; en tablet, dos columnas.</li>
+          <li>Las opciones A–D ocupan 4 filas: caben en 2×2 y la pregunta entera en media pantalla.</li>
+          <li>Nota sin porcentaje ni banda («Aprobado», «Grade B»): poner la nota como en el examen.</li>
+          <li>Falta «Siguiente parte» y «Otro de esta parte» al final; y un historial de resultados.</li>
+          <li>En tablet y PC, aprovechar el ancho: texto a la izquierda y preguntas a la derecha.</li>
+        </ol>
+      </div>
+    </div>
+
+    <div>
+      <h3>Tres estilos para elegir</h3>
+      <p style="max-width:70ch;margin-bottom:14px">Los tres ordenan el inicio igual (examen → destreza → partes con progreso, examen completo arriba). Cambia el carácter. Adam elige uno o mezcla; si no contesta antes de la vuelta 8, el loop aplica el recomendado.</p>
+      <div class="direcciones">
+
+        <!-- A · Cuaderno corregido -->
+        <div class="direccion">
+          <svg viewBox="0 0 390 600" role="img" aria-label="Estilo A, cuaderno corregido">
+            <rect width="390" height="600" fill="#f6f3ea"/>
+            <rect x="0" y="0" width="390" height="78" fill="#fbf8f0"/>
+            <line x1="36" y1="0" x2="36" y2="600" stroke="#e59a95" stroke-width="2"/>
+            <g stroke="#dcd6c4" stroke-width="1"><line x1="0" y1="110" x2="390" y2="110"/><line x1="0" y1="150" x2="390" y2="150"/><line x1="0" y1="190" x2="390" y2="190"/><line x1="0" y1="230" x2="390" y2="230"/><line x1="0" y1="270" x2="390" y2="270"/><line x1="0" y1="310" x2="390" y2="310"/><line x1="0" y1="350" x2="390" y2="350"/><line x1="0" y1="390" x2="390" y2="390"/><line x1="0" y1="430" x2="390" y2="430"/><line x1="0" y1="470" x2="390" y2="470"/><line x1="0" y1="510" x2="390" y2="510"/><line x1="0" y1="550" x2="390" y2="550"/></g>
+            <text x="52" y="34" font-family="Georgia, serif" font-size="12" fill="#7a6f5c" letter-spacing="2">ENGLISH LAB</text>
+            <text x="52" y="62" font-family="Georgia, serif" font-size="24" font-weight="700" fill="#1b2742">Hoy toca C1</text>
+            <rect x="52" y="92" width="150" height="30" rx="15" fill="#1b2742"/><text x="127" y="112" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#fff">C1 Advanced</text>
+            <rect x="210" y="92" width="80" height="30" rx="15" fill="none" stroke="#1b2742"/><text x="250" y="112" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#1b2742">PAU</text>
+            <rect x="52" y="136" width="320" height="64" rx="6" fill="#1b2742"/>
+            <text x="68" y="162" font-family="Georgia, serif" font-size="17" font-weight="700" fill="#fff">Examen completo · 90 min</text>
+            <text x="68" y="184" font-family="sans-serif" font-size="12" fill="#cfd6e6">Una parte de cada, como el día del examen</text>
+            <text x="52" y="226" font-family="sans-serif" font-size="11" fill="#7a6f5c" letter-spacing="2">READING &amp; USE OF ENGLISH · 8 PARTES</text>
+            <g font-family="sans-serif" font-size="14" fill="#1b2742">
+              <text x="52" y="258">Part 1 · Multiple-choice cloze</text><text x="330" y="258" fill="#1f7a4d" font-weight="700">7/8 ✓</text>
+              <text x="52" y="298">Part 2 · Open cloze</text><text x="330" y="298" fill="#c8372d" font-weight="700">4/8</text>
+              <text x="52" y="338">Part 3 · Word formation</text><text x="330" y="338" fill="#7a6f5c">—</text>
+              <text x="52" y="378">Part 4 · Key word transf.</text><text x="330" y="378" fill="#7a6f5c">—</text>
+            </g>
+            <rect x="48" y="244" width="200" height="20" fill="#ffe66d" opacity=".55"/>
+            <path d="M300 290 q10 -14 22 -2" stroke="#c8372d" stroke-width="2" fill="none"/>
+            <text x="52" y="420" font-family="sans-serif" font-size="11" fill="#7a6f5c" letter-spacing="2">WRITING · LISTENING · SPEAKING</text>
+            <g font-family="sans-serif" font-size="14" fill="#1b2742"><text x="52" y="452">Writing · Essay y 3 opciones</text><text x="52" y="492">Listening · 4 partes con audio</text><text x="52" y="532">Speaking · 15 min con reloj</text></g>
+            <text x="52" y="580" font-family="sans-serif" font-size="11" fill="#7a6f5c">Tenla como una app · cómo</text>
+          </svg>
+          <h4>A · Cuaderno corregido</h4>
+          <p style="font-size:14.5px;color:var(--tinta2)">Lo que hay hoy, llevado al final: hoja rayada, margen rojo, subrayador amarillo sobre lo que toca repasar y anotaciones «a boli».</p>
+          <div class="pros">
+            <p><b>A favor:</b> cálido y reconocible; aprovecha todo lo hecho; la corrección en verde y rojo encaja de forma natural.</p>
+            <p><b>En contra:</b> puede parecer de colegio para gente que prepara un C1; cuesta que el modo oscuro quede bien (un cuaderno oscuro no existe).</p>
+          </div>
+        </div>
+
+        <!-- B · Aula moderna -->
+        <div class="direccion elegida">
+          <svg viewBox="0 0 390 600" role="img" aria-label="Estilo B, aula moderna">
+            <rect width="390" height="600" fill="#f4f6fa"/>
+            <rect x="0" y="0" width="390" height="120" fill="#1b2742"/>
+            <circle cx="340" cy="40" r="90" fill="#2a3a63"/>
+            <text x="20" y="40" font-family="sans-serif" font-size="12" fill="#aab6d3" letter-spacing="2">ENGLISH LAB</text>
+            <text x="20" y="72" font-family="Georgia, serif" font-size="24" font-weight="700" fill="#fff">Hola, ¿qué practicamos?</text>
+            <text x="20" y="98" font-family="sans-serif" font-size="12" fill="#aab6d3">3 días seguidos · 14 partes hechas</text>
+            <rect x="16" y="138" width="358" height="76" rx="14" fill="#fff" stroke="#dde3ee"/>
+            <rect x="16" y="138" width="6" height="76" rx="3" fill="#1b2742"/>
+            <text x="36" y="166" font-family="Georgia, serif" font-size="17" font-weight="700" fill="#1b2742">Examen completo C1</text>
+            <text x="36" y="188" font-family="sans-serif" font-size="12" fill="#5a647c">Reading &amp; Use · 90 min · como el día del examen</text>
+            <rect x="290" y="158" width="68" height="34" rx="17" fill="#1b2742"/><text x="324" y="180" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="700" fill="#fff">Empezar</text>
+            <g>
+              <rect x="16" y="230" width="172" height="110" rx="14" fill="#fff" stroke="#dde3ee"/>
+              <circle cx="40" cy="256" r="12" fill="#e3ecff"/><rect x="34" y="250" width="12" height="12" rx="2" fill="#2f5bd1"/>
+              <text x="60" y="261" font-family="sans-serif" font-size="14" font-weight="600" fill="#1b2742">Reading &amp; Use</text>
+              <text x="32" y="286" font-family="sans-serif" font-size="12" fill="#5a647c">8 partes · 6 hechas</text>
+              <rect x="32" y="300" width="140" height="8" rx="4" fill="#e6eaf2"/><rect x="32" y="300" width="105" height="8" rx="4" fill="#2f5bd1"/>
+              <text x="32" y="328" font-family="sans-serif" font-size="12" fill="#2f5bd1" font-weight="600">Media 74 %</text>
+            </g>
+            <g>
+              <rect x="202" y="230" width="172" height="110" rx="14" fill="#fff" stroke="#dde3ee"/>
+              <circle cx="226" cy="256" r="12" fill="#e2f5ea"/><path d="M220 262 l6 -12 l6 12" stroke="#1f7a4d" stroke-width="2.5" fill="none"/>
+              <text x="246" y="261" font-family="sans-serif" font-size="14" font-weight="600" fill="#1b2742">Writing</text>
+              <text x="218" y="286" font-family="sans-serif" font-size="12" fill="#5a647c">2 partes · 1 enviada</text>
+              <rect x="218" y="300" width="140" height="8" rx="4" fill="#e6eaf2"/><rect x="218" y="300" width="70" height="8" rx="4" fill="#1f7a4d"/>
+              <text x="218" y="328" font-family="sans-serif" font-size="12" fill="#1f7a4d" font-weight="600">Pendiente de Adam</text>
+            </g>
+            <g>
+              <rect x="16" y="354" width="172" height="110" rx="14" fill="#fff" stroke="#dde3ee"/>
+              <circle cx="40" cy="380" r="12" fill="#fff0dd"/><path d="M34 380 h4 l5 -6 v12 l-5 -6z" fill="#d9731a"/>
+              <text x="60" y="385" font-family="sans-serif" font-size="14" font-weight="600" fill="#1b2742">Listening</text>
+              <text x="32" y="410" font-family="sans-serif" font-size="12" fill="#5a647c">4 partes · con audio</text>
+              <rect x="32" y="424" width="140" height="8" rx="4" fill="#e6eaf2"/><rect x="32" y="424" width="35" height="8" rx="4" fill="#d9731a"/>
+              <text x="32" y="452" font-family="sans-serif" font-size="12" fill="#d9731a" font-weight="600">Media 61 %</text>
+            </g>
+            <g>
+              <rect x="202" y="354" width="172" height="110" rx="14" fill="#fff" stroke="#dde3ee"/>
+              <circle cx="226" cy="380" r="12" fill="#efe6fb"/><rect x="222" y="373" width="8" height="12" rx="4" fill="#7c4bc9"/>
+              <text x="246" y="385" font-family="sans-serif" font-size="14" font-weight="600" fill="#1b2742">Speaking</text>
+              <text x="218" y="410" font-family="sans-serif" font-size="12" fill="#5a647c">4 partes · 15 min</text>
+              <rect x="218" y="424" width="140" height="8" rx="4" fill="#e6eaf2"/>
+              <text x="218" y="452" font-family="sans-serif" font-size="12" fill="#7c4bc9" font-weight="600">Sin empezar</text>
+            </g>
+            <rect x="16" y="482" width="358" height="56" rx="14" fill="#fff" stroke="#dde3ee"/>
+            <text x="32" y="506" font-family="sans-serif" font-size="14" font-weight="600" fill="#1b2742">PAU · Inglés (EBAU Canarias)</text>
+            <text x="32" y="526" font-family="sans-serif" font-size="12" fill="#5a647c">Texto, comprensión, uso de la lengua y redacción</text>
+            <text x="350" y="516" text-anchor="middle" font-family="sans-serif" font-size="18" fill="#5a647c">›</text>
+            <text x="16" y="580" font-family="sans-serif" font-size="11" fill="#5a647c">Tenla como una app · cómo</text>
+          </svg>
+          <h4>B · Aula moderna <span class="etiqueta reco">Recomendado</span></h4>
+          <p style="font-size:14.5px;color:var(--tinta2)">Cabecera azul marino con saludo y racha, una tarjeta por destreza con su color, icono y barra de progreso, examen completo arriba como acción principal.</p>
+          <div class="pros">
+            <p><b>A favor:</b> es lo más ordenado de los tres y lo que más invita a volver (progreso y medias a la vista); un color por destreza orienta sin leer; el modo oscuro sale natural.</p>
+            <p><b>En contra:</b> es el que más trabajo lleva (iconos propios, progreso guardado); hay que vigilar que no quede como cualquier app de idiomas.</p>
+          </div>
+        </div>
+
+        <!-- C · Examen oficial -->
+        <div class="direccion">
+          <svg viewBox="0 0 390 600" role="img" aria-label="Estilo C, examen oficial sobrio">
+            <rect width="390" height="600" fill="#ffffff"/>
+            <rect x="0" y="0" width="390" height="6" fill="#0f6e74"/>
+            <text x="20" y="40" font-family="Georgia, serif" font-size="12" fill="#333" letter-spacing="3">ENGLISH LAB · CANDIDATE</text>
+            <text x="20" y="74" font-family="Georgia, serif" font-size="26" font-weight="700" fill="#111">C1 Advanced</text>
+            <line x1="20" y1="90" x2="370" y2="90" stroke="#111" stroke-width="1.5"/>
+            <rect x="20" y="104" width="350" height="60" rx="2" fill="#f2f7f7" stroke="#0f6e74"/>
+            <text x="34" y="130" font-family="Georgia, serif" font-size="16" font-weight="700" fill="#111">Paper 1 · Reading and Use of English</text>
+            <text x="34" y="150" font-family="sans-serif" font-size="12" fill="#444">1 hour 30 minutes · Start full paper →</text>
+            <g font-family="sans-serif" font-size="13" fill="#111">
+              <text x="20" y="196" font-weight="700">Part</text><text x="60" y="196" font-weight="700">Task</text><text x="300" y="196" font-weight="700">Score</text>
+              <line x1="20" y1="204" x2="370" y2="204" stroke="#111"/>
+              <text x="20" y="226">1</text><text x="60" y="226">Multiple-choice cloze</text><text x="300" y="226">7 / 8</text>
+              <line x1="20" y1="236" x2="370" y2="236" stroke="#ddd"/>
+              <text x="20" y="258">2</text><text x="60" y="258">Open cloze</text><text x="300" y="258">4 / 8</text>
+              <line x1="20" y1="268" x2="370" y2="268" stroke="#ddd"/>
+              <text x="20" y="290">3</text><text x="60" y="290">Word formation</text><text x="300" y="290" fill="#888">—</text>
+              <line x1="20" y1="300" x2="370" y2="300" stroke="#ddd"/>
+              <text x="20" y="322">4</text><text x="60" y="322">Key word transformations</text><text x="300" y="322" fill="#888">—</text>
+              <line x1="20" y1="332" x2="370" y2="332" stroke="#ddd"/>
+              <text x="20" y="354">5–8</text><text x="60" y="354">Reading</text><text x="300" y="354" fill="#888">—</text>
+              <line x1="20" y1="364" x2="370" y2="364" stroke="#ddd"/>
+            </g>
+            <text x="20" y="400" font-family="Georgia, serif" font-size="16" font-weight="700" fill="#111">Paper 2 · Writing</text>
+            <text x="20" y="430" font-family="Georgia, serif" font-size="16" font-weight="700" fill="#111">Paper 3 · Listening</text>
+            <text x="20" y="460" font-family="Georgia, serif" font-size="16" font-weight="700" fill="#111">Paper 4 · Speaking</text>
+            <rect x="20" y="490" width="350" height="48" rx="2" fill="#0f6e74"/>
+            <text x="195" y="519" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="700" fill="#fff">PAU · Inglés (EBAU Canarias)</text>
+            <text x="20" y="580" font-family="sans-serif" font-size="11" fill="#666">Do not open this paper until you are told to do so.</text>
+          </svg>
+          <h4>C · Examen oficial</h4>
+          <p style="font-size:14.5px;color:var(--tinta2)">Blanco, negro y un solo acento verde azulado; tablas y numeración como el cuadernillo de verdad. La app se parece a lo que verán el día del examen, y el PDF sale con el mismo aspecto.</p>
+          <div class="pros">
+            <p><b>A favor:</b> elegante y serio; el examen en PDF y la app comparten diseño sin esfuerzo; muy legible.</p>
+            <p><b>En contra:</b> poco alegre, no anima a volver cada día; el progreso y las medias quedan como números en una tabla.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="nota"><b>Mi propuesta:</b> B para la app (inicio, progreso, resultados) y C para el cuadernillo en PDF, que así se parece al examen real. Si Adam prefiere A, se puede: lo del cuaderno se nota sobre todo en la corrección, que ya va por ahí.</div>
+  </section>
+</div>

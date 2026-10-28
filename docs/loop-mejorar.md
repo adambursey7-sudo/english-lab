@@ -136,7 +136,11 @@ por tipo, esta tanda llega hasta donde dé)
 Telegram con el enlace de los bocetos y cómo probarlo en el iPhone. Parar el loop.
 
 ## Estado
-- 28/10: loop preparado por Claude (rama, commit inicial, este plan). **Siguiente: 1a.**
+- 28/10: loop preparado por Claude (rama, commit inicial, este plan).
+- Vuelta 1 (28/10): 1a hecho. Página de bocetos: https://claude.ai/artifact/Qy1nZpguQL2g38Msth8XpA (republicar al
+  mismo enlace; copiar `docs/loop-mejorar/bocetos/` y las capturas al scratchpad de la sesión antes de publicar).
+  Avisado Adam por Telegram para que elija estilo (A cuaderno, B aula moderna [recomendado], C examen oficial).
+  **Siguiente: 1b (formatos de internet → `docs/formatos.md`).**
 
 ## Decisiones de Adam
 - (pendiente) Dirección visual elegida: —
@@ -144,3 +148,19 @@ Telegram con el enlace de los bocetos y cómo probarlo en el iPhone. Parar el lo
 
 ## Registro de vueltas
 (una entrada por vuelta: Hecho / Comprobado / Falló / Capturas / Cómo probarlo)
+
+### Vuelta 1 · 1a. Auditoría y tres estilos
+- Hecho: `scripts/capturas.mjs` (playwright-core fuera del repo, en el scratchpad de la sesión, variable
+  `PLAYWRIGHT_CORE`; usa el Chrome instalado sin ventana; móvil 390×844 claro y oscuro, tablet 820×1180; recorre
+  Inicio → Part 1 → contesta dos → Corregir). Capturas a JPEG 1400 px con Pillow. Página de bocetos creada con la
+  entrada de la vuelta 1: 6 capturas con 9 chinchetas, Hecho/Mejorable y las tres direcciones visuales en SVG
+  (A cuaderno corregido, B aula moderna, C examen oficial sobrio) con ventajas e inconvenientes; propuesta: B para la
+  app y C para el cuadernillo en PDF.
+- Comprobado: sin errores de página en las capturas; typecheck y tests no cambian (no se tocó código de la app).
+- Falló: nada.
+- Mejorable (entra en 4a/4b): aviso de instalar demasiado grande; destrezas apagadas sin explicación; examen
+  completo fuera de la vista; reloj pequeño sin aviso; preguntas lejos del texto (abrir opciones al tocar el hueco;
+  dos columnas en tablet); opciones A–D en 2×2; nota con porcentaje y banda; «Siguiente parte» y «Otro de esta
+  parte»; historial de resultados.
+- Capturas: `docs/loop-mejorar/capturas/1a/`.
+- Cómo probarlo: abrir la página de bocetos en el móvil y elegir estilo.
