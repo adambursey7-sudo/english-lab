@@ -170,3 +170,9 @@ export const NOMBRES_DESTREZA: Record<Destreza, string> = {
 };
 
 export const ORDEN_DESTREZAS: Destreza[] = ['reading-use', 'writing', 'listening', 'speaking', 'prueba'];
+
+/** Cómo se llama una parte en pantalla: «Part 3» en Cambridge, «Pregunta 4» (o «Preguntas 1–3») en la PAU. */
+export function etiquetaParte(examen: Examen, parte: number): string {
+  if (examen === 'pau') return parte === 1 ? 'Preguntas 1–3' : `Pregunta ${parte}`;
+  return `Part ${parte}`;
+}

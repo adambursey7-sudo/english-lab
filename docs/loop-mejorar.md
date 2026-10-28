@@ -151,7 +151,13 @@ Telegram con el enlace de los bocetos y cómo probarlo en el iPhone. Parar el lo
   y 2 del examen 1 con audio). **Bloque 2 cerrado.**
 - Vuelta 7 (28/10): 3c hecho (Listening Parts 3 y 4 del examen 1 con audio; listas por tarea en el modelo).
 - Vuelta 8 (28/10): 3a hecho (Reading Parts 5 y 8). **Examen 1 de C1 completo en las cuatro destrezas.**
-  **Siguiente: 3e (PAU examen 1 completo, con pantalla de verdadero/falso).** Después: bloque 4 (diseño B).
+- Vuelta 9 (28/10): **PARADA por Adam a mitad** («para el loop»). Quedó hecho y con commit: banco de la PAU
+  examen 1 entero (`src/banco/pau/examen-1.ts`: texto + preguntas 1–3, diálogo, 5 situaciones, 2 redacciones),
+  `etiquetaParte` («Pregunta N» en la PAU) y el inicio elige la destreza válida al cambiar de examen. **Falta de
+  3e:** pantalla de verdadero/falso con prueba copiada (hoy sale el aviso «llega en una próxima versión»), elegir
+  3 de 5 situaciones (hoy solo se abre una), cuadro compacto para las réplicas del diálogo, etiqueta en las
+  pantallas de Ejercicio/Resultado y en el script de capturas. **Siguiente al reanudar: terminar 3e.** Después:
+  bloque 4 (diseño B), 5 (PDF), 6 (más exámenes), 7, 8.
 
 ## Decisiones de Adam
 - 28/10 (vuelta 1): **estilo B «aula moderna» para la app y C «examen oficial» para el cuadernillo en PDF**, como

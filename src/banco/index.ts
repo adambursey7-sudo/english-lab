@@ -4,9 +4,10 @@ import { READING_C1 } from './c1/reading';
 import { WRITING_C1 } from './c1/writing';
 import { SPEAKING_C1 } from './c1/speaking';
 import { LISTENING_C1 } from './c1/listening';
+import { PAU_EXAMEN_1 } from './pau/examen-1';
 
 /** Todo el banco. Cada archivo de banco/<examen>/ exporta su lista y se suma aquí. */
-export const BANCO: Ejercicio[] = [...USE_OF_ENGLISH_C1, ...READING_C1, ...WRITING_C1, ...LISTENING_C1, ...SPEAKING_C1];
+export const BANCO: Ejercicio[] = [...USE_OF_ENGLISH_C1, ...READING_C1, ...WRITING_C1, ...LISTENING_C1, ...SPEAKING_C1, ...PAU_EXAMEN_1];
 
 export function ejerciciosDe(examen: Examen, destreza: Destreza): Ejercicio[] {
   return BANCO.filter((e) => e.examen === examen && e.destreza === destreza);

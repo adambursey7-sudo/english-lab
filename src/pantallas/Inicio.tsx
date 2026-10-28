@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { destrezasDe, partesDe } from '../banco';
-import { NOMBRES_DESTREZA, NOMBRES_EXAMEN, type Destreza, type Ejercicio, type Examen } from '../banco/tipos';
+import { NOMBRES_DESTREZA, NOMBRES_EXAMEN, etiquetaParte, type Destreza, type Ejercicio, type Examen } from '../banco/tipos';
 import { Instalar } from '../componentes/Instalar';
 import { minutosDe, montarExamen, practicarParte } from '../motor/examen';
 
@@ -13,7 +13,9 @@ const DESTREZAS: Record<Examen, Destreza[]> = {
 
 export function Inicio({ onEmpezar }: { onEmpezar: (lista: Ejercicio[]) => void }) {
   const [examen, setExamen] = useState<Examen>('c1');
-  const [destreza, setDestreza] = useState<Destreza>('reading-use');
+  const [destrezaElegida, setDestreza] = useState<Destreza>('reading-use');
+  // Al cambiar de examen, la destreza tiene que existir en él (la PAU solo tiene «prueba»).
+  const destreza = DESTREZAS[examen].includes(destrezaElegida) ? destrezaElegida : DESTREZAS[examen][0];
   const disponibles = destrezasDe(examen);
   const partes = partesDe(examen, destreza);
   const examenCompleto = montarExamen(examen, destreza);
@@ -66,7 +68,7 @@ export function Inicio({ onEmpezar }: { onEmpezar: (lista: Ejercicio[]) => void 
               <div className="lista">
                 {partes.map((p) => (
                   <button key={p.parte} className="tarjeta" onClick={() => onEmpezar(practicarParte(examen, destreza, p.parte))}>
-                    <b>Part {p.parte} · {p.nombreParte}</b>
+                    <b>{etiquetaParte(examen, p.parte)} · {p.nombreParte}</b>
                     <small>{p.minutos} min · {p.cuantos} {p.cuantos === 1 ? 'ejercicio' : 'ejercicios'} en el banco</small>
                     <span className="flecha" aria-hidden="true">›</span>
                   </button>
