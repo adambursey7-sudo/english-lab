@@ -140,10 +140,11 @@ Telegram con el enlace de los bocetos y cómo probarlo en el iPhone. Parar el lo
 - Vuelta 1 (28/10): 1a hecho. Página de bocetos: https://claude.ai/artifact/Qy1nZpguQL2g38Msth8XpA (republicar al
   mismo enlace; copiar `docs/loop-mejorar/bocetos/` y las capturas al scratchpad de la sesión antes de publicar).
   Avisado Adam por Telegram para que elija estilo (A cuaderno, B aula moderna [recomendado], C examen oficial).
-  **Siguiente: 1b (formatos de internet → `docs/formatos.md`).**
+  Adam confirma B para la app y C para el PDF. **Siguiente: 1b (formatos de internet → `docs/formatos.md`).**
 
 ## Decisiones de Adam
-- (pendiente) Dirección visual elegida: —
+- 28/10 (vuelta 1): **estilo B «aula moderna» para la app y C «examen oficial» para el cuadernillo en PDF**, como
+  recomendaba Claude. El bloque 4 aplica B; el bloque 5 aplica C al PDF. Ya no hay que esperar a la vuelta 8.
 - (pendiente) ¿Modelos de examen propios en `C:\dev\english-lab-fuentes\de-adam\`? —
 
 ## Registro de vueltas
