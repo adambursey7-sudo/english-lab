@@ -20,6 +20,8 @@ export const PERFILES: Perfil[] = [
   { id: 'adam', nombre: 'Adam', examen: 'c1', pin: '97712cda8fec868a35dfca9d7edaef7948d9ecd430625ec69a59c71ea66b8859' },
   { id: 'josito', nombre: 'Josito', examen: 'pau', pin: '0512b2cbc0140857bf9194d238549e0e0f2d5208781c7957e9d445d82e15e056' },
   { id: 'laurita', nombre: 'Laurita', examen: 'pau', pin: '50bbf9689ff85f26db13a397d9967c3394c574ea17eb51bf126d3bcc43390a6a' },
+  { id: 'maria', nombre: 'María', examen: 'pau', pin: '6ee6c012193a4670182be25642d37ef8ca709b079a5e3548c055d0e27e386ccd' },
+  { id: 'aroa', nombre: 'Aroa', examen: 'pau', pin: 'd82551e641f71547880c4964467bee263c237adf5575df046fd284598fdfc9e2' },
 ];
 
 // Clave nueva desde que hay PIN: quien había elegido perfil antes tiene que meter su PIN una vez.
