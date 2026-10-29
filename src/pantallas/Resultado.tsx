@@ -43,6 +43,7 @@ export function Resultado({ lista, respuestas, onRepetir, onInicio, onEmpezar }:
 
   return (
     <div className="app">
+      {!soloLibre && <KatePopup vineta={vinetaDe(porcentaje)} />}
       <header className={`cabecera aula compacta tono-${destreza}`}>
         <div className="cabecera-dentro">
           <div>
@@ -186,6 +187,29 @@ export function Resultado({ lista, respuestas, onRepetir, onInicio, onEmpezar }:
           </div>
         </div>
       </main>
+    </div>
+  );
+}
+
+/** Kate recortada (sin fondo, con borde de pegatina) baja desde arriba al terminar; se va sola o al tocarla. */
+function KatePopup({ vineta }: { vineta: 1 | 2 | 3 | 4 | 5 }) {
+  const [fase, setFase] = useState<'dentro' | 'saliendo' | 'fuera'>('dentro');
+  useEffect(() => {
+    if (fase === 'dentro') {
+      const t = window.setTimeout(() => setFase('saliendo'), 4000);
+      return () => window.clearTimeout(t);
+    }
+    if (fase === 'saliendo') {
+      const t = window.setTimeout(() => setFase('fuera'), 400);
+      return () => window.clearTimeout(t);
+    }
+  }, [fase]);
+  if (fase === 'fuera') return null;
+  return (
+    <div className={`kate-velo${fase === 'saliendo' ? ' saliendo' : ''}`} onClick={() => setFase('saliendo')}>
+      <button type="button" className="kate-popup" aria-label="Cerrar">
+        <img src={`${import.meta.env.BASE_URL}img/vineta-${vineta}.png`} alt={FRASES_VINETA[vineta]} />
+      </button>
     </div>
   );
 }

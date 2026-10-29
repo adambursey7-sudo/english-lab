@@ -6,12 +6,13 @@ const ESPERA_MAXIMA = 3500;
 
 /**
  * Intro de la app: el vídeo del logo de Kate, con música, a pantalla completa cada vez que se abre la app
- * (móvil y ordenador). Intenta sonar desde el principio; si el navegador no deja sonido sin tocar nada,
- * arranca en silencio y ofrece «Oír». «Saltar» la quita en cualquier momento.
+ * (móvil y ordenador). Intenta sonar desde el principio; si el navegador no deja sonido sin tocar nada
+ * (el iPhone casi siempre), espera quieta en el primer fotograma con «Toca para empezar»: así la música
+ * siempre se oye entera. «Saltar» la quita en cualquier momento.
  */
 export function Intro({ onFin }: { onFin: () => void }) {
   const video = useRef<HTMLVideoElement>(null);
-  const [silencio, setSilencio] = useState(false);
+  const [esperaToque, setEsperaToque] = useState(false);
   const [saliendo, setSaliendo] = useState(false);
   const terminado = useRef(false);
 
@@ -25,38 +26,41 @@ export function Intro({ onFin }: { onFin: () => void }) {
   useEffect(() => {
     const v = video.current;
     if (!v) return;
-    let arrancado = false;
-    const marcarArrancado = () => {
-      arrancado = true;
+    // «Listo» = o suena, o está esperando el toque con el primer fotograma ya cargado.
+    let listo = false;
+    const marcarListo = () => {
+      listo = true;
     };
-    v.addEventListener('playing', marcarArrancado);
+    v.addEventListener('playing', marcarListo);
 
-    // Primero con sonido; si el navegador lo rechaza (autoplay sin gesto), en silencio.
+    // Primero con sonido; si el navegador lo rechaza (autoplay sin gesto), se espera a que toquen.
     v.muted = false;
-    v.play().catch(() => {
-      v.muted = true;
-      setSilencio(true);
-      v.play().catch(terminar);
+    // Cualquier otro fallo (p. ej. AbortError mientras carga) lo deciden `playing`, `onError` o el vigilante.
+    v.play().catch((e: DOMException) => {
+      if (e.name !== 'NotAllowedError') return;
+      listo = true;
+      setEsperaToque(true);
     });
+    // Descarga entera una vez para que la caché «intro» tenga copia completa y pueda servir los trozos sin conexión.
+    fetch(VIDEO).catch(() => undefined);
 
     const vigilante = window.setTimeout(() => {
-      if (!arrancado) terminar();
+      if (!listo) terminar();
     }, ESPERA_MAXIMA);
     return () => {
       window.clearTimeout(vigilante);
-      v.removeEventListener('playing', marcarArrancado);
+      v.removeEventListener('playing', marcarListo);
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  const oir = () => {
+  const empezar = () => {
     const v = video.current;
     if (!v) return;
     v.muted = false;
-    // Si acaba de empezar, se vuelve al principio para que la música se oiga entera.
-    if (v.currentTime < 2) v.currentTime = 0;
-    setSilencio(false);
-    v.play().catch(() => undefined);
+    v.currentTime = 0;
+    setEsperaToque(false);
+    v.play().catch(terminar);
   };
 
   return (
@@ -71,12 +75,12 @@ export function Intro({ onFin }: { onFin: () => void }) {
         onError={terminar}
         aria-hidden="true"
       />
+      {esperaToque && (
+        <button className="intro-tocar" onClick={empezar}>
+          <span><span aria-hidden="true">▶</span> Toca para empezar</span>
+        </button>
+      )}
       <div className="intro-botones">
-        {silencio && (
-          <button className="btn intro-btn" onClick={oir}>
-            <span aria-hidden="true">🔊</span> Oír
-          </button>
-        )}
         <button className="btn intro-btn sec" onClick={terminar}>
           Saltar
         </button>

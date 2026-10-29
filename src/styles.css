@@ -1,16 +1,17 @@
-/* Hoja de examen corregida: papel frío, tinta azul marino, boli rojo del profe y subrayador amarillo. */
+/* Colores del logo de Kate: papel crema, tinta marrón de las letras, verde de las hojas, terracota del libro y
+   dorado de las estrellas. */
 :root {
-  --paper: #f6f7f4;
-  --paper2: #ffffff;
-  --ink: #1b2742;
-  --ink2: #55607a;
-  --line: #d4d8df;
-  --pen: #c8372d;
-  --pen-soft: #fbe9e7;
-  --ok: #1f7a4d;
-  --ok-soft: #e3f3ea;
-  --marker: #ffe66d;
-  --marker-ink: #4a3d00;
+  --paper: #f3eee4;
+  --paper2: #fcfaf5;
+  --ink: #3b2519;
+  --ink2: #7a6150;
+  --line: #ddd2bf;
+  --pen: #b4472b;
+  --pen-soft: #f6e2d8;
+  --ok: #4e7a2e;
+  --ok-soft: #e5eed8;
+  --marker: #f3d27c;
+  --marker-ink: #4a3300;
   --display: 'Zilla Slab', Georgia, 'Times New Roman', serif;
   --body: 'Libre Franklin', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
   --mono: ui-monospace, 'JetBrains Mono', Consolas, monospace;
@@ -19,17 +20,17 @@
 }
 @media (prefers-color-scheme: dark) {
   :root {
-    --paper: #171a21;
-    --paper2: #1f232d;
-    --ink: #e8eaf0;
-    --ink2: #a4abbd;
-    --line: #353b49;
-    --pen: #ff7b70;
-    --pen-soft: #3a2320;
-    --ok: #5fcf8f;
-    --ok-soft: #1c3127;
-    --marker: #8a7a16;
-    --marker-ink: #fff6c2;
+    --paper: #1b1a15;
+    --paper2: #24221b;
+    --ink: #f0e8d9;
+    --ink2: #b8aa94;
+    --line: #3c372d;
+    --pen: #ec8c6c;
+    --pen-soft: #3a2519;
+    --ok: #9cc879;
+    --ok-soft: #26321c;
+    --marker: #8a6d1e;
+    --marker-ink: #fff2c9;
     color-scheme: dark;
   }
 }
@@ -296,23 +297,24 @@ input { font: inherit; color: inherit; }
 .vineta-nota img { display: block; width: 100%; height: auto; }
 .hueco.libre { border-color: var(--ink2); font-family: var(--body); font-size: 14px; text-align: left; }
 
-/* Inicio «aula moderna» (vuelta 10): cabecera azul marino, examen completo arriba, una tarjeta por destreza con su color. */
+/* Inicio «aula moderna» (vuelta 10): cabecera verde bosque, examen completo arriba, una tarjeta por destreza con su
+   color de naturaleza (hoja, tapa del libro, terracota, brezo, pino). Las variables siguen llamándose «navy». */
 :root {
-  --tono-reading-use: #2f5bd1; --tono-reading-use-soft: #e6edff;
-  --tono-writing: #1f7a4d; --tono-writing-soft: #e2f3ea;
-  --tono-listening: #d9731a; --tono-listening-soft: #fff0e0;
-  --tono-speaking: #7c4bc9; --tono-speaking-soft: #efe6fb;
-  --tono-prueba: #0f6e74; --tono-prueba-soft: #dff3f4;
-  --navy: #1b2742; --navy2: #2a3a63; --navy-ink: #ffffff; --navy-ink2: #aab6d3;
+  --tono-reading-use: #557f35; --tono-reading-use-soft: #e6eed9;
+  --tono-writing: #94572c; --tono-writing-soft: #f3e5d5;
+  --tono-listening: #c46a2f; --tono-listening-soft: #f9e6d4;
+  --tono-speaking: #855a80; --tono-speaking-soft: #f0e3ee;
+  --tono-prueba: #33695a; --tono-prueba-soft: #dcebe4;
+  --navy: #34502b; --navy2: #46683a; --navy-ink: #fffaf0; --navy-ink2: #d2dfbd;
 }
 @media (prefers-color-scheme: dark) {
   :root {
-    --tono-reading-use: #7d9bff; --tono-reading-use-soft: #1f2a4a;
-    --tono-writing: #5fcf8f; --tono-writing-soft: #1c3127;
-    --tono-listening: #f0a35e; --tono-listening-soft: #3a2a1a;
-    --tono-speaking: #b795f0; --tono-speaking-soft: #2d2140;
-    --tono-prueba: #5fc8cf; --tono-prueba-soft: #16343a;
-    --navy: #121a2e; --navy2: #1f2b4d;
+    --tono-reading-use: #a4cc82; --tono-reading-use-soft: #27331d;
+    --tono-writing: #dba57a; --tono-writing-soft: #36271a;
+    --tono-listening: #f0a46e; --tono-listening-soft: #3b2818;
+    --tono-speaking: #cfa3c8; --tono-speaking-soft: #33232f;
+    --tono-prueba: #86c4ae; --tono-prueba-soft: #1a3029;
+    --navy: #1f2e19; --navy2: #2d4325;
   }
 }
 .tono-reading-use { --tono: var(--tono-reading-use); --tono-soft: var(--tono-reading-use-soft); }
@@ -406,11 +408,46 @@ input { font: inherit; color: inherit; }
   position: absolute; left: 0; right: 0; bottom: calc(44px + env(safe-area-inset-bottom));
   display: flex; justify-content: center; gap: 10px;
 }
-.intro-btn { width: auto; min-height: 44px; padding: 8px 20px; border-radius: 999px; background: #1b2742; border-color: #1b2742; color: #fff; }
-.intro-btn.sec { background: rgba(255,255,255,0.75); color: #1b2742; border-color: rgba(27,39,66,0.35); }
+.intro-btn { width: auto; min-height: 44px; padding: 8px 20px; border-radius: 999px; background: #34502b; border-color: #34502b; color: #fff; }
+.intro-btn.sec { background: rgba(255,255,255,0.75); color: #3b2519; border-color: rgba(59,37,25,0.35); }
 .intro-credito {
   position: absolute; left: 0; right: 0; bottom: calc(14px + env(safe-area-inset-bottom));
-  text-align: center; font-size: 11px; color: rgba(27,39,66,0.55); padding: 0 16px;
+  text-align: center; font-size: 11px; color: rgba(59,37,25,0.55); padding: 0 16px;
+}
+/* Si el navegador no deja sonar la música sin tocar, la intro espera en el primer fotograma con «Toca para empezar». */
+.intro-tocar {
+  position: absolute; inset: 0; width: 100%; border: 0; background: rgba(236,230,209,0.35);
+  display: flex; align-items: flex-end; justify-content: center; padding-bottom: calc(110px + env(safe-area-inset-bottom));
+}
+.intro-tocar > span {
+  display: inline-flex; align-items: center; gap: 10px; padding: 14px 26px; border-radius: 999px;
+  background: #34502b; color: #fff; font-family: var(--display); font-weight: 700; font-size: 19px;
+  box-shadow: 0 6px 20px rgba(52,80,43,0.35); animation: latido 1.6s ease-in-out infinite;
+}
+@keyframes latido { 50% { transform: scale(1.05); } }
+
+/* Al terminar: Kate recortada (PNG con borde de pegatina) baja desde arriba y se va sola o al tocarla. */
+.kate-velo {
+  position: fixed; inset: 0; z-index: 40; background: rgba(35, 28, 16, 0.5);
+  animation: velo-entra 0.3s ease forwards;
+}
+.kate-velo.saliendo { animation: velo-sale 0.4s ease forwards; }
+@keyframes velo-entra { from { opacity: 0; } }
+@keyframes velo-sale { to { opacity: 0; } }
+.kate-popup {
+  position: absolute; left: 50%; top: calc(14vh + env(safe-area-inset-top, 0px));
+  width: min(86vw, 420px); padding: 0; border: 0; background: none;
+  transform: translate(-50%, -130%) rotate(-4deg); opacity: 0;
+  animation: kate-entra 0.65s cubic-bezier(.2, 1.4, .4, 1) forwards;
+  filter: drop-shadow(0 10px 18px rgba(40, 30, 15, 0.35));
+}
+.kate-popup img { display: block; width: 100%; height: auto; }
+.kate-velo.saliendo .kate-popup { animation: kate-sale 0.4s ease-in forwards; }
+@keyframes kate-entra { to { transform: translate(-50%, 0) rotate(0deg); opacity: 1; } }
+@keyframes kate-sale { from { transform: translate(-50%, 0); opacity: 1; } to { transform: translate(-50%, -130%) rotate(4deg); opacity: 0; } }
+@media (prefers-reduced-motion: reduce) {
+  .kate-velo, .kate-popup, .kate-velo.saliendo .kate-popup { animation-duration: 0.01s; }
+  .intro-tocar > span { animation: none; }
 }
 @media (prefers-reduced-motion: reduce) {
   .intro { transition: none; }

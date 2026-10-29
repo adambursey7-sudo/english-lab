@@ -9,16 +9,27 @@ export default defineConfig(({ mode }) => ({
     react(),
     VitePWA({
       registerType: 'autoUpdate',
-      // La app entera (banco de ejercicios incluido y vídeo de la intro) se guarda al instalarla: funciona sin conexión.
-      workbox: { globPatterns: ['**/*.{js,css,html,svg,png,ico,woff2}', 'intro/*.mp4'] },
+      // La app entera (banco de ejercicios y viñetas de Kate incluidos) se guarda al instalarla: funciona sin conexión.
+      // El vídeo de la intro NO va en esa caché: Safari pide los vídeos a trozos (Range) y la caché de instalación solo
+      // sabe darlos enteros, así que en el iPhone fallaba o salía sin sonido. Va aparte, con soporte de trozos.
+      workbox: {
+        globPatterns: ['**/*.{js,css,html,svg,png,jpg,ico,woff2}'],
+        runtimeCaching: [
+          {
+            urlPattern: ({ url }) => url.pathname.endsWith('.mp4'),
+            handler: 'CacheFirst',
+            options: { cacheName: 'intro', rangeRequests: true, cacheableResponse: { statuses: [200] } },
+          },
+        ],
+      },
       manifest: {
         name: 'English Lab',
         short_name: 'English Lab',
         description: 'Exámenes de inglés tipo Cambridge y PAU para practicar y corregir en el móvil.',
         categories: ['education'],
         lang: 'es',
-        theme_color: '#1b2742',
-        background_color: '#f6f7f4',
+        theme_color: '#34502b',
+        background_color: '#f3eee4',
         display: 'standalone',
         icons: [
           { src: 'icon-192.png', sizes: '192x192', type: 'image/png', purpose: 'any' },
