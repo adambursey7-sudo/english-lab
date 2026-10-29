@@ -1,5 +1,5 @@
 /* Cuadernillo en PDF (estilo C «examen oficial»): blanco y negro, A4, sobrio. Todo bajo .imprimir para no tocar la app. */
-body:has(.imprimir) { background: #fff; color: #000; }
+body:has(.imprimir) { background: #fff; }
 .imprimir {
   --tinta: #000;
   --gris: #555;
@@ -11,7 +11,7 @@ body:has(.imprimir) { background: #fff; color: #000; }
   line-height: 1.4;
   color: var(--tinta);
   background: #fff;
-  min-height: 100%;
+  min-height: 100vh;
 }
 .imprimir p { margin: 0; }
 .imprimir h1, .imprimir h2, .imprimir h3, .imprimir h4 { font-family: Arial, Helvetica, sans-serif; text-wrap: balance; }
@@ -142,7 +142,7 @@ body:has(.imprimir) { background: #fff; color: #000; }
 .imprimir .transcripcion-impresa summary { font-weight: 700; cursor: pointer; }
 .imprimir .transcripcion-impresa p { margin: 3pt 0; }
 
-@page { size: A4; margin: 16mm 15mm 18mm; }
+/* El @page (A4) lo pone Imprimir.tsx en un <style> propio mientras la vista está montada. */
 @media print {
   .imprimir .no-imprimir { display: none !important; }
   .imprimir .pagina { max-width: none; margin: 0; padding: 0; }

@@ -33,6 +33,8 @@ export function Imprimir({ examen, numero, modo }: Props) {
   }
   return (
     <div className={`imprimir ${modo}`}>
+      {/* El tamaño de página solo se aplica mientras esta vista está montada: no afecta a imprimir otras pantallas. */}
+      <style>{'@page { size: A4; margin: 16mm 15mm 18mm; }'}</style>
       <Barra examen={examen} numero={numero} modo={modo} />
       {modo === 'cuadernillo' ? <CuadernilloAlumno c={cuadernillo} /> : <ClaveProfe c={cuadernillo} />}
     </div>
@@ -124,9 +126,8 @@ function PapelImpreso({ c, papel, indice, audio }: { c: Cuadernillo; papel: Pape
         <div className="papel-nombre">{c.examen === 'c1' ? `Paper ${indice + 1}` : 'PAU · Inglés'}</div>
         <h2>{papel.titulo}</h2>
         <div className="papel-datos">
-          {minutos(papel.minutos)}
+          {papel.destreza === 'listening' ? 'approximately ' : ''}{minutos(papel.minutos)}
           {papel.preguntas > 0 && ` · ${papel.preguntas} questions`}
-          {papel.destreza === 'listening' && ' · approximately'}
         </div>
       </header>
       {papel.destreza === 'listening' && (

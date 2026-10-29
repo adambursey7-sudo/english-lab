@@ -1,6 +1,8 @@
 import { BANCO } from '../banco';
 import { ORDEN_DESTREZAS, TIPOS_EVALUABLES, type Destreza, type Ejercicio, type Examen, type Item } from '../banco/tipos';
-import { alternativasDe, comunesDe, solucionDe } from './corregir';
+import { alternativasDe, comunesDe, letra, solucionDe } from './corregir';
+
+export { letra };
 
 /** Un «paper» del cuadernillo: una destreza entera con sus partes en orden. */
 export interface Papel {
@@ -77,15 +79,10 @@ export function claveDe(ejercicio: Ejercicio): LineaClave[] {
     }));
 }
 
-/** Respuesta como va en una clave impresa: la letra en las de elegir, la palabra en las de escribir. */
+/** Respuesta como va en una clave impresa: solo la letra en las de elegir; en el resto, la solución de la app. */
 function respuestaCorta(item: Item, comunes: string[]): string {
   if (item.tipo === 'opciones' || item.tipo === 'emparejar') return letra(item.correcta);
-  if (item.tipo === 'verdaderoFalso') return `${item.correcta ? 'TRUE' : 'FALSE'} — “${item.pruebas[0] ?? ''}”`;
   return solucionDe(item, comunes);
-}
-
-export function letra(indice: number): string {
-  return String.fromCharCode(65 + indice);
 }
 
 /** Partes del listening de un cuadernillo, para la página de audio del QR. */

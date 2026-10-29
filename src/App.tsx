@@ -37,7 +37,8 @@ export function App() {
     return () => window.removeEventListener('hashchange', alCambiar);
   }, []);
   // La intro (vídeo con música) sale cada vez que se abre la app, en el móvil y en el ordenador.
-  const [intro, setIntro] = useState(true);
+  // Si se entra por el cuadernillo o la página de audio (QR), al volver a la app no hay intro.
+  const [intro, setIntro] = useState(() => rutaDe(window.location.hash) === null);
   const paso = estado.pantalla === 'ejercicio' ? estado.i : -1;
 
   // Cada pantalla nueva empieza arriba del todo (si no, se hereda el scroll de la anterior).
