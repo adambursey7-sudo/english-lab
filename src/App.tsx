@@ -5,6 +5,9 @@ import { Inicio } from './pantallas/Inicio';
 import { PantallaEjercicio } from './pantallas/Ejercicio';
 import { Resultado } from './pantallas/Resultado';
 import { MisResultados } from './pantallas/MisResultados';
+import { Imprimir } from './pantallas/Imprimir';
+import { PaginaAudio } from './pantallas/PaginaAudio';
+import type { Examen } from './banco/tipos';
 import { Intro } from './componentes/Intro';
 
 type Estado =
@@ -13,8 +16,26 @@ type Estado =
   | { pantalla: 'ejercicio'; lista: Ejercicio[]; i: number; respuestas: Record<string, Respuestas> }
   | { pantalla: 'resultado'; lista: Ejercicio[]; respuestas: Record<string, Respuestas> };
 
+/** Rutas por hash que viven fuera del flujo normal: el cuadernillo imprimible y la página de audio del QR. */
+type Ruta = { tipo: 'imprimir'; examen: Examen; numero: number; modo: 'cuadernillo' | 'clave' } | { tipo: 'audio'; examen: Examen; numero: number };
+
+export function rutaDe(hash: string): Ruta | null {
+  const m = /^#\/(imprimir|audio)\/(c1|pau)\/(\d+)(\/clave)?\/?$/.exec(hash);
+  if (!m) return null;
+  const examen = m[2] as Examen;
+  const numero = Number(m[3]);
+  if (m[1] === 'audio') return { tipo: 'audio', examen, numero };
+  return { tipo: 'imprimir', examen, numero, modo: m[4] ? 'clave' : 'cuadernillo' };
+}
+
 export function App() {
   const [estado, setEstado] = useState<Estado>({ pantalla: 'inicio' });
+  const [ruta, setRuta] = useState<Ruta | null>(() => rutaDe(window.location.hash));
+  useEffect(() => {
+    const alCambiar = () => setRuta(rutaDe(window.location.hash));
+    window.addEventListener('hashchange', alCambiar);
+    return () => window.removeEventListener('hashchange', alCambiar);
+  }, []);
   // La intro (vídeo con música) sale cada vez que se abre la app, en el móvil y en el ordenador.
   const [intro, setIntro] = useState(true);
   const paso = estado.pantalla === 'ejercicio' ? estado.i : -1;
@@ -23,6 +44,9 @@ export function App() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [estado.pantalla, paso]);
+
+  if (ruta?.tipo === 'imprimir') return <Imprimir examen={ruta.examen} numero={ruta.numero} modo={ruta.modo} />;
+  if (ruta?.tipo === 'audio') return <PaginaAudio examen={ruta.examen} numero={ruta.numero} />;
 
   if (intro) {
     return <Intro onFin={() => setIntro(false)} />;

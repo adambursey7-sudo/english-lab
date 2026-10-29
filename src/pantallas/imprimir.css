@@ -1,0 +1,152 @@
+/* Cuadernillo en PDF (estilo C «examen oficial»): blanco y negro, A4, sobrio. Todo bajo .imprimir para no tocar la app. */
+body:has(.imprimir) { background: #fff; color: #000; }
+.imprimir {
+  --tinta: #000;
+  --gris: #555;
+  --linea: #000;
+  --linea-suave: #bbb;
+  --fondo-suave: #f2f2f2;
+  font-family: Arial, Helvetica, 'Liberation Sans', sans-serif;
+  font-size: 11pt;
+  line-height: 1.4;
+  color: var(--tinta);
+  background: #fff;
+  min-height: 100%;
+}
+.imprimir p { margin: 0; }
+.imprimir h1, .imprimir h2, .imprimir h3, .imprimir h4 { font-family: Arial, Helvetica, sans-serif; text-wrap: balance; }
+
+/* Barra de la pantalla (no se imprime) */
+.imprimir .barra-pdf {
+  position: sticky; top: 0; z-index: 5;
+  display: flex; flex-wrap: wrap; align-items: center; gap: 8px;
+  padding: 10px 16px; background: #1b2742; color: #fff;
+  box-shadow: 0 1px 4px rgba(0,0,0,.25);
+}
+.imprimir .barra-pdf .barra-titulo { flex: 1 1 200px; font-weight: 600; font-size: 14px; }
+.imprimir .barra-pdf .btn { width: auto; min-height: 36px; padding: 6px 12px; font-size: 14px; border-radius: 8px; text-decoration: none; }
+.imprimir .barra-pdf .btn.sec { background: transparent; color: #fff; border-color: rgba(255,255,255,.5); }
+.imprimir .barra-pdf .btn:not(.sec) { background: #fff; color: #1b2742; border-color: #fff; }
+
+/* Página: en pantalla parece un folio; en papel es el folio */
+.imprimir .pagina { max-width: 180mm; margin: 24px auto 48px; padding: 0 16px; }
+.imprimir section.papel, .imprimir section.portada { break-before: page; page-break-before: always; }
+.imprimir section.portada:first-child { break-before: auto; page-break-before: auto; }
+.imprimir article.parte { break-inside: auto; margin-top: 18pt; }
+.imprimir .item-impreso, .imprimir .seccion-impresa, .imprimir .comun-impresa, .imprimir .hoja-parte, .imprimir table tr { break-inside: avoid; page-break-inside: avoid; }
+
+/* Portada */
+.imprimir .portada { display: grid; gap: 16pt; min-height: 240mm; align-content: start; padding-top: 24pt; }
+.imprimir .portada-marca { font-size: 10pt; letter-spacing: .18em; text-transform: uppercase; color: var(--gris); }
+.imprimir .portada h1 { font-size: 26pt; line-height: 1.15; margin: 0; border-bottom: 3px solid var(--linea); padding-bottom: 10pt; }
+.imprimir .portada-numero { font-size: 16pt; font-weight: 700; }
+.imprimir .tabla { width: 100%; border-collapse: collapse; font-size: 10.5pt; }
+.imprimir .tabla th, .imprimir .tabla td { border: 1px solid var(--linea); padding: 5pt 7pt; text-align: left; vertical-align: top; }
+.imprimir .tabla th { background: var(--fondo-suave); font-weight: 700; }
+.imprimir .tabla tr.total td { font-weight: 700; }
+.imprimir .instrucciones-generales { border: 1.5px solid var(--linea); padding: 10pt 12pt; }
+.imprimir .instrucciones-generales h3 { margin: 0 0 6pt; font-size: 12pt; }
+.imprimir .instrucciones-generales ul { margin: 0; padding-left: 18pt; display: grid; gap: 3pt; }
+.imprimir .firma { display: grid; gap: 10pt; margin-top: 6pt; }
+.imprimir .firma div { display: flex; align-items: flex-end; gap: 10pt; font-weight: 700; }
+.imprimir .firma .linea { flex: 1; border-bottom: 1px solid var(--linea); height: 14pt; }
+.imprimir .firma .linea.corta { flex: 0 0 60mm; }
+.imprimir .portada-qr { display: flex; align-items: center; gap: 14pt; border: 1px dashed var(--linea-suave); padding: 10pt; margin-top: auto; }
+.imprimir .portada-qr b { display: block; font-size: 12pt; margin-bottom: 2pt; }
+.imprimir .url { font-family: Consolas, 'Courier New', monospace; font-size: 9.5pt; word-break: break-all; }
+.imprimir .qr { display: block; image-rendering: pixelated; }
+
+/* Cabecera de cada paper */
+.imprimir .papel-cabecera { border-bottom: 2px solid var(--linea); padding-bottom: 6pt; margin-bottom: 8pt; display: grid; gap: 2pt; }
+.imprimir .papel-nombre { font-size: 10pt; letter-spacing: .14em; text-transform: uppercase; color: var(--gris); }
+.imprimir .papel-cabecera h2 { font-size: 20pt; margin: 0; }
+.imprimir .papel-datos { font-size: 10.5pt; color: var(--gris); }
+.imprimir .aviso-audio { display: flex; gap: 12pt; align-items: center; border: 1.5px solid var(--linea); padding: 8pt 10pt; margin: 8pt 0; font-size: 10pt; }
+.imprimir .aviso-audio b { display: block; margin-bottom: 2pt; }
+.imprimir .nota-papel { font-size: 10pt; color: var(--gris); font-style: italic; margin: 6pt 0; }
+
+/* Partes */
+.imprimir .parte h3 { font-size: 14pt; margin: 0 0 4pt; border-bottom: 1px solid var(--linea); padding-bottom: 3pt; }
+.imprimir .parte-nombre { font-weight: 400; color: var(--gris); font-size: 11pt; }
+.imprimir .parte-instrucciones { font-size: 10.5pt; margin-bottom: 8pt; }
+.imprimir .texto-examen { font-size: 11pt; line-height: 1.55; margin: 8pt 0 10pt; padding: 8pt 10pt; border: 1px solid var(--linea-suave); }
+.imprimir .texto-examen .texto { display: grid; gap: 7pt; max-width: none; font-size: inherit; line-height: inherit; }
+.imprimir .texto-examen h3, .imprimir .texto-examen h4 { font-size: 13pt; border: none; margin: 0 0 2pt; padding: 0; }
+.imprimir .texto-examen .dialogo { display: grid; gap: 3pt; }
+.imprimir .texto-examen .hablante { font-weight: 700; }
+.imprimir .hueco-impreso { font-weight: 700; white-space: nowrap; }
+.imprimir .raiz-impresa { font-weight: 700; margin-left: 6pt; letter-spacing: .04em; }
+.imprimir .hueco-parrafo { display: block; margin: 6pt 0; border: 1.5px solid var(--linea); text-align: center; font-weight: 700; padding: 8pt; }
+.imprimir .seccion-impresa { display: grid; grid-template-columns: 22pt 1fr; gap: 8pt; padding: 6pt 0; border-top: 1px solid var(--linea-suave); }
+.imprimir .seccion-impresa:first-of-type { border-top: none; }
+.imprimir .seccion-impresa p { margin-bottom: 5pt; }
+.imprimir .seccion-letra { display: inline-grid; place-items: center; width: 20pt; height: 20pt; border: 1.5px solid var(--linea); font-weight: 700; flex: none; }
+.imprimir .seccion-titulo { display: block; margin-bottom: 3pt; }
+.imprimir .eyebrow-impreso { font-size: 9.5pt; letter-spacing: .1em; text-transform: uppercase; font-weight: 700; color: var(--gris); margin-bottom: 4pt; }
+.imprimir .comunes-impresas { margin: 8pt 0; display: grid; gap: 6pt; }
+.imprimir .comun-impresa { display: grid; grid-template-columns: 22pt 1fr; gap: 8pt; align-items: start; font-size: 10.5pt; }
+.imprimir .listas-impresas { display: grid; grid-template-columns: 1fr 1fr; gap: 12pt; margin: 8pt 0; }
+.imprimir .lista-letras { list-style: none; margin: 0; padding: 0; display: grid; gap: 2pt; font-size: 10.5pt; }
+.imprimir .letra-pequena { display: inline-block; width: 16pt; font-weight: 700; }
+
+/* Items */
+.imprimir .items-impresos { display: grid; gap: 7pt; }
+.imprimir .item-impreso { display: grid; grid-template-columns: 22pt 1fr; gap: 6pt; align-items: start; }
+.imprimir .item-impreso .n { font-weight: 700; }
+.imprimir .pregunta-impresa { margin-bottom: 3pt; }
+.imprimir .opciones-impresas { display: grid; gap: 2pt; }
+.imprimir .opciones-impresas.en-fila { grid-template-columns: repeat(4, auto); justify-content: start; gap: 2pt 16pt; }
+.imprimir .fila-impresa { display: flex; align-items: center; gap: 8pt; flex-wrap: wrap; }
+.imprimir .tarea-impresa { font-size: 9.5pt; font-weight: 700; color: var(--gris); }
+.imprimir .cajita { display: inline-block; width: 22pt; height: 16pt; border: 1.5px solid var(--linea); vertical-align: middle; margin-left: auto; }
+.imprimir .vf-impreso .cajita { margin: 0 4pt 0 0; }
+.imprimir .linea-respuesta { display: inline-block; min-width: 110pt; border-bottom: 1px solid var(--linea); height: 12pt; vertical-align: baseline; margin: 0 3pt; }
+.imprimir .linea-respuesta.larga { min-width: 160pt; }
+.imprimir .lineas-respuesta { margin-top: 4pt; background: repeating-linear-gradient(to bottom, transparent 0, transparent 19pt, var(--linea-suave) 19pt, var(--linea-suave) 20pt); }
+.imprimir .lineas-respuesta.una { height: 20pt; }
+.imprimir .lineas-respuesta.dos { height: 40pt; }
+.imprimir .lineas-respuesta.varias { height: 120pt; }
+.imprimir .lineas-respuesta.muchas { height: 300pt; }
+.imprimir .transformacion-impresa p { margin-bottom: 2pt; }
+.imprimir .clave-impresa { font-weight: 700; letter-spacing: .06em; }
+.imprimir .pequena { font-size: 9.5pt; color: var(--gris); }
+.imprimir .enunciado-impreso { border-left: 2px solid var(--linea); padding: 4pt 8pt; margin: 4pt 0 6pt; display: grid; gap: 4pt; }
+.imprimir .redaccion-impresa { margin-top: 6pt; }
+.imprimir .interlocutor-impreso { margin-bottom: 4pt; }
+.imprimir .preguntas-impresas { margin: 0 0 4pt; padding-left: 16pt; }
+.imprimir .imagenes-impresas { display: grid; gap: 6pt; margin: 4pt 0; }
+.imprimir .imagen-impresa { display: grid; grid-template-columns: 22pt 1fr; gap: 8pt; align-items: start; border: 1px dashed var(--linea-suave); padding: 6pt; font-size: 10pt; }
+.imprimir .hoja-ideas-impresa { border: 1.5px solid var(--linea); padding: 8pt; margin: 6pt 0; text-align: center; }
+.imprimir .hoja-ideas-impresa .central { font-weight: 700; font-size: 12pt; margin-bottom: 6pt; }
+.imprimir .hoja-ideas-impresa .ideas { display: flex; flex-wrap: wrap; justify-content: center; gap: 6pt; }
+.imprimir .hoja-ideas-impresa .ideas span { border: 1px solid var(--linea); border-radius: 999px; padding: 2pt 8pt; font-size: 10pt; }
+
+/* Hoja de respuestas */
+.imprimir .hoja-papel { margin-top: 12pt; }
+.imprimir .hoja-papel h3 { font-size: 13pt; border-bottom: 1px solid var(--linea); margin: 0 0 6pt; }
+.imprimir .hoja-parte { margin-bottom: 8pt; }
+.imprimir .hoja-parte-nombre { font-weight: 700; font-size: 10pt; margin-bottom: 3pt; }
+.imprimir .casillas { display: grid; grid-template-columns: repeat(2, 1fr); gap: 4pt 14pt; }
+.imprimir .casillas.letras { grid-template-columns: repeat(5, 1fr); }
+.imprimir .casilla { display: grid; grid-template-columns: 18pt 1fr; align-items: center; gap: 4pt; }
+.imprimir .casilla .caja { display: block; height: 18pt; border: 1px solid var(--linea); }
+
+/* Clave */
+.imprimir .clave-portada { min-height: 0; }
+.imprimir .tabla.clave td.n { width: 18pt; font-weight: 700; }
+.imprimir .tabla.clave td.respuesta { width: 28%; font-weight: 700; }
+.imprimir .tabla.clave td.respuesta .pequena { font-weight: 400; }
+.imprimir .modelo-impreso { border: 1px solid var(--linea-suave); padding: 8pt 10pt; margin-top: 8pt; display: grid; gap: 5pt; font-size: 10.5pt; }
+.imprimir .criterios-impresos { margin: 2pt 0 0; padding-left: 16pt; font-size: 9.5pt; color: var(--gris); display: grid; gap: 2pt; }
+.imprimir .transcripcion-impresa { margin-top: 8pt; font-size: 10pt; }
+.imprimir .transcripcion-impresa summary { font-weight: 700; cursor: pointer; }
+.imprimir .transcripcion-impresa p { margin: 3pt 0; }
+
+@page { size: A4; margin: 16mm 15mm 18mm; }
+@media print {
+  .imprimir .no-imprimir { display: none !important; }
+  .imprimir .pagina { max-width: none; margin: 0; padding: 0; }
+  .imprimir .portada { min-height: 0; }
+  .imprimir .transcripcion-impresa { display: none; }
+  .imprimir a { color: inherit; text-decoration: none; }
+}

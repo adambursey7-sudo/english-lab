@@ -460,3 +460,7 @@ button:focus-visible, [role='button']:focus-visible { outline: 2px solid var(--t
 .contenido > *:nth-child(2) { animation-delay: 0.04s; }
 .contenido > *:nth-child(3) { animation-delay: 0.08s; }
 .contenido > *:nth-child(n + 4) { animation-delay: 0.12s; }
+
+/* Enlace al cuadernillo en PDF (bloque 5) */
+.examen-completo .enlace-pdf { grid-column: 1 / -1; font-size: 13.5px; color: var(--tono); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; min-height: 32px; display: flex; align-items: center; flex-wrap: wrap; gap: 4px; }
+.examen-completo .enlace-pdf .silencio { font-weight: 400; }

@@ -169,6 +169,14 @@ Telegram con el enlace de los bocetos y cómo probarlo en el iPhone. Parar el lo
   «Examen 1 / Examen 2 / Mezcla» en el inicio. Siguiente: 4c, 5 (PDF), 6c (C1 examen 3), 6e… El revisor de calidad
   (solo lectura) de cada examen nuevo queda pendiente para la siguiente vuelta.
 
+- Vuelta 13 (29/10): **4c hecho** (pantalla «Mis resultados», tablet a dos columnas, reproductor compacto, tamaño
+  táctil, foco y fundidos). **Bloque 4 cerrado.**
+- Vuelta 14 (29/10): **5a, 5b y 5c hechos** (cuadernillo en PDF con portada, papers, hoja de respuestas y clave aparte;
+  QR a `#/audio/<examen>/<n>`; `scripts/pdf.ps1`; enlace desde el inicio). **Bloque 5 cerrado.** GitHub: Adam ya tiene
+  sesión en `gh` (cuenta adambursey7-sudo) pero el repositorio aún no existe (Claude no puede crearlo: el permiso
+  automático lo bloquea); el QR apunta a `https://adambursey7-sudo.github.io/english-lab/` (`src/config.ts`).
+  Siguiente: 6 (revisor de calidad de los exámenes 2 y 3; C1 examen 3…), 7 y 8.
+
 ## Decisiones de Adam
 - 28/10 (vuelta 1): **estilo B «aula moderna» para la app y C «examen oficial» para el cuadernillo en PDF**, como
   recomendaba Claude. El bloque 4 aplica B; el bloque 5 aplica C al PDF. Ya no hay que esperar a la vuelta 8.
@@ -388,3 +396,31 @@ Telegram con el enlace de los bocetos y cómo probarlo en el iPhone. Parar el lo
   salida con fundido; vigilante de 3,5 s por si el vídeo no arranca. Precaché de la PWA ampliada al mp4.
 - Comprobado: typecheck y build limpios; en Chrome (390×844 y 1280×800) arranca con sonido y a los 8 s aparece el inicio.
 - Pendiente: probar en el iPhone (ahí seguramente arranque en silencio y haya que tocar «Oír»).
+
+### Vuelta 13 · 4c. Detalles: «Mis resultados», tablet, reproductor compacto
+- Hecho: `src/pantallas/MisResultados.tsx` (resumen por destreza con `resumenDestreza` y `bandaDe`, lista por días con
+  `agruparPorDia`, borrar con `borrarHistorial` nuevo en `historial.ts`); `App.tsx` con la pantalla `resultados`;
+  la frase de la semana del inicio es un botón. `Ejercicio.tsx`: `.cuerpo.con-texto` con `.lado-texto` y `.lado-items`
+  (dos columnas desde 820 px, texto pegado). CSS: reproductor compacto, tamaños táctiles, foco del color de la destreza,
+  animación `aparecer`.
+- Comprobado: typecheck limpio; 30 tests; capturas móvil (inicio, Mis resultados lleno y vacío, listening), tablet
+  apaisada y vertical.
+- Falló: nada.
+- Capturas: `docs/loop-mejorar/capturas/4c/`.
+- Cómo probarlo: haz un ejercicio, vuelve al inicio y toca «… esta semana · Mis resultados ›».
+
+### Vuelta 14 · 5a–5c. Cuadernillo en PDF con QR
+- Hecho: `src/config.ts` (`URL_PUBLICA`, `enlaceAudio`); `src/motor/cuadernillo.ts` (`montarCuadernillo`,
+  `numerosCuadernillo`, `claveDe`, `partesListening`) con `cuadernillo.test.ts`; `src/componentes/QR.tsx` (paquete
+  `qrcode`); `src/pantallas/Imprimir.tsx` + `imprimir.css` (portada, papers, partes con huecos y raíces, hoja de
+  respuestas, clave con explicaciones, modelos y transcripción; `@page` A4; barra de pantalla que no se imprime);
+  `src/pantallas/PaginaAudio.tsx`; rutas por hash en `App.tsx` (`rutaDe`); enlace «Cuadernillo en PDF» en el inicio;
+  `scripts/pdf.ps1` (Chrome `--print-to-pdf`, usa el servidor 5173/4173 o arranca la vista previa).
+- Comprobado: typecheck limpio; 35 tests; PDF del examen 1 de C1 (24 págs. + clave 13) y de la PAU (7 + 5) mirados
+  página a página (pypdfium2 → JPEG en `capturas/5/`); vista en PC y móvil; página de audio en móvil.
+- Falló: la barra de botones salía recortada por chocar con la clase `.barra` de la app (renombrada a `.barra-pdf`).
+- Mejorable: QR a una dirección aún no publicada; caja del Listening Part 4 al margen; hoja de respuestas con media
+  página en blanco; sin números de página.
+- Capturas: `docs/loop-mejorar/capturas/5/`.
+- Cómo probarlo: en el inicio, «Cuadernillo en PDF del examen 1» → «Descargar en PDF». En el PC:
+  `powershell -File scripts/pdf.ps1 -Examen c1 -Numero 1` deja los dos PDF en `salida/`.

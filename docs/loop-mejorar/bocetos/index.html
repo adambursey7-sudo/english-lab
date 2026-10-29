@@ -72,6 +72,7 @@ ul.hecho li::marker { color: var(--verde); }
 .direccion .pros b { font-weight: 600; }
 .nota { border-left: 3px solid var(--marcador-tinta); background: var(--marcador); color: var(--marcador-tinta); padding: 10px 14px; border-radius: 0 8px 8px 0; max-width: 70ch; }
 .nota b { font-weight: 600; }
+code { font-family: ui-monospace, Consolas, monospace; font-size: 0.9em; background: var(--papel); padding: 1px 5px; border-radius: 4px; }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
 </style>
 
@@ -80,6 +81,164 @@ ul.hecho li::marker { color: var(--verde); }
     <h1>Bocetos de English Lab</h1>
     <p>Diario del loop «English Lab mejor y más bonita» (28/10/2026). Cada vuelta deja aquí sus capturas, lo hecho y lo mejorable con chinchetas. La entrada más nueva va arriba.</p>
   </header>
+
+  <!-- VUELTA 14 -->
+  <section class="boceto" id="vuelta-14">
+    <div class="cabeza">
+      <h2>Vuelta 14 · El examen entero en PDF, con QR para el audio</h2>
+      <span class="sello">29/10 · Bloque 5, estilo C «examen oficial»</span>
+    </div>
+    <p>Desde el inicio, debajo de «Examen 1 / Examen 2», sale el enlace «Cuadernillo en PDF del examen N». Abre una vista en blanco y negro, A4, que parece un examen de verdad: portada con la tabla de papers y tiempos, instrucciones, nombre y fecha y un código QR que lleva a la página de audio del listening; después cada paper con sus partes numeradas como en el examen (huecos en el texto, raíces en mayúsculas, cajas para las letras, líneas para escribir), y al final la hoja de respuestas. La clave de respuestas es otro PDF aparte, con la explicación de cada pregunta, los modelos de writing y la guía del speaking. «Descargar en PDF» usa la impresión del navegador (en el iPhone, «Compartir → Guardar en Archivos»); en el PC, <code>scripts/pdf.ps1</code> los genera con Chrome sin abrir ventana.</p>
+
+    <div class="galeria">
+      <figure>
+        <div class="lienzo">
+          <img src="capturas/5/c1-examen-1-p01.jpg" alt="Portada del cuadernillo del examen 1 de C1">
+          <span class="pin" style="left:18%;top:84%">1</span>
+        </div>
+        <figcaption><b>Portada.</b> Tabla de los cuatro papers, instrucciones, nombre y fecha, y el QR del audio con el enlace escrito debajo.</figcaption>
+      </figure>
+      <figure>
+        <div class="lienzo"><img src="capturas/5/c1-examen-1-p02.jpg" alt="Part 1 y Part 2 del cuadernillo"></div>
+        <figcaption><b>Reading &amp; Use.</b> Texto con los huecos numerados y las opciones A–D en fila, como en el papel oficial.</figcaption>
+      </figure>
+      <figure>
+        <div class="lienzo"><img src="capturas/5/c1-examen-1-p08.jpg" alt="Part 7 con los huecos de párrafo"></div>
+        <figcaption><b>Part 7.</b> Los párrafos que faltan se ven como cajas numeradas dentro del texto.</figcaption>
+      </figure>
+      <figure>
+        <div class="lienzo">
+          <img src="capturas/5/c1-examen-1-p18.jpg" alt="Listening Part 3 y Part 4">
+          <span class="pin" style="left:92%;top:83%">2</span>
+        </div>
+        <figcaption><b>Listening.</b> Las dos tareas del Part 4 en dos columnas y una caja por hablante.</figcaption>
+      </figure>
+      <figure>
+        <div class="lienzo"><img src="capturas/5/c1-examen-1-p24.jpg" alt="Hoja de respuestas"></div>
+        <figcaption><b>Hoja de respuestas.</b> Una caja por pregunta, agrupadas por paper y parte.</figcaption>
+      </figure>
+      <figure>
+        <div class="lienzo"><img src="capturas/5/c1-examen-1-clave-p02.jpg" alt="Clave de respuestas con explicaciones"></div>
+        <figcaption><b>Clave para el profe.</b> Respuesta, otras aceptadas y por qué, pregunta a pregunta.</figcaption>
+      </figure>
+      <figure>
+        <div class="lienzo"><img src="capturas/5/pau-examen-1-p02.jpg" alt="PAU examen 1 en papel"></div>
+        <figcaption><b>PAU.</b> Texto, verdadero/falso con casillas y líneas para copiar la prueba.</figcaption>
+      </figure>
+      <figure>
+        <div class="lienzo"><img src="capturas/5/03-pagina-audio-movil.jpg" alt="Página de audio en el móvil"></div>
+        <figcaption><b>Lo que abre el QR.</b> Las cuatro grabaciones del examen, en orden, con el reproductor de la app.</figcaption>
+      </figure>
+      <figure>
+        <div class="lienzo"><img src="capturas/5/01-vista-impresion-pc.jpg" alt="Vista de impresión en el ordenador"></div>
+        <figcaption><b>En pantalla.</b> Barra con «Volver», «Ver la clave», «Audio del listening» y «Descargar en PDF».</figcaption>
+      </figure>
+    </div>
+
+    <div class="listas">
+      <div>
+        <h3><span class="etiqueta ok">Hecho</span></h3>
+        <ul class="hecho">
+          <li>Montaje del examen entero (papers, partes, preguntas que se corrigen solas, minutos oficiales) con tests; clave de respuestas a partir del banco.</li>
+          <li>Vista de impresión en A4 con portada, cada paper, hoja de respuestas y clave aparte; rutas <code>#/imprimir/&lt;examen&gt;/&lt;n&gt;</code> y <code>/clave</code>.</li>
+          <li>QR (en la portada y en la hoja del listening) a la página <code>#/audio/&lt;examen&gt;/&lt;n&gt;</code>, que reproduce las partes en orden. El enlace público está en <code>src/config.ts</code>.</li>
+          <li>Botón «Descargar en PDF» y script <code>scripts/pdf.ps1</code> (Chrome sin ventana) que deja los PDF en <code>salida/</code>. Probados el examen 1 de C1 (24 páginas + clave de 13) y de la PAU (7 + 5).</li>
+        </ul>
+      </div>
+      <div>
+        <h3><span class="etiqueta mal">Mejorable</span></h3>
+        <ol class="mejorable">
+          <li>El QR apunta a la dirección de GitHub Pages, que todavía no está publicada: hasta que Adam cree el repositorio, el código no abre nada (o cambiar la dirección en <code>src/config.ts</code> por la de Tailscale).</li>
+          <li>En el Part 4 del Listening, la caja de respuesta va al margen derecho; quedaría mejor junto al «Speaker».</li>
+          <li>La hoja de respuestas deja media página en blanco; podría caber en la misma página que el Speaking.</li>
+          <li>Sin números de página ni pie con el nombre del examen (Chrome no imprime cabeceras por defecto).</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- VUELTA 13 -->
+  <section class="boceto" id="vuelta-13">
+    <div class="cabeza">
+      <h2>Vuelta 13 · «Mis resultados», tablet a dos columnas y detalles</h2>
+      <span class="sello">29/10 · Diseño, bloque 4c</span>
+    </div>
+    <p>La frase de la cabecera («3 ejercicios hechos esta semana») ahora se toca y abre «Mis resultados»: un resumen por destreza (partes hechas, mejores notas y banda) y, debajo, todo lo hecho por días (Hoy, Ayer, fecha) con la nota de cada ejercicio. Se puede borrar el historial. En tablet y ordenador, el texto queda a la izquierda, fijo, y las preguntas a la derecha. El reproductor del Listening es más compacto y los botones pequeños ya cumplen el tamaño táctil mínimo; cada pantalla entra con un fundido corto.</p>
+
+    <div class="galeria">
+      <figure>
+        <div class="lienzo">
+          <img src="capturas/4c/01-inicio-con-enlace.jpg" alt="Inicio con el enlace a Mis resultados">
+          <span class="pin" style="left:60%;top:9%">1</span>
+        </div>
+        <figcaption><b>Desde el inicio.</b> La frase de la semana lleva a «Mis resultados ›».</figcaption>
+      </figure>
+      <figure>
+        <div class="lienzo">
+          <img src="capturas/4c/02-mis-resultados.jpg" alt="Mis resultados: resumen y lista por días">
+          <span class="pin" style="left:30%;top:22%">2</span>
+          <span class="pin" style="left:86%;top:78%">3</span>
+        </div>
+        <figcaption><b>Mis resultados.</b> Tarjetas por destreza con la banda estimada y la lista de todo lo hecho con su nota.</figcaption>
+      </figure>
+      <figure>
+        <div class="lienzo"><img src="capturas/4c/04-tablet-dos-columnas.jpg" alt="Ejercicio en tablet a dos columnas"></div>
+        <figcaption><b>Tablet.</b> Texto a la izquierda, preguntas a la derecha; el texto no se va al hacer scroll.</figcaption>
+      </figure>
+      <figure>
+        <div class="lienzo"><img src="capturas/4c/03-listening-reproductor-compacto.jpg" alt="Reproductor compacto"></div>
+        <figcaption><b>Reproductor compacto.</b> Botón más pequeño y una sola fila de tiempo y saltos.</figcaption>
+      </figure>
+      <figure>
+        <div class="lienzo"><img src="capturas/4c/07-mis-resultados-vacio.jpg" alt="Mis resultados sin nada hecho"></div>
+        <figcaption><b>Vacío.</b> Si no hay nada, lo dice y ofrece empezar.</figcaption>
+      </figure>
+    </div>
+
+    <div class="listas">
+      <div>
+        <h3><span class="etiqueta ok">Hecho</span></h3>
+        <ul class="hecho">
+          <li>Pantalla «Mis resultados» (resumen por destreza, lista por días, borrar historial) y enlace desde la cabecera del inicio.</li>
+          <li>Tablet y PC: ejercicio a dos columnas con el texto fijo; inicio a cuatro tarjetas.</li>
+          <li>Reproductor compacto; tamaño táctil mínimo en fichas y enlaces; foco visible del color de la destreza; fundido al entrar en cada pantalla (sin animación si el móvil lo pide).</li>
+        </ul>
+      </div>
+      <div>
+        <h3><span class="etiqueta mal">Mejorable</span></h3>
+        <ol class="mejorable">
+          <li>En «Mis resultados» no se puede tocar un ejercicio para repetirlo.</li>
+          <li>Las tarjetas de resumen no dicen cuándo fue la última vez.</li>
+          <li>Los writings enviados salen como «enviado» sin la fecha de corrección de Adam (modo profe, pendiente).</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- VUELTA 12 -->
+  <section class="boceto" id="vuelta-12">
+    <div class="cabeza">
+      <h2>Vuelta 12 · Examen 2 de C1 y exámenes 2 y 3 de la PAU</h2>
+      <span class="sello">28/10 noche · Bloque 6, a petición de Adam</span>
+    </div>
+    <p>Cuatro agentes escribieron a la vez, de cero, el examen 2 completo del C1 (las ocho partes de Reading &amp; Use, Writing, las cuatro de Listening con sus mp3 y Speaking) y dos exámenes nuevos de la PAU (un huerto escolar y los nadadores de invierno). El inicio ofrece «Examen 1 / Examen 2 / Mezcla». El banco pasa a 48 ejercicios y 259 preguntas, todos con test.</p>
+    <div class="listas">
+      <div>
+        <h3><span class="etiqueta ok">Hecho</span></h3>
+        <ul class="hecho">
+          <li>C1 examen 2 completo con audios; PAU exámenes 2 y 3; selector de examen en el inicio.</li>
+          <li>Tests nuevos: cada examen numerado trae solo sus partes, en orden.</li>
+        </ul>
+      </div>
+      <div>
+        <h3><span class="etiqueta mal">Mejorable</span></h3>
+        <ol class="mejorable">
+          <li>Falta pasar el revisor de calidad por los exámenes nuevos (una sola respuesta correcta, nivel real, erratas).</li>
+          <li>Extractos del Listening 2 Part 1 algo largos; Parts 2 y 3 del Reading 2 algo cortas.</li>
+        </ol>
+      </div>
+    </div>
+  </section>
 
   <!-- VUELTA 11 -->
   <section class="boceto" id="vuelta-11">

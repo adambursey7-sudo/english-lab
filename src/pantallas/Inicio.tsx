@@ -80,6 +80,11 @@ export function Inicio({ onEmpezar, onResultados }: { onEmpezar: (lista: Ejercic
                 <button className="ficha mini" aria-pressed={numero === 'azar'} onClick={() => setNumero('azar')}>Mezcla</button>
               </div>
             )}
+            {numero !== 'azar' && (
+              <a className="enlace-pdf" href={`#/imprimir/${examen}/${numero}`} target="_blank" rel="noopener">
+                Cuadernillo en PDF del examen {numero} <span className="silencio">(todas las partes, para hacerlo en papel)</span>
+              </a>
+            )}
           </section>
         )}
 
