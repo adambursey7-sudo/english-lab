@@ -570,3 +570,6 @@ button:focus-visible, [role='button']:focus-visible { outline: 2px solid var(--t
 .teclado .borrar { border: none; background: none; font-size: 24px; color: var(--ink2); }
 .centrado { text-align: center; }
 @media (prefers-reduced-motion: reduce) { .puntos.mal { animation: none; } }
+/* Fotos de perfil (29/10) */
+.avatar, .avatar-grande { overflow: visible; }
+.avatar img, .avatar-grande img { display: block; width: 100%; height: 100%; border-radius: 50%; object-fit: cover; }

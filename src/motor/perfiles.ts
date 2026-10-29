@@ -8,6 +8,8 @@ export interface Perfil {
   examen: Examen;
   /** sha256 de `english-lab:<id>:<PIN>`; el PIN de 4 cifras lo da Adam y se cambia con `node scripts/pin.mjs`. */
   pin: string;
+  /** Foto redonda en `public/img/` (opcional; si falta, sale la inicial). Adam decidió publicarlas (29/10). */
+  foto?: string;
 }
 
 /**
@@ -20,8 +22,8 @@ export const PERFILES: Perfil[] = [
   { id: 'adam', nombre: 'Adam', examen: 'c1', pin: '97712cda8fec868a35dfca9d7edaef7948d9ecd430625ec69a59c71ea66b8859' },
   { id: 'josito', nombre: 'Josito', examen: 'pau', pin: '0512b2cbc0140857bf9194d238549e0e0f2d5208781c7957e9d445d82e15e056' },
   { id: 'laurita', nombre: 'Laurita', examen: 'pau', pin: '50bbf9689ff85f26db13a397d9967c3394c574ea17eb51bf126d3bcc43390a6a' },
-  { id: 'maria', nombre: 'María', examen: 'pau', pin: '6ee6c012193a4670182be25642d37ef8ca709b079a5e3548c055d0e27e386ccd' },
-  { id: 'aroa', nombre: 'Aroa', examen: 'pau', pin: 'd82551e641f71547880c4964467bee263c237adf5575df046fd284598fdfc9e2' },
+  { id: 'maria', nombre: 'María', examen: 'pau', foto: 'perfil-maria.jpg', pin: '6ee6c012193a4670182be25642d37ef8ca709b079a5e3548c055d0e27e386ccd' },
+  { id: 'aroa', nombre: 'Aroa', examen: 'pau', foto: 'perfil-aroa.jpg', pin: 'd82551e641f71547880c4964467bee263c237adf5575df046fd284598fdfc9e2' },
 ];
 
 // Clave nueva desde que hay PIN: quien había elegido perfil antes tiene que meter su PIN una vez.
@@ -94,6 +96,11 @@ export function salirPerfil(): void {
 /** Perfiles de un examen, en el orden de la lista. */
 export function perfilesDe(examen: Examen): Perfil[] {
   return PERFILES.filter((p) => p.examen === examen);
+}
+
+/** Lo de dentro del círculo del alumno: su foto o, si no tiene, su inicial. */
+export function caraDe(perfil: Perfil): { foto?: string; letra: string } {
+  return { foto: perfil.foto && `${import.meta.env.BASE_URL}img/${perfil.foto}`, letra: inicial(perfil.nombre) };
 }
 
 export function inicial(nombre: string): string {

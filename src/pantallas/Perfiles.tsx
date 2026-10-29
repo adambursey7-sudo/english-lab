@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { NOMBRES_EXAMEN, type Examen } from '../banco/tipos';
-import { apuntarFallo, esperaPin, inicial, perfilesDe, pinCorrecto, type Perfil } from '../motor/perfiles';
+import { Cara } from '../componentes/Cara';
+import { apuntarFallo, esperaPin, perfilesDe, pinCorrecto, type Perfil } from '../motor/perfiles';
 
 const EXAMENES: Examen[] = ['c1', 'pau'];
 
@@ -37,7 +38,7 @@ export function Perfiles({ onEntrar, onInvitado }: Props) {
             <div className="perfiles">
               {perfilesDe(x).map((p) => (
                 <button key={p.id} type="button" className={`perfil tono-${x === 'pau' ? 'prueba' : 'reading-use'}`} onClick={() => setElegido(p)}>
-                  <span className="avatar" aria-hidden="true">{inicial(p.nombre)}</span>
+                  <span className="avatar" aria-hidden="true"><Cara perfil={p} /></span>
                   <b>{p.nombre}</b>
                   <span className="candado" aria-label="con PIN"><IconoCandado /></span>
                 </button>
@@ -109,7 +110,7 @@ function TecladoPin({ perfil, onBien, onVolver }: { perfil: Perfil; onBien: () =
       <header className="cabecera aula">
         <div className="cabecera-dentro">
           <div className="marca">
-            <span className={`avatar-grande tono-${tono}`} aria-hidden="true">{inicial(perfil.nombre)}</span>
+            <span className={`avatar-grande tono-${tono}`} aria-hidden="true"><Cara perfil={perfil} /></span>
             <div>
               <div className="sub">English Lab · {NOMBRES_EXAMEN[perfil.examen]}</div>
               <div className="titulo">Hola, {perfil.nombre}</div>

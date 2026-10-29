@@ -5,7 +5,8 @@ import { Instalar } from '../componentes/Instalar';
 import { minutosDe, montarExamen, montarExamenNumero, numerosExamen, practicarParte } from '../motor/examen';
 import { hechosEstaSemana, leerHistorial, mejorDeParte, paraMejorar, porcentaje, rachaDias, resumenDestreza } from '../motor/historial';
 import { cargarNotas, leerNotasGuardadas, mediaNotas, notasDe, sobreDiez, textoNota, type NotasProfe } from '../motor/notas';
-import { inicial, type Perfil } from '../motor/perfiles';
+import { Cara } from '../componentes/Cara';
+import type { Perfil } from '../motor/perfiles';
 
 const EXAMENES: Examen[] = ['c1', 'pau'];
 /** Papeles que se ofrecen por examen (la PAU solo tiene la prueba escrita). */
@@ -71,7 +72,7 @@ export function Inicio({ perfil, onEmpezar, onResultados, onCambiarPerfil }: Pro
           <div className="cabecera-dentro">
             <div className="marca">
               <span className={`avatar-grande tono-${perfil.examen === 'pau' ? 'prueba' : 'reading-use'}`} aria-hidden="true">
-                {inicial(perfil.nombre)}
+                <Cara perfil={perfil} />
                 <span className="insignia">★</span>
               </span>
               <div>
