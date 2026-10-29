@@ -1,7 +1,7 @@
 import { createHash } from 'node:crypto';
-import { describe, expect, it } from 'vitest';
+import { describe, expect, it, vi } from 'vitest';
 import { sha256 } from './sha256';
-import { PERFILES, examenesDe, huellaPin, pinCorrecto } from './perfiles';
+import { PERFILES, elegirPerfil, examenesDe, huellaPin, perfilActivo, pinCorrecto } from './perfiles';
 
 describe('perfiles con PIN', () => {
   it('sha256 coincide con el de Node (el que usa scripts/pin.mjs)', () => {
@@ -28,5 +28,33 @@ describe('qué examen ve cada uno', () => {
     expect(examenesDe(PERFILES.find((p) => p.id === 'maria'))).toEqual(['pau']);
     expect(examenesDe(PERFILES.find((p) => p.id === 'eduardo'))).toEqual(['c1']);
     expect(examenesDe(undefined)).toEqual(['c1', 'pau']);
+  });
+});
+
+describe('sesión', () => {
+  it('solo vale si lleva el PIN bueno; escribir el nombre a mano no abre', () => {
+    const datos = new Map<string, string>();
+    vi.stubGlobal('localStorage', {
+      getItem: (k: string) => datos.get(k) ?? null,
+      setItem: (k: string, v: string) => void datos.set(k, v),
+      removeItem: (k: string) => void datos.delete(k),
+    });
+    const perfil = PERFILES[0];
+    const pinReal = perfil.pin;
+    perfil.pin = huellaPin(perfil.id, '1234');
+    try {
+      elegirPerfil(perfil, '1234');
+      expect(perfilActivo()).toBe(perfil);
+      datos.set('english-lab.sesion', perfil.id);
+      expect(perfilActivo()).toBeUndefined();
+      datos.set('english-lab.sesion', `${perfil.id}:9999`);
+      expect(perfilActivo()).toBeUndefined();
+      datos.set('english-lab.perfil', 'viejo');
+      perfilActivo();
+      expect(datos.has('english-lab.perfil')).toBe(false);
+    } finally {
+      perfil.pin = pinReal;
+      vi.unstubAllGlobals();
+    }
   });
 });

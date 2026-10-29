@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import type { Ejercicio, Respuestas } from './banco/tipos';
 import { apuntarVistos } from './motor/examen';
-import { elegirPerfil, perfilActivo, salirPerfil, type Perfil } from './motor/perfiles';
+import { elegirPerfil, examenesDe, perfilActivo, salirPerfil, type Perfil } from './motor/perfiles';
 import { Inicio } from './pantallas/Inicio';
 import { PantallaEjercicio } from './pantallas/Ejercicio';
 import { Resultado } from './pantallas/Resultado';
@@ -52,7 +52,16 @@ export function App() {
     window.scrollTo(0, 0);
   }, [estado.pantalla, paso, perfil, invitado]);
 
-  if (ruta?.tipo === 'imprimir') return <Imprimir examen={ruta.examen} numero={ruta.numero} modo={ruta.modo} />;
+  // Un alumno solo abre el cuadernillo de su examen (el audio del QR sigue abierto: se usa desde el papel).
+  // Si no es el suyo, se quita el enlace de la barra y se queda en su inicio.
+  const cuadernilloAjeno = ruta?.tipo === 'imprimir' && !examenesDe(perfil).includes(ruta.examen);
+  useEffect(() => {
+    if (!cuadernilloAjeno) return;
+    history.replaceState(null, '', window.location.pathname + window.location.search);
+    setRuta(null);
+  }, [cuadernilloAjeno]);
+
+  if (ruta?.tipo === 'imprimir' && !cuadernilloAjeno) return <Imprimir examen={ruta.examen} numero={ruta.numero} modo={ruta.modo} />;
   if (ruta?.tipo === 'audio') return <PaginaAudio examen={ruta.examen} numero={ruta.numero} />;
 
   if (intro) {
@@ -62,8 +71,8 @@ export function App() {
   if (!perfil && !invitado) {
     return (
       <Perfiles
-        onEntrar={(p) => {
-          elegirPerfil(p.id);
+        onEntrar={(p, pin) => {
+          elegirPerfil(p, pin);
           setPerfil(p);
           setEstado({ pantalla: 'inicio' });
         }}

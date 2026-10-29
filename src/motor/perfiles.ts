@@ -28,18 +28,24 @@ export const PERFILES: Perfil[] = [
   { id: 'aroa', nombre: 'Aroa', examen: 'pau', foto: 'perfil-aroa.jpg', pin: 'd82551e641f71547880c4964467bee263c237adf5575df046fd284598fdfc9e2' },
 ];
 
-// Clave nueva desde que hay PIN: quien había elegido perfil antes tiene que meter su PIN una vez.
+// La sesión guarda `<id>:<PIN>` y se vuelve a comprobar al abrir: con solo el id cualquiera podía escribirlo a mano
+// y entrar sin PIN. Las sesiones antiguas (solo el id) no pasan y piden el PIN una vez.
 const CLAVE = 'english-lab.sesion';
 const FALLOS = 'english-lab.fallos-pin';
+/** Claves de versiones anteriores que ya no se usan. */
+const VIEJAS = ['english-lab.perfil'];
 
 export function perfilDe(id: string | null | undefined): Perfil | undefined {
   return PERFILES.find((p) => p.id === id);
 }
 
-/** El alumno elegido en este móvil, o undefined si todavía no ha dicho quién es. */
+/** El alumno que entró con su PIN en este móvil, o undefined si no hay sesión válida. */
 export function perfilActivo(): Perfil | undefined {
   try {
-    return perfilDe(localStorage.getItem(CLAVE));
+    for (const k of VIEJAS) localStorage.removeItem(k);
+    const [id, pin] = (localStorage.getItem(CLAVE) ?? '').split(':');
+    const perfil = perfilDe(id);
+    return perfil && pin && pinCorrecto(perfil, pin) ? perfil : undefined;
   } catch {
     return undefined;
   }
@@ -78,9 +84,9 @@ function leerFallos(): { veces: number; ultimo: number } {
 }
 
 /** Entra con su perfil (el PIN ya comprobado) y se queda dentro en este móvil hasta que pulse «Salir». */
-export function elegirPerfil(id: string): void {
+export function elegirPerfil(perfil: Perfil, pin: string): void {
   try {
-    localStorage.setItem(CLAVE, id);
+    localStorage.setItem(CLAVE, `${perfil.id}:${pin}`);
     localStorage.removeItem(FALLOS);
   } catch {
     // Sin almacenamiento: se le volverá a preguntar la próxima vez.

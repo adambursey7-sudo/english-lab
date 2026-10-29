@@ -6,7 +6,7 @@ import { apuntarFallo, esperaPin, perfilesDe, pinCorrecto, type Perfil } from '.
 const EXAMENES: Examen[] = ['c1', 'pau'];
 
 interface Props {
-  onEntrar: (perfil: Perfil) => void;
+  onEntrar: (perfil: Perfil, pin: string) => void;
   onInvitado: () => void;
 }
 
@@ -14,7 +14,7 @@ interface Props {
 export function Perfiles({ onEntrar, onInvitado }: Props) {
   const [elegido, setElegido] = useState<Perfil>();
 
-  if (elegido) return <TecladoPin perfil={elegido} onBien={() => onEntrar(elegido)} onVolver={() => setElegido(undefined)} />;
+  if (elegido) return <TecladoPin perfil={elegido} onBien={(pin) => onEntrar(elegido, pin)} onVolver={() => setElegido(undefined)} />;
 
   return (
     <div className="app">
@@ -56,7 +56,7 @@ export function Perfiles({ onEntrar, onInvitado }: Props) {
   );
 }
 
-function TecladoPin({ perfil, onBien, onVolver }: { perfil: Perfil; onBien: () => void; onVolver: () => void }) {
+function TecladoPin({ perfil, onBien, onVolver }: { perfil: Perfil; onBien: (pin: string) => void; onVolver: () => void }) {
   const [pin, setPinVisible] = useState('');
   // El PIN de verdad va en una referencia: dos teclas seguidas antes de pintar no se pisan.
   const actual = useRef('');
@@ -81,7 +81,7 @@ function TecladoPin({ perfil, onBien, onVolver }: { perfil: Perfil; onBien: () =
     setPin(nuevo);
     if (nuevo.length < 4) return;
     if (pinCorrecto(perfil, nuevo)) {
-      onBien();
+      onBien(nuevo);
       return;
     }
     apuntarFallo();

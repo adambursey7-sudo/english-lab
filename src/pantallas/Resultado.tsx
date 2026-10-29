@@ -104,7 +104,8 @@ export function Resultado({ lista, respuestas, onRepetir, onInicio, onEmpezar }:
                     const conLetra = it.tipo === 'opciones' || it.tipo === 'emparejar';
                     const tuya = conLetra ? (ic.respuesta === '' ? '' : letra(Number(ic.respuesta))) : ic.respuesta;
                     const buena = it.tipo === 'opciones' || it.tipo === 'emparejar' ? letra(it.correcta) : ic.solucion;
-                    if (ic.correcto) return <span className="hueco ok"><span className="num">{n}</span>{buena}</span>;
+                    // Si acertó con otra respuesta aceptada («much» en vez de «everything»), se ve la suya.
+                    if (ic.correcto) return <span className="hueco ok"><span className="num">{n}</span>{conLetra ? buena : textoRespuesta(ic).trim()}</span>;
                     return (
                       <>
                         {tuya && <span className="hueco ko"><span className="num">{n}</span>{tuya}</span>}
