@@ -1,5 +1,6 @@
-import { ejerciciosDe } from '../banco';
+import { destrezasDe, ejerciciosDe, partesDe } from '../banco';
 import type { Destreza, Examen } from '../banco/tipos';
+import { perfilActivo } from './perfiles';
 
 /** Un ejercicio corregido en este móvil: cuántas acertó de cuántas se corrigen solas (0 de 0 en Writing y Speaking). */
 export interface Registro {
@@ -12,9 +13,14 @@ export interface Registro {
 const CLAVE = 'english-lab.historial';
 const MAX = 500;
 
-export function leerHistorial(): Registro[] {
+/** Cada alumno tiene su historial en el móvil; sin alumno elegido se usa la clave antigua. */
+function claveDe(perfilId: string | undefined): string {
+  return perfilId ? `${CLAVE}:${perfilId}` : CLAVE;
+}
+
+export function leerHistorial(perfilId: string | undefined = perfilActivo()?.id): Registro[] {
   try {
-    const crudo = localStorage.getItem(CLAVE);
+    const crudo = localStorage.getItem(claveDe(perfilId));
     const lista: unknown = crudo ? JSON.parse(crudo) : [];
     return Array.isArray(lista) ? lista.filter((r): r is Registro => typeof r === 'object' && r !== null && typeof (r as Registro).id === 'string') : [];
   } catch {
@@ -23,21 +29,21 @@ export function leerHistorial(): Registro[] {
 }
 
 /** Apunta los ejercicios recién corregidos (los más recientes al final). Sin almacenamiento, no pasa nada. */
-export function apuntarResultado(resultados: Omit<Registro, 'fecha'>[], ahora = new Date()): void {
+export function apuntarResultado(resultados: Omit<Registro, 'fecha'>[], ahora = new Date(), perfilId: string | undefined = perfilActivo()?.id): void {
   if (resultados.length === 0) return;
   try {
     const fecha = ahora.toISOString();
     const nuevos = resultados.map((r) => ({ ...r, fecha }));
-    localStorage.setItem(CLAVE, JSON.stringify([...leerHistorial(), ...nuevos].slice(-MAX)));
+    localStorage.setItem(claveDe(perfilId), JSON.stringify([...leerHistorial(perfilId), ...nuevos].slice(-MAX)));
   } catch {
     // Sin almacenamiento (modo privado): el inicio no enseñará progreso, nada más.
   }
 }
 
-/** Borra todo el historial de este móvil (lo pide el alumno desde «Mis resultados»). */
-export function borrarHistorial(): void {
+/** Borra todo el historial de este alumno en este móvil (lo pide desde «Mi progreso»). */
+export function borrarHistorial(perfilId: string | undefined = perfilActivo()?.id): void {
   try {
-    localStorage.removeItem(CLAVE);
+    localStorage.removeItem(claveDe(perfilId));
   } catch {
     // Sin almacenamiento no hay nada que borrar.
   }
@@ -80,4 +86,55 @@ export function resumenDestreza(historial: Registro[], examen: Examen, destreza:
 export function hechosEstaSemana(historial: Registro[], ahora = new Date()): number {
   const desde = ahora.getTime() - 7 * 24 * 3600 * 1000;
   return historial.filter((r) => Date.parse(r.fecha) >= desde).length;
+}
+
+/** Cómo va una parte que se corrige sola: floja (< 50 %), regular (50–69 %), bien (≥ 70 %) o sin hacer. */
+export type EstadoParte = 'floja' | 'regular' | 'bien' | 'sin-hacer';
+
+export interface ParteParaMejorar {
+  examen: Examen;
+  destreza: Destreza;
+  parte: number;
+  nombreParte: string;
+  estado: EstadoParte;
+  /** La mejor vez, si la hay. */
+  mejor?: Registro;
+  /** Veces que se ha hecho. */
+  veces: number;
+}
+
+export function estadoDe(p: number | undefined): EstadoParte {
+  if (p === undefined) return 'sin-hacer';
+  if (p >= 70) return 'bien';
+  if (p >= 50) return 'regular';
+  return 'floja';
+}
+
+/**
+ * Dónde hay que mejorar en un examen: las partes que se corrigen solas, de peor a mejor (primero las flojas, luego las
+ * regulares, luego las que faltan por hacer y al final las que ya van bien). Writing y Speaking no entran: esas las
+ * puntúa Adam y salen en «Notas de Adam».
+ */
+export function paraMejorar(historial: Registro[], examen: Examen): ParteParaMejorar[] {
+  const orden: Record<EstadoParte, number> = { floja: 0, regular: 1, 'sin-hacer': 2, bien: 3 };
+  const lista: ParteParaMejorar[] = [];
+  for (const destreza of destrezasDe(examen)) {
+    const ejercicios = ejerciciosDe(examen, destreza);
+    for (const p of partesDe(examen, destreza)) {
+      const deLaParte = ejercicios.filter((e) => e.parte === p.parte);
+      if (!deLaParte.some((e) => e.items.some((i) => i.tipo !== 'redaccion' && i.tipo !== 'hablar'))) continue;
+      const ids = new Set(deLaParte.map((e) => e.id));
+      const mejor = mejorDeParte(historial, examen, destreza, p.parte);
+      lista.push({
+        examen,
+        destreza,
+        parte: p.parte,
+        nombreParte: p.nombreParte,
+        estado: estadoDe(mejor ? porcentaje(mejor) : undefined),
+        mejor,
+        veces: historial.filter((r) => ids.has(r.id)).length,
+      });
+    }
+  }
+  return lista.sort((a, b) => orden[a.estado] - orden[b.estado] || porcentaje(a.mejor ?? { aciertos: 0, total: 0 }) - porcentaje(b.mejor ?? { aciertos: 0, total: 0 }) || a.destreza.localeCompare(b.destreza) || a.parte - b.parte);
 }

@@ -1,9 +1,11 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { destrezasDe, partesDe } from '../banco';
 import { NOMBRES_DESTREZA, NOMBRES_EXAMEN, etiquetaParte, type Destreza, type Ejercicio, type Examen } from '../banco/tipos';
 import { Instalar } from '../componentes/Instalar';
 import { minutosDe, montarExamen, montarExamenNumero, numerosExamen, practicarParte } from '../motor/examen';
 import { hechosEstaSemana, leerHistorial, mejorDeParte, porcentaje, resumenDestreza } from '../motor/historial';
+import { cargarNotas, leerNotasGuardadas, mediaNotas, notasDe, textoNota, type NotasProfe } from '../motor/notas';
+import type { Perfil } from '../motor/perfiles';
 
 const EXAMENES: Examen[] = ['c1', 'pau'];
 /** Papeles que se ofrecen por examen (la PAU solo tiene la prueba escrita). */
@@ -21,10 +23,18 @@ const LEMA: Record<Destreza, string> = {
   prueba: 'Texto, diálogo, situaciones y redacción',
 };
 
-export function Inicio({ onEmpezar, onResultados }: { onEmpezar: (lista: Ejercicio[]) => void; onResultados: () => void }) {
-  const [examen, setExamen] = useState<Examen>('c1');
-  const [destrezaElegida, setDestreza] = useState<Destreza>('reading-use');
-  const [historial] = useState(leerHistorial);
+interface Props {
+  perfil: Perfil;
+  onEmpezar: (lista: Ejercicio[]) => void;
+  onResultados: () => void;
+  onCambiarPerfil: () => void;
+}
+
+export function Inicio({ perfil, onEmpezar, onResultados, onCambiarPerfil }: Props) {
+  const [examen, setExamen] = useState<Examen>(perfil.examen);
+  const [destrezaElegida, setDestreza] = useState<Destreza>(DESTREZAS[perfil.examen][0]);
+  const [historial] = useState(() => leerHistorial(perfil.id));
+  const [notas, setNotas] = useState<NotasProfe>(leerNotasGuardadas);
   /** Qué examen completo: un número concreto o 'azar' (una parte de cada, al azar). */
   const [numeroElegido, setNumero] = useState<number | 'azar'>(1);
   // Al cambiar de examen, la destreza tiene que existir en él (la PAU solo tiene «prueba»).
@@ -35,6 +45,18 @@ export function Inicio({ onEmpezar, onResultados }: { onEmpezar: (lista: Ejercic
   const numero = numeroElegido !== 'azar' && !numeros.includes(numeroElegido) ? (numeros[0] ?? 'azar') : numeroElegido;
   const examenCompleto = numero === 'azar' ? montarExamen(examen, destreza) : montarExamenNumero(examen, destreza, numero);
   const semana = hechosEstaSemana(historial);
+  const misNotas = notasDe(notas, perfil.id);
+
+  // Las notas de Adam se bajan al abrir (si no hay red, quedan las de la última vez).
+  useEffect(() => {
+    let vivo = true;
+    cargarNotas().then((n) => {
+      if (vivo) setNotas(n);
+    });
+    return () => {
+      vivo = false;
+    };
+  }, []);
 
   return (
     <div className="app">
@@ -44,13 +66,16 @@ export function Inicio({ onEmpezar, onResultados }: { onEmpezar: (lista: Ejercic
             <img className="logo" src={`${import.meta.env.BASE_URL}img/logo.png`} alt="Aprende Inglés con Kate" width="60" height="70" />
             <div>
               <div className="sub">English Lab</div>
-              <div className="titulo">¿Qué practicamos hoy?</div>
+              <div className="titulo">Hola, {perfil.nombre}</div>
               <button type="button" className="racha" onClick={onResultados}>
                 {semana === 0 ? 'Nada hecho esta semana todavía' : `${semana} ${semana === 1 ? 'ejercicio hecho' : 'ejercicios hechos'} esta semana`}
-                <span className="racha-enlace">{historial.length === 0 ? '' : 'Mis resultados ›'}</span>
+                <span className="racha-enlace">{historial.length === 0 && misNotas.length === 0 ? '' : 'Mi progreso ›'}</span>
               </button>
             </div>
           </div>
+          <button type="button" className="btn chico sec claro cambiar-perfil mini" onClick={onCambiarPerfil} aria-label={`Cambiar de alumno (ahora ${perfil.nombre})`}>
+            Cambiar
+          </button>
         </div>
       </header>
 
@@ -94,6 +119,7 @@ export function Inicio({ onEmpezar, onResultados }: { onEmpezar: (lista: Ejercic
             {DESTREZAS[examen].map((d) => {
               const r = resumenDestreza(historial, examen, d);
               const hay = disponibles.includes(d);
+              const deAdam = mediaNotas(misNotas.filter((n) => n.examen === examen && n.destreza === d));
               return (
                 <button key={d} className={`ficha destreza tono-${d}`} aria-pressed={destreza === d} disabled={!hay} onClick={() => setDestreza(d)}>
                   <span className="icono" aria-hidden="true"><IconoDestreza destreza={d} /></span>
@@ -104,7 +130,8 @@ export function Inicio({ onEmpezar, onResultados }: { onEmpezar: (lista: Ejercic
                       <span className="progreso" aria-hidden="true"><span style={{ width: `${r.partes === 0 ? 0 : (r.hechas / r.partes) * 100}%` }} /></span>
                       <small className="dato">
                         {r.hechas === 0 ? `${r.partes} ${r.partes === 1 ? 'parte' : 'partes'} por hacer` : `${r.hechas} de ${r.partes} hechas`}
-                        {r.media !== null && ` · media ${r.media} %`}
+                        {r.media !== null && ` · media ${r.media} %`}
+                        {deAdam !== null && ` · Adam: ${textoNota(deAdam)}/10`}
                       </small>
                     </>
                   )}

@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { hechosEstaSemana, mejorDeParte, mejorNota, porcentaje, resumenDestreza, type Registro } from './historial';
+import { estadoDe, hechosEstaSemana, mejorDeParte, mejorNota, paraMejorar, porcentaje, resumenDestreza, type Registro } from './historial';
 import { ejerciciosDe } from '../banco';
 
 const c1 = ejerciciosDe('c1', 'reading-use');
@@ -38,5 +38,22 @@ describe('historial de resultados', () => {
   it('cuenta lo hecho en los últimos siete días', () => {
     expect(hechosEstaSemana(historial, new Date('2026-10-28T12:00:00.000Z'))).toBe(3);
     expect(hechosEstaSemana(historial, new Date('2026-11-10T12:00:00.000Z'))).toBe(0);
+  });
+});
+
+describe('para mejorar', () => {
+  it('ordena de peor a mejor y deja fuera writing y speaking', () => {
+    const lista = paraMejorar(historial, 'c1');
+    expect(lista.some((p) => p.destreza === 'writing' || p.destreza === 'speaking')).toBe(false);
+    // Nada flojo ni regular: primero lo que falta por hacer, al final lo que va bien (75 % antes que 100 %).
+    expect(lista[0].estado).toBe('sin-hacer');
+    const bien = lista.filter((p) => p.estado === 'bien');
+    expect(bien.map((p) => p.parte)).toEqual([1, 2]);
+    expect(bien[0].veces).toBe(2);
+    const floja = paraMejorar([{ id: part1.id, fecha: '2026-10-20T10:00:00.000Z', aciertos: 2, total: 8 }], 'c1');
+    expect(floja[0]).toMatchObject({ destreza: 'reading-use', parte: 1, estado: 'floja' });
+  });
+  it('estadoDe separa floja, regular y bien', () => {
+    expect([estadoDe(undefined), estadoDe(20), estadoDe(50), estadoDe(69), estadoDe(70)]).toEqual(['sin-hacer', 'floja', 'regular', 'regular', 'bien']);
   });
 });

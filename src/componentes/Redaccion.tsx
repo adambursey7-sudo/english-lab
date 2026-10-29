@@ -2,6 +2,7 @@ import { useState } from 'react';
 import type { Ejercicio, ItemRedaccion } from '../banco/tipos';
 import { palabrasRedaccion } from '../motor/corregir';
 import { avisoPalabras, bandaPalabras, compartir, textoParaCompartir } from '../motor/entregas';
+import { perfilActivo } from '../motor/perfiles';
 
 const NOMBRE_TIPO: Record<ItemRedaccion['tipoTexto'], string> = {
   essay: 'Essay',
@@ -121,7 +122,7 @@ export function ResultadoRedaccion({ ejercicio, item, texto }: PropsResultado) {
   const escrito = texto.trim() !== '';
 
   const enviar = async () => {
-    const que = await compartir(textoParaCompartir(ejercicio, item, texto), 'English Lab · redacción');
+    const que = await compartir(textoParaCompartir(ejercicio, item, texto, perfilActivo()?.nombre), 'English Lab · redacción');
     setAviso(que === 'compartido' ? 'Enviado.' : que === 'copiado' ? 'Texto copiado y WhatsApp abierto: pégalo en el chat de Adam.' : 'No se pudo compartir: copia el texto a mano.');
   };
 

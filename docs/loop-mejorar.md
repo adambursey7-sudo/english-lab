@@ -424,3 +424,15 @@ Telegram con el enlace de los bocetos y cómo probarlo en el iPhone. Parar el lo
 - Capturas: `docs/loop-mejorar/capturas/5/`.
 - Cómo probarlo: en el inicio, «Cuadernillo en PDF del examen 1» → «Descargar en PDF». En el PC:
   `powershell -File scripts/pdf.ps1 -Examen c1 -Numero 1` deja los dos PDF en `salida/`.
+
+### Extra (29/10, fuera del loop) · Música de la intro, perfiles y notas de Adam
+- Hecho: la intro sonaba rara porque mezclaba «Carefree» con el audio propio del vídeo de Gemini; ahora solo suena la
+  música (−16 LUFS, fundidos; las tres variantes quedan en `Escritorio\Intro English Lab`). Perfiles de alumno
+  (`perfiles.ts`, `Perfiles.tsx`: Eduardo, Gabriela, Adam → C1; Josito, Laurita → PAU) con historial por alumno,
+  «Mi progreso» con «Para mejorar» (`paraMejorar`) y «Notas de Adam» (`notas.ts` + `public/notas/notas.json`,
+  `scripts/nota.mjs`), nota de Adam en las tarjetas del inicio, nombre del alumno al compartir con Adam.
+- Comprobado: typecheck limpio; 42 tests; capturas móvil (quién eres, inicio con alumno y datos, Mi progreso con notas
+  de prueba, cambio a Josito).
+- Mejorable: el historial de cada alumno vive en su móvil (Adam no lo ve salvo que se lo manden); un botón «Enviar mi
+  progreso a Adam» sería lo siguiente. Las notas tardan ~1 min en verse (Pages).
+- Cómo probarlo: abre la app, elige tu nombre, haz un ejercicio y toca «Mi progreso ›».

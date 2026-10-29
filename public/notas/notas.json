@@ -1,0 +1,8 @@
+{
+  "_como": "Notas que pone Adam (speaking, writing...). Una lista por alumno; cada nota lleva fecha (AAAA-MM-DD), examen (c1 | pau), destreza (speaking | writing | listening | reading-use | prueba), nota, sobre (10 si falta), numero (examen 1, 2...), parte y comentario. Se añaden con: node scripts/nota.mjs eduardo speaking 7.5 \"Buena fluidez; cuida la pronunciación de -ed\" --examen 1 --parte 2. Después, commit y push a master: GitHub Pages lo publica en un minuto.",
+  "eduardo": [],
+  "gabriela": [],
+  "adam": [],
+  "josito": [],
+  "laurita": []
+}

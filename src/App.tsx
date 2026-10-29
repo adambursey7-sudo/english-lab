@@ -1,10 +1,12 @@
 import { useEffect, useState } from 'react';
 import type { Ejercicio, Respuestas } from './banco/tipos';
 import { apuntarVistos } from './motor/examen';
+import { elegirPerfil, perfilActivo, salirPerfil, type Perfil } from './motor/perfiles';
 import { Inicio } from './pantallas/Inicio';
 import { PantallaEjercicio } from './pantallas/Ejercicio';
 import { Resultado } from './pantallas/Resultado';
 import { MisResultados } from './pantallas/MisResultados';
+import { Perfiles } from './pantallas/Perfiles';
 import { Imprimir } from './pantallas/Imprimir';
 import { PaginaAudio } from './pantallas/PaginaAudio';
 import type { Examen } from './banco/tipos';
@@ -31,6 +33,8 @@ export function rutaDe(hash: string): Ruta | null {
 export function App() {
   const [estado, setEstado] = useState<Estado>({ pantalla: 'inicio' });
   const [ruta, setRuta] = useState<Ruta | null>(() => rutaDe(window.location.hash));
+  // Quién practica en este móvil (cada alumno tiene su progreso); si no ha dicho quién es, se le pregunta.
+  const [perfil, setPerfil] = useState<Perfil | undefined>(perfilActivo);
   useEffect(() => {
     const alCambiar = () => setRuta(rutaDe(window.location.hash));
     window.addEventListener('hashchange', alCambiar);
@@ -44,7 +48,7 @@ export function App() {
   // Cada pantalla nueva empieza arriba del todo (si no, se hereda el scroll de la anterior).
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, [estado.pantalla, paso]);
+  }, [estado.pantalla, paso, perfil]);
 
   if (ruta?.tipo === 'imprimir') return <Imprimir examen={ruta.examen} numero={ruta.numero} modo={ruta.modo} />;
   if (ruta?.tipo === 'audio') return <PaginaAudio examen={ruta.examen} numero={ruta.numero} />;
@@ -53,12 +57,30 @@ export function App() {
     return <Intro onFin={() => setIntro(false)} />;
   }
 
+  if (!perfil) {
+    return (
+      <Perfiles
+        onElegir={(p) => {
+          elegirPerfil(p.id);
+          setPerfil(p);
+          setEstado({ pantalla: 'inicio' });
+        }}
+      />
+    );
+  }
+
+  const cambiarPerfil = () => {
+    salirPerfil();
+    setPerfil(undefined);
+  };
+  const empezar = (lista: Ejercicio[]) => setEstado({ pantalla: 'ejercicio', lista, i: 0, respuestas: {} });
+
   if (estado.pantalla === 'inicio') {
-    return <Inicio onEmpezar={(lista) => setEstado({ pantalla: 'ejercicio', lista, i: 0, respuestas: {} })} onResultados={() => setEstado({ pantalla: 'resultados' })} />;
+    return <Inicio perfil={perfil} onEmpezar={empezar} onResultados={() => setEstado({ pantalla: 'resultados' })} onCambiarPerfil={cambiarPerfil} />;
   }
 
   if (estado.pantalla === 'resultados') {
-    return <MisResultados onInicio={() => setEstado({ pantalla: 'inicio' })} />;
+    return <MisResultados perfil={perfil} onInicio={() => setEstado({ pantalla: 'inicio' })} onEmpezar={empezar} />;
   }
 
   if (estado.pantalla === 'ejercicio') {
@@ -94,7 +116,7 @@ export function App() {
       respuestas={estado.respuestas}
       onRepetir={() => setEstado({ pantalla: 'ejercicio', lista: estado.lista, i: 0, respuestas: {} })}
       onInicio={() => setEstado({ pantalla: 'inicio' })}
-      onEmpezar={(lista) => (lista.length > 0 ? setEstado({ pantalla: 'ejercicio', lista, i: 0, respuestas: {} }) : setEstado({ pantalla: 'inicio' }))}
+      onEmpezar={(lista) => (lista.length > 0 ? empezar(lista) : setEstado({ pantalla: 'inicio' }))}
     />
   );
 }

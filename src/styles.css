@@ -464,3 +464,21 @@ button:focus-visible, [role='button']:focus-visible { outline: 2px solid var(--t
 /* Enlace al cuadernillo en PDF (bloque 5) */
 .examen-completo .enlace-pdf { grid-column: 1 / -1; font-size: 13.5px; color: var(--tono); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; min-height: 32px; display: flex; align-items: center; flex-wrap: wrap; gap: 4px; }
 .examen-completo .enlace-pdf .silencio { font-weight: 400; }
+
+/* Perfiles (29/10): quién practica, «Para mejorar» y las notas de Adam */
+.perfiles { display: grid; gap: 10px; }
+.perfil {
+  display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 14px; text-align: left;
+  border: 1px solid var(--line); border-radius: var(--radio); background: var(--paper2); padding: 12px 14px; width: 100%; min-height: 64px;
+}
+.perfil b { font-size: 17px; font-weight: 600; }
+.perfil .avatar { display: grid; place-items: center; width: 40px; height: 40px; border-radius: 50%; background: var(--tono-soft); color: var(--tono); font-family: var(--display); font-weight: 700; font-size: 19px; }
+.perfil .flecha { color: var(--ink2); font-size: 20px; }
+.perfil:active { border-color: var(--tono); }
+.cabecera.aula .cambiar-perfil { flex: none; align-self: flex-start; min-height: 34px; padding: 4px 12px; font-size: 14px; }
+.tarjeta.mejorar.floja { border-left: 4px solid var(--pen); }
+.tarjeta.mejorar.regular { border-left: 4px solid var(--marker); }
+.tarjeta.mejorar.sin-hacer { border-left: 4px solid var(--line); }
+.tarjeta.nota-profe { grid-template-rows: auto auto auto; }
+.tarjeta.nota-profe .comentario { grid-column: 1 / -1; grid-row: 3; margin: 6px 0 0; font-size: 14.5px; line-height: 1.45; padding: 8px 10px; border-radius: 8px; background: var(--paper); border-left: 3px solid var(--tono); }
+@media (min-width: 820px) { .perfiles { grid-template-columns: 1fr 1fr; } }

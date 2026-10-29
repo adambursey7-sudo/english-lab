@@ -6,6 +6,7 @@ import { TextoHuecos } from '../componentes/TextoHuecos';
 import { FRASES_VINETA, alternativasDe, bandaDe, comunesDe, corrigeEjercicio, letra, partesVerdaderoFalso, textoRespuesta, vinetaDe, type ItemCorregido } from '../motor/corregir';
 import { ResultadoRedaccion, ResultadoReplica } from '../componentes/Redaccion';
 import { compartir, textoEjercicioParaCompartir } from '../motor/entregas';
+import { perfilActivo } from '../motor/perfiles';
 import { montarExamen, practicarParte } from '../motor/examen';
 import { partesDe } from '../banco';
 
@@ -195,7 +196,7 @@ function EnviarDialogo({ ejercicio, respuestas }: { ejercicio: Ejercicio; respue
   const escritas = ejercicio.items.filter((i) => i.tipo === 'redaccion' && (respuestas[i.n] ?? '').trim() !== '').length;
   if (escritas === 0) return <p className="silencio pequeno">No has escrito ninguna réplica. Abajo tienes una respuesta modelo para cada hueco.</p>;
   const enviar = async () => {
-    const que = await compartir(textoEjercicioParaCompartir(ejercicio, respuestas), 'English Lab · diálogo');
+    const que = await compartir(textoEjercicioParaCompartir(ejercicio, respuestas, perfilActivo()?.nombre), 'English Lab · diálogo');
     setAviso(que === 'compartido' ? 'Enviado.' : que === 'copiado' ? 'Texto copiado y WhatsApp abierto: pégalo en el chat de Adam.' : 'No se pudo compartir: copia el texto a mano.');
   };
   return (
