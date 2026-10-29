@@ -34,6 +34,15 @@ export function apuntarResultado(resultados: Omit<Registro, 'fecha'>[], ahora = 
   }
 }
 
+/** Borra todo el historial de este móvil (lo pide el alumno desde «Mis resultados»). */
+export function borrarHistorial(): void {
+  try {
+    localStorage.removeItem(CLAVE);
+  } catch {
+    // Sin almacenamiento no hay nada que borrar.
+  }
+}
+
 export function porcentaje(r: Pick<Registro, 'aciertos' | 'total'>): number {
   return r.total === 0 ? 0 : Math.round((r.aciertos / r.total) * 100);
 }

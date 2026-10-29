@@ -415,3 +415,48 @@ input { font: inherit; color: inherit; }
 @media (prefers-reduced-motion: reduce) {
   .intro { transition: none; }
 }
+
+/* Vuelta 13 · detalles (4c): «Mis resultados», tablet a dos columnas, reproductor compacto, accesibilidad */
+.cabecera.aula .racha { background: none; border: none; padding: 0; text-align: left; display: flex; flex-wrap: wrap; gap: 2px 10px; min-height: 28px; align-items: center; }
+.cabecera.aula .racha .racha-enlace { color: var(--navy-ink); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+.btn.claro { border-color: rgba(255,255,255,.45); color: var(--navy-ink); }
+.contenido.resultados { gap: 22px; padding-top: 18px; }
+.ficha.destreza.resumen { min-height: 0; cursor: default; }
+.dia { display: grid; gap: 8px; }
+.dia + .dia { margin-top: 8px; }
+.tarjeta.quieta { cursor: default; border-left: 4px solid var(--tono, var(--line)); }
+.tarjeta .mejor.neutro { color: var(--ink2); background: var(--paper); border: 1px solid var(--line); font-size: 13px; }
+.hoja.vacio { text-align: center; padding: 28px 16px; }
+.hoja.vacio .btn { width: auto; justify-self: center; }
+.btn.peligro { color: var(--pen); border-color: var(--pen); }
+.cuerpo { display: grid; gap: 18px; }
+.lado-texto { display: grid; gap: 18px; }
+.lado-texto:empty { display: none; }
+@media (min-width: 820px) {
+  .contenido { max-width: 1040px; }
+  .cabecera-dentro { max-width: 1040px; }
+  .cuerpo.con-texto { grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); align-items: start; }
+  .cuerpo.con-texto .lado-texto { position: sticky; top: calc(66px + env(safe-area-inset-top, 0px)); max-height: calc(100vh - 90px); overflow: auto; padding-right: 4px; }
+  .cuerpo.con-texto .reproductor { grid-column: 1 / -1; }
+  .contenido.inicio, .contenido.resultados { max-width: 760px; }
+  .destrezas { grid-template-columns: repeat(4, 1fr); }
+  .destrezas.una { grid-template-columns: 1fr; }
+}
+/* Reproductor compacto: botón más pequeño y una sola fila de datos */
+.reproductor { grid-template-columns: 52px 1fr; gap: 12px; padding: 10px 12px; }
+.btn-play { width: 52px; height: 52px; font-size: 20px; }
+.reproductor-datos { gap: 4px; }
+.reproductor-datos .silencio.pequeno { font-size: 12.5px; line-height: 1.3; }
+.reproductor-saltos .btn.enlace { min-height: 32px; padding: 2px 6px; font-size: 14px; }
+/* Tamaño táctil mínimo y foco visible en lo que se toca */
+.ficha.mini { min-height: 36px; }
+.btn.enlace { min-height: 40px; }
+.hueco { min-height: 28px; }
+button:focus-visible, [role='button']:focus-visible { outline: 2px solid var(--tono, var(--ink)); outline-offset: 2px; }
+.cabecera.aula button:focus-visible { outline-color: var(--navy-ink); }
+/* Transiciones suaves al entrar en cada pantalla */
+@keyframes aparecer { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+.contenido > * { animation: aparecer 0.28s ease both; }
+.contenido > *:nth-child(2) { animation-delay: 0.04s; }
+.contenido > *:nth-child(3) { animation-delay: 0.08s; }
+.contenido > *:nth-child(n + 4) { animation-delay: 0.12s; }

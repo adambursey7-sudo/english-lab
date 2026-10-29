@@ -21,7 +21,7 @@ const LEMA: Record<Destreza, string> = {
   prueba: 'Texto, diálogo, situaciones y redacción',
 };
 
-export function Inicio({ onEmpezar }: { onEmpezar: (lista: Ejercicio[]) => void }) {
+export function Inicio({ onEmpezar, onResultados }: { onEmpezar: (lista: Ejercicio[]) => void; onResultados: () => void }) {
   const [examen, setExamen] = useState<Examen>('c1');
   const [destrezaElegida, setDestreza] = useState<Destreza>('reading-use');
   const [historial] = useState(leerHistorial);
@@ -45,7 +45,10 @@ export function Inicio({ onEmpezar }: { onEmpezar: (lista: Ejercicio[]) => void 
             <div>
               <div className="sub">English Lab</div>
               <div className="titulo">¿Qué practicamos hoy?</div>
-              <div className="racha">{semana === 0 ? 'Nada hecho esta semana todavía' : `${semana} ${semana === 1 ? 'ejercicio hecho' : 'ejercicios hechos'} esta semana`}</div>
+              <button type="button" className="racha" onClick={onResultados}>
+                {semana === 0 ? 'Nada hecho esta semana todavía' : `${semana} ${semana === 1 ? 'ejercicio hecho' : 'ejercicios hechos'} esta semana`}
+                <span className="racha-enlace">{historial.length === 0 ? '' : 'Mis resultados ›'}</span>
+              </button>
             </div>
           </div>
         </div>

@@ -67,6 +67,8 @@ export function PantallaEjercicio({ ejercicio, posicion, respuestas, onCambia, o
 
         {ejercicio.audio && <Reproductor key={ejercicio.id} audio={ejercicio.audio} />}
 
+        <div className={`cuerpo${ejercicio.texto || ejercicio.secciones ? ' con-texto' : ''}`}>
+        <div className="lado-texto">
         {ejercicio.texto && (
           <div className="hoja">
             <TextoHuecos
@@ -145,7 +147,8 @@ export function PantallaEjercicio({ ejercicio, posicion, respuestas, onCambia, o
           </div>
         )}
 
-        <div className="items">
+        </div>
+        <div className="items lado-items">
           {ejercicio.items.map((item) => (
             <div key={item.n} id={`item-${item.n}`} className={`item${activo === item.n ? ' activo' : ''}`} onFocus={() => setActivo(item.n)}>
               <ItemEntrada
@@ -161,6 +164,7 @@ export function PantallaEjercicio({ ejercicio, posicion, respuestas, onCambia, o
               />
             </div>
           ))}
+        </div>
         </div>
 
         <div className="pie">

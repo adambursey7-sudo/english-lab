@@ -4,10 +4,12 @@ import { apuntarVistos } from './motor/examen';
 import { Inicio } from './pantallas/Inicio';
 import { PantallaEjercicio } from './pantallas/Ejercicio';
 import { Resultado } from './pantallas/Resultado';
+import { MisResultados } from './pantallas/MisResultados';
 import { Intro } from './componentes/Intro';
 
 type Estado =
   | { pantalla: 'inicio' }
+  | { pantalla: 'resultados' }
   | { pantalla: 'ejercicio'; lista: Ejercicio[]; i: number; respuestas: Record<string, Respuestas> }
   | { pantalla: 'resultado'; lista: Ejercicio[]; respuestas: Record<string, Respuestas> };
 
@@ -27,7 +29,11 @@ export function App() {
   }
 
   if (estado.pantalla === 'inicio') {
-    return <Inicio onEmpezar={(lista) => setEstado({ pantalla: 'ejercicio', lista, i: 0, respuestas: {} })} />;
+    return <Inicio onEmpezar={(lista) => setEstado({ pantalla: 'ejercicio', lista, i: 0, respuestas: {} })} onResultados={() => setEstado({ pantalla: 'resultados' })} />;
+  }
+
+  if (estado.pantalla === 'resultados') {
+    return <MisResultados onInicio={() => setEstado({ pantalla: 'inicio' })} />;
   }
 
   if (estado.pantalla === 'ejercicio') {
