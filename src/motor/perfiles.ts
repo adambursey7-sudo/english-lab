@@ -22,8 +22,8 @@ export const PERFILES: Perfil[] = [
   { id: 'eduardo', nombre: 'Eduardo', examen: 'c1', pin: '3574df32b00dcf72020feb3f58962cafefc62ab4e458b86db6c456c1448982fa' },
   { id: 'gabriela', nombre: 'Gabriela', examen: 'c1', pin: '33e1b7047a2b091869f79833b2fea1554a2b3c07e252cae6ce483bc3ace7cd3e' },
   { id: 'adam', nombre: 'Adam', examen: 'c1', profe: true, pin: '97712cda8fec868a35dfca9d7edaef7948d9ecd430625ec69a59c71ea66b8859' },
-  { id: 'josito', nombre: 'Josito', examen: 'pau', pin: '0512b2cbc0140857bf9194d238549e0e0f2d5208781c7957e9d445d82e15e056' },
-  { id: 'laurita', nombre: 'Laurita', examen: 'pau', pin: '50bbf9689ff85f26db13a397d9967c3394c574ea17eb51bf126d3bcc43390a6a' },
+  { id: 'josito', nombre: 'Josito', examen: 'pau', foto: 'perfil-josito.jpg', pin: '0512b2cbc0140857bf9194d238549e0e0f2d5208781c7957e9d445d82e15e056' },
+  { id: 'laurita', nombre: 'Laurita', examen: 'pau', foto: 'perfil-laurita.jpg', pin: '50bbf9689ff85f26db13a397d9967c3394c574ea17eb51bf126d3bcc43390a6a' },
   { id: 'maria', nombre: 'María', examen: 'pau', foto: 'perfil-maria.jpg', pin: '6ee6c012193a4670182be25642d37ef8ca709b079a5e3548c055d0e27e386ccd' },
   { id: 'aroa', nombre: 'Aroa', examen: 'pau', foto: 'perfil-aroa.jpg', pin: 'd82551e641f71547880c4964467bee263c237adf5575df046fd284598fdfc9e2' },
 ];

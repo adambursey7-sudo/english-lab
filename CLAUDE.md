@@ -7,7 +7,7 @@ App web instalable (PWA, React 19 + TypeScript + Vite) de Adam para practicar ex
 - **Adam (forma B):** modo profe que habla con Jarvis en su PC (pendiente).
 - **Reparto:** enlace público en GitHub Pages (`npm run build:pages`, base `/english-lab/`) → WhatsApp → «Añadir a pantalla de inicio». Cuenta de GitHub de Adam: pendiente de iniciar sesión (`gh auth login`).
 - **Alcance ahora:** solo C1 y PAU; meta 200 ejercicios por tipo, empezando por unos 20 exámenes.
-- Ejercicios redactados de cero al estilo de cada examen. Sin marcas ni logos oficiales. Nombres de alumnos: solo los nombres de pila de los perfiles (`src/motor/perfiles.ts`, decisión de Adam del 29/10); nunca apellidos ni otros datos personales (el repo es público). Fotos de perfil: solo las que Adam pida expresamente (29/10: María y Aroa, `public/img/perfil-<id>.jpg`, 256 px, sin EXIF), campo `foto` del perfil.
+- Ejercicios redactados de cero al estilo de cada examen. Sin marcas ni logos oficiales. Nombres de alumnos: solo los nombres de pila de los perfiles (`src/motor/perfiles.ts`, decisión de Adam del 29/10); nunca apellidos ni otros datos personales (el repo es público). Fotos de perfil: solo las que Adam pida expresamente (29/10: María, Aroa, Josito y Laurita, `public/img/perfil-<id>.jpg`, 256 px, sin EXIF), campo `foto` del perfil.
 - Interfaz en español, ejercicios en inglés. Nombres de código en español.
 - Listening: guion con quién habla; audios hechos en el PC de Adam con edge-tts (voces variadas, incluida una joven) con las instrucciones y pausas del examen real, y la voz del móvil de respaldo. Los mp3 no se precachean en la PWA: se descargan al reproducir.
 
