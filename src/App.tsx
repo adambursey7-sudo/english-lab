@@ -33,8 +33,10 @@ export function rutaDe(hash: string): Ruta | null {
 export function App() {
   const [estado, setEstado] = useState<Estado>({ pantalla: 'inicio' });
   const [ruta, setRuta] = useState<Ruta | null>(() => rutaDe(window.location.hash));
-  // Quién practica en este móvil (cada alumno tiene su progreso); si no ha dicho quién es, se le pregunta.
+  // Quién practica en este móvil (cada alumno entra con su PIN y tiene su progreso); si no ha dicho quién es, se le
+  // pregunta. El modo invitado no se recuerda: la próxima vez vuelve a salir «¿Quién eres?».
   const [perfil, setPerfil] = useState<Perfil | undefined>(perfilActivo);
+  const [invitado, setInvitado] = useState(false);
   useEffect(() => {
     const alCambiar = () => setRuta(rutaDe(window.location.hash));
     window.addEventListener('hashchange', alCambiar);
@@ -48,7 +50,7 @@ export function App() {
   // Cada pantalla nueva empieza arriba del todo (si no, se hereda el scroll de la anterior).
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, [estado.pantalla, paso, perfil]);
+  }, [estado.pantalla, paso, perfil, invitado]);
 
   if (ruta?.tipo === 'imprimir') return <Imprimir examen={ruta.examen} numero={ruta.numero} modo={ruta.modo} />;
   if (ruta?.tipo === 'audio') return <PaginaAudio examen={ruta.examen} numero={ruta.numero} />;
@@ -57,12 +59,16 @@ export function App() {
     return <Intro onFin={() => setIntro(false)} />;
   }
 
-  if (!perfil) {
+  if (!perfil && !invitado) {
     return (
       <Perfiles
-        onElegir={(p) => {
+        onEntrar={(p) => {
           elegirPerfil(p.id);
           setPerfil(p);
+          setEstado({ pantalla: 'inicio' });
+        }}
+        onInvitado={() => {
+          setInvitado(true);
           setEstado({ pantalla: 'inicio' });
         }}
       />
@@ -72,14 +78,17 @@ export function App() {
   const cambiarPerfil = () => {
     salirPerfil();
     setPerfil(undefined);
+    setInvitado(false);
   };
   const empezar = (lista: Ejercicio[]) => setEstado({ pantalla: 'ejercicio', lista, i: 0, respuestas: {} });
 
-  if (estado.pantalla === 'inicio') {
+  // «Mi progreso» es solo de quien tiene cuenta.
+  if (estado.pantalla === 'inicio' || (estado.pantalla === 'resultados' && !perfil)) {
     return <Inicio perfil={perfil} onEmpezar={empezar} onResultados={() => setEstado({ pantalla: 'resultados' })} onCambiarPerfil={cambiarPerfil} />;
   }
 
   if (estado.pantalla === 'resultados') {
+    if (!perfil) return null;
     return <MisResultados perfil={perfil} onInicio={() => setEstado({ pantalla: 'inicio' })} onEmpezar={empezar} />;
   }
 

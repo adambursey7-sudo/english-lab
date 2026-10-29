@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { estadoDe, hechosEstaSemana, mejorDeParte, mejorNota, paraMejorar, porcentaje, resumenDestreza, type Registro } from './historial';
+import { estadoDe, hechosEstaSemana, mejorDeParte, mejorNota, paraMejorar, porcentaje, rachaDias, resumenDestreza, type Registro } from './historial';
 import { ejerciciosDe } from '../banco';
 
 const c1 = ejerciciosDe('c1', 'reading-use');
@@ -55,5 +55,20 @@ describe('para mejorar', () => {
   });
   it('estadoDe separa floja, regular y bien', () => {
     expect([estadoDe(undefined), estadoDe(20), estadoDe(50), estadoDe(69), estadoDe(70)]).toEqual(['sin-hacer', 'floja', 'regular', 'regular', 'bien']);
+  });
+});
+
+describe('rachaDias', () => {
+  const en = (dia: string) => ({ id: 'x', fecha: new Date(`${dia}T12:00:00`).toISOString(), aciertos: 1, total: 1 });
+  const hoy = new Date('2026-10-29T18:00:00');
+  it('cuenta los días seguidos hasta hoy', () => {
+    expect(rachaDias([en('2026-10-27'), en('2026-10-28'), en('2026-10-29'), en('2026-10-29')], hoy)).toBe(3);
+  });
+  it('si hoy no ha practicado, cuenta hasta ayer', () => {
+    expect(rachaDias([en('2026-10-27'), en('2026-10-28')], hoy)).toBe(2);
+  });
+  it('un hueco corta la racha', () => {
+    expect(rachaDias([en('2026-10-25'), en('2026-10-29')], hoy)).toBe(1);
+    expect(rachaDias([], hoy)).toBe(0);
   });
 });

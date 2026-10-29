@@ -3,9 +3,9 @@ import { destrezasDe, partesDe } from '../banco';
 import { NOMBRES_DESTREZA, NOMBRES_EXAMEN, etiquetaParte, type Destreza, type Ejercicio, type Examen } from '../banco/tipos';
 import { Instalar } from '../componentes/Instalar';
 import { minutosDe, montarExamen, montarExamenNumero, numerosExamen, practicarParte } from '../motor/examen';
-import { hechosEstaSemana, leerHistorial, mejorDeParte, porcentaje, resumenDestreza } from '../motor/historial';
-import { cargarNotas, leerNotasGuardadas, mediaNotas, notasDe, textoNota, type NotasProfe } from '../motor/notas';
-import type { Perfil } from '../motor/perfiles';
+import { hechosEstaSemana, leerHistorial, mejorDeParte, paraMejorar, porcentaje, rachaDias, resumenDestreza } from '../motor/historial';
+import { cargarNotas, leerNotasGuardadas, mediaNotas, notasDe, sobreDiez, textoNota, type NotasProfe } from '../motor/notas';
+import { inicial, type Perfil } from '../motor/perfiles';
 
 const EXAMENES: Examen[] = ['c1', 'pau'];
 /** Papeles que se ofrecen por examen (la PAU solo tiene la prueba escrita). */
@@ -24,16 +24,17 @@ const LEMA: Record<Destreza, string> = {
 };
 
 interface Props {
-  perfil: Perfil;
+  /** Sin perfil = modo invitado: se practica igual, pero no se guarda nada ni hay notas de Adam. */
+  perfil?: Perfil;
   onEmpezar: (lista: Ejercicio[]) => void;
   onResultados: () => void;
   onCambiarPerfil: () => void;
 }
 
 export function Inicio({ perfil, onEmpezar, onResultados, onCambiarPerfil }: Props) {
-  const [examen, setExamen] = useState<Examen>(perfil.examen);
-  const [destrezaElegida, setDestreza] = useState<Destreza>(DESTREZAS[perfil.examen][0]);
-  const [historial] = useState(() => leerHistorial(perfil.id));
+  const [examen, setExamen] = useState<Examen>(perfil?.examen ?? 'c1');
+  const [destrezaElegida, setDestreza] = useState<Destreza>(DESTREZAS[perfil?.examen ?? 'c1'][0]);
+  const [historial] = useState(() => (perfil ? leerHistorial(perfil.id) : []));
   const [notas, setNotas] = useState<NotasProfe>(leerNotasGuardadas);
   /** Qué examen completo: un número concreto o 'azar' (una parte de cada, al azar). */
   const [numeroElegido, setNumero] = useState<number | 'azar'>(1);
@@ -45,10 +46,15 @@ export function Inicio({ perfil, onEmpezar, onResultados, onCambiarPerfil }: Pro
   const numero = numeroElegido !== 'azar' && !numeros.includes(numeroElegido) ? (numeros[0] ?? 'azar') : numeroElegido;
   const examenCompleto = numero === 'azar' ? montarExamen(examen, destreza) : montarExamenNumero(examen, destreza, numero);
   const semana = hechosEstaSemana(historial);
-  const misNotas = notasDe(notas, perfil.id);
+  const misNotas = perfil ? notasDe(notas, perfil.id) : [];
+  const racha = rachaDias(historial);
+  // Lo primero de «Para mejorar» que no vaya ya bien: lo que toca hoy.
+  const toca = perfil ? paraMejorar(historial, examen).find((p) => p.estado !== 'bien') : undefined;
+  const ultimaNota = misNotas[0]; // vienen de la más nueva a la más vieja
 
   // Las notas de Adam se bajan al abrir (si no hay red, quedan las de la última vez).
   useEffect(() => {
+    if (!perfil) return;
     let vivo = true;
     cargarNotas().then((n) => {
       if (vivo) setNotas(n);
@@ -56,30 +62,74 @@ export function Inicio({ perfil, onEmpezar, onResultados, onCambiarPerfil }: Pro
     return () => {
       vivo = false;
     };
-  }, []);
+  }, [perfil]);
 
   return (
     <div className="app">
-      <header className="cabecera aula">
-        <div className="cabecera-dentro">
-          <div className="marca">
-            <img className="logo" src={`${import.meta.env.BASE_URL}img/logo.png`} alt="Aprende Inglés con Kate" width="60" height="70" />
-            <div>
-              <div className="sub">English Lab</div>
-              <div className="titulo">Hola, {perfil.nombre}</div>
-              <button type="button" className="racha" onClick={onResultados}>
-                {semana === 0 ? 'Nada hecho esta semana todavía' : `${semana} ${semana === 1 ? 'ejercicio hecho' : 'ejercicios hechos'} esta semana`}
-                <span className="racha-enlace">{historial.length === 0 && misNotas.length === 0 ? '' : 'Mi progreso ›'}</span>
-              </button>
+      {perfil ? (
+        <header className="cabecera aula con-cuenta">
+          <div className="cabecera-dentro">
+            <div className="marca">
+              <span className={`avatar-grande tono-${perfil.examen === 'pau' ? 'prueba' : 'reading-use'}`} aria-hidden="true">
+                {inicial(perfil.nombre)}
+                <span className="insignia">★</span>
+              </span>
+              <div>
+                <div className="sub">English Lab · {NOMBRES_EXAMEN[perfil.examen]}</div>
+                <div className="titulo">Hola, {perfil.nombre}</div>
+                <button type="button" className="racha" onClick={onResultados}>
+                  {racha >= 2 ? <span className="fuego">🔥 {racha} días seguidos</span> : null}
+                  {semana === 0 ? 'Nada hecho esta semana todavía' : `${semana} ${semana === 1 ? 'ejercicio' : 'ejercicios'} esta semana`}
+                  <span className="racha-enlace">Mi progreso ›</span>
+                </button>
+              </div>
             </div>
+            <button type="button" className="btn chico sec claro cambiar-perfil mini" onClick={onCambiarPerfil} aria-label={`Salir del perfil de ${perfil.nombre}`}>
+              Salir
+            </button>
           </div>
-          <button type="button" className="btn chico sec claro cambiar-perfil mini" onClick={onCambiarPerfil} aria-label={`Cambiar de alumno (ahora ${perfil.nombre})`}>
-            Cambiar
-          </button>
-        </div>
-      </header>
+        </header>
+      ) : (
+        <header className="cabecera aula invitado">
+          <div className="cabecera-dentro">
+            <div className="marca">
+              <img className="logo" src={`${import.meta.env.BASE_URL}img/logo.png`} alt="Aprende Inglés con Kate" width="60" height="70" />
+              <div>
+                <div className="sub">English Lab</div>
+                <div className="titulo">Modo invitado</div>
+                <div className="racha">Lo que hagas aquí no se guarda</div>
+              </div>
+            </div>
+            <button type="button" className="btn chico sec claro cambiar-perfil mini" onClick={onCambiarPerfil}>
+              Entrar
+            </button>
+          </div>
+        </header>
+      )}
 
       <main className="contenido inicio">
+        {perfil && (toca || ultimaNota) && (
+          <section className="panel-alumno">
+            {toca && (
+              <button type="button" className={`hoy-toca tono-${toca.destreza}`} onClick={() => onEmpezar(practicarParte(toca.examen, toca.destreza, toca.parte))}>
+                <small>Hoy te toca</small>
+                <b>{NOMBRES_DESTREZA[toca.destreza]} · {etiquetaParte(toca.examen, toca.parte)}</b>
+                <span className="silencio">
+                  {toca.nombreParte} · {toca.mejor ? `tu mejor: ${toca.mejor.aciertos}/${toca.mejor.total}` : 'todavía sin hacer'}
+                </span>
+                <span className="btn chico">Empezar</span>
+              </button>
+            )}
+            {ultimaNota && (
+              <button type="button" className={`nota-reciente tono-${ultimaNota.destreza}`} onClick={onResultados}>
+                <small>{misNotas.length === 1 ? 'Nota de Adam' : `Notas de Adam (${misNotas.length})`}</small>
+                <b>{NOMBRES_DESTREZA[ultimaNota.destreza]}: {textoNota(sobreDiez(ultimaNota))}/10</b>
+                <span className="flecha" aria-hidden="true">›</span>
+              </button>
+            )}
+          </section>
+        )}
+
         <div className="fichas" role="group" aria-label="Examen">
           {EXAMENES.map((e) => (
             <button key={e} className="ficha" aria-pressed={examen === e} onClick={() => setExamen(e)}>
@@ -125,7 +175,7 @@ export function Inicio({ perfil, onEmpezar, onResultados, onCambiarPerfil }: Pro
                   <span className="icono" aria-hidden="true"><IconoDestreza destreza={d} /></span>
                   <b>{NOMBRES_DESTREZA[d]}</b>
                   <small>{hay ? LEMA[d] : 'En preparación'}</small>
-                  {hay && (
+                  {hay && perfil && (
                     <>
                       <span className="progreso" aria-hidden="true"><span style={{ width: `${r.partes === 0 ? 0 : (r.hechas / r.partes) * 100}%` }} /></span>
                       <small className="dato">
@@ -156,7 +206,7 @@ export function Inicio({ perfil, onEmpezar, onResultados, onCambiarPerfil }: Pro
                   <button key={p.parte} className="tarjeta" onClick={() => onEmpezar(practicarParte(examen, destreza, p.parte))}>
                     <b>{etiquetaParte(examen, p.parte)} · {p.nombreParte}</b>
                     <small>{p.minutos} min · {p.cuantos} {p.cuantos === 1 ? 'ejercicio' : 'ejercicios'}</small>
-                    {mejor ? (
+                    {mejor && perfil ? (
                       <span className={`mejor ${porcentaje(mejor) >= 70 ? 'bien' : porcentaje(mejor) >= 50 ? 'regular' : 'mal'}`}>{mejor.aciertos}/{mejor.total}</span>
                     ) : (
                       <span className="flecha" aria-hidden="true">›</span>

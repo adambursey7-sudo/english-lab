@@ -28,9 +28,9 @@ export function leerHistorial(perfilId: string | undefined = perfilActivo()?.id)
   }
 }
 
-/** Apunta los ejercicios recién corregidos (los más recientes al final). Sin almacenamiento, no pasa nada. */
+/** Apunta los ejercicios recién corregidos (los más recientes al final). Sin almacenamiento o en modo invitado, no se guarda. */
 export function apuntarResultado(resultados: Omit<Registro, 'fecha'>[], ahora = new Date(), perfilId: string | undefined = perfilActivo()?.id): void {
-  if (resultados.length === 0) return;
+  if (resultados.length === 0 || !perfilId) return;
   try {
     const fecha = ahora.toISOString();
     const nuevos = resultados.map((r) => ({ ...r, fecha }));
@@ -80,6 +80,23 @@ export function resumenDestreza(historial: Registro[], examen: Examen, destreza:
   const hechas = partes.filter((p) => ejercicios.some((e) => e.parte === p && hechosIds.has(e.id)));
   const notas = partes.map((p) => mejorDeParte(historial, examen, destreza, p)).filter((r): r is Registro => r !== undefined).map(porcentaje);
   return { partes: partes.length, hechas: hechas.length, media: notas.length === 0 ? null : Math.round(notas.reduce((a, b) => a + b, 0) / notas.length) };
+}
+
+/** Días seguidos con algo hecho, contando hasta hoy (o hasta ayer, si hoy todavía no ha practicado). */
+export function rachaDias(historial: Registro[], ahora = new Date()): number {
+  const dias = new Set(historial.map((r) => diaLocal(new Date(r.fecha))));
+  const dia = new Date(ahora);
+  if (!dias.has(diaLocal(dia))) dia.setDate(dia.getDate() - 1);
+  let racha = 0;
+  while (dias.has(diaLocal(dia))) {
+    racha++;
+    dia.setDate(dia.getDate() - 1);
+  }
+  return racha;
+}
+
+function diaLocal(d: Date): string {
+  return `${d.getFullYear()}-${d.getMonth() + 1}-${d.getDate()}`;
 }
 
 /** Ejercicios hechos en los últimos siete días. */
