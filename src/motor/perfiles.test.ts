@@ -1,7 +1,7 @@
 import { createHash } from 'node:crypto';
 import { describe, expect, it } from 'vitest';
 import { sha256 } from './sha256';
-import { PERFILES, huellaPin, pinCorrecto } from './perfiles';
+import { PERFILES, examenesDe, huellaPin, pinCorrecto } from './perfiles';
 
 describe('perfiles con PIN', () => {
   it('sha256 coincide con el de Node (el que usa scripts/pin.mjs)', () => {
@@ -19,5 +19,14 @@ describe('perfiles con PIN', () => {
 
   it('todos los alumnos tienen PIN puesto', () => {
     for (const p of PERFILES) expect(p.pin, p.nombre).toMatch(/^[0-9a-f]{64}$/);
+  });
+});
+
+describe('qué examen ve cada uno', () => {
+  it('cada alumno solo el suyo; Adam y el invitado, los dos', () => {
+    for (const p of PERFILES) expect(examenesDe(p)).toEqual(p.profe ? ['c1', 'pau'] : [p.examen]);
+    expect(examenesDe(PERFILES.find((p) => p.id === 'maria'))).toEqual(['pau']);
+    expect(examenesDe(PERFILES.find((p) => p.id === 'eduardo'))).toEqual(['c1']);
+    expect(examenesDe(undefined)).toEqual(['c1', 'pau']);
   });
 });

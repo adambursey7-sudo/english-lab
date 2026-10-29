@@ -6,9 +6,8 @@ import { minutosDe, montarExamen, montarExamenNumero, numerosExamen, practicarPa
 import { hechosEstaSemana, leerHistorial, mejorDeParte, paraMejorar, porcentaje, rachaDias, resumenDestreza } from '../motor/historial';
 import { cargarNotas, leerNotasGuardadas, mediaNotas, notasDe, sobreDiez, textoNota, type NotasProfe } from '../motor/notas';
 import { Cara } from '../componentes/Cara';
-import type { Perfil } from '../motor/perfiles';
+import { examenesDe, type Perfil } from '../motor/perfiles';
 
-const EXAMENES: Examen[] = ['c1', 'pau'];
 /** Papeles que se ofrecen por examen (la PAU solo tiene la prueba escrita). */
 const DESTREZAS: Record<Examen, Destreza[]> = {
   c1: ['reading-use', 'writing', 'listening', 'speaking'],
@@ -33,6 +32,7 @@ interface Props {
 }
 
 export function Inicio({ perfil, onEmpezar, onResultados, onCambiarPerfil }: Props) {
+  const examenes = examenesDe(perfil);
   const [examen, setExamen] = useState<Examen>(perfil?.examen ?? 'c1');
   const [destrezaElegida, setDestreza] = useState<Destreza>(DESTREZAS[perfil?.examen ?? 'c1'][0]);
   const [historial] = useState(() => (perfil ? leerHistorial(perfil.id) : []));
@@ -131,13 +131,15 @@ export function Inicio({ perfil, onEmpezar, onResultados, onCambiarPerfil }: Pro
           </section>
         )}
 
-        <div className="fichas" role="group" aria-label="Examen">
-          {EXAMENES.map((e) => (
-            <button key={e} className="ficha" aria-pressed={examen === e} onClick={() => setExamen(e)}>
-              {NOMBRES_EXAMEN[e]}
-            </button>
-          ))}
-        </div>
+        {examenes.length > 1 && (
+          <div className="fichas" role="group" aria-label="Examen">
+            {examenes.map((e) => (
+              <button key={e} className="ficha" aria-pressed={examen === e} onClick={() => setExamen(e)}>
+                {NOMBRES_EXAMEN[e]}
+              </button>
+            ))}
+          </div>
+        )}
 
         {examenCompleto.length > 0 && (
           <section className={`examen-completo tono-${destreza}`}>

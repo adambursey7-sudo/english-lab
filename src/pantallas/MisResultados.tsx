@@ -5,7 +5,7 @@ import { bandaDe } from '../motor/corregir';
 import { practicarParte } from '../motor/examen';
 import { borrarHistorial, leerHistorial, paraMejorar, porcentaje, resumenDestreza, type ParteParaMejorar, type Registro } from '../motor/historial';
 import { cargarNotas, fechaNota, leerNotasGuardadas, mediaNotas, notasDe, sobreDiez, textoNota, tituloNota, type NotaProfe, type NotasProfe } from '../motor/notas';
-import type { Perfil } from '../motor/perfiles';
+import { examenesDe, type Perfil } from '../motor/perfiles';
 
 interface Props {
   perfil: Perfil;
@@ -35,7 +35,7 @@ export function MisResultados({ perfil, onInicio, onEmpezar }: Props) {
   const porId = new Map<string, Ejercicio>(BANCO.map((e) => [e.id, e]));
   const dias = agruparPorDia(historial);
   const misNotas = notasDe(notas, perfil.id);
-  const examenes = (['c1', 'pau'] as Examen[]).filter((x) => x === perfil.examen || historial.some((r) => porId.get(r.id)?.examen === x) || misNotas.some((n) => n.examen === x));
+  const examenes = examenesDe(perfil).filter((x) => x === perfil.examen || historial.some((r) => porId.get(r.id)?.examen === x) || misNotas.some((n) => n.examen === x));
   const mejorar = examenes.flatMap((x) => paraMejorar(historial, x));
   const pendientes = mejorar.filter((p) => p.estado !== 'bien');
   const vacio = historial.length === 0 && misNotas.length === 0;
