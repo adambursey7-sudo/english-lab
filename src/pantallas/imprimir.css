@@ -36,7 +36,7 @@ body:has(.imprimir) { background: #fff; }
 .imprimir .item-impreso, .imprimir .seccion-impresa, .imprimir .comun-impresa, .imprimir .hoja-parte, .imprimir table tr { break-inside: avoid; page-break-inside: avoid; }
 
 /* Portada */
-.imprimir .portada { display: grid; gap: 16pt; min-height: 240mm; align-content: start; padding-top: 24pt; }
+.imprimir .portada { display: grid; gap: 12pt; min-height: 205mm; align-content: start; padding-top: 8pt; }
 .imprimir .portada-marca { font-size: 10pt; letter-spacing: .18em; text-transform: uppercase; color: var(--gris); }
 .imprimir .portada h1 { font-size: 26pt; line-height: 1.15; margin: 0; border-bottom: 3px solid var(--linea); padding-bottom: 10pt; }
 .imprimir .portada-numero { font-size: 16pt; font-weight: 700; }

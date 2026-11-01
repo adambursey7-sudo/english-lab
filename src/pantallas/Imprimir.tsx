@@ -5,7 +5,7 @@ import type { Ejercicio, Item, ItemHablar, ItemRedaccion } from '../banco/tipos'
 import { NOMBRES_EXAMEN, TIPOS_EVALUABLES, etiquetaParte, type Examen } from '../banco/tipos';
 import { QR } from '../componentes/QR';
 import { TextoHuecos } from '../componentes/TextoHuecos';
-import { enlaceAudio } from '../config';
+import { enlaceAudio, enlaceAudioMezcla } from '../config';
 import { claveDe, letra, montarCuadernillo, partesListening, type Cuadernillo, type Papel } from '../motor/cuadernillo';
 import './imprimir.css';
 
@@ -71,7 +71,7 @@ function Barra({ examen, numero, modo }: Props) {
 
 export function CuadernilloAlumno({ c }: { c: Cuadernillo }) {
   const listening = partesListening(c);
-  const audio = enlaceAudio(c.examen, c.numero);
+  const audio = c.generado ? enlaceAudioMezcla(listening.map((e) => e.id)) : enlaceAudio(c.examen, c.numero);
   const total = c.papeles.reduce((n, p) => n + p.minutos, 0);
   return (
     <main className="pagina">
@@ -104,7 +104,7 @@ export function CuadernilloAlumno({ c }: { c: Cuadernillo }) {
             <li>Read the instructions for each part carefully. Answer all the questions unless the instructions say otherwise.</li>
             <li>Write your answers on the answer sheet at the end of the booklet. Use a pencil or a pen with blue or black ink.</li>
             <li>You must not use a dictionary.</li>
-            {listening.length > 0 && !c.generado && <li>For the Listening paper, scan the QR code to play the recordings. Each recording is played twice.</li>}
+            {listening.length > 0 && <li>For the Listening paper, scan the QR code to play the recordings. Each recording is played twice.</li>}
           </ul>
         </div>
         <div className="firma">
@@ -112,7 +112,7 @@ export function CuadernilloAlumno({ c }: { c: Cuadernillo }) {
           <div><span>Date</span>{c.fechaExamen ? <span className="dato">{c.fechaExamen}</span> : <span className="linea corta" />}</div>
           {c.grupo && <div><span>Class</span><span className="dato">{c.grupo}</span></div>}
         </div>
-        {listening.length > 0 && !c.generado && (
+        {listening.length > 0 && (
           <div className="portada-qr">
             <QR texto={audio} lado={150} alt="QR del audio del listening" />
             <div>
@@ -144,10 +144,7 @@ function PapelImpreso({ c, papel, indice, audio }: { c: Cuadernillo; papel: Pape
           {papel.preguntas > 0 && ` · ${papel.preguntas} questions`}
         </div>
       </header>
-      {papel.destreza === 'listening' && c.generado && (
-        <p className="nota-papel">Your teacher will play the recordings. Each recording is played twice.</p>
-      )}
-      {papel.destreza === 'listening' && !c.generado && (
+      {papel.destreza === 'listening' && (
         <div className="aviso-audio">
           <QR texto={audio} lado={96} alt="QR del audio del listening" />
           <div>

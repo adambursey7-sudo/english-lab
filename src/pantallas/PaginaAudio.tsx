@@ -1,22 +1,27 @@
-import { NOMBRES_EXAMEN, etiquetaParte, type Examen } from '../banco/tipos';
+import { BANCO } from '../banco';
+import { NOMBRES_EXAMEN, etiquetaParte, type Ejercicio, type Examen } from '../banco/tipos';
 import { Reproductor } from '../componentes/Reproductor';
 import { montarCuadernillo, partesListening } from '../motor/cuadernillo';
 
 interface Props {
-  examen: Examen;
-  numero: number;
+  examen?: Examen;
+  numero?: number;
+  /** Examen generado: ids de los ejercicios de listening (sin número de examen). */
+  ids?: string[];
 }
 
 /** La página que abre el QR del cuadernillo: las grabaciones del listening del examen N, en orden. */
-export function PaginaAudio({ examen, numero }: Props) {
-  const cuadernillo = montarCuadernillo(examen, numero);
-  const partes = cuadernillo ? partesListening(cuadernillo) : [];
+export function PaginaAudio({ examen, numero, ids }: Props) {
+  const cuadernillo = examen && numero !== undefined ? montarCuadernillo(examen, numero) : undefined;
+  const partes = ids
+    ? ids.map((id) => BANCO.find((e) => e.id === id && e.destreza === 'listening')).filter((e): e is Ejercicio => !!e).sort((a, b) => a.parte - b.parte)
+    : cuadernillo ? partesListening(cuadernillo) : [];
   return (
     <div className="app">
       <header className="cabecera aula compacta tono-listening">
         <div className="cabecera-dentro">
           <div style={{ minWidth: 0 }}>
-            <div className="sub">{NOMBRES_EXAMEN[examen]} · Examen {numero}</div>
+            <div className="sub">{examen && numero !== undefined ? `${NOMBRES_EXAMEN[examen]} · Examen ${numero}` : 'Examen preparado por tu profe'}</div>
             <div className="titulo">Audio del listening</div>
           </div>
           <a className="btn chico sec claro" href="#/">App</a>
@@ -26,7 +31,7 @@ export function PaginaAudio({ examen, numero }: Props) {
         {partes.length === 0 ? (
           <div className="hoja vacio">
             <h3>Este examen no tiene listening</h3>
-            <p className="silencio">Comprueba el número del examen en la portada del cuadernillo.</p>
+            <p className="silencio">Comprueba el código QR del cuadernillo.</p>
           </div>
         ) : (
           <>
