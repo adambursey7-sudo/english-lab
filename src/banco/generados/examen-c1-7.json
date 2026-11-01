@@ -1,0 +1,1948 @@
+[
+ {
+  "id": "c1-reading-use-3-x7",
+  "examen": "c1",
+  "destreza": "reading-use",
+  "parte": 3,
+  "nombreParte": "Word formation",
+  "titulo": "A novel about a translator",
+  "instrucciones": "For questions 17–24, read the text below. Use the word given in capitals at the end of some of the lines to form a word that fits in the gap in the same line.",
+  "minutos": 10,
+  "texto": "Few novels capture the quiet drama of language as {{17}} as Marta Veil's latest book. Its heroine, Ines, is a translator whose working life is spent in the {{18}} of other people's words, yet she has never managed to say anything of her own. Hired to render a famous poet's letters into English, she finds herself increasingly {{19}} with the writer's voice, to the point where she can no longer tell where his sentences end and hers begin.\n\nVeil is at her best when describing the small {{20}} of the job: the agonising over a single verb, the phrase that simply has no equivalent. The plot is, admittedly, rather {{21}}, and some readers may find the ending {{22}} abrupt. Yet the prose is so {{23}} precise that these flaws hardly matter. This is a thoughtful and {{24}} novel about what it means to be heard.",
+  "items": [
+   {
+    "n": 17,
+    "tipo": "palabra",
+    "raiz": "ELOQUENT",
+    "correctas": [
+     "eloquently"
+    ],
+    "explicacion": "An adverb is needed to modify the verb \"capture\": \"capture ... as eloquently as\". Add -ly to eloquent."
+   },
+   {
+    "n": 18,
+    "tipo": "palabra",
+    "raiz": "SHADE",
+    "correctas": [
+     "shadows"
+    ],
+    "explicacion": "Plural noun after \"the\" and before \"of other people's words\": \"in the shadows of\". The spelling changes from \"shade\" to \"shadow\" and a plural is needed."
+   },
+   {
+    "n": 19,
+    "tipo": "palabra",
+    "raiz": "OBSESS",
+    "correctas": [
+     "obsessed"
+    ],
+    "explicacion": "Adjective after \"increasingly\": \"obsessed with\". It describes how Ines feels."
+   },
+   {
+    "n": 20,
+    "tipo": "palabra",
+    "raiz": "TRIUMPH",
+    "correctas": [
+     "triumphs",
+     "triumphs and defeats"
+    ],
+    "explicacion": "A plural noun is needed after \"small\": \"the small triumphs of the job\"."
+   },
+   {
+    "n": 21,
+    "tipo": "palabra",
+    "raiz": "PREDICT",
+    "correctas": [
+     "predictable"
+    ],
+    "explicacion": "Adjective after \"rather\": \"rather predictable\", meaning easy to guess in advance. Add -able."
+   },
+   {
+    "n": 22,
+    "tipo": "palabra",
+    "raiz": "EXPECT",
+    "correctas": [
+     "unexpectedly"
+    ],
+    "explicacion": "Adverb with a negative prefix: un- + expect + -ed + -ly. It modifies the adjective \"abrupt\"."
+   },
+   {
+    "n": 23,
+    "tipo": "palabra",
+    "raiz": "FLAW",
+    "correctas": [
+     "flawlessly"
+    ],
+    "explicacion": "Adverb formed with the suffix -less and then -ly: \"flawlessly precise\". Note the double \"l\" in -lessly."
+   },
+   {
+    "n": 24,
+    "tipo": "palabra",
+    "raiz": "MOVE",
+    "correctas": [
+     "moving"
+    ],
+    "explicacion": "Adjective coordinated with \"thoughtful\": a \"moving novel\" affects the reader's emotions. Drop the final \"e\" before -ing."
+   }
+  ],
+  "examenNumero": 7
+ },
+ {
+  "id": "c1-reading-use-2-x7",
+  "examen": "c1",
+  "destreza": "reading-use",
+  "parte": 2,
+  "nombreParte": "Open cloze",
+  "titulo": "The village without engines",
+  "instrucciones": "For questions 9–16, read the text below and think of the word which best fits each gap. Use only one word in each gap.",
+  "minutos": 10,
+  "texto": "When the council of a small mountain village voted to ban cars from its centre, many residents feared the worst. Shopkeepers predicted that customers would stay away, {{9}} others worried about how elderly neighbours would manage the steep, cobbled streets. Five years on, hardly {{10}} of these fears has come true.\n\nIn fact, the opposite has happened. Visitors now arrive on foot or by bicycle, and cafés that were once empty are full {{11}} the morning until late at night. Not only {{12}} the air cleaner, but the noise has dropped so dramatically that residents claim to hear birdsong for the first time in decades. Deliveries, {{13}} are made by electric cart, arrive before nine each morning.\n\nOf course, the scheme has not been without its critics. Some argue that it is unfair to people {{14}} jobs require them to travel long distances. Others point out that, had the council consulted residents more thoroughly, it {{15}} have avoided much of the early resentment. Nevertheless, the mayor insists that she would not go back, even if she {{16}} offered the chance. \"Nobody who lives here wants the old days back,\" she says.",
+  "items": [
+   {
+    "n": 9,
+    "tipo": "palabra",
+    "correctas": [
+     "while",
+     "whilst"
+    ],
+    "explicacion": "\"While others worried\" contrasts two groups of people: shopkeepers and other residents. \"Whilst\" is a formal alternative."
+   },
+   {
+    "n": 10,
+    "tipo": "palabra",
+    "correctas": [
+     "any"
+    ],
+    "explicacion": "\"Hardly any of these fears\" = almost none. \"Hardly\" is followed by \"any\", not \"none\"."
+   },
+   {
+    "n": 11,
+    "tipo": "palabra",
+    "correctas": [
+     "from"
+    ],
+    "explicacion": "\"From the morning until late at night\" marks the start and end of a period of time."
+   },
+   {
+    "n": 12,
+    "tipo": "palabra",
+    "correctas": [
+     "is"
+    ],
+    "explicacion": "Inversion after \"Not only\": \"Not only is the air cleaner\" = the air is cleaner, and also something else."
+   },
+   {
+    "n": 13,
+    "tipo": "palabra",
+    "correctas": [
+     "which"
+    ],
+    "explicacion": "\"Deliveries, which are made by electric cart\" is a non-defining relative clause referring to deliveries."
+   },
+   {
+    "n": 14,
+    "tipo": "palabra",
+    "correctas": [
+     "whose"
+    ],
+    "explicacion": "\"People whose jobs require them\" uses the possessive relative pronoun to link people and their jobs."
+   },
+   {
+    "n": 15,
+    "tipo": "palabra",
+    "correctas": [
+     "could",
+     "might",
+     "would"
+    ],
+    "explicacion": "In a mixed conditional with \"had the council consulted\", the main clause needs a modal: \"it could / might / would have avoided\"."
+   },
+   {
+    "n": 16,
+    "tipo": "palabra",
+    "correctas": [
+     "were",
+     "was"
+    ],
+    "explicacion": "\"Even if she were offered the chance\" is a passive second conditional: past form of \"be\" + past participle."
+   }
+  ],
+  "examenNumero": 7
+ },
+ {
+  "id": "c1-reading-use-4-x7",
+  "examen": "c1",
+  "destreza": "reading-use",
+  "parte": 4,
+  "nombreParte": "Key word transformations",
+  "instrucciones": "For questions 25–30, complete the second sentence so that it has a similar meaning to the first sentence, using the word given. Do not change the word given. You must use between three and six words, including the word given.",
+  "minutos": 12,
+  "items": [
+   {
+    "n": 25,
+    "tipo": "transformacion",
+    "clave": "RARELY",
+    "frase": "My grandfather hardly ever told the same story twice in exactly the same way.",
+    "inicio": "",
+    "fin": "the same story twice in exactly the same way.",
+    "correctas": [
+     "Rarely did my grandfather tell",
+     "Rarely would my grandfather tell"
+    ],
+    "explicacion": "A negative adverb at the start of the sentence triggers inversion: \"Rarely did my grandfather tell\"."
+   },
+   {
+    "n": 26,
+    "tipo": "transformacion",
+    "clave": "REMEMBER",
+    "frase": "I can picture the moment she opened the letter, but I don't think I ever saw what it said.",
+    "inicio": "I",
+    "fin": "the letter, but I never saw what it said.",
+    "correctas": [
+     "remember her opening",
+     "remember her opening up"
+    ],
+    "explicacion": "\"Remember + object + -ing\" refers to recalling an event that happened: \"remember her opening\"."
+   },
+   {
+    "n": 27,
+    "tipo": "transformacion",
+    "clave": "REMINDS",
+    "frase": "Whenever I smell fresh bread, I think of my childhood kitchen.",
+    "inicio": "The smell of fresh bread",
+    "fin": "my childhood kitchen.",
+    "correctas": [
+     "always reminds me of",
+     "reminds me of",
+     "never fails to remind me of"
+    ],
+    "explicacion": "\"Remind someone of something\" = make them think of it: \"reminds me of\"."
+   },
+   {
+    "n": 28,
+    "tipo": "transformacion",
+    "clave": "HAD",
+    "frase": "It's a shame the author didn't check the facts before publishing her memoir.",
+    "inicio": "If the author",
+    "fin": "the facts before publishing her memoir, it might have been more accurate.",
+    "correctas": [
+     "had checked",
+     "had only checked"
+    ],
+    "explicacion": "Third conditional: \"If + past perfect\" (had checked) for an unreal past situation."
+   },
+   {
+    "n": 29,
+    "tipo": "transformacion",
+    "clave": "BELIEVED",
+    "frase": "People say that the old storyteller knew over a hundred folk tales.",
+    "inicio": "The old storyteller",
+    "fin": "over a hundred folk tales.",
+    "correctas": [
+     "is believed to have known",
+     "was believed to have known"
+    ],
+    "explicacion": "Impersonal passive with a perfect infinitive: \"is believed to have known\"."
+   },
+   {
+    "n": 30,
+    "tipo": "transformacion",
+    "clave": "MATTER",
+    "frase": "However vivid a memory seems, it can still be inaccurate.",
+    "inicio": "No",
+    "fin": "seems, it can still be inaccurate.",
+    "correctas": [
+     "matter how vivid a memory"
+    ],
+    "explicacion": "\"No matter how + adjective + subject + verb\" = however: \"matter how vivid a memory\"."
+   }
+  ],
+  "examenNumero": 7
+ },
+ {
+  "id": "c1-reading-use-5-x7",
+  "examen": "c1",
+  "destreza": "reading-use",
+  "parte": 5,
+  "nombreParte": "Multiple choice",
+  "titulo": "The basement archive",
+  "instrucciones": "You are going to read an article about a museum's project to digitise its collection. For questions 31–36, choose the answer (A, B, C or D) which you think fits best according to the text.",
+  "minutos": 15,
+  "texto": "When the Harbourside Museum announced that it would photograph and catalogue every one of its 240,000 objects, the reaction in the local press was one of polite enthusiasm. Nobody, it seemed, could object to the idea of making a collection available to anyone with an internet connection. What the announcement did not mention was that nobody on the staff had a clear idea of what the collection actually contained.\n\nThe truth emerged slowly. The museum's records, kept in a mixture of leather ledgers, index cards and three incompatible databases, had been compiled by generations of curators, each with their own habits. One described a ceramic bowl as 'blue, chipped'; another gave its dimensions to the nearest millimetre and a paragraph on its likely origin. Some objects appeared twice under different names. Others, including, memorably, a stuffed albatross, appeared nowhere at all. 'We thought we were running a photography project,' says Priya Anand, the project's manager. 'In fact, we were carrying out an excavation of our own building.'\n\nThe work began in the basement, where the least-visited material was stored on rows of metal shelving that had not been rearranged since the 1960s. Volunteers, most of them retired, took on the task of unwrapping each item, checking it against whatever record could be found, and placing it on a turntable under studio lights. Progress was slower than anyone had predicted. A single box of nineteenth-century fishing tackle took a fortnight, partly because no one could agree on what half the objects were for. Anand admits that for the first six months she privately doubted the project would ever be finished.\n\nYet the delays brought unexpected rewards. Because every object had to be handled, a surprising number of mistakes came to light. A set of wooden carvings, long labelled as nineteenth-century souvenirs, turned out to be considerably older, and a visiting specialist has since linked them to a workshop that was thought to have vanished without trace. A tin of what had been recorded as 'assorted buttons' contained a medal that had been reported lost in 1974. 'You can't discover things like that from a spreadsheet,' Anand says. 'You need someone to open the tin.'\n\nThe digital archive, which went online last spring, has not been without its critics. Some curators fear that high-quality images will persuade the public that there is no longer any reason to visit in person. Anand disagrees. She points out that visitor numbers have actually risen by a fifth since the launch, and suggests that the website works less as a substitute than as an advertisement. 'People look at a photograph of a bowl,' she says, 'and then they want to know how big it is, and what it feels like to stand next to it. A screen can't tell them that.'\n\nA more serious objection concerns the way the archive is organised. Because the museum had no consistent system of description, the team was obliged to invent one, and every choice involved a judgement. Is a harpoon a weapon, a tool or a piece of maritime history? The decision determines which visitors will stumble across it. Dr Laszlo Brandt, a historian who has used the archive extensively, welcomes the access but warns against treating the categories as neutral. 'Whoever designs the labels,' he says, 'is deciding in advance what questions we are going to ask.' Anand does not dispute this; she says the team has deliberately made the tagging system open to public suggestions, so that it can be revised.\n\nWhat strikes her most, looking back, is how little of the work was technical. The cameras were the easy part. The difficult part was deciding, again and again, what an object was, and who should be allowed to say so. She no longer thinks of the archive as a finished product, and says she would be suspicious of any museum that did. 'A collection that is completely catalogued,' she says, 'is probably a collection that nobody is looking at any more.'",
+  "items": [
+   {
+    "n": 31,
+    "tipo": "opciones",
+    "pregunta": "What does the writer suggest about the museum's announcement in the first paragraph?",
+    "opciones": [
+     "It was greeted with open scepticism by journalists.",
+     "It overlooked how little the staff knew about their own collection.",
+     "It was designed to attract funding from local businesses.",
+     "It underestimated the number of objects involved."
+    ],
+    "correcta": 1,
+    "explicacion": "«What the announcement did not mention was that nobody on the staff had a clear idea of what the collection actually contained» (B). La prensa reaccionó con «polite enthusiasm», no con escepticismo (A), y no se habla de fondos ni de que el número fuera erróneo."
+   },
+   {
+    "n": 32,
+    "tipo": "opciones",
+    "pregunta": "What does Priya Anand mean by 'an excavation of our own building'?",
+    "opciones": [
+     "They discovered that parts of the building were unsafe.",
+     "They had to dig out old equipment before work could begin.",
+     "They kept finding things about the collection they had not known.",
+     "They were rebuilding the museum's storage areas."
+    ],
+    "correcta": 2,
+    "explicacion": "La metáfora de la excavación se refiere a ir descubriendo lo que había (objetos duplicados, sin registrar, como el albatros), no a una obra literal (C). El resto toma «building» de forma literal."
+   },
+   {
+    "n": 33,
+    "tipo": "opciones",
+    "pregunta": "What is stated about the early stages of the work in the basement?",
+    "opciones": [
+     "The volunteers lacked the skills the task required.",
+     "Anand expected it to be completed within six months.",
+     "Some items were hard to deal with because their purpose was unclear.",
+     "The shelving had to be replaced before photography could start."
+    ],
+    "correcta": 2,
+    "explicacion": "La caja de aparejos de pesca tardó dos semanas porque nadie sabía para qué servía la mitad de los objetos (C). Anand dudaba de que terminara (B no), y no se critica a los voluntarios ni se cambian las estanterías."
+   },
+   {
+    "n": 34,
+    "tipo": "opciones",
+    "pregunta": "According to the fourth paragraph, why were mistakes in the records discovered?",
+    "opciones": [
+     "A specialist was hired to check the whole collection.",
+     "Each object had to be physically examined.",
+     "The spreadsheet software highlighted errors.",
+     "The medal had been advertised as missing."
+    ],
+    "correcta": 1,
+    "explicacion": "«Because every object had to be handled, a surprising number of mistakes came to light» (B). El especialista solo visitó para las tallas (A no) y Anand dice que no se descubre con una hoja de cálculo (C no)."
+   },
+   {
+    "n": 35,
+    "tipo": "opciones",
+    "pregunta": "What is Anand's view of the fear that the website will keep people away from the museum?",
+    "opciones": [
+     "It is justified, though the effect has been small.",
+     "It is mistaken, because images prompt interest in seeing the real objects.",
+     "It is understandable, but visitors prefer smaller exhibitions.",
+     "It would be justified if the images were of higher quality."
+    ],
+    "correcta": 1,
+    "explicacion": "Los visitantes han aumentado un quinto y ella dice que la web funciona como un anuncio: la foto despierta ganas de ver el objeto (B)."
+   },
+   {
+    "n": 36,
+    "tipo": "opciones",
+    "pregunta": "What point does Dr Brandt make about the archive's categories?",
+    "opciones": [
+     "They make the collection too difficult to search.",
+     "They should be decided by historians rather than museum staff.",
+     "They influence what users are likely to find and ask.",
+     "They have been imposed on the public without consultation."
+    ],
+    "correcta": 2,
+    "explicacion": "«Whoever designs the labels is deciding in advance what questions we are going to ask»: las categorías condicionan lo que la gente encuentra (C). El equipo, de hecho, admite sugerencias del público (D no)."
+   }
+  ],
+  "examenNumero": 7
+ },
+ {
+  "id": "c1-reading-use-6-x7",
+  "examen": "c1",
+  "destreza": "reading-use",
+  "parte": 6,
+  "nombreParte": "Cross-text multiple matching",
+  "titulo": "The lost art of handwriting",
+  "instrucciones": "You are going to read four extracts from articles in which writers give their views on handwriting in the digital age. For questions 37–40, choose from the writers A–D. The writers may be chosen more than once.",
+  "minutos": 12,
+  "secciones": [
+   {
+    "letra": "A",
+    "texto": "Every few months a new study reminds us that students who write their notes by hand remember more than those who type them, and I find the findings entirely convincing. For that reason I believe schools must keep teaching joined-up writing as a compulsory subject, however crowded the timetable has become. What I cannot share is the tenderness that so many commentators feel for the handwritten note. A thank-you email, carefully phrased, is every bit as warm as a card in blue ink, and the sentimentality surrounding paper strikes me as largely self-indulgent. Nostalgia will not save the pen, either. My own children write by hand only when an examiner forces them to, and I expect that within a generation the skill will have vanished from ordinary life altogether."
+   },
+   {
+    "letra": "B",
+    "texto": "It is no accident that pupils who copy a lecture by hand can recall it weeks later: the slowness of the pen forces the brain to select and summarise. That is precisely why I want cursive to remain a compulsory part of the primary curriculum, and I have little patience with head teachers who regard it as a luxury. I am less moved by the argument that a handwritten letter carries some special magic. A message that has been thought through and well expressed says as much about its sender whether it arrives on paper or on a screen. As for the future, I am not gloomy. Handwriting will not disappear; it will survive as a pleasurable pastime, much as calligraphy and bookbinding have done, practised by people who enjoy it rather than need it."
+   },
+   {
+    "letra": "C",
+    "texto": "The claim that handwriting makes us cleverer is repeated so often that few people ask how robust the evidence really is; most of the experiments I have read involve small groups and short tests, and I remain sceptical. Schools should therefore stop spending precious hours on cursive and teach fast, accurate typing instead. Yet I would be sorry to see the handwritten note lose its place. A few lines on a card tell the recipient that someone took time over them, and no email can quite reproduce that. Nor do I think the pen is doomed. We shall go on writing shopping lists, scribbling in margins and signing birthday cards for as long as there are shopping lists, margins and birthdays; it is part of everyday life, not a relic."
+   },
+   {
+    "letra": "D",
+    "texto": "I have no doubt that writing by hand helps people to learn; anyone who has revised for an exam with a notebook knows it. But I would not make cursive compulsory. Children should learn to write clearly, certainly, yet whether their letters are joined up or not seems to me a matter for individual schools and families. Where I feel strongly is the value of the handwritten letter. When a friend sends me a page in their own writing, I keep it for years; an email, however thoughtful, never earns that place on the shelf. I do not think the habit will die out entirely, but I see it becoming a hobby, something people take up for the pleasure of the ink and the paper, like pressing flowers or keeping a diary."
+   }
+  ],
+  "opcionesComunes": [
+   "Writer A",
+   "Writer B",
+   "Writer C",
+   "Writer D"
+  ],
+  "items": [
+   {
+    "n": 37,
+    "tipo": "emparejar",
+    "pregunta": "Which writer has a different opinion from the others about whether writing by hand helps people to learn?",
+    "correcta": 2,
+    "explicacion": "A («entirely convincing»), B («pupils who copy a lecture by hand can recall it») y D («writing by hand helps people to learn») lo aceptan. Solo C duda: «I remain sceptical»."
+   },
+   {
+    "n": 38,
+    "tipo": "emparejar",
+    "pregunta": "Which writer shares Writer A’s view that joined-up writing should be a compulsory part of schooling?",
+    "correcta": 1,
+    "explicacion": "A pide que sea obligatoria («compulsory subject»). B dice lo mismo: «I want cursive to remain a compulsory part». C quiere abandonarla y D dice «I would not make cursive compulsory»."
+   },
+   {
+    "n": 39,
+    "tipo": "emparejar",
+    "pregunta": "Which writer shares Writer C’s opinion about the special value of a handwritten note or letter?",
+    "correcta": 3,
+    "explicacion": "C valora la nota a mano («no email can quite reproduce that»). A («self-indulgent») y B («says as much… on paper or on a screen») no le dan valor especial. D coincide con C: «an email… never earns that place on the shelf»."
+   },
+   {
+    "n": 40,
+    "tipo": "emparejar",
+    "pregunta": "Which writer takes a similar view to Writer D about what will happen to handwriting in the future?",
+    "correcta": 1,
+    "explicacion": "D cree que será un pasatiempo («it becoming a hobby»). B piensa igual: «survive as a pleasurable pastime». A cree que desaparecerá, y C que seguirá en la vida diaria."
+   }
+  ],
+  "examenNumero": 7
+ },
+ {
+  "id": "c1-reading-use-8-x7",
+  "examen": "c1",
+  "destreza": "reading-use",
+  "parte": 8,
+  "nombreParte": "Multiple matching",
+  "titulo": "Cities on two wheels",
+  "instrucciones": "You are going to read an article in which four people describe how cycling has changed life in their cities. For questions 47–56, choose from the people (A–D). The people may be chosen more than once.",
+  "minutos": 15,
+  "secciones": [
+   {
+    "letra": "A",
+    "titulo": "Marta, Utrecht",
+    "texto": "I have cycled to work for twenty years and I have never once thought of it as a decision. It is simply what one does here, like putting on a coat when it rains. What visitors notice first is the sheer number of bikes outside the station, but what strikes me is who is riding them: eight-year-olds on their own, grandmothers with shopping, men in suits. Nobody wears special clothes. When I travelled to London last year I hired a bike and felt as though I had to wear a helmet, a bright jacket and a look of grim determination just to survive the roundabouts. I came home grateful. The one thing I would change is the parking. Every spring the racks overflow, and I have lost count of the mornings I have spent hunting for a place to leave my bike while the train pulled out without me."
+   },
+   {
+    "letra": "B",
+    "titulo": "Joel, Manchester",
+    "texto": "I was the sort of person who drove to the corner shop. Then the council closed the road outside my flat to cars, and for a few weeks I was furious. My commute doubled, or so it seemed, until a colleague lent me an old bike out of what I suspect was pity. Within a month I had lost four kilos and found that I arrived at the office in a far better mood than I ever had behind a steering wheel. I am not a convert in any evangelical sense; I still own a car and I use it when I must. But I do resent the way cyclists are sometimes portrayed as a smug minority. Most of us are just people trying to get to work without sitting in a queue, and I would happily see more of the city’s budget spent on proper lanes rather than painted lines."
+   },
+   {
+    "letra": "C",
+    "titulo": "Lucia, Seville",
+    "texto": "When the first lanes were laid down here, shopkeepers predicted disaster. They said customers would stop coming if they could not park outside, and for a year there were angry letters in the local paper every week. My family’s café sits on one of those streets, and I remember my father muttering about it over the counter. Then something unexpected happened: takings went up. People who cycled past stopped for coffee in a way that drivers never had, because it was easy to do so. My father, who once swore he would never ride a bike, now owns one with a basket. The summers are the difficulty. By July the heat is so fierce that cycling at midday is nearly impossible, and the lanes are empty just when the city is busiest. We need more shade, not more paint."
+   },
+   {
+    "letra": "D",
+    "titulo": "Kenji, Copenhagen",
+    "texto": "I design lanes for a living, so I see my city differently from most people. A good junction, I tell my students, is one that a child could cross without being told how. Our early schemes were far too ambitious and ignored what people actually did: they cut corners, ran across grass and took the shortest line whatever the signs said. So now we follow the footprints, quite literally, and build where people already go. It is humbling to admit that the best planning often consists of watching. I am proud of what we have achieved, but I worry that other cities simply copy our drawings without understanding the reasons behind them. A lane that works here, with our weather and our habits, may be useless elsewhere. Copying is easy; observing is hard, and that is where most projects fail."
+   }
+  ],
+  "opcionesComunes": [
+   "Marta",
+   "Joel",
+   "Lucia",
+   "Kenji"
+  ],
+  "items": [
+   {
+    "n": 47,
+    "tipo": "emparejar",
+    "pregunta": "Which person found that a change in the street layout eventually improved their daily mood?",
+    "correcta": 1,
+    "explicacion": "Joel: tras cerrar la calle y empezar a pedalear, «arrived at the office in a far better mood»."
+   },
+   {
+    "n": 48,
+    "tipo": "emparejar",
+    "pregunta": "Which person was surprised that local businesses benefited from the new lanes?",
+    "correcta": 2,
+    "explicacion": "Lucia: «takings went up» pese a las predicciones de desastre."
+   },
+   {
+    "n": 49,
+    "tipo": "emparejar",
+    "pregunta": "Which person thinks that successful schemes should be based on observing how people behave?",
+    "correcta": 3,
+    "explicacion": "Kenji: «we follow the footprints… build where people already go»."
+   },
+   {
+    "n": 50,
+    "tipo": "emparejar",
+    "pregunta": "Which person complains about a shortage of places to leave bicycles?",
+    "correcta": 0,
+    "explicacion": "Marta: «Every spring the racks overflow»."
+   },
+   {
+    "n": 51,
+    "tipo": "emparejar",
+    "pregunta": "Which person feels that cyclists are unfairly stereotyped?",
+    "correcta": 1,
+    "explicacion": "Joel: «I do resent the way cyclists are sometimes portrayed as a smug minority»."
+   },
+   {
+    "n": 52,
+    "tipo": "emparejar",
+    "pregunta": "Which person says that the climate limits the use of bikes at certain times?",
+    "correcta": 2,
+    "explicacion": "Lucia: «By July the heat is so fierce that cycling at midday is nearly impossible»."
+   },
+   {
+    "n": 53,
+    "tipo": "emparejar",
+    "pricing": "",
+    "pregunta": "Which person is concerned that other cities may misapply their successful model?",
+    "correcta": 3,
+    "explicacion": "Kenji: «other cities simply copy our drawings without understanding the reasons»."
+   },
+   {
+    "n": 54,
+    "tipo": "emparejar",
+    "pregunta": "Which person regards cycling as an ordinary activity that requires no special effort or equipment?",
+    "correcta": 0,
+    "explicacion": "Marta: «Nobody wears special clothes» y «never once thought of it as a decision»."
+   },
+   {
+    "n": 55,
+    "tipo": "emparejar",
+    "pregunta": "Which person was initially opposed to a change but later came to benefit from it?",
+    "correcta": 1,
+    "explicacion": "Joel: «for a few weeks I was furious» y después se adaptó. (Lucia habla de su padre, no de ella misma.)"
+   },
+   {
+    "n": 56,
+    "tipo": "emparejar",
+    "pregunta": "Which person felt less safe cycling in another country than at home?",
+    "correcta": 0,
+    "explicacion": "Marta: en Londres sintió que debía ir protegida «just to survive the roundabouts»."
+   }
+  ],
+  "examenNumero": 7
+ },
+ {
+  "id": "c1-writing-1-x7",
+  "examen": "c1",
+  "destreza": "writing",
+  "parte": 1,
+  "nombreParte": "Essay",
+  "instrucciones": "You must answer this question. Write your answer in 220–260 words in an appropriate style.",
+  "minutos": 45,
+  "items": [
+   {
+    "n": 1,
+    "tipo": "redaccion",
+    "tipoTexto": "essay",
+    "enunciado": "Your class has attended a talk on why vinyl records are becoming popular again in the age of streaming. You have made the notes below:\n\nReasons why people are buying vinyl records again:\n• sound quality\n• the experience of owning something physical\n• the appeal of the past\n\nSome opinions expressed in the talk:\n“A record makes you sit down and actually listen.”\n“Half the people buying vinyl never play it; it's just decoration.”\n“Streaming is convenient, but nobody feels attached to a playlist.”\n\nWrite an essay for your tutor discussing two of the reasons in your notes. You should explain which reason is more important in explaining the return of vinyl, giving reasons in support of your answer.\n\nYou may, if you wish, make use of the opinions expressed in the talk, but you should use your own words as far as possible.",
+    "minPalabras": 220,
+    "maxPalabras": 260,
+    "modelo": "It might seem strange that a format once considered obsolete should be selling in greater numbers than it has for decades. Of the reasons suggested, the experience of owning something physical and the appeal of the past strike me as the most convincing, and I will examine each in turn.\n\nOwning a record is a very different matter from having access to a song. There is an album sleeve to study, a disc to handle carefully and a ritual of lowering the needle that turns listening into an occasion. Streaming, by contrast, offers endless choice but little sense of possession; few people feel any attachment to a playlist that can vanish overnight. Moreover, because a record has to be turned over halfway through, listeners tend to hear an album as the artist intended rather than skipping restlessly between tracks.\n\nNostalgia plays a part too, although its influence is less straightforward. Older listeners may be rediscovering the records of their youth, whereas younger ones, who never knew the format, are drawn to an era they perceive as more authentic. Yet this appeal can be superficial. If a record ends up as wall decoration, as some critics claim, the past is being consumed as a style rather than appreciated.\n\nOn balance, I would argue that the physical experience is the more important factor. Nostalgia may attract buyers in the first place, but it is the pleasure of handling and attentively playing a record that persuades them to keep returning to it.",
+    "criterios": [
+     "Content: he hecho todo lo que pide la tarea (cada punto del enunciado) y quien lo lea queda bien informado.",
+     "Communicative Achievement: el registro es el adecuado para el lector (formal con el tutor o el director; cercano con un amigo) y sigo las convenciones del tipo de texto.",
+     "Organisation: párrafos claros con una idea cada uno, introducción y cierre, conectores variados (however, on balance, by contrast, moreover…).",
+     "Language: vocabulario preciso y variado, estructuras complejas (condicionales, pasivas, relativas, inversión) y pocos errores, ninguno que estorbe."
+    ],
+    "explicacion": "El modelo trata DOS de los tres puntos (la experiencia física y el atractivo del pasado), compara ventajas y límites de cada uno y dice claramente cuál pesa más y por qué. Registro formal: sin contracciones, con conectores (by contrast, moreover, on balance) y una frase de cierre que resume la postura."
+   }
+  ],
+  "examenNumero": 7
+ },
+ {
+  "id": "c1-writing-2-x7",
+  "examen": "c1",
+  "destreza": "writing",
+  "parte": 2,
+  "nombreParte": "Choice of task",
+  "instrucciones": "Write an answer to ONE of the questions 2–4 in this part. Write your answer in 220–260 words in an appropriate style.",
+  "minutos": 45,
+  "elegir": 1,
+  "items": [
+   {
+    "n": 2,
+    "tipo": "redaccion",
+    "tipoTexto": "article",
+    "enunciado": "You see this notice in an online magazine for people who work from home:\n\n“Articles wanted! Working from home can be liberating, but it can also be isolating. Write an article about the challenges of working remotely and the strategies you have found most effective for staying connected with other people. Say which strategy you would recommend most strongly.”\n\nWrite your article.",
+    "minPalabras": 220,
+    "maxPalabras": 260,
+    "modelo": "The Silent Kitchen Table\n\nWhen I swapped my city office for a desk in the spare room, I imagined years of uninterrupted concentration. What I had not foreseen was the silence. By the second month I caught myself narrating my lunch to the cat.\n\nThe difficulty is subtle. Nobody feels lonely while they are busy, and remote work is very good at keeping you busy. It is only at six o’clock, when the laptop closes and no colleague says goodnight, that the absence of casual contact becomes obvious. Those small, unplanned exchanges by the kettle, which I once considered a distraction, turned out to be the glue holding my working life together.\n\nI have tried several remedies. Scheduled video calls help, though they tend to be so efficient that the chatting is squeezed out. Sharing a playlist with two teammates proved surprisingly bonding. Working from a café twice a week gave me a sense of company without the obligation to talk, which suits many people better than they would admit.\n\nThe strategy I would recommend most strongly, however, is a regular in-person day. Once a fortnight, my team meets in a rented room, with no agenda beyond lunch. Hardly anything gets decided, yet the following days feel warmer and the emails friendlier.\n\nIf you work alone, do not wait until you feel isolated before acting. Build contact into your calendar as carefully as you would a deadline, and your kitchen table may become rather less silent.",
+    "criterios": [
+     "Content: he hecho todo lo que pide la tarea (cada punto del enunciado) y quien lo lea queda bien informado.",
+     "Communicative Achievement: el registro es el adecuado para el lector (formal con el tutor o el director; cercano con un amigo) y sigo las convenciones del tipo de texto.",
+     "Organisation: párrafos claros con una idea cada uno, introducción y cierre, conectores variados (however, on balance, provided that, what is more…).",
+     "Language: vocabulario preciso y variado, estructuras complejas (condicionales, pasivas, relativas, inversión) y pocos errores, ninguno que estorbe."
+    ],
+    "explicacion": "Un article lleva título atractivo, una apertura que engancha (anécdota), párrafos claros sobre los problemas y las soluciones, y un cierre con la recomendación pedida. Registro semiformal, personal y vivo, dirigido a lectores de la revista."
+   },
+   {
+    "n": 3,
+    "tipo": "redaccion",
+    "tipoTexto": "proposal",
+    "enunciado": "You work for a medium-sized company whose employees now work from home three days a week. The managing director has noticed that many staff feel cut off from their colleagues and has asked for proposals to improve the situation.\n\nWrite a proposal suggesting what the company could do on the days when staff are together, how it could help employees stay in touch when they are at home, and how you would measure whether the measures are working.\n\nWrite your proposal.",
+    "minPalabras": 220,
+    "maxPalabras": 260,
+    "modelo": "Proposal: reconnecting our hybrid workforce\n\nIntroduction\nThis proposal outlines practical steps to reduce the sense of isolation reported by staff since the introduction of hybrid working, and suggests how progress might be assessed.\n\nOffice days\nAt present, employees attend on different days, so many arrive to find a half-empty building. I recommend that each department be assigned two fixed days, ensuring that colleagues overlap. Furthermore, one office lunch a month, paid for by the company, should be organised by a rotating group of volunteers. These occasions need not be elaborate; their value lies in giving people a reason to talk about something other than work.\n\nStaying in touch from home\nOn remote days, the company could set up an open chat channel for non-work topics, such as books, recipes and local news. In addition, teams should be encouraged to hold a fifteen-minute video call each morning without a formal agenda. Managers, for their part, ought to arrange a short individual conversation with each team member every fortnight.\n\nMeasuring success\nA brief anonymous survey, sent to all staff now and again after six months, would show whether feelings of isolation have fallen. Attendance at social events and levels of participation in the chat channel could also be monitored, as could staff turnover over the coming year.\n\nConclusion\nThese measures are inexpensive and easy to introduce. Were they adopted this quarter, their effect could be reviewed by the end of the year.",
+    "criterios": [
+     "Content: he hecho todo lo que pide la tarea (cada punto del enunciado) y quien lo lea queda bien informado.",
+     "Communicative Achievement: el registro es el adecuado para el lector (formal con el tutor o el director; cercano con un amigo) y sigo las convenciones del tipo de texto.",
+     "Organisation: párrafos claros con una idea cada uno, introducción y cierre, conectores variados (however, on balance, provided that, what is more…).",
+     "Language: vocabulario preciso y variado, estructuras complejas (condicionales, pasivas, relativas, inversión) y pocos errores, ninguno que estorbe."
+    ],
+    "explicacion": "Un proposal para el director va con encabezados (Introduction, Office days, Staying in touch from home, Measuring success, Conclusion), registro formal e impersonal, medidas concretas y una forma de comprobar los resultados. Cubre los TRES puntos del enunciado."
+   },
+   {
+    "n": 4,
+    "tipo": "redaccion",
+    "tipoTexto": "email",
+    "enunciado": "You have received an email from a friend who has just started working from home for the first time:\n\n“I thought I would love it, but after three weeks the days feel strangely empty. I don’t see anyone from one morning to the next. Have you got any advice? And do you fancy meeting up sometime?”\n\nWrite your email.",
+    "minPalabras": 220,
+    "maxPalabras": 260,
+    "modelo": "Hi Sam,\n\nThanks for your message. I’m sorry to hear you’re feeling flat, but I promise it’s completely normal. I went through exactly the same thing when I started, and I nearly gave up on the whole idea.\n\nThe most important lesson I learned is to give your day a shape. Get dressed properly, even if nobody will see you, and finish at a fixed time. Otherwise the working day melts into the evening and you never really feel you’ve left work behind.\n\nSecondly, build in people. I started taking my laptop to the library on Wednesdays and Fridays, and just being surrounded by others made a huge difference. I also arranged a weekly call with an old colleague, which we call our “virtual coffee”. Neither of us talks about work for the first ten minutes, and it’s the best part of my week.\n\nFinally, try to get outside before lunch. A short walk round the block does wonders for your mood, and you might even exchange a few words with the baker, which counts more than you’d think.\n\nAs for meeting up, I’d love to! How about this Saturday? There’s a new market near the river that I’ve been dying to try, and we could have lunch afterwards. If that doesn’t suit you, just tell me which day is better.\n\nHang in there, and let me know how you get on.\n\nBest wishes,\nNico",
+    "criterios": [
+     "Content: he hecho todo lo que pide la tarea (cada punto del enunciado) y quien lo lea queda bien informado.",
+     "Communicative Achievement: el registro es el adecuado para el lector (formal con el tutor o el director; cercano con un amigo) y sigo las convenciones del tipo de texto.",
+     "Organisation: párrafos claros con una idea cada uno, introducción y cierre, conectores variados (however, on balance, provided that, what is more…).",
+     "Language: vocabulario preciso y variado, estructuras complejas (condicionales, pasivas, relativas, inversión) y pocos errores, ninguno que estorbe."
+    ],
+    "explicacion": "Un email a un amigo va en registro informal (contracciones, frases directas, algo de humor) pero bien organizado: saludo, empatía, consejos, propuesta de quedar y despedida. Contesta a las dos cosas que pregunta el amigo: consejo y quedar."
+   }
+  ],
+  "examenNumero": 7
+ },
+ {
+  "id": "c1-reading-use-7-x7",
+  "examen": "c1",
+  "destreza": "reading-use",
+  "parte": 7,
+  "nombreParte": "Gapped text",
+  "titulo": "The woman who drew the sound of the night",
+  "instrucciones": "You are going to read an article about a council officer who tried to understand noise in her town. Six paragraphs have been removed from the article. Choose from the paragraphs A–G the one which fits each gap (41–46). There is one extra paragraph which you do not need to use.",
+  "minutos": 15,
+  "texto": "For her first month as the council's noise officer, Leila Haddad did exactly what the job description said: she stood beside busy roads with a decibel meter and wrote down the numbers. The numbers were supposed to show her where residents suffered most. Instead they produced a puzzle. The roaring junction outside the railway station attracted almost no complaints, whereas a quiet side street in the old quarter, measured at barely half the volume, generated dozens.\n\n{{41}}\n\nDaily averages, of course, hide this kind of thing completely. A shudder lasting ten seconds vanishes into twenty-four hours of otherwise calm readings. So Haddad put the meter away and began walking the old quarter at dawn and at midnight with a pair of microphones, noting not how loud things were but how often they broke the quiet.\n\n{{42}}\n\nWhat she needed was a way of making the pattern visible at a glance. Her answer, which she calls the sound calendar, was a simple chart: time ran along the bottom, and every interruption appeared as a small coloured square, with a different colour for machinery, traffic and voices.\n\n{{43}}\n\nNobody on the committee needed it explained. Within a month, deliveries to the area were restricted to the hours after seven, and complaints fell by more than half.\n\n{{44}}\n\nHaddad's response was characteristically practical. Rather than defend the rule, she went back to her microphones and recorded the lorries themselves. It turned out that the real offenders were the engines left running and the reversing alarms, not the deliveries as such.\n\n{{45}}\n\nThe method has since spread. Haddad's calendar is now used in a dozen towns, and a university has asked her to turn it into a free app that residents can use to log disturbances themselves.\n\n{{46}}",
+  "opcionesComunes": [
+   "Meanwhile, the junction by the station, which had started the whole investigation, remains as loud as ever. Haddad still takes readings there occasionally, although she admits that the figures no longer tell her anything she wants to know.",
+   "Not everyone was pleased, though. Restaurant owners pointed out that later deliveries meant missing the morning rush, and several threatened to take their business elsewhere. The restriction, they argued, had solved one group's problem by creating another's.",
+   "The distinction that eventually explained this, she says, was between loudness and intrusion. The junction made one steady roar that people's ears learnt to ignore within days. The side street's trouble was a refrigeration unit behind a restaurant that hummed, shuddered and fell silent at unpredictable intervals, so that nobody could ever stop waiting for the next burst.",
+   "Haddad herself says the real achievement is not technical. People who once simply endured the noise now have a way of describing it and, she believes, a council that has seen a complaint expressed in coloured squares will never again accept an average as an answer.",
+   "Hours of such material, however, proved almost impossible to present. When she played a recording of the old quarter to the planning committee, the councillors listened politely for several minutes and then asked when she would get to the problem.",
+   "The compromise that followed was ingenious: early deliveries were allowed again, but only by electric vehicles that used flashing lights instead of alarms. Most of the restaurants had switched within a year.",
+   "The first calendar she drew, covering the old quarter's worst week, looked like a night sky. Almost all the squares were packed into a band between four and six in the morning, exactly when the lorries arrived and the refrigeration units strained to cope."
+  ],
+  "items": [
+   {
+    "n": 41,
+    "tipo": "emparejar",
+    "pregunta": "Gap 41",
+    "correcta": 2,
+    "explicacion": "Resuelve el enigma del primer párrafo (calle ruidosa sin quejas, calle tranquila con muchas). «This kind of thing» del párrafo siguiente se refiere a la intrusión descrita aquí, que los promedios ocultan."
+   },
+   {
+    "n": 42,
+    "tipo": "emparejar",
+    "pregunta": "Gap 42",
+    "correcta": 4,
+    "explicacion": "«Such material» retoma las grabaciones del párrafo anterior, y su dificultad para presentarlas lleva a «What she needed was a way of making the pattern visible»."
+   },
+   {
+    "n": 43,
+    "tipo": "emparejar",
+    "pregunta": "Gap 43",
+    "correcta": 6,
+    "explicacion": "Describe el primer calendario ya presentado en el párrafo anterior («the first calendar she drew»). El patrón visible explica «Nobody on the committee needed it explained»."
+   },
+   {
+    "n": 44,
+    "tipo": "emparejar",
+    "pregunta": "Gap 44",
+    "correcta": 1,
+    "explicacion": "«Not everyone was pleased» introduce las quejas de los restaurantes tras la restricción, y «Rather than defend the rule» del párrafo siguiente responde a esa crítica."
+   },
+   {
+    "n": 45,
+    "tipo": "emparejar",
+    "pregunta": "Gap 45",
+    "correcta": 5,
+    "explicacion": "«The compromise that followed» es la consecuencia de descubrir que los culpables eran los motores y las alarmas, no las entregas. El párrafo siguiente pasa a la expansión del método."
+   },
+   {
+    "n": 46,
+    "tipo": "emparejar",
+    "pregunta": "Gap 46",
+    "correcta": 3,
+    "explicacion": "«Haddad herself» cierra el artículo con su valoración del uso extendido del calendario («a chart expressed in coloured squares»). El párrafo A sobra: vuelve al cruce de la estación y a las mediciones, algo que ningún hueco necesita."
+   }
+  ],
+  "examenNumero": 7
+ },
+ {
+  "id": "c1-listening-1-x7",
+  "examen": "c1",
+  "destreza": "listening",
+  "parte": 1,
+  "nombreParte": "Multiple choice (extracts)",
+  "instrucciones": "You will hear three different extracts. For questions 1–6, choose the answer (A, B or C) which fits best according to what you hear. There are two questions for each extract. You hear each extract twice.",
+  "minutos": 8,
+  "texto": "Extract One\nYou hear two friends talking about a night market.\n\nExtract Two\nYou hear part of a radio interview with a man who runs a dumpling van.\n\nExtract Three\nYou hear two colleagues discussing an idea for a company summer party.",
+  "audio": {
+   "archivo": "audio/c1-listening-1-x7.mp3",
+   "veces": 2,
+   "hablantes": [
+    {
+     "id": "sup",
+     "descripcion": "Supervisor",
+     "voz": "en-GB-LibbyNeural"
+    },
+    {
+     "id": "m1",
+     "descripcion": "Man (Extract One)",
+     "voz": "en-GB-RyanNeural"
+    },
+    {
+     "id": "f1",
+     "descripcion": "Woman (Extract One)",
+     "voz": "en-GB-SoniaNeural"
+    },
+    {
+     "id": "int",
+     "descripcion": "Interviewer (Extract Two)",
+     "voz": "en-IE-ConnorNeural"
+    },
+    {
+     "id": "m2",
+     "descripcion": "Van owner (Extract Two)",
+     "voz": "en-AU-WilliamNeural"
+    },
+    {
+     "id": "m3",
+     "descripcion": "Man (Extract Three)",
+     "voz": "en-GB-ThomasNeural"
+    },
+    {
+     "id": "f3",
+     "descripcion": "Woman (Extract Three)",
+     "voz": "en-IE-EmilyNeural"
+    }
+   ],
+   "guion": [
+    {
+     "quien": "sup",
+     "texto": "English Lab. Listening test one. Part One. You will hear three different extracts. For questions one to six, choose the answer, A, B or C, which fits best according to what you hear. There are two questions for each extract. You will hear each extract twice."
+    },
+    {
+     "pausa": 2000
+    },
+    {
+     "quien": "sup",
+     "texto": "Extract One. You hear two friends talking about a night market. Now look at questions one and two."
+    },
+    {
+     "pausa": 15000
+    },
+    {
+     "quien": "f1",
+     "texto": "So how was the night market? I keep hearing it's unbelievably busy."
+    },
+    {
+     "quien": "m1",
+     "texto": "It is, and the queues are enormous, but they move faster than you would think. Honestly, the food was good rather than amazing, and I could have had most of it elsewhere. What I couldn't get over was watching the cooks. One man was flipping three pancakes at once, taking money, and chatting to the customers, all without looking down. I stood there for ten minutes just watching."
+    },
+    {
+     "quien": "f1",
+     "texto": "Hm. It sounds fun, but crowds are really not my thing. I'd spend the whole evening worrying about my bag."
+    },
+    {
+     "quien": "m1",
+     "texto": "Then go early, around five, before the after-work crowd arrives. You'd have the place almost to yourself."
+    },
+    {
+     "quien": "f1",
+     "texto": "Now that I could manage. Maybe midweek, then."
+    },
+    {
+     "pausa": 5000
+    },
+    {
+     "quien": "sup",
+     "texto": "Now you will hear it again."
+    },
+    {
+     "pausa": 1500
+    },
+    {
+     "quien": "f1",
+     "texto": "So how was the night market? I keep hearing it's unbelievably busy."
+    },
+    {
+     "quien": "m1",
+     "texto": "It is, and the queues are enormous, but they move faster than you would think. Honestly, the food was good rather than amazing, and I could have had most of it elsewhere. What I couldn't get over was watching the cooks. One man was flipping three pancakes at once, taking money, and chatting to the customers, all without looking down. I stood there for ten minutes just watching."
+    },
+    {
+     "quien": "f1",
+     "texto": "Hm. It sounds fun, but crowds are really not my thing. I'd spend the whole evening worrying about my bag."
+    },
+    {
+     "quien": "m1",
+     "texto": "Then go early, around five, before the after-work crowd arrives. You'd have the place almost to yourself."
+    },
+    {
+     "quien": "f1",
+     "texto": "Now that I could manage. Maybe midweek, then."
+    },
+    {
+     "pausa": 5000
+    },
+    {
+     "quien": "sup",
+     "texto": "Extract Two. You hear part of a radio interview with a man who runs a dumpling van. Now look at questions three and four."
+    },
+    {
+     "pausa": 15000
+    },
+    {
+     "quien": "int",
+     "texto": "People often imagine that running a food van is a lifelong dream. Was it for you?"
+    },
+    {
+     "quien": "m2",
+     "texto": "I wish I could say yes. The truth is much less romantic. I'd worked out the figures for a proper restaurant, and the rent alone would have sunk me before I'd sold a single plate. The van was the plan I fell back on. I loved the cooking, I just didn't have the money for anything bigger."
+    },
+    {
+     "quien": "int",
+     "texto": "And what's the hardest part of the job? The early starts?"
+    },
+    {
+     "quien": "m2",
+     "texto": "No, I'm quite happy getting up at five, and the paperwork and permits are tedious but you get used to them. What really wears you down is not knowing what a day will bring. A sunny Saturday can double your takings, and then a downpour on Sunday wipes out the lot. You can never really relax."
+    },
+    {
+     "pausa": 5000
+    },
+    {
+     "quien": "sup",
+     "texto": "Now you will hear it again."
+    },
+    {
+     "pausa": 1500
+    },
+    {
+     "quien": "int",
+     "texto": "People often imagine that running a food van is a lifelong dream. Was it for you?"
+    },
+    {
+     "quien": "m2",
+     "texto": "I wish I could say yes. The truth is much less romantic. I'd worked out the figures for a proper restaurant, and the rent alone would have sunk me before I'd sold a single plate. The van was the plan I fell back on. I loved the cooking, I just didn't have the money for anything bigger."
+    },
+    {
+     "quien": "int",
+     "texto": "And what's the hardest part of the job? The early starts?"
+    },
+    {
+     "quien": "m2",
+     "texto": "No, I'm quite happy getting up at five, and the paperwork and permits are tedious but you get used to them. What really wears you down is not knowing what a day will bring. A sunny Saturday can double your takings, and then a downpour on Sunday wipes out the lot. You can never really relax."
+    },
+    {
+     "pausa": 5000
+    },
+    {
+     "quien": "sup",
+     "texto": "Extract Three. You hear two colleagues discussing an idea for a company summer party. Now look at questions five and six."
+    },
+    {
+     "pausa": 15000
+    },
+    {
+     "quien": "m3",
+     "texto": "I've been thinking we could hire a couple of street food trucks for the summer party instead of the usual buffet. People love that sort of thing."
+    },
+    {
+     "quien": "f3",
+     "texto": "It's a nice idea, and I'm not worried about the price, they quote about the same as caterers. My concern is the queues. With sixty people and two trucks, half of us would spend the whole afternoon standing in line, and the party would turn into a very long lunch break."
+    },
+    {
+     "quien": "m3",
+     "texto": "Fair point. I hadn't thought about that. Though I suppose we could stagger the times by department."
+    },
+    {
+     "quien": "f3",
+     "texto": "Possibly. Before we commit, why don't we have one of the trucks come to the car park on a Friday lunchtime? Then we'd see how it works with a smaller group."
+    },
+    {
+     "quien": "m3",
+     "texto": "Good idea. I'll ring them tomorrow."
+    },
+    {
+     "pausa": 5000
+    },
+    {
+     "quien": "sup",
+     "texto": "Now you will hear it again."
+    },
+    {
+     "pausa": 1500
+    },
+    {
+     "quien": "m3",
+     "texto": "I've been thinking we could hire a couple of street food trucks for the summer party instead of the usual buffet. People love that sort of thing."
+    },
+    {
+     "quien": "f3",
+     "texto": "It's a nice idea, and I'm not worried about the price, they quote about the same as caterers. My concern is the queues. With sixty people and two trucks, half of us would spend the whole afternoon standing in line, and the party would turn into a very long lunch break."
+    },
+    {
+     "quien": "m3",
+     "texto": "Fair point. I hadn't thought about that. Though I suppose we could stagger the times by department."
+    },
+    {
+     "quien": "f3",
+     "texto": "Possibly. Before we commit, why don't we have one of the trucks come to the car park on a Friday lunchtime? Then we'd see how it works with a smaller group."
+    },
+    {
+     "quien": "m3",
+     "texto": "Good idea. I'll ring them tomorrow."
+    },
+    {
+     "pausa": 5000
+    },
+    {
+     "quien": "sup",
+     "texto": "That is the end of Part One."
+    }
+   ]
+  },
+  "items": [
+   {
+    "n": 1,
+    "tipo": "opciones",
+    "pregunta": "What impressed the man most about the night market?",
+    "opciones": [
+     "the quality of the food",
+     "the skill of the people cooking",
+     "the speed of the queues"
+    ],
+    "correcta": 1,
+    "explicacion": "Dice que la comida era «good rather than amazing» (A no) y que las colas se mueven rápido, pero lo que no podía dejar de mirar eran los cocineros: «I couldn't get over watching the cooks» (B)."
+   },
+   {
+    "n": 2,
+    "tipo": "opciones",
+    "pregunta": "What does the woman decide to do?",
+    "opciones": [
+     "go with the man at the weekend",
+     "avoid the market altogether",
+     "visit at a quieter time"
+    ],
+    "correcta": 2,
+    "explicacion": "Las multitudes no le gustan, pero él sugiere ir pronto y ella responde «Now that I could manage. Maybe midweek, then» (C). No rechaza ir del todo (B no)."
+   },
+   {
+    "n": 3,
+    "tipo": "opciones",
+    "pregunta": "Why did the man start his business?",
+    "opciones": [
+     "He wanted to leave an office job.",
+     "He had always dreamed of running a van.",
+     "He could not afford a restaurant."
+    ],
+    "correcta": 2,
+    "explicacion": "Aclara que no era un sueño de toda la vida (B no) y que el alquiler de un restaurante lo habría hundido: «I didn't have the money for anything bigger» (C). No menciona un trabajo de oficina."
+   },
+   {
+    "n": 4,
+    "tipo": "opciones",
+    "pregunta": "What does he find most difficult about the job?",
+    "opciones": [
+     "not knowing how well each day will go",
+     "getting up very early",
+     "dealing with permits and paperwork"
+    ],
+    "correcta": 0,
+    "explicacion": "Los madrugones no le molestan y el papeleo es «tedious but you get used to them» (B y C no). Lo que desgasta es «not knowing what a day will bring» (A)."
+   },
+   {
+    "n": 5,
+    "tipo": "opciones",
+    "pregunta": "What is the woman's main concern about the idea?",
+    "opciones": [
+     "the cost of hiring the trucks",
+     "the time people would spend queuing",
+     "the quality of the food"
+    ],
+    "correcta": 1,
+    "explicacion": "Dice «I'm not worried about the price» (A no) y su preocupación son las colas: la fiesta sería «a very long lunch break» (B). No habla de la calidad."
+   },
+   {
+    "n": 6,
+    "tipo": "opciones",
+    "pregunta": "What do the two colleagues agree to do?",
+    "opciones": [
+     "try out one truck before deciding",
+     "hold a vote among staff",
+     "look for a cheaper alternative"
+    ],
+    "correcta": 0,
+    "explicacion": "Ella propone que un camión venga un viernes a mediodía «before we commit» y él acepta: «I'll ring them tomorrow» (A). No hablan de votar ni de precio."
+   }
+  ],
+  "examenNumero": 7
+ },
+ {
+  "id": "c1-listening-2-x7",
+  "examen": "c1",
+  "destreza": "listening",
+  "parte": 2,
+  "nombreParte": "Sentence completion",
+  "titulo": "Migrating birds and city lights",
+  "instrucciones": "You will hear a researcher called Priya Menon talking about a project that studies how city lighting affects migrating birds. For questions 7–14, complete the sentences with a word or short phrase. You hear the recording twice.",
+  "minutos": 10,
+  "audio": {
+   "archivo": "audio/c1-listening-2-x7.mp3",
+   "veces": 2,
+   "hablantes": [
+    {
+     "id": "sup",
+     "descripcion": "Supervisor",
+     "voz": "en-GB-LibbyNeural"
+    },
+    {
+     "id": "priya",
+     "descripcion": "Priya Menon, a researcher",
+     "voz": "en-GB-SoniaNeural"
+    }
+   ],
+   "guion": [
+    {
+     "quien": "sup",
+     "texto": "Part Two. You will hear a researcher called Priya Menon talking about a project that studies how city lighting affects migrating birds. For questions seven to fourteen, complete the sentences with a word or short phrase. You now have forty-five seconds to look at Part Two."
+    },
+    {
+     "pausa": 45000
+    },
+    {
+     "quien": "priya",
+     "texto": "Good evening, everyone. My name is Priya Menon, and for the last six years I have coordinated a project that looks at how city lighting affects migrating birds. I first noticed the problem while working night shifts as a security guard to pay for my degree. One October night I saw dozens of small birds circling above some floodlights. Most people guess it was the tall office towers, or perhaps the bridge, but it was the football stadium that attracted them. I stood there for an hour, and I have never forgotten it. Many people are surprised to learn that most songbirds migrate at night. Some say it is because the air is cooler, and that does play a part, but the main reason is predators. Hawks and falcons hunt in daylight, so the darkness is much safer. The problem is that birds on night flights steer partly by the stars. The moon is useful to them, but the glow above a city hides the stars, and the birds become disorientated and circle until they are exhausted. Our volunteers walk the streets at dawn and collect birds that have collided with glass. September is when the greatest numbers pass through, but the worst month for collisions is October, because the nights are longer and the weather is often cloudy, which pushes the birds lower. The birds we find most often are thrushes. We see a few robins and starlings, but thrushes make up well over half of the total. Two years ago we persuaded a group of large offices to cooperate. We asked them to turn off their decorative lighting at eleven, but they compromised on midnight, and that was enough to make a difference. Last year, collisions in the city centre fell by forty per cent, which was better than the thirty we had hoped for. I am very proud of that figure. The next step is to follow the flocks more closely. We looked at using cameras, and the university offered us some satellite tags, but what we have chosen is radar, which will let us watch whole flocks as they cross the region next spring. If you would like to volunteer, please come and speak to me afterwards."
+    },
+    {
+     "pausa": 10000
+    },
+    {
+     "quien": "sup",
+     "texto": "Now you will hear it again."
+    },
+    {
+     "pausa": 1500
+    },
+    {
+     "quien": "priya",
+     "texto": "Good evening, everyone. My name is Priya Menon, and for the last six years I have coordinated a project that looks at how city lighting affects migrating birds. I first noticed the problem while working night shifts as a security guard to pay for my degree. One October night I saw dozens of small birds circling above some floodlights. Most people guess it was the tall office towers, or perhaps the bridge, but it was the football stadium that attracted them. I stood there for an hour, and I have never forgotten it. Many people are surprised to learn that most songbirds migrate at night. Some say it is because the air is cooler, and that does play a part, but the main reason is predators. Hawks and falcons hunt in daylight, so the darkness is much safer. The problem is that birds on night flights steer partly by the stars. The moon is useful to them, but the glow above a city hides the stars, and the birds become disorientated and circle until they are exhausted. Our volunteers walk the streets at dawn and collect birds that have collided with glass. September is when the greatest numbers pass through, but the worst month for collisions is October, because the nights are longer and the weather is often cloudy, which pushes the birds lower. The birds we find most often are thrushes. We see a few robins and starlings, but thrushes make up well over half of the total. Two years ago we persuaded a group of large offices to cooperate. We asked them to turn off their decorative lighting at eleven, but they compromised on midnight, and that was enough to make a difference. Last year, collisions in the city centre fell by forty per cent, which was better than the thirty we had hoped for. I am very proud of that figure. The next step is to follow the flocks more closely. We looked at using cameras, and the university offered us some satellite tags, but what we have chosen is radar, which will let us watch whole flocks as they cross the region next spring. If you would like to volunteer, please come and speak to me afterwards."
+    },
+    {
+     "pausa": 10000
+    },
+    {
+     "quien": "sup",
+     "texto": "That is the end of Part Two."
+    }
+   ]
+  },
+  "items": [
+   {
+    "n": 7,
+    "tipo": "palabra",
+    "frase": "Priya first noticed the problem when she saw birds circling above a {{7}}.",
+    "correctas": [
+     "football stadium",
+     "stadium"
+    ],
+    "explicacion": "«It was the football stadium that attracted them». Las torres de oficinas y el puente son los distractores («Most people guess…»)."
+   },
+   {
+    "n": 8,
+    "tipo": "palabra",
+    "frase": "Researchers believe songbirds mainly fly at night to avoid {{8}}.",
+    "correctas": [
+     "predators"
+    ],
+    "explicacion": "«The main reason is predators». El aire más fresco «does play a part», pero no es la razón principal."
+   },
+   {
+    "n": 9,
+    "tipo": "palabra",
+    "frase": "The glow above a city makes it difficult for birds to see the {{9}}.",
+    "correctas": [
+     "stars"
+    ],
+    "explicacion": "«The glow above a city hides the stars». La luna les resulta útil, así que no es el problema."
+   },
+   {
+    "n": 10,
+    "tipo": "palabra",
+    "frase": "The worst month for bird collisions is {{10}}.",
+    "correctas": [
+     "October"
+    ],
+    "explicacion": "«The worst month for collisions is October». September es cuando pasan más aves, pero no cuando hay más colisiones."
+   },
+   {
+    "n": 11,
+    "tipo": "palabra",
+    "frase": "The birds the volunteers find most often are {{11}}.",
+    "correctas": [
+     "thrushes",
+     "thrush",
+     "song thrushes"
+    ],
+    "explicacion": "«The birds we find most often are thrushes». Petirrojos y estorninos aparecen solo en pequeño número."
+   },
+   {
+    "n": 12,
+    "tipo": "palabra",
+    "frase": "The large offices agreed to turn off their decorative lighting at {{12}}.",
+    "correctas": [
+     "midnight",
+     "12",
+     "twelve"
+    ],
+    "explicacion": "Se pidió «at eleven, but they compromised on midnight». Las once es el distractor."
+   },
+   {
+    "n": 13,
+    "tipo": "palabra",
+    "frase": "Last year, collisions in the city centre fell by {{13}} per cent.",
+    "correctas": [
+     "forty",
+     "40"
+    ],
+    "explicacion": "«Fell by forty per cent». Treinta era la cifra esperada, no la lograda."
+   },
+   {
+    "n": 14,
+    "tipo": "palabra",
+    "frase": "Next spring the team will use {{14}} to watch whole flocks cross the region.",
+    "correctas": [
+     "radar"
+    ],
+    "explicacion": "«What we have chosen is radar». Las cámaras y las etiquetas de satélite se consideraron, pero se descartaron."
+   }
+  ],
+  "examenNumero": 7
+ },
+ {
+  "id": "c1-speaking-1-x7",
+  "examen": "c1",
+  "destreza": "speaking",
+  "parte": 1,
+  "nombreParte": "Interview",
+  "instrucciones": "The examiner asks you questions about yourself. Answer in full sentences and give reasons: two or three sentences per question is about right. About 2 minutes.",
+  "minutos": 2,
+  "items": [
+   {
+    "n": 1,
+    "tipo": "hablar",
+    "interlocutor": "Good afternoon. My name is Helen and this is my colleague, James. And your names are? … Thank you. To begin with, we’d like to ask you a few questions about yourself.",
+    "preguntas": [
+     "Could you tell us a little about the place where you live?",
+     "What do you enjoy doing in your free time, and how did you get into it?",
+     "If you could change one thing about your home or neighbourhood, what would it be?",
+     "Tell us about a local event or celebration that is important in your area.",
+     "How much do your studies or your job matter to you, and what would you like to achieve in that field?",
+     "Looking ahead, what are you hoping to be doing a few years from now?"
+    ],
+    "segundos": 120,
+    "modelo": "Respuestas de dos o tres frases con una razón o un ejemplo concreto: «I live in a fairly quiet town, but over the last few years it has come alive thanks to a music festival that draws visitors from all over the region. What I particularly like is…». Usa vocabulario variado (collocations, phrasal verbs) y conectores como «although», «which means» o «what’s more». Evita respuestas de una sola palabra y no recites un discurso memorizado: habla con naturalidad y mira a los dos examinadores."
+   }
+  ],
+  "examenNumero": 7
+ },
+ {
+  "id": "c1-listening-3-x7",
+  "examen": "c1",
+  "destreza": "listening",
+  "parte": 3,
+  "nombreParte": "Multiple choice (interview)",
+  "titulo": "A failed Antarctic crossing",
+  "instrucciones": "You will hear part of an interview with two people, Ingrid Walsh and Tom Okafor, who took part in an expedition to cross Antarctica that had to be abandoned. For questions 15–20, choose the answer (A, B, C or D) which fits best according to what you hear. You hear the recording twice.",
+  "minutos": 10,
+  "audio": {
+   "archivo": "audio/c1-listening-3-x7.mp3",
+   "veces": 2,
+   "hablantes": [
+    {
+     "id": "sup",
+     "descripcion": "Supervisor",
+     "voz": "en-GB-LibbyNeural"
+    },
+    {
+     "id": "int",
+     "descripcion": "Interviewer",
+     "voz": "en-GB-ThomasNeural"
+    },
+    {
+     "id": "ing",
+     "descripcion": "Ingrid Walsh",
+     "voz": "en-GB-SoniaNeural"
+    },
+    {
+     "id": "tom",
+     "descripcion": "Tom Okafor",
+     "voz": "en-IE-ConnorNeural"
+    }
+   ],
+   "guion": [
+    {
+     "quien": "sup",
+     "texto": "Part Three. You will hear part of an interview with two people, Ingrid Walsh and Tom Okafor, who took part in an expedition to cross Antarctica that had to be abandoned. For questions fifteen to twenty, choose the answer, A, B, C or D, which fits best according to what you hear. You now have seventy seconds to look at Part Three."
+    },
+    {
+     "pausa": 70000
+    },
+    {
+     "quien": "int",
+     "texto": "Ingrid, Tom, welcome. Ingrid, your attempt to cross the Antarctic plateau ended after five weeks. Many people point to the storm that pinned you down. When did you first doubt the expedition would succeed?"
+    },
+    {
+     "quien": "ing",
+     "texto": "Everyone assumes it was the storm, and the storm certainly made things worse. But it only confirmed what I already suspected. The real doubt came before we had even left the coast, when we were two days behind on a timetable that had no slack in it. I said nothing, which I regret. I told myself we would make the time up on the ice, and I think everyone else told themselves the same."
+    },
+    {
+     "quien": "int",
+     "texto": "Tom, you were in charge of equipment. A stove failure was widely reported. Was that the problem?"
+    },
+    {
+     "quien": "tom",
+     "texto": "That makes a good headline, and yes, one stove packed up, but we had two spares and it cost us an hour. No, the kit was fine. What hurt us was the weight. Our sledges were far heavier than the plan allowed, because we had agreed to carry film gear and extra supplies for sponsors. Every day we were hauling the consequences of a decision made in an office, months earlier."
+    },
+    {
+     "quien": "int",
+     "texto": "And the decision to turn back. How did that feel?"
+    },
+    {
+     "quien": "ing",
+     "texto": "I expected to feel like a failure. Instead, once we had voted, what I felt, rather to my surprise, was relief. As if somebody had taken a rucksack off me."
+    },
+    {
+     "quien": "tom",
+     "texto": "Same here. I had braced myself for shame, and it never came. Everyone slept better that night than they had for a fortnight."
+    },
+    {
+     "quien": "int",
+     "texto": "Ingrid, how did people react back home?"
+    },
+    {
+     "quien": "ing",
+     "texto": "Far more kindly than I deserved, to be honest. What I found hard was the phrase people kept using, that we had been unlucky. It is meant as comfort, but it makes the whole thing sound like weather, when in truth we made mistakes that we could have avoided. I would rather be criticised accurately than comforted wrongly."
+    },
+    {
+     "quien": "int",
+     "texto": "Tom, looking back, what do you think the team should have done differently?"
+    },
+    {
+     "quien": "tom",
+     "texto": "For a long time I blamed the forecast; we were told the window would be longer. I have changed my mind. Our youngest member, Priya, suggested in the first week that we shorten the route, and we brushed it aside because she was the least experienced. She was right. If we had taken her seriously, we might have finished something."
+    },
+    {
+     "quien": "int",
+     "texto": "Would either of you go back?"
+    },
+    {
+     "quien": "ing",
+     "texto": "Yes, I would, and sooner than people expect. Just not as leader. I would like to follow somebody else's plan for once and see how it feels."
+    },
+    {
+     "quien": "tom",
+     "texto": "I have told everyone never again, but I notice I keep studying maps. Ask me next year."
+    },
+    {
+     "pausa": 10000
+    },
+    {
+     "quien": "sup",
+     "texto": "Now you will hear it again."
+    },
+    {
+     "pausa": 1500
+    },
+    {
+     "quien": "int",
+     "texto": "Ingrid, Tom, welcome. Ingrid, your attempt to cross the Antarctic plateau ended after five weeks. Many people point to the storm that pinned you down. When did you first doubt the expedition would succeed?"
+    },
+    {
+     "quien": "ing",
+     "texto": "Everyone assumes it was the storm, and the storm certainly made things worse. But it only confirmed what I already suspected. The real doubt came before we had even left the coast, when we were two days behind on a timetable that had no slack in it. I said nothing, which I regret. I told myself we would make the time up on the ice, and I think everyone else told themselves the same."
+    },
+    {
+     "quien": "int",
+     "texto": "Tom, you were in charge of equipment. A stove failure was widely reported. Was that the problem?"
+    },
+    {
+     "quien": "tom",
+     "texto": "That makes a good headline, and yes, one stove packed up, but we had two spares and it cost us an hour. No, the kit was fine. What hurt us was the weight. Our sledges were far heavier than the plan allowed, because we had agreed to carry film gear and extra supplies for sponsors. Every day we were hauling the consequences of a decision made in an office, months earlier."
+    },
+    {
+     "quien": "int",
+     "texto": "And the decision to turn back. How did that feel?"
+    },
+    {
+     "quien": "ing",
+     "texto": "I expected to feel like a failure. Instead, once we had voted, what I felt, rather to my surprise, was relief. As if somebody had taken a rucksack off me."
+    },
+    {
+     "quien": "tom",
+     "texto": "Same here. I had braced myself for shame, and it never came. Everyone slept better that night than they had for a fortnight."
+    },
+    {
+     "quien": "int",
+     "texto": "Ingrid, how did people react back home?"
+    },
+    {
+     "quien": "ing",
+     "texto": "Far more kindly than I deserved, to be honest. What I found hard was the phrase people kept using, that we had been unlucky. It is meant as comfort, but it makes the whole thing sound like weather, when in truth we made mistakes that we could have avoided. I would rather be criticised accurately than comforted wrongly."
+    },
+    {
+     "quien": "int",
+     "texto": "Tom, looking back, what do you think the team should have done differently?"
+    },
+    {
+     "quien": "tom",
+     "texto": "For a long time I blamed the forecast; we were told the window would be longer. I have changed my mind. Our youngest member, Priya, suggested in the first week that we shorten the route, and we brushed it aside because she was the least experienced. She was right. If we had taken her seriously, we might have finished something."
+    },
+    {
+     "quien": "int",
+     "texto": "Would either of you go back?"
+    },
+    {
+     "quien": "ing",
+     "texto": "Yes, I would, and sooner than people expect. Just not as leader. I would like to follow somebody else's plan for once and see how it feels."
+    },
+    {
+     "quien": "tom",
+     "texto": "I have told everyone never again, but I notice I keep studying maps. Ask me next year."
+    },
+    {
+     "pausa": 10000
+    },
+    {
+     "quien": "sup",
+     "texto": "That is the end of Part Three."
+    }
+   ]
+  },
+  "items": [
+   {
+    "n": 15,
+    "tipo": "opciones",
+    "pregunta": "Ingrid says she first doubted the expedition would succeed when",
+    "opciones": [
+     "the storm trapped the team in their tents.",
+     "the team began to argue about the route.",
+     "the team fell behind schedule before leaving the coast.",
+     "the sponsors reduced their funding."
+    ],
+    "correcta": 2,
+    "explicacion": "«Before we had even left the coast… two days behind on a timetable that had no slack» (C). La tormenta solo «confirmed what I already suspected» (A no)."
+   },
+   {
+    "n": 16,
+    "tipo": "opciones",
+    "pregunta": "What does Tom say about the equipment?",
+    "opciones": [
+     "A stove failure left the team without hot food.",
+     "The loads were heavier than planned because of earlier agreements.",
+     "Much of the kit was too old to be reliable.",
+     "The team had not brought enough spare parts."
+    ],
+    "correcta": 1,
+    "explicacion": "«The kit was fine. What hurt us was the weight… we had agreed to carry film gear and extra supplies for sponsors» (B). La cocina falló pero tenían dos de repuesto (A y D no)."
+   },
+   {
+    "n": 17,
+    "tipo": "opciones",
+    "pregunta": "How did Ingrid and Tom both feel after deciding to turn back?",
+    "opciones": [
+     "ashamed that they had given up",
+     "angry about the way the expedition ended",
+     "unsure that they had made the right choice",
+     "relieved that the struggle was over"
+    ],
+    "correcta": 3,
+    "explicacion": "Ingrid: «what I felt… was relief»; Tom: «I had braced myself for shame, and it never came» (D). La vergüenza la esperaban pero no apareció (A no)."
+   },
+   {
+    "n": 18,
+    "tipo": "opciones",
+    "pregunta": "What does Ingrid dislike about the public reaction to the failure?",
+    "opciones": [
+     "It suggested that the team had simply been unlucky.",
+     "It was much harsher than she had expected.",
+     "It ignored the part played by the sponsors.",
+     "It focused too much on the storm."
+    ],
+    "correcta": 0,
+    "explicacion": "«People kept using… that we had been unlucky… it makes the whole thing sound like weather, when we made mistakes» (A). Dice que la gente fue amable (B no)."
+   },
+   {
+    "n": 19,
+    "tipo": "opciones",
+    "pregunta": "Tom now believes the team should have",
+    "opciones": [
+     "trained for longer before setting off.",
+     "chosen a more experienced leader.",
+     "paid more attention to a colleague's suggestion.",
+     "relied less on the weather forecast."
+    ],
+    "correcta": 2,
+    "explicacion": "Primero culpaba al pronóstico, pero cambió de opinión: Priya propuso acortar la ruta y no le hicieron caso (C). Culpar al pronóstico era su idea anterior (D no)."
+   },
+   {
+    "n": 20,
+    "tipo": "opciones",
+    "pregunta": "What does Ingrid say about returning to Antarctica?",
+    "opciones": [
+     "She will only go back with the same team.",
+     "She would go again, but not in charge.",
+     "She is not sure she wants to go back.",
+     "She will wait several years before deciding."
+    ],
+    "correcta": 1,
+    "explicacion": "«Yes, I would, and sooner than people expect. Just not as leader» (B). La indecisión («ask me next year») es de Tom, no de Ingrid (C y D no)."
+   }
+  ],
+  "examenNumero": 7
+ },
+ {
+  "id": "c1-listening-4-x7",
+  "examen": "c1",
+  "destreza": "listening",
+  "parte": 4,
+  "nombreParte": "Multiple matching",
+  "instrucciones": "You will hear five short extracts in which people who work in family-run bakeries are talking about the pressures their business is under. While you listen you must complete both tasks. TASK ONE: for questions 21–25, choose from the list (A–H) the main pressure each speaker mentions. TASK TWO: for questions 26–30, choose from the list (A–H) how each speaker has responded to it. You hear the recording twice.",
+  "minutos": 10,
+  "listas": [
+   {
+    "titulo": "Task One · the main pressure each speaker mentions",
+    "opciones": [
+     "rising costs of ingredients",
+     "competition from a supermarket",
+     "a shortage of skilled staff",
+     "a rent increase",
+     "changing eating habits",
+     "pressure from relatives to sell up",
+     "unpredictable energy bills",
+     "complaints on social media"
+    ]
+   },
+   {
+    "titulo": "Task Two · how each speaker has responded",
+    "opciones": [
+     "introduced a limited range of products",
+     "started teaching baking classes",
+     "moved production to a cheaper site",
+     "begun selling online",
+     "reduced opening hours",
+     "trained local school leavers",
+     "formed a partnership with a café",
+     "raised prices gradually"
+    ]
+   }
+  ],
+  "audio": {
+   "archivo": "audio/c1-listening-4-x7.mp3",
+   "veces": 2,
+   "hablantes": [
+    {
+     "id": "sup",
+     "descripcion": "Supervisor",
+     "voz": "en-GB-LibbyNeural"
+    },
+    {
+     "id": "s1",
+     "descripcion": "Speaker One",
+     "voz": "en-GB-RyanNeural"
+    },
+    {
+     "id": "s2",
+     "descripcion": "Speaker Two",
+     "voz": "en-AU-NatashaNeural"
+    },
+    {
+     "id": "s3",
+     "descripcion": "Speaker Three",
+     "voz": "en-IE-EmilyNeural"
+    },
+    {
+     "id": "s4",
+     "descripcion": "Speaker Four",
+     "voz": "en-GB-ThomasNeural"
+    },
+    {
+     "id": "s5",
+     "descripcion": "Speaker Five",
+     "voz": "en-GB-MaisieNeural"
+    }
+   ],
+   "guion": [
+    {
+     "quien": "sup",
+     "texto": "Part Four consists of two tasks. You will hear five short extracts in which people who work in family-run bakeries are talking about the pressures their business is under. Look at Task One. For questions twenty-one to twenty-five, choose from the list, A to H, the main pressure each speaker mentions. Now look at Task Two. For questions twenty-six to thirty, choose from the list, A to H, how each speaker has responded to it. While you listen you must complete both tasks. You now have forty-five seconds to look at Part Four."
+    },
+    {
+     "pausa": 45000
+    },
+    {
+     "quien": "sup",
+     "texto": "Speaker One."
+    },
+    {
+     "pausa": 800
+    },
+    {
+     "quien": "s1",
+     "texto": "My grandfather opened the shop in nineteen sixty-two, and for sixty years the deal was simple: we bake, people queue. Then a big supermarket opened two streets away with its own in-store oven and bread at half our price. We could never match that, so we stopped trying. Instead of the forty varieties we used to make, we now do six, and we do them better than anyone. Customers seem to appreciate it, and we waste far less at the end of the day."
+    },
+    {
+     "pausa": 2500
+    },
+    {
+     "quien": "sup",
+     "texto": "Speaker Two."
+    },
+    {
+     "pausa": 800
+    },
+    {
+     "quien": "s2",
+     "texto": "The flour price alone has nearly doubled, and butter is almost a luxury. I did not want to shock anyone, so every couple of months I add a few pence to a loaf or a croissant. Nobody has complained loudly, which tells me something. If I had put everything up in one go, I think we would have lost half our regulars overnight. Slow and steady is less dramatic, but it keeps the doors open."
+    },
+    {
+     "pausa": 2500
+    },
+    {
+     "quien": "sup",
+     "texto": "Speaker Three."
+    },
+    {
+     "pausa": 800
+    },
+    {
+     "quien": "s3",
+     "texto": "Our real problem is that nobody wants to do the job. Getting up at two in the morning to shape dough is not what most young people dream about. Two of our best bakers retired last year and we could not replace them. So we went into the local secondary school and offered paid placements. Five of them are now with us, and one has turned out to be remarkably talented. It has given the whole place a new energy."
+    },
+    {
+     "pausa": 2500
+    },
+    {
+     "quien": "sup",
+     "texto": "Speaker Four."
+    },
+    {
+     "pausa": 800
+    },
+    {
+     "quien": "s4",
+     "texto": "People simply do not eat bread the way they used to. My father sold twelve hundred loaves on a Saturday; I am lucky to sell four hundred. Everyone is cutting down on carbohydrates, or so they say. We were not going to survive on foot traffic alone, so last spring my daughter set up a website and we now post sourdough boxes all over the country. It was her idea, and I admit I was sceptical, but orders have doubled since January."
+    },
+    {
+     "pausa": 2500
+    },
+    {
+     "quien": "sup",
+     "texto": "Speaker Five."
+    },
+    {
+     "pausa": 800
+    },
+    {
+     "quien": "s5",
+     "texto": "The ovens run on gas, and the bill is different every month. One winter it was triple what I had budgeted, and I lay awake wondering how we would pay it. We cannot bake less, but we can open less, so we now close at two instead of five. It was a painful decision because afternoon customers loved us, but the shop is calmer and the books finally balance."
+    },
+    {
+     "pausa": 10000
+    },
+    {
+     "quien": "sup",
+     "texto": "Now you will hear it again."
+    },
+    {
+     "pausa": 1500
+    },
+    {
+     "quien": "sup",
+     "texto": "Speaker One."
+    },
+    {
+     "pausa": 800
+    },
+    {
+     "quien": "s1",
+     "texto": "My grandfather opened the shop in nineteen sixty-two, and for sixty years the deal was simple: we bake, people queue. Then a big supermarket opened two streets away with its own in-store oven and bread at half our price. We could never match that, so we stopped trying. Instead of the forty varieties we used to make, we now do six, and we do them better than anyone. Customers seem to appreciate it, and we waste far less at the end of the day."
+    },
+    {
+     "pausa": 2500
+    },
+    {
+     "quien": "sup",
+     "texto": "Speaker Two."
+    },
+    {
+     "pausa": 800
+    },
+    {
+     "quien": "s2",
+     "texto": "The flour price alone has nearly doubled, and butter is almost a luxury. I did not want to shock anyone, so every couple of months I add a few pence to a loaf or a croissant. Nobody has complained loudly, which tells me something. If I had put everything up in one go, I think we would have lost half our regulars overnight. Slow and steady is less dramatic, but it keeps the doors open."
+    },
+    {
+     "pausa": 2500
+    },
+    {
+     "quien": "sup",
+     "texto": "Speaker Three."
+    },
+    {
+     "pausa": 800
+    },
+    {
+     "quien": "s3",
+     "texto": "Our real problem is that nobody wants to do the job. Getting up at two in the morning to shape dough is not what most young people dream about. Two of our best bakers retired last year and we could not replace them. So we went into the local secondary school and offered paid placements. Five of them are now with us, and one has turned out to be remarkably talented. It has given the whole place a new energy."
+    },
+    {
+     "pausa": 2500
+    },
+    {
+     "quien": "sup",
+     "texto": "Speaker Four."
+    },
+    {
+     "pausa": 800
+    },
+    {
+     "quien": "s4",
+     "texto": "People simply do not eat bread the way they used to. My father sold twelve hundred loaves on a Saturday; I am lucky to sell four hundred. Everyone is cutting down on carbohydrates, or so they say. We were not going to survive on foot traffic alone, so last spring my daughter set up a website and we now post sourdough boxes all over the country. It was her idea, and I admit I was sceptical, but orders have doubled since January."
+    },
+    {
+     "pausa": 2500
+    },
+    {
+     "quien": "sup",
+     "texto": "Speaker Five."
+    },
+    {
+     "pausa": 800
+    },
+    {
+     "quien": "s5",
+     "texto": "The ovens run on gas, and the bill is different every month. One winter it was triple what I had budgeted, and I lay awake wondering how we would pay it. We cannot bake less, but we can open less, so we now close at two instead of five. It was a painful decision because afternoon customers loved us, but the shop is calmer and the books finally balance."
+    },
+    {
+     "pausa": 10000
+    },
+    {
+     "quien": "sup",
+     "texto": "That is the end of Part Four."
+    }
+   ]
+  },
+  "items": [
+   {
+    "n": 21,
+    "tipo": "emparejar",
+    "lista": 0,
+    "pregunta": "Speaker 1",
+    "correcta": 1,
+    "explicacion": "«A big supermarket opened two streets away… bread at half our price»: competencia de un supermercado (B)."
+   },
+   {
+    "n": 22,
+    "tipo": "emparejar",
+    "lista": 0,
+    "pregunta": "Speaker 2",
+    "correcta": 0,
+    "explicacion": "«The flour price alone has nearly doubled, and butter is almost a luxury»: subida del coste de ingredientes (A)."
+   },
+   {
+    "n": 23,
+    "tipo": "emparejar",
+    "lista": 0,
+    "pregunta": "Speaker 3",
+    "correcta": 2,
+    "explicacion": "«Nobody wants to do the job… we could not replace them»: falta de personal cualificado (C)."
+   },
+   {
+    "n": 24,
+    "tipo": "emparejar",
+    "lista": 0,
+    "pregunta": "Speaker 4",
+    "correcta": 4,
+    "explicacion": "«People simply do not eat bread the way they used to… cutting down on carbohydrates»: cambio de hábitos alimentarios (E)."
+   },
+   {
+    "n": 25,
+    "tipo": "emparejar",
+    "lista": 0,
+    "pregunta": "Speaker 5",
+    "correcta": 6,
+    "explicacion": "«The ovens run on gas, and the bill is different every month»: facturas de energía imprevisibles (G)."
+   },
+   {
+    "n": 26,
+    "tipo": "emparejar",
+    "lista": 1,
+    "pregunta": "Speaker 1",
+    "correcta": 0,
+    "explicacion": "«Instead of the forty varieties… we now do six»: ha reducido la gama de productos (A)."
+   },
+   {
+    "n": 27,
+    "tipo": "emparejar",
+    "lista": 1,
+    "pregunta": "Speaker 2",
+    "correcta": 7,
+    "explicacion": "«Every couple of months I add a few pence»: sube los precios poco a poco (H)."
+   },
+   {
+    "n": 28,
+    "tipo": "emparejar",
+    "lista": 1,
+    "pregunta": "Speaker 3",
+    "correcta": 5,
+    "explicacion": "«We went into the local secondary school and offered paid placements»: forma a jóvenes del lugar (F)."
+   },
+   {
+    "n": 29,
+    "tipo": "emparejar",
+    "lista": 1,
+    "pregunta": "Speaker 4",
+    "correcta": 3,
+    "explicacion": "«My daughter set up a website and we now post sourdough boxes»: vende por internet (D)."
+   },
+   {
+    "n": 30,
+    "tipo": "emparejar",
+    "lista": 1,
+    "pregunta": "Speaker 5",
+    "correcta": 4,
+    "explicacion": "«We now close at two instead of five»: ha reducido el horario (E)."
+   }
+  ],
+  "examenNumero": 7
+ },
+ {
+  "id": "c1-speaking-3-x7",
+  "examen": "c1",
+  "destreza": "speaking",
+  "parte": 3,
+  "nombreParte": "Collaborative task",
+  "instrucciones": "You and your partner discuss the question on the sheet, using the ideas around it, for about 2 minutes. Then you have about a minute to reach a decision together. You get 15 seconds to read the sheet first.",
+  "minutos": 4,
+  "items": [
+   {
+    "n": 1,
+    "tipo": "hablar",
+    "interlocutor": "Now, I’d like you to talk about something together for about two minutes. Here are some things a small fishing community might consider when it decides to welcome more tourists, and a question for you to discuss. First you have some time to look at the task. … Now, talk to each other about how tourism could affect a fishing community.",
+    "preguntaCentral": "How might tourism affect life in a traditional fishing community?",
+    "ideas": [
+     "local jobs and income",
+     "the fishing tradition",
+     "the price of housing",
+     "pressure on the harbour and beaches",
+     "the sense of community"
+    ],
+    "preguntas": [
+     "Now you have about a minute to decide which of these the community should worry about most."
+    ],
+    "segundos": 180,
+    "segundosLectura": 15,
+    "modelo": "No hace falta tratar las cinco ideas: dos o tres bien desarrolladas valen más. Aporta ejemplos concretos y contrasta ventajas y riesgos («On the one hand… yet on the other…», «That could be a double-edged sword»). Implica a tu compañero («How do you see it?», «Would you say that…?») y reacciona con matices («That’s a fair point, although…»). En el último minuto negocia y cierra con una decisión conjunta dicha en voz alta («So shall we agree that…?»)."
+   }
+  ],
+  "examenNumero": 7
+ },
+ {
+  "id": "c1-speaking-2-x7",
+  "examen": "c1",
+  "destreza": "speaking",
+  "parte": 2,
+  "nombreParte": "Long turn",
+  "instrucciones": "You get three pictures and talk about two of them on your own for about a minute, answering the two questions written above the pictures. Then your partner answers a short question about your pictures (about 30 seconds). About 4 minutes in total.",
+  "minutos": 4,
+  "items": [
+   {
+    "n": 1,
+    "tipo": "hablar",
+    "pregunta": "People preparing for a career",
+    "interlocutor": "In this part of the test, I’m going to give each of you three pictures. I’d like you to talk about two of them on your own for about a minute, and also to answer a question briefly about your partner’s pictures. Here are your pictures. They show people preparing for a career. I’d like you to compare two of the pictures, and say what the people might be gaining from these experiences, and how confident they might be feeling about their future.",
+    "imagenes": [
+     "A young woman in overalls leaning over an engine beside an experienced mechanic, who is pointing at a part with a spanner. Tools hang neatly on the wall behind them and a radio plays quietly.",
+     "A crowded university lecture hall in which students take notes on laptops while a lecturer gestures at a complicated diagram on a huge screen. One student near the back is yawning.",
+     "A young man in a smart shirt and lanyard shadowing a manager in a glass-walled office, holding a notebook and nodding while she explains something on a spreadsheet."
+    ],
+    "preguntas": [
+     "What might the people be gaining from these experiences?",
+     "How confident might they be feeling about their future?"
+    ],
+    "segundos": 60,
+    "modelo": "Compara en lugar de describir por separado: «Whereas the trainee mechanic is learning by doing, the students in the lecture hall are absorbing theory…». Usa lenguaje de especulación (might, probably, I suspect, presumably) y de contraste (whereas, in contrast, by comparison). Contesta a las DOS preguntas: qué ganan (habilidades prácticas, contactos, conocimientos) y cuánta confianza tienen. Pregunta para el compañero (30 s): «Which of these ways of preparing for a career would suit you best? Why?»"
+   },
+   {
+    "n": 2,
+    "tipo": "hablar",
+    "pregunta": "People enjoying the outdoors",
+    "interlocutor": "Now, here are your pictures. They show people enjoying the outdoors. I’d like you to compare two of the pictures, and say why the people might have chosen to spend their time in this way, and what the benefits of these activities might be.",
+    "imagenes": [
+     "A group of cyclists in bright jackets resting beside their bikes at the top of a hill, passing round a flask while mist lifts from the valley below.",
+     "A woman kneeling in an allotment, planting seedlings in a neat row, with a wheelbarrow and a battered straw hat beside her and a robin perched on a fork handle.",
+     "Two children and their grandfather sitting on a rocky beach with fishing rods, a bucket between them, wrapped in woolly hats against a stiff sea breeze."
+    ],
+    "preguntas": [
+     "Why might the people have chosen to spend their time in this way?",
+     "What might the benefits of these activities be?"
+    ],
+    "segundos": 60,
+    "modelo": "Contrasta el tipo de actividad: esfuerzo físico y compañerismo (ciclistas), paciencia y trabajo tranquilo en solitario (huerto), tiempo en familia entre generaciones (pesca). Usa while, whereas, on the other hand y lenguaje de especulación. Habla de beneficios físicos, mentales y sociales. Pregunta para el compañero: «Which of these activities would you most like to try? Why?»"
+   }
+  ],
+  "examenNumero": 7
+ },
+ {
+  "id": "c1-speaking-4-x7",
+  "examen": "c1",
+  "destreza": "speaking",
+  "parte": 4,
+  "nombreParte": "Discussion",
+  "instrucciones": "The examiner asks you and your partner questions related to the topic of Part 3. Give opinions with reasons and react to what your partner says. About 5 minutes.",
+  "minutos": 5,
+  "items": [
+   {
+    "n": 1,
+    "tipo": "hablar",
+    "interlocutor": "Use the following questions, in order, as appropriate: … What do you think? … Do you agree? … And you?",
+    "preguntas": [
+     "What do you think is the biggest obstacle for adults who decide to learn a new language?",
+     "Is it more effective to learn a language in a classroom or by living in a country where it is spoken? Why?",
+     "Some people say that adults can never reach the fluency of a native speaker. How far do you agree?",
+     "How important is it for adults to make mistakes and feel embarrassed when learning a language?",
+     "Do you think language-learning apps and online tools will eventually replace human teachers?",
+     "Should employers encourage staff to learn languages, or is it a matter of personal choice?"
+    ],
+    "segundos": 300,
+    "modelo": "Empieza por lo concreto (falta de tiempo, miedo a hablar, constancia) y avanza hacia lo abstracto (identidad, tecnología, el futuro del trabajo). Desarrolla cada respuesta con postura, razón y ejemplo personal («In my experience…»). Matiza con «Although it’s true that…, I’d argue that…». Reacciona al compañero («I see what you mean, but…», «That’s true, and what’s more…»). Si dudas, gana tiempo: «That’s an interesting question. I suppose…»."
+   }
+  ],
+  "examenNumero": 7
+ },
+ {
+  "id": "c1-reading-use-1-x7",
+  "examen": "c1",
+  "destreza": "reading-use",
+  "parte": 1,
+  "nombreParte": "Multiple-choice cloze",
+  "titulo": "Behind the varnish",
+  "instrucciones": "For questions 1–8, read the text below and decide which answer (A, B, C or D) best fits each gap.",
+  "minutos": 10,
+  "texto": "When a small landscape arrived at the conservation studio last spring, nobody expected it to cause much excitement. Its surface was so {{1}} with grime and yellowed varnish that the sky looked brown and the trees almost black. Restorers, however, are trained to see beyond the dirt, and the first test patch, no bigger than a fingernail, was enough to {{2}} a dazzling blue underneath.\n\nCleaning a picture is painstaking work. Each section is treated with a mild solvent, and the restorer must {{3}} a careful balance: remove too little and the colours stay dull; remove too much and the artist's own delicate glazes disappear for good. Over the centuries, many masterpieces have suffered at the hands of well-meaning but heavy-handed cleaners. {{4}} the temptation to rush, the team at the studio worked for months under a microscope.\n\nOnce the grime had been lifted, damage from earlier repairs came to {{5}}. Clumsy overpainting, added decades ago, had been applied {{6}} over the original, and it took weeks to take it off. Any new retouching, the restorers insist, must be fully reversible. 'Our aim is not to make a picture look new,' the head conservator explained, 'but to let it speak as the painter {{7}}.' When the landscape finally went back on display, visitors queued to see it, and several were {{8}} to tears by the sudden brilliance of the sky.",
+  "items": [
+   {
+    "n": 1,
+    "tipo": "opciones",
+    "opciones": [
+     "coated",
+     "clogged",
+     "layered",
+     "smeared"
+    ],
+    "correcta": 1,
+    "explicacion": "\"Clogged with\" = bloqueado o cubierto de una capa espesa de suciedad. \"Coated\" y \"smeared\" suelen ir con \"in\" o \"with\" pero no transmiten esa idea de acumulación espesa; \"layered\" no se usa con suciedad."
+   },
+   {
+    "n": 2,
+    "tipo": "opciones",
+    "opciones": [
+     "reveal",
+     "expose",
+     "disclose",
+     "betray"
+    ],
+    "correcta": 0,
+    "explicacion": "\"Reveal\" es lo que se hace al dejar ver algo que estaba oculto. \"Expose\" implica dejar a algo desprotegido o desenmascarar; \"disclose\" se usa con información; \"betray\" implica traición o delatar sin querer."
+   },
+   {
+    "n": 3,
+    "tipo": "opciones",
+    "opciones": [
+     "strike",
+     "hit",
+     "catch",
+     "reach"
+    ],
+    "correcta": 0,
+    "explicacion": "\"Strike a balance\" es la colocación fija. Las otras no forman esa expresión."
+   },
+   {
+    "n": 4,
+    "tipo": "opciones",
+    "opciones": [
+     "Despite",
+     "Resisting",
+     "Although",
+     "Regardless"
+    ],
+    "correcta": 1,
+    "explicacion": "\"Resisting the temptation\" (participio) es la colocación natural. \"Despite\" necesitaría \"despite the temptation OF rushing\" y no encaja aquí; \"although\" requiere una oración; \"regardless\" necesita \"of\"."
+   },
+   {
+    "n": 5,
+    "tipo": "opciones",
+    "opciones": [
+     "sight",
+     "view",
+     "light",
+     "mind"
+    ],
+    "correcta": 2,
+    "explicacion": "\"Come to light\" = salir a la luz, descubrirse. \"Come to sight/view\" no es la expresión fija, y \"come to mind\" significa ocurrírsele a alguien."
+   },
+   {
+    "n": 6,
+    "tipo": "opciones",
+    "opciones": [
+     "thickly",
+     "heavily",
+     "densely",
+     "deeply"
+    ],
+    "correcta": 0,
+    "explicacion": "\"Thickly\" es el adverbio natural con pintura aplicada en capa gruesa (\"applied thickly\"). \"Heavily\" se usa más con \"rely\" o \"depend\"; \"densely\" describe cosas agrupadas; \"deeply\" no se usa con aplicar pintura."
+   },
+   {
+    "n": 7,
+    "tipo": "opciones",
+    "opciones": [
+     "meant",
+     "aimed",
+     "designed",
+     "intended"
+    ],
+    "correcta": 3,
+    "explicacion": "\"As the painter intended\" = como el pintor quería. \"Meant\" necesitaría \"it to\" (\"as the painter meant it to\"); \"aimed\" y \"designed\" no forman esta construcción."
+   },
+   {
+    "n": 8,
+    "tipo": "opciones",
+    "opciones": [
+     "driven",
+     "moved",
+     "taken",
+     "brought"
+    ],
+    "correcta": 1,
+    "explicacion": "\"Moved to tears\" es la expresión fija. \"Driven to tears\" sugiere desesperación o maltrato; \"taken\" y \"brought\" no funcionan con \"to tears\" en este sentido."
+   }
+  ],
+  "examenNumero": 7
+ }
+]

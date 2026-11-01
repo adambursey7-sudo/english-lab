@@ -35,3 +35,7 @@ App web instalable (PWA, React 19 + TypeScript + Vite) de Adam para practicar ex
 - `npm run dev` (abierto a la wifi para probar en el iPhone), `npm run build`, `npm run build:pages`, `npm test`, `npm run typecheck`.
 - Al añadir ejercicios: `npm test` comprueba ids únicos, huecos que existen, transformaciones de 3–6 palabras y explicaciones.
 - **Enlace público provisional (28/10):** `npm run build` + `npx vite preview --host 127.0.0.1 --port 4173 --strictPort` en una ventana propia, publicado con `tailscale funnel --bg --https=8443 4173` → https://msi.tail0b94b8.ts.net:8443 (depende del PC de Adam encendido; `preview.allowedHosts` permite `.ts.net`). Apagar con `tailscale funnel --https=8443 off`. El puerto 443 de Tailscale lo usa Jarvis (solo tailnet): no tocarlo. Sustituir por GitHub Pages cuando Adam inicie sesión.
+
+## Banco de exámenes y servidor de entregas (1/11/2026)
+- `src/banco/generados/examen-<c1|pau>-<N>.json`: exámenes enteros (C1 4–10, PAU 4–10), cargados solos en `BANCO`.
+- **Servidor de entregas:** `servidor/servidor.mjs` (sin dependencias, puerto 4180, datos fuera del repo en `C:\dev\english-lab-entregas`): `POST /api/entrega` y `/api/audio` con `X-Alumno`/`X-Pin` (5 fallos = 15 min de bloqueo), `GET /api/notas`, panel `/corregir` con la clave de `clave-adam.txt`. `servidor/arrancar.ps1` lo arranca y abre `tailscale funnel --https=10000`. Cliente: `src/motor/servidor.ts` (`URL_SERVIDOR` en `config.ts`); sin respuesta cae a compartir/WhatsApp.

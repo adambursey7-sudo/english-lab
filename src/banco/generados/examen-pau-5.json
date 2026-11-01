@@ -1,0 +1,363 @@
+[
+ {
+  "id": "pau-prueba-5-x5",
+  "examen": "pau",
+  "destreza": "prueba",
+  "parte": 5,
+  "nombreParte": "Comment on a situation",
+  "instrucciones": "5. Choose ONLY 3 of the following situations and WRITE what you would say in each one to show that you understand the context of the situation. Write between 10 and 25 words. (1.5 points) Only the first three you answer will be marked.",
+  "minutos": 10,
+  "elegir": 3,
+  "items": [
+   {
+    "n": 1,
+    "tipo": "redaccion",
+    "tipoTexto": "situation",
+    "enunciado": "a) Your school is starting a radio station and your friend asks you if students should choose the music. Give your opinion.",
+    "minPalabras": 10,
+    "maxPalabras": 25,
+    "modelo": "I think students should choose the music because we know what our classmates like. Everyone would listen to the radio more often.",
+    "criterios": [
+     "Lo que escribo encaja con la situación o con la conversación (si el hueco acaba en «?», es una pregunta).",
+     "Sin errores de gramática ni de ortografía: cada error baja la nota (0,25 → 0,20 → 0,15 → 0).",
+     "Ni muy corto ni muy largo: en las situaciones, entre 10 y 25 palabras."
+    ],
+    "explicacion": "Dar una opinión: «I think… because…» con una razón clara. 10–25 palabras."
+   },
+   {
+    "n": 2,
+    "tipo": "redaccion",
+    "tipoTexto": "situation",
+    "enunciado": "b) You are the host of the school radio show, but the microphone stops working during the broadcast. Apologise to the listeners.",
+    "minPalabras": 10,
+    "maxPalabras": 25,
+    "modelo": "Sorry, everyone, we are having a technical problem with the microphone. Please stay with us, because we will be back in a minute.",
+    "criterios": [
+     "Lo que escribo encaja con la situación o con la conversación (si el hueco acaba en «?», es una pregunta).",
+     "Sin errores de gramática ni de ortografía: cada error baja la nota (0,25 → 0,20 → 0,15 → 0).",
+     "Ni muy corto ni muy largo: en las situaciones, entre 10 y 25 palabras."
+    ],
+    "explicacion": "Pedir disculpas: «Sorry / I apologise…», explicar el problema y decir qué ocurrirá."
+   },
+   {
+    "n": 3,
+    "tipo": "redaccion",
+    "tipoTexto": "situation",
+    "enunciado": "c) A classmate wants to join the radio team but he is very shy. Advise him.",
+    "minPalabras": 10,
+    "maxPalabras": 25,
+    "modelo": "You should come to the next meeting. Don’t worry about being shy, because you can start by preparing the news and speaking later.",
+    "criterios": [
+     "Lo que escribo encaja con la situación o con la conversación (si el hueco acaba en «?», es una pregunta).",
+     "Sin errores de gramática ni de ortografía: cada error baja la nota (0,25 → 0,20 → 0,15 → 0).",
+     "Ni muy corto ni muy largo: en las situaciones, entre 10 y 25 palabras."
+    ],
+    "explicacion": "Aconsejar: «You should…», «Why don’t you…?», con una idea práctica."
+   },
+   {
+    "n": 4,
+    "tipo": "redaccion",
+    "tipoTexto": "situation",
+    "enunciado": "d) The teacher asks you to present the radio programme on Friday at 8 a.m., but you cannot because you have a dentist appointment. Refuse politely.",
+    "minPalabras": 10,
+    "maxPalabras": 25,
+    "modelo": "Thank you for asking me, but I’m afraid I can’t on Friday morning. I have a dentist appointment, but I could help on Monday.",
+    "criterios": [
+     "Lo que escribo encaja con la situación o con la conversación (si el hueco acaba en «?», es una pregunta).",
+     "Sin errores de gramática ni de ortografía: cada error baja la nota (0,25 → 0,20 → 0,15 → 0).",
+     "Ni muy corto ni muy largo: en las situaciones, entre 10 y 25 palabras."
+    ],
+    "explicacion": "Rechazar con educación: agradecer, «I’m afraid I can’t…», dar la razón y ofrecer una alternativa."
+   },
+   {
+    "n": 5,
+    "tipo": "redaccion",
+    "tipoTexto": "situation",
+    "enunciado": "e) The radio programme is on during break, but the music is so loud that you cannot talk to your friends. Complain to the radio team.",
+    "minPalabras": 10,
+    "maxPalabras": 25,
+    "modelo": "Excuse me, the music is too loud during break. We can’t talk to each other, so could you turn it down, please?",
+    "criterios": [
+     "Lo que escribo encaja con la situación o con la conversación (si el hueco acaba en «?», es una pregunta).",
+     "Sin errores de gramática ni de ortografía: cada error baja la nota (0,25 → 0,20 → 0,15 → 0).",
+     "Ni muy corto ni muy largo: en las situaciones, entre 10 y 25 palabras."
+    ],
+    "explicacion": "Quejarse con educación: «Excuse me…», decir el problema y pedir una solución («could you…?»)."
+   }
+  ],
+  "examenNumero": 5
+ },
+ {
+  "id": "pau-prueba-4-x5",
+  "examen": "pau",
+  "destreza": "prueba",
+  "parte": 4,
+  "nombreParte": "Complete a conversation",
+  "titulo": "Talking about too much homework with a classmate",
+  "instrucciones": "4. READ this conversation and COMPLETE your part. Write the numbers (1-6) and complete each sentence on your exam paper. (1.5 points) If a gap ends with a question mark, you must write a question.",
+  "minutos": 10,
+  "texto": "Your classmate: I’m so tired. I was up until midnight finishing my homework again.\nYou: Oh no! {{1}}\nYour classmate: Maths, English and a long history project. It’s too much for one night.\nYou: I agree. And {{2}}?\nYour classmate: About three hours, but sometimes more when I have a test.\nYou: That’s a lot. {{3}}\nYour classmate: I don’t think so. I’m too busy and I don’t have time to play football any more.\nYou: Maybe we should talk to our teacher. {{4}}\nYour classmate: Good idea! Do you think she will listen to us?\nYou: I hope so. Do you know {{5}}?\nYour classmate: She is usually in the classroom after lunch, so we can go then.\nYour classmate: Thanks for helping me. You’re a good friend.\nYou: {{6}}",
+  "items": [
+   {
+    "n": 1,
+    "tipo": "redaccion",
+    "tipoTexto": "dialogue",
+    "enunciado": "Hueco 1",
+    "minPalabras": 2,
+    "maxPalabras": 25,
+    "modelo": "What homework did you have?  /  Which subjects did you have to do?",
+    "criterios": [
+     "Lo que escribo encaja con la situación o con la conversación (si el hueco acaba en «?», es una pregunta).",
+     "Sin errores de gramática ni de ortografía: cada error baja la nota (0,25 → 0,20 → 0,15 → 0).",
+     "Ni muy corto ni muy largo: en las situaciones, entre 10 y 25 palabras."
+    ],
+    "explicacion": "El compañero responde con una lista de tareas (Maths, English, history project), así que preguntas qué deberes tenía."
+   },
+   {
+    "n": 2,
+    "tipo": "redaccion",
+    "tipoTexto": "dialogue",
+    "enunciado": "Hueco 2 (acaba en «?»: tiene que ser una pregunta)",
+    "minPalabras": 2,
+    "maxPalabras": 25,
+    "modelo": "how long do you spend on homework every day  /  how many hours do you work each evening",
+    "criterios": [
+     "Lo que escribo encaja con la situación o con la conversación (si el hueco acaba en «?», es una pregunta).",
+     "Sin errores de gramática ni de ortografía: cada error baja la nota (0,25 → 0,20 → 0,15 → 0).",
+     "Ni muy corto ni muy largo: en las situaciones, entre 10 y 25 palabras."
+    ],
+    "explicacion": "La respuesta «About three hours» indica que preguntas por el tiempo dedicado a los deberes. El «And» y el «?» ya están escritos."
+   },
+   {
+    "n": 3,
+    "tipo": "redaccion",
+    "tipoTexto": "dialogue",
+    "enunciado": "Hueco 3",
+    "minPalabras": 2,
+    "maxPalabras": 25,
+    "modelo": "Do you have any free time in the evening?  /  Do you ever have time to relax?",
+    "criterios": [
+     "Lo que escribo encaja con la situación o con la conversación (si el hueco acaba en «?», es una pregunta).",
+     "Sin errores de gramática ni de ortografía: cada error baja la nota (0,25 → 0,20 → 0,15 → 0).",
+     "Ni muy corto ni muy largo: en las situaciones, entre 10 y 25 palabras."
+    ],
+    "explicacion": "«I don’t think so. I’m too busy…» responde a una pregunta sobre si tiene tiempo libre."
+   },
+   {
+    "n": 4,
+    "tipo": "redaccion",
+    "tipoTexto": "dialogue",
+    "enunciado": "Hueco 4",
+    "minPalabras": 2,
+    "maxPalabras": 25,
+    "modelo": "We can ask her to give us less homework.  /  I’ll tell her that many students feel the same.",
+    "criterios": [
+     "Lo que escribo encaja con la situación o con la conversación (si el hueco acaba en «?», es una pregunta).",
+     "Sin errores de gramática ni de ortografía: cada error baja la nota (0,25 → 0,20 → 0,15 → 0).",
+     "Ni muy corto ni muy largo: en las situaciones, entre 10 y 25 palabras."
+    ],
+    "explicacion": "Tras proponer hablar con la profesora, añades qué le pediréis; el amigo contesta «Good idea!»."
+   },
+   {
+    "n": 5,
+    "tipo": "redaccion",
+    "tipoTexto": "dialogue",
+    "enunciado": "Hueco 5 (acaba en «?»: tiene que ser una pregunta)",
+    "minPalabras": 2,
+    "maxPalabras": 25,
+    "modelo": "where we can find her  /  when she is free to talk",
+    "criterios": [
+     "Lo que escribo encaja con la situación o con la conversación (si el hueco acaba en «?», es una pregunta).",
+     "Sin errores de gramática ni de ortografía: cada error baja la nota (0,25 → 0,20 → 0,15 → 0).",
+     "Ni muy corto ni muy largo: en las situaciones, entre 10 y 25 palabras."
+    ],
+    "explicacion": "La respuesta «She is usually in the classroom after lunch» indica que preguntas dónde o cuándo encontrar a la profesora."
+   },
+   {
+    "n": 6,
+    "tipo": "redaccion",
+    "tipoTexto": "dialogue",
+    "enunciado": "Hueco 6",
+    "minPalabras": 2,
+    "maxPalabras": 25,
+    "modelo": "You’re welcome! That’s what friends are for.  /  No problem. I’m sure we can fix this together.",
+    "criterios": [
+     "Lo que escribo encaja con la situación o con la conversación (si el hueco acaba en «?», es una pregunta).",
+     "Sin errores de gramática ni de ortografía: cada error baja la nota (0,25 → 0,20 → 0,15 → 0).",
+     "Ni muy corto ni muy largo: en las situaciones, entre 10 y 25 palabras."
+    ],
+    "explicacion": "Cierra la conversación respondiendo a las gracias del compañero de forma amable."
+   }
+  ],
+  "examenNumero": 5
+ },
+ {
+  "id": "pau-prueba-1-x5",
+  "examen": "pau",
+  "destreza": "prueba",
+  "parte": 1,
+  "nombreParte": "Comprensión del texto",
+  "titulo": "Why a good book is better than another scroll",
+  "instrucciones": "Read the text and answer questions 1, 2 and 3. In question 1, copy the exact words from the text as evidence; in question 2, copy no more than 10 words; in question 3, find the word in the text that matches each definition.",
+  "minutos": 25,
+  "texto": "Ten years ago, most teenagers could name a book they had read for fun in the last month. Today, many cannot. A recent survey of 3,000 students across Europe found that only one in four reads for pleasure every week, while more than half spend over three hours a day on social media.\n\nThis worries teachers, but it also worries scientists. Dr Helen Moore, a psychologist who studies young readers, says that reading for pleasure is one of the best habits a teenager can have. “Students who read regularly do better in all their subjects, not only in language classes,” she explains. “They learn new words without noticing, and they understand other people’s ideas more easily.”\n\nReading can also improve mental health. In one experiment, a group of students read a novel for thirty minutes before going to bed. After two weeks, they slept longer and felt less stressed than the students who looked at their phones. Dr Moore thinks the reason is simple: a book does not send notifications, so the brain can relax.\n\nHowever, many teenagers say that they simply do not have time. Sixteen-year-old Marta Ruiz used to be one of them. “I thought books were boring and too long,” she says. “Then my sister gave me a short thriller, and I finished it in three days. Now I always carry a book in my bag.”\n\nExperts suggest some easy ways to start. Choose a subject you really like, whether it is football, fashion or science fiction. Read for ten minutes a day and increase the time slowly. Do not be afraid to give up a book that you dislike. Finally, you can join a reading club, either at school or online, where you can share opinions with other readers.\n\nSchools are also trying to help. In some towns, teachers have introduced a “silent quarter of an hour” at the start of the day, when everyone, including the head teacher, reads whatever they want. So far, the results are encouraging: students arrive in class calmer and more ready to learn.",
+  "items": [
+   {
+    "n": 1,
+    "tipo": "verdaderoFalso",
+    "pregunta": "1. Say whether the following sentences are TRUE or FALSE according to the text. COPY the evidence from the text. No marks will be given without the evidence. (1.5 points)",
+    "afirmacion": "a) Most European students read for pleasure every week.",
+    "correcta": false,
+    "pruebas": [
+     "only one in four reads for pleasure every week",
+     "found that only one in four reads for pleasure every week"
+    ],
+    "explicacion": "FALSE: según la encuesta solo uno de cada cuatro lee por placer cada semana. La prueba hay que copiarla tal cual del texto: ni con puntos suspensivos ni con el número de línea."
+   },
+   {
+    "n": 2,
+    "tipo": "verdaderoFalso",
+    "afirmacion": "b) The students who read before bed felt less stressed than those who used their phones.",
+    "correcta": true,
+    "pruebas": [
+     "they slept longer and felt less stressed than the students who looked at their phones",
+     "felt less stressed than the students who looked at their phones"
+    ],
+    "explicacion": "TRUE: en el experimento, los que leían durmieron más y se sentían menos estresados que los que miraban el móvil."
+   },
+   {
+    "n": 3,
+    "tipo": "verdaderoFalso",
+    "afirmacion": "c) Marta Ruiz has always enjoyed reading long books.",
+    "correcta": false,
+    "pruebas": [
+     "I thought books were boring and too long",
+     "Marta Ruiz used to be one of them"
+    ],
+    "explicacion": "FALSE: Marta pensaba que los libros eran aburridos y demasiado largos; empezó a leer con un thriller corto."
+   },
+   {
+    "n": 4,
+    "tipo": "palabra",
+    "pregunta": "2. ANSWER the questions below. COPY no more than 10 words and/or a number from the text to answer each question. (1.5 points)\na) How many students took part in the survey?",
+    "correctas": [
+     "3,000 students across Europe",
+     "3,000 students",
+     "3,000"
+    ],
+    "maxPalabras": 10,
+    "explicacion": "«A recent survey of 3,000 students across Europe». Hay que copiar el número tal como aparece en el texto."
+   },
+   {
+    "n": 5,
+    "tipo": "palabra",
+    "pregunta": "b) How much time a day do experts advise teenagers to read at the beginning?",
+    "correctas": [
+     "ten minutes a day",
+     "Read for ten minutes a day",
+     "for ten minutes a day",
+     "ten minutes"
+    ],
+    "maxPalabras": 10,
+    "explicacion": "«Read for ten minutes a day and increase the time slowly»."
+   },
+   {
+    "n": 6,
+    "tipo": "palabra",
+    "pregunta": "c) Who reads during the “silent quarter of an hour” in some schools?",
+    "correctas": [
+     "everyone, including the head teacher",
+     "everyone, including the head teacher, reads whatever they want",
+     "everyone",
+     "including the head teacher"
+    ],
+    "maxPalabras": 10,
+    "explicacion": "«when everyone, including the head teacher, reads whatever they want»: lee todo el mundo, también el director."
+   },
+   {
+    "n": 7,
+    "tipo": "palabra",
+    "pregunta": "3. FIND a word or expression in the text that means… (1 point)\nd) a set of questions asked to many people to find out their opinions (paragraph 1)",
+    "correctas": [
+     "survey"
+    ],
+    "explicacion": "«A recent survey of 3,000 students across Europe». Hay que escribir la palabra tal cual aparece en el texto."
+   },
+   {
+    "n": 8,
+    "tipo": "palabra",
+    "pregunta": "e) tests done to find out if an idea is true (paragraph 3)",
+    "correctas": [
+     "experiment"
+    ],
+    "explicacion": "«In one experiment, a group of students read a novel»."
+   },
+   {
+    "n": 9,
+    "tipo": "palabra",
+    "pregunta": "f) to stop doing something before finishing it (paragraph 5)",
+    "correctas": [
+     "give up"
+    ],
+    "explicacion": "«Do not be afraid to give up a book that you dislike»."
+   },
+   {
+    "n": 10,
+    "tipo": "palabra",
+    "pregunta": "g) giving hope or confidence (paragraph 6)",
+    "correctas": [
+     "encouraging"
+    ],
+    "explicacion": "«So far, the results are encouraging»."
+   }
+  ],
+  "examenNumero": 5
+ },
+ {
+  "id": "pau-prueba-6-x5",
+  "examen": "pau",
+  "destreza": "prueba",
+  "parte": 6,
+  "nombreParte": "Composition",
+  "instrucciones": "6. Choose ONE of the following topics and WRITE a composition of about 140-180 words. If you choose the email, DO NOT SIGN it. (3 points)",
+  "minutos": 30,
+  "elegir": 1,
+  "items": [
+   {
+    "n": 1,
+    "tipo": "redaccion",
+    "tipoTexto": "composition",
+    "enunciado": "a) Reading for pleasure: does it really make our lives better? Give your opinion.",
+    "minPalabras": 140,
+    "maxPalabras": 180,
+    "modelo": "Nowadays many teenagers spend hours on their phones, so reading for pleasure seems less popular than ever. However, in my opinion, it is one of the best habits a young person can have.\n\nFirstly, reading helps us improve our language. When we read stories regularly, we learn new words and see how sentences are built without even trying. As a result, our writing and our exams get better.\n\nSecondly, books are a good way to relax. After a long day at school, a few pages can calm our mind much more than a noisy video. Moreover, stories let us imagine other places and understand people who are very different from us.\n\nOn the other hand, some people say they have no time or find books boring. Even so, reading only ten minutes before bed is enough to start, and there are comics, short stories and graphic novels for every taste.\n\nTo sum up, I am convinced that reading for pleasure makes our lives richer, calmer and more interesting.",
+    "criterios": [
+     "Presentación: párrafos claros, puntuación correcta.",
+     "Organización: estructura del tipo de texto (email; for & against; opinion essay), registro adecuado, ideas enlazadas con conectores.",
+     "Contenido: me ciño al tema, ideas suficientes y variadas, sin repeticiones.",
+     "Corrección gramatical: frases bien construidas, variedad de estructuras, sin traducir del español.",
+     "Vocabulario: rico y no copiado del texto; menos de 4 faltas de ortografía (más de 3 restan)."
+    ],
+    "explicacion": "Opinion essay: introducción con la postura, un párrafo por idea con conectores (firstly, secondly, moreover, on the other hand, to sum up), contraargumento breve y conclusión. Entre 140 y 180 palabras: por debajo de 140 baja el tope de nota."
+   },
+   {
+    "n": 2,
+    "tipo": "redaccion",
+    "tipoTexto": "email",
+    "enunciado": "b) Write an email to a friend from another town telling him or her about a book you have just read and suggesting that you start a small reading club together online.",
+    "minPalabras": 140,
+    "maxPalabras": 180,
+    "modelo": "Hi Lucas,\n\nHow are you? I hope you are enjoying the holidays. I’m writing because I’ve just finished a book that I can’t stop thinking about.\n\nIt’s called The Last Summer and it’s about a girl who moves to a small island and discovers an old diary in her new house. The story is full of mystery, and the ending surprised me completely. I read it in only three days, which is unusual for me because I used to find reading a bit boring. Now I read every night before sleeping, and I feel much more relaxed.\n\nThat’s why I’ve had an idea. Why don’t we start a small reading club together? We could choose one book a month and then talk about it on a video call. It would also be a great way to keep in touch, even though we live so far away from each other.\n\nWhat do you think? If you like the idea, I can send you a list of books we could try.\n\nWrite soon,",
+    "criterios": [
+     "Presentación: párrafos claros, puntuación correcta.",
+     "Organización: estructura del tipo de texto (email; for & against; opinion essay), registro adecuado, ideas enlazadas con conectores.",
+     "Contenido: me ciño al tema, ideas suficientes y variadas, sin repeticiones.",
+     "Corrección gramatical: frases bien construidas, variedad de estructuras, sin traducir del español.",
+     "Vocabulario: rico y no copiado del texto; menos de 4 faltas de ortografía (más de 3 restan)."
+    ],
+    "explicacion": "Email informal: saludo, motivo, cuerpo contando el libro con tus palabras, propuesta («Why don’t we…?») y despedida SIN firmar."
+   }
+  ],
+  "examenNumero": 5
+ }
+]

@@ -3,6 +3,7 @@ import type { Ejercicio, ItemRedaccion } from '../banco/tipos';
 import { palabrasRedaccion } from '../motor/corregir';
 import { avisoPalabras, bandaPalabras, compartir, textoParaCompartir } from '../motor/entregas';
 import { perfilActivo } from '../motor/perfiles';
+import { enviarTexto, hayServidor } from '../motor/servidor';
 
 const NOMBRE_TIPO: Record<ItemRedaccion['tipoTexto'], string> = {
   essay: 'Essay',
@@ -122,6 +123,15 @@ export function ResultadoRedaccion({ ejercicio, item, texto }: PropsResultado) {
   const escrito = texto.trim() !== '';
 
   const enviar = async () => {
+    if (hayServidor()) {
+      setAviso('Enviando…');
+      const r = await enviarTexto(ejercicio, item.n, texto, `${ejercicio.nombreParte} (${item.tipoTexto})`);
+      if (r === 'enviado') {
+        setAviso(`Enviado a Adam. Te pondrá la nota en «Mi progreso».`);
+        return;
+      }
+      setAviso(`El ordenador de Adam no responde; abro compartir.`);
+    }
     const que = await compartir(textoParaCompartir(ejercicio, item, texto, perfilActivo()?.nombre), 'English Lab · redacción');
     setAviso(que === 'compartido' ? 'Enviado.' : que === 'copiado' ? 'Texto copiado y WhatsApp abierto: pégalo en el chat de Adam.' : 'No se pudo compartir: copia el texto a mano.');
   };

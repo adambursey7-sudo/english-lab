@@ -12,12 +12,17 @@ import { SPEAKING_C1_2 } from './c1/speaking-2';
 import { PAU_EXAMEN_2 } from './pau/examen-2';
 import { PAU_EXAMEN_3 } from './pau/examen-3';
 
+/** Exámenes enteros hechos por la fábrica (`generados/examen-<ex>-<N>.json`). */
+const GENERADOS: Ejercicio[] = Object.values(import.meta.glob<Ejercicio[]>('./generados/*.json', { eager: true, import: 'default' })).flat();
+
 /** Todo el banco. Cada archivo de banco/<examen>/ exporta su lista y se suma aquí. */
 export const BANCO: Ejercicio[] = [
   // Examen 1
   ...USE_OF_ENGLISH_C1, ...READING_C1, ...WRITING_C1, ...LISTENING_C1, ...SPEAKING_C1, ...PAU_EXAMEN_1,
   // Examen 2 (y 3 de la PAU)
   ...READING_USE_C1_2, ...WRITING_C1_2, ...LISTENING_C1_2, ...SPEAKING_C1_2, ...PAU_EXAMEN_2, ...PAU_EXAMEN_3,
+  // Generados
+  ...GENERADOS,
 ];
 
 export function ejerciciosDe(examen: Examen, destreza: Destreza): Ejercicio[] {
