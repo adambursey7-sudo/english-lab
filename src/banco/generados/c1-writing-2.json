@@ -1,0 +1,62 @@
+[
+ {
+  "id": "gen-c1-writing-2-mvxwf43c0",
+  "examen": "c1",
+  "destreza": "writing",
+  "parte": 2,
+  "nombreParte": "Choice of task",
+  "instrucciones": "Write an answer to ONE of the questions 2–4 in this part. Write your answer in 220–260 words in an appropriate style.",
+  "minutos": 45,
+  "elegir": 1,
+  "items": [
+   {
+    "n": 2,
+    "tipo": "redaccion",
+    "tipoTexto": "article",
+    "enunciado": "You see this notice in the newsletter of an international community of people who enjoy walking and cycling:\n\n“Write for us! Tell us about a journey you made on foot or by bike that changed the way you see your own region. Describe the route, explain what surprised you along the way and say why other readers might want to follow it.”\n\nWrite your article.",
+    "minPalabras": 220,
+    "maxPalabras": 260,
+    "modelo": "The Long Way to the Lighthouse\n\nFor twenty years I had driven past the signpost to the old lighthouse without a second glance. Last September, with a free weekend and a borrowed bicycle, I finally followed it, and I have been looking at my own coast differently ever since.\n\nThe route is just under forty kilometres, mostly along a disused railway line that has been turned into a gravel track. It begins in a drab industrial suburb, climbs gently through pine woods and then drops towards the sea in a series of long, lazy curves. Because it is closed to cars, the only sounds are birdsong and the occasional rattle of a loose mudguard.\n\nWhat surprised me most was how much I had never noticed. Halfway along, the track passes a ruined salt works where flamingos gather in the shallows, and a tiny café run by a retired fisherman who serves the best fried anchovies I have ever tasted. Nobody I know had so much as mentioned either of them. Not once did I feel I was in a place I had lived beside for decades.\n\nThe lighthouse itself is almost an anticlimax, which is exactly why the journey works: the pleasure lies in getting there slowly.\n\nIf you can spare a day, go. Take water, a spare inner tube and an appetite, and set off early so that you reach the café before the lunchtime crowd.",
+    "criterios": [
+     "Content: he hecho todo lo que pide la tarea (cada punto del enunciado) y quien lo lea queda bien informado.",
+     "Communicative Achievement: el registro es el adecuado para el lector (formal con el tutor o el director; cercano con un amigo) y sigo las convenciones del tipo de texto.",
+     "Organisation: párrafos claros con una idea cada uno, introducción y cierre, conectores variados (however, on balance, provided that, what is more…).",
+     "Language: vocabulario preciso y variado, estructuras complejas (condicionales, pasivas, relativas, inversión) y pocos errores, ninguno que estorbe."
+    ],
+    "explicacion": "Un artículo para una revista lleva título atractivo, una apertura que engancha, descripción concreta del recorrido, lo que sorprendió y una recomendación final al lector. Registro semiformal, personal y vivo, con detalles sensoriales y algún toque de humor. Cubre los tres puntos: ruta, sorpresas y por qué merece la pena."
+   },
+   {
+    "n": 3,
+    "tipo": "redaccion",
+    "tipoTexto": "report",
+    "enunciado": "You work for a company that is considering offering its employees a four-day working week on a trial basis. Your manager has asked you to look into how the idea has worked in other organisations and to report back.\n\nWrite a report describing the advantages and disadvantages of a four-day week, and recommending whether the company should go ahead with the trial.\n\nWrite your report.",
+    "minPalabras": 220,
+    "maxPalabras": 260,
+    "modelo": "Report: a trial of the four-day working week\n\nIntroduction\nThe aim of this report is to assess the advantages and drawbacks of a four-day week, based on the experience of comparable organisations, and to recommend whether we should proceed with a trial.\n\nAdvantages\nMost companies that have tried the scheme report higher morale and lower staff turnover. Employees say they return on Monday more rested, and several firms noted that absences through illness fell noticeably. Recruitment also becomes easier: a shorter week is a strong selling point in a competitive job market. Surprisingly, productivity generally held steady, since staff tended to waste less time in unnecessary meetings.\n\nDisadvantages\nHowever, the scheme is not without difficulties. Departments that deal directly with customers, such as our support team, would need to be covered five days a week, which would require staggered rotas and could create resentment. Some employees also reported that compressing five days of work into four led to greater stress, particularly where deadlines were fixed. Finally, clients accustomed to Friday contact might perceive a decline in service.\n\nRecommendation\nOn balance, I recommend that we go ahead with a six-month trial, limited initially to the administrative and design departments. Success should be measured by output, absence figures and customer satisfaction. Provided that these remain stable, the scheme could then be extended to the rest of the company.",
+    "criterios": [
+     "Content: he hecho todo lo que pide la tarea (cada punto del enunciado) y quien lo lea queda bien informado.",
+     "Communicative Achievement: el registro es el adecuado para el lector (formal con el tutor o el director; cercano con un amigo) y sigo las convenciones del tipo de texto.",
+     "Organisation: párrafos claros con una idea cada uno, introducción y cierre, conectores variados (however, on balance, provided that, what is more…).",
+     "Language: vocabulario preciso y variado, estructuras complejas (condicionales, pasivas, relativas, inversión) y pocos errores, ninguno que estorbe."
+    ],
+    "explicacion": "Un report va con encabezados (Introduction, Advantages, Disadvantages, Recommendation), registro formal e impersonal, y presenta los hechos de forma objetiva antes de concluir. Debe terminar con una recomendación clara y justificada, no solo una lista de pros y contras."
+   },
+   {
+    "n": 4,
+    "tipo": "redaccion",
+    "tipoTexto": "letter",
+    "enunciado": "You recently attended a weekend workshop on digital photography organised by a local arts centre. Although you enjoyed parts of it, you were disappointed by some aspects. You have decided to write to the centre's director.\n\nIn your letter, explain what you liked about the workshop, describe what went wrong, and suggest what could be done to improve future workshops.\n\nWrite your letter.",
+    "minPalabras": 220,
+    "maxPalabras": 260,
+    "modelo": "Dear Ms Harlow,\n\nI am writing to share my thoughts on the digital photography workshop held at the arts centre last weekend, which I attended with considerable enthusiasm.\n\nLet me begin with the positives. The tutor, Mr Okafor, was knowledgeable and patient, and his session on natural light was easily the most valuable part of the course. I came away with techniques that I have already put into practice, and the small group size meant that everyone received individual feedback.\n\nUnfortunately, several aspects fell short of what had been advertised. The brochure promised a full day of outdoor shooting on Saturday, yet heavy rain led to the whole session being moved indoors, with no alternative activity offered. Furthermore, the editing suite was equipped with only six computers for fourteen participants, so that we spent much of Sunday afternoon waiting our turn. Had we been warned in advance, many of us would have brought our own laptops.\n\nI would therefore like to make two suggestions. First, a wet-weather plan, such as a visit to the nearby market hall or a studio session, should be prepared in advance. Second, participants could be asked to bring a laptop, or the number of places could be reduced to match the equipment available.\n\nI hope these comments will prove useful, and I would be happy to discuss them further. Despite my reservations, I would attend another workshop here.\n\nYours sincerely,\nDaniel Reyes",
+    "criterios": [
+     "Content: he hecho todo lo que pide la tarea (cada punto del enunciado) y quien lo lea queda bien informado.",
+     "Communicative Achievement: el registro es el adecuado para el lector (formal con el tutor o el director; cercano con un amigo) y sigo las convenciones del tipo de texto.",
+     "Organisation: párrafos claros con una idea cada uno, introducción y cierre, conectores variados (however, on balance, provided that, what is more…).",
+     "Language: vocabulario preciso y variado, estructuras complejas (condicionales, pasivas, relativas, inversión) y pocos errores, ninguno que estorbe."
+    ],
+    "explicacion": "Una carta formal de queja constructiva empieza con «Dear Ms/Mr + apellido» y termina con «Yours sincerely». Registro formal, cortés pero firme: reconoce lo bueno, expone los problemas con hechos concretos y propone soluciones realistas. Cubre los tres puntos: lo positivo, lo que falló y las sugerencias."
+   }
+  ]
+ }
+]

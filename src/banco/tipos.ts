@@ -1,6 +1,8 @@
 // Modelo del banco de ejercicios. Los textos de los ejercicios van en inglés; los nombres y la interfaz, en español.
 // Formatos oficiales en docs/formatos.md.
 
+import { ES_PRODUCTO } from '../marca';
+
 export type Examen = 'c1' | 'pau';
 /** Papel del examen. En la PAU solo hay uno (`prueba`, 6 preguntas sobre un texto). */
 export type Destreza = 'reading-use' | 'writing' | 'listening' | 'speaking' | 'prueba';
@@ -157,7 +159,7 @@ export interface Ejercicio {
 export type Respuestas = Record<number, string>;
 
 export const NOMBRES_EXAMEN: Record<Examen, string> = {
-  c1: 'Cambridge C1 Advanced',
+  c1: ES_PRODUCTO ? 'C1 Advanced' : 'Cambridge C1 Advanced',
   pau: 'PAU · Inglés',
 };
 
