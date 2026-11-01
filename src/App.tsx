@@ -8,6 +8,7 @@ import { Resultado } from './pantallas/Resultado';
 import { MisResultados } from './pantallas/MisResultados';
 import { Perfiles } from './pantallas/Perfiles';
 import { Imprimir } from './pantallas/Imprimir';
+import { Crear } from './pantallas/Crear';
 import { PaginaAudio } from './pantallas/PaginaAudio';
 import type { Examen } from './banco/tipos';
 import { Intro } from './componentes/Intro';
@@ -21,9 +22,10 @@ type Estado =
   | { pantalla: 'resultado'; lista: Ejercicio[]; respuestas: Record<string, Respuestas> };
 
 /** Rutas por hash que viven fuera del flujo normal: el cuadernillo imprimible y la página de audio del QR. */
-type Ruta = { tipo: 'imprimir'; examen: Examen; numero: number; modo: 'cuadernillo' | 'clave' } | { tipo: 'audio'; examen: Examen; numero: number };
+type Ruta = { tipo: 'imprimir'; examen: Examen; numero: number; modo: 'cuadernillo' | 'clave' } | { tipo: 'audio'; examen: Examen; numero: number } | { tipo: 'crear' };
 
 export function rutaDe(hash: string): Ruta | null {
+  if (ES_PRODUCTO && /^#\/crear\/?$/.test(hash)) return { tipo: 'crear' };
   const m = /^#\/(imprimir|audio)\/(c1|pau)\/(\d+)(\/clave)?\/?$/.exec(hash);
   if (!m) return null;
   const examen = m[2] as Examen;
@@ -66,6 +68,7 @@ export function App() {
     setRuta(null);
   }, [cuadernilloAjeno]);
 
+  if (ruta?.tipo === 'crear') return <Crear />;
   if (ruta?.tipo === 'imprimir' && !cuadernilloAjeno) return <Imprimir examen={ruta.examen} numero={ruta.numero} modo={ruta.modo} />;
   if (ruta?.tipo === 'audio') return <PaginaAudio examen={ruta.examen} numero={ruta.numero} />;
 

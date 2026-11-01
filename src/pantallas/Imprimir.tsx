@@ -57,7 +57,7 @@ function Barra({ examen, numero, modo }: Props) {
   );
 }
 
-function CuadernilloAlumno({ c }: { c: Cuadernillo }) {
+export function CuadernilloAlumno({ c }: { c: Cuadernillo }) {
   const listening = partesListening(c);
   const audio = enlaceAudio(c.examen, c.numero);
   const total = c.papeles.reduce((n, p) => n + p.minutos, 0);
@@ -67,7 +67,7 @@ function CuadernilloAlumno({ c }: { c: Cuadernillo }) {
       <section className="portada">
         <div className="portada-marca">{leerMarca().nombre}</div>
         <h1>{c.titulo}</h1>
-        <div className="portada-numero">Examen {c.numero}</div>
+        <div className="portada-numero">{c.etiqueta ?? `Examen ${c.numero}`}</div>
         <table className="tabla papeles">
           <thead>
             <tr><th>Paper</th><th>Parts</th><th>Questions</th><th>Time</th></tr>
@@ -92,14 +92,14 @@ function CuadernilloAlumno({ c }: { c: Cuadernillo }) {
             <li>Read the instructions for each part carefully. Answer all the questions unless the instructions say otherwise.</li>
             <li>Write your answers on the answer sheet at the end of the booklet. Use a pencil or a pen with blue or black ink.</li>
             <li>You must not use a dictionary.</li>
-            {listening.length > 0 && <li>For the Listening paper, scan the QR code to play the recordings. Each recording is played twice.</li>}
+            {listening.length > 0 && !c.generado && <li>For the Listening paper, scan the QR code to play the recordings. Each recording is played twice.</li>}
           </ul>
         </div>
         <div className="firma">
           <div><span>Name</span><span className="linea" /></div>
           <div><span>Date</span><span className="linea corta" /></div>
         </div>
-        {listening.length > 0 && (
+        {listening.length > 0 && !c.generado && (
           <div className="portada-qr">
             <QR texto={audio} lado={150} alt="QR del audio del listening" />
             <div>
@@ -367,7 +367,7 @@ function HojaRespuestas({ c }: { c: Cuadernillo }) {
     <section className="papel hoja-respuestas">
       <header className="papel-cabecera">
         <div className="papel-nombre">Answer sheet</div>
-        <h2>{c.titulo} · Examen {c.numero}</h2>
+        <h2>{c.titulo} · {c.etiqueta ?? `Examen ${c.numero}`}</h2>
         <div className="papel-datos">Write one answer per box. For multiple-choice questions, write the letter.</div>
       </header>
       <div className="firma"><div><span>Name</span><span className="linea" /></div></div>
@@ -395,13 +395,13 @@ function HojaRespuestas({ c }: { c: Cuadernillo }) {
 }
 
 /** La clave: respuestas y explicaciones de cada parte, modelos de Writing y guía del Speaking. Para el profe. */
-function ClaveProfe({ c }: { c: Cuadernillo }) {
+export function ClaveProfe({ c }: { c: Cuadernillo }) {
   return (
     <main className="pagina">
       <section className="portada clave-portada">
         <div className="portada-marca">{leerMarca().nombre}</div>
         <h1>Answer key</h1>
-        <div className="portada-numero">{c.titulo} · Examen {c.numero}</div>
+        <div className="portada-numero">{c.titulo} · {c.etiqueta ?? `Examen ${c.numero}`}</div>
         <p className="pequena">Respuestas, otras formas aceptadas y por qué; modelos de respuesta de las partes que corrige el profesor.</p>
       </section>
       {c.papeles.map((p) => (

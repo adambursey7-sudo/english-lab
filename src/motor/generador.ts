@@ -99,6 +99,8 @@ export function generarExamen(receta: Receta, banco: Ejercicio[] = BANCO): Exame
     numero: receta.semilla,
     titulo: TITULO_EXAMEN[receta.examen],
     papeles,
+    generado: true,
+    etiqueta: `Test ${receta.semilla} · Version ${receta.version}`,
     receta,
     ids: resultado.map((e) => e.id),
     faltan,

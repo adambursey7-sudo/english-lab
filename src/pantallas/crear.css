@@ -1,0 +1,43 @@
+/* Pantalla «Crear examen»: panel a la izquierda y vista previa del PDF a la derecha (en móvil, una debajo de la otra). */
+.crear .crear-cuerpo { display: grid; grid-template-columns: minmax(280px, 340px) 1fr; gap: 0; align-items: start; }
+.crear .crear-panel {
+  position: sticky; top: 56px; max-height: calc(100vh - 56px); overflow-y: auto;
+  padding: 16px; border-right: 1px solid #ccc; background: #f7f7f4; font-size: 14px;
+}
+.crear .crear-panel h2 { font-size: 13px; text-transform: uppercase; letter-spacing: 0.06em; color: #555; margin: 16px 0 6px; }
+.crear .crear-panel h2:first-child { margin-top: 0; }
+.crear .crear-panel .fichas { display: flex; flex-wrap: wrap; gap: 6px; }
+.crear .crear-panel .ficha { border: 1px solid #999; background: #fff; color: #111; border-radius: 8px; padding: 8px 12px; font: inherit; cursor: pointer; }
+.crear .crear-panel .ficha[aria-pressed='true'] { background: #1b2742; color: #fff; border-color: #1b2742; }
+.crear .plantillas { display: grid; gap: 6px; }
+.crear .plantilla { text-align: left; border: 1px solid #999; background: #fff; color: #111; border-radius: 8px; padding: 8px 10px; font: inherit; cursor: pointer; display: grid; }
+.crear .plantilla small { color: #555; }
+.crear .plantilla[aria-pressed='true'] { border-color: #1b2742; box-shadow: inset 0 0 0 2px #1b2742; }
+.crear .partes-lista { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; }
+.crear .partes-lista label { display: flex; gap: 8px; align-items: flex-start; cursor: pointer; }
+.crear .partes-lista small { color: #555; display: block; }
+.crear .resumen-crear { margin: 12px 0 4px; }
+.crear .crear-panel .btn { width: 100%; margin-top: 10px; }
+.crear .crear-panel .pequeno, .crear .crear-panel .silencio { color: #555; font-size: 13px; margin: 6px 0; }
+.crear .crear-vista { min-width: 0; padding: 16px; background: #d9d9d4; }
+.crear .crear-vista .pagina { background: #fff; max-width: 210mm; margin: 0 auto; padding: 16mm 15mm; box-shadow: 0 2px 10px rgba(0,0,0,.25); }
+
+@media (max-width: 900px) {
+  .crear .crear-cuerpo { grid-template-columns: 1fr; }
+  .crear .crear-panel { position: static; max-height: none; border-right: none; border-bottom: 1px solid #ccc; }
+  .crear .crear-vista { padding: 8px; overflow-x: auto; }
+}
+
+@media print {
+  .crear .crear-cuerpo { display: block; }
+  .crear .crear-vista { padding: 0; background: #fff; }
+  .crear .crear-vista .pagina { box-shadow: none; max-width: none; margin: 0; padding: 0; }
+}
+
+.crear .campo-crear { width: 100%; margin: 4px 0; padding: 8px 10px; border: 1px solid #999; border-radius: 8px; font: inherit; background: #fff; color: #111; }
+.crear .casilla { display: flex; gap: 8px; align-items: flex-start; margin: 6px 0; cursor: pointer; }
+.crear .mis-examenes { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.crear .mis-examenes li { border: 1px solid #bbb; border-radius: 8px; padding: 8px 10px; background: #fff; display: grid; gap: 4px; }
+.crear .mis-examenes small { color: #555; }
+.crear .mis-examenes .acciones { display: flex; gap: 6px; flex-wrap: wrap; }
+.crear .mis-examenes .btn { width: auto; margin: 0; min-height: 34px; padding: 4px 10px; font-size: 13px; }

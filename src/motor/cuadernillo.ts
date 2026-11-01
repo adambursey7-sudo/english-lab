@@ -21,6 +21,10 @@ export interface Cuadernillo {
   numero: number;
   titulo: string;
   papeles: Papel[];
+  /** Examen montado por el generador (no es uno fijo del banco): no tiene página de audio propia. */
+  generado?: boolean;
+  /** Cómo se llama en la portada y en la hoja de respuestas; si falta, «Examen N». */
+  etiqueta?: string;
 }
 
 export const TITULO_EXAMEN: Record<Examen, string> = {

@@ -53,7 +53,7 @@ export function Asistente({ onListo }: { onListo: () => void }) {
   };
 
   return (
-    <main className="contenido">
+    <main className="contenido" style={{ maxWidth: 560, margin: "0 auto" }}>
       <h1>Bienvenido</h1>
       <p className="silencio">Personaliza la app con los datos de tu academia. Saldrán en la pantalla y en los PDF que imprimas. Puedes cambiarlo luego.</p>
       <label style={{ display: "block", fontWeight: 600, margin: "14px 0 4px" }} htmlFor="asist-nombre">Nombre de tu academia o de tu clase</label>
