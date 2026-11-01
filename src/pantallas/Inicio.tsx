@@ -1,3 +1,4 @@
+import { ES_PRODUCTO, leerMarca, urlLogo } from '../marca';
 import { useEffect, useState } from 'react';
 import { destrezasDe, partesDe } from '../banco';
 import { NOMBRES_DESTREZA, NOMBRES_EXAMEN, etiquetaParte, type Destreza, type Ejercicio, type Examen } from '../banco/tipos';
@@ -32,6 +33,7 @@ interface Props {
 }
 
 export function Inicio({ perfil, onEmpezar, onResultados, onCambiarPerfil }: Props) {
+  const marca = leerMarca();
   const examenes = examenesDe(perfil);
   const [examen, setExamen] = useState<Examen>(perfil?.examen ?? 'c1');
   const [destrezaElegida, setDestreza] = useState<Destreza>(DESTREZAS[perfil?.examen ?? 'c1'][0]);
@@ -94,16 +96,16 @@ export function Inicio({ perfil, onEmpezar, onResultados, onCambiarPerfil }: Pro
         <header className="cabecera aula invitado">
           <div className="cabecera-dentro">
             <div className="marca">
-              <img className="logo" src={`${import.meta.env.BASE_URL}img/logo.png`} alt="Aprende Inglés con Kate" width="60" height="70" />
+              {urlLogo(marca) && <img className="logo" src={urlLogo(marca)} alt={marca.logoAlt} width="60" height="70" />}
               <div>
-                <div className="sub">English Lab</div>
-                <div className="titulo">Modo invitado</div>
-                <div className="racha">Lo que hagas aquí no se guarda</div>
+                <div className="sub">{marca.nombre}</div>
+                <div className="titulo">{ES_PRODUCTO ? 'Exámenes de inglés' : 'Modo invitado'}</div>
+                {!ES_PRODUCTO && <div className="racha">Lo que hagas aquí no se guarda</div>}
               </div>
             </div>
-            <button type="button" className="btn chico sec claro cambiar-perfil mini" onClick={onCambiarPerfil}>
+            {!ES_PRODUCTO && <button type="button" className="btn chico sec claro cambiar-perfil mini" onClick={onCambiarPerfil}>
               Entrar
-            </button>
+            </button>}
           </div>
         </header>
       )}

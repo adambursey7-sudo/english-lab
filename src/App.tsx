@@ -11,6 +11,7 @@ import { Imprimir } from './pantallas/Imprimir';
 import { PaginaAudio } from './pantallas/PaginaAudio';
 import type { Examen } from './banco/tipos';
 import { Intro } from './componentes/Intro';
+import { MODO_CLASE } from './marca';
 
 type Estado =
   | { pantalla: 'inicio' }
@@ -35,8 +36,8 @@ export function App() {
   const [ruta, setRuta] = useState<Ruta | null>(() => rutaDe(window.location.hash));
   // Quién practica en este móvil (cada alumno entra con su PIN y tiene su progreso); si no ha dicho quién es, se le
   // pregunta. El modo invitado no se recuerda: la próxima vez vuelve a salir «¿Quién eres?».
-  const [perfil, setPerfil] = useState<Perfil | undefined>(perfilActivo);
-  const [invitado, setInvitado] = useState(false);
+  const [perfil, setPerfil] = useState<Perfil | undefined>(MODO_CLASE ? perfilActivo : undefined);
+  const [invitado, setInvitado] = useState(!MODO_CLASE);
   useEffect(() => {
     const alCambiar = () => setRuta(rutaDe(window.location.hash));
     window.addEventListener('hashchange', alCambiar);
@@ -44,7 +45,7 @@ export function App() {
   }, []);
   // La intro (vídeo con música) sale cada vez que se abre la app, en el móvil y en el ordenador.
   // Si se entra por el cuadernillo o la página de audio (QR), al volver a la app no hay intro.
-  const [intro, setIntro] = useState(() => rutaDe(window.location.hash) === null);
+  const [intro, setIntro] = useState(() => MODO_CLASE && rutaDe(window.location.hash) === null);
   const paso = estado.pantalla === 'ejercicio' ? estado.i : -1;
 
   // Cada pantalla nueva empieza arriba del todo (si no, se hereda el scroll de la anterior).
@@ -85,6 +86,7 @@ export function App() {
   }
 
   const cambiarPerfil = () => {
+    if (!MODO_CLASE) return;
     salirPerfil();
     setPerfil(undefined);
     setInvitado(false);

@@ -1,3 +1,4 @@
+import { leerMarca } from '../marca';
 import { Fragment } from 'react';
 import type { Ejercicio, Item, ItemHablar, ItemRedaccion } from '../banco/tipos';
 import { NOMBRES_EXAMEN, TIPOS_EVALUABLES, etiquetaParte, type Examen } from '../banco/tipos';
@@ -64,7 +65,7 @@ function CuadernilloAlumno({ c }: { c: Cuadernillo }) {
     <main className="pagina">
       {/* Portada */}
       <section className="portada">
-        <div className="portada-marca">English Lab</div>
+        <div className="portada-marca">{leerMarca().nombre}</div>
         <h1>{c.titulo}</h1>
         <div className="portada-numero">Examen {c.numero}</div>
         <table className="tabla papeles">
@@ -398,7 +399,7 @@ function ClaveProfe({ c }: { c: Cuadernillo }) {
   return (
     <main className="pagina">
       <section className="portada clave-portada">
-        <div className="portada-marca">English Lab</div>
+        <div className="portada-marca">{leerMarca().nombre}</div>
         <h1>Answer key</h1>
         <div className="portada-numero">{c.titulo} · Examen {c.numero}</div>
         <p className="pequena">Respuestas, otras formas aceptadas y por qué; modelos de respuesta de las partes que corrige el profesor.</p>

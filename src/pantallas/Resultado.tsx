@@ -1,3 +1,4 @@
+import { MODO_CLASE } from '../marca';
 import { useEffect, useState } from 'react';
 import type { Ejercicio, Respuestas } from '../banco/tipos';
 import { apuntarResultado } from '../motor/historial';
@@ -43,7 +44,7 @@ export function Resultado({ lista, respuestas, onRepetir, onInicio, onEmpezar }:
 
   return (
     <div className="app">
-      {!soloLibre && <KatePopup vineta={vinetaDe(porcentaje)} />}
+      {!soloLibre && MODO_CLASE && <KatePopup vineta={vinetaDe(porcentaje)} />}
       <header className={`cabecera aula compacta tono-${destreza}`}>
         <div className="cabecera-dentro">
           <div>
@@ -66,9 +67,11 @@ export function Resultado({ lista, respuestas, onRepetir, onInicio, onEmpezar }:
           </div>
         ) : (
           <div className="hoja nota-grande">
-            <div className="vineta-nota">
-              <img src={`${import.meta.env.BASE_URL}img/nota-${vinetaDe(porcentaje)}.jpg`} alt={FRASES_VINETA[vinetaDe(porcentaje)]} />
-            </div>
+            {MODO_CLASE && (
+              <div className="vineta-nota">
+                <img src={`${import.meta.env.BASE_URL}img/nota-${vinetaDe(porcentaje)}.jpg`} alt={FRASES_VINETA[vinetaDe(porcentaje)]} />
+              </div>
+            )}
             <div className="cifra">
               {aciertos} <span>de {total}</span>
               <span className="porcentaje">{porcentaje} %</span>

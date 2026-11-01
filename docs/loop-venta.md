@@ -153,7 +153,8 @@ Se rellena según avanza el loop. De partida: elegir el nombre definitivo del pr
 decidir cuándo unir `loop/venta` a `master` y publicarlo; guardar la clave privada de licencias en un sitio seguro.
 
 ## Estado
-- 1/11: loop preparado (rama `loop/venta`, copia `english-lab-t-venta`, este plan). Vuelta 1: 1a hecho (`docs/venta/mercado.md`). Vuelta 2: 1b hecho (auditoría y tres formas de pantalla; elegida B con plantillas de C, por defecto). **Bloque 1 cerrado.** Siguiente: 2a.
+- 1/11: loop preparado (rama `loop/venta`, copia `english-lab-t-venta`, este plan). Vuelta 1: 1a hecho (`docs/venta/mercado.md`). Vuelta 2: 1b hecho (auditoría y tres formas de pantalla; elegida B con plantillas de C, por defecto). **Bloque 1 cerrado.**
+- Vuelta 3 (1/11): 2a y 2b hechos: `src/marca.ts` (nombre, logo y color de la academia, guardados en el navegador), modo `producto` (`npm run dev:producto` en el 5273, `npm run build:producto`, `npm run test:producto`). El paquete de producto sale sin perfiles, fotos, notas de Adam, intro, viñetas ni logo de Kate. Siguiente: 2c (asistente de primera vez) y que los textos digan «tu profe» en vez de «Adam».
 - 1/11: fuentes para el bloque 6 en `C:\dev\english-lab-fuentes\de-adam\` (fuera del repo): 3 exámenes PAU de Adam (junio 25 ciencias y HCCSS, reserva julio 26), de Cambridge el cuadernillo oficial de muestras 2015 (47 págs., 2 papers completos con claves), hojas oficiales de las partes 5, 6, 8 y Writing 1 y la guía de candidatos. Hay Reading, Writing y claves; Listening y Speaking solo en el cuadernillo de muestras.
 
 ## Registro de vueltas
@@ -166,3 +167,8 @@ decidir cuándo unir `loop/venta` a `master` y publicarlo; guardar la clave priv
 - Decisión por defecto: B con atajos de C (Adam puede cambiarla en el bloque 3).
 - Comprobado: sin errores de página. Código sin tocar.
 - Cómo probarlo: abrir `bocetos/index.html`.
+
+### Vuelta 3 · 2a + 2b. Marca y modo producto
+- Hecho: `src/marca.ts` + test; `ES_PRODUCTO`/`MODO_CLASE` según `--mode producto`; `PERFILES` vacío en producto (el minificador quita los datos); `public-producto` sin lo de la clase (`scripts/preparar-producto.mjs`); sin intro, perfiles ni viñetas de Kate en producto; `scripts/comprobar-producto.mjs` busca nombres, fotos, huellas de PIN y logo en el paquete.
+- Comprobado: typecheck y tests en verde; el build de producto pasa la comprobación y el de clase sí contiene los nombres (la prueba muerde).
+- Mejorable: textos «Enviar a Adam»/«para que corrija Adam» en Redaccion/Resultado; el título del PDF dice «C1 Advanced · Practice test»; la cabecera de producto aún es provisional (el panel del profe llega en el bloque 3).

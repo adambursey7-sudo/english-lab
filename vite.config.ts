@@ -4,6 +4,9 @@ import { VitePWA } from 'vite-plugin-pwa';
 
 // `npm run build:pages` (modo `pages`) compila para GitHub Pages, que sirve la app en /english-lab/.
 export default defineConfig(({ mode }) => ({
+  // El producto no lleva fotos de alumnos, notas de Adam, intro ni viñetas de Kate: sale de `public-producto`, que
+  // prepara `scripts/preparar-producto.mjs`.
+  publicDir: mode === 'producto' ? 'public-producto' : 'public',
   base: mode === 'pages' ? '/english-lab/' : '/',
   plugins: [
     react(),
@@ -23,8 +26,8 @@ export default defineConfig(({ mode }) => ({
         ],
       },
       manifest: {
-        name: 'English Lab',
-        short_name: 'English Lab',
+        name: mode === 'producto' ? 'Exámenes de inglés' : 'English Lab',
+        short_name: mode === 'producto' ? 'Exámenes' : 'English Lab',
         description: 'Exámenes de inglés tipo Cambridge y PAU para practicar y corregir en el móvil.',
         categories: ['education'],
         lang: 'es',

@@ -1,3 +1,4 @@
+import { leerMarca, urlLogo } from '../marca';
 import { useEffect, useRef, useState } from 'react';
 import { NOMBRES_EXAMEN, type Examen } from '../banco/tipos';
 import { Cara } from '../componentes/Cara';
@@ -12,6 +13,7 @@ interface Props {
 
 /** Primera pantalla: cada alumno entra en su perfil con su PIN; sin cuenta se practica sin guardar nada. */
 export function Perfiles({ onEntrar, onInvitado }: Props) {
+  const marca = leerMarca();
   const [elegido, setElegido] = useState<Perfil>();
 
   if (elegido) return <TecladoPin perfil={elegido} onBien={(pin) => onEntrar(elegido, pin)} onVolver={() => setElegido(undefined)} />;
@@ -21,9 +23,9 @@ export function Perfiles({ onEntrar, onInvitado }: Props) {
       <header className="cabecera aula">
         <div className="cabecera-dentro">
           <div className="marca">
-            <img className="logo" src={`${import.meta.env.BASE_URL}img/logo.png`} alt="Aprende Inglés con Kate" width="60" height="70" />
+            {urlLogo(marca) && <img className="logo" src={urlLogo(marca)} alt={marca.logoAlt} width="60" height="70" />}
             <div>
-              <div className="sub">English Lab</div>
+              <div className="sub">{marca.nombre}</div>
               <div className="titulo">¿Quién eres?</div>
               <div className="racha">Entra en tu perfil con el PIN que te dio Adam</div>
             </div>

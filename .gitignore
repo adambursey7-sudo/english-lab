@@ -4,3 +4,5 @@ dev-dist
 *.local
 .DS_Store
 salida/
+dist-producto
+public-producto

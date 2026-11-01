@@ -18,7 +18,8 @@ export interface Perfil {
  * Los alumnos (29/10/2026). El progreso de cada uno se guarda aparte en el móvil con su id. El PIN es un candado
  * sencillo para que nadie entre en el perfil de otro: la app no tiene servidor y el repo es público.
  */
-export const PERFILES: Perfil[] = [
+// En la versión de producto no hay alumnos: la lista queda vacía y el minificador quita los datos del paquete.
+export const PERFILES: Perfil[] = import.meta.env.MODE === 'producto' ? [] : [
   { id: 'eduardo', nombre: 'Eduardo', examen: 'c1', pin: '3574df32b00dcf72020feb3f58962cafefc62ab4e458b86db6c456c1448982fa' },
   { id: 'gabriela', nombre: 'Gabriela', examen: 'c1', pin: '33e1b7047a2b091869f79833b2fea1554a2b3c07e252cae6ce483bc3ace7cd3e' },
   { id: 'adam', nombre: 'Adam', examen: 'c1', profe: true, pin: '97712cda8fec868a35dfca9d7edaef7948d9ecd430625ec69a59c71ea66b8859' },

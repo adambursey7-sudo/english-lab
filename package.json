@@ -6,10 +6,13 @@
   "scripts": {
     "dev": "vite --host",
     "build": "tsc --noEmit && vite build",
+    "dev:producto": "node scripts/preparar-producto.mjs && vite --host --mode producto --port 5273 --strictPort",
+    "build:producto": "node scripts/preparar-producto.mjs && tsc --noEmit && vite build --mode producto --outDir dist-producto",
     "build:pages": "tsc --noEmit && vite build --mode pages",
     "preview": "vite preview --host",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
+    "test:producto": "node scripts/comprobar-producto.mjs",
     "iconos": "python scripts/iconos.py"
   },
   "dependencies": {
