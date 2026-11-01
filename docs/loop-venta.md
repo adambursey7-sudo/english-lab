@@ -146,7 +146,7 @@ Se rellena según avanza el loop. De partida: elegir el nombre definitivo del pr
 decidir cuándo unir `loop/venta` a `master` y publicarlo; guardar la clave privada de licencias en un sitio seguro.
 
 ## Estado
-- 1/11: loop preparado (rama `loop/venta`, copia `english-lab-t-venta`, este plan). Siguiente: vuelta 1 → 1a.
+- 1/11: loop preparado (rama `loop/venta`, copia `english-lab-t-venta`, este plan). Vuelta 1: 1a hecho (`docs/venta/mercado.md`). Siguiente: 1b.
 
 ## Registro de vueltas
 (una entrada por vuelta: Hecho / Comprobado / Falló / Capturas / Cómo probarlo)
