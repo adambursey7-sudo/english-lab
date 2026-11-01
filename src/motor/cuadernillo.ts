@@ -23,12 +23,12 @@ export interface Cuadernillo {
   papeles: Papel[];
 }
 
-const TITULO_EXAMEN: Record<Examen, string> = {
+export const TITULO_EXAMEN: Record<Examen, string> = {
   c1: 'C1 Advanced · Practice test',
   pau: 'Prueba de inglés · PAU Canarias (modelo de práctica)',
 };
 
-const PAPELES: Record<Examen, { destreza: Destreza; titulo: string; minutos: number }[]> = {
+export const PAPELES_DE: Record<Examen, { destreza: Destreza; titulo: string; minutos: number }[]> = {
   c1: [
     { destreza: 'reading-use', titulo: 'Reading and Use of English', minutos: 90 },
     { destreza: 'writing', titulo: 'Writing', minutos: 90 },
@@ -48,7 +48,7 @@ export function numerosCuadernillo(examen: Examen, banco: Ejercicio[] = BANCO): 
 export function montarCuadernillo(examen: Examen, numero: number, banco: Ejercicio[] = BANCO): Cuadernillo | undefined {
   const propios = banco.filter((e) => e.examen === examen && e.examenNumero === numero);
   if (propios.length === 0) return undefined;
-  const papeles = PAPELES[examen]
+  const papeles = PAPELES_DE[examen]
     .map((p) => {
       const partes = propios.filter((e) => e.destreza === p.destreza).sort((a, b) => a.parte - b.parte);
       return { ...p, partes, preguntas: partes.reduce((n, e) => n + e.items.filter((i) => TIPOS_EVALUABLES.has(i.tipo)).length, 0) };
