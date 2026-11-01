@@ -1,0 +1,312 @@
+[
+ {
+  "id": "gen-c1-listening-1-mvxwfvbv0",
+  "examen": "c1",
+  "destreza": "listening",
+  "parte": 1,
+  "nombreParte": "Multiple choice (extracts)",
+  "instrucciones": "You will hear three different extracts. For questions 1–6, choose the answer (A, B or C) which fits best according to what you hear. There are two questions for each extract. You hear each extract twice.",
+  "minutos": 8,
+  "texto": "Extract One\nYou hear two neighbours talking about a community garden they have started.\n\nExtract Two\nYou hear part of a radio interview with a man who restores old clocks.\n\nExtract Three\nYou hear two students discussing a field trip to a coastal nature reserve.",
+  "audio": {
+   "archivo": "audio/gen-c1-listening-1-mvxwfvbv0.mp3",
+   "veces": 2,
+   "hablantes": [
+    {
+     "id": "sup",
+     "descripcion": "Supervisor",
+     "voz": "en-GB-LibbyNeural"
+    },
+    {
+     "id": "m1",
+     "descripcion": "Man (Extract One)",
+     "voz": "en-GB-RyanNeural"
+    },
+    {
+     "id": "f1",
+     "descripcion": "Woman (Extract One)",
+     "voz": "en-GB-SoniaNeural"
+    },
+    {
+     "id": "int",
+     "descripcion": "Interviewer (Extract Two)",
+     "voz": "en-IE-EmilyNeural"
+    },
+    {
+     "id": "m2",
+     "descripcion": "Clock restorer (Extract Two)",
+     "voz": "en-AU-WilliamNeural"
+    },
+    {
+     "id": "f3",
+     "descripcion": "Woman (Extract Three)",
+     "voz": "en-GB-MaisieNeural"
+    },
+    {
+     "id": "m3",
+     "descripcion": "Man (Extract Three)",
+     "voz": "en-GB-ThomasNeural"
+    }
+   ],
+   "guion": [
+    {
+     "quien": "sup",
+     "texto": "English Lab. Listening test one. Part One. You will hear three different extracts. For questions one to six, choose the answer, A, B or C, which fits best according to what you hear. There are two questions for each extract. You will hear each extract twice."
+    },
+    {
+     "pausa": 2000
+    },
+    {
+     "quien": "sup",
+     "texto": "Extract One. You hear two neighbours talking about a community garden they have started. Now look at questions one and two."
+    },
+    {
+     "pausa": 15000
+    },
+    {
+     "quien": "f1",
+     "texto": "I have to say, I never thought we would get this many people to turn up on a Saturday morning. Twelve of us, and it was raining."
+    },
+    {
+     "quien": "m1",
+     "texto": "I know. I was bracing myself for just the two of us standing in a muddy field. Mind you, I suspect half of them came for the tea and cake rather than the digging."
+    },
+    {
+     "quien": "f1",
+     "texto": "Maybe, but does it matter? If they enjoy themselves, they will come back. What worries me more is the vegetables. Nobody here actually knows what they are doing, and I would hate for it all to be a bit of an embarrassment by the summer."
+    },
+    {
+     "quien": "m1",
+     "texto": "Oh, I would not lose sleep over that. Mr Okafor from number nine has been growing things for forty years, and he has already offered to come and tell us everything we are doing wrong. I would say that is a blessing, even if it is slightly terrifying."
+    },
+    {
+     "quien": "f1",
+     "texto": "Then we are in good hands."
+    },
+    {
+     "pausa": 5000
+    },
+    {
+     "quien": "sup",
+     "texto": "Now you will hear it again."
+    },
+    {
+     "pausa": 1500
+    },
+    {
+     "quien": "f1",
+     "texto": "I have to say, I never thought we would get this many people to turn up on a Saturday morning. Twelve of us, and it was raining."
+    },
+    {
+     "quien": "m1",
+     "texto": "I know. I was bracing myself for just the two of us standing in a muddy field. Mind you, I suspect half of them came for the tea and cake rather than the digging."
+    },
+    {
+     "quien": "f1",
+     "texto": "Maybe, but does it matter? If they enjoy themselves, they will come back. What worries me more is the vegetables. Nobody here actually knows what they are doing, and I would hate for it all to be a bit of an embarrassment by the summer."
+    },
+    {
+     "quien": "m1",
+     "texto": "Oh, I would not lose sleep over that. Mr Okafor from number nine has been growing things for forty years, and he has already offered to come and tell us everything we are doing wrong. I would say that is a blessing, even if it is slightly terrifying."
+    },
+    {
+     "quien": "f1",
+     "texto": "Then we are in good hands."
+    },
+    {
+     "pausa": 5000
+    },
+    {
+     "quien": "sup",
+     "texto": "Extract Two. You hear part of a radio interview with a man who restores old clocks. Now look at questions three and four."
+    },
+    {
+     "pausa": 15000
+    },
+    {
+     "quien": "int",
+     "texto": "People imagine that restoring an antique clock must be a very delicate, patient business. Is that fair?"
+    },
+    {
+     "quien": "m2",
+     "texto": "Patient, certainly. Delicate, less so than you would think. The mechanisms were built to be tough, and most of the damage I see comes from well-meaning owners who have tried to fix them with oil. Far too much oil, usually, which turns into a sort of sticky paste over the decades. The real skill is not in the repair at all. It is in working out what the maker intended, because a lot of clocks have been altered several times, and you have to read the evidence like a detective."
+    },
+    {
+     "quien": "int",
+     "texto": "Do you ever feel tempted to make a clock better than the original?"
+    },
+    {
+     "quien": "m2",
+     "texto": "Every week. But that would defeat the purpose. If a clock lost two minutes a day in 1790, then I would argue it should still lose two minutes a day. Perfect accuracy is what a phone gives you. What these things give you is a sense of the person who made them, flaws included, and I would not want to tidy that away."
+    },
+    {
+     "pausa": 5000
+    },
+    {
+     "quien": "sup",
+     "texto": "Now you will hear it again."
+    },
+    {
+     "pausa": 1500
+    },
+    {
+     "quien": "int",
+     "texto": "People imagine that restoring an antique clock must be a very delicate, patient business. Is that fair?"
+    },
+    {
+     "quien": "m2",
+     "texto": "Patient, certainly. Delicate, less so than you would think. The mechanisms were built to be tough, and most of the damage I see comes from well-meaning owners who have tried to fix them with oil. Far too much oil, usually, which turns into a sort of sticky paste over the decades. The real skill is not in the repair at all. It is in working out what the maker intended, because a lot of clocks have been altered several times, and you have to read the evidence like a detective."
+    },
+    {
+     "quien": "int",
+     "texto": "Do you ever feel tempted to make a clock better than the original?"
+    },
+    {
+     "quien": "m2",
+     "texto": "Every week. But that would defeat the purpose. If a clock lost two minutes a day in 1790, then I would argue it should still lose two minutes a day. Perfect accuracy is what a phone gives you. What these things give you is a sense of the person who made them, flaws included, and I would not want to tidy that away."
+    },
+    {
+     "pausa": 5000
+    },
+    {
+     "quien": "sup",
+     "texto": "Extract Three. You hear two students discussing a field trip to a coastal nature reserve. Now look at questions five and six."
+    },
+    {
+     "pausa": 15000
+    },
+    {
+     "quien": "f3",
+     "texto": "So, are you going on the field trip next week? I cannot decide. The reserve sounds lovely, but it means leaving at six in the morning."
+    },
+    {
+     "quien": "m3",
+     "texto": "I am, although not for the birds, if I am honest. Professor Hale said that anyone who attends will be able to use the survey data in their dissertation, and that is a huge saving of time. Otherwise I would be collecting it all myself over the winter."
+    },
+    {
+     "quien": "f3",
+     "texto": "Oh, I had not realised that. Nobody mentioned it in the lecture."
+    },
+    {
+     "quien": "m3",
+     "texto": "It was in the email, right at the bottom. I nearly missed it myself. Anyway, you should come. The trip is free, and I gather there is a lighthouse you can climb. The only thing is that you need proper waterproofs, because the forecast looks grim."
+    },
+    {
+     "quien": "f3",
+     "texto": "Right, that settles it. I will borrow my brother's coat."
+    },
+    {
+     "pausa": 5000
+    },
+    {
+     "quien": "sup",
+     "texto": "Now you will hear it again."
+    },
+    {
+     "pausa": 1500
+    },
+    {
+     "quien": "f3",
+     "texto": "So, are you going on the field trip next week? I cannot decide. The reserve sounds lovely, but it means leaving at six in the morning."
+    },
+    {
+     "quien": "m3",
+     "texto": "I am, although not for the birds, if I am honest. Professor Hale said that anyone who attends will be able to use the survey data in their dissertation, and that is a huge saving of time. Otherwise I would be collecting it all myself over the winter."
+    },
+    {
+     "quien": "f3",
+     "texto": "Oh, I had not realised that. Nobody mentioned it in the lecture."
+    },
+    {
+     "quien": "m3",
+     "texto": "It was in the email, right at the bottom. I nearly missed it myself. Anyway, you should come. The trip is free, and I gather there is a lighthouse you can climb. The only thing is that you need proper waterproofs, because the forecast looks grim."
+    },
+    {
+     "quien": "f3",
+     "texto": "Right, that settles it. I will borrow my brother's coat."
+    },
+    {
+     "pausa": 5000
+    },
+    {
+     "quien": "sup",
+     "texto": "That is the end of Part One."
+    }
+   ]
+  },
+  "items": [
+   {
+    "n": 1,
+    "tipo": "opciones",
+    "pregunta": "What is the woman's main concern about the garden?",
+    "opciones": [
+     "Too few people may keep coming.",
+     "The vegetables may not grow well.",
+     "The weather may spoil the work."
+    ],
+    "correcta": 1,
+    "explicacion": "Dice «What worries me more is the vegetables. Nobody here actually knows what they are doing» (B). La asistencia no le preocupa («does it matter?», A no) y la lluvia solo se menciona como dato de que aun así vino gente (C no)."
+   },
+   {
+    "n": 2,
+    "tipo": "opciones",
+    "pregunta": "How does the man feel about Mr Okafor's offer?",
+    "opciones": [
+     "relieved but also a little nervous",
+     "doubtful that it will be useful",
+     "annoyed by the criticism it implies"
+    ],
+    "correcta": 0,
+    "explicacion": "Lo llama «a blessing, even if it is slightly terrifying»: alivio con algo de miedo (A). No duda de su utilidad (B) ni se molesta (C)."
+   },
+   {
+    "n": 3,
+    "tipo": "opciones",
+    "pregunta": "According to the man, what causes most damage to antique clocks?",
+    "opciones": [
+     "owners' attempts to repair them",
+     "the delicate nature of old mechanisms",
+     "changes made by the original makers"
+    ],
+    "correcta": 0,
+    "explicacion": "«Most of the damage I see comes from well-meaning owners who have tried to fix them with oil» (A). Dice que los mecanismos eran resistentes (B no) y que las alteraciones son posteriores, no de los fabricantes originales (C no)."
+   },
+   {
+    "n": 4,
+    "tipo": "opciones",
+    "pregunta": "What is his attitude to improving a clock's accuracy?",
+    "opciones": [
+     "He is occasionally willing to do it.",
+     "He believes it would be wrong to do so.",
+     "He thinks owners should decide."
+    ],
+    "correcta": 1,
+    "explicacion": "Aunque se siente tentado, dice «that would defeat the purpose» y que un reloj debe conservar sus defectos (B). A no: no lo hace nunca. C no se menciona."
+   },
+   {
+    "n": 5,
+    "tipo": "opciones",
+    "pregunta": "Why is the man going on the field trip?",
+    "opciones": [
+     "He is keen to see the wildlife.",
+     "He will be able to use the data collected.",
+     "He wants to climb the lighthouse."
+    ],
+    "correcta": 1,
+    "explicacion": "«Not for the birds» descarta A. Asiste porque podrá usar los datos del estudio en su trabajo (B). El faro es un argumento para convencer a ella, no su motivo (C no)."
+   },
+   {
+    "n": 6,
+    "tipo": "opciones",
+    "pregunta": "What persuades the woman to go?",
+    "opciones": [
+     "finding out about the benefit to her dissertation",
+     "the fact that the trip costs nothing",
+     "the chance to explore the lighthouse"
+    ],
+    "correcta": 0,
+    "explicacion": "Ella reacciona al dato de la tesis («I had not realised that»), pero lo que dice «that settles it» llega tras oír que es gratis, hay un faro y necesita impermeables; sin embargo la información nueva que la sorprende y motiva es la de los datos (A). Gratis y faro son argumentos añadidos por él, y ella no los destaca."
+   }
+  ]
+ }
+]
