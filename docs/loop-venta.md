@@ -59,7 +59,7 @@ interfaz en español, ejercicios en inglés, nombres de código en español, rep
 - **«Aula» sin servidor:** el examen generado viaja en un enlace/QR (ids + semilla); el alumno lo hace en el móvil y
   devuelve su resultado como texto o QR; el profe los pega en una tabla de clase. Sin cuentas ni datos en la nube.
 - **El profe no necesita saber nada:** primera pantalla guiada (academia, logo, colores) y examen de ejemplo listo.
-- **Contenido:** el generador mezcla ejercicios del banco; la rama `tablon/english-lab-c1-3` (otra sesión) añadirá el
+- **Contenido (actualizado 1/11):** el generador de IA (bloque 6) es el corazón; el generador de exámenes mezcla ejercicios del banco; la rama `tablon/english-lab-c1-3` (otra sesión) añadirá el
   C1 examen 3. Este loop no escribe exámenes enteros nuevos salvo piezas sueltas por parte para dar variedad (bloque 6).
 
 ## Plan (bloques y pasos)
@@ -107,12 +107,19 @@ interfaz en español, ejercicios en inglés, nombres de código en español, rep
   (huecos que existen, una sola respuesta, etc.). Exportar/importar un paquete de ejercicios.
 - 5c. Importar desde texto pegado (formato sencillo de líneas) para pasar ejercicios de Word en un minuto.
 
-**6. Contenido y calidad**
-- 6a. Medir variedad: cuántos ejercicios hay por examen y parte; piezas sueltas nuevas donde haya menos de 3 para que
-  el generador mezcle de verdad (redactadas de cero, con test del banco).
-- 6b. Revisor de calidad (subagente de solo lectura, por lotes): una sola respuesta correcta, nivel real, erratas, sin
-  marcas ni nombres reales. Arreglar lo que falle.
-- 6c. Banco de muestra para la demo: 1 examen completo de C1 y 1 de PAU desbloqueados siempre.
+**6. Generador con IA (decisión de Adam, 1/11: «que la propia aplicación genere los exámenes» con los parámetros de
+Cambridge C1 y de la PAU, solo esos dos; Adam aporta muchos exámenes de muestra en `C:\dev\english-lab-fuentes\de-adam\`)**
+- 6a. Guía de estilo por parte (`docs/estilo/c1-*.md`, `docs/estilo/pau.md`): longitud, registro, tipo de huecos,
+  distractores, vocabulario y estructuras C1, temas y criterios de la PAU, sacada de los manuales oficiales, de `formatos.md`
+  y de los exámenes de Adam. Se aprende el estilo; **nunca se copia texto** (los exámenes de muestra no entran en el repo).
+- 6b. Validador automático (`src/motor/validar.ts`, el mismo del test del banco más nivel de vocabulario y longitud) que
+  rechaza lo mal hecho y devuelve el motivo para regenerar.
+- 6c. Fábrica por lotes en el PC (`scripts/fabrica.mjs`): genera ejercicios nuevos con Claude según la guía, los pasa por
+  el validador y por un revisor de solo lectura, y los guarda en el banco. Meta: variedad suficiente por parte para que el
+  generador de exámenes mezcle de verdad.
+- 6d. Botón «Crear ejercicio nuevo» dentro de la app (Pro): llamada directa del navegador a la IA con la clave del propio
+  profe (guardada solo en su navegador), misma guía y mismo validador; se guarda en «Mis ejercicios». Sin servidor propio.
+- 6e. Banco de muestra de la demo: 1 examen de C1 y 1 de PAU desbloqueados siempre.
 
 **7. Aula sin servidor y licencias**
 - 7a. Enlace/QR de examen para alumnos (ids + semilla + marca); el alumno lo hace y se corrige solo.
