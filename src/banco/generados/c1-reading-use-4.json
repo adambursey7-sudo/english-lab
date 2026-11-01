@@ -1,0 +1,96 @@
+[
+ {
+  "id": "gen-c1-reading-use-4-mvxw9goq0",
+  "examen": "c1",
+  "destreza": "reading-use",
+  "parte": 4,
+  "nombreParte": "Key word transformations",
+  "instrucciones": "For questions 25–30, complete the second sentence so that it has a similar meaning to the first sentence, using the word given. Do not change the word given. You must use between three and six words, including the word given.",
+  "minutos": 12,
+  "items": [
+   {
+    "n": 25,
+    "tipo": "transformacion",
+    "clave": "SOONER",
+    "frase": "The beekeeper had barely opened the hive when the bees began to swarm out.",
+    "inicio": "No",
+    "fin": "the hive than the bees began to swarm out.",
+    "correctas": [
+     "sooner had the beekeeper opened",
+     "sooner had the beekeeper open"
+    ],
+    "explicacion": "\"No sooner … than\" with a negative adverbial at the start requires inversion: \"No sooner had the beekeeper opened the hive than…\"."
+   },
+   {
+    "n": 26,
+    "tipo": "transformacion",
+    "clave": "WISH",
+    "frase": "I regret not learning to play an instrument when I was younger.",
+    "inicio": "I",
+    "fin": "to play an instrument when I was younger.",
+    "correctas": [
+     "wish I had learnt",
+     "wish I had learned",
+     "wish I'd learnt",
+     "wish I'd learned"
+    ],
+    "explicacion": "A regret about the past: \"wish + past perfect\"."
+   },
+   {
+    "n": 27,
+    "tipo": "transformacion",
+    "clave": "HAD",
+    "frase": "A local joiner repaired our front door last week.",
+    "inicio": "We",
+    "fin": "by a local joiner last week.",
+    "correctas": [
+     "had our front door repaired",
+     "had the front door repaired",
+     "had our door repaired"
+    ],
+    "explicacion": "Causative: \"have + object + past participle\" for a service done by someone else."
+   },
+   {
+    "n": 28,
+    "tipo": "transformacion",
+    "clave": "MUST",
+    "frase": "I'm sure the museum was very busy because the car park was full.",
+    "inicio": "The museum",
+    "fin": "very busy because the car park was full.",
+    "correctas": [
+     "must have been",
+     "must have been really"
+    ],
+    "explicacion": "Deduction about the past: \"must have + past participle\"."
+   },
+   {
+    "n": 29,
+    "tipo": "transformacion",
+    "clave": "UP",
+    "frase": "She invented an excuse so that she wouldn't have to attend the meeting.",
+    "inicio": "She",
+    "fin": "an excuse so that she wouldn't have to attend the meeting.",
+    "correctas": [
+     "made up",
+     "came up with",
+     "thought up"
+    ],
+    "explicacion": "\"Make up\" an excuse = invent one. Note: \"came up with\" and \"thought up\" also work but \"made up\" uses the key word."
+   },
+   {
+    "n": 30,
+    "tipo": "transformacion",
+    "clave": "LONGER",
+    "frase": "The journey took far more time than the guidebook had suggested.",
+    "inicio": "The journey was",
+    "fin": "the guidebook had suggested.",
+    "correctas": [
+     "much longer than",
+     "far longer than",
+     "a lot longer than"
+    ],
+    "explicacion": "Comparative of \"long\": \"much / far longer than\" expresses a big difference."
+   }
+  ]
+ }
+]

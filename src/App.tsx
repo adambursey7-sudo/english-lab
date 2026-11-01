@@ -11,6 +11,8 @@ import { Imprimir } from './pantallas/Imprimir';
 import { Crear } from './pantallas/Crear';
 import { Editor } from './pantallas/Editor';
 import { Licencia } from './pantallas/Licencia';
+import { Aula } from './pantallas/Aula';
+import { Hacer } from './pantallas/Hacer';
 import { PaginaAudio } from './pantallas/PaginaAudio';
 import type { Examen } from './banco/tipos';
 import { Intro } from './componentes/Intro';
@@ -24,12 +26,15 @@ type Estado =
   | { pantalla: 'resultado'; lista: Ejercicio[]; respuestas: Record<string, Respuestas> };
 
 /** Rutas por hash que viven fuera del flujo normal: el cuadernillo imprimible y la página de audio del QR. */
-type Ruta = { tipo: 'imprimir'; examen: Examen; numero: number; modo: 'cuadernillo' | 'clave' } | { tipo: 'audio'; examen: Examen; numero: number } | { tipo: 'mezcla'; ids: string[] } | { tipo: 'crear' } | { tipo: 'editor' } | { tipo: 'licencia' };
+type Ruta = { tipo: 'imprimir'; examen: Examen; numero: number; modo: 'cuadernillo' | 'clave' } | { tipo: 'audio'; examen: Examen; numero: number } | { tipo: 'mezcla'; ids: string[] } | { tipo: 'crear' } | { tipo: 'editor' } | { tipo: 'licencia' } | { tipo: 'aula' } | { tipo: 'hacer'; payload: string };
 
 export function rutaDe(hash: string): Ruta | null {
   if (ES_PRODUCTO && /^#\/crear\/?$/.test(hash)) return { tipo: 'crear' };
   if (ES_PRODUCTO && /^#\/mis-ejercicios\/?$/.test(hash)) return { tipo: 'editor' };
   if (ES_PRODUCTO && /^#\/licencia\/?$/.test(hash)) return { tipo: 'licencia' };
+  if (ES_PRODUCTO && /^#\/aula\/?$/.test(hash)) return { tipo: 'aula' };
+  const hacer = /^#\/hacer\/([\w-]{20,4000})\/?$/.exec(hash);
+  if (hacer) return { tipo: 'hacer', payload: hacer[1] };
   const mezcla = /^#\/audio\/mezcla\/([\w.~-]{1,400})\/?$/.exec(hash);
   if (mezcla) return { tipo: 'mezcla', ids: mezcla[1].split('~') };
   const m = /^#\/(imprimir|audio)\/(c1|pau)\/(\d+)(\/clave)?\/?$/.exec(hash);
@@ -77,6 +82,8 @@ export function App() {
   if (ruta?.tipo === 'crear') return <Crear />;
   if (ruta?.tipo === 'editor') return <Editor />;
   if (ruta?.tipo === 'licencia') return <Licencia />;
+  if (ruta?.tipo === 'aula') return <Aula />;
+  if (ruta?.tipo === 'hacer') return <Hacer payload={ruta.payload} />;
   if (ruta?.tipo === 'imprimir' && !cuadernilloAjeno) return <Imprimir examen={ruta.examen} numero={ruta.numero} modo={ruta.modo} />;
   if (ruta?.tipo === 'mezcla') return <PaginaAudio ids={ruta.ids} />;
   if (ruta?.tipo === 'audio') return <PaginaAudio examen={ruta.examen} numero={ruta.numero} />;

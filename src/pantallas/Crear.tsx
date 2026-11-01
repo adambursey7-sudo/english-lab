@@ -6,6 +6,9 @@ import { LIMITE_DEMO_GUARDADOS } from '../motor/licencia';
 import { useLicencia } from '../motor/useLicencia';
 import { reglaPagina } from '../motor/paginas';
 import { bancoCompleto, leerPropios } from '../motor/propios';
+import { QR } from '../componentes/QR';
+import { baseApp } from '../config';
+import { codificarExamen } from '../motor/aula';
 import { PAPELES_DE } from '../motor/cuadernillo';
 import { esPropio } from '../motor/propios';
 import { escribirGuardados, exportar, fusionar, gruposDe, hoy, importar, leerGuardados, nuevoId, usadosDe, type Guardado } from '../motor/misExamenes';
@@ -50,6 +53,7 @@ export function Crear() {
   const [evitarUsados, setEvitarUsados] = useState(true);
   const [aviso, setAviso] = useState('');
   const [fecha, setFecha] = useState('');
+  const [enlace, setEnlace] = useState('');
   const [ahorro, setAhorro] = useState(false);
   const marca = leerMarca();
   const { pro } = useLicencia();
@@ -122,6 +126,10 @@ export function Crear() {
     if (!nuevos) return setAviso('Ese archivo no es una copia de seguridad de la app.');
     cambiarGuardados(fusionar(guardados, nuevos));
     setAviso(`Copia cargada: ${nuevos.length} ${nuevos.length === 1 ? 'examen' : 'exámenes'}.`);
+  };
+  const hayPropiosEnExamen = generado.ids.some(esPropio);
+  const compartirAula = () => {
+    setEnlace(`${baseApp()}#/hacer/${codificarExamen({ v: 1, examen, titulo: generado.etiqueta ? `${generado.titulo} · ${generado.etiqueta}` : generado.titulo, ids: generado.ids, version, semilla, marca: { nombre: marca.nombre, color: marca.color } })}`);
   };
   const alternar = (x: PedidoParte) => setQuitadas((q) => (q.includes(clave(x)) ? q.filter((c) => c !== clave(x)) : [...q, clave(x)]));
 
@@ -219,6 +227,19 @@ export function Crear() {
             Cargar una copia
             <input type="file" accept="application/json,.json" hidden onChange={(e) => { void leerCopia(e.target.files?.[0]); e.target.value = ''; }} />
           </label>
+
+          <h2>Compartir con alumnos</h2>
+          {!pro && <p className="silencio pequeno">El aula es de la versión completa. <a href="#/licencia">Activar licencia</a></p>}
+          {hayPropiosEnExamen && <p className="silencio pequeno">Este examen lleva ejercicios tuyos: solo se pueden compartir por enlace los del banco. Desmarca «Usar primero mis ejercicios» o imprímelo.</p>}
+          <button type="button" className="btn sec" onClick={compartirAula} disabled={!pro || hayPropiosEnExamen || generado.papeles.length === 0}>Crear enlace y QR para los alumnos</button>
+          {enlace && (
+            <div className="enlace-aula">
+              <QR texto={enlace} lado={180} alt="QR del examen para los alumnos" />
+              <textarea className="campo-crear" readOnly rows={3} value={enlace} aria-label="Enlace del examen" onFocus={(e) => e.currentTarget.select()} />
+              <p className="silencio pequeno">Los alumnos lo abren en el móvil, lo hacen y te devuelven un código que pegas en <a href="#/aula">Mi clase</a>. El enlace dice qué ejercicios lleva: si cambias la mezcla, crea otro.</p>
+            </div>
+          )}
+          <a className="btn sec" href="#/aula" style={{ display: 'block', textAlign: 'center', textDecoration: 'none', marginTop: 8 }}>Mi clase (resultados)</a>
 
           <h2>Ver</h2>
           <div className="fichas" role="group" aria-label="Qué ver">

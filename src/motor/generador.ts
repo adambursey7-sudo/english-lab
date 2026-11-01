@@ -68,8 +68,19 @@ function barajarOpciones(item: Item, rnd: () => number): Item {
   return { ...item, opciones: orden.map((i) => item.opciones[i]), correcta: orden.indexOf(item.correcta) };
 }
 
-/** Versión B de un ejercicio: opciones de cada pregunta en otro orden (la clave se recalcula sola). */
-function versionB(e: Ejercicio, rnd: () => number): Ejercicio {
+/** Número a partir de un texto (para que cada ejercicio tenga su propia mezcla, siempre la misma). */
+function huella(t: string): number {
+  let h = 2166136261;
+  for (let i = 0; i < t.length; i++) h = Math.imul(h ^ t.charCodeAt(i), 16777619);
+  return h >>> 0;
+}
+
+/**
+ * Versión B de un ejercicio: opciones de cada pregunta en otro orden (la clave se recalcula sola). Solo depende de la
+ * semilla y del id del ejercicio, así se puede reconstruir igual en otro navegador (el enlace del aula).
+ */
+export function versionB(e: Ejercicio, semilla: number): Ejercicio {
+  const rnd = azar(semilla ^ huella(e.id));
   return { ...e, items: e.items.map((i) => barajarOpciones(i, rnd)) };
 }
 
@@ -89,7 +100,7 @@ export function generarExamen(receta: Receta, banco: Ejercicio[] = BANCO): Exame
     if (tomados.length < p.cuantos) faltan.push({ ...p, cuantos: p.cuantos - tomados.length });
     elegidos.push(...tomados);
   }
-  const resultado = receta.version === 'B' ? elegidos.map((e) => versionB(e, rnd)) : elegidos;
+  const resultado = receta.version === 'B' ? elegidos.map((e) => versionB(e, receta.semilla)) : elegidos;
   const papeles: Papel[] = PAPELES_DE[receta.examen]
     .map((pp) => {
       const partes = resultado.filter((e) => e.destreza === pp.destreza).sort((a, b) => a.parte - b.parte);

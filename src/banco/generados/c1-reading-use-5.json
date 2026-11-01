@@ -1,0 +1,93 @@
+[
+ {
+  "id": "gen-c1-reading-use-5-mvxwa5430",
+  "examen": "c1",
+  "destreza": "reading-use",
+  "parte": 5,
+  "nombreParte": "Multiple choice",
+  "titulo": "The rooftop hives",
+  "instrucciones": "You are going to read an article in which a journalist describes learning to keep bees on the roof of an office building. For questions 31–36, choose the answer (A, B, C or D) which you think fits best according to the text.",
+  "minutos": 15,
+  "texto": "When the facilities manager at the insurance firm where I work announced that the roof would be home to four beehives, the reaction in the open-plan office was roughly what you would expect. People worried about stings, about allergies, about whether the bees would follow them into the lift. I was among the sceptics, so I was more than a little surprised to find myself, three weeks later, standing on the roof in a borrowed white suit, holding a smoking metal can and trying to look as though I knew what I was doing.\n\nI had volunteered, if that is the right word, because nobody else had. The firm had hired a retired schoolteacher called Marguerite Odell to run the project, and she had asked for two members of staff to assist her on Thursday mornings. The first person put forward was a colleague from accounts, who promptly developed a dental appointment that was to recur every Thursday for the foreseeable future. That left me. I had no particular feelings about bees, one way or the other, which Marguerite said was an ideal starting point. 'The ones who adore them are a nuisance,' she told me, 'and the ones who fear them are worse. You want someone who is merely curious.'\n\nCurious I certainly was, although within ten minutes of lifting the first lid I was also humbled. I had imagined a hive as a sort of buzzing chaos, a crowd of insects colliding with one another in the dark. What I saw instead was something closer to a well-run hospital at night. Every bee seemed to have a destination. Some were fanning their wings at the entrance to keep the air moving; others were hauling out the bodies of the dead; a few, Marguerite pointed out, were simply standing guard, and would meet any stranger with a quick, businesslike inspection. 'Nobody is in charge,' she said, 'and yet everything gets done. I have sat through staff meetings that could learn a good deal from that.' She said this in the tone of someone who had sat through a great many.\n\nThe smoke, I learned, does not put the bees to sleep, as I had always assumed. It interferes with the signals they use to raise the alarm, so that a keeper can work without the whole colony deciding that the roof is under attack. It is a trick rather than a kindness, and Marguerite was frank about that. 'We are borrowing their calm,' she said. 'We should at least have the decency to be quiet about it.' After that I found that I moved more slowly, and spoke less, and the nervous energy I usually carry around with me seemed to drain away somewhere between the second hive and the third.\n\nThe effect on the office has been odd. Within a month the bees had become a topic of conversation in the kitchen, and not only among the people who had been sceptical. A director who had once circulated an email about reducing 'non-essential distractions' now stops by the roof door on Thursdays to ask how the queen is. A graphic designer has begun drawing the hexagons of the comb on the whiteboards, apparently without noticing. The first jar of honey, which was shared out in teaspoons at the end of September, caused an argument about whether it tasted of lime trees or of traffic fumes. Nobody could settle the question, and nobody seemed to mind.\n\nI would not pretend that I have become an expert. Marguerite still checks my work, gently, and still winces when I handle a frame too quickly. But I have noticed something about myself that I did not expect. I used to spend my lunch hours scrolling through my phone, waiting for the afternoon to begin. Now, on Thursdays at least, I find that the morning has changed the shape of the whole day. I am more patient with colleagues. I notice the weather. I am even, I regret to say, becoming one of those people who tell strangers at parties that a bee will visit two thousand flowers in a single trip. Marguerite would be pleased, I think, though she would probably tell me to stop.",
+  "items": [
+   {
+    "n": 31,
+    "tipo": "opciones",
+    "pregunta": "What do we learn about the narrator in the first two paragraphs?",
+    "opciones": [
+     "He had always been enthusiastic about the idea of beekeeping.",
+     "He became involved in the project mainly because others declined.",
+     "He was chosen because of his previous experience with animals.",
+     "He volunteered in order to impress the facilities manager."
+    ],
+    "correcta": 1,
+    "explicacion": "«I had volunteered, if that is the right word, because nobody else had» y el colega de contabilidad se escaqueó (B). Era escéptico (A no) y no tenía sentimientos concretos sobre las abejas; no se menciona experiencia previa ni querer impresionar."
+   },
+   {
+    "n": 32,
+    "tipo": "opciones",
+    "pregunta": "Why did Marguerite say that someone who is merely curious is ideal?",
+    "opciones": [
+     "Strong feelings either way would make a beekeeper less useful.",
+     "Curious people learn practical skills faster than others.",
+     "People who fear bees are more likely to be stung.",
+     "She wanted someone who would ask her plenty of questions."
+    ],
+    "correcta": 0,
+    "explicacion": "«The ones who adore them are a nuisance, and the ones who fear them are worse» (A): las emociones fuertes, en cualquier dirección, estorban. No habla de rapidez de aprendizaje, de picaduras ni de preguntas."
+   },
+   {
+    "n": 33,
+    "tipo": "opciones",
+    "pregunta": "What is the narrator's main impression on first opening the hive?",
+    "opciones": [
+     "The insects were far more aggressive than he had expected.",
+     "The colony worked in an organised way without any visible leader.",
+     "The hive was noisier and more chaotic than a hospital.",
+     "Most of the bees seemed uninterested in the keepers."
+    ],
+    "correcta": 1,
+    "explicacion": "Compara la colmena con un hospital bien organizado en el que cada abeja tiene un destino, y Marguerite dice «Nobody is in charge, and yet everything gets done» (B). Esperaba caos y se equivocó (C no)."
+   },
+   {
+    "n": 34,
+    "tipo": "opciones",
+    "pregunta": "What does Marguerite imply by saying 'We are borrowing their calm'?",
+    "opciones": [
+     "Keepers should learn to relax as bees do.",
+     "Smoke harms the bees more than people realise.",
+     "The method works by deceiving the bees, which should not be done lightly.",
+     "Bees are naturally peaceful once they are used to humans."
+    ],
+    "correcta": 2,
+    "explicacion": "Ha dicho que el humo es «a trick rather than a kindness» y añade que deberían al menos tener la decencia de ser discretos (C). No dice que dañe a las abejas ni que sean pacíficas por naturaleza."
+   },
+   {
+    "n": 35,
+    "tipo": "opciones",
+    "pregunta": "What does the writer suggest about the effect of the bees on the office?",
+    "opciones": [
+     "They have made staff more productive.",
+     "They have caused disagreements between departments.",
+     "They have changed attitudes even among unlikely people.",
+     "They have encouraged the firm to reduce distractions."
+    ],
+    "correcta": 2,
+    "explicacion": "Hasta el director que había mandado un correo contra las distracciones pregunta ahora por la reina (C). La discusión sobre la miel fue sobre el sabor y no preocupó a nadie (B no); la productividad no se menciona."
+   },
+   {
+    "n": 36,
+    "tipo": "opciones",
+    "pregunta": "What is the writer's attitude towards himself in the final paragraph?",
+    "opciones": [
+     "disappointed that he has learned so little",
+     "anxious about disappointing Marguerite",
+     "resigned to remaining a poor beekeeper",
+     "gently amused at how much he has been changed"
+    ],
+    "correcta": 3,
+    "explicacion": "Tono de autoironía: «I am even, I regret to say, becoming one of those people who tell strangers at parties…» (D). Admite que no es experto, pero no se muestra decepcionado ni angustiado."
+   }
+  ]
+ }
+]

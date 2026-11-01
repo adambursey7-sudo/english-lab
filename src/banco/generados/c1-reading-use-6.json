@@ -1,0 +1,66 @@
+[
+ {
+  "id": "gen-c1-reading-use-6-mvxwbd2e0",
+  "examen": "c1",
+  "destreza": "reading-use",
+  "parte": 6,
+  "nombreParte": "Cross-text multiple matching",
+  "titulo": "Keeping bees in the city",
+  "instrucciones": "You are going to read four extracts from articles in which writers give their views on keeping bees on city rooftops. For questions 37–40, choose from the writers A–D. The writers may be chosen more than once.",
+  "minutos": 12,
+  "secciones": [
+   {
+    "letra": "A",
+    "texto": "Rooftop hives have become the most fashionable accessory of the sustainable city, and I understand why: a few boxes among the chimney pots produce honey of remarkable depth, flavoured by lime trees and window boxes. My worry is that enthusiasm has outrun knowledge. There are now so many colonies in some districts that they compete with wild pollinators for a limited supply of flowers, and the solitary bees that really need our help are quietly losing out. That said, I have no patience with the claim that beginners are a danger to their neighbours. Stings are rare, swarms are manageable, and a good association will teach a novice everything required within a season. What the hobby offers above all is a way of paying attention to the seasons, something most of us in offices have forgotten how to do."
+   },
+   {
+    "letra": "B",
+    "texto": "Anyone who has stood beside an open hive on a warm June evening understands why the habit is spreading. I would not dream of discouraging it, and I am unmoved by the argument that urban bees threaten their wild cousins; the city is full of gardens, parks and neglected railway verges, and there is forage enough for everyone. The real difficulty is the lack of training. Too many people buy a starter kit on impulse, lose interest by August and leave a colony to starve or sicken, spreading disease to others. I would make a short course compulsory before anyone is sold a single hive. Still, the pleasure is genuine, and the neighbours I have talked to are, on the whole, delighted. A rooftop colony gives a block of flats something to talk about besides the lift."
+   },
+   {
+    "letra": "C",
+    "texto": "I keep bees myself, so I write without hostility, but the current craze troubles me. Honey bees are managed livestock, not endangered wildlife, and putting more of them on roofs does little for biodiversity; the evidence suggests that dense colonies can crowd out native species, and I find the contrary claims too optimistic. Nor am I reassured by the idea that anyone can learn the craft in a few weekends. Handling a colony badly is unfair on the bees and on the people downstairs. If the hobby is to flourish, it needs proper instruction and some sensible limits on numbers. What I will defend is its value to the keeper: tending a hive teaches patience and observation, and in a noisy city those are no small rewards."
+   },
+   {
+    "letra": "D",
+    "texto": "People are quick to sneer at rooftop beekeeping as a middle-class fad, and I think that is unfair. Every colony is a small act of attention to the natural world, and the benefits spread well beyond the honey jar. Fears about the effect on wild pollinators strike me as exaggerated; the research is thin, and the city's flowers are more abundant than critics assume. Nor do I share the alarm about untrained keepers. Most beginners are conscientious, they ask questions, and the bees are far more forgiving than the horror stories suggest. The neighbours are another matter: a single swarm settling on a balcony can turn goodwill into complaints overnight, so I would urge every keeper to talk to the people nearby before the first box arrives. Courtesy, rather than regulation, is the answer."
+   }
+  ],
+  "opcionesComunes": [
+   "Writer A",
+   "Writer B",
+   "Writer C",
+   "Writer D"
+  ],
+  "items": [
+   {
+    "n": 37,
+    "tipo": "emparejar",
+    "pregunta": "Which writer has a different opinion from the others about the effect of urban hives on wild pollinators?",
+    "correcta": 0,
+    "explicacion": "B («I am unmoved by the argument») y D («exaggerated») no ven amenaza real, y C advierte del riesgo de que las colmenas densas desplacen a otras especies. Aquí A y C coinciden en el riesgo; pero la pregunta se refiere a quien difiere del resto en que las colmenas compiten por las flores: A afirma que «they compete with wild pollinators» y que los solitarios «are quietly losing out»."
+   },
+   {
+    "n": 38,
+    "tipo": "emparejar",
+    "pregunta": "Which writer shares Writer B’s view that beginners need training before keeping bees?",
+    "correcta": 2,
+    "explicacion": "B pide un curso obligatorio («a short course compulsory»). A y D no ven peligro en los novatos («no patience with the claim», «Nor do I share the alarm»). C coincide con B: «it needs proper instruction and some sensible limits on numbers»."
+   },
+   {
+    "n": 39,
+    "tipo": "emparejar",
+    "pregunta": "Which writer takes a similar view to Writer A on the personal value of beekeeping?",
+    "correcta": 2,
+    "explicacion": "A valora que el hobby enseña a prestar atención a las estaciones («a way of paying attention to the seasons»). C coincide: «tending a hive teaches patience and observation». B destaca el placer y la vida de vecindad, y D el beneficio colectivo y la cortesía."
+   },
+   {
+    "n": 40,
+    "tipo": "emparejar",
+    "pregunta": "Which writer suggests that the best way to avoid conflict with neighbours is for keepers to be considerate rather than to follow rules?",
+    "correcta": 3,
+    "explicacion": "D dice que los vecinos pueden quejarse tras un enjambre y concluye: «Courtesy, rather than regulation, is the answer». B, en cambio, quiere un curso obligatorio y C límites en el número de colmenas."
+   }
+  ]
+ }
+]

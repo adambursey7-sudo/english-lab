@@ -146,7 +146,7 @@ export function Inicio({ perfil, onEmpezar, onResultados, onCambiarPerfil }: Pro
         {ES_PRODUCTO && (
           <a className="btn" href="#/crear" style={{ textAlign: 'center', textDecoration: 'none' }}>Crear un examen nuevo para imprimir</a>
         )}
-        {ES_PRODUCTO && <p className="silencio pequeno" style={{ textAlign: 'center' }}><a href="#/licencia">Licencia</a></p>}
+        {ES_PRODUCTO && <p className="silencio pequeno" style={{ textAlign: 'center' }}><a href="#/aula">Mi clase</a> · <a href="#/licencia">Licencia</a></p>}
 
         {examenCompleto.length > 0 && (
           <section className={`examen-completo tono-${destreza}`}>
