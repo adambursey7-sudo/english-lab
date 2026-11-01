@@ -1,0 +1,79 @@
+[
+ {
+  "id": "gen-c1-reading-use-2-mvxw3muc0",
+  "examen": "c1",
+  "destreza": "reading-use",
+  "parte": 2,
+  "nombreParte": "Open cloze",
+  "titulo": "The garden on Mill Lane",
+  "instrucciones": "For questions 9–16, read the text below and think of the word which best fits each gap. Use only one word in each gap.",
+  "minutos": 10,
+  "texto": "When a group of neighbours first proposed turning a derelict car park into a community garden, few people believed it {{9}} ever happen. The land had been abandoned for years, and the council, {{10}} was short of money, showed little interest. Undeterred, the volunteers began clearing rubbish at weekends, {{11}} only a few borrowed spades and a great deal of enthusiasm.\n\nIt was not long {{12}} the project began to attract attention. A local builder donated timber for raised beds, and a nearby school asked whether its pupils could take {{13}} in the planting. By the end of the first summer, the garden was producing more vegetables than the volunteers knew what to do {{14}}, so they began leaving surplus crates at the gate for anyone who wanted them.\n\nNo sooner {{15}} the first harvest been shared than people started asking how they could get involved. Today, the garden is run by more than eighty residents, many of {{16}} had never grown anything before.",
+  "items": [
+   {
+    "n": 9,
+    "tipo": "palabra",
+    "correctas": [
+     "would"
+    ],
+    "explicacion": "\"Believed it would ever happen\" is reported speech about the future seen from the past, so \"would\" is needed."
+   },
+   {
+    "n": 10,
+    "tipo": "palabra",
+    "correctas": [
+     "which"
+    ],
+    "explicacion": "A non-defining relative clause (\"the council, which was short of money\") needs \"which\"; \"that\" cannot follow a comma."
+   },
+   {
+    "n": 11,
+    "tipo": "palabra",
+    "correctas": [
+     "with"
+    ],
+    "explicacion": "\"With only a few borrowed spades\" = using or having only those tools. \"Armed with\" would need two words."
+   },
+   {
+    "n": 12,
+    "tipo": "palabra",
+    "correctas": [
+     "before"
+    ],
+    "explicacion": "\"It was not long before...\" is a fixed expression meaning that something happened soon."
+   },
+   {
+    "n": 13,
+    "tipo": "palabra",
+    "correctas": [
+     "part"
+    ],
+    "explicacion": "\"Take part in\" = participate in. It is a fixed expression."
+   },
+   {
+    "n": 14,
+    "tipo": "palabra",
+    "correctas": [
+     "with"
+    ],
+    "explicacion": "\"Knew what to do with\" = how to deal with. The verb \"do\" takes the preposition \"with\" here."
+   },
+   {
+    "n": 15,
+    "tipo": "palabra",
+    "correctas": [
+     "had"
+    ],
+    "explicacion": "After \"No sooner\" we use inversion with the past perfect: \"No sooner had the harvest been shared than...\"."
+   },
+   {
+    "n": 16,
+    "tipo": "palabra",
+    "correctas": [
+     "whom"
+    ],
+    "explicacion": "After a quantifier and preposition (\"many of whom\"), the relative pronoun must be \"whom\" for people."
+   }
+  ]
+ }
+]
