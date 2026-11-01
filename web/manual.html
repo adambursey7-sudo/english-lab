@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Manual del profe</title>
+  <style>
+    @page { size: A4; margin: 16mm 15mm; }
+    body { font: 11pt/1.5 Arial, Helvetica, sans-serif; color: #111; max-width: 190mm; margin: 0 auto; padding: 8mm; }
+    h1 { font-size: 24pt; margin: 0 0 4pt; } h2 { font-size: 15pt; border-bottom: 2px solid #111; padding-bottom: 3pt; margin: 18pt 0 8pt; break-after: avoid; }
+    img { width: 100%; border: 1px solid #999; margin: 6pt 0; break-inside: avoid; }
+    .pagina { break-after: page; } .pagina:last-child { break-after: auto; }
+    .nota { background: #f2f2f2; padding: 6pt 9pt; border-left: 3px solid #111; }
+    li { margin-bottom: 4pt; }
+  </style>
+</head>
+<body>
+<section class="pagina">
+  <h1>Manual del profe</h1>
+  <p>Guía rápida para crear, imprimir y repartir exámenes de inglés (tipo C1 Advanced y PAU de Canarias).</p>
+  <h2>1. Primera vez</h2>
+  <ol>
+    <li>Abre la aplicación en el navegador (mejor Chrome o Edge).</li>
+    <li>Escribe el <b>nombre de tu academia</b>, sube tu <b>logo</b> (opcional) y elige un color. Saldrán en la pantalla y en todos los PDF.</li>
+    <li>Si tienes una clave de licencia, entra en <b>Licencia</b> (abajo de la pantalla principal), pégala y pulsa «Activar». Sin clave funciona la versión de prueba.</li>
+  </ol>
+  <p class="nota">Todo lo que haces se guarda en este navegador. Si cambias de ordenador, descarga antes la copia de seguridad (paso 4).</p>
+</section>
+
+<section class="pagina">
+  <h2>2. Crear un examen</h2>
+  <ol>
+    <li>Pulsa <b>Crear un examen nuevo para imprimir</b>.</li>
+    <li>Elige el examen (C1 o PAU) y cómo lo quieres: completo, solo Reading, solo Listening o «se corrige solo».</li>
+    <li>Marca o desmarca las <b>partes</b> que entran. Elige la <b>versión A o B</b> (la B cambia el orden de las opciones).</li>
+    <li>Pulsa <b>Generar otra mezcla</b> las veces que quieras. A la derecha ves el PDF tal cual saldrá.</li>
+    <li>Escribe el <b>grupo</b> y la <b>fecha</b>: salen impresos en la portada. Con un grupo, la app no repite ejercicios que ya se le pusieron.</li>
+    <li><b>Descargar en PDF</b> (arriba a la derecha), y en la ventana de impresión elige «Guardar como PDF». La <b>Clave del profe</b> se imprime igual.</li>
+  </ol>
+  <img src="img/crear.jpg" alt="Pantalla de crear examen" />
+</section>
+
+<section class="pagina">
+  <h2>3. Tus propios ejercicios y la IA</h2>
+  <ol>
+    <li>En «Crear examen», pulsa <b>Escribir mis propios ejercicios</b>.</li>
+    <li>Elige el tipo (huecos, opción múltiple, verdadero/falso, redacción) y la parte donde se mezcla. Los huecos se escriben entre [corchetes]; en opción múltiple, la correcta lleva *.</li>
+    <li>A la derecha ves cómo queda en papel. Si falta algo, la app te lo dice antes de dejarte guardar.</li>
+    <li><b>Crear con IA</b> (versión completa): pega tu clave de Anthropic, elige la parte y un tema. La app escribe un ejercicio nuevo y lo comprueba. <b>Léelo siempre antes de usarlo</b>: la IA puede equivocarse.</li>
+  </ol>
+  <img src="img/editor.jpg" alt="Editor de ejercicios" />
+</section>
+
+<section class="pagina">
+  <h2>4. Clase y copias de seguridad</h2>
+  <ol>
+    <li>En «Crear examen», pulsa <b>Crear enlace y QR para los alumnos</b>. Mándalo por WhatsApp o enséñalo en clase.</li>
+    <li>El alumno lo abre en el móvil, escribe su nombre, hace el examen y recibe un <b>código</b> para ti (por «Enviar» o «Copiar»).</li>
+    <li>En <b>Mi clase</b>, pega los códigos (uno por línea) y ves la nota de cada alumno, la media y las partes donde más fallan. Las notas las declara cada alumno: sirven para orientarte.</li>
+    <li>Los textos libres (writing) se corrigen aparte: el alumno te los entrega como siempre.</li>
+    <li><b>Copia de seguridad:</b> en «Crear examen», «Descargar copia de seguridad»; en «Mis ejercicios», «Descargar paquete». Para recuperarlos, «Cargar».</li>
+  </ol>
+  <img src="img/clase.jpg" alt="Tabla de la clase" />
+</section>
+</body>
+</html>
