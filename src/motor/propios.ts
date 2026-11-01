@@ -1,8 +1,11 @@
 import { BANCO } from '../banco';
+import { problemas } from './validar';
 import type { Destreza, Ejercicio, Examen, Item, ItemOpciones, ItemPalabra, ItemVerdaderoFalso } from '../banco/tipos';
 
 // Ejercicios que escribe el profe. Se guardan en su navegador con la misma forma que los del banco, así el generador, el
 // PDF y la clave los tratan igual. Sus ids empiezan por «mio-».
+
+export { problemas };
 
 export const PREFIJO_PROPIO = 'mio-';
 export const esPropio = (id: string) => id.startsWith(PREFIJO_PROPIO);
@@ -54,32 +57,6 @@ export function desdeVerdaderoFalso(texto: string): ItemVerdaderoFalso[] {
     items.push({ n: items.length + 1, tipo: 'verdaderoFalso', afirmacion, correcta: /^true$/i.test(vf), pruebas: prueba ? [prueba] : [], explicacion: prueba ? `Prueba: «${prueba}»` : '' });
   }
   return items;
-}
-
-/** Lo que está mal en un ejercicio (lista vacía = vale). Las mismas comprobaciones que el test del banco, en lenguaje claro. */
-export function problemas(e: Ejercicio): string[] {
-  const fallos: string[] = [];
-  if (!e.instrucciones.trim()) fallos.push('Faltan las instrucciones para el alumno.');
-  if (e.items.length === 0) fallos.push('No hay ninguna pregunta.');
-  const ns = e.items.map((i) => i.n);
-  if (new Set(ns).size !== ns.length) fallos.push('Hay preguntas con el mismo número.');
-  if (e.texto) {
-    for (const m of e.texto.matchAll(/\{\{(\d+)\}\}/g)) if (!ns.includes(Number(m[1]))) fallos.push(`El hueco ${m[1]} no tiene respuesta.`);
-  }
-  for (const i of e.items as Item[]) {
-    if (i.tipo === 'opciones') {
-      if (i.opciones.length < 2) fallos.push(`La pregunta ${i.n} necesita al menos dos opciones.`);
-      if (i.correcta < 0 || i.correcta >= i.opciones.length) fallos.push(`En la pregunta ${i.n} falta marcar la correcta con *.`);
-    } else if (i.tipo === 'palabra') {
-      if (i.correctas.length === 0) fallos.push(`El hueco ${i.n} no tiene respuesta.`);
-    } else if (i.tipo === 'verdaderoFalso') {
-      if (i.pruebas.length === 0) fallos.push(`La afirmación ${i.n} necesita la frase del texto que la prueba.`);
-    } else if (i.tipo === 'redaccion') {
-      if (!i.enunciado.trim()) fallos.push('Falta el enunciado de la redacción.');
-      if (i.minPalabras > i.maxPalabras) fallos.push('El mínimo de palabras es mayor que el máximo.');
-    }
-  }
-  return fallos;
 }
 
 export const nuevoIdPropio = () => `${PREFIJO_PROPIO}${Date.now().toString(36)}${Math.floor(Math.random() * 1e5).toString(36)}`;

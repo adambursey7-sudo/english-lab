@@ -24,7 +24,7 @@ describe('ejercicios propios', () => {
   it('verdadero/falso exige la prueba del texto', () => {
     const items = desdeVerdaderoFalso('TRUE | The cat purrs. | The cat purred loudly.\nFALSE | The dog barks.');
     expect(items).toHaveLength(2);
-    const e = montarPropio({ ...datos, examen: 'pau', destreza: 'prueba', parte: 1 }, items, 'Texto.');
+    const e = montarPropio({ ...datos, examen: 'pau', destreza: 'prueba', parte: 1 }, items, 'The cat purred loudly all night.');
     expect(problemas(e)).toEqual(['La afirmación 2 necesita la frase del texto que la prueba.']);
   });
 
