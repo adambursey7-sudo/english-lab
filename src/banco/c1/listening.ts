@@ -207,7 +207,7 @@ export const LISTENING_C1: Ejercicio[] = [
             { quien: 'han', texto: 'Some of them have genuinely never held a screwdriver, and I will admit that can be funny. But what strikes me again and again is that they want to learn. They could sit and wait while we fix it; instead, nearly everyone pulls up a chair and asks to have a go.' },
             { quien: 'mar', texto: 'That is my experience too. I expected people to drop things off and come back later, as if we were a shop. Hardly anyone does. They want to be able to do it themselves next time, and they are not afraid to ask what must feel like stupid questions.' },
             { quien: 'int', texto: 'Marcus, what gets in the way of a repair? What is the biggest obstacle?' },
-            { quien: 'mar', texto: 'People will tell you it is the parts, and parts can be expensive, that is true. But the real problem comes earlier than that. So many products are now put together in a way that assumes they will never be opened: glued shut, with screws you need special tools for, batteries you cannot reach. The manufacturer has decided for you that the thing is disposable. Once you are inside, honestly, most repairs are not that difficult.' },
+            { quien: 'mar', texto: 'People will tell you it is the parts, but in my experience you can nearly always find them, and they are rarely the issue. The real problem comes earlier than that. So many products are now put together in a way that assumes they will never be opened: glued shut, with screws you need special tools for, batteries you cannot reach. The manufacturer has decided for you that the thing is disposable. Once you are inside, honestly, most repairs are not that difficult.' },
             { quien: 'int', texto: 'Hannah, where does the café go from here?' },
             { quien: 'han', texto: 'I get asked whether we should start charging and turn it into a business, and I always say no, that would change what it is. We are busier every month, which is wonderful, but I will be honest: if three particular people stopped coming, I am not sure we would survive. That worries me more than anything. I am not going anywhere, but we need to spread the load.' },
             { quien: 'int', texto: 'Last question for both of you. What is the single most important thing the café does?' },
@@ -252,7 +252,7 @@ export const LISTENING_C1: Ejercicio[] = [
         pregunta: 'Marcus thinks the biggest obstacle to repairing modern products is',
         opciones: ['the cost of spare parts.', 'the way they are designed.', 'the lack of instructions from manufacturers.', 'the attitude of the owners.'],
         correcta: 1,
-        explicacion: '«The real problem comes earlier than that… glued shut, screws you need special tools for» (B). Los repuestos son lo que «people will tell you», no su opinión (A es el distractor).',
+        explicacion: '«The real problem comes earlier than that… glued shut, screws you need special tools for» (B). Los repuestos son lo que «people will tell you», pero él dice que «rarely the issue» (A es el distractor).',
       },
       {
         n: 19,
