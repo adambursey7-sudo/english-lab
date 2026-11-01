@@ -1,4 +1,4 @@
-import { MODO_CLASE } from '../marca';
+import { MODO_CLASE, PROFE } from '../marca';
 import { useEffect, useState } from 'react';
 import type { Ejercicio, Respuestas } from '../banco/tipos';
 import { apuntarResultado } from '../motor/historial';
@@ -61,7 +61,7 @@ export function Resultado({ lista, respuestas, onRepetir, onInicio, onEmpezar }:
             <div className="cifra" style={{ fontSize: 28 }}>{pendientes > 0 ? 'Guardado' : 'Terminado'}</div>
             <p className="silencio">
               {pendientes > 0
-                ? 'Esta parte no se corrige sola: mándasela a Adam con el botón y, mientras, compárala con el modelo.'
+                ? 'Esta parte no se corrige sola: mándasela a ' + PROFE + ' con el botón y, mientras, compárala con el modelo.'
                 : 'Esta parte no se corrige sola. Lee «Cómo hacerlo bien» y repítela cuando quieras.'}
             </p>
           </div>
@@ -79,7 +79,7 @@ export function Resultado({ lista, respuestas, onRepetir, onInicio, onEmpezar }:
             <div className="barra" aria-hidden="true"><div style={{ width: `${porcentaje}%` }} /></div>
             <p><b>{banda.etiqueta}.</b> <span className="silencio">{banda.detalle}</span></p>
             <p className="silencio">{frase(porcentaje)}</p>
-            {pendientes > 0 && <p className="silencio pequeno">Además hay {pendientes} {pendientes === 1 ? 'texto' : 'textos'} para que corrija Adam.</p>}
+            {pendientes > 0 && <p className="silencio pequeno">Además hay {pendientes} {pendientes === 1 ? 'texto' : 'textos'} para que corrija {PROFE}.</p>}
           </div>
         )}
 
@@ -225,12 +225,12 @@ function EnviarDialogo({ ejercicio, respuestas }: { ejercicio: Ejercicio; respue
   if (escritas === 0) return <p className="silencio pequeno">No has escrito ninguna réplica. Abajo tienes una respuesta modelo para cada hueco.</p>;
   const enviar = async () => {
     const que = await compartir(textoEjercicioParaCompartir(ejercicio, respuestas, perfilActivo()?.nombre), 'English Lab · diálogo');
-    setAviso(que === 'compartido' ? 'Enviado.' : que === 'copiado' ? 'Texto copiado y WhatsApp abierto: pégalo en el chat de Adam.' : 'No se pudo compartir: copia el texto a mano.');
+    setAviso(que === 'compartido' ? 'Enviado.' : que === 'copiado' ? 'Texto copiado y WhatsApp abierto: pégalo en el chat de ' + PROFE + '.' : 'No se pudo compartir: copia el texto a mano.');
   };
   return (
     <div className="fila" style={{ display: 'flex', flexWrap: 'wrap', gap: 8, alignItems: 'center' }}>
-      <button type="button" className="btn chico" onClick={enviar}>Enviar el diálogo a Adam</button>
-      <span className="silencio pequeno">{aviso || `${escritas} de ${ejercicio.items.length} réplicas. Compáralas con el modelo mientras Adam las corrige.`}</span>
+      <button type="button" className="btn chico" onClick={enviar}>Enviar el diálogo a {PROFE}</button>
+      <span className="silencio pequeno">{aviso || `${escritas} de ${ejercicio.items.length} réplicas. Compáralas con el modelo mientras ${PROFE} las corrige.`}</span>
     </div>
   );
 }

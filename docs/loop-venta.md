@@ -154,7 +154,8 @@ decidir cuándo unir `loop/venta` a `master` y publicarlo; guardar la clave priv
 
 ## Estado
 - 1/11: loop preparado (rama `loop/venta`, copia `english-lab-t-venta`, este plan). Vuelta 1: 1a hecho (`docs/venta/mercado.md`). Vuelta 2: 1b hecho (auditoría y tres formas de pantalla; elegida B con plantillas de C, por defecto). **Bloque 1 cerrado.**
-- Vuelta 3 (1/11): 2a y 2b hechos: `src/marca.ts` (nombre, logo y color de la academia, guardados en el navegador), modo `producto` (`npm run dev:producto` en el 5273, `npm run build:producto`, `npm run test:producto`). El paquete de producto sale sin perfiles, fotos, notas de Adam, intro, viñetas ni logo de Kate. Siguiente: 2c (asistente de primera vez) y que los textos digan «tu profe» en vez de «Adam».
+- Vuelta 3 (1/11): 2a y 2b hechos: `src/marca.ts` (nombre, logo y color de la academia, guardados en el navegador), modo `producto` (`npm run dev:producto` en el 5273, `npm run build:producto`, `npm run test:producto`). El paquete de producto sale sin perfiles, fotos, notas de Adam, intro, viñetas ni logo de Kate. 
+- Vuelta 4 (1/11): 2c hecho: asistente de primera vez (`src/componentes/Asistente.tsx`: nombre, logo reducido a 256 px y color, guardados en el navegador) y textos «tu profe» (`PROFE` en `src/marca.ts`). Falta el título del PDF sin «Cambridge» como nombre y un sitio para cambiar la marca luego (llega con el panel del bloque 3). Siguiente: 3a (motor del generador con semilla).
 - 1/11: fuentes para el bloque 6 en `C:\dev\english-lab-fuentes\de-adam\` (fuera del repo): 3 exámenes PAU de Adam (junio 25 ciencias y HCCSS, reserva julio 26), de Cambridge el cuadernillo oficial de muestras 2015 (47 págs., 2 papers completos con claves), hojas oficiales de las partes 5, 6, 8 y Writing 1 y la guía de candidatos. Hay Reading, Writing y claves; Listening y Speaking solo en el cuadernillo de muestras.
 
 ## Registro de vueltas

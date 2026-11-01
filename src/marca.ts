@@ -64,3 +64,20 @@ export function urlLogo(m: Marca, base: string = import.meta.env.BASE_URL): stri
 
 /** ¿Se enseñan perfiles con PIN, intro y viñetas de Kate? Solo en la versión de clase. */
 export const MODO_CLASE = !ES_PRODUCTO;
+
+/** Cómo llama la app a quien corrige: Adam en la clase de Kate, «tu profe» en el producto. */
+export const PROFE = MODO_CLASE ? 'Adam' : 'tu profe';
+
+/** ¿La academia ya pasó por el asistente de primera vez? Solo tiene sentido en producto. */
+export function marcaConfigurada(): boolean {
+  try {
+    return localStorage.getItem(CLAVE) !== null;
+  } catch {
+    return true; // sin almacenamiento no se puede recordar: no se insiste con el asistente
+  }
+}
+
+/** Pinta el color de la academia en la app (en la versión de clase no se toca). */
+export function aplicarColor(m: Marca = leerMarca()) {
+  if (ES_PRODUCTO) document.documentElement.style.setProperty('--ok', m.color);
+}

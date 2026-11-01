@@ -3,6 +3,7 @@ import type { Ejercicio, ItemRedaccion } from '../banco/tipos';
 import { palabrasRedaccion } from '../motor/corregir';
 import { avisoPalabras, bandaPalabras, compartir, textoParaCompartir } from '../motor/entregas';
 import { perfilActivo } from '../motor/perfiles';
+import { PROFE } from '../marca';
 
 const NOMBRE_TIPO: Record<ItemRedaccion['tipoTexto'], string> = {
   essay: 'Essay',
@@ -123,7 +124,7 @@ export function ResultadoRedaccion({ ejercicio, item, texto }: PropsResultado) {
 
   const enviar = async () => {
     const que = await compartir(textoParaCompartir(ejercicio, item, texto, perfilActivo()?.nombre), 'English Lab · redacción');
-    setAviso(que === 'compartido' ? 'Enviado.' : que === 'copiado' ? 'Texto copiado y WhatsApp abierto: pégalo en el chat de Adam.' : 'No se pudo compartir: copia el texto a mano.');
+    setAviso(que === 'compartido' ? 'Enviado.' : que === 'copiado' ? 'Texto copiado y WhatsApp abierto: pégalo en el chat de ' + PROFE + '.' : 'No se pudo compartir: copia el texto a mano.');
   };
 
   return (
@@ -137,10 +138,10 @@ export function ResultadoRedaccion({ ejercicio, item, texto }: PropsResultado) {
         <>
           <div className="tu-texto">{texto.split(/\n\n+/).map((p, i) => <p key={i}>{p}</p>)}</div>
           <div className="fila" style={{ gap: 8 }}>
-            <button type="button" className="btn chico" onClick={enviar}>Enviar a Adam</button>
+            <button type="button" className="btn chico" onClick={enviar}>Enviar a {PROFE}</button>
             {aviso && <span className="silencio pequeno">{aviso}</span>}
           </div>
-          <p className="silencio pequeno">La corrección de los writings la hace Adam. Mientras, compárala con el modelo y repasa la lista.</p>
+          <p className="silencio pequeno">La corrección de los writings la hace {PROFE}. Mientras, compárala con el modelo y repasa la lista.</p>
         </>
       )}
       <details className="plegable">

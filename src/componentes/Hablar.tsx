@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import type { ItemHablar } from '../banco/tipos';
 import { formatoReloj } from '../motor/entregas';
+import { PROFE } from '../marca';
 
 type Fase = 'quieto' | 'leyendo' | 'hablando' | 'hecho';
 
@@ -156,7 +157,7 @@ export function EntradaHablar({ item, valor, onCambia }: Props) {
       {audioUrl && (
         <div className="fila" style={{ gap: 10, alignItems: 'center' }}>
           <audio controls src={audioUrl} style={{ maxWidth: '100%' }} />
-          <button type="button" className="btn sec chico" onClick={compartirAudio}>Enviar a Adam</button>
+          <button type="button" className="btn sec chico" onClick={compartirAudio}>Enviar a {PROFE}</button>
         </div>
       )}
       {item.modelo && (

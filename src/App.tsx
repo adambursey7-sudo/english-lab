@@ -11,7 +11,8 @@ import { Imprimir } from './pantallas/Imprimir';
 import { PaginaAudio } from './pantallas/PaginaAudio';
 import type { Examen } from './banco/tipos';
 import { Intro } from './componentes/Intro';
-import { MODO_CLASE } from './marca';
+import { Asistente } from './componentes/Asistente';
+import { aplicarColor, ES_PRODUCTO, MODO_CLASE, marcaConfigurada } from './marca';
 
 type Estado =
   | { pantalla: 'inicio' }
@@ -46,6 +47,9 @@ export function App() {
   // La intro (vídeo con música) sale cada vez que se abre la app, en el móvil y en el ordenador.
   // Si se entra por el cuadernillo o la página de audio (QR), al volver a la app no hay intro.
   const [intro, setIntro] = useState(() => MODO_CLASE && rutaDe(window.location.hash) === null);
+  // Primera vez de una academia (solo en producto): nombre, logo y color antes de empezar.
+  const [asistente, setAsistente] = useState(() => ES_PRODUCTO && !marcaConfigurada());
+  useEffect(() => aplicarColor(), []);
   const paso = estado.pantalla === 'ejercicio' ? estado.i : -1;
 
   // Cada pantalla nueva empieza arriba del todo (si no, se hereda el scroll de la anterior).
@@ -64,6 +68,8 @@ export function App() {
 
   if (ruta?.tipo === 'imprimir' && !cuadernilloAjeno) return <Imprimir examen={ruta.examen} numero={ruta.numero} modo={ruta.modo} />;
   if (ruta?.tipo === 'audio') return <PaginaAudio examen={ruta.examen} numero={ruta.numero} />;
+
+  if (asistente) return <Asistente onListo={() => setAsistente(false)} />;
 
   if (intro) {
     return <Intro onFin={() => setIntro(false)} />;
