@@ -1,0 +1,124 @@
+[
+ {
+  "id": "gen-pau-prueba-1-mvxwj6l40",
+  "examen": "pau",
+  "destreza": "prueba",
+  "parte": 1,
+  "nombreParte": "Comprensión del texto",
+  "titulo": "The school that closed its gates to cars",
+  "instrucciones": "Read the text and answer questions 1, 2 and 3. In question 1, copy the exact words from the text as evidence; in question 2, copy no more than 10 words; in question 3, find the word in the text that matches each definition.",
+  "minutos": 25,
+  "texto": "In the city of Alderbrook, the streets outside Hillcrest Secondary School used to be a daily traffic jam. Every morning, hundreds of parents stopped their cars at the gates to drop off their children, and the air was full of noise and exhaust fumes. Last September, the local council decided to try something different: for forty minutes before and after classes, the road in front of the school is now closed to all vehicles.\n\nThe idea came from a group of students who studied air quality as part of a science project. They measured pollution at the school entrance and found that it was three times higher than in a nearby park. “We were shocked,” says Marta Lowell, sixteen, one of the pupils in the group. “We breathe that air every day, and nobody seemed to care.” The students presented their results to the council, which agreed to a six-month trial.\n\nAt first, many parents were angry. They said the new rule would make their mornings more stressful, especially those who had to go to work straight after leaving their children. However, the school organised a “walking bus”: groups of pupils who live close to each other walk together with an adult volunteer. Today, about two hundred children use it, and others come by bike or scooter.\n\nThe results have surprised even the supporters of the plan. Pollution at the gates has fallen by almost half, and the number of pupils arriving late has dropped. Teachers also say that students are more awake in their first lessons after walking or cycling.\n\nNot everything is perfect. Some families live too far away to walk, and a few drivers still park illegally in the nearby streets. Even so, the head teacher, Paul Greene, is optimistic. “The children now see that young people can change their own city,” he says. Other schools in the region have already asked for advice on how to copy the project.",
+  "items": [
+   {
+    "n": 1,
+    "tipo": "verdaderoFalso",
+    "pregunta": "1. Say whether the following sentences are TRUE or FALSE according to the text. COPY the evidence from the text. No marks will be given without the evidence. (1.5 points)",
+    "afirmacion": "a) The idea of closing the road came from the school's teachers.",
+    "correcta": false,
+    "pruebas": [
+     "The idea came from a group of students who studied air quality as part of a science project",
+     "came from a group of students who studied air quality as part of a science project"
+    ],
+    "explicacion": "FALSE: la idea surgió de un grupo de alumnos, no de los profesores. La prueba hay que copiarla tal cual del texto, sin puntos suspensivos ni número de línea."
+   },
+   {
+    "n": 2,
+    "tipo": "verdaderoFalso",
+    "afirmacion": "b) The number of pupils who arrive late is lower now than before the change.",
+    "correcta": true,
+    "pruebas": [
+     "the number of pupils arriving late has dropped",
+     "Pollution at the gates has fallen by almost half, and the number of pupils arriving late has dropped"
+    ],
+    "explicacion": "TRUE: «the number of pupils arriving late has dropped». Se acepta también la frase completa que incluye la contaminación."
+   },
+   {
+    "n": 3,
+    "tipo": "verdaderoFalso",
+    "afirmacion": "c) All the families in Alderbrook can walk to school easily.",
+    "correcta": false,
+    "pruebas": [
+     "Some families live too far away to walk",
+     "Some families live too far away to walk, and a few drivers still park illegally in the nearby streets"
+    ],
+    "explicacion": "FALSE: algunas familias viven demasiado lejos para ir andando, así que no todas pueden hacerlo fácilmente."
+   },
+   {
+    "n": 4,
+    "tipo": "palabra",
+    "pregunta": "2. ANSWER the questions below. COPY no more than 10 words and/or a number from the text to answer each question. (1.5 points)\na) How many children use the walking bus today?",
+    "correctas": [
+     "about two hundred children use it",
+     "about two hundred",
+     "two hundred",
+     "about two hundred children"
+    ],
+    "maxPalabras": 10,
+    "explicacion": "«Today, about two hundred children use it». Hay que copiar del texto, no escribir la cifra con números."
+   },
+   {
+    "n": 5,
+    "tipo": "palabra",
+    "pregunta": "b) How much higher was the pollution at the school entrance than in the park?",
+    "correctas": [
+     "three times higher",
+     "three times higher than in a nearby park",
+     "it was three times higher than in a nearby park",
+     "found that it was three times higher than in a nearby park"
+    ],
+    "maxPalabras": 10,
+    "explicacion": "«found that it was three times higher than in a nearby park». Basta con «three times higher»."
+   },
+   {
+    "n": 6,
+    "tipo": "palabra",
+    "pregunta": "c) How long did the council agree to try the plan for?",
+    "correctas": [
+     "a six-month trial",
+     "six-month trial",
+     "agreed to a six-month trial",
+     "a six-month trial"
+    ],
+    "maxPalabras": 10,
+    "explicacion": "«the council, which agreed to a six-month trial» (el periodo de prueba era de seis meses)."
+   },
+   {
+    "n": 7,
+    "tipo": "palabra",
+    "pregunta": "3. FIND a word or expression in the text that means… (1 point)\nd) very surprised and a little upset (paragraph 2)",
+    "correctas": [
+     "shocked"
+    ],
+    "explicacion": "«We were shocked,» says Marta Lowell. Hay que escribir la palabra tal cual aparece en el texto."
+   },
+   {
+    "n": 8,
+    "tipo": "palabra",
+    "pregunta": "e) people who offer to do a job without being paid (paragraph 3)",
+    "correctas": [
+     "volunteer"
+    ],
+    "explicacion": "«walk together with an adult volunteer»."
+   },
+   {
+    "n": 9,
+    "tipo": "palabra",
+    "pregunta": "f) people who support an idea or a plan (paragraph 4)",
+    "correctas": [
+     "supporters"
+    ],
+    "explicacion": "«even the supporters of the plan»."
+   },
+   {
+    "n": 10,
+    "tipo": "palabra",
+    "pregunta": "g) expecting good things to happen in the future (paragraph 5)",
+    "correctas": [
+     "optimistic"
+    ],
+    "explicacion": "«Paul Greene, is optimistic»."
+   }
+  ]
+ }
+]

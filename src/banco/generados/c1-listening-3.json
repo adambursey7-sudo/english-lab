@@ -1,0 +1,240 @@
+[
+ {
+  "id": "gen-c1-listening-3-mvxwhl5v0",
+  "examen": "c1",
+  "destreza": "listening",
+  "parte": 3,
+  "nombreParte": "Multiple choice (interview)",
+  "titulo": "Rooftop beekeeping",
+  "instrucciones": "You will hear part of an interview with two people, Nadia Okafor and Tom Lindqvist, who keep bees on the roofs of city buildings. For questions 15–20, choose the answer (A, B, C or D) which fits best according to what you hear. You hear the recording twice.",
+  "minutos": 10,
+  "audio": {
+   "archivo": "audio/gen-c1-listening-3-mvxwhl5v0.mp3",
+   "veces": 2,
+   "hablantes": [
+    {
+     "id": "sup",
+     "descripcion": "Supervisor",
+     "voz": "en-GB-LibbyNeural"
+    },
+    {
+     "id": "int",
+     "descripcion": "Interviewer",
+     "voz": "en-GB-ThomasNeural"
+    },
+    {
+     "id": "nad",
+     "descripcion": "Nadia Okafor",
+     "voz": "en-GB-SoniaNeural"
+    },
+    {
+     "id": "tom",
+     "descripcion": "Tom Lindqvist",
+     "voz": "en-IE-ConnorNeural"
+    }
+   ],
+   "guion": [
+    {
+     "quien": "sup",
+     "texto": "Part Three. You will hear part of an interview with two people, Nadia Okafor and Tom Lindqvist, who keep bees on the roofs of city buildings. For questions fifteen to twenty, choose the answer, A, B, C or D, which fits best according to what you hear. You now have seventy seconds to look at Part Three."
+    },
+    {
+     "pausa": 70000
+    },
+    {
+     "quien": "int",
+     "texto": "Nadia, Tom, welcome. Nadia, most people would expect bees to be happier in the countryside. How did you end up on a roof?"
+    },
+    {
+     "quien": "nad",
+     "texto": "By accident, really. I was working as an accountant in an office block, and the building manager mentioned that the roof was going to waste. I had always liked the idea of keeping bees, but I assumed I would need a farm. I never imagined the honey would turn out to be the least of it. What surprised me was how much I enjoyed those quiet twenty minutes up there before the working day began. It was the only part of my week that felt unhurried."
+    },
+    {
+     "quien": "int",
+     "texto": "Tom, you joined her a little later. Was it an easy decision?"
+    },
+    {
+     "quien": "tom",
+     "texto": "Not at all. I was sceptical. I had read that cities were already crowded with hives and that honeybees were actually crowding out wild pollinators, so I thought we might be doing more harm than good. Nadia invited me up to see for herself, and, to be fair, I was won over by the colony rather than by the argument. But I still think the question is a serious one, and we have since planted a lot of flowers to make up for it."
+    },
+    {
+     "quien": "int",
+     "texto": "What about the bees themselves? Do they cope with city life?"
+    },
+    {
+     "quien": "nad",
+     "texto": "Better than I expected. City gardens flower over a longer season than fields do, because there is always somebody's balcony in bloom. The real danger is not pollution, as people assume, but the wind. On a tall building it can be ferocious, and we had to build windbreaks after the first winter."
+    },
+    {
+     "quien": "tom",
+     "texto": "And the heat in summer. The roof surface gets very hot, so we put the hives on raised stands. Otherwise the bees spend all their energy cooling the nest rather than making honey."
+    },
+    {
+     "quien": "int",
+     "texto": "Do neighbours ever complain?"
+    },
+    {
+     "quien": "tom",
+     "texto": "I thought they would, and I prepared a long speech for the residents' meeting. In the event, hardly anyone raised it. What people ask about, strangely, is whether the honey tastes of the city. Nadia always says it tastes of lime trees, and I have to say I agree with her."
+    },
+    {
+     "quien": "int",
+     "texto": "And what has the project changed for you personally?"
+    },
+    {
+     "quien": "nad",
+     "texto": "It has made me patient, which I never was. You cannot hurry a hive. You open it, you look, and sometimes the right thing to do is close it again and leave."
+    },
+    {
+     "quien": "tom",
+     "texto": "For me, it is that I notice the seasons now. I used to think of them as weather. Now I think of them as what is flowering, and what the bees need next."
+    },
+    {
+     "pausa": 10000
+    },
+    {
+     "quien": "sup",
+     "texto": "Now you will hear it again."
+    },
+    {
+     "pausa": 1500
+    },
+    {
+     "quien": "int",
+     "texto": "Nadia, Tom, welcome. Nadia, most people would expect bees to be happier in the countryside. How did you end up on a roof?"
+    },
+    {
+     "quien": "nad",
+     "texto": "By accident, really. I was working as an accountant in an office block, and the building manager mentioned that the roof was going to waste. I had always liked the idea of keeping bees, but I assumed I would need a farm. I never imagined the honey would turn out to be the least of it. What surprised me was how much I enjoyed those quiet twenty minutes up there before the working day began. It was the only part of my week that felt unhurried."
+    },
+    {
+     "quien": "int",
+     "texto": "Tom, you joined her a little later. Was it an easy decision?"
+    },
+    {
+     "quien": "tom",
+     "texto": "Not at all. I was sceptical. I had read that cities were already crowded with hives and that honeybees were actually crowding out wild pollinators, so I thought we might be doing more harm than good. Nadia invited me up to see for herself, and, to be fair, I was won over by the colony rather than by the argument. But I still think the question is a serious one, and we have since planted a lot of flowers to make up for it."
+    },
+    {
+     "quien": "int",
+     "texto": "What about the bees themselves? Do they cope with city life?"
+    },
+    {
+     "quien": "nad",
+     "texto": "Better than I expected. City gardens flower over a longer season than fields do, because there is always somebody's balcony in bloom. The real danger is not pollution, as people assume, but the wind. On a tall building it can be ferocious, and we had to build windbreaks after the first winter."
+    },
+    {
+     "quien": "tom",
+     "texto": "And the heat in summer. The roof surface gets very hot, so we put the hives on raised stands. Otherwise the bees spend all their energy cooling the nest rather than making honey."
+    },
+    {
+     "quien": "int",
+     "texto": "Do neighbours ever complain?"
+    },
+    {
+     "quien": "tom",
+     "texto": "I thought they would, and I prepared a long speech for the residents' meeting. In the event, hardly anyone raised it. What people ask about, strangely, is whether the honey tastes of the city. Nadia always says it tastes of lime trees, and I have to say I agree with her."
+    },
+    {
+     "quien": "int",
+     "texto": "And what has the project changed for you personally?"
+    },
+    {
+     "quien": "nad",
+     "texto": "It has made me patient, which I never was. You cannot hurry a hive. You open it, you look, and sometimes the right thing to do is close it again and leave."
+    },
+    {
+     "quien": "tom",
+     "texto": "For me, it is that I notice the seasons now. I used to think of them as weather. Now I think of them as what is flowering, and what the bees need next."
+    },
+    {
+     "pausa": 10000
+    },
+    {
+     "quien": "sup",
+     "texto": "That is the end of Part Three."
+    }
+   ]
+  },
+  "items": [
+   {
+    "n": 15,
+    "tipo": "opciones",
+    "pregunta": "What does Nadia say she valued most about keeping bees at first?",
+    "opciones": [
+     "the honey she was able to produce",
+     "the calm time it gave her before work",
+     "the chance to work outdoors on a farm",
+     "the contact with other beekeepers"
+    ],
+    "correcta": 1,
+    "explicacion": "«The honey would turn out to be the least of it… those quiet twenty minutes… the only part of my week that felt unhurried» (B). La granja era lo que ella suponía necesitar, no lo que tenía (C no)."
+   },
+   {
+    "n": 16,
+    "tipo": "opciones",
+    "pregunta": "Why was Tom doubtful about the project to begin with?",
+    "opciones": [
+     "He thought the hives would annoy the neighbours.",
+     "He believed city bees could not survive the conditions.",
+     "He worried it might damage other pollinating insects.",
+     "He did not trust Nadia's experience."
+    ],
+    "correcta": 2,
+    "explicacion": "Temía que las abejas de miel desplazaran a los polinizadores silvestres: «doing more harm than good» (C). Lo de los vecinos lo preparó pero no ocurrió (A no)."
+   },
+   {
+    "n": 17,
+    "tipo": "opciones",
+    "pregunta": "What does Tom say changed his mind?",
+    "opciones": [
+     "a detailed report on pollinators",
+     "seeing the bees at first hand",
+     "the flowers he later planted",
+     "Nadia's arguments at the meeting"
+    ],
+    "correcta": 1,
+    "explicacion": "«I was won over by the colony rather than by the argument» tras ir a verlo (B). Las flores las plantaron después, como compensación (C no)."
+   },
+   {
+    "n": 18,
+    "tipo": "opciones",
+    "pregunta": "According to Nadia, what is the main threat to the bees on the roof?",
+    "opciones": [
+     "air pollution",
+     "a shortage of flowers",
+     "strong wind",
+     "cold winters"
+    ],
+    "correcta": 2,
+    "explicacion": "«The real danger is not pollution, as people assume, but the wind» (C). Las flores abundan más que en el campo (B no)."
+   },
+   {
+    "n": 19,
+    "tipo": "opciones",
+    "pregunta": "How did the neighbours react to the hives?",
+    "opciones": [
+     "Most of them complained at a meeting.",
+     "They showed more interest in the honey than in any problem.",
+     "They asked for the hives to be moved.",
+     "They were worried about stings."
+    ],
+    "correcta": 1,
+    "explicacion": "«Hardly anyone raised it. What people ask about… is whether the honey tastes of the city» (B)."
+   },
+   {
+    "n": 20,
+    "tipo": "opciones",
+    "pregunta": "What do Nadia and Tom agree the project has given them?",
+    "opciones": [
+     "a new way of paying attention to things",
+     "a profitable second income",
+     "a closer relationship with colleagues",
+     "a wish to move to the countryside"
+    ],
+    "correcta": 0,
+    "explicacion": "Nadia aprendió paciencia y a observar; Tom ahora «notices the seasons» (A). Ninguno menciona dinero, colegas ni mudarse."
+   }
+  ]
+ }
+]

@@ -1,0 +1,145 @@
+[
+ {
+  "id": "gen-c1-listening-2-mvxwgq640",
+  "examen": "c1",
+  "destreza": "listening",
+  "parte": 2,
+  "nombreParte": "Sentence completion",
+  "titulo": "Keeping bees on an office roof",
+  "instrucciones": "You will hear a woman called Priya Menon talking about setting up beehives on the roof of the office building where she works. For questions 7–14, complete the sentences with a word or short phrase. You hear the recording twice.",
+  "minutos": 10,
+  "audio": {
+   "archivo": "audio/gen-c1-listening-2-mvxwgq640.mp3",
+   "veces": 2,
+   "hablantes": [
+    {
+     "id": "sup",
+     "descripcion": "Supervisor",
+     "voz": "en-GB-LibbyNeural"
+    },
+    {
+     "id": "pri",
+     "descripcion": "Priya Menon, an office worker and beekeeper",
+     "voz": "en-GB-SoniaNeural"
+    }
+   ],
+   "guion": [
+    {
+     "quien": "sup",
+     "texto": "Part Two. You will hear a woman called Priya Menon talking about setting up beehives on the roof of the office building where she works. For questions seven to fourteen, complete the sentences with a word or short phrase. You now have forty-five seconds to look at Part Two."
+    },
+    {
+     "pausa": 45000
+    },
+    {
+     "quien": "pri",
+     "texto": "Good evening, everyone. I work in the finance department of a large firm in the middle of the city, and for the past two years I have also been, rather unexpectedly, a beekeeper. People assume the idea came from a book, or from a relative who kept bees in the countryside, but it was actually a podcast I listened to on the train one morning. A woman was describing the hives she looked after on top of a hotel, and by the time I reached my station I had decided to try it. My first plan was ambitious. I wanted four hives, but my manager, quite sensibly, suggested we start small, so we began with just two. Getting permission turned out to be a long process. I had expected the neighbours to object, and the council took a while, but the real obstacle was the insurance company, which wanted a great deal of reassurance about what would happen if a bee stung a visitor. Once that was settled, the practical side was easier than I had feared. Many people imagine that a city is a desert for bees, but in fact the parks and gardens give them plenty to eat. Roses and lavender are popular, but what the bees seem to love most are the lime trees along our street in early summer, and the honey has a delicate flavour because of them. Our first harvest came last September. I had been told to expect sixty jars, which would have been wonderful, but we ended up with forty, and we sold every one within a week to colleagues. As for the work itself, the protective suit is hot, and the veil steams up, but those are minor complaints. What I really cannot stand are the gloves, which are so thick that I can barely feel what I am doing. People often ask whether the rain is a problem in summer, and it is not, since the bees simply stay inside. The real nuisance is wasps, which try to steal the honey and have to be kept out of the hives. Looking ahead, I am planning something new for next spring. I would love to run workshops for local schoolchildren, who have almost never seen a hive up close, and the company has already agreed to let me try. I will not be giving up my day job just yet, though."
+    },
+    {
+     "pausa": 10000
+    },
+    {
+     "quien": "sup",
+     "texto": "Now you will hear it again."
+    },
+    {
+     "pausa": 1500
+    },
+    {
+     "quien": "pri",
+     "texto": "Good evening, everyone. I work in the finance department of a large firm in the middle of the city, and for the past two years I have also been, rather unexpectedly, a beekeeper. People assume the idea came from a book, or from a relative who kept bees in the countryside, but it was actually a podcast I listened to on the train one morning. A woman was describing the hives she looked after on top of a hotel, and by the time I reached my station I had decided to try it. My first plan was ambitious. I wanted four hives, but my manager, quite sensibly, suggested we start small, so we began with just two. Getting permission turned out to be a long process. I had expected the neighbours to object, and the council took a while, but the real obstacle was the insurance company, which wanted a great deal of reassurance about what would happen if a bee stung a visitor. Once that was settled, the practical side was easier than I had feared. Many people imagine that a city is a desert for bees, but in fact the parks and gardens give them plenty to eat. Roses and lavender are popular, but what the bees seem to love most are the lime trees along our street in early summer, and the honey has a delicate flavour because of them. Our first harvest came last September. I had been told to expect sixty jars, which would have been wonderful, but we ended up with forty, and we sold every one within a week to colleagues. As for the work itself, the protective suit is hot, and the veil steams up, but those are minor complaints. What I really cannot stand are the gloves, which are so thick that I can barely feel what I am doing. People often ask whether the rain is a problem in summer, and it is not, since the bees simply stay inside. The real nuisance is wasps, which try to steal the honey and have to be kept out of the hives. Looking ahead, I am planning something new for next spring. I would love to run workshops for local schoolchildren, who have almost never seen a hive up close, and the company has already agreed to let me try. I will not be giving up my day job just yet, though."
+    },
+    {
+     "pausa": 10000
+    },
+    {
+     "quien": "sup",
+     "texto": "That is the end of Part Two."
+    }
+   ]
+  },
+  "items": [
+   {
+    "n": 7,
+    "tipo": "palabra",
+    "frase": "Priya got the idea of keeping bees from a {{7}}.",
+    "correctas": [
+     "podcast",
+     "a podcast"
+    ],
+    "explicacion": "«It was actually a podcast I listened to on the train». Un libro y un familiar son los distractores («People assume…»)."
+   },
+   {
+    "n": 8,
+    "tipo": "palabra",
+    "frase": "At the beginning, Priya’s company had {{8}} hives on the roof.",
+    "correctas": [
+     "two",
+     "2"
+    ],
+    "explicacion": "«I wanted four hives… so we began with just two». El 4 es el distractor."
+   },
+   {
+    "n": 9,
+    "tipo": "palabra",
+    "frase": "The biggest obstacle to getting permission was the {{9}} company.",
+    "correctas": [
+     "insurance"
+    ],
+    "explicacion": "«The real obstacle was the insurance company». Los vecinos y el ayuntamiento no fueron el verdadero problema."
+   },
+   {
+    "n": 10,
+    "tipo": "palabra",
+    "frase": "The bees seem to prefer the flowers of the {{10}} along the street.",
+    "correctas": [
+     "lime trees",
+     "lime tree",
+     "lime"
+    ],
+    "explicacion": "«What the bees seem to love most are the lime trees». Rosas y lavanda son populares, pero no lo que más les gusta."
+   },
+   {
+    "n": 11,
+    "tipo": "palabra",
+    "frase": "The first harvest produced {{11}} jars of honey.",
+    "correctas": [
+     "forty",
+     "40"
+    ],
+    "explicacion": "«I had been told to expect sixty jars… we ended up with forty». El 60 es el distractor."
+   },
+   {
+    "n": 12,
+    "tipo": "palabra",
+    "frase": "The part of the equipment Priya dislikes most is the {{12}}.",
+    "correctas": [
+     "gloves",
+     "the gloves",
+     "thick gloves"
+    ],
+    "explicacion": "«What I really cannot stand are the gloves». El traje y el velo son quejas menores."
+   },
+   {
+    "n": 13,
+    "tipo": "palabra",
+    "frase": "In summer, the real nuisance for the hives is {{13}}.",
+    "correctas": [
+     "wasps"
+    ],
+    "explicacion": "«The real nuisance is wasps». La lluvia no es un problema."
+   },
+   {
+    "n": 14,
+    "tipo": "palabra",
+    "frase": "Next spring Priya wants to run workshops for local {{14}}.",
+    "correctas": [
+     "schoolchildren",
+     "school children",
+     "children"
+    ],
+    "explicacion": "«I would love to run workshops for local schoolchildren»."
+   }
+  ]
+ }
+]

@@ -1,0 +1,48 @@
+[
+ {
+  "id": "gen-pau-prueba-6-mvxwkve70",
+  "examen": "pau",
+  "destreza": "prueba",
+  "parte": 6,
+  "nombreParte": "Composition",
+  "instrucciones": "6. Choose ONE of the following topics and WRITE a composition of about 140-180 words. If you choose the email, DO NOT SIGN it. (3 points)",
+  "minutos": 30,
+  "elegir": 1,
+  "items": [
+   {
+    "n": 1,
+    "tipo": "redaccion",
+    "tipoTexto": "composition",
+    "enunciado": "a) Should students be allowed to use their mobile phones in class? Write a for-and-against composition.",
+    "minPalabras": 140,
+    "maxPalabras": 180,
+    "modelo": "Nowadays almost every teenager has a mobile phone, so many schools are discussing whether students should be allowed to use them in class. There are good arguments on both sides.\n\nOn the one hand, phones can be very useful for learning. Students can look up a word in a dictionary, take photos of the board or use educational apps in a few seconds. Moreover, learning to use technology responsibly is an important skill for the future.\n\nOn the other hand, phones are a big distraction. It is very tempting to check messages or social media instead of listening to the teacher, and this can lower the marks of the whole class. Besides, some students may feel bad if they cannot afford a modern phone.\n\nIn conclusion, I think phones should be allowed only when the teacher asks for them. In this way, students can enjoy the advantages of technology without losing their concentration.",
+    "criterios": [
+     "Presentación: párrafos claros, puntuación correcta.",
+     "Organización: estructura del tipo de texto (email; for & against; opinion essay), registro adecuado, ideas enlazadas con conectores.",
+     "Contenido: me ciño al tema, ideas suficientes y variadas, sin repeticiones.",
+     "Corrección gramatical: frases bien construidas, variedad de estructuras, sin traducir del español.",
+     "Vocabulario: rico y no copiado del texto; menos de 4 faltas de ortografía (más de 3 restan)."
+    ],
+    "explicacion": "For-and-against: introducción del tema, un párrafo con las ventajas y otro con las desventajas, usando conectores (on the one hand, on the other hand, moreover, besides), y conclusión con opinión personal. Entre 140 y 180 palabras: por debajo de 140 baja el tope de nota."
+   },
+   {
+    "n": 2,
+    "tipo": "redaccion",
+    "tipoTexto": "email",
+    "enunciado": "b) Write an email to a friend from another country telling him or her about a new hobby you have started recently and inviting him or her to try it when he or she visits you this summer.",
+    "minPalabras": 140,
+    "maxPalabras": 180,
+    "modelo": "Hi Tom,\n\nHow are you? I hope you are enjoying your holidays. I’m writing to tell you about something new in my life that I’m really excited about.\n\nA month ago, a friend took me to a climbing centre in my town, and I loved it from the first minute. Now I go there twice a week after school. At first I was afraid of heights and my arms were very tired, but my instructor is really patient and I’m improving quickly. Last Saturday I reached the top of the hardest wall for beginners!\n\nWhat I like most is that it is a great way to relax and forget about exams. I have also made lots of new friends there, and they are all very friendly.\n\nWhy don’t you try it when you come this summer? I’m sure you would enjoy it, and I could lend you my spare shoes. Afterwards we could have an ice cream on the beach.\n\nWrite soon and tell me what you think!\n\nBest wishes,",
+    "criterios": [
+     "Presentación: párrafos claros, puntuación correcta.",
+     "Organización: estructura del tipo de texto (email; for & against; opinion essay), registro adecuado, ideas enlazadas con conectores.",
+     "Contenido: me ciño al tema, ideas suficientes y variadas, sin repeticiones.",
+     "Corrección gramatical: frases bien construidas, variedad de estructuras, sin traducir del español.",
+     "Vocabulario: rico y no copiado del texto; menos de 4 faltas de ortografía (más de 3 restan)."
+    ],
+    "explicacion": "Email informal: saludo, motivo de la carta, cuerpo contando el nuevo hobby con detalles propios (cuándo empezó, qué te gusta), invitación («Why don’t you try…?») y despedida SIN firmar."
+   }
+  ]
+ }
+]

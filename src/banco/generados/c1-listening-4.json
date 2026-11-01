@@ -1,0 +1,317 @@
+[
+ {
+  "id": "gen-c1-listening-4-mvxwij060",
+  "examen": "c1",
+  "destreza": "listening",
+  "parte": 4,
+  "nombreParte": "Multiple matching",
+  "instrucciones": "You will hear five short extracts in which people are talking about leaving one career to start another. While you listen you must complete both tasks. TASK ONE: for questions 21–25, choose from the list (A–H) the event that prompted each speaker to make the change. TASK TWO: for questions 26–30, choose from the list (A–H) what each speaker says was the hardest part of the change. You hear the recording twice.",
+  "minutos": 10,
+  "listas": [
+   {
+    "titulo": "Task One · the event that prompted each speaker to make the change",
+    "opciones": [
+     "being made redundant",
+     "a health scare",
+     "becoming a parent",
+     "a casual conversation with a stranger",
+     "moving to a new town",
+     "a long period of working abroad",
+     "winning a prize",
+     "taking a short course for fun"
+    ]
+   },
+   {
+    "titulo": "Task Two · the hardest part of the change",
+    "opciones": [
+     "earning much less money",
+     "being treated as a beginner",
+     "doubting the decision",
+     "dealing with other people's disapproval",
+     "learning technical skills",
+     "finding the first clients",
+     "working much longer hours",
+     "losing a sense of routine"
+    ]
+   }
+  ],
+  "audio": {
+   "archivo": "audio/gen-c1-listening-4-mvxwij060.mp3",
+   "veces": 2,
+   "hablantes": [
+    {
+     "id": "sup",
+     "descripcion": "Supervisor",
+     "voz": "en-GB-LibbyNeural"
+    },
+    {
+     "id": "s1",
+     "descripcion": "Speaker One",
+     "voz": "en-GB-RyanNeural"
+    },
+    {
+     "id": "s2",
+     "descripcion": "Speaker Two",
+     "voz": "en-AU-NatashaNeural"
+    },
+    {
+     "id": "s3",
+     "descripcion": "Speaker Three",
+     "voz": "en-IE-EmilyNeural"
+    },
+    {
+     "id": "s4",
+     "descripcion": "Speaker Four",
+     "voz": "en-GB-ThomasNeural"
+    },
+    {
+     "id": "s5",
+     "descripcion": "Speaker Five",
+     "voz": "en-GB-MaisieNeural"
+    }
+   ],
+   "guion": [
+    {
+     "quien": "sup",
+     "texto": "Part Four consists of two tasks. You will hear five short extracts in which people are talking about leaving one career to start another. Look at Task One. For questions twenty-one to twenty-five, choose from the list, A to H, the event that prompted each speaker to make the change. Now look at Task Two. For questions twenty-six to thirty, choose from the list, A to H, what each speaker says was the hardest part of the change. While you listen you must complete both tasks. You now have forty-five seconds to look at Part Four."
+    },
+    {
+     "pausa": 45000
+    },
+    {
+     "quien": "sup",
+     "texto": "Speaker One."
+    },
+    {
+     "pausa": 800
+    },
+    {
+     "quien": "s1",
+     "texto": "I spent fifteen years in banking, and I would probably still be there if the department had not been closed down overnight. I was given a box and a month's salary. Eventually I trained as a carpenter, which I had always daydreamed about. The money was never really the issue, I had savings. What I found hardest was walking into a workshop at forty-two and being told, quite kindly, how to hold a chisel by a lad of twenty. I had to swallow my pride on a daily basis."
+    },
+    {
+     "pausa": 2500
+    },
+    {
+     "quien": "sup",
+     "texto": "Speaker Two."
+    },
+    {
+     "pausa": 800
+    },
+    {
+     "quien": "s2",
+     "texto": "After my daughter was born, I looked at my job in advertising and thought, I cannot spend the next twenty years doing this. The hours were absurd and I was missing everything. So I retrained as a primary school teacher. Everyone told me I was mad, and some of my old colleagues did not hide what they thought. But honestly, that did not bother me. What kept me awake was the money. We went from two good salaries to one and a half, and for the first two years I counted every pound."
+    },
+    {
+     "pausa": 2500
+    },
+    {
+     "quien": "sup",
+     "texto": "Speaker Three."
+    },
+    {
+     "pausa": 800
+    },
+    {
+     "quien": "s3",
+     "texto": "I was a lawyer, quite a successful one, and I only went to a pottery evening class because a friend dragged me along. Within a month I was thinking about nothing else. A year later I rented a small studio and handed in my notice. People assume the difficult bit was the practical side of it, learning to glaze, to fire a kiln properly, but I picked that up quickly. The real struggle was the nights when I lay awake wondering whether I had thrown away a perfectly good career for a hobby."
+    },
+    {
+     "pausa": 2500
+    },
+    {
+     "quien": "sup",
+     "texto": "Speaker Four."
+    },
+    {
+     "pausa": 800
+    },
+    {
+     "quien": "s4",
+     "texto": "I had a heart scare at thirty-eight. Nothing too serious in the end, but the doctor said, quite bluntly, that my lifestyle had to change. I was a stockbroker, eighteen-hour days, no exercise. So I became a personal trainer. I knew the theory, of course, and I was fit enough. What I had not anticipated was that nobody wants to be trained by a former stockbroker they have never heard of. It took me almost a year to sign up my first three clients."
+    },
+    {
+     "pausa": 2500
+    },
+    {
+     "quien": "sup",
+     "texto": "Speaker Five."
+    },
+    {
+     "pausa": 800
+    },
+    {
+     "quien": "s5",
+     "texto": "I had been a journalist for years, mostly abroad, and I came back to the UK feeling rather lost. Then, on a train, I got talking to a woman who ran a small publishing house, and by the time we reached London she had offered me a job as an editor. I said yes before I could think about it. The adjustment was strange. As a reporter I never knew what day it was, and I loved that. Sitting at the same desk from nine to five, I felt oddly unmoored for months."
+    },
+    {
+     "pausa": 10000
+    },
+    {
+     "quien": "sup",
+     "texto": "Now you will hear it again."
+    },
+    {
+     "pausa": 1500
+    },
+    {
+     "quien": "sup",
+     "texto": "Speaker One."
+    },
+    {
+     "pausa": 800
+    },
+    {
+     "quien": "s1",
+     "texto": "I spent fifteen years in banking, and I would probably still be there if the department had not been closed down overnight. I was given a box and a month's salary. Eventually I trained as a carpenter, which I had always daydreamed about. The money was never really the issue, I had savings. What I found hardest was walking into a workshop at forty-two and being told, quite kindly, how to hold a chisel by a lad of twenty. I had to swallow my pride on a daily basis."
+    },
+    {
+     "pausa": 2500
+    },
+    {
+     "quien": "sup",
+     "texto": "Speaker Two."
+    },
+    {
+     "pausa": 800
+    },
+    {
+     "quien": "s2",
+     "texto": "After my daughter was born, I looked at my job in advertising and thought, I cannot spend the next twenty years doing this. The hours were absurd and I was missing everything. So I retrained as a primary school teacher. Everyone told me I was mad, and some of my old colleagues did not hide what they thought. But honestly, that did not bother me. What kept me awake was the money. We went from two good salaries to one and a half, and for the first two years I counted every pound."
+    },
+    {
+     "pausa": 2500
+    },
+    {
+     "quien": "sup",
+     "texto": "Speaker Three."
+    },
+    {
+     "pausa": 800
+    },
+    {
+     "quien": "s3",
+     "texto": "I was a lawyer, quite a successful one, and I only went to a pottery evening class because a friend dragged me along. Within a month I was thinking about nothing else. A year later I rented a small studio and handed in my notice. People assume the difficult bit was the practical side of it, learning to glaze, to fire a kiln properly, but I picked that up quickly. The real struggle was the nights when I lay awake wondering whether I had thrown away a perfectly good career for a hobby."
+    },
+    {
+     "pausa": 2500
+    },
+    {
+     "quien": "sup",
+     "texto": "Speaker Four."
+    },
+    {
+     "pausa": 800
+    },
+    {
+     "quien": "s4",
+     "texto": "I had a heart scare at thirty-eight. Nothing too serious in the end, but the doctor said, quite bluntly, that my lifestyle had to change. I was a stockbroker, eighteen-hour days, no exercise. So I became a personal trainer. I knew the theory, of course, and I was fit enough. What I had not anticipated was that nobody wants to be trained by a former stockbroker they have never heard of. It took me almost a year to sign up my first three clients."
+    },
+    {
+     "pausa": 2500
+    },
+    {
+     "quien": "sup",
+     "texto": "Speaker Five."
+    },
+    {
+     "pausa": 800
+    },
+    {
+     "quien": "s5",
+     "texto": "I had been a journalist for years, mostly abroad, and I came back to the UK feeling rather lost. Then, on a train, I got talking to a woman who ran a small publishing house, and by the time we reached London she had offered me a job as an editor. I said yes before I could think about it. The adjustment was strange. As a reporter I never knew what day it was, and I loved that. Sitting at the same desk from nine to five, I felt oddly unmoored for months."
+    },
+    {
+     "pausa": 10000
+    },
+    {
+     "quien": "sup",
+     "texto": "That is the end of Part Four."
+    }
+   ]
+  },
+  "items": [
+   {
+    "n": 21,
+    "tipo": "emparejar",
+    "lista": 0,
+    "pregunta": "Speaker 1",
+    "correcta": 0,
+    "explicacion": "«The department had been closed down overnight. I was given a box and a month's salary»: lo despidieron (A)."
+   },
+   {
+    "n": 22,
+    "tipo": "emparejar",
+    "lista": 0,
+    "pregunta": "Speaker 2",
+    "correcta": 2,
+    "explicacion": "«After my daughter was born, I looked at my job…»: el nacimiento de su hija (C)."
+   },
+   {
+    "n": 23,
+    "tipo": "emparejar",
+    "lista": 0,
+    "pregunta": "Speaker 3",
+    "correcta": 7,
+    "explicacion": "«I only went to a pottery evening class because a friend dragged me along»: un curso corto por diversión (H)."
+   },
+   {
+    "n": 24,
+    "tipo": "emparejar",
+    "lista": 0,
+    "pregunta": "Speaker 4",
+    "correcta": 1,
+    "explicacion": "«I had a heart scare at thirty-eight»: un susto de salud (B)."
+   },
+   {
+    "n": 25,
+    "tipo": "emparejar",
+    "lista": 0,
+    "pregunta": "Speaker 5",
+    "correcta": 3,
+    "explicacion": "«On a train, I got talking to a woman who ran a small publishing house… offered me a job»: una conversación casual con una desconocida (D). Trabajó en el extranjero, pero eso no fue lo que provocó el cambio (F es el distractor)."
+   },
+   {
+    "n": 26,
+    "tipo": "emparejar",
+    "lista": 1,
+    "pregunta": "Speaker 1",
+    "correcta": 1,
+    "explicacion": "«Being told how to hold a chisel by a lad of twenty… swallow my pride»: ser tratado como principiante (B). Dice que el dinero no era el problema (A es el distractor)."
+   },
+   {
+    "n": 27,
+    "tipo": "emparejar",
+    "lista": 1,
+    "pregunta": "Speaker 2",
+    "correcta": 0,
+    "explicacion": "«What kept me awake was the money… I counted every pound»: ganar mucho menos (A). La desaprobación de otros 'did not bother me' (D es el distractor)."
+   },
+   {
+    "n": 28,
+    "tipo": "emparejar",
+    "lista": 1,
+    "pregunta": "Speaker 3",
+    "correcta": 2,
+    "explicacion": "«The real struggle was the nights when I lay awake wondering whether I had thrown away a perfectly good career»: dudar de su decisión (C). Aprendió lo técnico rápido (E es el distractor)."
+   },
+   {
+    "n": 29,
+    "tipo": "emparejar",
+    "lista": 1,
+    "pregunta": "Speaker 4",
+    "correcta": 5,
+    "explicacion": "«It took me almost a year to sign up my first three clients»: conseguir los primeros clientes (F)."
+   },
+   {
+    "n": 30,
+    "tipo": "emparejar",
+    "lista": 1,
+    "pregunta": "Speaker 5",
+    "correcta": 7,
+    "explicacion": "«As a reporter I never knew what day it was… same desk from nine to five, I felt oddly unmoored»: perder la ausencia de rutina, es decir, la sensación de rutina variada (H)."
+   }
+  ]
+ }
+]
