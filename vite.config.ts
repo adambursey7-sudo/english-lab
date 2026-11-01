@@ -26,9 +26,9 @@ export default defineConfig(({ mode }) => ({
         ],
       },
       manifest: {
-        name: mode === 'producto' ? 'Exámenes de inglés' : 'English Lab',
-        short_name: mode === 'producto' ? 'Exámenes' : 'English Lab',
-        description: 'Exámenes de inglés tipo Cambridge y PAU para practicar y corregir en el móvil.',
+        name: mode === 'producto' ? 'English Lab' : 'English Lab',
+        short_name: mode === 'producto' ? 'English Lab' : 'English Lab',
+        description: 'Exámenes de inglés tipo C1 Advanced y PAU para practicar y corregir en el móvil.',
         categories: ['education'],
         lang: 'es',
         theme_color: '#34502b',
