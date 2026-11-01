@@ -81,7 +81,7 @@ export function EntradaHablar({ item, valor, onCambia, ejercicio }: Props) {
   };
 
   const compartirAudio = async () => {
-    if (!audioUrl) return;
+    if (!audioUrl || envio === 'Enviando…' || envio.startsWith('Enviado')) return;
     const blob = await (await fetch(audioUrl)).blob();
     if (ejercicio && hayServidor()) {
       setEnvio('Enviando…');
@@ -169,7 +169,7 @@ export function EntradaHablar({ item, valor, onCambia, ejercicio }: Props) {
       {audioUrl && (
         <div className="fila" style={{ gap: 10, alignItems: 'center' }}>
           <audio controls src={audioUrl} style={{ maxWidth: '100%' }} />
-          <button type="button" className="btn sec chico" onClick={compartirAudio}>Enviar a Adam</button>
+          <button type="button" className="btn sec chico" onClick={compartirAudio} disabled={envio === 'Enviando…' || envio.startsWith('Enviado')}>Enviar a Adam</button>
           {envio && <span className="silencio pequeno">{envio}</span>}
         </div>
       )}

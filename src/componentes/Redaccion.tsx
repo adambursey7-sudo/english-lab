@@ -123,6 +123,7 @@ export function ResultadoRedaccion({ ejercicio, item, texto }: PropsResultado) {
   const escrito = texto.trim() !== '';
 
   const enviar = async () => {
+    if (aviso === 'Enviando…' || aviso.startsWith('Enviado')) return;
     if (hayServidor()) {
       setAviso('Enviando…');
       const r = await enviarTexto(ejercicio, item.n, texto, `${ejercicio.nombreParte} (${item.tipoTexto})`);
@@ -147,7 +148,7 @@ export function ResultadoRedaccion({ ejercicio, item, texto }: PropsResultado) {
         <>
           <div className="tu-texto">{texto.split(/\n\n+/).map((p, i) => <p key={i}>{p}</p>)}</div>
           <div className="fila" style={{ gap: 8 }}>
-            <button type="button" className="btn chico" onClick={enviar}>Enviar a Adam</button>
+            <button type="button" className="btn chico" onClick={enviar} disabled={aviso === 'Enviando…' || aviso.startsWith('Enviado')}>Enviar a Adam</button>
             {aviso && <span className="silencio pequeno">{aviso}</span>}
           </div>
           <p className="silencio pequeno">La corrección de los writings la hace Adam. Mientras, compárala con el modelo y repasa la lista.</p>
