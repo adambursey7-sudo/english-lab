@@ -1,3 +1,4 @@
+import { pedirNotasServidor } from './servidor';
 import { NOMBRES_DESTREZA, NOMBRES_EXAMEN, etiquetaParte, type Destreza, type Examen } from '../banco/tipos';
 
 /**
@@ -57,7 +58,7 @@ export async function cargarNotas(base: string = import.meta.env.BASE_URL): Prom
   try {
     const respuesta = await fetch(`${base}notas/notas.json?t=${Date.now()}`, { cache: 'no-store' });
     if (!respuesta.ok) throw new Error(String(respuesta.status));
-    const notas = filtrarNotas(await respuesta.json());
+    const notas = mezclarNotas(filtrarNotas(await respuesta.json()), filtrarNotas(await pedirNotasServidor()));
     try {
       localStorage.setItem(CLAVE, JSON.stringify(notas));
     } catch {
@@ -65,8 +66,18 @@ export async function cargarNotas(base: string = import.meta.env.BASE_URL): Prom
     }
     return notas;
   } catch {
-    return leerNotasGuardadas();
+    return mezclarNotas(leerNotasGuardadas(), filtrarNotas(await pedirNotasServidor()));
   }
+}
+
+/** Une las notas publicadas con las que Adam puso desde la página de corregir (sin repetir ninguna). */
+export function mezclarNotas(a: NotasProfe, b: NotasProfe): NotasProfe {
+  const r: NotasProfe = { ...a };
+  for (const [id, lista] of Object.entries(b)) {
+    const vistas = new Set((r[id] ?? []).map((n) => JSON.stringify(n)));
+    r[id] = [...(r[id] ?? []), ...lista.filter((n) => !vistas.has(JSON.stringify(n)))];
+  }
+  return r;
 }
 
 /** Las notas de un alumno, las más recientes primero. */

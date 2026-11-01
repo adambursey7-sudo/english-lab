@@ -1,0 +1,366 @@
+[
+ {
+  "id": "pau-prueba-5-x8",
+  "examen": "pau",
+  "destreza": "prueba",
+  "parte": 5,
+  "nombreParte": "Comment on a situation",
+  "instrucciones": "5. Choose ONLY 3 of the following situations and WRITE what you would say in each one to show that you understand the context of the situation. Write between 10 and 25 words. (1.5 points) Only the first three you answer will be marked.",
+  "minutos": 10,
+  "elegir": 3,
+  "items": [
+   {
+    "n": 1,
+    "tipo": "redaccion",
+    "tipoTexto": "situation",
+    "enunciado": "a) Your school offers a three-month exchange programme in Ireland. A friend asks if you think it is worth applying. Give your opinion.",
+    "minPalabras": 10,
+    "maxPalabras": 25,
+    "modelo": "I think it is definitely worth it. You can improve your English a lot and meet people from different countries.",
+    "criterios": [
+     "Lo que escribo encaja con la situación o con la conversación (si el hueco acaba en «?», es una pregunta).",
+     "Sin errores de gramática ni de ortografía: cada error baja la nota (0,25 → 0,20 → 0,15 → 0).",
+     "Ni muy corto ni muy largo: en las situaciones, entre 10 y 25 palabras."
+    ],
+    "explicacion": "Dar una opinión: «I think… / In my opinion…» con una razón. 10–25 palabras."
+   },
+   {
+    "n": 2,
+    "tipo": "redaccion",
+    "tipoTexto": "situation",
+    "enunciado": "b) Your exchange student from Germany says she feels homesick and a bit lonely. Advise her.",
+    "minPalabras": 10,
+    "maxPalabras": 25,
+    "modelo": "You should join a club at school and invite your new classmates to do something at the weekend. It will help you feel better.",
+    "criterios": [
+     "Lo que escribo encaja con la situación o con la conversación (si el hueco acaba en «?», es una pregunta).",
+     "Sin errores de gramática ni de ortografía: cada error baja la nota (0,25 → 0,20 → 0,15 → 0).",
+     "Ni muy corto ni muy largo: en las situaciones, entre 10 y 25 palabras."
+    ],
+    "explicacion": "Aconsejar: «You should… / Why don’t you…?» con un consejo concreto y su beneficio."
+   },
+   {
+    "n": 3,
+    "tipo": "redaccion",
+    "tipoTexto": "situation",
+    "enunciado": "c) Your host family in Canada has given you a room with no desk, and you need a quiet place to study. Complain politely.",
+    "minPalabras": 10,
+    "maxPalabras": 25,
+    "modelo": "Excuse me, I’m sorry to bother you, but there isn’t a desk in my room. Could I have one to study properly, please?",
+    "criterios": [
+     "Lo que escribo encaja con la situación o con la conversación (si el hueco acaba en «?», es una pregunta).",
+     "Sin errores de gramática ni de ortografía: cada error baja la nota (0,25 → 0,20 → 0,15 → 0).",
+     "Ni muy corto ni muy largo: en las situaciones, entre 10 y 25 palabras."
+    ],
+    "explicacion": "Quejarse con educación: «I’m sorry to bother you, but…» y pedir una solución."
+   },
+   {
+    "n": 4,
+    "tipo": "redaccion",
+    "tipoTexto": "situation",
+    "enunciado": "d) You arrive late to meet your exchange partner at the station because you missed the bus. Apologise.",
+    "minPalabras": 10,
+    "maxPalabras": 25,
+    "modelo": "I’m so sorry I’m late! I missed the bus and the next one took twenty minutes. I hope you haven’t been waiting too long.",
+    "criterios": [
+     "Lo que escribo encaja con la situación o con la conversación (si el hueco acaba en «?», es una pregunta).",
+     "Sin errores de gramática ni de ortografía: cada error baja la nota (0,25 → 0,20 → 0,15 → 0).",
+     "Ni muy corto ni muy largo: en las situaciones, entre 10 y 25 palabras."
+    ],
+    "explicacion": "Pedir perdón: «I’m so sorry…», explicar el motivo en pasado y mostrar consideración."
+   },
+   {
+    "n": 5,
+    "tipo": "redaccion",
+    "tipoTexto": "situation",
+    "enunciado": "e) Your exchange partner invites you to a party on the night before your exam. Refuse politely.",
+    "minPalabras": 10,
+    "maxPalabras": 25,
+    "modelo": "Thanks for inviting me, but I’m afraid I can’t come. I have an important exam tomorrow and I need to get some sleep.",
+    "criterios": [
+     "Lo que escribo encaja con la situación o con la conversación (si el hueco acaba en «?», es una pregunta).",
+     "Sin errores de gramática ni de ortografía: cada error baja la nota (0,25 → 0,20 → 0,15 → 0).",
+     "Ni muy corto ni muy largo: en las situaciones, entre 10 y 25 palabras."
+    ],
+    "explicacion": "Rechazar con educación: agradecer, «I’m afraid I can’t…» y dar una razón."
+   }
+  ],
+  "examenNumero": 8
+ },
+ {
+  "id": "pau-prueba-4-x8",
+  "examen": "pau",
+  "destreza": "prueba",
+  "parte": 4,
+  "nombreParte": "Complete a conversation",
+  "titulo": "Organising a clothes swap at school",
+  "instrucciones": "4. READ this conversation and COMPLETE your part. Write the numbers (1-6) and complete each sentence on your exam paper. (1.5 points) If a gap ends with a question mark, you must write a question.",
+  "minutos": 10,
+  "texto": "Your classmate: Have you heard? Our teacher wants us to organise something to help the environment.\nYou: Yes, I have! {{1}}\nYour classmate: I was thinking of a clothes swap. Everyone brings clothes they don’t wear and takes something new.\nYou: That sounds fun. And {{2}}?\nYour classmate: In the school gym. The headmaster has already said yes.\nYou: Brilliant. {{3}}\nYour classmate: Good point. I think we should put posters in the corridors and send a message to all the classes.\nYou: Fine. {{4}}\nYour classmate: Thanks, you draw much better than I do!\nYou: And {{5}}?\nYour classmate: Anything that is clean and in good condition, like jackets, jeans or T-shirts.\nYour classmate: I’m sure lots of students will come.\nYou: {{6}}",
+  "items": [
+   {
+    "n": 1,
+    "tipo": "redaccion",
+    "tipoTexto": "dialogue",
+    "enunciado": "Hueco 1",
+    "minPalabras": 2,
+    "maxPalabras": 25,
+    "modelo": "Do you have any ideas?  /  What do you think we could do?",
+    "criterios": [
+     "Lo que escribo encaja con la situación o con la conversación (si el hueco acaba en «?», es una pregunta).",
+     "Sin errores de gramática ni de ortografía: cada error baja la nota (0,25 → 0,20 → 0,15 → 0).",
+     "Ni muy corto ni muy largo: en las situaciones, entre 10 y 25 palabras."
+    ],
+    "explicacion": "El compañero responde «I was thinking of a clothes swap», así que preguntas qué idea tiene o qué podéis hacer."
+   },
+   {
+    "n": 2,
+    "tipo": "redaccion",
+    "tipoTexto": "dialogue",
+    "enunciado": "Hueco 2 (acaba en «?»: tiene que ser una pregunta)",
+    "minPalabras": 2,
+    "maxPalabras": 25,
+    "modelo": "where will we hold it  /  where can we do it",
+    "criterios": [
+     "Lo que escribo encaja con la situación o con la conversación (si el hueco acaba en «?», es una pregunta).",
+     "Sin errores de gramática ni de ortografía: cada error baja la nota (0,25 → 0,20 → 0,15 → 0).",
+     "Ni muy corto ni muy largo: en las situaciones, entre 10 y 25 palabras."
+    ],
+    "explicacion": "Contesta «In the school gym»: preguntas dónde se hará. El «And» y el «?» ya están escritos."
+   },
+   {
+    "n": 3,
+    "tipo": "redaccion",
+    "tipoTexto": "dialogue",
+    "enunciado": "Hueco 3",
+    "minPalabras": 2,
+    "maxPalabras": 25,
+    "modelo": "But how will other students know about it?  /  We need to tell everybody about the event.",
+    "criterios": [
+     "Lo que escribo encaja con la situación o con la conversación (si el hueco acaba en «?», es una pregunta).",
+     "Sin errores de gramática ni de ortografía: cada error baja la nota (0,25 → 0,20 → 0,15 → 0).",
+     "Ni muy corto ni muy largo: en las situaciones, entre 10 y 25 palabras."
+    ],
+    "explicacion": "La respuesta habla de carteles y mensajes, es decir, de cómo avisar al resto de alumnos."
+   },
+   {
+    "n": 4,
+    "tipo": "redaccion",
+    "tipoTexto": "dialogue",
+    "enunciado": "Hueco 4",
+    "minPalabras": 2,
+    "maxPalabras": 25,
+    "modelo": "I can make the posters if you like.  /  I’ll design the posters this weekend.",
+    "criterios": [
+     "Lo que escribo encaja con la situación o con la conversación (si el hueco acaba en «?», es una pregunta).",
+     "Sin errores de gramática ni de ortografía: cada error baja la nota (0,25 → 0,20 → 0,15 → 0).",
+     "Ni muy corto ni muy largo: en las situaciones, entre 10 y 25 palabras."
+    ],
+    "explicacion": "El compañero dice «you draw much better than I do»: te ofreces a hacer los carteles."
+   },
+   {
+    "n": 5,
+    "tipo": "redaccion",
+    "tipoTexto": "dialogue",
+    "enunciado": "Hueco 5 (acaba en «?»: tiene que ser una pregunta)",
+    "minPalabras": 2,
+    "maxPalabras": 25,
+    "modelo": "what kind of clothes can students bring  /  what can people bring",
+    "criterios": [
+     "Lo que escribo encaja con la situación o con la conversación (si el hueco acaba en «?», es una pregunta).",
+     "Sin errores de gramática ni de ortografía: cada error baja la nota (0,25 → 0,20 → 0,15 → 0).",
+     "Ni muy corto ni muy largo: en las situaciones, entre 10 y 25 palabras."
+    ],
+    "explicacion": "Contesta «Anything that is clean and in good condition, like jackets…»: preguntas qué ropa se puede traer."
+   },
+   {
+    "n": 6,
+    "tipo": "redaccion",
+    "tipoTexto": "dialogue",
+    "enunciado": "Hueco 6",
+    "minPalabras": 2,
+    "maxPalabras": 25,
+    "modelo": "I hope so! It’s going to be a great event.  /  I think so too. Let’s get started!",
+    "criterios": [
+     "Lo que escribo encaja con la situación o con la conversación (si el hueco acaba en «?», es una pregunta).",
+     "Sin errores de gramática ni de ortografía: cada error baja la nota (0,25 → 0,20 → 0,15 → 0).",
+     "Ni muy corto ni muy largo: en las situaciones, entre 10 y 25 palabras."
+    ],
+    "explicacion": "Cierra la conversación respondiendo a «I’m sure lots of students will come» con optimismo."
+   }
+  ],
+  "examenNumero": 8
+ },
+ {
+  "id": "pau-prueba-6-x8",
+  "examen": "pau",
+  "destreza": "prueba",
+  "parte": 6,
+  "nombreParte": "Composition",
+  "instrucciones": "6. Choose ONE of the following topics and WRITE a composition of about 140-180 words. If you choose the email, DO NOT SIGN it. (3 points)",
+  "minutos": 30,
+  "elegir": 1,
+  "items": [
+   {
+    "n": 1,
+    "tipo": "redaccion",
+    "tipoTexto": "composition",
+    "enunciado": "a) Should teenagers spend some of their free time volunteering in animal shelters? Give your opinion.",
+    "minPalabras": 140,
+    "maxPalabras": 180,
+    "modelo": "Many teenagers have a lot of free time at weekends, but not all of them use it in a useful way. In my opinion, young people should volunteer in animal shelters, because it brings benefits to both animals and teenagers.\n\nFirst of all, shelters are always short of staff and money. Volunteers can walk dogs, clean cages and play with the animals, so the workers have more time for important jobs. Moreover, abandoned pets feel lonely and scared, and a little attention from a friendly person makes them much happier.\n\nIn addition, volunteering is a great experience for teenagers. They learn to be responsible, to work in a team and to be patient. It can also help them decide what to study in the future, for example veterinary science.\n\nHowever, some students have exams and little spare time, so they should not feel forced to go every week.\n\nTo sum up, I believe that spending a few hours a month in an animal shelter is a good idea. It helps animals in need and teaches young people to care about others.",
+    "criterios": [
+     "Presentación: párrafos claros, puntuación correcta.",
+     "Organización: estructura del tipo de texto (email; for & against; opinion essay), registro adecuado, ideas enlazadas con conectores.",
+     "Contenido: me ciño al tema, ideas suficientes y variadas, sin repeticiones.",
+     "Corrección gramatical: frases bien construidas, variedad de estructuras, sin traducir del español.",
+     "Vocabulario: rico y no copiado del texto; menos de 4 faltas de ortografía (más de 3 restan)."
+    ],
+    "explicacion": "Opinion essay: introducción con la postura, un párrafo por idea con conectores (first of all, moreover, in addition, however, to sum up), conclusión. Entre 140 y 180 palabras: por debajo de 140 baja el tope de nota."
+   },
+   {
+    "n": 2,
+    "tipo": "redaccion",
+    "tipoTexto": "email",
+    "enunciado": "b) Write an email to a friend telling him or her about your first day as a volunteer in an animal shelter and inviting your friend to join you next time.",
+    "minPalabras": 140,
+    "maxPalabras": 180,
+    "modelo": "Hi Lucas,\n\nHow are things? I hope you are enjoying the summer. I’m writing to tell you about something new I’ve started doing, and I’d love you to try it too.\n\nLast Saturday I went to the animal shelter near my house for the first time as a volunteer. I was a bit nervous at the beginning, but the people there were really kind and showed me what to do. I helped to feed the cats, clean the cages and take two dogs for a long walk in the park. One of them, a small brown dog called Toby, followed me everywhere! When I left, I was tired but very happy.\n\nThe shelter needs more volunteers, especially in the mornings, and you don’t need any experience. You only have to be patient and like animals, which I know you do.\n\nWhy don’t you come with me next Saturday? We could have lunch together afterwards and you could meet Toby.\n\nWrite back soon and tell me what you think.\n\nBest wishes,",
+    "criterios": [
+     "Presentación: párrafos claros, puntuación correcta.",
+     "Organización: estructura del tipo de texto (email; for & against; opinion essay), registro adecuado, ideas enlazadas con conectores.",
+     "Contenido: me ciño al tema, ideas suficientes y variadas, sin repeticiones.",
+     "Corrección gramatical: frases bien construidas, variedad de estructuras, sin traducir del español.",
+     "Vocabulario: rico y no copiado del texto; menos de 4 faltas de ortografía (más de 3 restan)."
+    ],
+    "explicacion": "Email informal: saludo, motivo, cuerpo contando el primer día con tus propias palabras (tiempos del pasado), invitación («Why don’t you…?») y despedida SIN firmar."
+   }
+  ],
+  "examenNumero": 8
+ },
+ {
+  "id": "pau-prueba-1-x8",
+  "examen": "pau",
+  "destreza": "prueba",
+  "parte": 1,
+  "nombreParte": "Comprensión del texto",
+  "titulo": "Saturday mornings with cats and dogs",
+  "instrucciones": "Read the text and answer questions 1, 2 and 3. In question 1, copy the exact words from the text as evidence; in question 2, copy no more than 10 words; in question 3, find the word in the text that matches each definition.",
+  "minutos": 25,
+  "texto": "Every Saturday morning, a group of teenagers arrives at the Greenfield Animal Shelter with gloves, buckets and a lot of energy. They are part of the Young Helpers programme, which began two years ago after the shelter ran out of staff during a hard winter. Today more than sixty students between fourteen and eighteen take part, and the shelter says it could not work without them.\n\nThe volunteers do many different jobs. Some clean the cages and fill the water bowls, while others walk the dogs in the nearby park. The shyest cats are looked after by those who prefer a quiet task: they sit in a room and read aloud, because the animals slowly get used to a calm human voice. “At first, some cats hide for days,” explains Maya Torres, the coordinator. “After a few weeks of stories, they come and sit on the volunteers’ knees.”\n\nNot all the work is pleasant. The volunteers must learn to deal with sad stories, since many animals arrive after being abandoned or badly treated. Maya insists that every new helper receives a short training course before touching any animal. They also talk about their feelings once a month with a psychologist. “Caring for animals is rewarding, but it can be hard,” she says.\n\nFor many teenagers the experience has changed their plans. Leo Grant, seventeen, joined the programme only to complete the hours his school required. Now he wants to study veterinary science. “I used to spend my weekends playing video games,” he says. “Here I feel useful, and I have made friends who share my interests.” Last year, the volunteers also organised a photo day, which helped to find new homes for twenty-two dogs.\n\nThe shelter hopes to grow, but money is a problem. It receives no help from the government and depends on donations. The volunteers are therefore preparing a sponsored walk next month to raise funds for a new building where the animals can stay during the winter.",
+  "items": [
+   {
+    "n": 1,
+    "tipo": "verdaderoFalso",
+    "pregunta": "1. Say whether the following sentences are TRUE or FALSE according to the text. COPY the evidence from the text. No marks will be given without the evidence. (1.5 points)",
+    "afirmacion": "a) The Young Helpers programme started because the shelter did not have enough workers.",
+    "correcta": true,
+    "pruebas": [
+     "after the shelter ran out of staff during a hard winter",
+     "the shelter ran out of staff during a hard winter",
+     "ran out of staff during a hard winter"
+    ],
+    "explicacion": "TRUE: el programa empezó cuando al refugio se le acabó el personal en un invierno duro. La prueba hay que copiarla tal cual del texto: ni con puntos suspensivos ni con el número de línea."
+   },
+   {
+    "n": 2,
+    "tipo": "verdaderoFalso",
+    "afirmacion": "b) New volunteers can touch the animals before they do any training.",
+    "correcta": false,
+    "pruebas": [
+     "every new helper receives a short training course before touching any animal",
+     "receives a short training course before touching any animal"
+    ],
+    "explicacion": "FALSE: cada voluntario nuevo recibe un curso corto antes de tocar a ningún animal."
+   },
+   {
+    "n": 3,
+    "tipo": "verdaderoFalso",
+    "afirmacion": "c) The shelter receives financial help from the government.",
+    "correcta": false,
+    "pruebas": [
+     "It receives no help from the government and depends on donations",
+     "receives no help from the government",
+     "receives no help from the government and depends on donations"
+    ],
+    "explicacion": "FALSE: el refugio no recibe ayuda del gobierno y depende de donaciones."
+   },
+   {
+    "n": 4,
+    "tipo": "palabra",
+    "pregunta": "2. ANSWER the questions below. COPY no more than 10 words and/or a number from the text to answer each question. (1.5 points)\na) What do the volunteers who prefer a quiet task do with the shy cats?",
+    "correctas": [
+     "sit in a room and read aloud",
+     "they sit in a room and read aloud",
+     "read aloud",
+     "sit in a room and read aloud, because the animals slowly get used to a calm human voice"
+    ],
+    "maxPalabras": 10,
+    "explicacion": "«they sit in a room and read aloud»: se sientan en una sala y leen en voz alta a los gatos tímidos."
+   },
+   {
+    "n": 5,
+    "tipo": "palabra",
+    "pregunta": "b) How often do the volunteers talk with a psychologist?",
+    "correctas": [
+     "once a month",
+     "once a month with a psychologist",
+     "talk about their feelings once a month with a psychologist"
+    ],
+    "maxPalabras": 10,
+    "explicacion": "«They also talk about their feelings once a month with a psychologist»: basta copiar «once a month»."
+   },
+   {
+    "n": 6,
+    "tipo": "palabra",
+    "pregunta": "c) What are the volunteers preparing for next month?",
+    "correctas": [
+     "a sponsored walk",
+     "a sponsored walk next month",
+     "preparing a sponsored walk next month",
+     "a sponsored walk next month to raise funds for a new building",
+     "sponsored walk"
+    ],
+    "maxPalabras": 10,
+    "explicacion": "«The volunteers are therefore preparing a sponsored walk next month to raise funds…»."
+   },
+   {
+    "n": 7,
+    "tipo": "palabra",
+    "pregunta": "3. FIND a word or expression in the text that means… (1 point)\nd) left alone by the owner, without care (paragraph 3)",
+    "correctas": [
+     "abandoned"
+    ],
+    "explicacion": "«many animals arrive after being abandoned or badly treated». Hay que escribir la palabra tal cual aparece en el texto."
+   },
+   {
+    "n": 8,
+    "tipo": "palabra",
+    "pregunta": "e) giving a feeling of satisfaction because it is worth doing (paragraph 3)",
+    "correctas": [
+     "rewarding"
+    ],
+    "explicacion": "«Caring for animals is rewarding, but it can be hard»."
+   },
+   {
+    "n": 9,
+    "tipo": "palabra",
+    "pregunta": "f) asked for or needed by a rule (paragraph 4)",
+    "correctas": [
+     "required"
+    ],
+    "explicacion": "«the hours his school required»."
+   },
+   {
+    "n": 10,
+    "tipo": "palabra",
+    "pregunta": "g) money collected for a particular purpose (paragraph 5)",
+    "correctas": [
+     "funds"
+    ],
+    "explicacion": "«to raise funds for a new building»."
+   }
+  ],
+  "examenNumero": 8
+ }
+]

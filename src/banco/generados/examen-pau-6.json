@@ -1,0 +1,362 @@
+[
+ {
+  "id": "pau-prueba-4-x6",
+  "examen": "pau",
+  "destreza": "prueba",
+  "parte": 4,
+  "nombreParte": "Complete a conversation",
+  "titulo": "Starting a coding course with a classmate",
+  "instrucciones": "4. READ this conversation and COMPLETE your part. Write the numbers (1-6) and complete each sentence on your exam paper. (1.5 points) If a gap ends with a question mark, you must write a question.",
+  "minutos": 10,
+  "texto": "Your classmate: Hi! I heard you want to learn how to code.\nYou: Yes, that’s right! {{1}}\nYour classmate: I’m doing an online course on Saturday mornings. It’s free for students.\nYou: That sounds interesting. And {{2}}?\nYour classmate: Two hours every week. We also get homework, but it’s quite easy.\nYou: Great. {{3}}\nYour classmate: No, you don’t. The first lesson is for beginners, so you can start from zero.\nYou: Perfect! {{4}}\nYour classmate: Of course! I’ll send you the link tonight.\nYou: Thanks. And {{5}}?\nYour classmate: We use Python. Many people say it’s the easiest language to start with.\nYour classmate: I’m sure you’ll enjoy it.\nYou: {{6}}",
+  "items": [
+   {
+    "n": 1,
+    "tipo": "redaccion",
+    "tipoTexto": "dialogue",
+    "enunciado": "Hueco 1",
+    "minPalabras": 2,
+    "maxPalabras": 25,
+    "modelo": "Can you recommend a good course?  /  Do you know where I can learn?",
+    "criterios": [
+     "Lo que escribo encaja con la situación o con la conversación (si el hueco acaba en «?», es una pregunta).",
+     "Sin errores de gramática ni de ortografía: cada error baja la nota (0,25 → 0,20 → 0,15 → 0).",
+     "Ni muy corto ni muy largo: en las situaciones, entre 10 y 25 palabras."
+    ],
+    "explicacion": "El compañero responde hablando de su curso en línea, así que en el hueco 1 se le pide una recomendación o un lugar para aprender."
+   },
+   {
+    "n": 2,
+    "tipo": "redaccion",
+    "tipoTexto": "dialogue",
+    "enunciado": "Hueco 2 (acaba en «?»: tiene que ser una pregunta)",
+    "minPalabras": 2,
+    "maxPalabras": 25,
+    "modelo": "how long is each lesson  /  how many hours is the course",
+    "criterios": [
+     "Lo que escribo encaja con la situación o con la conversación (si el hueco acaba en «?», es una pregunta).",
+     "Sin errores de gramática ni de ortografía: cada error baja la nota (0,25 → 0,20 → 0,15 → 0).",
+     "Ni muy corto ni muy largo: en las situaciones, entre 10 y 25 palabras."
+    ],
+    "explicacion": "La respuesta «Two hours every week» indica que preguntas por la duración o las horas. El «And» y el «?» ya están escritos."
+   },
+   {
+    "n": 3,
+    "tipo": "redaccion",
+    "tipoTexto": "dialogue",
+    "enunciado": "Hueco 3",
+    "minPalabras": 2,
+    "maxPalabras": 25,
+    "modelo": "Do I need to know anything about computers before I start?  /  Do I need any experience?",
+    "criterios": [
+     "Lo que escribo encaja con la situación o con la conversación (si el hueco acaba en «?», es una pregunta).",
+     "Sin errores de gramática ni de ortografía: cada error baja la nota (0,25 → 0,20 → 0,15 → 0).",
+     "Ni muy corto ni muy largo: en las situaciones, entre 10 y 25 palabras."
+    ],
+    "explicacion": "«No, you don’t. The first lesson is for beginners» responde a una pregunta sobre si hace falta experiencia previa."
+   },
+   {
+    "n": 4,
+    "tipo": "redaccion",
+    "tipoTexto": "dialogue",
+    "enunciado": "Hueco 4",
+    "minPalabras": 2,
+    "maxPalabras": 25,
+    "modelo": "Could you send me the information about the course?  /  Can you give me the web address, please?",
+    "criterios": [
+     "Lo que escribo encaja con la situación o con la conversación (si el hueco acaba en «?», es una pregunta).",
+     "Sin errores de gramática ni de ortografía: cada error baja la nota (0,25 → 0,20 → 0,15 → 0).",
+     "Ni muy corto ni muy largo: en las situaciones, entre 10 y 25 palabras."
+    ],
+    "explicacion": "El compañero dice «Of course! I’ll send you the link», así que antes se le pide el enlace o la información."
+   },
+   {
+    "n": 5,
+    "tipo": "redaccion",
+    "tipoTexto": "dialogue",
+    "enunciado": "Hueco 5 (acaba en «?»: tiene que ser una pregunta)",
+    "minPalabras": 2,
+    "maxPalabras": 25,
+    "modelo": "which programming language do you use  /  what language will we learn",
+    "criterios": [
+     "Lo que escribo encaja con la situación o con la conversación (si el hueco acaba en «?», es una pregunta).",
+     "Sin errores de gramática ni de ortografía: cada error baja la nota (0,25 → 0,20 → 0,15 → 0).",
+     "Ni muy corto ni muy largo: en las situaciones, entre 10 y 25 palabras."
+    ],
+    "explicacion": "La respuesta «We use Python» indica que preguntas qué lenguaje de programación se usa."
+   },
+   {
+    "n": 6,
+    "tipo": "redaccion",
+    "tipoTexto": "dialogue",
+    "enunciado": "Hueco 6",
+    "minPalabras": 2,
+    "maxPalabras": 25,
+    "modelo": "I hope so! I can’t wait to start.  /  Thanks for your help. I’m really looking forward to it.",
+    "criterios": [
+     "Lo que escribo encaja con la situación o con la conversación (si el hueco acaba en «?», es una pregunta).",
+     "Sin errores de gramática ni de ortografía: cada error baja la nota (0,25 → 0,20 → 0,15 → 0).",
+     "Ni muy corto ni muy largo: en las situaciones, entre 10 y 25 palabras."
+    ],
+    "explicacion": "Cierra la conversación respondiendo a «I’m sure you’ll enjoy it» con esperanza o agradecimiento."
+   }
+  ],
+  "examenNumero": 6
+ },
+ {
+  "id": "pau-prueba-5-x6",
+  "examen": "pau",
+  "destreza": "prueba",
+  "parte": 5,
+  "nombreParte": "Comment on a situation",
+  "instrucciones": "5. Choose ONLY 3 of the following situations and WRITE what you would say in each one to show that you understand the context of the situation. Write between 10 and 25 words. (1.5 points) Only the first three you answer will be marked.",
+  "minutos": 10,
+  "elegir": 3,
+  "items": [
+   {
+    "n": 1,
+    "tipo": "redaccion",
+    "tipoTexto": "situation",
+    "enunciado": "a) Your school wants to ban plastic bottles in the canteen. A classmate asks what you think. Give your opinion.",
+    "minPalabras": 10,
+    "maxPalabras": 25,
+    "modelo": "I think it’s a great idea. Plastic bottles create a lot of waste, and we can easily bring our own reusable bottles from home.",
+    "criterios": [
+     "Lo que escribo encaja con la situación o con la conversación (si el hueco acaba en «?», es una pregunta).",
+     "Sin errores de gramática ni de ortografía: cada error baja la nota (0,25 → 0,20 → 0,15 → 0).",
+     "Ni muy corto ni muy largo: en las situaciones, entre 10 y 25 palabras."
+    ],
+    "explicacion": "Dar una opinión: «I think… / In my opinion…» con una razón. 10–25 palabras."
+   },
+   {
+    "n": 2,
+    "tipo": "redaccion",
+    "tipoTexto": "situation",
+    "enunciado": "b) Your friend always buys snacks wrapped in plastic at break time. Advise her to do something different.",
+    "minPalabras": 10,
+    "maxPalabras": 25,
+    "modelo": "You should bring a sandwich or some fruit from home instead. It’s cheaper, healthier, and you won’t throw away any plastic.",
+    "criterios": [
+     "Lo que escribo encaja con la situación o con la conversación (si el hueco acaba en «?», es una pregunta).",
+     "Sin errores de gramática ni de ortografía: cada error baja la nota (0,25 → 0,20 → 0,15 → 0).",
+     "Ni muy corto ni muy largo: en las situaciones, entre 10 y 25 palabras."
+    ],
+    "explicacion": "Aconsejar: «You should… / Why don’t you…?» con una alternativa y un motivo."
+   },
+   {
+    "n": 3,
+    "tipo": "redaccion",
+    "tipoTexto": "situation",
+    "enunciado": "c) You forgot your reusable water bottle and the teacher noticed. Apologise to her.",
+    "minPalabras": 10,
+    "maxPalabras": 25,
+    "modelo": "I’m really sorry, I forgot my bottle this morning. I’ll bring it tomorrow, and I won’t buy a plastic one today.",
+    "criterios": [
+     "Lo que escribo encaja con la situación o con la conversación (si el hueco acaba en «?», es una pregunta).",
+     "Sin errores de gramática ni de ortografía: cada error baja la nota (0,25 → 0,20 → 0,15 → 0).",
+     "Ni muy corto ni muy largo: en las situaciones, entre 10 y 25 palabras."
+    ],
+    "explicacion": "Pedir perdón: «I’m really sorry…», explicar el motivo y prometer algo."
+   },
+   {
+    "n": 4,
+    "tipo": "redaccion",
+    "tipoTexto": "situation",
+    "enunciado": "d) The head teacher asks you to join the new “plastic-free” committee, but you have exams soon. Refuse politely.",
+    "minPalabras": 10,
+    "maxPalabras": 25,
+    "modelo": "Thank you for asking me, but I’m afraid I can’t join now because I have important exams. Maybe I can help next term.",
+    "criterios": [
+     "Lo que escribo encaja con la situación o con la conversación (si el hueco acaba en «?», es una pregunta).",
+     "Sin errores de gramática ni de ortografía: cada error baja la nota (0,25 → 0,20 → 0,15 → 0).",
+     "Ni muy corto ni muy largo: en las situaciones, entre 10 y 25 palabras."
+    ],
+    "explicacion": "Rechazar con educación: agradecer, «I’m afraid I can’t…» y dar una razón."
+   },
+   {
+    "n": 5,
+    "tipo": "redaccion",
+    "tipoTexto": "situation",
+    "enunciado": "e) The new paper cups in the school café are so weak that your hot chocolate spilled. Complain to the waiter.",
+    "minPalabras": 10,
+    "maxPalabras": 25,
+    "modelo": "Excuse me, the new paper cup broke and my hot chocolate spilled everywhere. Could you give me a stronger cup, please?",
+    "criterios": [
+     "Lo que escribo encaja con la situación o con la conversación (si el hueco acaba en «?», es una pregunta).",
+     "Sin errores de gramática ni de ortografía: cada error baja la nota (0,25 → 0,20 → 0,15 → 0).",
+     "Ni muy corto ni muy largo: en las situaciones, entre 10 y 25 palabras."
+    ],
+    "explicacion": "Quejarse con educación: «Excuse me, …», explicar el problema y pedir una solución."
+   }
+  ],
+  "examenNumero": 6
+ },
+ {
+  "id": "pau-prueba-1-x6",
+  "examen": "pau",
+  "destreza": "prueba",
+  "parte": 1,
+  "nombreParte": "Comprensión del texto",
+  "titulo": "The tennis court that grows tomatoes",
+  "instrucciones": "Read the text and answer questions 1, 2 and 3. In question 1, copy the exact words from the text as evidence; in question 2, copy no more than 10 words; in question 3, find the word in the text that matches each definition.",
+  "minutos": 25,
+  "texto": "At Hillside High School in Las Palmas, the old tennis court behind the gym has become the most popular place in the building. Two years ago it was empty and covered in weeds. Today it holds twenty wooden boxes full of tomatoes, lettuce, herbs and strawberries. The school garden was the idea of Marta Quintana, a biology teacher who wanted her students to see where food really comes from.\n\n“Many teenagers think vegetables just appear in supermarkets,” Marta says. “When they plant a seed and wait for weeks, they learn to be patient and to respect the work of farmers.” The project began with a small budget from the parents’ association, and students built the boxes themselves during technology classes. Each class looks after its own box, and groups take turns watering the plants during the holidays.\n\nThe garden has brought other benefits. Teachers say that students who find it hard to concentrate in the classroom are calmer outdoors. The school canteen now uses the lettuce and herbs in its meals, and last month the pupils sold extra tomatoes at a local market to raise money for new tools. Some students have even started small gardens on the balconies of their flats. “I never ate salad before,” admits Lucas, a fifteen-year-old. “Now I eat what I grow, and it tastes completely different.”\n\nNot everything has been easy. During the hot summer of 2025, a lack of rain damaged many plants, and the school had to install a system that collects rainwater from the roof. Some parents also worried that the garden would take time away from lessons. However, the headteacher says that results have not got worse. Other schools in the area have asked for advice, and the council is considering paying for gardens in five more schools next year.",
+  "items": [
+   {
+    "n": 1,
+    "tipo": "verdaderoFalso",
+    "pregunta": "1. Say whether the following sentences are TRUE or FALSE according to the text. COPY the evidence from the text. No marks will be given without the evidence. (1.5 points)",
+    "afirmacion": "a) The garden was created in a place that nobody was using.",
+    "correcta": true,
+    "pruebas": [
+     "Two years ago it was empty and covered in weeds",
+     "it was empty and covered in weeds"
+    ],
+    "explicacion": "TRUE: hace dos años la pista de tenis estaba vacía y llena de malas hierbas. La prueba hay que copiarla tal cual del texto: ni con puntos suspensivos ni con el número de línea."
+   },
+   {
+    "n": 2,
+    "tipo": "verdaderoFalso",
+    "afirmacion": "b) The wooden boxes were made by professional carpenters.",
+    "correcta": false,
+    "pruebas": [
+     "students built the boxes themselves during technology classes",
+     "built the boxes themselves during technology classes"
+    ],
+    "explicacion": "FALSE: los propios alumnos construyeron las cajas en las clases de tecnología, no carpinteros profesionales."
+   },
+   {
+    "n": 3,
+    "tipo": "verdaderoFalso",
+    "afirmacion": "c) The garden has made the students' results worse.",
+    "correcta": false,
+    "pruebas": [
+     "the headteacher says that results have not got worse",
+     "results have not got worse"
+    ],
+    "explicacion": "FALSE: según el director, los resultados no han empeorado."
+   },
+   {
+    "n": 4,
+    "tipo": "palabra",
+    "pregunta": "2. ANSWER the questions below. COPY no more than 10 words and/or a number from the text to answer each question. (1.5 points)\na) What did the school install to deal with the lack of rain?",
+    "correctas": [
+     "a system that collects rainwater from the roof",
+     "install a system that collects rainwater from the roof",
+     "system that collects rainwater from the roof"
+    ],
+    "maxPalabras": 10,
+    "explicacion": "«the school had to install a system that collects rainwater from the roof» (7 palabras copiadas del texto)."
+   },
+   {
+    "n": 5,
+    "tipo": "palabra",
+    "pregunta": "b) Why did the pupils sell tomatoes at a local market?",
+    "correctas": [
+     "to raise money for new tools",
+     "raise money for new tools"
+    ],
+    "maxPalabras": 10,
+    "explicacion": "«the pupils sold extra tomatoes at a local market to raise money for new tools»."
+   },
+   {
+    "n": 6,
+    "tipo": "palabra",
+    "pregunta": "c) How many more schools might get a garden next year?",
+    "correctas": [
+     "five",
+     "five more schools",
+     "in five more schools",
+     "five more schools next year",
+     "paying for gardens in five more schools next year"
+    ],
+    "maxPalabras": 10,
+    "explicacion": "«the council is considering paying for gardens in five more schools next year»."
+   },
+   {
+    "n": 7,
+    "tipo": "palabra",
+    "pregunta": "3. FIND a word or expression in the text that means… (1 point)\nd) wild plants that grow where people do not want them (paragraph 1)",
+    "correctas": [
+     "weeds"
+    ],
+    "explicacion": "«covered in weeds». Hay que escribir la palabra tal cual aparece en el texto."
+   },
+   {
+    "n": 8,
+    "tipo": "palabra",
+    "pregunta": "e) giving water to plants (paragraph 2)",
+    "correctas": [
+     "watering"
+    ],
+    "explicacion": "«groups take turns watering the plants»."
+   },
+   {
+    "n": 9,
+    "tipo": "palabra",
+    "pregunta": "f) more quiet and relaxed (paragraph 3)",
+    "correctas": [
+     "calmer"
+    ],
+    "explicacion": "«are calmer outdoors»."
+   },
+   {
+    "n": 10,
+    "tipo": "palabra",
+    "pregunta": "g) an opinion given to help someone decide what to do (paragraph 4)",
+    "correctas": [
+     "advice"
+    ],
+    "explicacion": "«Other schools in the area have asked for advice»."
+   }
+  ],
+  "examenNumero": 6
+ },
+ {
+  "id": "pau-prueba-6-x6",
+  "examen": "pau",
+  "destreza": "prueba",
+  "parte": 6,
+  "nombreParte": "Composition",
+  "instrucciones": "6. Choose ONE of the following topics and WRITE a composition of about 140-180 words. If you choose the email, DO NOT SIGN it. (3 points)",
+  "minutos": 30,
+  "elegir": 1,
+  "items": [
+   {
+    "n": 1,
+    "tipo": "redaccion",
+    "tipoTexto": "composition",
+    "enunciado": "a) Should every school have an urban garden where students grow their own vegetables? Give your opinion.",
+    "minPalabras": 140,
+    "maxPalabras": 180,
+    "modelo": "These days many teenagers spend most of their time indoors, looking at screens. For this reason, I strongly believe that every school should have a small garden where students can grow their own vegetables.\n\nFirst of all, a school garden teaches practical skills. Students learn how plants grow, how to look after them and how much work it takes to produce food. Moreover, it is a good way to understand why we should not waste what we eat.\n\nAnother advantage is that working outdoors is healthy and relaxing. After a long morning of lessons, spending half an hour in the fresh air can help us to concentrate better. Besides, students work as a team, so they make new friends and learn to share responsibilities.\n\nOf course, some people say that a garden takes time and money, and that classes are already too full. However, a small space and a few simple tools are enough to start.\n\nIn conclusion, a school garden is cheap, useful and fun, so I think all schools should have one.",
+    "criterios": [
+     "Presentación: párrafos claros, puntuación correcta.",
+     "Organización: estructura del tipo de texto (email; for & against; opinion essay), registro adecuado, ideas enlazadas con conectores.",
+     "Contenido: me ciño al tema, ideas suficientes y variadas, sin repeticiones.",
+     "Corrección gramatical: frases bien construidas, variedad de estructuras, sin traducir del español.",
+     "Vocabulario: rico y no copiado del texto; menos de 4 faltas de ortografía (más de 3 restan)."
+    ],
+    "explicacion": "Opinion essay: introducción con la postura, un párrafo por idea con conectores (first of all, moreover, besides, however, in conclusion), incluir un argumento contrario con su respuesta y una conclusión. Entre 140 y 180 palabras: por debajo de 140 baja el tope de nota."
+   },
+   {
+    "n": 2,
+    "tipo": "redaccion",
+    "tipoTexto": "email",
+    "enunciado": "b) Write an email to a friend from another country telling him or her about the new garden in your school and inviting him or her to help you with it during the holidays.",
+    "minPalabras": 140,
+    "maxPalabras": 180,
+    "modelo": "Hi Tom,\n\nHow are you? I hope you are enjoying the end of the school year. I’m writing because there is some great news from my school that I want to share with you.\n\nA few weeks ago, our teachers helped us build a garden in the old yard behind the gym. We have planted tomatoes, lettuces, carrots and even some strawberries! Every group takes turns to water the plants after lessons, and last Friday we ate our first salad. It was delicious, and I was very proud of it.\n\nThe problem is that nobody is at school in July and August, so the plants need some help. I’m going to go there twice a week to water them and pick the vegetables.\n\nWhy don’t you come and stay with me for a couple of weeks? You could help me in the garden in the morning and in the afternoon we could go to the beach. I’m sure you’ll love it.\n\nTell me if you can come!\n\nBest wishes,",
+    "criterios": [
+     "Presentación: párrafos claros, puntuación correcta.",
+     "Organización: estructura del tipo de texto (email; for & against; opinion essay), registro adecuado, ideas enlazadas con conectores.",
+     "Contenido: me ciño al tema, ideas suficientes y variadas, sin repeticiones.",
+     "Corrección gramatical: frases bien construidas, variedad de estructuras, sin traducir del español.",
+     "Vocabulario: rico y no copiado del texto; menos de 4 faltas de ortografía (más de 3 restan)."
+    ],
+    "explicacion": "Email informal: saludo, motivo, cuerpo contando con tus palabras cómo es el huerto, invitación («Why don’t you come…?») y despedida SIN firmar."
+   }
+  ],
+  "examenNumero": 6
+ }
+]
