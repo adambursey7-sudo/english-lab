@@ -2,6 +2,8 @@ import { useMemo, useState } from 'react';
 import { partesDe } from '../banco';
 import { NOMBRES_DESTREZA, etiquetaParte, type Destreza, type Examen } from '../banco/tipos';
 import { generarExamen, candidatos, recetaCompleta, type PedidoParte, type Receta } from '../motor/generador';
+import { leerMarca } from '../marca';
+import { reglaPagina } from '../motor/paginas';
 import { PAPELES_DE } from '../motor/cuadernillo';
 import { escribirGuardados, exportar, fusionar, gruposDe, hoy, importar, leerGuardados, nuevoId, usadosDe, type Guardado } from '../motor/misExamenes';
 import { ClaveProfe, CuadernilloAlumno } from './Imprimir';
@@ -44,6 +46,9 @@ export function Crear() {
   const [nombre, setNombre] = useState('');
   const [evitarUsados, setEvitarUsados] = useState(true);
   const [aviso, setAviso] = useState('');
+  const [fecha, setFecha] = useState('');
+  const [ahorro, setAhorro] = useState(false);
+  const marca = leerMarca();
   // Al abrir un examen guardado se respeta lo que evitó entonces (si no, su propio historial lo cambiaría).
   const [fijo, setFijo] = useState<string[] | null>(null);
 
@@ -53,6 +58,7 @@ export function Crear() {
   const usados = useMemo(() => fijo ?? (evitarUsados ? usadosDe(grupo, guardados) : []), [fijo, evitarUsados, grupo, guardados]);
   const receta: Receta = { ...base, version, evitar: usados, partes: base.partes.filter((x) => !quitadas.includes(clave(x))) };
   const generado = useMemo(() => generarExamen(receta), [examen, plantilla, semilla, version, quitadas.join('|'), usados]); // eslint-disable-line react-hooks/exhaustive-deps
+  const conDatos = { ...generado, grupo: grupo.trim() || undefined, fechaExamen: fecha || undefined };
   const minutos = generado.papeles.reduce((n, x) => n + x.minutos, 0);
   const preguntas = generado.papeles.reduce((n, x) => n + x.preguntas, 0);
 
@@ -110,8 +116,8 @@ export function Crear() {
   const alternar = (x: PedidoParte) => setQuitadas((q) => (q.includes(clave(x)) ? q.filter((c) => c !== clave(x)) : [...q, clave(x)]));
 
   return (
-    <div className={`imprimir crear ${verClave ? 'clave' : 'cuadernillo'}`}>
-      <style>{'@page { size: A4; margin: 16mm 15mm 18mm; }'}</style>
+    <div className={`imprimir crear ${verClave ? 'clave' : 'cuadernillo'}${ahorro ? ' ahorro' : ''}`}>
+      <style>{reglaPagina(marca.nombre, `${generado.titulo} · ${generado.etiqueta ?? ''}`)}</style>
       <nav className="barra-pdf no-imprimir" aria-label="Crear examen">
         <a className="btn sec chico" href="#/">‹ Volver</a>
         <span className="barra-titulo">Crear examen</span>
@@ -171,6 +177,8 @@ export function Crear() {
           <datalist id="grupos-guardados">{gruposDe(guardados).map((x) => <option key={x} value={x} />)}</datalist>
           <input className="campo-crear" aria-label="Nombre del examen" placeholder="Nombre (opcional)" value={nombre} maxLength={80} onChange={(e) => setNombre(e.target.value)} />
           <label className="casilla"><input type="checkbox" checked={evitarUsados} onChange={(e) => { setEvitarUsados(e.target.checked); setFijo(null); }} /> No repetir ejercicios que ya hizo este grupo{usados.length > 0 && ` (${usados.length} ya usados)`}</label>
+          <label className="casilla">Fecha del examen <input type="date" value={fecha} onChange={(e) => setFecha(e.target.value)} /></label>
+          <label className="casilla"><input type="checkbox" checked={ahorro} onChange={(e) => setAhorro(e.target.checked)} /> Ahorrar tinta (sin fondos grises)</label>
           <button type="button" className="btn" onClick={guardar} disabled={generado.papeles.length === 0}>Guardar en Mis exámenes</button>
           {aviso && <p className="silencio pequeno" role="status">{aviso}</p>}
 
@@ -209,9 +217,9 @@ export function Crear() {
           {generado.papeles.length === 0 ? (
             <p className="silencio no-imprimir">Marca al menos una parte para ver el examen.</p>
           ) : verClave ? (
-            <ClaveProfe c={generado} />
+            <ClaveProfe c={conDatos} />
           ) : (
-            <CuadernilloAlumno c={generado} />
+            <CuadernilloAlumno c={conDatos} />
           )}
         </section>
       </div>

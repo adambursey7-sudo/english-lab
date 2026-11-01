@@ -1,4 +1,5 @@
-import { leerMarca } from '../marca';
+import { leerMarca, urlLogo } from '../marca';
+import { reglaPagina } from '../motor/paginas';
 import { Fragment } from 'react';
 import type { Ejercicio, Item, ItemHablar, ItemRedaccion } from '../banco/tipos';
 import { NOMBRES_EXAMEN, TIPOS_EVALUABLES, etiquetaParte, type Examen } from '../banco/tipos';
@@ -35,9 +36,20 @@ export function Imprimir({ examen, numero, modo }: Props) {
   return (
     <div className={`imprimir ${modo}`}>
       {/* El tamaño de página solo se aplica mientras esta vista está montada: no afecta a imprimir otras pantallas. */}
-      <style>{'@page { size: A4; margin: 16mm 15mm 18mm; }'}</style>
+      <style>{reglaPagina(leerMarca().nombre, cuadernillo.titulo)}</style>
       <Barra examen={examen} numero={numero} modo={modo} />
       {modo === 'cuadernillo' ? <CuadernilloAlumno c={cuadernillo} /> : <ClaveProfe c={cuadernillo} />}
+    </div>
+  );
+}
+
+/** Nombre de la academia (y su logo, si lo subió) en la portada. */
+function Marca() {
+  const m = leerMarca();
+  return (
+    <div className="portada-marca">
+      {urlLogo(m) && <img className="portada-logo" src={urlLogo(m)} alt="" />}
+      <span>{m.nombre}</span>
     </div>
   );
 }
@@ -65,7 +77,7 @@ export function CuadernilloAlumno({ c }: { c: Cuadernillo }) {
     <main className="pagina">
       {/* Portada */}
       <section className="portada">
-        <div className="portada-marca">{leerMarca().nombre}</div>
+        <Marca />
         <h1>{c.titulo}</h1>
         <div className="portada-numero">{c.etiqueta ?? `Examen ${c.numero}`}</div>
         <table className="tabla papeles">
@@ -97,7 +109,8 @@ export function CuadernilloAlumno({ c }: { c: Cuadernillo }) {
         </div>
         <div className="firma">
           <div><span>Name</span><span className="linea" /></div>
-          <div><span>Date</span><span className="linea corta" /></div>
+          <div><span>Date</span>{c.fechaExamen ? <span className="dato">{c.fechaExamen}</span> : <span className="linea corta" />}</div>
+          {c.grupo && <div><span>Class</span><span className="dato">{c.grupo}</span></div>}
         </div>
         {listening.length > 0 && !c.generado && (
           <div className="portada-qr">
@@ -131,7 +144,10 @@ function PapelImpreso({ c, papel, indice, audio }: { c: Cuadernillo; papel: Pape
           {papel.preguntas > 0 && ` · ${papel.preguntas} questions`}
         </div>
       </header>
-      {papel.destreza === 'listening' && (
+      {papel.destreza === 'listening' && c.generado && (
+        <p className="nota-papel">Your teacher will play the recordings. Each recording is played twice.</p>
+      )}
+      {papel.destreza === 'listening' && !c.generado && (
         <div className="aviso-audio">
           <QR texto={audio} lado={96} alt="QR del audio del listening" />
           <div>
@@ -399,7 +415,7 @@ export function ClaveProfe({ c }: { c: Cuadernillo }) {
   return (
     <main className="pagina">
       <section className="portada clave-portada">
-        <div className="portada-marca">{leerMarca().nombre}</div>
+        <Marca />
         <h1>Answer key</h1>
         <div className="portada-numero">{c.titulo} · {c.etiqueta ?? `Examen ${c.numero}`}</div>
         <p className="pequena">Respuestas, otras formas aceptadas y por qué; modelos de respuesta de las partes que corrige el profesor.</p>

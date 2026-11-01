@@ -25,6 +25,9 @@ export interface Cuadernillo {
   generado?: boolean;
   /** Cómo se llama en la portada y en la hoja de respuestas; si falta, «Examen N». */
   etiqueta?: string;
+  /** Grupo o clase y fecha del examen, si el profe los puso: salen impresos en la portada. */
+  grupo?: string;
+  fechaExamen?: string;
 }
 
 export const TITULO_EXAMEN: Record<Examen, string> = {
