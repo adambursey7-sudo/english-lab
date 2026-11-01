@@ -1,0 +1,66 @@
+[
+ {
+  "id": "gen-c1-reading-use-7-mvxwd02u0",
+  "examen": "c1",
+  "destreza": "reading-use",
+  "parte": 7,
+  "nombreParte": "Gapped text",
+  "titulo": "The apple that came back",
+  "instrucciones": "You are going to read an article about a woman who rediscovered a lost variety of apple. Six paragraphs have been removed from the article. Choose from the paragraphs A–G the one which fits each gap (41–46). There is one extra paragraph which you do not need to use.",
+  "minutos": 15,
+  "texto": "When Ines Varga inherited her grandmother's cottage in the hills, she also inherited an orchard of forty trees, most of them half-dead. In her first spring she noticed that one tree, standing close to the garden wall, blossomed a week later than the rest. By autumn it was heavy with small, striped apples whose pink flesh tasted faintly of strawberries.\n\n{{41}}\n\nVarga's curiosity soon hardened into something closer to obsession. The written record was thin: a single nineteenth-century nursery catalogue and a few lines in an old parish magazine. The apple seemed to have vanished from the valley within a generation, and no one could say whether her tree was the genuine article or merely a distant cousin. If she wanted to be sure, she needed proof.\n\n{{42}}\n\nOne did, as it happens. A national fruit collection in Kent had kept a single Lantern Pippin alive since 1952, tucked away in a corner of its test garden. Varga posted a leaf from her tree and settled down to wait. The results arrived in March.\n\n{{43}}\n\nIdentity established, she faced a second problem. A single tree cannot feed a valley, and apple trees do not grow true from seed: plant a pip from a Lantern Pippin and the result will be something else entirely.\n\n{{44}}\n\nShe found the people she needed in the village itself. Two retired farmers, who had learnt the craft as boys, were persuaded to dust off their knives and teach a handful of volunteers. They were sceptical at first, but they agreed to try.\n\n{{45}}\n\nIt was the second attempt, with the young grafts kept in a heated shed until the weather turned, that worked. Today there are more than two hundred Lantern Pippins growing in gardens across the valley, and a local school has planted a row beside its playground.\n\n{{46}}",
+  "opcionesComunes": [
+   "Supermarkets, she notes, have since shown an interest in the fruit, but Varga is wary of selling to large retailers, who tend to insist on apples of identical size and colour.",
+   "Through all of this, the tree by the wall has barely changed. It is no longer the most productive in the orchard, but Varga prunes it herself every winter, 'out of respect', because every Lantern Pippin now growing in the valley descends from it.",
+   "The only way to multiply them is grafting, which involves joining a cutting of the original tree to a hardy rootstock. It is a delicate skill, and one that had almost died out along with the old apples themselves.",
+   "She took a few to the village shop, expecting a shrug. Instead, the owner, a man in his seventies, fell silent, then told her that the apple had a name, the Lantern Pippin, and that he had not seen one since he was a boy.",
+   "Their first attempt was a failure. Of the sixty cuttings they prepared, barely a dozen survived the frosts, and one of the farmers declared the whole business a waste of good rootstock.",
+   "They were unambiguous: the two trees were genetically identical. Varga read the email three times before she allowed herself to believe it.",
+   "That meant DNA. A specialist laboratory agreed to test a leaf, though its scientists warned that a match could only be made if a reference sample existed somewhere in the world."
+  ],
+  "items": [
+   {
+    "n": 41,
+    "tipo": "emparejar",
+    "pregunta": "Gap 41",
+    "correcta": 3,
+    "explicacion": "«She took a few» retoma las manzanas del párrafo anterior, y el nombre «Lantern Pippin» que da el tendero es el que se usa en el resto del artículo. Además explica la «obsession» posterior."
+   },
+   {
+    "n": 42,
+    "tipo": "emparejar",
+    "pregunta": "Gap 42",
+    "correcta": 6,
+    "explicacion": "«If she wanted to be sure, she needed proof» lleva a «That meant DNA». Y «a reference sample» enlaza con «One did, as it happens» en el párrafo siguiente."
+   },
+   {
+    "n": 43,
+    "tipo": "emparejar",
+    "pregunta": "Gap 43",
+    "correcta": 5,
+    "explicacion": "«The results arrived in March» se continúa con «They were unambiguous», donde «They» son los resultados. Luego «Identity established» confirma que la identidad quedó probada."
+   },
+   {
+    "n": 44,
+    "tipo": "emparejar",
+    "pregunta": "Gap 44",
+    "correcta": 2,
+    "explicacion": "El párrafo anterior dice que los manzanos no crecen igual desde la semilla; «The only way to multiply them is grafting» da la solución, y «the craft» y «the people she needed» del siguiente párrafo retoman el injerto."
+   },
+   {
+    "n": 45,
+    "tipo": "emparejar",
+    "pregunta": "Gap 45",
+    "correcta": 4,
+    "explicacion": "«They agreed to try» se continúa con «Their first attempt was a failure», y el párrafo siguiente empieza con «the second attempt», que solo tiene sentido después de un primer intento fallido."
+   },
+   {
+    "n": 46,
+    "tipo": "emparejar",
+    "pregunta": "Gap 46",
+    "correcta": 1,
+    "explicacion": "«The tree by the wall» cierra el artículo volviendo al árbol original del principio, y «descends from it» enlaza con los doscientos árboles del párrafo anterior. El párrafo A sobra: habla de supermercados, un tema que no aparece en el resto del texto."
+   }
+  ]
+ }
+]
