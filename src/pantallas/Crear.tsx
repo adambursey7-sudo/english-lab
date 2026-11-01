@@ -2,6 +2,8 @@ import { useMemo, useState } from 'react';
 import { NOMBRES_DESTREZA, etiquetaParte, type Destreza, type Ejercicio, type Examen } from '../banco/tipos';
 import { generarExamen, candidatos, recetaCompleta, type PedidoParte, type Receta } from '../motor/generador';
 import { leerMarca } from '../marca';
+import { LIMITE_DEMO_GUARDADOS } from '../motor/licencia';
+import { useLicencia } from '../motor/useLicencia';
 import { reglaPagina } from '../motor/paginas';
 import { bancoCompleto, leerPropios } from '../motor/propios';
 import { PAPELES_DE } from '../motor/cuadernillo';
@@ -50,6 +52,7 @@ export function Crear() {
   const [fecha, setFecha] = useState('');
   const [ahorro, setAhorro] = useState(false);
   const marca = leerMarca();
+  const { pro } = useLicencia();
   const [propiosPrimero, setPropiosPrimero] = useState(true);
   // Los ejercicios que escribió el profe se leen al abrir la pantalla (el editor es otra pantalla).
   const banco = useMemo(() => bancoCompleto(leerPropios()), []);
@@ -81,6 +84,7 @@ export function Crear() {
     escribirGuardados(lista);
   };
   const guardar = () => {
+    if (!pro && guardados.length >= LIMITE_DEMO_GUARDADOS) return setAviso(`En la versión de prueba se guardan ${LIMITE_DEMO_GUARDADOS} exámenes como máximo. Borra alguno o activa tu licencia.`);
     const g: Guardado = { id: nuevoId(), nombre: nombre.trim() || `Test ${semilla} · ${version}`, grupo: grupo.trim(), fecha: hoy(), receta, ids: generado.ids };
     cambiarGuardados([g, ...guardados]);
     setFijo(receta.evitar); // el examen en pantalla no cambia al apuntarse en el historial
@@ -122,14 +126,16 @@ export function Crear() {
   const alternar = (x: PedidoParte) => setQuitadas((q) => (q.includes(clave(x)) ? q.filter((c) => c !== clave(x)) : [...q, clave(x)]));
 
   return (
-    <div className={`imprimir crear ${verClave ? 'clave' : 'cuadernillo'}${ahorro ? ' ahorro' : ''}`}>
+    <div className={`imprimir crear ${verClave ? 'clave' : 'cuadernillo'}${ahorro ? ' ahorro' : ''}${pro ? '' : ' demo'}`}>
       <style>{reglaPagina(marca.nombre, `${generado.titulo} · ${generado.etiqueta ?? ''}`)}</style>
       <nav className="barra-pdf no-imprimir" aria-label="Crear examen">
         <a className="btn sec chico" href="#/">‹ Volver</a>
         <span className="barra-titulo">Crear examen</span>
+        {!pro && <a className="btn sec chico" href="#/licencia">Versión de prueba · activar licencia</a>}
         <button type="button" className="btn chico" onClick={() => window.print()} disabled={generado.papeles.length === 0}>Descargar en PDF</button>
       </nav>
 
+      {!pro && <div className="marca-agua" aria-hidden="true">DEMO</div>}
       <div className="crear-cuerpo">
         <aside className="crear-panel no-imprimir" aria-label="Opciones del examen">
           <h2>1. ¿Qué examen?</h2>

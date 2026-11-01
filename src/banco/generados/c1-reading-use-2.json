@@ -75,5 +75,84 @@
     "explicacion": "After a quantifier and preposition (\"many of whom\"), the relative pronoun must be \"whom\" for people."
    }
   ]
+ },
+ {
+  "id": "gen-c1-reading-use-2-mvxw6db40",
+  "examen": "c1",
+  "destreza": "reading-use",
+  "parte": 2,
+  "nombreParte": "Open cloze",
+  "titulo": "The quiet return of the village library",
+  "instrucciones": "For questions 9–16, read the text below and think of the word which best fits each gap. Use only one word in each gap.",
+  "minutos": 10,
+  "texto": "When the council announced plans to close the library in our village, few people were surprised. Visitors had been dwindling for years, and {{9}} the building was old and expensive to heat, it seemed an easy saving to make. What nobody had predicted, however, was the reaction of the residents, {{10}} organised a campaign within a matter of days.\n\nSo successful was the petition {{11}} the council agreed to delay its decision by six months. During that time, volunteers took over the running of the library, offering reading groups, homework clubs and even lessons in using computers. Not only {{12}} the number of visitors double, but people who had never borrowed a book before began to appear.\n\nOne retired teacher, {{13}} has helped out every Saturday since the campaign began, told me that she had never seen the place so lively. \"People come in for a book and end {{14}} staying for the whole afternoon,\" she said. Had the council gone ahead with its original plan, the village would {{15}} lost far more than a collection of books. It would have lost a place where neighbours meet, and that is something no one can easily put a price {{16}}.",
+  "items": [
+   {
+    "n": 9,
+    "tipo": "palabra",
+    "correctas": [
+     "since",
+     "as",
+     "because"
+    ],
+    "explicacion": "A conjunction giving the reason: the building was old and expensive to heat, so closing it seemed an easy saving. \"Since\", \"as\" and \"because\" all work."
+   },
+   {
+    "n": 10,
+    "tipo": "palabra",
+    "correctas": [
+     "who"
+    ],
+    "explicacion": "A non-defining relative pronoun referring to people (\"the residents, who organised...\")."
+   },
+   {
+    "n": 11,
+    "tipo": "palabra",
+    "correctas": [
+     "that"
+    ],
+    "explicacion": "\"So successful was the petition that...\" is the inversion with so + adjective, followed by a result clause with \"that\"."
+   },
+   {
+    "n": 12,
+    "tipo": "palabra",
+    "correctas": [
+     "did"
+    ],
+    "explicacion": "After \"Not only\" at the start of a clause, the auxiliary comes before the subject: \"Not only did the number of visitors double\"."
+   },
+   {
+    "n": 13,
+    "tipo": "palabra",
+    "correctas": [
+     "who"
+    ],
+    "explicacion": "Non-defining relative pronoun for a person: \"One retired teacher, who has helped out...\"."
+   },
+   {
+    "n": 14,
+    "tipo": "palabra",
+    "correctas": [
+     "up"
+    ],
+    "explicacion": "\"End up + -ing\" means to finally do something, often unplanned: \"end up staying\"."
+   },
+   {
+    "n": 15,
+    "tipo": "palabra",
+    "correctas": [
+     "have"
+    ],
+    "explicacion": "Third conditional: \"Had the council gone ahead..., the village would have lost...\"."
+   },
+   {
+    "n": 16,
+    "tipo": "palabra",
+    "correctas": [
+     "on"
+    ],
+    "explicacion": "\"Put a price on something\" is the fixed expression meaning to state its value in money."
+   }
+  ]
  }
 ]

@@ -162,7 +162,18 @@ export function promptEjercicio(g: GuiaParte, ejemplo: Ejercicio, tema?: string,
 export function extraerJson(respuesta: string): unknown {
   const sinValla = respuesta.replace(/```(?:json)?/gi, '');
   const ini = sinValla.indexOf('{');
-  const fin = sinValla.lastIndexOf('}');
-  if (ini < 0 || fin <= ini) throw new Error('La respuesta no trae ningún ejercicio.');
-  return JSON.parse(sinValla.slice(ini, fin + 1));
+  if (ini < 0) throw new Error('La respuesta no trae ningún ejercicio.');
+  // Se corta en la llave que cierra la primera (ignorando las de dentro de los textos), por si la IA añade comentarios después.
+  let profundidad = 0;
+  let enTexto = false;
+  for (let i = ini; i < sinValla.length; i++) {
+    const c = sinValla[i];
+    if (enTexto) {
+      if (c === '\\') i++;
+      else if (c === '"') enTexto = false;
+    } else if (c === '"') enTexto = true;
+    else if (c === '{') profundidad++;
+    else if (c === '}' && --profundidad === 0) return JSON.parse(sinValla.slice(ini, i + 1));
+  }
+  throw new Error('La respuesta no trae ningún ejercicio.');
 }

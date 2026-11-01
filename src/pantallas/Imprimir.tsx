@@ -1,5 +1,7 @@
 import { leerMarca, urlLogo } from '../marca';
 import { reglaPagina } from '../motor/paginas';
+import { useLicencia } from '../motor/useLicencia';
+import { ES_PRODUCTO } from '../marca';
 import { Fragment } from 'react';
 import type { Ejercicio, Item, ItemHablar, ItemRedaccion } from '../banco/tipos';
 import { NOMBRES_EXAMEN, TIPOS_EVALUABLES, etiquetaParte, type Examen } from '../banco/tipos';
@@ -21,6 +23,7 @@ interface Props {
  * `#/imprimir/<examen>/<n>/clave`; el PDF sale con «Descargar en PDF» (impresión del navegador) o con `scripts/pdf.ps1`.
  */
 export function Imprimir({ examen, numero, modo }: Props) {
+  const { pro } = useLicencia();
   const cuadernillo = montarCuadernillo(examen, numero);
   if (!cuadernillo) {
     return (
@@ -35,6 +38,7 @@ export function Imprimir({ examen, numero, modo }: Props) {
   }
   return (
     <div className={`imprimir ${modo}`}>
+      {ES_PRODUCTO && !pro && numero !== 1 && <div className="marca-agua" aria-hidden="true">DEMO</div>}
       {/* El tamaño de página solo se aplica mientras esta vista está montada: no afecta a imprimir otras pantallas. */}
       <style>{reglaPagina(leerMarca().nombre, cuadernillo.titulo)}</style>
       <Barra examen={examen} numero={numero} modo={modo} />

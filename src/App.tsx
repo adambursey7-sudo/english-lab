@@ -10,6 +10,7 @@ import { Perfiles } from './pantallas/Perfiles';
 import { Imprimir } from './pantallas/Imprimir';
 import { Crear } from './pantallas/Crear';
 import { Editor } from './pantallas/Editor';
+import { Licencia } from './pantallas/Licencia';
 import { PaginaAudio } from './pantallas/PaginaAudio';
 import type { Examen } from './banco/tipos';
 import { Intro } from './componentes/Intro';
@@ -23,11 +24,12 @@ type Estado =
   | { pantalla: 'resultado'; lista: Ejercicio[]; respuestas: Record<string, Respuestas> };
 
 /** Rutas por hash que viven fuera del flujo normal: el cuadernillo imprimible y la página de audio del QR. */
-type Ruta = { tipo: 'imprimir'; examen: Examen; numero: number; modo: 'cuadernillo' | 'clave' } | { tipo: 'audio'; examen: Examen; numero: number } | { tipo: 'mezcla'; ids: string[] } | { tipo: 'crear' } | { tipo: 'editor' };
+type Ruta = { tipo: 'imprimir'; examen: Examen; numero: number; modo: 'cuadernillo' | 'clave' } | { tipo: 'audio'; examen: Examen; numero: number } | { tipo: 'mezcla'; ids: string[] } | { tipo: 'crear' } | { tipo: 'editor' } | { tipo: 'licencia' };
 
 export function rutaDe(hash: string): Ruta | null {
   if (ES_PRODUCTO && /^#\/crear\/?$/.test(hash)) return { tipo: 'crear' };
   if (ES_PRODUCTO && /^#\/mis-ejercicios\/?$/.test(hash)) return { tipo: 'editor' };
+  if (ES_PRODUCTO && /^#\/licencia\/?$/.test(hash)) return { tipo: 'licencia' };
   const mezcla = /^#\/audio\/mezcla\/([\w.~-]{1,400})\/?$/.exec(hash);
   if (mezcla) return { tipo: 'mezcla', ids: mezcla[1].split('~') };
   const m = /^#\/(imprimir|audio)\/(c1|pau)\/(\d+)(\/clave)?\/?$/.exec(hash);
@@ -74,6 +76,7 @@ export function App() {
 
   if (ruta?.tipo === 'crear') return <Crear />;
   if (ruta?.tipo === 'editor') return <Editor />;
+  if (ruta?.tipo === 'licencia') return <Licencia />;
   if (ruta?.tipo === 'imprimir' && !cuadernilloAjeno) return <Imprimir examen={ruta.examen} numero={ruta.numero} modo={ruta.modo} />;
   if (ruta?.tipo === 'mezcla') return <PaginaAudio ids={ruta.ids} />;
   if (ruta?.tipo === 'audio') return <PaginaAudio examen={ruta.examen} numero={ruta.numero} />;

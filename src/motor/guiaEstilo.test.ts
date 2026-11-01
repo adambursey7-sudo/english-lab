@@ -26,6 +26,7 @@ describe('guía de estilo', () => {
 
   it('extrae el JSON aunque venga con vallas y texto', () => {
     expect(extraerJson('Here you go:\n```json\n{"a":1}\n```\nEnjoy')).toEqual({ a: 1 });
+    expect(extraerJson('{"a":"} llave en texto","b":{"c":2}} Nota: {sobra}')).toEqual({ a: '} llave en texto', b: { c: 2 } });
     expect(() => extraerJson('sin json')).toThrow();
   });
 });

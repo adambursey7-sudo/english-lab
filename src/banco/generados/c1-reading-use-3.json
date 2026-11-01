@@ -1,0 +1,87 @@
+[
+ {
+  "id": "gen-c1-reading-use-3-mvxw8hhz0",
+  "examen": "c1",
+  "destreza": "reading-use",
+  "parte": 3,
+  "nombreParte": "Word formation",
+  "titulo": "Keeping bees in the city",
+  "instrucciones": "For questions 17–24, read the text below. Use the word given in capitals at the end of some of the lines to form a word that fits in the gap in the same line.",
+  "minutos": 10,
+  "texto": "Keeping bees on a city rooftop might seem an {{17}} hobby, yet it has become remarkably popular in recent years. Many new keepers are surprised by the {{18}} of the insects, since they had expected them to be aggressive. In fact, a calm keeper wearing the right clothing is rarely stung. The {{19}} of urban hives has also benefited local gardens, because the bees pollinate flowers and vegetables across a wide area.\n\nThere are, of course, some problems to consider. Neighbours may worry that swarms could {{20}} passers-by, and a hive left {{21}} for several weeks can quickly become a nuisance. Veteran keepers therefore advise newcomers to join a local association, where they can learn from {{22}} members who have dealt with every kind of difficulty. The honey itself is often an {{23}} delight, as its flavour depends on which trees and plants happen to grow nearby. Many keepers are {{24}} proud of the result, and they happily give jars to friends as presents.",
+  "items": [
+   {
+    "n": 17,
+    "tipo": "palabra",
+    "raiz": "LIKELY",
+    "correctas": [
+     "unlikely"
+    ],
+    "explicacion": "Adjective with a negative prefix: \"an unlikely hobby\" is one you would not expect. The article \"an\" and the contrast with \"yet it has become popular\" confirm it."
+   },
+   {
+    "n": 18,
+    "tipo": "palabra",
+    "raiz": "GENTLE",
+    "correctas": [
+     "gentleness"
+    ],
+    "explicacion": "A noun is needed after \"the\" and before \"of the insects\": gentle + -ness = gentleness."
+   },
+   {
+    "n": 19,
+    "tipo": "palabra",
+    "raiz": "PRESENT",
+    "correctas": [
+     "presence"
+    ],
+    "explicacion": "Noun after \"The\", followed by \"of urban hives\". Note the change from -ent to -ence."
+   },
+   {
+    "n": 20,
+    "tipo": "palabra",
+    "raiz": "FRIGHT",
+    "correctas": [
+     "frighten"
+    ],
+    "explicacion": "A verb is needed after \"could\": fright + -en = frighten, meaning to make people afraid."
+   },
+   {
+    "n": 21,
+    "tipo": "palabra",
+    "raiz": "ATTEND",
+    "correctas": [
+     "unattended"
+    ],
+    "explicacion": "Adjective with a negative prefix after \"left\": \"left unattended\" means with nobody looking after it."
+   },
+   {
+    "n": 22,
+    "tipo": "palabra",
+    "raiz": "EXPERIENCE",
+    "correctas": [
+     "experienced"
+    ],
+    "explicacion": "Adjective before \"members\": experience + -d = experienced, meaning having a lot of practical knowledge."
+   },
+   {
+    "n": 23,
+    "tipo": "palabra",
+    "raiz": "PREDICT",
+    "correctas": [
+     "unpredictable"
+    ],
+    "explicacion": "Adjective with a negative prefix and suffix: un- + predict + -able. The flavour changes depending on what grows nearby, so it cannot be known in advance."
+   },
+   {
+    "n": 24,
+    "tipo": "palabra",
+    "raiz": "JUSTIFY",
+    "correctas": [
+     "justifiably"
+    ],
+    "explicacion": "An adverb modifies \"proud\": \"justifiably proud\" means they have good reason to be. Note that -y changes to -i before -ably."
+   }
+  ]
+ }
+]

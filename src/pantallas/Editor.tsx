@@ -1,7 +1,11 @@
 import { useMemo, useState } from 'react';
 import { BANCO } from '../banco';
+import { bancoCompleto } from '../motor/propios';
 import { etiquetaParte, type Ejercicio, type Examen } from '../banco/tipos';
 import { PAPELES_DE } from '../motor/cuadernillo';
+import { PARTES_GENERABLES } from '../motor/guiaEstilo';
+import { useLicencia } from '../motor/useLicencia';
+import { crearEjercicioIA, guardarClaveIA, leerClaveIA, llamarAnthropic } from '../motor/ia';
 import {
   ejercicioDesde, escribirFuentes, escribirPropios, exportarPropios, importarPropios, leerFuentes, leerPropios, nuevoIdPropio, problemas, type Fuente,
 } from '../motor/propios';
@@ -60,6 +64,14 @@ export function Editor() {
   const [editando, setEditando] = useState<string | null>(null);
   const [f, setF] = useState<Fuente>(() => vacia('huecos', 'c1', 'reading-use', 2));
   const [aviso, setAviso] = useState('');
+  const { pro } = useLicencia();
+  // Crear con IA: lo que devuelve la IA se ve en la vista previa y no se guarda hasta que el profe lo acepta.
+  const [clave, setClave] = useState(leerClaveIA);
+  const [claveParte, setClaveParte] = useState('c1/reading-use/2');
+  const [tema, setTema] = useState('');
+  const [pensando, setPensando] = useState(false);
+  const [deIA, setDeIA] = useState<Ejercicio | null>(null);
+  const [motivosIA, setMotivosIA] = useState<string[]>([]);
 
   const plantilla = PLANTILLAS.find((p) => p.id === f.plantilla) ?? PLANTILLAS[0];
   const sitios = useMemo(() => lugares(f.datos.examen), [f.datos.examen]);
@@ -79,6 +91,23 @@ export function Editor() {
     setFuentes(fs);
     escribirPropios(lista);
     escribirFuentes(fs);
+  };
+  const pedirIA = async () => {
+    const [examen, destreza, parte] = claveParte.split('/');
+    guardarClaveIA(clave.trim());
+    setPensando(true);
+    setMotivosIA([]);
+    setDeIA(null);
+    const r = await crearEjercicioIA({ examen: examen as Examen, destreza: destreza as Fuente['datos']['destreza'], parte: Number(parte), tema: tema.trim() || undefined }, bancoCompleto(propios), llamarAnthropic(clave.trim()));
+    setPensando(false);
+    if (r.ok) setDeIA(r.ejercicio);
+    else setMotivosIA(r.motivos);
+  };
+  const aceptarIA = () => {
+    if (!deIA) return;
+    persistir([deIA, ...propios], fuentes);
+    setAviso('Guardado en «Mis ejercicios». Revísalo antes de ponerlo en un examen.');
+    setDeIA(null);
   };
   const guardar = () => {
     const id = editando ?? nuevoIdPropio();
@@ -129,6 +158,27 @@ export function Editor() {
       </nav>
       <div className="crear-cuerpo">
         <aside className="crear-panel no-imprimir" aria-label="Formulario">
+          <h2>Crear con IA</h2>
+          <select className="campo-crear" aria-label="Qué parte crear" value={claveParte} onChange={(e) => setClaveParte(e.target.value)}>
+            {PARTES_GENERABLES.map((g) => {
+              const nombre = BANCO.find((e) => e.examen === g.examen && e.destreza === g.destreza && e.parte === g.parte)?.nombreParte ?? '';
+              return <option key={`${g.examen}/${g.destreza}/${g.parte}`} value={`${g.examen}/${g.destreza}/${g.parte}`}>{g.examen === 'c1' ? 'C1' : 'PAU'} · {etiquetaParte(g.examen, g.parte)} · {nombre}</option>;
+            })}
+          </select>
+          <input className="campo-crear" aria-label="Tema" placeholder="Tema (opcional)" maxLength={80} value={tema} onChange={(e) => setTema(e.target.value)} />
+          <input className="campo-crear" type="password" aria-label="Clave de Anthropic" placeholder="Tu clave de Anthropic (sk-ant-…)" autoComplete="off" value={clave} onChange={(e) => setClave(e.target.value)} />
+          <p className="silencio pequeno">La clave se queda solo en este navegador y la petición va directa a Anthropic, sin pasar por ningún servidor nuestro. El coste lo pone tu cuenta (unos céntimos por ejercicio).</p>
+          {!pro && <p className="silencio pequeno" role="status">Crear con IA es de la versión completa. <a href="#/licencia">Activar licencia</a></p>}
+          <button type="button" className="btn" onClick={() => void pedirIA()} disabled={!pro || pensando || clave.trim().length < 20}>{pensando ? 'Escribiendo el ejercicio…' : 'Crear ejercicio con IA'}</button>
+          {motivosIA.length > 0 && <ul className="silencio pequeno" role="alert" style={{ paddingLeft: 18 }}>{motivosIA.map((m) => <li key={m}>{m}</li>)}</ul>}
+          {deIA && (
+            <>
+              <p className="silencio pequeno" role="status">Listo: míralo a la derecha. La IA puede equivocarse; lee las preguntas y la clave antes de usarlo.</p>
+              <button type="button" className="btn" onClick={aceptarIA}>Guardar en Mis ejercicios</button>
+              <button type="button" className="btn sec" onClick={() => setDeIA(null)}>Descartar</button>
+            </>
+          )}
+
           <h2>{editando ? 'Editar ejercicio' : 'Nuevo ejercicio'}</h2>
           <div className="plantillas" role="group" aria-label="Tipo de ejercicio">
             {PLANTILLAS.map((p) => (
@@ -194,7 +244,7 @@ export function Editor() {
         </aside>
         <section className="crear-vista" aria-label="Vista previa">
           <main className="pagina">
-            {ejercicio.items.length === 0 && f.texto === '' ? <p className="silencio no-imprimir">Aquí verás cómo queda el ejercicio en el papel.</p> : <ParteImpresa e={ejercicio} />}
+            {deIA ? <ParteImpresa e={deIA} /> : ejercicio.items.length === 0 && f.texto === '' ? <p className="silencio no-imprimir">Aquí verás cómo queda el ejercicio en el papel.</p> : <ParteImpresa e={ejercicio} />}
           </main>
         </section>
       </div>

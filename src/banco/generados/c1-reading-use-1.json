@@ -1,0 +1,111 @@
+[
+ {
+  "id": "gen-c1-reading-use-1-mvxw57uk0",
+  "examen": "c1",
+  "destreza": "reading-use",
+  "parte": 1,
+  "nombreParte": "Multiple-choice cloze",
+  "titulo": "Bees on the rooftop",
+  "instrucciones": "For questions 1–8, read the text below and decide which answer (A, B, C or D) best fits each gap.",
+  "minutos": 10,
+  "texto": "Ten years ago, keeping bees in the middle of a city would have been {{1}} as a harmless eccentricity. Today, rooftop hives are a common sight above offices, hotels and even department stores. Urban beekeepers {{2}} that city bees often do better than their country cousins, which are exposed to pesticides and to vast fields that offer food for only a few weeks a year. Parks, gardens and tree-lined streets, by contrast, provide flowers from early spring until late autumn.\n\nThe hobby is not, however, without its difficulties. A new colony needs constant attention, and beginners frequently {{3}} the amount of time it takes. Some give up after a single season, having failed to {{4}} the colony against the cold or against disease. Those who persevere are rewarded not only with honey but with a deeper understanding of the natural world. One veteran beekeeper told me that she had come to {{5}} the changing seasons in a way she never had before. Meanwhile, experts warn that the sudden rise in hive numbers may {{6}} the supply of flowers, leaving wild pollinators with too little to eat. The authorities have so far been reluctant to {{7}} limits on the number of hives, but that may change if the trend continues. For the time being, the bees carry on regardless, {{8}} the city for nectar.",
+  "items": [
+   {
+    "n": 1,
+    "tipo": "opciones",
+    "opciones": [
+     "dismissed",
+     "overlooked",
+     "neglected",
+     "refused"
+    ],
+    "correcta": 0,
+    "explicacion": "\"Dismissed as\" significa descartar algo considerándolo poco importante. \"Overlooked\" y \"neglected\" no se construyen con \"as\" con este sentido, y \"refused\" no admite \"as\"."
+   },
+   {
+    "n": 2,
+    "tipo": "opciones",
+    "opciones": [
+     "maintain",
+     "remark",
+     "imagine",
+     "persuade"
+    ],
+    "correcta": 0,
+    "explicacion": "\"Maintain that\" = sostener que. \"Remark\" no va con \"that\" tras un sujeto así en este contexto de opinión sostenida, \"imagine\" es suponer y \"persuade\" necesita un objeto (persuade somebody)."
+   },
+   {
+    "n": 3,
+    "tipo": "opciones",
+    "opciones": [
+     "underestimate",
+     "undervalue",
+     "underline",
+     "undermine"
+    ],
+    "correcta": 0,
+    "explicacion": "\"Underestimate the amount of time\" = calcular por debajo. \"Undervalue\" se refiere al valor, \"underline\" es subrayar y \"undermine\" es socavar."
+   },
+   {
+    "n": 4,
+    "tipo": "opciones",
+    "opciones": [
+     "protect",
+     "defend",
+     "guard",
+     "shelter"
+    ],
+    "correcta": 0,
+    "explicacion": "\"Protect something against the cold/disease\" es la construcción natural. \"Defend\" y \"guard\" implican un ataque activo y se usan con \"from\"/\"against\" un enemigo; \"shelter\" se usa con \"from\" y no con \"against disease\"."
+   },
+   {
+    "n": 5,
+    "tipo": "opciones",
+    "opciones": [
+     "notice",
+     "observe",
+     "attend",
+     "regard"
+    ],
+    "correcta": 0,
+    "explicacion": "\"Come to notice\" = llegar a darse cuenta de algo. \"Observe\" no se usa con \"come to\" en este sentido, \"attend\" es asistir y \"regard\" necesita \"as\"."
+   },
+   {
+    "n": 6,
+    "tipo": "opciones",
+    "opciones": [
+     "outstrip",
+     "outgrow",
+     "outlast",
+     "outweigh"
+    ],
+    "correcta": 0,
+    "explicacion": "\"Outstrip the supply\" = superar, ir más deprisa que la oferta. \"Outgrow\" es quedarse pequeño, \"outlast\" es durar más que y \"outweigh\" se usa con ventajas y desventajas."
+   },
+   {
+    "n": 7,
+    "tipo": "opciones",
+    "opciones": [
+     "impose",
+     "enforce",
+     "oblige",
+     "insist"
+    ],
+    "correcta": 0,
+    "explicacion": "\"Impose limits\" = establecer límites. \"Enforce\" es hacer cumplir algo ya existente, \"oblige\" se usa con personas e \"insist\" necesita \"on\"."
+   },
+   {
+    "n": 8,
+    "tipo": "opciones",
+    "opciones": [
+     "scouring",
+     "scrubbing",
+     "scraping",
+     "scattering"
+    ],
+    "correcta": 0,
+    "explicacion": "\"Scour the city for\" = rastrear buscando. \"Scrub\" es fregar, \"scrape\" es raspar y \"scatter\" es esparcir; ninguno se combina con \"for nectar\"."
+   }
+  ]
+ }
+]
