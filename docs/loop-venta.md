@@ -154,6 +154,7 @@ decidir cuándo unir `loop/venta` a `master` y publicarlo; guardar la clave priv
 
 ## Estado
 - 1/11: loop preparado (rama `loop/venta`, copia `english-lab-t-venta`, este plan). Vuelta 1: 1a hecho (`docs/venta/mercado.md`). Siguiente: 1b.
+- 1/11: fuentes para el bloque 6 en `C:\dev\english-lab-fuentes\de-adam\` (fuera del repo): 3 exámenes PAU de Adam (junio 25 ciencias y HCCSS, reserva julio 26), de Cambridge el cuadernillo oficial de muestras 2015 (47 págs., 2 papers completos con claves), hojas oficiales de las partes 5, 6, 8 y Writing 1 y la guía de candidatos. Hay Reading, Writing y claves; Listening y Speaking solo en el cuadernillo de muestras.
 
 ## Registro de vueltas
 (una entrada por vuelta: Hecho / Comprobado / Falló / Capturas / Cómo probarlo)
