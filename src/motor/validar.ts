@@ -13,8 +13,10 @@ export function problemas(e: Ejercicio): string[] {
     for (const m of e.texto.matchAll(/\{\{(\d+)\}\}/g)) if (!ns.includes(Number(m[1]))) fallos.push(`El hueco ${m[1]} no tiene respuesta.`);
   }
   const comunes = e.opcionesComunes?.length ?? 0;
+  const TIPOS = ['opciones', 'emparejar', 'palabra', 'transformacion', 'verdaderoFalso', 'redaccion', 'hablar'];
   for (const i of e.items as Item[]) {
-    if (i.tipo === 'opciones') {
+    if (!TIPOS.includes(i.tipo)) fallos.push(`La pregunta ${i.n} es de un tipo desconocido.`);
+    else if (i.tipo === 'opciones') {
       if (i.opciones.length < 2) fallos.push(`La pregunta ${i.n} necesita al menos dos opciones.`);
       if (new Set(i.opciones.map((o) => o.trim().toLowerCase())).size !== i.opciones.length) fallos.push(`La pregunta ${i.n} tiene opciones repetidas.`);
       if (!Number.isInteger(i.correcta) || i.correcta < 0 || i.correcta >= i.opciones.length) fallos.push(`En la pregunta ${i.n} falta marcar la correcta con *.`);

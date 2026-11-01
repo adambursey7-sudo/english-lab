@@ -1,0 +1,29 @@
+[
+ {
+  "id": "gen-c1-writing-1-mvxwebvy0",
+  "examen": "c1",
+  "destreza": "writing",
+  "parte": 1,
+  "nombreParte": "Essay",
+  "instrucciones": "You must answer this question. Write your answer in 220–260 words in an appropriate style.",
+  "minutos": 45,
+  "items": [
+   {
+    "n": 1,
+    "tipo": "redaccion",
+    "tipoTexto": "essay",
+    "enunciado": "Your class has attended a talk on how cities can encourage people to leave their cars at home and travel in more sustainable ways. You have made the notes below:\n\nWays cities could encourage sustainable travel:\n• building safe cycle lanes\n• making public transport cheaper\n• charging drivers to enter the city centre\n\nSome opinions expressed in the talk:\n“Nobody will cycle if they feel they are risking their life.”\n“People only change their habits when it starts to cost them money.”\n“A bus that never turns up is no alternative at all.”\n\nWrite an essay for your tutor discussing two of the ways in your notes. You should explain which way would be more effective in encouraging sustainable travel, giving reasons in support of your answer.\n\nYou may, if you wish, make use of the opinions expressed in the talk, but you should use your own words as far as possible.",
+    "minPalabras": 220,
+    "maxPalabras": 260,
+    "modelo": "Traffic congestion and polluted air have become so familiar in many cities that it is tempting to regard them as unavoidable. Yet there are practical measures available, and I will consider two of them: building safe cycle lanes and charging drivers to enter the city centre.\n\nCycle lanes address a fear that keeps many people off their bikes. Few commuters would be willing to share a narrow road with heavy lorries, however much they might like the idea of cycling to work. Where protected lanes have been built, the number of cyclists has often risen sharply, and the health benefits are an added bonus. The difficulty is that such infrastructure takes years to complete and requires road space that drivers are reluctant to surrender, so progress tends to be slow and patchy.\n\nA congestion charge, by contrast, takes effect immediately. Once driving into the centre carries a price, many motorists begin to ask whether the journey is worth it, and those who stay at home reduce traffic for everybody else. Moreover, the revenue raised can be invested in better buses or cycle routes. Critics point out that the charge hits lower-income families hardest, particularly if they have no realistic alternative, which is why it must not be introduced in isolation.\n\nOn balance, I would argue that the charge is the more effective measure, provided the money it generates is spent visibly on improving the alternatives. Cycle lanes are admirable, but it is financial pressure that persuades most people to change long-established habits.",
+    "criterios": [
+     "Content: he hecho todo lo que pide la tarea (cada punto del enunciado) y quien lo lea queda bien informado.",
+     "Communicative Achievement: el registro es el adecuado para el lector (formal con el tutor o el director; cercano con un amigo) y sigo las convenciones del tipo de texto.",
+     "Organisation: párrafos claros con una idea cada uno, introducción y cierre, conectores variados (however, by contrast, moreover, provided that…).",
+     "Language: vocabulario preciso y variado, estructuras complejas (condicionales, pasivas, relativas, inversión) y pocos errores, ninguno que estorbe."
+    ],
+    "explicacion": "El modelo trata DOS de los tres puntos (cycle lanes y congestion charge), compara ventajas e inconvenientes de cada uno y dice claramente cuál es más eficaz y por qué. Registro formal: sin contracciones, con conectores (by contrast, moreover, provided that) y una conclusión que resume la postura."
+   }
+  ]
+ }
+]

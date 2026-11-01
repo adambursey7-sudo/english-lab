@@ -45,7 +45,7 @@ export function Aula() {
             <thead><tr><th align="left">Alumno</th><th align="left">Examen</th><th align="right">Aciertos</th><th align="right">Nota</th><th /></tr></thead>
             <tbody>
               {resumen.alumnos.map((a, i) => (
-                <tr key={`${a.alumno}${a.titulo}`} style={{ borderTop: '1px solid var(--line)' }}>
+                <tr key={`${i}-${a.alumno}-${a.titulo}`} style={{ borderTop: '1px solid var(--line)' }}>
                   <td>{a.alumno}</td><td>{a.titulo}</td><td align="right">{a.ok}/{a.total}</td><td align="right"><b>{a.porcentaje} %</b></td>
                   <td align="right"><button type="button" className="btn enlace" onClick={() => cambiar(entregas.filter((_, j) => j !== i))} aria-label={`Quitar a ${a.alumno}`}>✕</button></td>
                 </tr>
@@ -59,7 +59,7 @@ export function Aula() {
           <button type="button" className="btn sec chico" onClick={() => window.confirm('¿Vaciar la tabla de la clase?') && cambiar([])}>Vaciar la tabla</button>
         </>
       )}
-      <p className="silencio pequeno">Los resultados se guardan solo en este navegador.</p>
+      <p className="silencio pequeno">Los resultados se guardan solo en este navegador. Las notas las declara cada alumno: sirven para orientar, no como prueba.</p>
     </main>
   );
 }

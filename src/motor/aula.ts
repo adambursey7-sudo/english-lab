@@ -29,7 +29,7 @@ export function decodificarExamen(t: string): ExamenAula | null {
   try {
     const g = desdeBase64(t) as Record<string, unknown>;
     if (!g || g.v !== 1 || (g.examen !== 'c1' && g.examen !== 'pau') || !Array.isArray(g.ids)) return null;
-    const ids = g.ids.filter((i): i is string => typeof i === 'string' && /^[\w.-]{1,80}$/.test(i)).slice(0, 60);
+    const ids = [...new Set(g.ids.filter((i): i is string => typeof i === 'string' && /^[\w.-]{1,80}$/.test(i)))].slice(0, 60);
     if (ids.length === 0) return null;
     const marca = (g.marca ?? {}) as Record<string, unknown>;
     return {
@@ -82,7 +82,7 @@ export function decodificarEntrega(linea: string): Entrega | null {
     const partes = g.partes
       .filter((p): p is Record<string, unknown> => !!p && typeof p === 'object')
       .map((p) => ({ id: texto(p.id, 80), ok: Number(p.ok), total: Number(p.total) }))
-      .filter((p) => p.id && Number.isInteger(p.ok) && Number.isInteger(p.total) && p.total >= 0 && p.ok >= 0 && p.ok <= p.total)
+      .filter((p) => p.id && Number.isInteger(p.ok) && Number.isInteger(p.total) && p.total >= 0 && p.total <= 1000 && p.ok >= 0 && p.ok <= p.total)
       .slice(0, 60);
     if (partes.length === 0) return null;
     return {
@@ -100,13 +100,15 @@ export function decodificarEntrega(linea: string): Entrega | null {
 /** Pega varias entregas (una por línea): devuelve las válidas y cuántas líneas no se entendieron. */
 export function leerEntregas(pegado: string): { entregas: Entrega[]; ignoradas: number } {
   const lineas = pegado.split(/\s+/).filter(Boolean);
-  const entregas: Entrega[] = [];
+  const porClave = new Map<string, Entrega>();
   let ignoradas = 0;
   for (const l of lineas) {
     const e = decodificarEntrega(l);
-    if (e) entregas.push(e);
+    // Si el mismo alumno aparece dos veces con el mismo examen, vale la última.
+    if (e) porClave.set(`${e.alumno}|${e.titulo}`, e);
     else ignoradas++;
   }
+  const entregas = [...porClave.values()];
   return { entregas, ignoradas };
 }
 

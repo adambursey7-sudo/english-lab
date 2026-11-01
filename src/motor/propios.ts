@@ -83,7 +83,12 @@ export function propioValido(v: unknown): Ejercicio | null {
   const e = v as Ejercicio;
   if (typeof e.id !== 'string' || !esPropio(e.id) || (e.examen !== 'c1' && e.examen !== 'pau') || !Array.isArray(e.items)) return null;
   if (typeof e.instrucciones !== 'string' || typeof e.nombreParte !== 'string' || !Number.isInteger(e.parte) || typeof e.destreza !== 'string') return null;
-  return problemas(e).length === 0 ? e : null;
+  if (e.audio || e.items.some((i) => typeof i !== 'object' || i === null)) return null;
+  try {
+    return problemas(e).length === 0 ? e : null;
+  } catch {
+    return null;
+  }
 }
 
 export function leerPropios(): Ejercicio[] {

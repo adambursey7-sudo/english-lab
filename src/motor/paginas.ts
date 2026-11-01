@@ -3,7 +3,7 @@
 
 /** Texto seguro para dentro de un string CSS entre comillas dobles. */
 export function cssTexto(t: string): string {
-  return t.replace(/[\\"]/g, '\\$&').replace(/[\r\n]+/g, ' ').slice(0, 120);
+  return t.slice(0, 120).replace(/[\\"]/g, '\\$&').replace(/[\r\n]+/g, ' ');
 }
 
 export function reglaPagina(academia: string, titulo: string): string {

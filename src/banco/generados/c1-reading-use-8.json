@@ -1,0 +1,112 @@
+[
+ {
+  "id": "gen-c1-reading-use-8-mvxwdrah0",
+  "examen": "c1",
+  "destreza": "reading-use",
+  "parte": 8,
+  "nombreParte": "Multiple matching",
+  "titulo": "Why I took up a new sport in midlife",
+  "instrucciones": "You are going to read an article in which four people describe taking up a new sport after the age of forty. For questions 47–56, choose from the people (A–D). The people may be chosen more than once.",
+  "minutos": 15,
+  "secciones": [
+   {
+    "letra": "A",
+    "titulo": "Marta",
+    "texto": "I took up rowing at forty-three, mostly because a colleague bet me I would not last a month. I am stubborn, so I turned up at the boathouse at half past five on a freezing Tuesday and nearly fell in before we had even left the jetty. The technique is fiendishly hard to master: you are told a hundred things at once, and the moment you fix your arms, your legs go wrong. What kept me coming back was the crew. Eight of us moving in time leaves no room for showing off, and I found that oddly restful after twenty years of managing a team that wanted me to have all the answers. I have never been the fastest, and I no longer mind. Last spring we came third in a regional race, and I cried like a child. I would never have predicted any of it."
+   },
+   {
+    "letra": "B",
+    "titulo": "Henrik",
+    "texto": "My doctor was the one who pushed me into it. My blood pressure was high, my back hurt, and he said, with a straight face, that I needed to do something other than sit. Swimming bored me and the gym made me feel like a spectator at my own life, so I tried climbing, mainly because a neighbour offered to lend me his shoes. The first wall I attempted defeated me completely, and I was embarrassed to find that a ten-year-old had to show me where to put my feet. Gradually, though, I started to see routes as puzzles rather than as tests of strength, and that changed everything. I am now lighter, calmer and, I am told, easier to live with. What I have not managed is to persuade my wife to join me; she says watching me hang from a ceiling is quite enough for her."
+   },
+   {
+    "letra": "C",
+    "titulo": "Dolores",
+    "texto": "Golf, of all things, and I can hardly believe it myself. I had always dismissed it as a game for retired men in awful trousers. Then my father, who played for fifty years, became too frail to go out, and I started taking his clubs round the course in order to describe it to him afterwards. Somewhere along the way I began to hit the ball properly. I now play on my own most mornings, early, when the course is empty and the grass is still wet. Nobody is keeping score except me, and that suits me perfectly. I used to think sport meant competing, and winning mattered more than anything. Golf has taught me that a long walk, a bit of concentration and a clean shot can be reward enough. My father still asks me for a full report every Sunday."
+   },
+   {
+    "letra": "D",
+    "titulo": "Tariq",
+    "texto": "I started surfing in my late forties after a holiday in Portugal, where I spent a week watching people do it and felt absurdly envious. Back home, I booked lessons at the nearest beach, which is cold, grey and entirely unglamorous. Within a fortnight I had swallowed more seawater than I care to remember. The hardest part was learning to wait; you can spend an hour bobbing about and catch nothing, and I am not a patient man. Yet that waiting has become my favourite part, a stretch of time when no phone can reach me. I do not take surfing seriously, and I get far more out of it than I did from the marathon I trained for years ago. My only regret is not having started in my twenties, when I would have recovered faster from the falls."
+   }
+  ],
+  "opcionesComunes": [
+   "Marta",
+   "Henrik",
+   "Dolores",
+   "Tariq"
+  ],
+  "items": [
+   {
+    "n": 47,
+    "tipo": "emparejar",
+    "pregunta": "Which person began the sport because of a challenge from someone else?",
+    "correcta": 0,
+    "explicacion": "Marta: «a colleague bet me I would not last a month»."
+   },
+   {
+    "n": 48,
+    "tipo": "emparejar",
+    "pregunta": "Which person was advised to start by a health professional?",
+    "correcta": 1,
+    "explicacion": "Henrik: «My doctor was the one who pushed me into it»."
+   },
+   {
+    "n": 49,
+    "tipo": "emparejar",
+    "pregunta": "Which person found the teamwork a relief from professional pressure?",
+    "correcta": 0,
+    "explicacion": "Marta: «found that oddly restful after twenty years of managing a team that wanted me to have all the answers»."
+   },
+   {
+    "n": 50,
+    "tipo": "emparejar",
+    "pregunta": "Which person was helped by a much younger individual?",
+    "correcta": 1,
+    "explicacion": "Henrik: «a ten-year-old had to show me where to put my feet»."
+   },
+   {
+    "n": 51,
+    "tipo": "emparejar",
+    "pregunta": "Which person started playing in order to stay close to a family member?",
+    "correcta": 2,
+    "explicacion": "Dolores: «taking his clubs round the course in order to describe it to him afterwards»."
+   },
+   {
+    "n": 52,
+    "tipo": "emparejar",
+    "pregunta": "Which person has changed their view of what sport is for?",
+    "correcta": 2,
+    "explicacion": "Dolores: «I used to think sport meant competing… Golf has taught me that a long walk… can be reward enough»."
+   },
+   {
+    "n": 53,
+    "tipo": "emparejar",
+    "pregunta": "Which person values the chance to be out of contact with others?",
+    "correcta": 3,
+    "explicacion": "Tariq: «a stretch of time when no phone can reach me»."
+   },
+   {
+    "n": 54,
+    "tipo": "emparejar",
+    "pregunta": "Which person finds patience the greatest difficulty?",
+    "correcta": 3,
+    "explicacion": "Tariq: «The hardest part was learning to wait… I am not a patient man»."
+   },
+   {
+    "n": 55,
+    "tipo": "emparejar",
+    "pregunta": "Which person has been unable to get a partner to take part?",
+    "correcta": 1,
+    "explicacion": "Henrik: «I have not managed to persuade my wife to join me»."
+   },
+   {
+    "n": 56,
+    "tipo": "emparejar",
+    "pregunta": "Which person was emotionally moved by a result they never expected to achieve?",
+    "correcta": 0,
+    "explicacion": "Marta: «we came third in a regional race, and I cried like a child»."
+   }
+  ]
+ }
+]

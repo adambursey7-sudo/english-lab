@@ -65,7 +65,7 @@ export function Hacer({ payload }: { payload: string }) {
     v: 1,
     alumno: alumno.trim(),
     titulo: examen.titulo,
-    fecha: new Date().toISOString().slice(0, 10),
+    fecha: new Date().toLocaleDateString('sv-SE'),
     partes: corregidos.filter((c) => c.total > 0).map((c) => ({ id: c.ejercicio.id, ok: c.aciertos, total: c.total })),
   };
   const ok = entrega.partes.reduce((n, p) => n + p.ok, 0);
