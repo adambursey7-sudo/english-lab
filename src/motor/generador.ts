@@ -1,5 +1,6 @@
 import { BANCO } from '../banco';
 import { ORDEN_DESTREZAS, TIPOS_EVALUABLES, type Destreza, type Ejercicio, type Examen, type Item } from '../banco/tipos';
+import { esPropio } from './propios';
 import { PAPELES_DE, TITULO_EXAMEN, type Cuadernillo, type Papel } from './cuadernillo';
 
 /** Qué se pide de una parte: cuántos ejercicios de esa parte entran en el examen. */
@@ -20,6 +21,8 @@ export interface Receta {
   evitar: string[];
   /** Solo ejercicios que la app corrige sola (sin writing ni speaking). */
   soloAutomaticos: boolean;
+  /** Poner antes los ejercicios que escribió el profe que los del banco. */
+  propiosPrimero?: boolean;
 }
 
 export interface ExamenGenerado extends Cuadernillo {
@@ -80,6 +83,7 @@ export function generarExamen(receta: Receta, banco: Ejercicio[] = BANCO): Exame
     const todos = candidatos(receta, p, banco);
     // Primero los que no se han usado con este grupo; si no bastan, se completa con los ya usados.
     const nuevos = barajar(todos.filter((e) => !usados.has(e.id)), rnd);
+    if (receta.propiosPrimero) nuevos.sort((a, b) => Number(esPropio(b.id)) - Number(esPropio(a.id)));
     const repetidos = barajar(todos.filter((e) => usados.has(e.id)), rnd);
     const tomados = [...nuevos, ...repetidos].slice(0, p.cuantos);
     if (tomados.length < p.cuantos) faltan.push({ ...p, cuantos: p.cuantos - tomados.length });

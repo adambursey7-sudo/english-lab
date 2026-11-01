@@ -163,7 +163,7 @@ function PapelImpreso({ c, papel, indice, audio }: { c: Cuadernillo; papel: Pape
   );
 }
 
-function ParteImpresa({ e }: { e: Ejercicio }) {
+export function ParteImpresa({ e }: { e: Ejercicio }) {
   const conLetra = (it: Item | undefined) => it?.tipo === 'opciones' || it?.tipo === 'emparejar';
   const conOpcionesLargas = e.opcionesComunes && e.opcionesComunes.some((o) => o.length > 24);
   return (

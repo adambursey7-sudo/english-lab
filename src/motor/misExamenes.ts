@@ -33,6 +33,7 @@ function recetaValida(r: unknown): Receta | null {
     version: g.version === 'B' ? 'B' : 'A',
     evitar: lista(g.evitar, 2000),
     soloAutomaticos: g.soloAutomaticos === true,
+    ...(g.propiosPrimero === true ? { propiosPrimero: true } : {}),
   };
 }
 

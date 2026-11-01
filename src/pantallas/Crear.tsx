@@ -1,10 +1,11 @@
 import { useMemo, useState } from 'react';
-import { partesDe } from '../banco';
-import { NOMBRES_DESTREZA, etiquetaParte, type Destreza, type Examen } from '../banco/tipos';
+import { NOMBRES_DESTREZA, etiquetaParte, type Destreza, type Ejercicio, type Examen } from '../banco/tipos';
 import { generarExamen, candidatos, recetaCompleta, type PedidoParte, type Receta } from '../motor/generador';
 import { leerMarca } from '../marca';
 import { reglaPagina } from '../motor/paginas';
+import { bancoCompleto, leerPropios } from '../motor/propios';
 import { PAPELES_DE } from '../motor/cuadernillo';
+import { esPropio } from '../motor/propios';
 import { escribirGuardados, exportar, fusionar, gruposDe, hoy, importar, leerGuardados, nuevoId, usadosDe, type Guardado } from '../motor/misExamenes';
 import { ClaveProfe, CuadernilloAlumno } from './Imprimir';
 import './imprimir.css';
@@ -25,8 +26,8 @@ const PLANTILLAS: Record<Examen, Plantilla[]> = {
   ],
 };
 
-function recetaDe(examen: Examen, plantilla: Plantilla, semilla: number): Receta {
-  const base = recetaCompleta(examen, semilla);
+function recetaDe(examen: Examen, plantilla: Plantilla, semilla: number, banco: Ejercicio[]): Receta {
+  const base = recetaCompleta(examen, semilla, banco);
   const partes = plantilla.destrezas === 'todas' ? base.partes : base.partes.filter((p) => (plantilla.destrezas as Destreza[]).includes(p.destreza));
   return { ...base, partes, soloAutomaticos: plantilla.soloAutomaticos };
 }
@@ -49,15 +50,19 @@ export function Crear() {
   const [fecha, setFecha] = useState('');
   const [ahorro, setAhorro] = useState(false);
   const marca = leerMarca();
+  const [propiosPrimero, setPropiosPrimero] = useState(true);
+  // Los ejercicios que escribió el profe se leen al abrir la pantalla (el editor es otra pantalla).
+  const banco = useMemo(() => bancoCompleto(leerPropios()), []);
+  const hayPropios = banco.some((e) => esPropio(e.id));
   // Al abrir un examen guardado se respeta lo que evitó entonces (si no, su propio historial lo cambiaría).
   const [fijo, setFijo] = useState<string[] | null>(null);
 
   const p = PLANTILLAS[examen].find((x) => x.id === plantilla) ?? PLANTILLAS[examen][0];
-  const base = useMemo(() => recetaDe(examen, p, semilla), [examen, p, semilla]);
+  const base = useMemo(() => recetaDe(examen, p, semilla, banco), [examen, p, semilla, banco]);
   const clave = (x: PedidoParte) => `${x.destreza}/${x.parte}`;
   const usados = useMemo(() => fijo ?? (evitarUsados ? usadosDe(grupo, guardados) : []), [fijo, evitarUsados, grupo, guardados]);
-  const receta: Receta = { ...base, version, evitar: usados, partes: base.partes.filter((x) => !quitadas.includes(clave(x))) };
-  const generado = useMemo(() => generarExamen(receta), [examen, plantilla, semilla, version, quitadas.join('|'), usados]); // eslint-disable-line react-hooks/exhaustive-deps
+  const receta: Receta = { ...base, version, evitar: usados, propiosPrimero: hayPropios && propiosPrimero, partes: base.partes.filter((x) => !quitadas.includes(clave(x))) };
+  const generado = useMemo(() => generarExamen(receta, banco), [examen, plantilla, semilla, version, quitadas.join('|'), usados, propiosPrimero, banco]); // eslint-disable-line react-hooks/exhaustive-deps
   const conDatos = { ...generado, grupo: grupo.trim() || undefined, fechaExamen: fecha || undefined };
   const minutos = generado.papeles.reduce((n, x) => n + x.minutos, 0);
   const preguntas = generado.papeles.reduce((n, x) => n + x.preguntas, 0);
@@ -83,7 +88,7 @@ export function Crear() {
     setAviso(`Guardado en «Mis exámenes»${g.grupo ? ` para ${g.grupo}` : ''}.`);
   };
   const abrir = (g: Guardado) => {
-    const completa = recetaDe(g.receta.examen, PLANTILLAS[g.receta.examen].find((x) => x.soloAutomaticos === g.receta.soloAutomaticos) ?? PLANTILLAS[g.receta.examen][0], g.receta.semilla);
+    const completa = recetaDe(g.receta.examen, PLANTILLAS[g.receta.examen].find((x) => x.soloAutomaticos === g.receta.soloAutomaticos) ?? PLANTILLAS[g.receta.examen][0], g.receta.semilla, banco);
     setExamen(g.receta.examen);
     setPlantilla(g.receta.soloAutomaticos ? 'auto' : 'completo');
     setSemilla(g.receta.semilla);
@@ -92,6 +97,7 @@ export function Crear() {
     setGrupo(g.grupo);
     setEvitarUsados(g.receta.evitar.length > 0);
     setFijo(g.receta.evitar);
+    setPropiosPrimero(g.receta.propiosPrimero === true);
     setAviso(`Abierto «${g.nombre}».`);
   };
   const duplicar = (g: Guardado) => cambiarGuardados([{ ...g, id: nuevoId(), nombre: `${g.nombre} (copia)`, fecha: hoy() }, ...guardados]);
@@ -145,7 +151,7 @@ export function Crear() {
           <h2>3. Partes que entran</h2>
           <ul className="partes-lista">
             {base.partes.map((x) => {
-              const hay = candidatos(base, x).length;
+              const hay = candidatos(base, x, banco).length;
               const orden = PAPELES_DE[examen].find((q) => q.destreza === x.destreza);
               return (
                 <li key={clave(x)}>
@@ -153,7 +159,7 @@ export function Crear() {
                     <input type="checkbox" checked={!quitadas.includes(clave(x))} onChange={() => alternar(x)} />
                     <span>
                       {orden?.titulo ?? NOMBRES_DESTREZA[x.destreza]} · {etiquetaParte(examen, x.parte)}
-                      <small> {partesDe(examen, x.destreza).find((r) => r.parte === x.parte)?.nombreParte} ({hay} {hay === 1 ? 'ejercicio' : 'ejercicios'})</small>
+                      <small> {banco.find((r) => r.examen === examen && r.destreza === x.destreza && r.parte === x.parte)?.nombreParte} ({hay} {hay === 1 ? 'ejercicio' : 'ejercicios'})</small>
                     </span>
                   </label>
                 </li>
@@ -168,6 +174,8 @@ export function Crear() {
           </div>
           <p className="silencio pequeno">La B cambia el orden de las opciones en las preguntas de elegir, para repartir dos versiones en la misma clase.</p>
 
+          <a className="btn sec" href="#/mis-ejercicios" style={{ display: 'block', textAlign: 'center', textDecoration: 'none' }}>Escribir mis propios ejercicios</a>
+          {hayPropios && <label className="casilla"><input type="checkbox" checked={propiosPrimero} onChange={(e) => setPropiosPrimero(e.target.checked)} /> Usar primero mis ejercicios</label>}
           <button type="button" className="btn sec" onClick={() => { setSemilla(nuevaSemilla()); setFijo(null); }}>Generar otra mezcla</button>
           <p className="resumen-crear"><b>{preguntas}</b> preguntas · <b>{minutos}</b> min · {generado.papeles.length} {generado.papeles.length === 1 ? 'paper' : 'papers'}</p>
           {generado.faltan.length > 0 && <p className="silencio pequeno" role="status">En el banco no hay tantos ejercicios como pedías en alguna parte; se han puesto los que hay.</p>}
