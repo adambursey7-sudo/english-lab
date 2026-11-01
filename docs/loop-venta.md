@@ -153,8 +153,16 @@ Se rellena según avanza el loop. De partida: elegir el nombre definitivo del pr
 decidir cuándo unir `loop/venta` a `master` y publicarlo; guardar la clave privada de licencias en un sitio seguro.
 
 ## Estado
-- 1/11: loop preparado (rama `loop/venta`, copia `english-lab-t-venta`, este plan). Vuelta 1: 1a hecho (`docs/venta/mercado.md`). Siguiente: 1b.
+- 1/11: loop preparado (rama `loop/venta`, copia `english-lab-t-venta`, este plan). Vuelta 1: 1a hecho (`docs/venta/mercado.md`). Vuelta 2: 1b hecho (auditoría y tres formas de pantalla; elegida B con plantillas de C, por defecto). **Bloque 1 cerrado.** Siguiente: 2a.
 - 1/11: fuentes para el bloque 6 en `C:\dev\english-lab-fuentes\de-adam\` (fuera del repo): 3 exámenes PAU de Adam (junio 25 ciencias y HCCSS, reserva julio 26), de Cambridge el cuadernillo oficial de muestras 2015 (47 págs., 2 papers completos con claves), hojas oficiales de las partes 5, 6, 8 y Writing 1 y la guía de candidatos. Hay Reading, Writing y claves; Listening y Speaking solo en el cuadernillo de muestras.
 
 ## Registro de vueltas
 (una entrada por vuelta: Hecho / Comprobado / Falló / Capturas / Cómo probarlo)
+
+### Vuelta 2 · 1b. Auditoría de profe y pantalla principal
+- Hecho: capturas en PC (1366×768) de inicio y cuadernillo; lista de lo mejorable (columna estrecha en PC, solo exámenes
+  fijos, marca de Kate, PDF sin grupo/fecha/páginas/versión A/B, «Cambridge» como nombre, sin guardar ni repartir);
+  tres formas de pantalla (A asistente, B panel con vista previa, C plantillas) en `docs/loop-venta/bocetos/index.html`.
+- Decisión por defecto: B con atajos de C (Adam puede cambiarla en el bloque 3).
+- Comprobado: sin errores de página. Código sin tocar.
+- Cómo probarlo: abrir `bocetos/index.html`.
