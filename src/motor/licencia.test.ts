@@ -29,7 +29,8 @@ describe('licencias', () => {
     const [p, cuerpo, firma] = (await emitirLicencia(datos, par.privateKey)).split('.');
     const otro = base64url(new TextEncoder().encode(JSON.stringify({ ...datos, hasta: '2099-01-01' })));
     expect((await verificarLicencia(`${p}.${otro}.${firma}`, publica)).tipo).toBe('invalida');
-    expect((await verificarLicencia(`${p}.${cuerpo}.${firma.slice(0, -2)}AA`, publica)).tipo).toBe('invalida');
+    const otraFirma = `${firma[0] === "A" ? "B" : "A"}${firma.slice(1)}`;
+    expect((await verificarLicencia(`${p}.${cuerpo}.${otraFirma}`, publica)).tipo).toBe("invalida");
   });
 
   it('la firma de otra persona no vale con nuestra clave pública', async () => {
