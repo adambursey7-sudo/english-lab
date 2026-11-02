@@ -9,6 +9,10 @@ import { READING_USE_C1_2 } from './c1/reading-use-2';
 import { LISTENING_C1_2 } from './c1/listening-2';
 import { WRITING_C1_2 } from './c1/writing-2';
 import { SPEAKING_C1_2 } from './c1/speaking-2';
+import { READING_USE_C1_3 } from './c1/reading-use-3';
+import { LISTENING_C1_3 } from './c1/listening-3';
+import { WRITING_C1_3 } from './c1/writing-3';
+import { SPEAKING_C1_3 } from './c1/speaking-3';
 import { PAU_EXAMEN_2 } from './pau/examen-2';
 import { PAU_EXAMEN_3 } from './pau/examen-3';
 
@@ -21,6 +25,8 @@ export const BANCO: Ejercicio[] = [
   ...USE_OF_ENGLISH_C1, ...READING_C1, ...WRITING_C1, ...LISTENING_C1, ...SPEAKING_C1, ...PAU_EXAMEN_1,
   // Examen 2 (y 3 de la PAU)
   ...READING_USE_C1_2, ...WRITING_C1_2, ...LISTENING_C1_2, ...SPEAKING_C1_2, ...PAU_EXAMEN_2, ...PAU_EXAMEN_3,
+  // Examen 3 (C1)
+  ...READING_USE_C1_3, ...WRITING_C1_3, ...LISTENING_C1_3, ...SPEAKING_C1_3,
   // Generados
   ...GENERADOS,
 ];
