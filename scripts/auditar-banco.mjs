@@ -64,6 +64,8 @@ for (const e of BANCO) {
   // Claves
   const nombres = new Set();
   for (const i of e.items) {
+    if (/placeholder|bTODOb|lorem ipsum/i.test(JSON.stringify(i))) anota(e, 'ERROR', `pregunta ${i.n}: texto de relleno sin terminar`);
+    if (i.explicacion && i.explicacion.trim().length < 15) anota(e, 'AVISO', `pregunta ${i.n}: explicación demasiado corta`);
     if (!i.explicacion && ['opciones', 'emparejar', 'palabra', 'transformacion', 'verdaderoFalso'].includes(i.tipo)) anota(e, 'AVISO', `pregunta ${i.n} sin explicación`);
     if (i.tipo === 'opciones') {
       const k = `${e.examen} ${e.examenNumero}`;
