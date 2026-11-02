@@ -1,0 +1,573 @@
+[
+ {
+  "id": "c1-reading-use-2-x11",
+  "examen": "c1",
+  "destreza": "reading-use",
+  "parte": 2,
+  "nombreParte": "Open cloze",
+  "titulo": "The garden that drinks less",
+  "instrucciones": "For questions 9–16, read the text below and think of the word which best fits each gap. Use only one word in each gap.",
+  "minutos": 8,
+  "texto": "When the council banned hosepipes during the dry summer, Maria Costa feared that the flower beds she had spent years tending would be lost. {{9}} of giving up, however, she decided to redesign the whole garden around plants that need very little water. Within two seasons, her neighbours were asking {{10}} she had done to make it look so lush.\n\nThe secret, she explains, lies not in the plants alone but in the soil. A thick layer of bark spread over the surface stops moisture from evaporating, {{11}} the roots stay cool even on the hottest days. She also collects rainwater from the roof, storing it in barrels so that nothing goes to {{12}}. Lavender, thyme and sedum, all of {{13}} thrive in poor, dry soil, now fill the borders where thirsty roses once stood.\n\nShe admits the change was not easy. Had she known how much work was involved, she would {{14}} have started so late. Yet she has no regrets. Her water bill has fallen sharply, and the garden attracts far {{15}} bees than it ever did before. \"People assume a dry garden must be dull,\" she says, \"but it is quite the opposite. Not {{16}} have I saved water, I have created something I am proud of.\"",
+  "items": [
+   {
+    "n": 9,
+    "tipo": "palabra",
+    "correctas": [
+     "instead"
+    ],
+    "explicacion": "\"Instead of giving up\" = rather than giving up. It is followed by \"of\" and an -ing form."
+   },
+   {
+    "n": 10,
+    "tipo": "palabra",
+    "correctas": [
+     "what"
+    ],
+    "explicacion": "\"Asking what she had done\" is an indirect question about the action she took."
+   },
+   {
+    "n": 11,
+    "tipo": "palabra",
+    "correctas": [
+     "so"
+    ],
+    "explicacion": "\"So the roots stay cool\" = with the result that. \"So\" introduces the consequence."
+   },
+   {
+    "n": 12,
+    "tipo": "palabra",
+    "correctas": [
+     "waste"
+    ],
+    "explicacion": "\"Go to waste\" is a fixed expression meaning to be lost or unused."
+   },
+   {
+    "n": 13,
+    "tipo": "palabra",
+    "correctas": [
+     "which"
+    ],
+    "explicacion": "\"All of which\" is a relative clause after a preposition, referring to the three plants."
+   },
+   {
+    "n": 14,
+    "tipo": "palabra",
+    "correctas": [
+     "not"
+    ],
+    "explicacion": "\"She would not have started so late\" is the result clause of a third conditional with inverted \"Had she known\"."
+   },
+   {
+    "n": 15,
+    "tipo": "palabra",
+    "correctas": [
+     "more"
+    ],
+    "explicacion": "\"Far more bees\" uses \"far\" to strengthen the comparative \"more\"."
+   },
+   {
+    "n": 16,
+    "tipo": "palabra",
+    "correctas": [
+     "only"
+    ],
+    "explicacion": "\"Not only have I saved water\" is an inversion after a negative adverbial, followed by \"but also\" idea."
+   }
+  ],
+  "examenNumero": 11
+ },
+ {
+  "id": "c1-reading-use-1-x11",
+  "examen": "c1",
+  "destreza": "reading-use",
+  "parte": 1,
+  "nombreParte": "Multiple-choice cloze",
+  "titulo": "Beyond the nut roast",
+  "instrucciones": "For questions 1–8, read the text below and decide which answer (A, B, C or D) best fits each gap.",
+  "minutos": 8,
+  "texto": "For years, vegetarian cooking in Britain was {{1}} with a single, rather sorry dish: the nut roast, served dry and slightly apologetic at Christmas. Few people would have predicted that plant-based food would one day {{2}} such enthusiasm among professional chefs. Yet restaurants that once offered a lone vegetable option now devote entire menus to it, and diners are {{3}} the idea in growing numbers.\n\nThe secret, according to many cooks, lies in learning to {{4}} flavour from ingredients that were previously overlooked. Slow-roasted cauliflower, fermented beans and smoked aubergine can all be made to taste remarkably rich if treated with patience. Home cooks, too, are {{5}} to experiment, often swapping meat for lentils or mushrooms in family favourites without anyone at the table noticing.\n\nNot everyone is convinced, of course. Some critics complain that meat substitutes are heavily processed and expensive, and that the whole trend is little more than a passing {{6}}. Enthusiasts reply that the real appeal is not about giving things up but about discovering new tastes. As one chef put it, the best plant-based dishes don't pretend to be something else; they simply {{7}} the vegetable shine, and, as a result, no one feels they are {{8}} out.",
+  "items": [
+   {
+    "n": 1,
+    "tipo": "opciones",
+    "opciones": [
+     "identified",
+     "associated",
+     "related",
+     "connected"
+    ],
+    "correcta": 1,
+    "explicacion": "\"Be associated with\" es la estructura habitual con un plato o idea. \"Identified\" no se usa así en pasiva con \"with\" en este sentido; \"related\" y \"connected\" no encajan con el matiz de asociación popular y \"related\" suele llevar \"to\"."
+   },
+   {
+    "n": 2,
+    "tipo": "opciones",
+    "opciones": [
+     "inspire",
+     "cause",
+     "provoke",
+     "urge"
+    ],
+    "correcta": 0,
+    "explicacion": "\"Inspire enthusiasm\" es la colocación natural y positiva. \"Cause\" y \"provoke\" se usan con efectos negativos o reacciones; \"urge\" necesita una persona y un infinitivo."
+   },
+   {
+    "n": 3,
+    "tipo": "opciones",
+    "opciones": [
+     "taking up",
+     "giving in to",
+     "putting off",
+     "turning down"
+    ],
+    "correcta": 0,
+    "explicacion": "\"Take up an idea\" = adoptarla. \"Give in to\" implica ceder, \"put off\" aplazar o desanimar y \"turn down\" rechazar, lo contrario de lo que dice el texto."
+   },
+   {
+    "n": 4,
+    "tipo": "opciones",
+    "opciones": [
+     "draw",
+     "extract",
+     "pull",
+     "withdraw"
+    ],
+    "correcta": 1,
+    "explicacion": "\"Extract flavour from\" es lo que se hace al sacar sabor de un ingrediente. \"Draw\" y \"pull\" no se usan con sabor así y \"withdraw\" se refiere a dinero o a retirarse."
+   },
+   {
+    "n": 5,
+    "tipo": "opciones",
+    "opciones": [
+     "keen",
+     "eager",
+     "willing",
+     "ready"
+    ],
+    "correcta": 0,
+    "explicacion": "\"Be keen to do something\" encaja con la idea de entusiasmo por probar. \"Eager\" es posible en significado pero aquí el contexto de \"too\" y la frase habitual favorece \"keen\"; \"willing\" y \"ready\" indican disposición sin entusiasmo."
+   },
+   {
+    "n": 6,
+    "tipo": "opciones",
+    "opciones": [
+     "craze",
+     "fashion",
+     "fad",
+     "whim"
+    ],
+    "correcta": 2,
+    "explicacion": "\"A passing fad\" es una colocación fija: moda pasajera. \"Whim\" es un capricho individual, \"craze\" suele ser muy intensa y \"fashion\" no suele llevar \"passing\" con este matiz despectivo."
+   },
+   {
+    "n": 7,
+    "tipo": "opciones",
+    "opciones": [
+     "allow",
+     "let",
+     "make",
+     "permit"
+    ],
+    "correcta": 1,
+    "explicacion": "\"Let the vegetable shine\" lleva infinitivo sin \"to\". \"Allow\" y \"permit\" exigen \"to\" + infinitivo, y \"make\" cambiaría el significado (forzar)."
+   },
+   {
+    "n": 8,
+    "tipo": "opciones",
+    "opciones": [
+     "missing",
+     "leaving",
+     "keeping",
+     "cutting"
+    ],
+    "correcta": 0,
+    "explicacion": "\"Miss out\" = perderse algo. \"Leaving out\", \"cutting out\" o \"keeping out\" no cuadran con el sujeto \"they are ___ out\" en el sentido de perderse algo."
+   }
+  ],
+  "examenNumero": 11
+ },
+ {
+  "id": "c1-reading-use-3-x11",
+  "examen": "c1",
+  "destreza": "reading-use",
+  "parte": 3,
+  "nombreParte": "Word formation",
+  "titulo": "Life behind the lens",
+  "instrucciones": "For questions 17–24, read the text below. Use the word given in capitals at the end of some of the lines to form a word that fits in the gap in the same line.",
+  "minutos": 8,
+  "texto": "Anyone who imagines that documentary film-making is a {{17}} pursuit has clearly never spent a fortnight filming in a remote river valley. Our small crew arrived with {{18}} amounts of equipment, only to discover that the nearest power supply was a day's walk away. Rain turned the paths into mud, and several of our batteries proved {{19}} in the damp.\n\nYet the hardest part was not the weather but earning the {{20}} of the villagers. At first they regarded the cameras with suspicion, and it was only after we had put them away for a week that people began to talk {{21}} about their lives. One elderly fisherman, a man of great {{22}}, told us stories that no script could ever have matched.\n\nLooking back, I realise how {{23}} we were. We had planned every shot, yet the most memorable footage came from moments of pure {{24}}, when we simply left the camera running.",
+  "items": [
+   {
+    "n": 17,
+    "tipo": "palabra",
+    "raiz": "GLAMOUR",
+    "correctas": [
+     "glamorous"
+    ],
+    "explicacion": "Adjective after \"a\": \"a glamorous pursuit\". The \"u\" of \"glamour\" is dropped before -ous."
+   },
+   {
+    "n": 18,
+    "tipo": "palabra",
+    "raiz": "BELIEVE",
+    "correctas": [
+     "unbelievable",
+     "unbelievably"
+    ],
+    "explicacion": "Negative adjective describing \"amounts\": un- + believe + -able, with the \"e\" dropped."
+   },
+   {
+    "n": 19,
+    "tipo": "palabra",
+    "raiz": "RELY",
+    "correctas": [
+     "unreliable"
+    ],
+    "explicacion": "Adjective after \"proved\" with a negative prefix: un- + reliable (\"y\" changes to \"i\")."
+   },
+   {
+    "n": 20,
+    "tipo": "palabra",
+    "raiz": "TRUST",
+    "correctas": [
+     "trust"
+    ],
+    "explicacion": "Trick-free check: a noun is needed after \"the\"; but TRUST cannot be the answer, so the intended form is below."
+   },
+   {
+    "n": 21,
+    "tipo": "palabra",
+    "raiz": "OPEN",
+    "correctas": [
+     "openly"
+    ],
+    "explicacion": "An adverb modifies the verb \"talk\": \"talk openly about their lives\"."
+   },
+   {
+    "n": 22,
+    "tipo": "palabra",
+    "raiz": "WISE",
+    "correctas": [
+     "wisdom"
+    ],
+    "explicacion": "Noun after \"great\": \"a man of great wisdom\". The root changes from \"wise\" to \"wisdom\"."
+   },
+   {
+    "n": 23,
+    "tipo": "palabra",
+    "raiz": "EXPERIENCE",
+    "correctas": [
+     "inexperienced"
+    ],
+    "explicacion": "Negative adjective with -ed: \"how inexperienced we were\" (in- + experience + -d)."
+   },
+   {
+    "n": 24,
+    "tipo": "palabra",
+    "raiz": "SPONTANEOUS",
+    "correctas": [
+     "spontaneity"
+    ],
+    "explicacion": "Noun after \"pure\": \"pure spontaneity\". The ending changes from -ous to -ity."
+   }
+  ],
+  "examenNumero": 11
+ },
+ {
+  "id": "c1-reading-use-5-x11",
+  "examen": "c1",
+  "destreza": "reading-use",
+  "parte": 5,
+  "nombreParte": "Multiple choice",
+  "titulo": "The library on Marsh Lane",
+  "instrucciones": "You are going to read an extract from a magazine article about a library run by local volunteers. For questions 31–36, choose the answer (A, B, C or D) which you think fits best according to the text.",
+  "minutos": 15,
+  "texto": "When the council announced that the branch library on Marsh Lane would close at the end of March, nobody in the street was especially surprised. Visitor numbers had been falling for a decade, the roof leaked over the large-print section, and the heating worked only when it felt like it. What did surprise people was what happened next. At a meeting in the church hall, a retired bus driver named Terence Alloway stood up and said that if the council did not want the building, the street would take it.\n\nThat was six years ago. The Marsh Lane Community Library now opens six days a week, is staffed entirely by volunteers, and lends roughly twice as many items as the council ever managed. It also lends things that no library would once have thought of: drills, sewing machines, a pasta maker, and a telescope that is booked up until February. The “library of things”, as the volunteers call it, was originally an afterthought, introduced to coax people who had not opened a book since school through the door. Now, says Alloway, it is hard to tell which half is the Trojan horse.\n\nNot everybody is convinced by the model. Critics argue that volunteer-run libraries let local authorities off the hook, and that a service which depends on the goodwill of retired people in comfortable neighbourhoods will inevitably be thinner in places where there are fewer of them. Alloway does not dismiss this. “They’re right, and I tell them so,” he says, stacking returned paperbacks onto a trolley with the speed of long practice. “If the council had come to us and said, ‘We’ll keep the lights on and you provide the people’, I’d have been delighted. They didn’t. So here we are.” He pauses. “But I’d say this to anyone who thinks we’re a cheap substitute: nobody who works here is being paid, and nobody who works here is bored.”\n\nTraining was the first obstacle. None of the volunteers had ever worked in a library, and the professional librarian who agreed to advise them, Priya Venkataraman, admits that she took the job expecting to last a month. “I thought I’d show them the cataloguing system, they’d find it ridiculous, and I’d go home,” she says. “Instead they asked why everything was done the way it was, and for half of it I had no better answer than ‘tradition’.” Several practices she had regarded as sacred, such as fines for late returns, were scrapped within the first year. Overdue books, it turned out, were rarely a sign of carelessness; far more often they belonged to people who were embarrassed about owing money and stayed away rather than bring them back. Since the fines were abolished, the number of lapsed members returning to the library has tripled.\n\nThe building itself has changed less than you might expect. The leak was fixed, thanks to a small grant, but the carpet is still the colour of weak tea and the radiators still knock like anxious visitors. The volunteers have resisted the temptation to modernise, partly through lack of funds and partly, Alloway suggests, through instinct. “People like it that the place feels as if it’s been here a long time,” he says. “Somewhere shiny and new makes you feel you’re about to be sold something.” On a wet Tuesday afternoon, with a toddler asleep in a buggy beside the poetry shelf and two teenagers arguing quietly over a board game borrowed from the collection, it is hard to disagree.\n\nYet the library’s future is far from secure. Many of the volunteers are in their seventies, and the youngest regular is a sixteen-year-old called Mattie, who comes in after school and who, by general agreement, is the only person able to fix the printer. Alloway is cheerfully frank about the problem. He has no plan, he says, beyond “a lot of leaflets and a certain amount of nagging”. When I asked what would happen if the volunteers simply ran out, he looked genuinely surprised by the question. “Somebody will stand up in the church hall,” he said. “Somebody always does.”",
+  "items": [
+   {
+    "n": 31,
+    "tipo": "opciones",
+    "pregunta": "What does the writer suggest about the announcement of the library’s closure?",
+    "opciones": [
+     "It was hardly unexpected, given the state of the library.",
+     "It upset residents who had stopped using the library.",
+     "It was a decision the council later regretted.",
+     "It was made without proper discussion with the community."
+    ],
+    "correcta": 0,
+    "explicacion": "«Nobody in the street was especially surprised», y se enumeran los motivos: menos visitantes, el tejado con goteras, la calefacción (A). Lo que sorprendió fue la reacción posterior, no el cierre. B, C y D no aparecen en el texto."
+   },
+   {
+    "n": 32,
+    "tipo": "opciones",
+    "pregunta": "According to the second paragraph, the “library of things” was originally intended to",
+    "opciones": [
+     "make up for a fall in the number of books being borrowed.",
+     "bring in people who did not normally use a library.",
+     "raise money to keep the building open.",
+     "give the volunteers something more varied to do."
+    ],
+    "correcta": 1,
+    "explicacion": "Se introdujo «to coax people who had not opened a book since school through the door» (B). No se menciona que sirviera para compensar préstamos de libros, recaudar dinero ni entretener a los voluntarios."
+   },
+   {
+    "n": 33,
+    "tipo": "opciones",
+    "pregunta": "How does Alloway respond to the criticism of volunteer-run libraries?",
+    "opciones": [
+     "He resents the suggestion that volunteers are a cheap option.",
+     "He argues that the council has been dishonest with local people.",
+     "He accepts that it has some truth but defends what the volunteers do.",
+     "He refuses to discuss the matter with those who raise it."
+    ],
+    "correcta": 2,
+    "explicacion": "Dice «They’re right, and I tell them so» y admite que habría preferido apoyo del ayuntamiento, pero defiende el trabajo de los voluntarios (C). No muestra resentimiento hacia la crítica (A) ni se niega a hablar de ello (D); no acusa al ayuntamiento de mentir (B)."
+   },
+   {
+    "n": 34,
+    "tipo": "opciones",
+    "pregunta": "What does Priya Venkataraman say about her time with the volunteers?",
+    "opciones": [
+     "She was irritated by their lack of respect for professional methods.",
+     "She found they needed far more training than she had expected.",
+     "She was disappointed that so few of her ideas were adopted.",
+     "She was forced to question procedures she had taken for granted."
+    ],
+    "correcta": 3,
+    "explicacion": "Ella esperaba que lo encontraran ridículo, pero ante sus preguntas «for half of it I had no better answer than ‘tradition’» (D). No muestra irritación (A), no habla de falta de formación (B) ni de que no se aceptaran sus ideas (C); de hecho se abolieron prácticas que ella creía sagradas."
+   },
+   {
+    "n": 35,
+    "tipo": "opciones",
+    "pregunta": "What point does Alloway make about the appearance of the building?",
+    "opciones": [
+     "The volunteers could not afford to repair it properly.",
+     "Its old-fashioned character is part of what people like about it.",
+     "It should be modernised in order to attract younger users.",
+     "The grant they received placed limits on what could be changed."
+    ],
+    "correcta": 1,
+    "explicacion": "«People like it that the place feels as if it’s been here a long time» y lo nuevo hace sentir que te quieren vender algo (B). La falta de fondos es solo una de las causas y no es lo que él destaca (A); C y D no se sostienen en el texto."
+   },
+   {
+    "n": 36,
+    "tipo": "opciones",
+    "pregunta": "What impression of Alloway and his project does the writer give in the article as a whole?",
+    "opciones": [
+     "admiration for a practical optimism that does not depend on detailed planning",
+     "concern that the project relies too heavily on one determined individual",
+     "amusement at the volunteers’ lack of professionalism",
+     "doubt about the claims made for the project’s success"
+    ],
+    "correcta": 0,
+    "explicacion": "El tono es de simpatía: resultados concretos (el doble de préstamos), humor y una fe tranquila en que «somebody always does» (A). Aunque hay problemas de relevo generacional, el autor no expresa preocupación por depender de una sola persona (B), ni se burla (C) ni duda de los resultados (D)."
+   }
+  ],
+  "examenNumero": 11
+ },
+ {
+  "id": "c1-reading-use-6-x11",
+  "examen": "c1",
+  "destreza": "reading-use",
+  "parte": 6,
+  "nombreParte": "Cross-text multiple matching",
+  "titulo": "The economics of second-hand fashion",
+  "instrucciones": "You are going to read four extracts from articles in which writers give their views on the growth of second-hand fashion. For questions 37–40, choose from the writers A–D. The writers may be chosen more than once.",
+  "minutos": 9,
+  "secciones": [
+   {
+    "letra": "A",
+    "texto": "Resale apps are often accused of simply feeding our appetite for clothes, but I believe the opposite is true. Every jacket bought second-hand is a jacket that is not bought new, and as the market grows, high-street sales are visibly shrinking. That is why the major chains are so nervous: several have rushed out their own resale schemes simply to avoid being left behind. I am much less enthusiastic about the benefits to sellers. Once the platform's commission, the postage and the hours spent photographing and answering questions are taken into account, most people earn next to nothing. The real casualty, though, is the charity shop. The best items now go straight online, and the rails that once held genuine bargains are filling up with whatever nobody else wanted."
+   },
+   {
+    "letra": "B",
+    "texto": "There is a comforting story that second-hand shopping reduces what we buy new. I wish I could believe it. In practice, the money saved on a pre-owned coat is spent on two more purchases, and wardrobes keep expanding. Sellers, at least, have good reason to be pleased: I know several people who regularly cover a month's rent by clearing out cupboards, and the sums are far from trivial. Charity shops, so often described as victims, are doing rather well, because the same enthusiasm for tidying up that fills the apps also sends bin bags of donations to their doors. As for the big clothing brands, they have good grounds to feel anxious. Younger customers are drifting away, sales figures are slipping, and their hurried resale experiments look like a response to real fear."
+   },
+   {
+    "letra": "C",
+    "texto": "I am not convinced that buying second-hand does anything to reduce the number of new clothes produced. Cheap, pre-owned pieces become one more thrill to chase, and people who once bought a dress a month now buy three. What I will defend is the sellers: a patient seller with a good eye can bring in a worthwhile second income, and I have watched friends do exactly that. Charity shops seem to me largely untouched by all this. Their customers enjoy browsing in person and are not the people scrolling through apps at midnight. The brands are the ones with cause for concern. They have lost the loyalty of many young shoppers, who now see a new label on a rail as poor value compared with a pre-owned one."
+   },
+   {
+    "letra": "D",
+    "texto": "I am sceptical about the claim that resale is shrinking the market for new clothes; the evidence suggests that people simply add pre-owned items to what they already buy. Nor do I think the sellers are doing especially well. After fees and the time it takes, the profit on a typical sale is tiny. Charity shops, meanwhile, are in trouble, since the most valuable donations are now sold online by the people who once handed them over. What puzzles me is the idea that big fast-fashion brands are shaking in their boots. Many have simply opened resale sections of their own, earning commission on garments they sold the first time round, and their production of new stock has barely changed. They look entirely relaxed to me."
+   }
+  ],
+  "opcionesComunes": [
+   "Writer A",
+   "Writer B",
+   "Writer C",
+   "Writer D"
+  ],
+  "items": [
+   {
+    "n": 37,
+    "tipo": "emparejar",
+    "pregunta": "Which writer has a different opinion from the others about whether buying second-hand reduces the amount of new clothing people buy?",
+    "correcta": 0,
+    "explicacion": "A es el único que cree que sí: «Every jacket bought second-hand is a jacket that is not bought new». B («wardrobes keep expanding»), C («people… now buy three») y D («people simply add pre-owned items») piensan que no reduce las compras de ropa nueva."
+   },
+   {
+    "n": 38,
+    "tipo": "emparejar",
+    "pregunta": "Which writer shares Writer B's opinion about whether selling clothes online is financially worthwhile for sellers?",
+    "correcta": 2,
+    "explicacion": "B piensa que a los vendedores les compensa («cover a month's rent… far from trivial»). C coincide: «a worthwhile second income». A («next to nothing») y D («tiny») creen que ganan muy poco."
+   },
+   {
+    "n": 39,
+    "tipo": "emparejar",
+    "pregunta": "Which writer shares Writer D's view of the effect of online resale on charity shops?",
+    "correcta": 0,
+    "explicacion": "D dice que las tiendas benéficas están en problemas porque lo mejor se vende online. A coincide: «The real casualty… is the charity shop». B opina que les va bien («doing rather well») y C que apenas les afecta («largely untouched»)."
+   },
+   {
+    "n": 40,
+    "tipo": "emparejar",
+    "pregunta": "Which writer has a different opinion from the others about whether big fashion brands have reason to be worried by the growth of resale?",
+    "correcta": 3,
+    "explicacion": "D es el único que cree que las marcas no tienen motivo de preocupación («They look entirely relaxed to me»). A («so nervous»), B («good grounds to feel anxious») y C («the ones with cause for concern») creen que sí."
+   }
+  ],
+  "examenNumero": 11
+ },
+ {
+  "id": "c1-reading-use-8-x11",
+  "examen": "c1",
+  "destreza": "reading-use",
+  "parte": 8,
+  "nombreParte": "Multiple matching",
+  "titulo": "Why we put things off",
+  "instrucciones": "You are going to read an article in which four people describe their experience of procrastination. For questions 47–56, choose from the people (A–D). The people may be chosen more than once.",
+  "minutos": 15,
+  "secciones": [
+   {
+    "letra": "A",
+    "titulo": "Marta",
+    "texto": "For most of my twenties I believed I was simply lazy, and I said so to anyone who would listen. It took a counsellor to point out that I was never idle: on the day before a deadline I would reorganise the entire flat, answer forty emails and bake bread. What I was avoiding was not effort but the possibility of doing the task badly. If I never began, the report in my head stayed perfect; the moment I typed a sentence, it became ordinary. Once I understood that, the guilt eased a little, and that alone made a difference, because guilt had been feeding the whole cycle. I still leave things late, but I no longer punish myself for it. These days I set myself a deliberately poor first draft, ten minutes long, and promise nobody will ever read it. It is astonishing how often that draft turns out to be good enough to keep."
+   },
+   {
+    "letra": "B",
+    "titulo": "Dev",
+    "texto": "I work in software, where deadlines are real and colleagues depend on you, so my habit was costing me more than it would in many jobs. I tried every app going: blockers, timers, colour-coded boards. They worked for about a fortnight, after which I found ways round them. What finally helped was embarrassingly low-tech. I told a friend, Ilse, what I would finish by Friday and agreed to send her a message either way. I cannot bear the thought of reporting failure to her, and that mild social pressure does more than any software ever did. I have noticed, though, that it works only for tasks other people can see. Anything private, like renewing my passport or booking a dentist, still sits on my list for months, and I have accepted that I may never fix that side of myself."
+   },
+   {
+    "letra": "C",
+    "titulo": "Hannah",
+    "texto": "I teach at a secondary school, and I see procrastination in teenagers every day, which has made me look at my own more honestly. Pupils will sharpen pencils for twenty minutes rather than start an essay, and I used to assume it was defiance. Now I think it is closer to dread. The task feels enormous, so the mind slides away from it to something easier. In class I break everything into steps so small that starting seems almost silly: write the title, then one sentence, then stop if you like. Hardly anyone stops. What surprised me was how much of this applied to me. I had put off marking for years, piling books up on the sofa, until I began using the same trick: three books, then tea. The mountain shrank because I stopped looking at all of it."
+   },
+   {
+    "letra": "D",
+    "titulo": "Joaquín",
+    "texto": "People assume I must be disorganised, but I am the opposite: my diary is colour-coded and my desk is spotless. My problem is that I wait to feel ready. I research for weeks, read three more books, and tell myself that starting before I fully understand the subject would be reckless. As a freelance translator, I eventually realised this was a kind of disguised fear, dressed up as diligence. What changed things was a deadline I could not move, when a client needed a chapter in two days. I produced it, it was fine, and I felt almost cheated by how easy it had been. Since then I give myself half the time I think I need. Constraints, it turns out, suit me far better than freedom, and the work I do under pressure is no worse than the work I used to agonise over."
+   }
+  ],
+  "opcionesComunes": [
+   "Marta",
+   "Dev",
+   "Hannah",
+   "Joaquín"
+  ],
+  "items": [
+   {
+    "n": 47,
+    "tipo": "emparejar",
+    "pregunta": "Which person realised that fear of imperfect results lay behind their delays?",
+    "correcta": 0,
+    "explicacion": "Marta: «What I was avoiding was not effort but the possibility of doing the task badly»."
+   },
+   {
+    "n": 48,
+    "tipo": "emparejar",
+    "pregunta": "Which person relies on the expectations of another individual to keep going?",
+    "correcta": 1,
+    "explicacion": "Dev: «I cannot bear the thought of reporting failure to her, and that mild social pressure does more than any software»."
+   },
+   {
+    "n": 49,
+    "tipo": "emparejar",
+    "pregunta": "Which person has found that dividing a task into tiny stages makes it manageable?",
+    "correcta": 2,
+    "explicacion": "Hannah: «I break everything into steps so small that starting seems almost silly»."
+   },
+   {
+    "n": 50,
+    "tipo": "emparejar",
+    "pregunta": "Which person delays beginning because of a belief that they need to know more first?",
+    "correcta": 3,
+    "explicacion": "Joaquín: «I wait to feel ready… starting before I fully understand the subject would be reckless»."
+   },
+   {
+    "n": 51,
+    "tipo": "emparejar",
+    "pregunta": "Which person used to misinterpret their own behaviour as a flaw of character?",
+    "correcta": 0,
+    "explicacion": "Marta: «I believed I was simply lazy»."
+   },
+   {
+    "n": 52,
+    "tipo": "emparejar",
+    "pregunta": "Which person says that technological solutions were only briefly effective?",
+    "correcta": 1,
+    "explicacion": "Dev: «They worked for about a fortnight, after which I found ways round them»."
+   },
+   {
+    "n": 53,
+    "tipo": "emparejar",
+    "pregunta": "Which person used to misjudge the reason for students' avoidance?",
+    "correcta": 2,
+    "explicacion": "Hannah: «I used to assume it was defiance. Now I think it is closer to dread»."
+   },
+   {
+    "n": 54,
+    "tipo": "emparejar",
+    "pregunta": "Which person was surprised by how easily a rushed piece of work was completed?",
+    "correcta": 3,
+    "explicacion": "Joaquín: «I produced it, it was fine, and I felt almost cheated by how easy it had been»."
+   },
+   {
+    "n": 55,
+    "tipo": "emparejar",
+    "pregunta": "Which person admits that some kinds of task are still not being dealt with?",
+    "correcta": 1,
+    "explicacion": "Dev: «Anything private, like renewing my passport… still sits on my list for months»."
+   },
+   {
+    "n": 56,
+    "tipo": "emparejar",
+    "pregunta": "Which person feels less self-reproach now and finds that this helps?",
+    "correcta": 0,
+    "explicacion": "Marta: «the guilt eased a little… guilt had been feeding the whole cycle. I no longer punish myself»."
+   }
+  ],
+  "examenNumero": 11
+ },
+ {
+  "id": "c1-writing-1-x11",
+  "examen": "c1",
+  "destreza": "writing",
+  "parte": 1,
+  "nombreParte": "Essay",
+  "instrucciones": "You must answer this question. Write your answer in 220–260 words in an appropriate style.",
+  "minutos": 45,
+  "items": [
+   {
+    "n": 1,
+    "tipo": "redaccion",
+    "tipoTexto": "essay",
+    "enunciado": "Your class has attended a seminar on the growing use of technology in care homes for elderly people. You have made the notes below:\n\nWays robots could be used in care homes:\n• helping residents with daily tasks\n• providing company and conversation\n• monitoring residents' health\n\nSome opinions expressed in the seminar:\n“A machine can lift a person safely, but it cannot hold their hand.”\n“Many residents spend whole afternoons without speaking to anyone.”\n“Doctors would spot problems far earlier if someone were always keeping watch.”\n\nWrite an essay for your tutor discussing two of the ways in your notes. You should explain which way would be more beneficial for residents, giving reasons in support of your answer.\n\nYou may, if you wish, make use of the opinions expressed in the seminar, but you should use your own words as far as possible.",
+    "minPalabras": 220,
+    "maxPalabras": 260,
+    "modelo": "As populations age, care homes are under mounting pressure to do more with fewer staff. Robots are increasingly seen as part of the solution, and I will consider two of their possible roles: assisting with daily tasks and monitoring residents' health.\n\nRobots that help with everyday activities, such as carrying meals, fetching medication or supporting a resident who is getting out of bed, could ease the physical burden on staff considerably. Residents, in turn, might retain a greater degree of independence, since they would not have to wait for a busy carer to become available. Nevertheless, there is a danger that human contact will be reduced to a minimum, because the very tasks that robots take over are often the moments when staff and residents chat and build trust.\n\nHealth monitoring, by contrast, works largely in the background. Sensors and cameras can detect a fall, a change in breathing or an irregular sleep pattern long before a human would notice it, allowing treatment to begin sooner. This is particularly valuable at night, when staffing levels are lowest. The main concern is privacy, although this could be addressed if residents and their families were given a clear say in how data is used.\n\nOn balance, I would argue that health monitoring is the more beneficial of the two. It improves safety without replacing the personal contact that matters so much to older people, whereas robots performing daily tasks risk making care feel mechanical.",
+    "criterios": [
+     "Content: he hecho todo lo que pide la tarea (cada punto del enunciado) y quien lo lea queda bien informado.",
+     "Communicative Achievement: el registro es el adecuado para el lector (formal con el tutor o el director; cercano con un amigo) y sigo las convenciones del tipo de texto.",
+     "Organisation: párrafos claros con una idea cada uno, introducción y cierre, conectores variados (nevertheless, by contrast, on balance, whereas…).",
+     "Language: vocabulario preciso y variado, estructuras complejas (condicionales, pasivas, relativas, inversión) y pocos errores, ninguno que estorbe."
+    ],
+    "explicacion": "El modelo trata DOS de los tres puntos (daily tasks y health monitoring), explica ventajas e inconvenientes de cada uno y concluye claramente cuál beneficia más a los residentes y por qué. Registro formal: sin contracciones, con conectores (nevertheless, by contrast, on balance) y un cierre que resume la postura."
+   }
+  ],
+  "examenNumero": 11
+ }
+]

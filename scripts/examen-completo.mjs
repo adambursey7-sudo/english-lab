@@ -54,7 +54,10 @@ const archivo = join('src/banco/generados', `examen-${examen}-${numero}.json`);
 const hechos = existsSync(archivo) ? JSON.parse(readFileSync(archivo, 'utf8')) : [];
 const textosDe = (e) => [e.texto ?? '', ...(e.secciones?.map((s) => s.texto) ?? [])];
 
+const inicioTotal = Date.now();
+let llamadas = 0;
 function preguntar(texto) {
+  llamadas++;
   return new Promise((resolver, rechazar) => {
     const p = spawn('claude', ['-p', '--model', 'sonnet', '--tools', '', '--no-session-persistence'], { shell: process.platform === 'win32' });
     let out = '';
@@ -158,4 +161,6 @@ const cola = [...tareas];
 await Promise.all(Array.from({ length: paralelo }, async () => { for (let t = cola.shift(); t; t = cola.shift()) await hacer(t); }));
 await vite.close();
 console.log(`Examen ${examen} ${numero}: ${guardados} partes nuevas, ${fallidos} fallidas, ${hechos.length}/${tareas.length} en el archivo.`);
+const min = ((Date.now() - inicioTotal) / 60000).toFixed(1);
+console.log(`Gasto: ${llamadas} llamadas a Claude (sonnet) en ${min} min.`);
 process.exit(fallidos > 0 ? 2 : 0);

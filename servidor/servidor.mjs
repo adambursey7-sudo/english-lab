@@ -89,9 +89,12 @@ function alumnoDe(req) {
 }
 
 function adamAutorizado(req) {
-  if (bloqueado('adam-panel')) throw new Fallo(429, 'Demasiados intentos.');
+  // La clave de Adam es larga (192 bits): acertarla a ciegas no es posible, así que la correcta pasa siempre. Si no,
+  // cualquiera podría dejar a Adam fuera del panel mandando claves malas.
   const t = String(req.headers.authorization ?? '').replace(/^Bearer /, '');
-  if (!igual(t, CLAVE_ADAM)) { apuntaFallo('adam-panel', 10); throw new Fallo(401, 'Clave no válida.'); }
+  if (igual(t, CLAVE_ADAM)) return;
+  apuntaFallo('adam-panel', 10);
+  throw new Fallo(401, 'Clave no válida.');
 }
 
 async function cuerpo(req, max) {

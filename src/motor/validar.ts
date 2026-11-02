@@ -126,6 +126,7 @@ export function validarEjercicio(e: Ejercicio, otros: Iterable<string> = []): st
   const fallos = problemas(e);
   const r = REGLAS[`${e.examen}/${e.destreza}/${e.parte}`];
   if (!r) return [...fallos, `No hay regla para ${e.examen}/${e.destreza}/${e.parte}: esa parte no se puede generar.`];
+  if ((/placeholder|lorem ipsum/i.test(JSON.stringify(e.items)) || /\bTODO\b/.test(JSON.stringify(e.items)))) fallos.push('Hay texto de relleno sin terminar (PLACEHOLDER, TODO…) en las preguntas.');
   const n = e.items.length;
   if (n < r.preguntas[0] || n > r.preguntas[1]) fallos.push(`Debe tener ${r.preguntas[0] === r.preguntas[1] ? r.preguntas[0] : `${r.preguntas[0]}–${r.preguntas[1]}`} preguntas y tiene ${n}.`);
   for (const i of e.items) if (!r.tipos.includes(i.tipo)) fallos.push(`La pregunta ${i.n} es de tipo «${i.tipo}», que esta parte no usa.`);

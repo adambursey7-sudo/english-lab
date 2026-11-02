@@ -114,8 +114,8 @@ prueba('Cinco notas a la vez: no se pierde ninguna', dosNotas.every((r) => r.sta
 const gc = [];
 for (let i = 0; i < 10; i++) gc.push((await fetch(`${base}/api/admin/entregas`, { headers: adam('mala') })).status);
 // (el «Panel sin clave» de arriba ya contó como el primer fallo)
-prueba('Clave mala: 401 y bloqueo al llegar a 10 fallos', gc.slice(0, 8).every((c) => c === 401) && gc[9] === 429, gc.join(','));
-prueba('Con la clave buena tras el bloqueo sigue 429 (protege contra fuerza bruta)', (await fetch(`${base}/api/admin/entregas`, { headers: adam() })).status === 429);
+prueba('Clave mala: siempre 401 (no hay bloqueo que se pueda provocar desde fuera)', gc.every((c) => c === 401), gc.join(','));
+prueba('Tras muchas claves malas, la buena de Adam sigue entrando', (await fetch(`${base}/api/admin/entregas`, { headers: adam() })).status === 200);
 
 // --- Clave en registros ---
 prueba('La clave de Adam no sale en los registros del servidor', !registro.includes(CLAVE), registro.includes('Error') ? 'hay errores en el registro' : '');
