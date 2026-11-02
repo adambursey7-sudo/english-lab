@@ -15,7 +15,7 @@ export const READING_USE_C1_2: Ejercicio[] = [
     examenNumero: 2,
     titulo: 'The return of the afternoon nap',
     instrucciones: INSTRUCCIONES[1],
-    minutos: 10,
+    minutos: 8,
     texto:
       'For much of the twentieth century, the afternoon nap was {{1}} as a sign of laziness, something that belonged to small children and the very old. Anyone caught dozing at their desk could expect, at the very {{2}}, a raised eyebrow. In recent years, however, the nap has undergone a remarkable change of fortune. Sleep researchers now {{3}} to the view that a short rest in the early afternoon can sharpen concentration, lift the mood and even {{4}} a part in lowering blood pressure. Some companies have gone so {{5}} as to install sleeping pods in their offices, although it remains to be seen whether employees actually dare to use them.\n\n' +
       'The key, it seems, lies in timing. A nap of twenty minutes or so leaves most people feeling refreshed, {{6}} one of an hour or more can bring on a heavy, confused feeling that takes a long time to {{7}} off. Experts also warn against napping late in the day, since this almost invariably {{8}} with sleep at night. The ideal nap, in short, is brief, early and, ideally, taken somewhere other than one’s desk.',
@@ -39,7 +39,7 @@ export const READING_USE_C1_2: Ejercicio[] = [
     examenNumero: 2,
     titulo: 'Why we listen to sad songs',
     instrucciones: INSTRUCCIONES[2],
-    minutos: 10,
+    minutos: 8,
     texto:
       'It is {{9}} of the puzzles of human behaviour that people who would go to great lengths to avoid feeling sad in everyday life will happily pay to listen to music that makes them cry. {{10}} might expect sad songs to be a minority taste, yet they are among the most streamed in the world.\n\n' +
       'Psychologists have put {{11}} several explanations. One is that sad music allows us to experience strong emotion {{12}} any of the real-life consequences: nobody has actually left us, and the song will be over in four minutes. Another is that it makes us feel {{13}} alone. Hearing a stranger describe exactly what we are going through can be oddly comforting, {{14}} if the stranger is a millionaire singing from a stage on the other side of the world.\n\n' +
@@ -64,7 +64,7 @@ export const READING_USE_C1_2: Ejercicio[] = [
     examenNumero: 2,
     titulo: 'Second-hand and proud of it',
     instrucciones: INSTRUCCIONES[3],
-    minutos: 10,
+    minutos: 8,
     texto:
       'Not so long ago, buying second-hand clothes was something people did out of {{17}} rather than choice, and few would have admitted to it. Today the situation is almost {{18}}. Markets and online platforms selling used clothing have become hugely {{19}}, especially among the young, who see a vintage jacket as a mark of {{20}} rather than of poverty. Some collectors will happily travel across the country for a single rare piece, and swap events, where people exchange clothes instead of paying for them, now draw crowds in many cities.\n\n' +
       'Part of the appeal is {{21}} financial, but there is more to it than price. Many shoppers are {{22}} uneasy about the environmental cost of clothes that are worn a handful of times and thrown away. Buying second-hand feels like a small act of {{23}} against that cycle. There is also the thrill of the hunt: the {{24}} discovery of a perfect coat at the bottom of a pile is a pleasure that no ordinary shop can offer. Retailers have noticed, and several large chains now run second-hand sections of their own, which rather suggests that the trend is here to stay.',
@@ -215,7 +215,7 @@ export const READING_USE_C1_2: Ejercicio[] = [
     titulo: 'Mass tourism',
     instrucciones:
       'You are going to read four extracts from articles in which writers give their views on mass tourism in popular destinations. For questions 37–40, choose from the writers A–D. The writers may be chosen more than once.',
-    minutos: 12,
+    minutos: 9,
     secciones: [
       {
         letra: 'A',

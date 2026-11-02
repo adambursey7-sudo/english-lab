@@ -7,7 +7,7 @@
   "nombreParte": "Word formation",
   "titulo": "Back to the groove",
   "instrucciones": "For questions 17–24, read the text below. Use the word given in capitals at the end of some of the lines to form a word that fits in the gap in the same line.",
-  "minutos": 10,
+  "minutos": 8,
   "texto": "A decade ago, few people would have predicted that vinyl records would make a comeback, yet sales have risen {{17}} in recent years. Collectors often claim that the sound is warmer and more {{18}} than anything a streaming service can offer, although engineers point out that the difference is, to some extent, a matter of {{19}}. What is beyond doubt is the physical pleasure of the thing: the large sleeve, the ritual of lowering the needle and the {{20}} crackle before the first song begins.\n\nFor many younger buyers, the appeal lies in the {{21}} of owning something tangible in a world of endless digital playlists. A record cannot be skipped {{22}}, so listeners tend to hear an album as the artist intended. Pressing plants, once thought {{23}}, are now struggling to meet demand, and delays of several months are no longer {{24}}.",
   "items": [
    {
@@ -93,7 +93,7 @@
   "nombreParte": "Open cloze",
   "titulo": "The city that learned to pedal",
   "instrucciones": "For questions 9–16, read the text below and think of the word which best fits each gap. Use only one word in each gap.",
-  "minutos": 10,
+  "minutos": 8,
   "texto": "When the council first proposed turning the main road into a cycle lane, few residents were convinced. Shopkeepers warned that customers would stay away, {{9}} drivers complained that journeys would take twice as long. Yet within a year of the scheme opening, the mood had shifted dramatically.\n\nIt turned {{10}} that cyclists were far better for business than anyone had predicted. Because they travel slowly, they are more likely to stop and look in shop windows, and studies suggest they spend {{11}} more over a month than motorists do, even if each visit is smaller. Not only {{12}} the streets become quieter, but the air also became noticeably cleaner.\n\nOf course, the transformation did not happen overnight, nor was it free {{13}} problems. Some junctions remained dangerous, and it was only {{14}} the council added protected crossings that the number of accidents fell. Even now, there are people who refuse to give up their cars, no matter {{15}} cheap or convenient the alternatives may be.\n\nStill, the change has been remarkable. Children cycle to school in groups, and parents, {{16}} once drove everywhere, now say they would never go back.",
   "items": [
    {
@@ -269,7 +269,7 @@
   "nombreParte": "Multiple-choice cloze",
   "titulo": "The sound of the city",
   "instrucciones": "For questions 1–8, read the text below and decide which answer (A, B, C or D) best fits each gap.",
-  "minutos": 10,
+  "minutos": 8,
   "texto": "Anyone who has tried to sleep in a big city knows that silence is a rare luxury. Traffic, building sites and late-night deliveries combine to produce a constant background {{1}} that many residents have simply learnt to tolerate. Yet researchers warn that we should not {{2}} the effects of living with it. Studies suggest that people exposed to loud noise over many years are more {{3}} to high blood pressure and disturbed sleep.\n\nSome municipal authorities are now {{4}} action. In one northern port, lorries are banned from the centre after ten at night, and the quietest streets have been {{5}} as protected zones. Not everyone is convinced, however. Shopkeepers complain that the new rules are bad for business, and one café owner insisted that a city without noise would be a city without life. {{6}}, residents who have noticed the difference say they would never go back. One of them described waking up to birdsong for the first time in a decade as nothing short of a {{7}}. Whether other cities will follow remains to be {{8}}.",
   "items": [
    {
@@ -477,7 +477,7 @@
   "nombreParte": "Cross-text multiple matching",
   "titulo": "Migrating birds and city lights",
   "instrucciones": "You are going to read four extracts from articles in which writers give their views on the effect of artificial light on migrating birds. For questions 37–40, choose from the writers A–D. The writers may be chosen more than once.",
-  "minutos": 12,
+  "minutos": 9,
   "secciones": [
    {
     "letra": "A",

@@ -7,7 +7,7 @@
   "nombreParte": "Open cloze",
   "titulo": "The psychology of putting things off",
   "instrucciones": "For questions 9–16, read the text below and think of the word which best fits each gap. Use only one word in each gap.",
-  "minutos": 10,
+  "minutos": 8,
   "texto": "Almost everyone has, {{9}} one point or another, left an important task until the last minute and then regretted it. It is tempting to put this down to laziness, but psychologists increasingly argue that procrastination has far {{10}} to do with managing time than with managing emotions. A report that feels dull, difficult or intimidating creates discomfort, and avoiding it brings immediate relief. The problem is that the relief is short-lived, and the task, {{11}} anything, only becomes more daunting as the deadline approaches.\n\nResearchers have also noticed that we tend to treat our future selves as strangers. When we decide to postpone something, we assume that the person who will be sitting at the desk tomorrow will be more motivated {{12}} we are today. Needless {{13}} say, that person rarely turns up. Those who break this cycle often do so by making the first step absurdly small, such as opening a document and writing a single sentence. Once they have started, they find that carrying on is far easier than they expected, and {{14}} seemed an impossible job gradually becomes manageable. It is no coincidence that the most effective advice is also the simplest: stop waiting {{15}} you feel ready, because that feeling seldom arrives until the work is {{16}} way.",
   "items": [
    {
@@ -86,7 +86,7 @@
   "nombreParte": "Word formation",
   "titulo": "A new kind of companion",
   "instrucciones": "For questions 17–24, read the text below. Use the word given in capitals at the end of some of the lines to form a word that fits in the gap in the same line.",
-  "minutos": 10,
+  "minutos": 8,
   "texto": "When a small robot called Pip was first introduced to the residents of Maple Court, a care home on the south coast, the reaction was far from {{17}}. Several people declared it a gimmick, and one man refused even to look at it. Within weeks, however, the {{18}} had begun to melt. Pip, which reminds residents to take their medication and leads gentle exercise classes, proved to be remarkably {{19}} at holding their attention.\n\nStaff were quick to point out that the machine is not a replacement for human contact. \"It can't {{20}} anyone's hand when they are frightened,\" said one nurse, \"but it does free us from routine tasks so that we can spend more time talking to people.\" Some critics remain {{21}}, arguing that lonely residents may become too attached to a device that cannot truly care. Yet the {{22}} of those who live with Pip is overwhelmingly positive. One woman, who had previously been {{23}} to join in any activities, now greets it every morning, and relatives report that her general {{24}} has improved noticeably.",
   "items": [
    {
@@ -357,7 +357,7 @@
   "nombreParte": "Multiple-choice cloze",
   "titulo": "Running into the night",
   "instrucciones": "For questions 1–8, read the text below and decide which answer (A, B, C or D) best fits each gap.",
-  "minutos": 10,
+  "minutos": 8,
   "texto": "Most people would {{1}} a marathon as the ultimate test of endurance, but a growing number of runners regard 42 kilometres as little more than a warm-up. Ultra-marathons, which cover any distance beyond that, now {{2}} thousands of entrants every year, many of them ordinary office workers with no athletic background.\n\nThe appeal is hard to {{3}}. Competitors speak of the peace that comes from spending a whole day on remote mountain trails, far from emails and traffic. Of course, such events are not for the faint-{{4}}. Runners must carry their own food and water, and a sudden change in the weather can quickly turn a pleasant outing into a struggle for survival.\n\nPreparation is therefore {{5}} to success. Experienced racers advise newcomers to build up their mileage gradually rather than {{6}} into training with too much enthusiasm. Knowing when to walk is also vital, as is learning to ignore the voice that urges you to give up. \"Your legs will usually keep going long after your mind has {{7}} in,\" one veteran told me. Crossing the finish line, she added, is less about speed than about {{8}} through the doubt.",
   "items": [
    {
@@ -467,7 +467,7 @@
   "nombreParte": "Cross-text multiple matching",
   "titulo": "Urban beekeeping",
   "instrucciones": "You are going to read four extracts from articles in which writers give their views on keeping bees in cities. For questions 37–40, choose from the writers A–D. The writers may be chosen more than once.",
-  "minutos": 12,
+  "minutos": 9,
   "secciones": [
    {
     "letra": "A",

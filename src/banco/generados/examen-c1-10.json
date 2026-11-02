@@ -7,7 +7,7 @@
   "nombreParte": "Word formation",
   "titulo": "Learning on the job",
   "instrucciones": "For questions 17–24, read the text below. Use the word given in capitals at the end of some of the lines to form a word that fits in the gap in the same line.",
-  "minutos": 10,
+  "minutos": 8,
   "texto": "For decades, a university degree was seen as the {{17}} route to a successful career, and families often made great sacrifices to pay for one. Today, however, a growing number of school leavers are taking a rather different path. Apprenticeships, once regarded as a second-best option, now attract {{18}} candidates, and some employers receive more than a hundred applications for every place.\n\nThe appeal is not hard to understand. Apprentices earn a wage while they learn, so they avoid the {{19}} debts that many graduates carry well into their thirties. They also gain practical experience that no lecture can provide, and this makes them {{20}} attractive to employers who want staff able to contribute from the first week.\n\nNot everyone is convinced, though. Critics argue that a narrow training can leave young people {{21}} when their industry changes, whereas a broader degree teaches flexible thinking. There is also the matter of {{22}}: those who start work at eighteen may find it harder to move into other fields later. Even so, the old {{23}} between academic and practical learning is fading, and many people now see the two routes as {{24}} rather than rivals.",
   "items": [
    {
@@ -96,7 +96,7 @@
   "nombreParte": "Multiple-choice cloze",
   "titulo": "Rising early, rising costs",
   "instrucciones": "For questions 1–8, read the text below and decide which answer (A, B, C or D) best fits each gap.",
-  "minutos": 10,
+  "minutos": 8,
   "texto": "At ten to four every morning, the lights come on in Marlow's Bakery and the first trays of dough are slid into the ovens. The business has been in the family for three generations, and Ruth Marlow, who {{1}} it from her father, admits that she has never worked so hard for so little. Flour, butter and energy bills have all {{2}} sharply, yet customers are reluctant to pay more for a loaf they have bought for years.\n\nRuth has resisted the temptation to {{3}} corners. 'The moment you start using cheaper ingredients, you lose the very thing that makes people walk past the supermarket,' she says. Instead, she has {{4}} her working hours, taking on the early shift herself so that she can afford to keep her two part-time assistants. Her son Daniel, who had hoped to pursue a career in architecture, has put his plans on {{5}} to help in the shop.\n\nThe family is not without hope. A local café has recently {{6}} an order for fifty sourdough rolls a week, and a food blogger's glowing review has brought in a steady {{7}} of new faces. Whether such goodwill will be enough to {{8}} the bakery through the winter remains to be seen.",
   "items": [
    {
@@ -302,7 +302,7 @@
   "nombreParte": "Open cloze",
   "titulo": "The lantern festival of Marrowby",
   "instrucciones": "For questions 9–16, read the text below and think of the word which best fits each gap. Use only one word in each gap.",
-  "minutos": 10,
+  "minutos": 8,
   "texto": "Ten years ago, Marrowby was a town {{9}} most people simply drove through on their way to the coast. Its shops were closing one after {{10}}, and the young were leaving in search of work elsewhere. Then a local teacher suggested holding a lantern parade in the old market square, and nobody could have predicted {{11}} would happen next.\n\nThe first parade attracted barely two hundred people. Within five years, however, it had grown {{12}} a three-day festival that draws visitors from all over the country. Cafés that had been on the verge of closing now struggle to cope with the crowds, and several empty buildings have been turned into workshops {{13}} lanterns are made by hand.\n\nNot only {{14}} the festival brought money into the town, but it has also given residents a fresh sense of pride. Many of them, {{15}} had never met before, now work side by side every autumn. Some older inhabitants admit they were doubtful at first, but hardly {{16}} they seen the first lanterns rise over the square than they were converted.",
   "items": [
    {
@@ -381,7 +381,7 @@
   "nombreParte": "Cross-text multiple matching",
   "titulo": "The history of tea",
   "instrucciones": "You are going to read four extracts from articles in which writers give their views on the history of tea. For questions 37–40, choose from the writers A–D. The writers may be chosen more than once.",
-  "minutos": 12,
+  "minutos": 9,
   "secciones": [
    {
     "letra": "A",
