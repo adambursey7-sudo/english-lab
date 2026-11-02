@@ -80,6 +80,18 @@ export const REGLAS: Record<string, ReglasParte> = {
   'pau/prueba/4': { preguntas: [6, 6], palabrasTexto: [60, 220], tipos: ['redaccion'] },
   'pau/prueba/5': { preguntas: [5, 5], tipos: ['redaccion'] },
   'pau/prueba/6': { preguntas: [2, 2], tipos: ['redaccion'] },
+  'b1/comprension-escrita/1': { preguntas: [6, 6], palabrasTexto: [250, 450], tipos: ['emparejar'] },
+  'b1/comprension-escrita/2': { preguntas: [8, 9], palabrasTexto: [280, 450], tipos: ['opciones', 'emparejar'] },
+  'b1/comprension-escrita/3': { preguntas: [10, 11], palabrasTexto: [280, 450], tipos: ['opciones', 'palabra'] },
+  'b1/writing/1': { preguntas: [1, 1], tipos: ['redaccion'] },
+  'b1/writing/2': { preguntas: [1, 1], tipos: ['redaccion'] },
+  'b1/mediacion/1': { preguntas: [1, 1], tipos: ['redaccion'] },
+  'b2/comprension-escrita/1': { preguntas: [6, 6], palabrasTexto: [350, 600], tipos: ['emparejar'] },
+  'b2/comprension-escrita/2': { preguntas: [8, 9], palabrasTexto: [400, 650], tipos: ['opciones', 'emparejar'] },
+  'b2/comprension-escrita/3': { preguntas: [10, 11], palabrasTexto: [350, 650], tipos: ['palabra', 'opciones'] },
+  'b2/writing/1': { preguntas: [1, 1], tipos: ['redaccion'] },
+  'b2/writing/2': { preguntas: [1, 1], tipos: ['redaccion'] },
+  'b2/mediacion/1': { preguntas: [1, 1], tipos: ['redaccion'] },
 };
 
 /** Palabras de 8 letras o más sobre el total: una medida burda de si el vocabulario está a la altura (C1 más que PAU). */
@@ -88,7 +100,7 @@ export function densidadLarga(texto: string): number {
   return p.length === 0 ? 0 : p.filter((w) => w.length >= 8).length / p.length;
 }
 
-const MINIMO_LARGAS: Record<string, number> = { c1: 0.05, pau: 0.03 };
+const MINIMO_LARGAS: Record<string, number> = { c1: 0.05, pau: 0.03, b1: 0.03, b2: 0.04 };
 
 /** Texto del ejercicio que hay que cuidar (el principal o todas las secciones). */
 function textoDe(e: Ejercicio): string {
@@ -130,7 +142,7 @@ export function validarEjercicio(e: Ejercicio, otros: Iterable<string> = []): st
     const pal = palabras(t);
     if (pal < r.palabrasTexto[0] || pal > r.palabrasTexto[1]) fallos.push(`El texto tiene ${pal} palabras y debería tener entre ${r.palabrasTexto[0]} y ${r.palabrasTexto[1]}.`);
     const minimo = MINIMO_LARGAS[e.examen];
-    if (pal > 0 && densidadLarga(t) < minimo) fallos.push(`El vocabulario es demasiado sencillo para ${e.examen === 'c1' ? 'C1' : 'la PAU'} (pocas palabras largas).`);
+    if (pal > 0 && densidadLarga(t) < minimo) fallos.push(`El vocabulario es demasiado sencillo para ${e.examen === 'pau' ? 'la PAU' : e.examen.toUpperCase()} (pocas palabras largas).`);
   }
   // Los textos cortos (la presentación del listening) repiten fórmulas por naturaleza: solo se comparan los de verdad.
   const solape = palabras(t) >= 60 ? solapamiento(e, otros) : 0;

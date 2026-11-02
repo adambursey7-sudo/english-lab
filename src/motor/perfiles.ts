@@ -107,7 +107,7 @@ export function salirPerfil(): void {
  * el invitado y Adam ven los dos.
  */
 export function examenesDe(perfil: Perfil | undefined): Examen[] {
-  return !perfil || perfil.profe ? ['c1', 'pau'] : [perfil.examen];
+  return !perfil || perfil.profe ? ['c1', 'pau', 'b1', 'b2'] : [perfil.examen];
 }
 
 /** Perfiles de un examen, en el orden de la lista. */

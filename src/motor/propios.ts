@@ -81,7 +81,7 @@ export function montarPropio(d: DatosPropio, items: Item[], texto: string | unde
 export function propioValido(v: unknown): Ejercicio | null {
   if (!v || typeof v !== 'object') return null;
   const e = v as Ejercicio;
-  if (typeof e.id !== 'string' || !esPropio(e.id) || (e.examen !== 'c1' && e.examen !== 'pau') || !Array.isArray(e.items)) return null;
+  if (typeof e.id !== 'string' || !esPropio(e.id) || !['c1', 'pau', 'b1', 'b2'].includes(e.examen) || !Array.isArray(e.items)) return null;
   if (typeof e.instrucciones !== 'string' || typeof e.nombreParte !== 'string' || !Number.isInteger(e.parte) || typeof e.destreza !== 'string') return null;
   if (e.audio || e.items.some((i) => typeof i !== 'object' || i === null)) return null;
   try {

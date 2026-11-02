@@ -11,6 +11,12 @@ import { WRITING_C1_2 } from './c1/writing-2';
 import { SPEAKING_C1_2 } from './c1/speaking-2';
 import { PAU_EXAMEN_2 } from './pau/examen-2';
 import { PAU_EXAMEN_3 } from './pau/examen-3';
+import { READING_B1_1 } from './b1/reading-1';
+import { WRITING_B1_1 } from './b1/writing-1';
+import { READING_B2_1 } from './b2/reading-1';
+import { WRITING_B2_1 } from './b2/writing-1';
+import { MEDIACION_B1_1 } from './b1/mediacion-1';
+import { MEDIACION_B2_1 } from './b2/mediacion-1';
 
 /** Ejercicios que escribió la fábrica (`scripts/fabrica.mjs`): ya pasaron el validador y una resolución a ciegas. */
 const GENERADOS: Ejercicio[] = Object.values(import.meta.glob<Ejercicio[]>('./generados/*.json', { eager: true, import: 'default' })).flat();
@@ -21,6 +27,8 @@ export const BANCO: Ejercicio[] = [
   ...USE_OF_ENGLISH_C1, ...READING_C1, ...WRITING_C1, ...LISTENING_C1, ...SPEAKING_C1, ...PAU_EXAMEN_1,
   // Examen 2 (y 3 de la PAU)
   ...READING_USE_C1_2, ...WRITING_C1_2, ...LISTENING_C1_2, ...SPEAKING_C1_2, ...PAU_EXAMEN_2, ...PAU_EXAMEN_3,
+  // B1 y B2 (Canarias)
+  ...READING_B1_1, ...WRITING_B1_1, ...READING_B2_1, ...WRITING_B2_1, ...MEDIACION_B1_1, ...MEDIACION_B2_1,
   // Generados
   ...GENERADOS,
 ];

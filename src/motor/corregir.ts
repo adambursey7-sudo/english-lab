@@ -177,6 +177,11 @@ export function bandaDe(examen: Examen, porcentaje: number): { etiqueta: string;
     const texto = nota.toFixed(1).replace('.', ',');
     return { etiqueta: `${texto} sobre 10`, detalle: nota >= 5 ? 'Aprobado en lo que se corrige solo; el diálogo, las situaciones y la redacción los puntúa Adam.' : 'Por debajo del 5 en lo que se corrige solo; repasa las explicaciones.' };
   }
+  if (examen === 'b1' || examen === 'b2') {
+    const nota = Math.round(porcentaje / 10 * 10) / 10;
+    const texto = nota.toFixed(1).replace('.', ',');
+    return { etiqueta: `${texto} sobre 10`, detalle: nota >= 5 ? 'Aprobada esta actividad (cada una debe sacar 5 o más y la media, 6,5). La escritura y la mediación las puntúa Adam.' : 'Por debajo del 5: en el examen real cada actividad debe llegar a 5. Repasa las explicaciones.' };
+  }
   if (porcentaje >= 80) return { etiqueta: 'Grade A', detalle: 'Estimación: con esto en el examen de verdad serías nivel C2.' };
   if (porcentaje >= 70) return { etiqueta: 'Grade B', detalle: 'Estimación: aprobado holgado del C1.' };
   if (porcentaje >= 60) return { etiqueta: 'Grade C', detalle: 'Estimación: justo el aprobado del C1.' };

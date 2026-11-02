@@ -3,9 +3,10 @@
 
 import { ES_PRODUCTO } from '../marca';
 
-export type Examen = 'c1' | 'pau';
+export type Examen = 'c1' | 'pau' | 'b1' | 'b2';
 /** Papel del examen. En la PAU solo hay uno (`prueba`, 6 preguntas sobre un texto). */
-export type Destreza = 'reading-use' | 'writing' | 'listening' | 'speaking' | 'prueba';
+/** `comprension-escrita` y `mediacion` son de B1/B2 (Canarias); `writing` y `listening` valen para todos los exámenes. */
+export type Destreza = 'reading-use' | 'comprension-escrita' | 'writing' | 'listening' | 'speaking' | 'mediacion' | 'prueba';
 
 interface ItemBase {
   n: number;
@@ -65,7 +66,7 @@ export interface ItemVerdaderoFalso extends ItemBase {
   explicacion: string;
 }
 
-export type TipoTexto = 'essay' | 'email' | 'letter' | 'proposal' | 'report' | 'review' | 'composition' | 'situation' | 'dialogue';
+export type TipoTexto = 'essay' | 'email' | 'letter' | 'proposal' | 'report' | 'review' | 'composition' | 'situation' | 'dialogue' | 'story' | 'blog' | 'note' | 'mediation';
 
 /** Texto libre que corrige Adam: Writing del C1, redacción y situaciones de la PAU, réplicas del diálogo. Se enseña un modelo. */
 export interface ItemRedaccion extends ItemBase {
@@ -161,17 +162,21 @@ export type Respuestas = Record<number, string>;
 export const NOMBRES_EXAMEN: Record<Examen, string> = {
   c1: ES_PRODUCTO ? 'C1 Advanced' : 'Cambridge C1 Advanced',
   pau: 'PAU · Inglés',
+  b1: 'Inglés B1 · Canarias',
+  b2: 'Inglés B2 · Canarias',
 };
 
 export const NOMBRES_DESTREZA: Record<Destreza, string> = {
   'reading-use': 'Reading & Use of English',
+  'comprension-escrita': 'Comprensión escrita',
   writing: 'Writing',
   listening: 'Listening',
   speaking: 'Speaking',
+  mediacion: 'Mediación escrita',
   prueba: 'Prueba escrita',
 };
 
-export const ORDEN_DESTREZAS: Destreza[] = ['reading-use', 'writing', 'listening', 'speaking', 'prueba'];
+export const ORDEN_DESTREZAS: Destreza[] = ['reading-use', 'comprension-escrita', 'writing', 'listening', 'speaking', 'mediacion', 'prueba'];
 
 /** Cómo se llama una parte en pantalla: «Part 3» en Cambridge, «Pregunta 4» (o «Preguntas 1–3») en la PAU. */
 export function etiquetaParte(examen: Examen, parte: number): string {

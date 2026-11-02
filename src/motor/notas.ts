@@ -23,8 +23,8 @@ export interface NotaProfe {
 export type NotasProfe = Record<string, NotaProfe[]>;
 
 const CLAVE = 'english-lab.notas';
-const EXAMENES: readonly string[] = ['c1', 'pau'];
-const DESTREZAS: readonly string[] = ['reading-use', 'writing', 'listening', 'speaking', 'prueba'];
+const EXAMENES: readonly string[] = ['c1', 'pau', 'b1', 'b2'];
+const DESTREZAS: readonly string[] = ['reading-use', 'comprension-escrita', 'writing', 'listening', 'speaking', 'mediacion', 'prueba'];
 
 function esNota(x: unknown): x is NotaProfe {
   if (typeof x !== 'object' || x === null) return false;

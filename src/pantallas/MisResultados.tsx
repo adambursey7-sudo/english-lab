@@ -17,6 +17,8 @@ interface Props {
 const DESTREZAS: Record<Examen, Destreza[]> = {
   c1: ['reading-use', 'writing', 'listening', 'speaking'],
   pau: ['prueba'],
+  b1: ['comprension-escrita', 'listening', 'writing', 'mediacion'],
+  b2: ['comprension-escrita', 'listening', 'writing', 'mediacion'],
 };
 
 const TEXTO_ESTADO: Record<ParteParaMejorar['estado'], string> = {

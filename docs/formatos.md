@@ -103,6 +103,34 @@ En la app:
 - Tiempo orientativo por pregunta para practicar sueltas: 1–3 → 25 min juntas (lectura incluida); 4 → 10 min;
   5 → 10 min; 6 → 30 min.
 
+## Inglés B1 y B2 · Pruebas de certificación de idiomas de Canarias (curso 2025-26)
+
+Fuentes (leídas el 02/11/2026, investigación en `C:\dev\loops-diarios\ingles-b1-b2\INVESTIGACION.md`): especificaciones y guía del aspirante de las pruebas de certificación (Consejería de Educación de Canarias). Solo se usan como referencia de formato; los ejercicios del banco se redactan de cero, sin marcas oficiales.
+
+**Regla de aprobado (B1 y B2):** cada actividad de lengua pesa igual y se puntúa de 1 a 10 con dos decimales; es «Apto» quien saca **>= 5 en TODAS las actividades y una media >= 6,5**. (Convocatoria extraordinaria: se conserva lo aprobado y vale la nota más alta.) En la app: nota sobre 10 por actividad (`bandaDe`) con el aviso de que cada una debe llegar a 5.
+
+| Actividad | B1 | B2 |
+|---|---|---|
+| **Comprensión escrita** | 60 min · textos de 1.000–1.200 palabras | 70 min · textos de 1.200–1.700 palabras |
+| T1 | emparejar, 6 ítems | emparejar, 6 ítems |
+| T2 | opción múltiple o huecos con banco, 8–9 ítems | igual, 8–9 ítems |
+| T3 | verdadero/falso o respuesta abierta (≤ 3 palabras), 10–11 ítems | igual, 10–11 ítems |
+| **Comprensión oral** | 35 min · T1 6 textos de 15–30 s; T2 8–9 ítems (2–3 min); T3 10–11 ítems (3–4 min) | 40 min · T1 15–30 s; T2 3–4 min; T3 4–6 min (tiempos por confirmar) |
+| **Producción escrita** | 75 min · T1 90–110 palabras (correspondencia, notas, chats); T2 130–160 (relato, descripción, blog, informe estándar) | 90 min · T1 100–120; T2 230–275 (ensayo, reseña, carta al director, relato) |
+| **Producción oral** | T1 monólogo (3 min de preparación, 3 hablando); T2 coproducción en parejas/tríos (3 min de preparación, 4–5 / 5–6 min) | T1 monólogo (4 + 5 min); T2 coproducción (3 min de preparación, 6–7 / 7–8 min) |
+| **Mediación escrita** | 35 min · fuente de 110–130 palabras → respuesta de 50–60 | 35 min · fuente de 150–170 → 70–80 |
+| **Mediación oral** | fuente de 110–130, 5 min de preparación, monólogo de 2–3 min | fuente de 150–170, 5 min de preparación, 3–4 min |
+
+**Rúbricas de producción escrita** (apéndice V de las pruebas): cuatro criterios —léxica, gramatical, discursiva/organizativa y adecuación a la tarea— en bandas de 1 a 5. Las bandas exactas de B1/B2 y las de mediación (apéndice VII) están **por verificar**; los `criterios` del banco (`CRITERIOS_B1`, `CRITERIOS_B2`, `CRITERIOS_MEDIACION`) son una lista de autoevaluación basada en esas cuatro escalas.
+
+### Cómo se modela en la app
+- `Examen` = `'b1' | 'b2'` y dos destrezas nuevas: `comprension-escrita` y `mediacion`. Escritura y oral usan `writing` y `listening`; el speaking de B1/B2 aún no está en el banco.
+- Comprensión escrita T1: ejercicio con `secciones` (anuncios o textos A–H) y `opcionesComunes` con las letras; cada ítem es `emparejar`. T2: `opciones` (3 opciones en B1, 4 en B2) o `emparejar` si fueran huecos con banco. T3: V/F como `opciones` «True/False» (B1; sin copiar la prueba, a diferencia de la PAU) o respuesta abierta ≤ 3 palabras como `palabra` con `maxPalabras: 3` y todas las variantes en `correctas` (B2).
+- Producción escrita: un `redaccion` por tarea, con modelo dentro del rango de palabras (se cuentan las contracciones como dos).
+- Mediación escrita: `redaccion` con `tipoTexto: 'mediation'` y el texto fuente dentro del `enunciado`. El idioma de la fuente en la prueba real está **por confirmar**; en el banco la fuente va en español y la respuesta en inglés.
+- Cada ejercicio lleva `examenNumero`; el cuadernillo del examen 1 se monta con `#/imprimir/b1/1` y `#/imprimir/b2/1`. Minutos de cada papel en `PAPELES_DE` (`cuadernillo.ts`).
+- Banco hecho: examen 1 de B1 y de B2 con comprensión escrita (3 partes), producción escrita (2 tareas) y mediación escrita. Pendiente: comprensión oral (guion y audio) y producción/mediación oral.
+
 ## Mapa del banco (cómo se organiza en la app)
 - Examen → destreza (papel) → parte → ejercicio. C1: `reading-use` (8 partes), `writing` (2), `listening` (4),
   `speaking` (4). PAU: una sola destreza `prueba` con 6 partes (preguntas 1–6); «examen completo» = las 6 sobre el
