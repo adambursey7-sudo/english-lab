@@ -1,0 +1,20 @@
+[
+ {
+  "id": "pau-1-library-of-things",
+  "examen": "pau",
+  "numero": 1,
+  "total": 10,
+  "fallos": [
+   {
+    "n": 5,
+    "dada": "party equipment: speakers, projectors and a chocolate fountain",
+    "clave": [
+     "the party equipment",
+     "party equipment",
+     "speakers, projectors and a chocolate fountain",
+     "not the tools but the party equipment"
+    ]
+   }
+  ]
+ }
+]

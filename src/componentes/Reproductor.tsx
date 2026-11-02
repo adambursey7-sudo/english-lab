@@ -20,6 +20,9 @@ export function Reproductor({ audio, base = import.meta.env.BASE_URL }: Props) {
   const [tiempo, setTiempo] = useState(0);
   const [duracion, setDuracion] = useState(0);
   const [linea, setLinea] = useState(-1);
+  // Como en el examen: el audio solo avanza (ya trae sus dos pasadas). «Practicar» deja volver atrás y saltar.
+  const [libre, setLibre] = useState(false);
+  const [fallo, setFallo] = useState('');
   const ref = useRef<HTMLAudioElement>(null);
   const cancelado = useRef(false);
   const src = `${base}${audio.archivo}`;
@@ -44,12 +47,26 @@ export function Reproductor({ audio, base = import.meta.env.BASE_URL }: Props) {
   const alternar = () => {
     const a = ref.current;
     if (!a) return;
-    if (a.paused) void a.play();
-    else a.pause();
+    if (!a.paused) {
+      a.pause();
+      return;
+    }
+    setFallo('');
+    // En el iPhone play() puede rechazarse (modo ahorro, otra app con el audio): se avisa en vez de quedarse mudo.
+    a.play().catch((e: unknown) => {
+      const nombre = e instanceof DOMException ? e.name : '';
+      setFallo(
+        !navigator.onLine
+          ? 'Sin conexión: el audio se descarga al reproducirlo. Conéctate y vuelve a tocar ▶.'
+          : nombre === 'NotAllowedError'
+            ? 'El móvil no deja arrancar el audio. Toca ▶ otra vez (y comprueba que no está en silencio).'
+            : 'El audio no arranca. Toca ▶ otra vez o usa la voz del móvil.',
+      );
+    });
   };
   const saltar = (s: number) => {
     const a = ref.current;
-    if (a) a.currentTime = Math.max(0, Math.min(a.duration || 0, a.currentTime + s));
+    if (a && libre) a.currentTime = Math.max(0, Math.min(a.duration || 0, a.currentTime + s));
   };
 
   // Voz del móvil: lee el guion línea a línea, respetando las pausas (acortadas a 8 s como mucho).
@@ -126,6 +143,8 @@ export function Reproductor({ audio, base = import.meta.env.BASE_URL }: Props) {
         onTimeUpdate={(e) => setTiempo(e.currentTarget.currentTime)}
         onLoadedMetadata={(e) => setDuracion(e.currentTarget.duration)}
         onEnded={() => setSonando(false)}
+        onError={() => setFallo(navigator.onLine ? 'No se pudo cargar el audio.' : 'Sin conexión: el audio se descarga al reproducirlo. Conéctate y recarga.')}
+        playsInline
       />
       <button type="button" className="btn-play" onClick={alternar} aria-label={sonando ? 'Pausa' : 'Reproducir'}>
         {sonando ? '❚❚' : '▶'}
@@ -133,7 +152,7 @@ export function Reproductor({ audio, base = import.meta.env.BASE_URL }: Props) {
       <div className="reproductor-datos">
         <div className="reproductor-barra" onClick={(e) => {
           const a = ref.current;
-          if (!a || !duracion) return;
+          if (!a || !duracion || !libre) return;
           const r = e.currentTarget.getBoundingClientRect();
           a.currentTime = ((e.clientX - r.left) / r.width) * duracion;
         }}>
@@ -142,11 +161,15 @@ export function Reproductor({ audio, base = import.meta.env.BASE_URL }: Props) {
         <div className="reproductor-fila">
           <span className="reloj">{formatoReloj(tiempo)} / {formatoReloj(duracion)}</span>
           <span className="reproductor-saltos">
-            <button type="button" className="btn enlace" onClick={() => saltar(-10)}>−10 s</button>
-            <button type="button" className="btn enlace" onClick={() => saltar(10)}>+10 s</button>
+            {libre && <button type="button" className="btn enlace" onClick={() => saltar(-10)}>−10 s</button>}
+            {libre && <button type="button" className="btn enlace" onClick={() => saltar(10)}>+10 s</button>}
+            <button type="button" className="btn enlace" onClick={() => setLibre((v) => !v)} aria-pressed={libre}>{libre ? 'Modo examen' : 'Practicar'}</button>
           </span>
         </div>
-        <span className="silencio pequeno">Con las instrucciones y las pausas del examen; cada parte se oye dos veces.</span>
+        {fallo && <span className="aviso pequeno" role="alert">{fallo}</span>}
+        <span className="silencio pequeno">
+          {libre ? 'Modo práctica: puedes volver atrás.' : 'Como en el examen: no se puede volver atrás.'} Con las instrucciones y las pausas del examen; cada parte se oye dos veces.
+        </span>
       </div>
     </div>
   );

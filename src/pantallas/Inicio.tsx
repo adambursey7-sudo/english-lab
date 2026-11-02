@@ -30,9 +30,13 @@ interface Props {
   onEmpezar: (lista: Ejercicio[]) => void;
   onResultados: () => void;
   onCambiarPerfil: () => void;
+  /** Un ejercicio que se dejó a medias (cerró la app): se ofrece seguir donde estaba o descartarlo. */
+  borrador?: { titulo: string; i: number; total: number };
+  onContinuar?: () => void;
+  onDescartar?: () => void;
 }
 
-export function Inicio({ perfil, onEmpezar, onResultados, onCambiarPerfil }: Props) {
+export function Inicio({ perfil, onEmpezar, onResultados, onCambiarPerfil, borrador, onContinuar, onDescartar }: Props) {
   const marca = leerMarca();
   const examenes = examenesDe(perfil);
   const [examen, setExamen] = useState<Examen>(perfil?.examen ?? 'c1');
@@ -111,6 +115,19 @@ export function Inicio({ perfil, onEmpezar, onResultados, onCambiarPerfil }: Pro
       )}
 
       <main className="contenido inicio">
+        {borrador && (
+          <section className="panel-alumno" aria-label="Ejercicio a medias">
+            <div className="retomar">
+              <small>Lo dejaste a medias</small>
+              <b>{borrador.titulo}{borrador.total > 1 ? ` · ${borrador.i} de ${borrador.total}` : ''}</b>
+              <span className="silencio">Tus respuestas y el reloj siguen como los dejaste.</span>
+              <span className="retomar-botones">
+                <button type="button" className="btn chico" onClick={onContinuar}>Seguir</button>
+                <button type="button" className="btn chico sec" onClick={onDescartar}>Descartar</button>
+              </span>
+            </div>
+          </section>
+        )}
         {perfil && (toca || ultimaNota) && (
           <section className="panel-alumno">
             {toca && (
