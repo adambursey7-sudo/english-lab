@@ -1,0 +1,15 @@
+LOOP MEJORA TOTAL · parada en un punto natural (2/11/2026)
+
+HECHO (rama loop/mejora-total en C:\dev\english-lab-t-mejora-total, sin push)
+- Tramo 0: unido origin/master, loop/banco, claves y C1 examen 3. Tests, tsc y build verdes. estado.txt. El producto ya no lleva la dirección del servidor de Adam.
+- Tramo 1: auditoría del banco (0 errores), resolución a ciegas (96,2 %), hueco de relleno «from_PLACEHOLDER» arreglado, minutos de Reading a 90, audios del examen 3. calidad.txt (23 preguntas de vocabulario fino para que las mire un profe).
+- Tramo 2: reanudar si se cierra la app, audio como en el examen (sin retroceder; «Practicar» lo permite), avisos de micro y de audio. Recorrido a 390 px con capturas (docs/loop-mejora-total/capturas/tramo2).
+- Tramo 3: servidor endurecido (null/JSON roto daban 500, bloqueo escalonado, ids sin rutas, notas atómicas, PAU mal clasificada). 40+ pruebas en scripts/probar-servidor.mjs, todas bien.
+
+SIN HACER
+- /security-review: no pudo lanzarse (la sesión no está dentro de un repo git). Lanzarla desde C:\dev\english-lab-t-mejora-total.
+- Tramos 4 (lado profesor), 5 (fábrica), 6 (cierre: /code-review, boceto Artifact, Telegram).
+- «Mi progreso» con perfil y el audio sin red no se probaron en el navegador.
+
+PARA ADAM
+- Copia de seguridad de la clave privada de licencias; probar con 2–3 profes; push y publicar.
