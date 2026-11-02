@@ -54,7 +54,7 @@ export function Crear() {
   const [aviso, setAviso] = useState('');
   const [fecha, setFecha] = useState('');
   const [enlace, setEnlace] = useState('');
-  const [ahorro, setAhorro] = useState(false);
+  const [ahorro, setAhorro] = useState(true);
   const marca = leerMarca();
   const { pro } = useLicencia();
   const [propiosPrimero, setPropiosPrimero] = useState(true);
@@ -200,7 +200,7 @@ export function Crear() {
           <input className="campo-crear" aria-label="Nombre del examen" placeholder="Nombre (opcional)" value={nombre} maxLength={80} onChange={(e) => setNombre(e.target.value)} />
           <label className="casilla"><input type="checkbox" checked={evitarUsados} onChange={(e) => { setEvitarUsados(e.target.checked); setFijo(null); }} /> No repetir ejercicios que ya hizo este grupo{usados.length > 0 && ` (${usados.length} ya usados)`}</label>
           <label className="casilla">Fecha del examen <input type="date" value={fecha} onChange={(e) => setFecha(e.target.value)} /></label>
-          <label className="casilla"><input type="checkbox" checked={ahorro} onChange={(e) => setAhorro(e.target.checked)} /> Ahorrar tinta (sin fondos grises)</label>
+          <label className="casilla"><input type="checkbox" checked={ahorro} onChange={(e) => setAhorro(e.target.checked)} /> Blanco y negro, sin fondos grises (ahorra tinta)</label>
           <button type="button" className="btn" onClick={guardar} disabled={generado.papeles.length === 0}>Guardar en Mis exámenes</button>
           {aviso && <p className="silencio pequeno" role="status">{aviso}</p>}
 

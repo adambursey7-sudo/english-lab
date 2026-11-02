@@ -37,7 +37,7 @@ export function Imprimir({ examen, numero, modo }: Props) {
     );
   }
   return (
-    <div className={`imprimir ${modo}`}>
+    <div className={`imprimir ahorro ${modo}`}>
       {ES_PRODUCTO && !pro && numero !== 1 && <div className="marca-agua" aria-hidden="true">DEMO</div>}
       {/* El tamaño de página solo se aplica mientras esta vista está montada: no afecta a imprimir otras pantallas. */}
       <style>{reglaPagina(leerMarca().nombre, cuadernillo.titulo)}</style>
