@@ -1,10 +1,8 @@
 import { leerMarca, urlLogo } from '../marca';
 import { useEffect, useRef, useState } from 'react';
-import { NOMBRES_EXAMEN, type Examen } from '../banco/tipos';
+import { EXAMENES, NOMBRES_EXAMEN } from '../banco/tipos';
 import { Cara } from '../componentes/Cara';
-import { apuntarFallo, esperaPin, perfilesDe, pinCorrecto, type Perfil } from '../motor/perfiles';
-
-const EXAMENES: Examen[] = ['c1', 'pau'];
+import { apuntarFallo, esperaPin, etiquetaExamenes, perfilesDe, pinCorrecto, type Perfil } from '../motor/perfiles';
 
 interface Props {
   onEntrar: (perfil: Perfil, pin: string) => void;
@@ -34,7 +32,7 @@ export function Perfiles({ onEntrar, onInvitado }: Props) {
       </header>
 
       <main className="contenido inicio">
-        {EXAMENES.map((x) => (
+        {EXAMENES.filter((x) => perfilesDe(x).length > 0).map((x) => (
           <section key={x} className="bloque">
             <h2>{NOMBRES_EXAMEN[x]}</h2>
             <div className="perfiles">
@@ -114,7 +112,7 @@ function TecladoPin({ perfil, onBien, onVolver }: { perfil: Perfil; onBien: (pin
           <div className="marca">
             <span className={`avatar-grande tono-${tono}`} aria-hidden="true"><Cara perfil={perfil} /></span>
             <div>
-              <div className="sub">English Lab · {NOMBRES_EXAMEN[perfil.examen]}</div>
+              <div className="sub">English Lab · {etiquetaExamenes(perfil)}</div>
               <div className="titulo">Hola, {perfil.nombre}</div>
               <div className="racha">Escribe tu PIN de 4 números</div>
             </div>

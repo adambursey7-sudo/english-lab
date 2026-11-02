@@ -31,7 +31,7 @@ export function problemas(e: Ejercicio): string[] {
       // La principal (la primera) es la que sale en la clave: debe cumplir la regla del examen. Las demás son variantes aceptadas.
       const c = i.correctas[0] ?? '';
       const n = c.trim().split(/\s+/).length;
-      if (n < 2 || n > 7) fallos.push(`La transformación ${i.n}: «${c}» debe tener entre 3 y 6 palabras.`);
+      if (n < 2 || n > 7) fallos.push(`La transformación ${i.n}: «${c}» debe tener entre 2 y 6 palabras.`);
       if (!`${i.inicio} ${c} ${i.fin}`.toLowerCase().split(/\s+/).includes(i.clave.toLowerCase())) fallos.push(`La transformación ${i.n}: «${c}» no usa la palabra clave ${i.clave}.`);
     } else if (i.tipo === 'verdaderoFalso') {
       if (i.pruebas.length === 0) fallos.push(`La afirmación ${i.n} necesita la frase del texto que la prueba.`);
@@ -62,6 +62,41 @@ export interface ReglasParte {
 }
 
 export const REGLAS: Record<string, ReglasParte> = {
+  // B1 Preliminary (Reading 6 partes, Writing 2, Listening 4, Speaking 4)
+  'b1/reading-use/1': { preguntas: [5, 5], palabrasTexto: [120, 420], tipos: ['opciones'] },
+  'b1/reading-use/2': { preguntas: [5, 5], palabrasTexto: [300, 800], tipos: ['emparejar'] },
+  'b1/reading-use/3': { preguntas: [5, 5], palabrasTexto: [280, 600], tipos: ['opciones'] },
+  'b1/reading-use/4': { preguntas: [5, 5], palabrasTexto: [120, 450], tipos: ['emparejar'] },
+  'b1/reading-use/5': { preguntas: [6, 6], palabrasTexto: [70, 230], tipos: ['opciones'] },
+  'b1/reading-use/6': { preguntas: [6, 6], palabrasTexto: [70, 230], tipos: ['palabra'] },
+  'b1/writing/1': { preguntas: [1, 1], tipos: ['redaccion'] },
+  'b1/writing/2': { preguntas: [2, 2], tipos: ['redaccion'] },
+  'b1/listening/1': { preguntas: [7, 7], tipos: ['opciones'] },
+  'b1/listening/2': { preguntas: [6, 6], tipos: ['opciones'] },
+  'b1/listening/3': { preguntas: [6, 6], tipos: ['palabra'] },
+  'b1/listening/4': { preguntas: [6, 6], tipos: ['opciones'] },
+  'b1/speaking/1': { preguntas: [1, 1], tipos: ['hablar'] },
+  'b1/speaking/2': { preguntas: [1, 1], tipos: ['hablar'] },
+  'b1/speaking/3': { preguntas: [2, 2], tipos: ['hablar'] },
+  'b1/speaking/4': { preguntas: [1, 1], tipos: ['hablar'] },
+  // B2 First (Reading and Use of English 7 partes, Writing 2, Listening 4, Speaking 4)
+  'b2/reading-use/1': { preguntas: [8, 8], palabrasTexto: [120, 260], tipos: ['opciones'] },
+  'b2/reading-use/2': { preguntas: [8, 8], palabrasTexto: [120, 260], tipos: ['palabra'] },
+  'b2/reading-use/3': { preguntas: [8, 8], palabrasTexto: [100, 260], tipos: ['palabra'] },
+  'b2/reading-use/4': { preguntas: [6, 6], tipos: ['transformacion'] },
+  'b2/reading-use/5': { preguntas: [6, 6], palabrasTexto: [450, 800], tipos: ['opciones'] },
+  'b2/reading-use/6': { preguntas: [6, 6], palabrasTexto: [200, 800], tipos: ['emparejar'] },
+  'b2/reading-use/7': { preguntas: [10, 10], palabrasTexto: [400, 900], tipos: ['emparejar'] },
+  'b2/writing/1': { preguntas: [1, 1], tipos: ['redaccion'] },
+  'b2/writing/2': { preguntas: [3, 3], tipos: ['redaccion'] },
+  'b2/listening/1': { preguntas: [8, 8], tipos: ['opciones'] },
+  'b2/listening/2': { preguntas: [10, 10], tipos: ['palabra'] },
+  'b2/listening/3': { preguntas: [5, 5], tipos: ['emparejar'] },
+  'b2/listening/4': { preguntas: [7, 7], tipos: ['opciones'] },
+  'b2/speaking/1': { preguntas: [1, 1], tipos: ['hablar'] },
+  'b2/speaking/2': { preguntas: [2, 2], tipos: ['hablar'] },
+  'b2/speaking/3': { preguntas: [1, 1], tipos: ['hablar'] },
+  'b2/speaking/4': { preguntas: [1, 1], tipos: ['hablar'] },
   'c1/reading-use/1': { preguntas: [8, 8], palabrasTexto: [120, 260], tipos: ['opciones'] },
   'c1/reading-use/2': { preguntas: [8, 8], palabrasTexto: [120, 260], tipos: ['palabra'] },
   'c1/reading-use/3': { preguntas: [8, 8], palabrasTexto: [100, 260], tipos: ['palabra'] },
@@ -92,7 +127,7 @@ export function densidadLarga(texto: string): number {
   return p.length === 0 ? 0 : p.filter((w) => w.length >= 8).length / p.length;
 }
 
-const MINIMO_LARGAS: Record<string, number> = { c1: 0.05, pau: 0.03 };
+const MINIMO_LARGAS: Record<string, number> = { b1: 0.02, b2: 0.035, c1: 0.05, pau: 0.03 };
 
 /** Texto del ejercicio que hay que cuidar (el principal o todas las secciones). */
 function textoDe(e: Ejercicio): string {
@@ -135,7 +170,7 @@ export function validarEjercicio(e: Ejercicio, otros: Iterable<string> = []): st
     const pal = palabras(t);
     if (pal < r.palabrasTexto[0] || pal > r.palabrasTexto[1]) fallos.push(`El texto tiene ${pal} palabras y debería tener entre ${r.palabrasTexto[0]} y ${r.palabrasTexto[1]}.`);
     const minimo = MINIMO_LARGAS[e.examen];
-    if (pal > 0 && densidadLarga(t) < minimo) fallos.push(`El vocabulario es demasiado sencillo para ${e.examen === 'c1' ? 'C1' : 'la PAU'} (pocas palabras largas).`);
+    if (pal > 0 && densidadLarga(t) < minimo) fallos.push(`El vocabulario es demasiado sencillo para ${e.examen === 'pau' ? 'la PAU' : e.examen.toUpperCase()} (pocas palabras largas).`);
   }
   // Los textos cortos (la presentación del listening) repiten fórmulas por naturaleza: solo se comparan los de verdad.
   const solape = palabras(t) >= 60 ? solapamiento(e, otros) : 0;

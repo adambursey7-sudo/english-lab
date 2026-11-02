@@ -212,7 +212,7 @@ const servidor = createServer(async (req, res) => {
         const sobre = Number(d.sobre) || 10;
         if (!Number.isFinite(nota) || nota < 0 || nota > sobre) throw new Fallo(400, 'Nota no válida.');
         const meta = JSON.parse(readFileSync(ruta, 'utf8'));
-        const examen = /(^|-)pau-/.test(meta.ejercicio) ? 'pau' : 'c1';
+        const examen = /(^|-)pau-/.test(meta.ejercicio) ? 'pau' : (/^(b1|b2)-/.exec(meta.ejercicio)?.[1] ?? 'c1');
         const destreza = examen === 'pau' ? 'prueba' : meta.tipo === 'audio' ? 'speaking' : 'writing';
         const registro = { fecha: new Date().toISOString().slice(0, 10), examen, destreza, nota, sobre, ...(meta.numero ? { numero: meta.numero } : {}), ...(meta.parte ? { parte: meta.parte } : {}), ...(d.comentario ? { comentario: limpio(d.comentario, 1000) } : {}) };
         const notas = leerNotas();

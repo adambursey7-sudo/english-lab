@@ -1,7 +1,7 @@
 // Crear ejercicios nuevos con IA desde el navegador, con la clave de la propia academia (no hay servidor nuestro):
 // la clave se guarda solo en este navegador y la petición va directa a Anthropic.
 import type { Destreza, Ejercicio, Examen } from '../banco/tipos';
-import { extraerJson, guiaDe, promptEjercicio } from './guiaEstilo';
+import { ejemploDe, extraerJson, guiaDe, promptEjercicio } from './guiaEstilo';
 import { PREFIJO_PROPIO } from './propios';
 import { validarEjercicio } from './validar';
 
@@ -68,7 +68,7 @@ const textosDe = (e: Ejercicio) => [e.texto ?? '', ...(e.secciones?.map((s) => s
  */
 export async function crearEjercicioIA(p: PedidoIA, banco: Ejercicio[], llamar: Llamar, intentos = 3): Promise<ResultadoIA> {
   const guia = guiaDe(p.examen, p.destreza, p.parte);
-  const ejemplo = banco.find((e) => e.examen === p.examen && e.destreza === p.destreza && e.parte === p.parte);
+  const ejemplo = guia && ejemploDe(guia, banco);
   if (!guia || !ejemplo) return { ok: false, motivos: ['Esta parte todavía no se puede crear con IA.'] };
   const otros = banco.flatMap(textosDe);
   let motivos: string[] = [];
@@ -78,8 +78,8 @@ export async function crearEjercicioIA(p: PedidoIA, banco: Ejercicio[], llamar: 
       e.examen = p.examen;
       e.destreza = p.destreza;
       e.parte = p.parte;
-      e.nombreParte = ejemplo.nombreParte;
-      e.minutos = ejemplo.minutos;
+      e.nombreParte = guia.nombreParte ?? ejemplo.nombreParte;
+      e.minutos = guia.minutos ?? ejemplo.minutos;
       delete e.examenNumero;
       e.id = `${PREFIJO_PROPIO}ia-${Date.now().toString(36)}${Math.floor(Math.random() * 1e4).toString(36)}`;
       if (e.audio) e.audio = { ...e.audio, archivo: `audio/${e.id}.mp3` };

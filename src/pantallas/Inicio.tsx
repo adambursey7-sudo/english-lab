@@ -1,19 +1,13 @@
 import { ES_PRODUCTO, leerMarca, urlLogo } from '../marca';
 import { useEffect, useState } from 'react';
 import { destrezasDe, partesDe } from '../banco';
-import { NOMBRES_DESTREZA, NOMBRES_EXAMEN, etiquetaParte, type Destreza, type Ejercicio, type Examen } from '../banco/tipos';
+import { DESTREZAS_DE as DESTREZAS, NOMBRES_DESTREZA, NOMBRES_EXAMEN, etiquetaParte, nombreDestreza, type Destreza, type Ejercicio, type Examen } from '../banco/tipos';
 import { Instalar } from '../componentes/Instalar';
 import { minutosDe, montarExamen, montarExamenNumero, numerosExamen, practicarParte } from '../motor/examen';
 import { hechosEstaSemana, leerHistorial, mejorDeParte, paraMejorar, porcentaje, rachaDias, resumenDestreza } from '../motor/historial';
 import { cargarNotas, leerNotasGuardadas, mediaNotas, notasDe, sobreDiez, textoNota, type NotasProfe } from '../motor/notas';
 import { Cara } from '../componentes/Cara';
-import { examenesDe, type Perfil } from '../motor/perfiles';
-
-/** Papeles que se ofrecen por examen (la PAU solo tiene la prueba escrita). */
-const DESTREZAS: Record<Examen, Destreza[]> = {
-  c1: ['reading-use', 'writing', 'listening', 'speaking'],
-  pau: ['prueba'],
-};
+import { etiquetaExamenes, examenesDe, type Perfil } from '../motor/perfiles';
 
 /** Una frase corta por destreza para la tarjeta. */
 const LEMA: Record<Destreza, string> = {
@@ -23,6 +17,13 @@ const LEMA: Record<Destreza, string> = {
   speaking: 'Con reloj y micro',
   prueba: 'Texto, diálogo, situaciones y redacción',
 };
+
+/** El B1 no tiene transformaciones ni essay: su Reading y su Writing se explican distinto. */
+function lemaDe(examen: Examen, destreza: Destreza): string {
+  if (examen === 'b1' && destreza === 'reading-use') return 'Textos cortos, emparejar y huecos';
+  if (examen === 'b1' && destreza === 'writing') return 'Un email y una tarea a elegir';
+  return LEMA[destreza];
+}
 
 interface Props {
   /** Sin perfil = modo invitado: se practica igual, pero no se guarda nada ni hay notas de Adam. */
@@ -82,7 +83,7 @@ export function Inicio({ perfil, onEmpezar, onResultados, onCambiarPerfil, borra
                 <span className="insignia">★</span>
               </span>
               <div>
-                <div className="sub">English Lab · {NOMBRES_EXAMEN[perfil.examen]}</div>
+                <div className="sub">English Lab · {etiquetaExamenes(perfil)}</div>
                 <div className="titulo">Hola, {perfil.nombre}</div>
                 <button type="button" className="racha" onClick={onResultados}>
                   {racha >= 2 ? <span className="fuego">🔥 {racha} días seguidos</span> : null}
@@ -170,7 +171,7 @@ export function Inicio({ perfil, onEmpezar, onResultados, onCambiarPerfil, borra
             <div>
               <h2>Examen completo</h2>
               <p className="silencio">
-                {NOMBRES_DESTREZA[destreza]}: {examenCompleto.length === 1 ? 'una parte' : `${examenCompleto.length} partes seguidas`}, {minutosDe(examenCompleto)} min. Como el día del examen; se corrige al final.
+                {nombreDestreza(examen, destreza)}: {examenCompleto.length === 1 ? 'una parte' : `${examenCompleto.length} partes seguidas`}, {minutosDe(examenCompleto)} min. Como el día del examen; se corrige al final.
               </p>
             </div>
             <button className="btn chico" onClick={() => onEmpezar(examenCompleto)}>Empezar</button>
@@ -200,8 +201,8 @@ export function Inicio({ perfil, onEmpezar, onResultados, onCambiarPerfil, borra
               return (
                 <button key={d} className={`ficha destreza tono-${d}`} aria-pressed={destreza === d} disabled={!hay} onClick={() => setDestreza(d)}>
                   <span className="icono" aria-hidden="true"><IconoDestreza destreza={d} /></span>
-                  <b>{NOMBRES_DESTREZA[d]}</b>
-                  <small>{hay ? LEMA[d] : 'En preparación'}</small>
+                  <b>{nombreDestreza(examen, d)}</b>
+                  <small>{hay ? lemaDe(examen, d) : 'En preparación'}</small>
                   {hay && perfil && (
                     <>
                       <span className="progreso" aria-hidden="true"><span style={{ width: `${r.partes === 0 ? 0 : (r.hechas / r.partes) * 100}%` }} /></span>

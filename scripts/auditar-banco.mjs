@@ -19,10 +19,12 @@ const palabras = (t) => (t.trim() ? t.trim().split(/\s+/).length : 0);
 
 // Minutos oficiales por papel (suma de las partes del examen).
 const MINUTOS = {
+  'b1/reading-use': [45, 45], 'b1/writing': [45, 45], 'b1/listening': [35, 35], 'b1/speaking': [12, 12],
+  'b2/reading-use': [75, 75], 'b2/writing': [80, 80], 'b2/listening': [40, 40], 'b2/speaking': [14, 14],
   'c1/reading-use': [90, 90], 'c1/writing': [90, 90], 'c1/listening': [38, 45], 'c1/speaking': [14, 16],
   'pau/prueba': [75, 75],
 };
-const PALABRAS_WRITING = { c1: [220, 260] };
+const PALABRAS_WRITING = { b1: [90, 130], b2: [140, 190], c1: [220, 260] };
 
 const problemasPorExamen = new Map(); // "c1 4" -> [{nivel, texto}]
 const anota = (e, nivel, texto) => {
@@ -99,7 +101,7 @@ for (const e of BANCO) {
       else if (statSync(ruta).size < 200_000) anota(e, 'ERROR', `${e.audio.archivo} pesa muy poco (${statSync(ruta).size} bytes)`);
       const habla = e.audio.guion.filter((l) => 'texto' in l);
       if (habla.length < 2) anota(e, 'ERROR', 'guion sin transcripción');
-      if (e.examen === 'c1' && e.audio.veces !== 2) anota(e, 'AVISO', `se oye ${e.audio.veces} veces (en el examen real 2)`);
+      if (e.examen !== 'pau' && e.audio.veces !== 2) anota(e, 'AVISO', `se oye ${e.audio.veces} veces (en el examen real 2)`);
       for (const h of e.audio.hablantes) if (!/^en-[A-Z]{2}-\w+Neural$/.test(h.voz)) anota(e, 'ERROR', `voz rara: ${h.voz}`);
     }
   }
@@ -131,6 +133,8 @@ for (const e of BANCO) {
   grupos.set(k, g);
 }
 const PARTES_ESPERADAS = {
+  'b1/reading-use': [1, 2, 3, 4, 5, 6], 'b1/writing': [1, 2], 'b1/listening': [1, 2, 3, 4], 'b1/speaking': [1, 2, 3, 4],
+  'b2/reading-use': [1, 2, 3, 4, 5, 6, 7], 'b2/writing': [1, 2], 'b2/listening': [1, 2, 3, 4], 'b2/speaking': [1, 2, 3, 4],
   'c1/reading-use': [1, 2, 3, 4, 5, 6, 7, 8], 'c1/writing': [1, 2], 'c1/listening': [1, 2, 3, 4], 'c1/speaking': [1, 2, 3, 4],
   'pau/prueba': [1, 4, 5, 6],
 };

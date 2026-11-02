@@ -1,0 +1,1734 @@
+[
+ {
+  "id": "b1-reading-use-1-x1",
+  "examen": "b1",
+  "destreza": "reading-use",
+  "parte": 1,
+  "nombreParte": "Short texts",
+  "titulo": "A new student",
+  "instrucciones": "For questions 1–5, look at the text in each question. What does it say? Choose the correct letter A, B or C.",
+  "minutos": 6,
+  "secciones": [
+   {
+    "letra": "A",
+    "titulo": "Text message",
+    "texto": "Hi Marta! It's Lucas from your new class. Our teacher told me you arrive from Brazil on Sunday. If you like, I can meet you at the school gate at 8.30 on Monday morning and show you the way to the classroom. Don't worry about books, I have an extra set for you. See you then!"
+   },
+   {
+    "letra": "B",
+    "titulo": "Notice",
+    "texto": "WELCOME, NEW STUDENTS!\nThere is a tour of the school on Tuesday at 4 p.m. We will visit the library, the sports hall and the canteen. You do not need to book a place, but please wait for the guide in the main hall. The tour finishes at 5 p.m. with free hot chocolate and biscuits."
+   },
+   {
+    "letra": "C",
+    "titulo": "Email",
+    "texto": "Dear Kenji,\nThank you for your message. Your English is very good, so you will not need extra lessons at the moment. However, there is a conversation club on Thursdays after school, and it is a nice way to meet other students. Come along if you want to. Best wishes, Mrs Parker"
+   },
+   {
+    "letra": "D",
+    "titulo": "Advert",
+    "texto": "STUDENT BUS PASS\nAre you new in town? Buy a monthly bus pass at the station office and travel to school for half the normal price. Bring your student card and one photo. The pass costs £18 and you can use it at weekends too. Offer ends on 30 September."
+   },
+   {
+    "letra": "E",
+    "titulo": "Note",
+    "texto": "Sofia,\nI've put your lunch in the fridge. Your host mum, Helen, told me you don't eat fish, so there's cheese and tomato in the sandwich. I'll be back from work at six. Please help yourself to fruit from the bowl if you're hungry. There's a spare key under the blue flowerpot. Anna"
+   }
+  ],
+  "items": [
+   {
+    "n": 1,
+    "tipo": "opciones",
+    "pregunta": "Why has Lucas sent this message to Marta?",
+    "opciones": [
+     "to ask her to bring some books to school",
+     "to offer to help her on her first day",
+     "to tell her the time of her flight from Brazil"
+    ],
+    "correcta": 1,
+    "explicacion": "Lucas se ofrece a esperarla en la puerta y enseñarle el aula el lunes (B). Los libros se los presta él (A no) y no habla del vuelo (C no)."
+   },
+   {
+    "n": 2,
+    "tipo": "opciones",
+    "pregunta": "What must new students do to join the tour?",
+    "opciones": [
+     "book a place before Tuesday",
+     "wait for the guide in the main hall",
+     "pay for the hot chocolate and biscuits"
+    ],
+    "correcta": 1,
+    "explicacion": "«please wait for the guide in the main hall» (B). «You do not need to book» descarta A, y el chocolate es gratis (C no)."
+   },
+   {
+    "n": 3,
+    "tipo": "opciones",
+    "pregunta": "What does Mrs Parker suggest to Kenji?",
+    "opciones": [
+     "having extra English lessons",
+     "going to a club to meet other students",
+     "talking to her after school on Thursdays"
+    ],
+    "correcta": 1,
+    "explicacion": "Le sugiere ir al club de conversación para conocer gente (B). No necesita clases extra (A no) y el club no es una charla con ella (C no)."
+   },
+   {
+    "n": 4,
+    "tipo": "opciones",
+    "pregunta": "What is true about the student bus pass?",
+    "opciones": [
+     "It is only valid on school days.",
+     "It costs half the normal price for new students.",
+     "It can be bought at the bus station on 1 October."
+    ],
+    "correcta": 1,
+    "explicacion": "Cuesta la mitad del precio normal (B). También vale en fines de semana (A no) y la oferta termina el 30 de septiembre (C no)."
+   },
+   {
+    "n": 5,
+    "tipo": "opciones",
+    "pregunta": "What does Anna tell Sofia in her note?",
+    "opciones": [
+     "She cannot eat the sandwich because it has fish.",
+     "She will come home from work in the evening.",
+     "She has left the key with the neighbours."
+    ],
+    "correcta": 1,
+    "explicacion": "Anna vuelve del trabajo a las seis (B). El bocadillo lleva queso y tomate, no pescado (A no), y la llave está bajo la maceta (C no)."
+   }
+  ],
+  "examenNumero": 1
+ },
+ {
+  "id": "b1-reading-use-2-x1",
+  "examen": "b1",
+  "destreza": "reading-use",
+  "parte": 2,
+  "nombreParte": "Matching",
+  "titulo": "Moving to a new flat",
+  "instrucciones": "The five people below are all moving to a new flat. Eight companies and shops (A–H) are described on the opposite page. Decide which company or shop (A–H) would be the most suitable for each person.",
+  "minutos": 8,
+  "secciones": [
+   {
+    "letra": "A",
+    "titulo": "Quick Van Hire",
+    "texto": "Need to move a few boxes and a bed? Hire one of our small vans by the hour for only £12 an hour. You drive the van yourself, so you must be over 21 and have a driving licence. Our friendly office is open Monday to Saturday from 8 a.m. to 6 p.m. Petrol is free for the first twenty miles. Ask a friend to help you carry your things and you can finish the job in a morning. Booking is easy: just phone us or send an email."
+   },
+   {
+    "letra": "B",
+    "titulo": "Friendly Movers",
+    "texto": "Moving a whole house or a big flat? Our team of three strong helpers and a large lorry will do all the work for you. We pack your things, carry them and put them in the right rooms. Prices start at £150. We work from Monday to Friday only, and you need to book at least one week before you move. Our helpers are always polite, and we are careful with your furniture. Call us for a free price today."
+   },
+   {
+    "letra": "C",
+    "titulo": "Student Storage Box",
+    "texto": "Leaving your flat for the summer holidays? Keep your things safe in our storage rooms, only five minutes from the university. A small room costs £5 a week, and you can stay for as long as you like after the first month. We come to your door and collect your boxes for free, so you don't need to carry anything. You can visit your things on weekdays between 9 a.m. and 5 p.m. Show your student card to get your first week free."
+   },
+   {
+    "letra": "D",
+    "titulo": "Second Chance Furniture",
+    "texto": "Looking for a good sofa, a table or a wardrobe without spending a lot of money? Visit our big shop full of second-hand furniture in good condition. Everything is cheap, and we bring it to your door for free if you live within ten miles. Don't forget that we are only open at weekends, on Saturdays and Sundays from 10 a.m. to 4 p.m. Our staff can help you choose the right things for a small flat. Come and have a look!"
+   },
+   {
+    "letra": "E",
+    "titulo": "SpeedNet",
+    "texto": "Fast internet for your new home! With SpeedNet, a technician comes to your flat and makes everything work within 24 hours, so you can use the internet on the day you arrive. There is no long contract: you pay £20 a month and you can stop at any time, with just one month's notice. It is perfect for watching films, playing games or working from home. Our helpline answers questions day and night. Join online in five minutes."
+   },
+   {
+    "letra": "F",
+    "titulo": "Fresh Start Cleaning",
+    "texto": "Hate cleaning your old flat before you leave? Let us do it for you! Our team will make every room, the kitchen and the bathroom look like new in just three hours. The price is £40 for a one-bedroom flat. We can come on weekday evenings or at weekends, whichever is easier for you. All our cleaning products are included. Many landlords ask for a clean flat before they give you your money back, so don't take any risks."
+   },
+   {
+    "letra": "G",
+    "titulo": "Colour Corner",
+    "texto": "Want to make your new bedroom look different? Come to Colour Corner for all your paint. Students get 20% off when they show a student card. We lend brushes for free, and our staff will show you, step by step, how to paint a wall, even if you have never tried before. We also give you a short list of the best colours for small rooms. Open every day from 9 a.m. to 7 p.m."
+   },
+   {
+    "letra": "H",
+    "titulo": "Flat Friends",
+    "texto": "Do you want to share a flat with other young people? Flat Friends is a website that helps you find people to live with. Write a short text about yourself, add a photo and read about other people in your town. Using the site is free if you are under 25. After you find someone you like, you can chat with them online before you meet. Thousands of students have already found a home with us."
+   }
+  ],
+  "opcionesComunes": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E",
+   "F",
+   "G",
+   "H"
+  ],
+  "items": [
+   {
+    "n": 6,
+    "tipo": "emparejar",
+    "pregunta": "Ella is moving to a new flat on Saturday afternoon. She only has a few boxes and a bed. Her brother can drive, and she wants a cheap way to move her things.",
+    "correcta": 0,
+    "explicacion": "A: furgoneta barata por horas, abierta hasta el sábado a las 6, conduces tú (su hermano) y hay que ser mayor de 21. B no sirve porque solo trabaja de lunes a viernes y es para mudanzas grandes."
+   },
+   {
+    "n": 7,
+    "tipo": "emparejar",
+    "pregunta": "Jack's new flat is empty and he hasn't got much money. He wants a sofa and a table, but he has no car and can only shop on Sundays.",
+    "correcta": 3,
+    "explicacion": "D: muebles de segunda mano baratos, entrega gratis y abierto sábados y domingos. Los demás no venden muebles."
+   },
+   {
+    "n": 8,
+    "tipo": "emparejar",
+    "pregunta": "Mia wants her new bedroom to be colourful. She hasn't got much money and has never painted a wall before.",
+    "correcta": 6,
+    "explicacion": "G: descuento para estudiantes, brochas gratis y ayuda paso a paso para quien nunca ha pintado. F es de limpieza, no de pintura."
+   },
+   {
+    "n": 9,
+    "tipo": "emparejar",
+    "pregunta": "Omar needs to work from home, so he needs the internet on the day he arrives. He will only live in the flat for a year, so he doesn't want a long contract.",
+    "correcta": 4,
+    "explicacion": "E: instalación en 24 horas, sin contrato largo y se puede usar para trabajar desde casa. H es una web de compañeros de piso."
+   },
+   {
+    "n": 10,
+    "tipo": "emparejar",
+    "pregunta": "Chloe is going home for the summer. She wants to leave her things somewhere cheap near the university and doesn't want to carry anything.",
+    "correcta": 2,
+    "explicacion": "C: guardamuebles barato cerca de la universidad que recoge las cajas gratis en la puerta. B mueve cosas, pero no las guarda y es caro."
+   }
+  ],
+  "examenNumero": 1
+ },
+ {
+  "id": "b1-reading-use-3-x1",
+  "examen": "b1",
+  "destreza": "reading-use",
+  "parte": 3,
+  "nombreParte": "Long text",
+  "titulo": "A rainy Saturday at the shopping centre",
+  "instrucciones": "Read the blog post about a rainy day at a shopping centre. For each question, choose the correct answer (A, B or C).",
+  "minutos": 8,
+  "texto": "Last Saturday I had big plans. My friend Ellie and I wanted to cycle to the lake, have a picnic and take photos for my photography club. Then I looked out of the window and saw grey clouds and heavy rain. I was really disappointed. I even thought about going back to bed.\n\nEllie phoned me at nine o'clock. 'Let's go to the new shopping centre in town,' she said. 'At least we'll stay dry.' I wasn't sure. I don't enjoy shopping very much, and I only had ten pounds in my pocket. But Ellie sounded so happy that I agreed. We took the bus, and it was so full that we had to stand all the way.\n\nThe centre was much bigger than I expected. There were more than a hundred shops, and almost everyone in town seemed to have the same idea as us. First, we walked around a bookshop for half an hour. I found a book about travelling in Canada and read the first chapter standing up. Ellie tried on three hats and bought none of them. Then we looked at the new phones in the electronics shop. They were far too expensive for us, but it was fun to try them.\n\nAt about twelve o'clock we were hungry, so we went to the food court. It was very noisy and there were no free tables, so we waited for ten minutes. Finally, an old man stood up and smiled at us. 'You can have mine,' he said. 'I'm leaving.' I had a cheese sandwich and Ellie had a bowl of noodles. We shared a huge chocolate cake because we wanted something sweet. It cost six pounds, which was almost all my money, but it was delicious.\n\nAfter lunch, something unexpected happened. In the middle of the centre, a small group of teenagers was playing music. One of them was a boy from my school, Tom, who plays the guitar in a band. I didn't know he was so good! A lot of people stopped to listen, and some of them started to dance. Ellie and I stayed for an hour. When they finished, I told Tom I loved their music, and he gave me a card with the name of their band.\n\nWe went home at about four o'clock. The rain had stopped, but it was too late to go to the lake. Strangely, I didn't mind. I had a book in my bag, a card in my pocket and a lot of things to write about. Ellie says we should visit the centre again next month. This time, I think I'll bring more money, because I'd like to buy the book about Canada. And who knows? Maybe the lake can wait until the sun comes out.",
+  "items": [
+   {
+    "n": 1,
+    "tipo": "opciones",
+    "pregunta": "How did the writer feel when she saw the weather on Saturday morning?",
+    "opciones": [
+     "angry with Ellie for planning a picnic",
+     "unhappy that her plans had changed",
+     "pleased to have a day at home"
+    ],
+    "correcta": 1,
+    "explicacion": "«I was really disappointed»: estaba decepcionada porque sus planes cambiaban (B). Solo pensó en volver a la cama, pero no está contenta (C), y Ellie no tiene la culpa (A)."
+   },
+   {
+    "n": 2,
+    "tipo": "opciones",
+    "pregunta": "Why did the writer agree to go to the shopping centre?",
+    "opciones": [
+     "She needed to buy something for her club.",
+     "She wanted to make her friend happy.",
+     "She had money to spend."
+    ],
+    "correcta": 1,
+    "explicacion": "«But Ellie sounded so happy that I agreed» (B). No le gusta ir de compras y solo tenía diez libras (C no); las fotos eran para el club, pero no iba a comprar nada (A no)."
+   },
+   {
+    "n": 3,
+    "tipo": "opciones",
+    "pregunta": "What does “it” refer to in the fourth paragraph: “it was delicious”?",
+    "opciones": [
+     "the cheese sandwich",
+     "the bowl of noodles",
+     "the chocolate cake"
+    ],
+    "correcta": 2,
+    "explicacion": "Cuesta seis libras y es «a huge chocolate cake», que compartieron (C). El sándwich y los noodles no se mencionan con precio ni se comparten."
+   },
+   {
+    "n": 4,
+    "tipo": "opciones",
+    "pregunta": "What did the writer think about Tom's music?",
+    "opciones": [
+     "She was surprised that he played so well.",
+     "She thought it was too loud for the centre.",
+     "She already knew his band was famous."
+    ],
+    "correcta": 0,
+    "explicacion": "«I didn't know he was so good!» (A). No dice que fuera demasiado alta (B) ni conocía a la banda de antes (C)."
+   },
+   {
+    "n": 5,
+    "tipo": "opciones",
+    "pregunta": "What is the writer's opinion of her day at the end of the blog post?",
+    "opciones": [
+     "She regrets not going to the lake.",
+     "She is sorry she spent so much money.",
+     "She enjoyed the day more than she expected."
+    ],
+    "correcta": 2,
+    "explicacion": "«Strangely, I didn't mind» y se lleva un libro, una tarjeta y mucho que escribir: el día fue mejor de lo esperado (C). No lamenta lo del lago (A) y no se arrepiente del gasto (B)."
+   }
+  ],
+  "examenNumero": 1
+ },
+ {
+  "id": "b1-reading-use-4-x1",
+  "examen": "b1",
+  "destreza": "reading-use",
+  "parte": 4,
+  "nombreParte": "Gapped text",
+  "titulo": "My first charity run",
+  "instrucciones": "Read the blog post about a charity run in the park. Five sentences have been removed from the text. Choose from the sentences A–H the one which fits each gap (1–5). There are three extra sentences which you do not need to use.",
+  "minutos": 8,
+  "texto": "Last Saturday I took part in the Park Run for Hope, a five-kilometre charity race in Greenfield Park. I am not a sporty person, so my friends were surprised when I told them about it. My cousin Leo had asked me to join his team a month earlier, and I finally said yes.\n\n{{1}} I downloaded a training plan and started running three mornings a week before school. At first I could only run for five minutes without stopping, and my legs hurt all the time.\n\n{{2}} After two weeks, I could run for fifteen minutes, and by the end of the month I felt much stronger. I also asked my family and neighbours to give money for the charity. My grandmother gave me twenty pounds, which was a wonderful start.\n\nOn the day of the race, the park was full of people in bright blue T-shirts. There was loud music, and a man with a microphone was telling everyone to smile.\n\n{{3}} Leo and I stood together near the back, because we didn't want to get in anybody's way.\n\nThe first kilometre was easy, but then I started to feel tired. Suddenly I heard somebody shouting my name from the side of the road.\n\n{{4}} She was holding a big sign that said 'Go, Maya!' and it made me laugh. After that, I felt much better and kept running.\n\nI finished the race in thirty-eight minutes, which was slower than Leo but faster than I had expected. At the finish line, volunteers gave us water and a medal.\n\n{{5}} Together our team collected more than four hundred pounds for the children's hospital. I'm already planning to run again next year, and this time I'm going to ask even more people to join me.",
+  "opcionesComunes": [
+   "It was my best friend, Nina, who had come to watch us.",
+   "I was very nervous, but the noise made everything feel exciting.",
+   "Then I realised that the hard work was starting to help.",
+   "I was really proud of myself, and even prouder when I heard the final total.",
+   "The next day, the weather turned cold and it rained all afternoon.",
+   "I wanted to do well, so I decided to prepare properly.",
+   "Leo has run in many races and he always wins a prize.",
+   "Nobody told me that the park would be closed on Saturdays."
+  ],
+  "items": [
+   {
+    "n": 1,
+    "tipo": "emparejar",
+    "pregunta": "Gap 1",
+    "correcta": 5,
+    "explicacion": "«I wanted to do well, so I decided to prepare properly» enlaza con «I finally said yes» y explica el plan de entrenamiento que viene después («I downloaded a training plan»)."
+   },
+   {
+    "n": 2,
+    "tipo": "emparejar",
+    "pregunta": "Gap 2",
+    "correcta": 2,
+    "explicacion": "«Then I realised that the hard work was starting to help» contrasta con las piernas doloridas y conecta con «After two weeks, I could run for fifteen minutes»."
+   },
+   {
+    "n": 3,
+    "tipo": "emparejar",
+    "pregunta": "Gap 3",
+    "correcta": 1,
+    "explicacion": "«the noise» se refiere a la música alta del párrafo anterior, y los nervios explican por qué Maya y Leo se quedan al fondo."
+   },
+   {
+    "n": 4,
+    "tipo": "emparejar",
+    "pregunta": "Gap 4",
+    "correcta": 0,
+    "explicacion": "«She was holding a big sign» necesita un «she» antes: Nina, que aparece en la frase A. Responde a «somebody shouting my name»."
+   },
+   {
+    "n": 5,
+    "tipo": "emparejar",
+    "pregunta": "Gap 5",
+    "correcta": 3,
+    "explicacion": "«the final total» anticipa «Together our team collected more than four hundred pounds». La frase G es tentadora por mencionar a Leo, pero contradice que Maya acabó más lenta que él sin hablar de premios, y no encaja con el final."
+   }
+  ],
+  "examenNumero": 1
+ },
+ {
+  "id": "b1-reading-use-5-x1",
+  "examen": "b1",
+  "destreza": "reading-use",
+  "parte": 5,
+  "nombreParte": "Multiple-choice cloze",
+  "titulo": "Cooking with Grandma",
+  "instrucciones": "For questions 1–6, read the text below and decide which answer (A, B, C or D) best fits each gap.",
+  "minutos": 8,
+  "texto": "Hi Tom,\n\nGuess what? Last weekend I {{1}} to make bread with my grandmother! I went to her house on Saturday morning and she was already waiting for me in the kitchen. First, she showed me {{2}} to mix the flour, water and yeast. Then we had to wait for an hour, so we sat down and she told me stories about her childhood.\n\nWhen the dough was ready, I put it in the oven. I was a bit nervous {{3}} I didn't want to burn it, but Grandma said, \"Don't worry, it's easy!\" She was right. The bread smelled wonderful and it tasted {{4}} better than the bread from the supermarket.\n\nNow I want to learn more recipes. Grandma has promised to teach me how to make her famous apple cake next week, {{5}} I'm really looking forward {{6}} it. Why don't you come and try some with us?\n\nSpeak soon,\nLucy",
+  "items": [
+   {
+    "n": 1,
+    "tipo": "opciones",
+    "opciones": [
+     "learnt",
+     "taught",
+     "studied",
+     "knew"
+    ],
+    "correcta": 0,
+    "explicacion": "\"Learn to + verbo\" significa aprender a hacer algo. \"Taught\" necesitaría un complemento de persona (\"taught me to\"), y \"studied\" y \"knew\" no se usan así."
+   },
+   {
+    "n": 2,
+    "tipo": "opciones",
+    "opciones": [
+     "what",
+     "how",
+     "why",
+     "who"
+    ],
+    "correcta": 1,
+    "explicacion": "\"Show someone how to + verbo\" explica el modo de hacer algo. Las otras opciones no encajan con \"to mix\"."
+   },
+   {
+    "n": 3,
+    "tipo": "opciones",
+    "opciones": [
+     "so",
+     "but",
+     "because",
+     "although"
+    ],
+    "correcta": 2,
+    "explicacion": "\"Because\" introduce la razón del nerviosismo. \"So\" indica consecuencia y \"but\" y \"although\" expresan contraste."
+   },
+   {
+    "n": 4,
+    "tipo": "opciones",
+    "opciones": [
+     "much",
+     "very",
+     "more",
+     "too"
+    ],
+    "correcta": 0,
+    "explicacion": "\"Much better\" es la forma habitual de reforzar un comparativo. \"Very\" no se usa con comparativos, y \"too better\" y \"more better\" son incorrectos."
+   },
+   {
+    "n": 5,
+    "tipo": "opciones",
+    "opciones": [
+     "but",
+     "so",
+     "or",
+     "if"
+    ],
+    "correcta": 1,
+    "explicacion": "\"So\" une la consecuencia: la abuela le enseñará la tarta, por eso Lucy tiene muchas ganas. \"But\" y \"or\" no encajan con el sentido."
+   },
+   {
+    "n": 6,
+    "tipo": "opciones",
+    "opciones": [
+     "for",
+     "at",
+     "to",
+     "on"
+    ],
+    "correcta": 2,
+    "explicacion": "\"Look forward to\" es un verbo con preposición fija: \"to\". Las otras preposiciones no se usan con este phrasal verb."
+   }
+  ],
+  "examenNumero": 1
+ },
+ {
+  "id": "b1-reading-use-6-x1",
+  "examen": "b1",
+  "destreza": "reading-use",
+  "parte": 6,
+  "nombreParte": "Open cloze",
+  "titulo": "Riverside Music Day",
+  "instrucciones": "For questions 1–6, read the text below and think of the word which best fits each gap. Use only one word in each gap.",
+  "minutos": 7,
+  "texto": "Hi Tom,\n\nGuess what! My brother and I are going to the Riverside Music Day next Saturday. It takes place {{1}} the park near the old bridge, and it starts at noon. There are six bands, and most of them are from our town. I have already listened {{2}} their songs online, and they are really good!\n\nTickets are only ten pounds, but you have to buy them before Friday. If you don't buy one soon, you {{3}} not be able to come with us. Do you want to join us? We can meet at the station and walk to the park together. Remember to bring a coat, because it might rain. There isn't {{4}} shade in the park, so a hat is also a good idea. You can bring your own food, but there are {{5}} a lot of cheap burger stands, too.\n\nPlease tell me today if you can come. I'm sure you will enjoy it, {{6}} you like live music!\n\nSam",
+  "items": [
+   {
+    "n": 1,
+    "tipo": "palabra",
+    "correctas": [
+     "in"
+    ],
+    "explicacion": "\"Takes place in the park\": preposición de lugar con un espacio grande como un parque."
+   },
+   {
+    "n": 2,
+    "tipo": "palabra",
+    "correctas": [
+     "to"
+    ],
+    "explicacion": "\"Listen to\" es el verbo con preposición fijo: listened to their songs."
+   },
+   {
+    "n": 3,
+    "tipo": "palabra",
+    "correctas": [
+     "might",
+     "may",
+     "will"
+    ],
+    "explicacion": "Primer condicional: \"If you don't buy one soon, you might not be able to come\". Se necesita un modal."
+   },
+   {
+    "n": 4,
+    "tipo": "palabra",
+    "correctas": [
+     "much",
+     "any"
+    ],
+    "explicacion": "\"Isn't much shade\" / \"isn't any shade\": cuantificador con un nombre incontable en frase negativa."
+   },
+   {
+    "n": 5,
+    "tipo": "palabra",
+    "correctas": [
+     "also"
+    ],
+    "explicacion": "\"There are also a lot of cheap burger stands\" = además hay muchos puestos. \"Also\" va después de are."
+   },
+   {
+    "n": 6,
+    "tipo": "palabra",
+    "correctas": [
+     "if"
+    ],
+    "explicacion": "\"I'm sure you will enjoy it, if you like live music\": conjunción condicional."
+   }
+  ],
+  "examenNumero": 1
+ },
+ {
+  "id": "b1-writing-1-x1",
+  "examen": "b1",
+  "destreza": "writing",
+  "parte": 1,
+  "nombreParte": "Email",
+  "instrucciones": "You must answer this question. Write your answer in about 100 words.",
+  "minutos": 20,
+  "items": [
+   {
+    "n": 1,
+    "tipo": "redaccion",
+    "tipoTexto": "email",
+    "enunciado": "You have received this email from your English friend Sam.\n\nFrom: Sam\nSubject: Funny story!\n\nHi,\n\nGuess what? On our family holiday in Spain last week, I ordered \"a sandwich\" in a café and the waiter brought me a huge plate of chips with an egg on top! Everyone laughed, and I ate it all anyway. It was delicious!\n\nHave you ever had a funny misunderstanding when you were away from home? Tell me about it.\n\nAlso, I'm planning a trip with my cousins in the summer. Where do you think we should go? And what could we do there?\n\nThanks for your help!\nSam\n\nWrite your email to Sam in about 100 words. In your email you should:\n• react to Sam's story\n• describe a funny misunderstanding you had\n• suggest a place to go\n• say what Sam and his cousins could do there.",
+    "minPalabras": 90,
+    "maxPalabras": 130,
+    "modelo": "Hi Sam,\n\nHa ha, that's a great story! I'm sure the chips and egg were better than a normal sandwich. I love food surprises like that.\n\nI had a funny misunderstanding in Italy two years ago. I asked a woman in a shop for \"a map\", but she thought I wanted a cap, so she gave me a blue baseball cap! I was too shy to say no, so I bought it. I still wear it today!\n\nFor your summer trip, I think you should go to Portugal. The beaches are beautiful and the weather is hot. You and your cousins could surf, visit old towns and try the fresh fish. It would be a fantastic holiday!\n\nWrite soon,\nLucas",
+    "criterios": [
+     "Content: he tratado los cuatro puntos (reaccionar a la historia, contar un malentendido, sugerir un lugar y decir qué hacer allí) y el mensaje queda claro.",
+     "Communicative Achievement: el registro es informal y amistoso, adecuado para un amigo (saludo, tono cercano, despedida) y respondo a lo que Sam pregunta.",
+     "Organisation: párrafos cortos y ordenados (reacción, historia, sugerencia), con conectores sencillos como so, because, and, but, also.",
+     "Language: vocabulario y estructuras de B1 (pasado simple, should, could, would) con pocos errores que no estorben la comprensión."
+    ],
+    "explicacion": "El modelo, de unas 120 palabras, cubre los cuatro puntos del enunciado: reacciona a la anécdota de Sam, cuenta un malentendido propio en pasado, sugiere un lugar (Portugal) y propone actividades con could. El registro es informal (saludo, tono cercano, despedida) y cada párrafo tiene una función clara."
+   }
+  ],
+  "examenNumero": 1
+ },
+ {
+  "id": "b1-writing-2-x1",
+  "examen": "b1",
+  "destreza": "writing",
+  "parte": 2,
+  "nombreParte": "Choice of task",
+  "instrucciones": "Write an answer to ONE of the questions 2 or 3 in this part. Write your answer in about 100 words.",
+  "minutos": 25,
+  "elegir": 1,
+  "items": [
+   {
+    "n": 2,
+    "tipo": "redaccion",
+    "tipoTexto": "composition",
+    "enunciado": "You see this notice in your school English-language magazine:\n\n“Articles wanted! Have you started a new hobby this year? Write an article about it. Tell us why you chose it, what is difficult about it and what advice you would give to other students who want to try it.”\n\nWrite your article. Write about 100 words.",
+    "minPalabras": 90,
+    "maxPalabras": 130,
+    "modelo": "My first guitar\n\nLast spring I decided to learn the guitar because my cousin plays in a band and I wanted to join him one day. My uncle gave me his old guitar, and I started with some videos online.\n\nThe most difficult thing is the fingers. At the beginning they hurt a lot, and changing from one chord to another is very slow. Sometimes I want to stop, but then I play a simple song and feel proud.\n\nMy advice is to practise for fifteen minutes every day instead of two hours once a week. Choose songs you really like, and don't worry about mistakes. You will get better more quickly than you think!",
+    "criterios": [
+     "Content: he contestado a los tres puntos del enunciado (por qué elegí la afición, qué es difícil y qué consejo doy).",
+     "Communicative Achievement: uso un tono amable y directo para los lectores de la revista del colegio, con un título y un cierre que animan a probar.",
+     "Organisation: párrafos cortos y claros (introducción, dificultad, consejo) con conectores sencillos como because, but, then, so.",
+     "Language: vocabulario básico de aficiones y música, presente simple y pasado simple correctos, y algún verbo de consejo (should, you can)."
+    ],
+    "explicacion": "Un artículo para la revista del colegio lleva título, un tono cercano y se organiza según los tres puntos que pide el enunciado: motivo, dificultad y consejo. Se escribe en un inglés sencillo, con frases cortas y algún conector. Con unas 100 palabras basta; no hace falta un estilo complicado."
+   },
+   {
+    "n": 3,
+    "tipo": "redaccion",
+    "tipoTexto": "composition",
+    "enunciado": "Your English teacher has asked you to write a story. Your story must begin with this sentence:\n\nWhen Mia opened the old case, she found a guitar with a small note inside.\n\nWrite your story. Write about 100 words.",
+    "minPalabras": 90,
+    "maxPalabras": 130,
+    "modelo": "When Mia opened the old case, she found a guitar with a small note inside. The note said, “Play me and you will make someone happy.”\n\nMia was a little surprised. She had never played the guitar, but she took it to her room and tried a few notes. The sound was beautiful.\n\nThe next day she showed the guitar to her grandfather. He smiled and told her it was his guitar from when he was young. He asked her to play something for him. Mia played the only song she knew, very slowly. Her grandfather closed his eyes and sang quietly. Then Mia understood the note. She decided to learn more songs for him every week.",
+    "criterios": [
+     "Content: empiezo con la frase dada y cuento una historia completa, con principio, desarrollo y final, relacionada con la guitarra y la nota.",
+     "Communicative Achievement: la historia es fácil de seguir y mantiene el interés de la profesora con algún detalle (el abuelo, el sonido, la nota).",
+     "Organisation: los hechos van en orden, con párrafos cortos y palabras de secuencia como then, the next day, after that.",
+     "Language: tiempos del pasado correctos (simple past y past continuous), vocabulario sencillo y algo de estilo directo con comillas."
+    ],
+    "explicacion": "En el story la primera frase viene dada y hay que copiarla tal cual al empezar. Se escribe en pasado, con una secuencia clara de hechos y un final cerrado. Basta con unas 100 palabras; mejor frases sencillas y correctas que intentar algo complicado."
+   }
+  ],
+  "examenNumero": 1
+ },
+ {
+  "id": "b1-listening-2-x1",
+  "examen": "b1",
+  "destreza": "listening",
+  "parte": 2,
+  "nombreParte": "Multiple choice (monologue)",
+  "titulo": "A weekend at a campsite",
+  "instrucciones": "You will hear an interview with a girl called Nora Fletcher, who spent a weekend at a campsite with her friends. For each question, choose the correct answer (A, B or C). You hear the recording twice.",
+  "minutos": 8,
+  "audio": {
+   "archivo": "audio/b1-listening-2-x1.mp3",
+   "veces": 2,
+   "hablantes": [
+    {
+     "id": "sup",
+     "descripcion": "Supervisor",
+     "voz": "en-GB-LibbyNeural"
+    },
+    {
+     "id": "int",
+     "descripcion": "Interviewer",
+     "voz": "en-GB-RyanNeural"
+    },
+    {
+     "id": "nor",
+     "descripcion": "Nora Fletcher",
+     "voz": "en-GB-SoniaNeural"
+    }
+   ],
+   "guion": [
+    {
+     "quien": "sup",
+     "texto": "Part Two. You will hear an interview with a girl called Nora Fletcher, who spent a weekend at a campsite with her friends. For each question, choose the correct answer, A, B or C. You now have forty-five seconds to look at Part Two."
+    },
+    {
+     "pausa": 45000
+    },
+    {
+     "quien": "int",
+     "texto": "Nora, you went camping last weekend with some friends. Whose idea was it?"
+    },
+    {
+     "quien": "nor",
+     "texto": "Mine, really. My brother usually organises our trips, but he was busy with exams, so I asked my friends if they wanted to go. I found a small campsite near a lake on the internet. It was quite cheap, which was important because we don't have much money."
+    },
+    {
+     "quien": "int",
+     "texto": "How did you get there?"
+    },
+    {
+     "quien": "nor",
+     "texto": "We wanted to go by train, but there wasn't one on Friday evening. So my friend Jake's mum drove us in her van. It took about an hour, and we sang songs all the way. We arrived when it was nearly dark."
+    },
+    {
+     "quien": "int",
+     "texto": "That sounds like a lot of fun. Was it easy to put up the tents?"
+    },
+    {
+     "quien": "nor",
+     "texto": "Not at all! It was my first time, and the instructions were very confusing. It started to rain, too. Luckily, a family from the next tent saw us and came to help. In the end, we finished in about twenty minutes, and then we all felt much better."
+    },
+    {
+     "quien": "int",
+     "texto": "What did you do on Saturday?"
+    },
+    {
+     "quien": "nor",
+     "texto": "The weather was lovely, so we spent the morning on the lake in a small boat. I was a bit afraid at first because I can't swim very well, but I wore a life jacket and soon I relaxed. In the afternoon, we played football with some other teenagers. I'm not good at it, but it didn't matter."
+    },
+    {
+     "quien": "int",
+     "texto": "And what about food? Did you cook on a fire?"
+    },
+    {
+     "quien": "nor",
+     "texto": "We tried to! Jake said he knew how to make a fire, but it took ages and the sausages were black outside and cold inside. So in the end we ate bread and cheese. The next morning, we went to the campsite shop and had a proper breakfast with eggs and toast."
+    },
+    {
+     "quien": "int",
+     "texto": "Would you go again?"
+    },
+    {
+     "quien": "nor",
+     "texto": "Definitely. The only problem was sleeping. It was very cold at night, and I only had a thin bag. Next time I'll take a thicker one and a warm hat. But I'd like to stay for a whole week, not just a weekend, because I didn't want to come home."
+    },
+    {
+     "pausa": 8000
+    },
+    {
+     "quien": "sup",
+     "texto": "Now you will hear it again."
+    },
+    {
+     "pausa": 1500
+    },
+    {
+     "quien": "int",
+     "texto": "Nora, you went camping last weekend with some friends. Whose idea was it?"
+    },
+    {
+     "quien": "nor",
+     "texto": "Mine, really. My brother usually organises our trips, but he was busy with exams, so I asked my friends if they wanted to go. I found a small campsite near a lake on the internet. It was quite cheap, which was important because we don't have much money."
+    },
+    {
+     "quien": "int",
+     "texto": "How did you get there?"
+    },
+    {
+     "quien": "nor",
+     "texto": "We wanted to go by train, but there wasn't one on Friday evening. So my friend Jake's mum drove us in her van. It took about an hour, and we sang songs all the way. We arrived when it was nearly dark."
+    },
+    {
+     "quien": "int",
+     "texto": "That sounds like a lot of fun. Was it easy to put up the tents?"
+    },
+    {
+     "quien": "nor",
+     "texto": "Not at all! It was my first time, and the instructions were very confusing. It started to rain, too. Luckily, a family from the next tent saw us and came to help. In the end, we finished in about twenty minutes, and then we all felt much better."
+    },
+    {
+     "quien": "int",
+     "texto": "What did you do on Saturday?"
+    },
+    {
+     "quien": "nor",
+     "texto": "The weather was lovely, so we spent the morning on the lake in a small boat. I was a bit afraid at first because I can't swim very well, but I wore a life jacket and soon I relaxed. In the afternoon, we played football with some other teenagers. I'm not good at it, but it didn't matter."
+    },
+    {
+     "quien": "int",
+     "texto": "And what about food? Did you cook on a fire?"
+    },
+    {
+     "quien": "nor",
+     "texto": "We tried to! Jake said he knew how to make a fire, but it took ages and the sausages were black outside and cold inside. So in the end we ate bread and cheese. The next morning, we went to the campsite shop and had a proper breakfast with eggs and toast."
+    },
+    {
+     "quien": "int",
+     "texto": "Would you go again?"
+    },
+    {
+     "quien": "nor",
+     "texto": "Definitely. The only problem was sleeping. It was very cold at night, and I only had a thin bag. Next time I'll take a thicker one and a warm hat. But I'd like to stay for a whole week, not just a weekend, because I didn't want to come home."
+    },
+    {
+     "pausa": 8000
+    },
+    {
+     "quien": "sup",
+     "texto": "That is the end of Part Two."
+    }
+   ]
+  },
+  "items": [
+   {
+    "n": 1,
+    "tipo": "opciones",
+    "pregunta": "Why did Nora choose the campsite?",
+    "opciones": [
+     "It was not expensive.",
+     "It was close to her home.",
+     "Her brother had recommended it."
+    ],
+    "correcta": 0,
+    "explicacion": "Dice «It was quite cheap, which was important». No habla de cercanía a su casa (B) y su hermano estaba ocupado con los exámenes, no lo recomendó (C)."
+   },
+   {
+    "n": 2,
+    "tipo": "opciones",
+    "pregunta": "How did the friends travel to the campsite?",
+    "opciones": [
+     "by train",
+     "by car with a friend's mother",
+     "by bus"
+    ],
+    "correcta": 1,
+    "explicacion": "«There wasn't one [train] on Friday evening. So my friend Jake's mum drove us in her van» (B). El tren era lo que querían, pero no pudieron (A). El autobús no se menciona (C)."
+   },
+   {
+    "n": 3,
+    "tipo": "opciones",
+    "pregunta": "What happened when they put up the tents?",
+    "opciones": [
+     "They had no instructions.",
+     "Some people helped them.",
+     "They finished very quickly."
+    ],
+    "correcta": 1,
+    "explicacion": "«A family from the next tent saw us and came to help» (B). Sí tenían instrucciones, aunque confusas (A), y tardaron unos veinte minutos pero lo importante no fue la rapidez (C)."
+   },
+   {
+    "n": 4,
+    "tipo": "opciones",
+    "pregunta": "How did Nora feel about the boat trip?",
+    "opciones": [
+     "She was nervous at the beginning.",
+     "She was bored all morning.",
+     "She was angry with her friends."
+    ],
+    "correcta": 0,
+    "explicacion": "«I was a bit afraid at first… soon I relaxed» (A). No se aburrió (B) ni se enfadó (C)."
+   },
+   {
+    "n": 5,
+    "tipo": "opciones",
+    "pregunta": "What did they eat for dinner on Saturday?",
+    "opciones": [
+     "sausages cooked on a fire",
+     "bread and cheese",
+     "eggs and toast"
+    ],
+    "correcta": 1,
+    "explicacion": "Las salchichas salieron mal y «in the end we ate bread and cheese» (B). Los huevos con tostadas fueron el desayuno del día siguiente (C)."
+   },
+   {
+    "n": 6,
+    "tipo": "opciones",
+    "pregunta": "What would Nora change about her next camping trip?",
+    "opciones": [
+     "She would bring a warmer sleeping bag.",
+     "She would travel by train.",
+     "She would invite more friends."
+    ],
+    "correcta": 0,
+    "explicacion": "«Next time I'll take a thicker one [bag] and a warm hat» (A). No dice nada de cambiar el transporte (B) ni de invitar a más gente (C)."
+   }
+  ],
+  "examenNumero": 1
+ },
+ {
+  "id": "b1-listening-1-x1",
+  "examen": "b1",
+  "destreza": "listening",
+  "parte": 1,
+  "nombreParte": "Short dialogues",
+  "instrucciones": "You will hear seven short recordings. For each question, choose the correct answer (A, B or C). You hear each recording twice.",
+  "minutos": 8,
+  "texto": "Questions 1–7\nYou hear seven short recordings about keeping fit without a gym. Choose the correct answer for each question.",
+  "audio": {
+   "archivo": "audio/b1-listening-1-x1.mp3",
+   "veces": 2,
+   "hablantes": [
+    {
+     "id": "sup",
+     "descripcion": "Supervisor",
+     "voz": "en-GB-LibbyNeural"
+    },
+    {
+     "id": "m1",
+     "descripcion": "Man or boy 1",
+     "voz": "en-GB-RyanNeural"
+    },
+    {
+     "id": "f1",
+     "descripcion": "Woman or girl 1",
+     "voz": "en-GB-SoniaNeural"
+    },
+    {
+     "id": "m2",
+     "descripcion": "Man 2",
+     "voz": "en-GB-ThomasNeural"
+    },
+    {
+     "id": "f2",
+     "descripcion": "Woman 2",
+     "voz": "en-IE-EmilyNeural"
+    },
+    {
+     "id": "m3",
+     "descripcion": "Man or boy 3",
+     "voz": "en-IE-ConnorNeural"
+    },
+    {
+     "id": "f3",
+     "descripcion": "Woman or girl 3",
+     "voz": "en-AU-NatashaNeural"
+    }
+   ],
+   "guion": [
+    {
+     "quien": "sup",
+     "texto": "English Lab. B1 Preliminary. Listening test. Part One. You will hear seven short recordings. For each question, choose the correct answer, A, B or C. You will hear each recording twice."
+    },
+    {
+     "pausa": 2000
+    },
+    {
+     "quien": "sup",
+     "texto": "Question one. Where will the girl run tomorrow morning?"
+    },
+    {
+     "pausa": 4000
+    },
+    {
+     "quien": "f1",
+     "texto": "Are you still coming for a run tomorrow morning?"
+    },
+    {
+     "quien": "m1",
+     "texto": "Yes, but I thought the park was closed for the food festival."
+    },
+    {
+     "quien": "f1",
+     "texto": "It is, so I've found somewhere else. The big field behind the primary school. It's flat and the grass is soft."
+    },
+    {
+     "quien": "m1",
+     "texto": "Better than the beach. Running on sand hurt my legs last time."
+    },
+    {
+     "pausa": 3000
+    },
+    {
+     "quien": "sup",
+     "texto": "Now you will hear it again."
+    },
+    {
+     "pausa": 1000
+    },
+    {
+     "quien": "f1",
+     "texto": "Are you still coming for a run tomorrow morning?"
+    },
+    {
+     "quien": "m1",
+     "texto": "Yes, but I thought the park was closed for the food festival."
+    },
+    {
+     "quien": "f1",
+     "texto": "It is, so I've found somewhere else. The big field behind the primary school. It's flat and the grass is soft."
+    },
+    {
+     "quien": "m1",
+     "texto": "Better than the beach. Running on sand hurt my legs last time."
+    },
+    {
+     "pausa": 4000
+    },
+    {
+     "quien": "sup",
+     "texto": "Question two. Why does the man walk to work now?"
+    },
+    {
+     "pausa": 4000
+    },
+    {
+     "quien": "f2",
+     "texto": "I thought you cycled to work every day."
+    },
+    {
+     "quien": "m2",
+     "texto": "I did, but not any more. My bike is fine, I just don't need it. The company moved to the High Street in March, so it's only ten minutes on foot."
+    },
+    {
+     "quien": "f2",
+     "texto": "That must save you money."
+    },
+    {
+     "quien": "m2",
+     "texto": "A little, but that's not why I do it. It's just so close."
+    },
+    {
+     "pausa": 3000
+    },
+    {
+     "quien": "sup",
+     "texto": "Now you will hear it again."
+    },
+    {
+     "pausa": 1000
+    },
+    {
+     "quien": "f2",
+     "texto": "I thought you cycled to work every day."
+    },
+    {
+     "quien": "m2",
+     "texto": "I did, but not any more. My bike is fine, I just don't need it. The company moved to the High Street in March, so it's only ten minutes on foot."
+    },
+    {
+     "quien": "f2",
+     "texto": "That must save you money."
+    },
+    {
+     "quien": "m2",
+     "texto": "A little, but that's not why I do it. It's just so close."
+    },
+    {
+     "pausa": 4000
+    },
+    {
+     "quien": "sup",
+     "texto": "Question three. What time will tomorrow's yoga class start?"
+    },
+    {
+     "pausa": 4000
+    },
+    {
+     "quien": "f3",
+     "texto": "Hello everyone, it's Maria with a message about the online yoga class. We usually start at quarter past six, but tomorrow I'm coming home on a late train, so we'll begin half an hour later than normal. Please bring a mat and a bottle of water. See you then!"
+    },
+    {
+     "pausa": 3000
+    },
+    {
+     "quien": "sup",
+     "texto": "Now you will hear it again."
+    },
+    {
+     "pausa": 1000
+    },
+    {
+     "quien": "f3",
+     "texto": "Hello everyone, it's Maria with a message about the online yoga class. We usually start at quarter past six, but tomorrow I'm coming home on a late train, so we'll begin half an hour later than normal. Please bring a mat and a bottle of water. See you then!"
+    },
+    {
+     "pausa": 4000
+    },
+    {
+     "quien": "sup",
+     "texto": "Question four. Why does the boy like skipping with a rope?"
+    },
+    {
+     "pausa": 4000
+    },
+    {
+     "quien": "f1",
+     "texto": "Is skipping really better than running? You do it all the time."
+    },
+    {
+     "quien": "m3",
+     "texto": "Not better. Running is more fun for me, to be honest. But the rope goes in my school bag, so I can skip in the garden, in the car park, even at the station while I wait for my train. It wasn't expensive either, but that's not the reason."
+    },
+    {
+     "pausa": 3000
+    },
+    {
+     "quien": "sup",
+     "texto": "Now you will hear it again."
+    },
+    {
+     "pausa": 1000
+    },
+    {
+     "quien": "f1",
+     "texto": "Is skipping really better than running? You do it all the time."
+    },
+    {
+     "quien": "m3",
+     "texto": "Not better. Running is more fun for me, to be honest. But the rope goes in my school bag, so I can skip in the garden, in the car park, even at the station while I wait for my train. It wasn't expensive either, but that's not the reason."
+    },
+    {
+     "pausa": 4000
+    },
+    {
+     "quien": "sup",
+     "texto": "Question five. What would the girl like for her birthday?"
+    },
+    {
+     "pausa": 4000
+    },
+    {
+     "quien": "m2",
+     "texto": "Your birthday is next week. Do you need new trainers for your running?"
+    },
+    {
+     "quien": "f3",
+     "texto": "No, mine are fine. And Gran already gave me a water bottle. What I'd really like is something for my wrist that counts my steps and shows my heart rate."
+    },
+    {
+     "quien": "m2",
+     "texto": "OK, I'll see what they have in town."
+    },
+    {
+     "pausa": 3000
+    },
+    {
+     "quien": "sup",
+     "texto": "Now you will hear it again."
+    },
+    {
+     "pausa": 1000
+    },
+    {
+     "quien": "m2",
+     "texto": "Your birthday is next week. Do you need new trainers for your running?"
+    },
+    {
+     "quien": "f3",
+     "texto": "No, mine are fine. And Gran already gave me a water bottle. What I'd really like is something for my wrist that counts my steps and shows my heart rate."
+    },
+    {
+     "quien": "m2",
+     "texto": "OK, I'll see what they have in town."
+    },
+    {
+     "pausa": 4000
+    },
+    {
+     "quien": "sup",
+     "texto": "Question six. What does the teacher say students should bring on Thursday?"
+    },
+    {
+     "pausa": 4000
+    },
+    {
+     "quien": "m1",
+     "texto": "Good morning, everyone. A reminder about Thursday's lunchtime walk. Meet at the main gate at twelve. The canteen will give you a sandwich, so there's no need to bring lunch. The forecast is cold and windy, so think about your jacket and a hat. Mr Lee knows the way, so nobody needs a map."
+    },
+    {
+     "pausa": 3000
+    },
+    {
+     "quien": "sup",
+     "texto": "Now you will hear it again."
+    },
+    {
+     "pausa": 1000
+    },
+    {
+     "quien": "m1",
+     "texto": "Good morning, everyone. A reminder about Thursday's lunchtime walk. Meet at the main gate at twelve. The canteen will give you a sandwich, so there's no need to bring lunch. The forecast is cold and windy, so think about your jacket and a hat. Mr Lee knows the way, so nobody needs a map."
+    },
+    {
+     "pausa": 4000
+    },
+    {
+     "quien": "sup",
+     "texto": "Question seven. What is the girl's problem with her exercise challenge?"
+    },
+    {
+     "pausa": 4000
+    },
+    {
+     "quien": "m3",
+     "texto": "How's the thirty-day exercise challenge going?"
+    },
+    {
+     "quien": "f1",
+     "texto": "I'm on day twelve. I like the exercises, and my phone reminds me every night, so I don't forget. The problem is homework and my Saturday job. Some days I only have ten minutes."
+    },
+    {
+     "quien": "m3",
+     "texto": "Ten minutes is better than nothing."
+    },
+    {
+     "pausa": 3000
+    },
+    {
+     "quien": "sup",
+     "texto": "Now you will hear it again."
+    },
+    {
+     "pausa": 1000
+    },
+    {
+     "quien": "m3",
+     "texto": "How's the thirty-day exercise challenge going?"
+    },
+    {
+     "quien": "f1",
+     "texto": "I'm on day twelve. I like the exercises, and my phone reminds me every night, so I don't forget. The problem is homework and my Saturday job. Some days I only have ten minutes."
+    },
+    {
+     "quien": "m3",
+     "texto": "Ten minutes is better than nothing."
+    },
+    {
+     "pausa": 4000
+    },
+    {
+     "quien": "sup",
+     "texto": "That is the end of Part One."
+    }
+   ]
+  },
+  "items": [
+   {
+    "n": 1,
+    "tipo": "opciones",
+    "pregunta": "Where will the girl run tomorrow morning?",
+    "opciones": [
+     "on the beach",
+     "in the park",
+     "on grass near a school"
+    ],
+    "correcta": 2,
+    "explicacion": "El parque está cerrado por el festival (B no) y la playa la menciona el chico, no ella (A no). Ella propone «the big field behind the primary school» (C)."
+   },
+   {
+    "n": 2,
+    "tipo": "opciones",
+    "pregunta": "Why does the man walk to work now?",
+    "opciones": [
+     "The office is nearer now.",
+     "His bike is broken.",
+     "He wants to save money."
+    ],
+    "correcta": 0,
+    "explicacion": "Dice «My bike is fine» (B no). La empresa se mudó y está a diez minutos a pie (A). Ahorrar dinero es un poco, pero «that's not why» (C no)."
+   },
+   {
+    "n": 3,
+    "tipo": "opciones",
+    "pregunta": "What time will tomorrow's yoga class start?",
+    "opciones": [
+     "6.15",
+     "6.45",
+     "7.15"
+    ],
+    "correcta": 1,
+    "explicacion": "Normalmente empieza a «quarter past six» (6.15), pero mañana será «half an hour later», es decir, a las 6.45 (B)."
+   },
+   {
+    "n": 4,
+    "tipo": "opciones",
+    "pregunta": "Why does the boy like skipping with a rope?",
+    "opciones": [
+     "It costs very little.",
+     "It is more fun than running.",
+     "It can be done anywhere."
+    ],
+    "correcta": 2,
+    "explicacion": "La cuerda cabe en la mochila y la usa en el jardín, el aparcamiento o la estación (C). Dice que no era cara pero «that's not the reason» (A no) y que correr le divierte más (B no)."
+   },
+   {
+    "n": 5,
+    "tipo": "opciones",
+    "pregunta": "What would the girl like for her birthday?",
+    "opciones": [
+     "a fitness watch",
+     "new trainers",
+     "a water bottle"
+    ],
+    "correcta": 0,
+    "explicacion": "Sus zapatillas están bien (B no) y ya tiene una botella de su abuela (C no). Quiere algo en la muñeca que cuente pasos y muestre el pulso: un reloj deportivo (A)."
+   },
+   {
+    "n": 6,
+    "tipo": "opciones",
+    "pregunta": "What does the teacher say students should bring on Thursday?",
+    "opciones": [
+     "their own food",
+     "warm clothes",
+     "a map"
+    ],
+    "correcta": 1,
+    "explicacion": "La cantina da el bocadillo (A no) y el profesor conoce el camino (C no). Hace frío y viento, así que hay que llevar chaqueta y gorro (B)."
+   },
+   {
+    "n": 7,
+    "tipo": "opciones",
+    "pregunta": "What is the girl's problem with her exercise challenge?",
+    "opciones": [
+     "She forgets to do it.",
+     "She finds it boring.",
+     "She has little free time."
+    ],
+    "correcta": 2,
+    "explicacion": "El móvil le recuerda cada noche (A no) y le gustan los ejercicios (B no). El problema son los deberes y su trabajo del sábado: a veces solo tiene diez minutos (C)."
+   }
+  ],
+  "examenNumero": 1
+ },
+ {
+  "id": "b1-listening-3-x1",
+  "examen": "b1",
+  "destreza": "listening",
+  "parte": 3,
+  "nombreParte": "Gap fill",
+  "titulo": "A weekend trip to the mountains",
+  "instrucciones": "You will hear a teacher called Mr Parker talking to students about a school weekend trip to the mountains. For questions 14–19, complete the notes with a word or a number or a short phrase. You hear the recording twice.",
+  "minutos": 9,
+  "audio": {
+   "archivo": "audio/b1-listening-3-x1.mp3",
+   "veces": 2,
+   "hablantes": [
+    {
+     "id": "sup",
+     "descripcion": "Supervisor",
+     "voz": "en-GB-LibbyNeural"
+    },
+    {
+     "id": "parker",
+     "descripcion": "Mr Parker, a teacher",
+     "voz": "en-GB-RyanNeural"
+    }
+   ],
+   "guion": [
+    {
+     "quien": "sup",
+     "texto": "Part Three. You will hear a teacher called Mr Parker talking to students about a school weekend trip to the mountains. For questions fourteen to nineteen, complete the notes with a word or a number or a short phrase. You now have thirty seconds to look at Part Three."
+    },
+    {
+     "pausa": 30000
+    },
+    {
+     "quien": "parker",
+     "texto": "Hello, everyone, and thanks for coming. I'm Mr Parker, and I'm going to tell you about our weekend trip to the mountains next month. We're going to a small village called Kinlock. That's K, I, N, L, O, C, K. Some of you thought we were going to Fairdale, but that is the trip for next year. We leave on Friday afternoon. The first letter said four o'clock, but that was a mistake. The bus will leave at half past four. Please arrive at the school gate at four fifteen, so that we can check everybody's name. Now, the cost. The trip was going to be fifty pounds, but the school is helping us, so you only pay forty-five pounds. You can give the money to me before the end of the month. What should you bring? A rain jacket is useful, and so is a hat, but the most important thing is a pair of strong walking boots. Please don't wear new ones, because they can hurt your feet. Some of you asked about tents. I'm sorry, but we won't camp, because it can be very cold at night. We'll stay in a hostel, and it has warm rooms and a big kitchen. On Saturday we'll go for a long walk. We'll pass a beautiful lake, and we'll have lunch there, but the real goal is a waterfall at the top of the valley. It takes about three hours to get there. On Sunday morning we'll visit a small museum, and then we'll come home. I hope you're as excited as I am. Any questions?"
+    },
+    {
+     "pausa": 10000
+    },
+    {
+     "quien": "sup",
+     "texto": "Now you will hear it again."
+    },
+    {
+     "pausa": 1500
+    },
+    {
+     "quien": "parker",
+     "texto": "Hello, everyone, and thanks for coming. I'm Mr Parker, and I'm going to tell you about our weekend trip to the mountains next month. We're going to a small village called Kinlock. That's K, I, N, L, O, C, K. Some of you thought we were going to Fairdale, but that is the trip for next year. We leave on Friday afternoon. The first letter said four o'clock, but that was a mistake. The bus will leave at half past four. Please arrive at the school gate at four fifteen, so that we can check everybody's name. Now, the cost. The trip was going to be fifty pounds, but the school is helping us, so you only pay forty-five pounds. You can give the money to me before the end of the month. What should you bring? A rain jacket is useful, and so is a hat, but the most important thing is a pair of strong walking boots. Please don't wear new ones, because they can hurt your feet. Some of you asked about tents. I'm sorry, but we won't camp, because it can be very cold at night. We'll stay in a hostel, and it has warm rooms and a big kitchen. On Saturday we'll go for a long walk. We'll pass a beautiful lake, and we'll have lunch there, but the real goal is a waterfall at the top of the valley. It takes about three hours to get there. On Sunday morning we'll visit a small museum, and then we'll come home. I hope you're as excited as I am. Any questions?"
+    },
+    {
+     "pausa": 10000
+    },
+    {
+     "quien": "sup",
+     "texto": "That is the end of Part Three."
+    }
+   ]
+  },
+  "items": [
+   {
+    "n": 14,
+    "tipo": "palabra",
+    "frase": "The school trip is to a village called {{14}}.",
+    "correctas": [
+     "Kinlock"
+    ],
+    "explicacion": "El profesor deletrea «K, I, N, L, O, C, K». Fairdale es el distractor: es el viaje del año que viene."
+   },
+   {
+    "n": 15,
+    "tipo": "palabra",
+    "frase": "The bus leaves on Friday at {{15}}.",
+    "correctas": [
+     "4.30",
+     "4:30",
+     "half past four",
+     "4.30 pm",
+     "4:30 pm",
+     "4.30pm",
+     "16.30"
+    ],
+    "explicacion": "«The bus will leave at half past four». Las cuatro (carta con error) y las cuatro y cuarto (hora de llegada) son los distractores."
+   },
+   {
+    "n": 16,
+    "tipo": "palabra",
+    "frase": "Each student must pay £{{16}} for the trip.",
+    "correctas": [
+     "45",
+     "forty-five",
+     "forty five"
+    ],
+    "explicacion": "«You only pay forty-five pounds». Las cincuenta libras era el precio antes de la ayuda del colegio."
+   },
+   {
+    "n": 17,
+    "tipo": "palabra",
+    "frase": "The most important thing to bring is a pair of strong {{17}}.",
+    "correctas": [
+     "walking boots",
+     "boots"
+    ],
+    "explicacion": "«The most important thing is a pair of strong walking boots». El chubasquero y el gorro son útiles, pero no lo más importante."
+   },
+   {
+    "n": 18,
+    "tipo": "palabra",
+    "frase": "The group will sleep in a {{18}}.",
+    "correctas": [
+     "hostel",
+     "a hostel"
+    ],
+    "explicacion": "«We'll stay in a hostel». Las tiendas se descartan porque hace mucho frío por la noche."
+   },
+   {
+    "n": 19,
+    "tipo": "palabra",
+    "frase": "On Saturday the group will walk to a {{19}}.",
+    "correctas": [
+     "waterfall",
+     "a waterfall"
+    ],
+    "explicacion": "«The real goal is a waterfall at the top of the valley». El lago es solo un sitio de paso donde comen."
+   }
+  ],
+  "examenNumero": 1
+ },
+ {
+  "id": "b1-speaking-1-x1",
+  "examen": "b1",
+  "destreza": "speaking",
+  "parte": 1,
+  "nombreParte": "Interview",
+  "instrucciones": "The examiner asks you questions about yourself. Answer in full sentences and give reasons: two or three sentences per question is about right. About 2 minutes.",
+  "minutos": 2,
+  "items": [
+   {
+    "n": 1,
+    "tipo": "hablar",
+    "interlocutor": "Good afternoon. My name is Helen and this is my colleague, Mark. And what are your names? … Thank you. First, we'd like to ask you some questions about yourself.",
+    "preguntas": [
+     "Where do you live, and what is your home like?",
+     "What do you usually do after school or work?",
+     "What kind of food do you like to eat with your family?",
+     "Tell me about a place you visited recently. What did you do there?",
+     "Have you ever been to a farm? What was it like?",
+     "What are you going to do during your next holiday?"
+    ],
+    "segundos": 120,
+    "modelo": "Respuestas de dos o tres frases, con una razón o un ejemplo: «I live in a flat near the centre with my parents. It isn't very big, but I like it because my friends live close by.». Para las preguntas sobre el pasado usa el pasado simple («Last summer I visited a farm and I fed the goats») y para el futuro «I'm going to…». Si no has estado en una granja, puedes decirlo y comentar si te gustaría ir y por qué. Evita responder solo «yes» o «no» y no memorices un discurso."
+   }
+  ],
+  "examenNumero": 1
+ },
+ {
+  "id": "b1-listening-4-x1",
+  "examen": "b1",
+  "destreza": "listening",
+  "parte": 4,
+  "nombreParte": "Multiple choice (conversation)",
+  "titulo": "A bike ride along the coast",
+  "instrucciones": "You will hear a conversation between two friends, Ellie and Dan, who are planning a bike ride along the coast. For questions 19–24, choose the correct answer (A, B or C). You hear the recording twice.",
+  "minutos": 10,
+  "audio": {
+   "archivo": "audio/b1-listening-4-x1.mp3",
+   "veces": 2,
+   "hablantes": [
+    {
+     "id": "sup",
+     "descripcion": "Supervisor",
+     "voz": "en-GB-LibbyNeural"
+    },
+    {
+     "id": "ell",
+     "descripcion": "Ellie",
+     "voz": "en-GB-SoniaNeural"
+    },
+    {
+     "id": "dan",
+     "descripcion": "Dan",
+     "voz": "en-GB-RyanNeural"
+    }
+   ],
+   "guion": [
+    {
+     "quien": "sup",
+     "texto": "Part Four. You will hear a conversation between two friends, Ellie and Dan, who are planning a bike ride along the coast. For questions nineteen to twenty-four, choose the correct answer, A, B or C. You now have forty-five seconds to look at Part Four."
+    },
+    {
+     "pausa": 45000
+    },
+    {
+     "quien": "dan",
+     "texto": "Ellie, are you free on Saturday? I'd like to do that bike ride along the coast, from Seaford to the lighthouse."
+    },
+    {
+     "quien": "ell",
+     "texto": "Oh, I'd love to! But I haven't cycled for ages. Is it very far?"
+    },
+    {
+     "quien": "dan",
+     "texto": "About twenty kilometres. At first I wanted to take the path through the forest, but it goes up and down all the time. The coast path is flat, so it will be much nicer for you. My brother says the views are better there, too, but that's not why I chose it."
+    },
+    {
+     "quien": "ell",
+     "texto": "That's kind of you. Now, there's a problem. My bike has a flat tyre. I thought I would mend it, but I haven't got a pump."
+    },
+    {
+     "quien": "dan",
+     "texto": "You could hire one at the harbour. It's fifteen pounds for the day."
+    },
+    {
+     "quien": "ell",
+     "texto": "That's quite expensive. I'll ask my sister. She hardly ever uses hers, and I'm sure she'll say yes."
+    },
+    {
+     "quien": "dan",
+     "texto": "Great. Shall we invite Josh and Mia as well?"
+    },
+    {
+     "quien": "ell",
+     "texto": "I did think about that. But when we went out with a big group last summer, we stopped every five minutes. Let's go on our own this time and ask them next month."
+    },
+    {
+     "quien": "dan",
+     "texto": "Fine by me. Now, I'd suggest we leave at seven, before it gets hot."
+    },
+    {
+     "quien": "ell",
+     "texto": "Seven? That's really early, though I don't mind that much. What about nine? The café on the beach opens then, and I'd love a proper breakfast before we start."
+    },
+    {
+     "quien": "dan",
+     "texto": "Good idea. Nine it is."
+    },
+    {
+     "quien": "ell",
+     "texto": "What about lunch? Shall I make some sandwiches?"
+    },
+    {
+     "quien": "dan",
+     "texto": "We could, but in my bag they always get squashed. There's a little village halfway with a fish and chip shop. Let's eat there."
+    },
+    {
+     "quien": "ell",
+     "texto": "Perfect. And how do we get home? Twenty kilometres back is a lot for me."
+    },
+    {
+     "quien": "dan",
+     "texto": "The wind will be against us on the way back, so I agree. My dad could pick us up, but he works on Saturdays. There's a train from the lighthouse town, and bikes can go on it for five pounds."
+    },
+    {
+     "quien": "ell",
+     "texto": "Then let's take the train. I can't wait!"
+    },
+    {
+     "pausa": 10000
+    },
+    {
+     "quien": "sup",
+     "texto": "Now you will hear it again."
+    },
+    {
+     "pausa": 1500
+    },
+    {
+     "quien": "dan",
+     "texto": "Ellie, are you free on Saturday? I'd like to do that bike ride along the coast, from Seaford to the lighthouse."
+    },
+    {
+     "quien": "ell",
+     "texto": "Oh, I'd love to! But I haven't cycled for ages. Is it very far?"
+    },
+    {
+     "quien": "dan",
+     "texto": "About twenty kilometres. At first I wanted to take the path through the forest, but it goes up and down all the time. The coast path is flat, so it will be much nicer for you. My brother says the views are better there, too, but that's not why I chose it."
+    },
+    {
+     "quien": "ell",
+     "texto": "That's kind of you. Now, there's a problem. My bike has a flat tyre. I thought I would mend it, but I haven't got a pump."
+    },
+    {
+     "quien": "dan",
+     "texto": "You could hire one at the harbour. It's fifteen pounds for the day."
+    },
+    {
+     "quien": "ell",
+     "texto": "That's quite expensive. I'll ask my sister. She hardly ever uses hers, and I'm sure she'll say yes."
+    },
+    {
+     "quien": "dan",
+     "texto": "Great. Shall we invite Josh and Mia as well?"
+    },
+    {
+     "quien": "ell",
+     "texto": "I did think about that. But when we went out with a big group last summer, we stopped every five minutes. Let's go on our own this time and ask them next month."
+    },
+    {
+     "quien": "dan",
+     "texto": "Fine by me. Now, I'd suggest we leave at seven, before it gets hot."
+    },
+    {
+     "quien": "ell",
+     "texto": "Seven? That's really early, though I don't mind that much. What about nine? The café on the beach opens then, and I'd love a proper breakfast before we start."
+    },
+    {
+     "quien": "dan",
+     "texto": "Good idea. Nine it is."
+    },
+    {
+     "quien": "ell",
+     "texto": "What about lunch? Shall I make some sandwiches?"
+    },
+    {
+     "quien": "dan",
+     "texto": "We could, but in my bag they always get squashed. There's a little village halfway with a fish and chip shop. Let's eat there."
+    },
+    {
+     "quien": "ell",
+     "texto": "Perfect. And how do we get home? Twenty kilometres back is a lot for me."
+    },
+    {
+     "quien": "dan",
+     "texto": "The wind will be against us on the way back, so I agree. My dad could pick us up, but he works on Saturdays. There's a train from the lighthouse town, and bikes can go on it for five pounds."
+    },
+    {
+     "quien": "ell",
+     "texto": "Then let's take the train. I can't wait!"
+    },
+    {
+     "pausa": 10000
+    },
+    {
+     "quien": "sup",
+     "texto": "That is the end of Part Four."
+    }
+   ]
+  },
+  "items": [
+   {
+    "n": 19,
+    "tipo": "opciones",
+    "pregunta": "Dan chose the coast path because",
+    "opciones": [
+     "it is flat.",
+     "his brother recommended it.",
+     "it is shorter than the forest path."
+    ],
+    "correcta": 0,
+    "explicacion": "Dan dice que el camino del bosque «goes up and down» y el de la costa «is flat» (A). Lo del hermano y las vistas lo menciona, pero dice «that's not why I chose it» (B no). No se compara la distancia (C no)."
+   },
+   {
+    "n": 20,
+    "tipo": "opciones",
+    "pregunta": "What will Ellie do about a bike?",
+    "opciones": [
+     "hire one at the harbour",
+     "borrow her sister's",
+     "mend her own"
+    ],
+    "correcta": 1,
+    "explicacion": "Alquilar cuesta quince libras y le parece caro; dice «I'll ask my sister» (B). Pensó en arreglar la suya pero no tiene bomba (C no)."
+   },
+   {
+    "n": 21,
+    "tipo": "opciones",
+    "pregunta": "What do Ellie and Dan decide about Josh and Mia?",
+    "opciones": [
+     "They will come on Saturday.",
+     "They will be asked to come later.",
+     "They will meet them at the lighthouse."
+    ],
+    "correcta": 1,
+    "explicacion": "Ellie cambia de opinión sobre el grupo: «Let's go on our own this time and ask them next month» (B). No vienen el sábado (A no) ni se habla de quedar en el faro (C no)."
+   },
+   {
+    "n": 22,
+    "tipo": "opciones",
+    "pregunta": "They agree to start at nine because",
+    "opciones": [
+     "Ellie finds seven too early.",
+     "they want breakfast at the beach café.",
+     "it will be less hot."
+    ],
+    "correcta": 1,
+    "explicacion": "Ellie dice que el café de la playa abre a las nueve y quiere desayunar bien (B). Dice que las siete son pronto, pero «I don't mind that much» (A no). El calor era la razón de Dan para las siete (C no)."
+   },
+   {
+    "n": 23,
+    "tipo": "opciones",
+    "pregunta": "What will they do about lunch?",
+    "opciones": [
+     "take sandwiches with them",
+     "buy fish and chips in a village",
+     "eat at the beach café"
+    ],
+    "correcta": 1,
+    "explicacion": "Dan dice que los bocadillos se aplastan y propone el sitio de fish and chips del pueblo; Ellie dice «Perfect» (B). El café de la playa es solo para el desayuno (C no)."
+   },
+   {
+    "n": 24,
+    "tipo": "opciones",
+    "pregunta": "How will they get home?",
+    "opciones": [
+     "by bike",
+     "by train",
+     "in Dan's father's car"
+    ],
+    "correcta": 1,
+    "explicacion": "Veinte kilómetros de vuelta con viento en contra es mucho; el padre de Dan trabaja ese día (C no) y Ellie concluye «let's take the train» (B)."
+   }
+  ],
+  "examenNumero": 1
+ },
+ {
+  "id": "b1-speaking-2-x1",
+  "examen": "b1",
+  "destreza": "speaking",
+  "parte": 2,
+  "nombreParte": "Collaborative task",
+  "instrucciones": "You and your partner talk about a situation together for about 2 minutes. The examiner describes the situation and shows you five pictures with ideas. Talk about the ideas, say what you think about each one and then decide together which is best. You get 10 seconds to look at the task first.",
+  "minutos": 3,
+  "items": [
+   {
+    "n": 1,
+    "tipo": "hablar",
+    "interlocutor": "Now, I'd like you to talk about something together for about two minutes. A school is planning a trip to a science museum for students aged fourteen and fifteen. The teacher wants the day to be interesting and fun. Here are some things the students could do at the museum. First you have a little time to look at the pictures. … Now, talk together about the different things the students could do at the museum and say which would be the best.",
+    "preguntaCentral": "A school is planning a trip to a science museum. What could the students do there, and which is the best idea?",
+    "ideas": [
+     "watch a film in the space theatre",
+     "do a quiz in small groups",
+     "try science experiments",
+     "listen to a guide",
+     "take photos for a class project"
+    ],
+    "preguntas": [
+     "Now decide together which activity is the best one for the day."
+    ],
+    "segundos": 120,
+    "segundosLectura": 10,
+    "modelo": "Habla con tu compañero, no solo con el examinador. Propón («Why don't we…?», «How about…?», «Shall we…?»), pregunta su opinión («What do you think?», «Do you agree?») y reacciona («That's a good idea», «I'm not sure, because…»). Da una razón sencilla para cada idea («It's fun because…», «It might be boring because…»). No hace falta hablar de las cinco con detalle. Al final decidid juntos con frases como «So, shall we choose…?» o «I think the best idea is… because…»."
+   }
+  ],
+  "examenNumero": 1
+ },
+ {
+  "id": "b1-speaking-3-x1",
+  "examen": "b1",
+  "destreza": "speaking",
+  "parte": 3,
+  "nombreParte": "Describing a photo",
+  "instrucciones": "You each get one photograph and talk about it on your own for about one minute. Say where the people are, what they are doing, what they look like and how they feel. Then your partner answers a short question about your photograph. About 3 minutes in total.",
+  "minutos": 3,
+  "items": [
+   {
+    "n": 1,
+    "tipo": "hablar",
+    "pregunta": "A part-time job in a café",
+    "interlocutor": "Now, I'm going to give each of you a photograph. I'd like you to talk about your photograph on your own for about one minute. Eva, here is your photograph. It shows a young person working in a café. Please tell us what you can see in your photograph.",
+    "imagenes": [
+     "A teenage boy in a green apron stands behind the counter of a small, busy café. He is smiling as he hands a paper cup of hot chocolate to a girl with a backpack. Behind him there is a coffee machine, a shelf with cakes and a blackboard with the menu. Two customers are waiting in a short queue."
+    ],
+    "preguntas": [
+     "Please tell us what you can see in your photograph."
+    ],
+    "segundos": 60,
+    "modelo": "Estructura para describir una foto: 1) Dónde: «This photo shows a café. I think it’s in a town centre.» 2) Qué hacen: «The boy is giving a drink to a girl. Some people are waiting.» 3) Cómo son: «He’s wearing a green apron and he looks friendly.» 4) Cómo se sienten: «I think he feels happy and a bit busy.» Usa el presente continuo, there is/there are, in the background, on the left/right. Si no sabes una palabra, explícala con otras («the machine for making coffee»). Pregunta para el compañero (unos 30 s): «Would you like to have a part-time job in a café? Why? / Why not?»"
+   },
+   {
+    "n": 2,
+    "tipo": "hablar",
+    "pregunta": "Friends having fun outdoors",
+    "interlocutor": "Now, Marco, here is your photograph. It shows some friends doing an activity together outdoors. Please tell us what you can see in your photograph.",
+    "imagenes": [
+     "Four teenagers sit on a grassy hill on a sunny afternoon, having a picnic on a red blanket. They are laughing and sharing sandwiches, fruit and bottles of water. One girl is taking a photo of the group with her phone. A bicycle lies on the grass behind them and there are trees and a blue sky in the background."
+    ],
+    "preguntas": [
+     "Please tell us what you can see in your photograph."
+    ],
+    "segundos": 60,
+    "modelo": "Estructura para describir una foto: 1) Dónde: «They are in a park or in the countryside.» 2) Qué hacen: «They’re having a picnic and one girl is taking a photo.» 3) Cómo son: «They’re teenagers and they’re wearing summer clothes.» 4) Cómo se sienten: «They look relaxed and very happy.» Usa el presente continuo, in the front/in the background, next to, behind. Añade una opinión: «I think it’s a great way to spend a weekend.» Pregunta para el compañero (unos 30 s): «Do you like having picnics with your friends? Why? / Why not?»"
+   }
+  ],
+  "examenNumero": 1
+ },
+ {
+  "id": "b1-speaking-4-x1",
+  "examen": "b1",
+  "destreza": "speaking",
+  "parte": 4,
+  "nombreParte": "Discussion",
+  "instrucciones": "The examiner asks each of you questions related to the topic of Part 3. Answer with your own ideas and give reasons. About 3 minutes.",
+  "minutos": 4,
+  "items": [
+   {
+    "n": 1,
+    "tipo": "hablar",
+    "interlocutor": "Ask each candidate in turn: … What about you? … Why / Why not? … Do you agree?",
+    "preguntas": [
+     "Do you like animals? Which animals do you like best?",
+     "Have you ever had a pet, or would you like to have one? Why?",
+     "Would you like to do some volunteering at an animal shelter? Why / Why not?",
+     "What do you do in your free time to help other people?",
+     "Do you think young people should do some volunteer work at school? Why / Why not?"
+    ],
+    "segundos": 180,
+    "modelo": "Responde con una opinión clara, una razón y un ejemplo personal, en 2–3 frases por pregunta («I really like dogs because they are friendly. Last year my neighbour had a puppy and I often played with it.»). Si no tienes mascota, habla de la que te gustaría tener o de un animal que conoces. Usa «because», «so» y «but» para enlazar ideas. Si no sabes qué decir, gana tiempo con «Let me think… I suppose…». Escucha al compañero y reacciona brevemente («I agree with you» / «I think differently because…»)."
+   }
+  ],
+  "examenNumero": 1
+ }
+]

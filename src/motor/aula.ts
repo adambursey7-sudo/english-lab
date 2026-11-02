@@ -1,6 +1,6 @@
 // «Aula» sin servidor: el profe comparte un examen con un enlace (o QR) y los alumnos devuelven su resultado como un texto
 // que el profe pega en su tabla de clase. Todo viaja en el propio texto: no hay cuentas ni datos en ningún servidor.
-import type { Ejercicio, Examen } from '../banco/tipos';
+import { esExamen, type Ejercicio, type Examen } from '../banco/tipos';
 import { base64url, desdeBase64url } from './licencia';
 import { versionB } from './generador';
 
@@ -28,7 +28,7 @@ export function codificarExamen(x: ExamenAula): string {
 export function decodificarExamen(t: string): ExamenAula | null {
   try {
     const g = desdeBase64(t) as Record<string, unknown>;
-    if (!g || g.v !== 1 || (g.examen !== 'c1' && g.examen !== 'pau') || !Array.isArray(g.ids)) return null;
+    if (!g || g.v !== 1 || !esExamen(g.examen) || !Array.isArray(g.ids)) return null;
     const ids = [...new Set(g.ids.filter((i): i is string => typeof i === 'string' && /^[\w.-]{1,80}$/.test(i)))].slice(0, 60);
     if (ids.length === 0) return null;
     const marca = (g.marca ?? {}) as Record<string, unknown>;

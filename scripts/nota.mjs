@@ -9,7 +9,7 @@ import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 
 const ARCHIVO = join(dirname(fileURLToPath(import.meta.url)), '..', 'public', 'notas', 'notas.json');
-const ALUMNOS = { eduardo: 'c1', gabriela: 'c1', adam: 'c1', josito: 'pau', laurita: 'pau' };
+const ALUMNOS = { eduardo: 'c1', gabriela: 'c1', adam: 'c1', josito: 'pau', laurita: 'pau', maria: 'pau', aroa: 'pau', alba: 'b1' };
 const DESTREZAS = ['speaking', 'writing', 'listening', 'reading-use', 'prueba'];
 
 const args = process.argv.slice(2);

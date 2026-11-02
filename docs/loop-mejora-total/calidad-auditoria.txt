@@ -1,5 +1,7 @@
-AUDITORÍA DEL BANCO · 2026-11-02 · 261 ejercicios en 24 exámenes
+AUDITORÍA DEL BANCO · 2026-11-02 · 294 ejercicios en 26 exámenes
 
+== b2 1
+  AVISO: [b2-reading-use-4-x1] pregunta 30: respuestas repetidas
 == c1 —
   AVISO: [gen-c1-listening-1-mvxwfvbv0] sin examenNumero
   AVISO: [gen-c1-listening-2-mvxwgq640] sin examenNumero
@@ -31,4 +33,7 @@ AUDITORÍA DEL BANCO · 2026-11-02 · 261 ejercicios en 24 exámenes
   AVISO: [gen-pau-prueba-5-mvxwkh9j0] sin examenNumero
   AVISO: [gen-pau-prueba-6-mvxwkve70] sin examenNumero
 
-Errores: 0 · Avisos: 24
+== Letras
+  b1 1: reparto de letras correctas (A–D) 9/19/7/0: demasiado cargado en una
+
+Errores: 0 · Avisos: 25

@@ -1,5 +1,5 @@
 import { useMemo, useState } from 'react';
-import { NOMBRES_DESTREZA, etiquetaParte, type Destreza, type Ejercicio, type Examen } from '../banco/tipos';
+import { EXAMENES, ETIQUETA_EXAMEN, FICHA_EXAMEN, NOMBRES_DESTREZA, etiquetaParte, type Destreza, type Ejercicio, type Examen } from '../banco/tipos';
 import { generarExamen, candidatos, recetaCompleta, type PedidoParte, type Receta } from '../motor/generador';
 import { leerMarca } from '../marca';
 import { LIMITE_DEMO_GUARDADOS } from '../motor/licencia';
@@ -18,13 +18,17 @@ import './crear.css';
 
 type Plantilla = { id: string; nombre: string; ayuda: string; destrezas: Destreza[] | 'todas'; soloAutomaticos: boolean };
 
+const plantillasCambridge = (lectura: string): Plantilla[] => [
+  { id: 'completo', nombre: 'Examen completo', ayuda: 'Las cuatro partes, como el día del examen', destrezas: 'todas', soloAutomaticos: false },
+  { id: 'lectura', nombre: lectura, ayuda: 'Solo el papel de lectura', destrezas: ['reading-use'], soloAutomaticos: false },
+  { id: 'listening', nombre: 'Listening', ayuda: 'Solo comprensión oral', destrezas: ['listening'], soloAutomaticos: false },
+  { id: 'auto', nombre: 'Se corrige solo', ayuda: 'Sin writing ni speaking: corrección automática', destrezas: 'todas', soloAutomaticos: true },
+];
+
 const PLANTILLAS: Record<Examen, Plantilla[]> = {
-  c1: [
-    { id: 'completo', nombre: 'Examen completo', ayuda: 'Las cuatro partes, como el día del examen', destrezas: 'todas', soloAutomaticos: false },
-    { id: 'lectura', nombre: 'Reading & Use of English', ayuda: 'Solo el papel de lectura y gramática', destrezas: ['reading-use'], soloAutomaticos: false },
-    { id: 'listening', nombre: 'Listening', ayuda: 'Solo comprensión oral', destrezas: ['listening'], soloAutomaticos: false },
-    { id: 'auto', nombre: 'Se corrige solo', ayuda: 'Sin writing ni speaking: corrección automática', destrezas: 'todas', soloAutomaticos: true },
-  ],
+  b1: plantillasCambridge('Reading'),
+  b2: plantillasCambridge('Reading & Use of English'),
+  c1: plantillasCambridge('Reading & Use of English'),
   pau: [
     { id: 'completo', nombre: 'Prueba completa', ayuda: 'Las seis preguntas', destrezas: 'todas', soloAutomaticos: false },
     { id: 'auto', nombre: 'Se corrige solo', ayuda: 'Sin redacción: corrección automática', destrezas: 'todas', soloAutomaticos: true },
@@ -148,8 +152,9 @@ export function Crear() {
         <aside className="crear-panel no-imprimir" aria-label="Opciones del examen">
           <h2>1. ¿Qué examen?</h2>
           <div className="fichas" role="group" aria-label="Tipo de examen">
-            <button type="button" className="ficha" aria-pressed={examen === 'c1'} onClick={() => cambiarExamen('c1')}>C1 Advanced</button>
-            <button type="button" className="ficha" aria-pressed={examen === 'pau'} onClick={() => cambiarExamen('pau')}>PAU Canarias</button>
+            {EXAMENES.map((x) => (
+              <button key={x} type="button" className="ficha" aria-pressed={examen === x} onClick={() => cambiarExamen(x)}>{FICHA_EXAMEN[x]}</button>
+            ))}
           </div>
 
           <h2>2. ¿Cómo lo quieres?</h2>
@@ -212,7 +217,7 @@ export function Crear() {
               {guardados.map((g) => (
                 <li key={g.id}>
                   <b>{g.nombre}</b>
-                  <small>{g.receta.examen === 'c1' ? 'C1' : 'PAU'} · versión {g.receta.version} · {g.fecha}{g.grupo && ` · ${g.grupo}`}</small>
+                  <small>{ETIQUETA_EXAMEN[g.receta.examen]} · versión {g.receta.version} · {g.fecha}{g.grupo && ` · ${g.grupo}`}</small>
                   <span className="acciones">
                     <button type="button" className="btn sec chico" onClick={() => abrir(g)}>Abrir</button>
                     <button type="button" className="btn sec chico" onClick={() => duplicar(g)}>Duplicar</button>

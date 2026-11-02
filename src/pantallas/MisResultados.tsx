@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react';
 import { BANCO } from '../banco';
-import { NOMBRES_DESTREZA, NOMBRES_EXAMEN, etiquetaParte, type Destreza, type Ejercicio, type Examen } from '../banco/tipos';
+import { DESTREZAS_DE as DESTREZAS, NOMBRES_DESTREZA, NOMBRES_EXAMEN, etiquetaParte, nombreDestreza, type Ejercicio } from '../banco/tipos';
 import { bandaDe } from '../motor/corregir';
 import { practicarParte } from '../motor/examen';
 import { borrarHistorial, leerHistorial, paraMejorar, porcentaje, resumenDestreza, type ParteParaMejorar, type Registro } from '../motor/historial';
 import { cargarNotas, fechaNota, leerNotasGuardadas, mediaNotas, notasDe, sobreDiez, textoNota, tituloNota, type NotaProfe, type NotasProfe } from '../motor/notas';
-import { examenesDe, type Perfil } from '../motor/perfiles';
+import { examenesDe, examenesPropios, type Perfil } from '../motor/perfiles';
 
 interface Props {
   perfil: Perfil;
@@ -13,11 +13,6 @@ interface Props {
   /** Practicar una parte desde «Para mejorar». */
   onEmpezar: (lista: Ejercicio[]) => void;
 }
-
-const DESTREZAS: Record<Examen, Destreza[]> = {
-  c1: ['reading-use', 'writing', 'listening', 'speaking'],
-  pau: ['prueba'],
-};
 
 const TEXTO_ESTADO: Record<ParteParaMejorar['estado'], string> = {
   floja: 'Floja: repásala',
@@ -35,7 +30,7 @@ export function MisResultados({ perfil, onInicio, onEmpezar }: Props) {
   const porId = new Map<string, Ejercicio>(BANCO.map((e) => [e.id, e]));
   const dias = agruparPorDia(historial);
   const misNotas = notasDe(notas, perfil.id);
-  const examenes = examenesDe(perfil).filter((x) => x === perfil.examen || historial.some((r) => porId.get(r.id)?.examen === x) || misNotas.some((n) => n.examen === x));
+  const examenes = examenesDe(perfil).filter((x) => examenesPropios(perfil).includes(x) ||historial.some((r) => porId.get(r.id)?.examen === x) || misNotas.some((n) => n.examen === x));
   const mejorar = examenes.flatMap((x) => paraMejorar(historial, x));
   const pendientes = mejorar.filter((p) => p.estado !== 'bien');
   const vacio = historial.length === 0 && misNotas.length === 0;
@@ -90,7 +85,7 @@ export function MisResultados({ perfil, onInicio, onEmpezar }: Props) {
                     const banda = r.media === null ? null : bandaDe(x, r.media);
                     return (
                       <div key={d} className={`ficha destreza resumen tono-${d}`}>
-                        <b>{NOMBRES_DESTREZA[d]}</b>
+                        <b>{nombreDestreza(x, d)}</b>
                         <small>{r.hechas} de {r.partes} {r.partes === 1 ? 'parte hecha' : 'partes hechas'}</small>
                         <span className="progreso" aria-hidden="true"><span style={{ width: `${r.partes === 0 ? 0 : (r.hechas / r.partes) * 100}%` }} /></span>
                         {r.media !== null && banda && <small className="dato">mejores notas: {r.media}&nbsp;% · {banda.etiqueta}</small>}

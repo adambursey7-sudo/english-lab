@@ -1,5 +1,5 @@
 import { pedirNotasServidor } from './servidor';
-import { NOMBRES_DESTREZA, NOMBRES_EXAMEN, etiquetaParte, type Destreza, type Examen } from '../banco/tipos';
+import { EXAMENES as TODOS_EXAMENES, NOMBRES_DESTREZA, NOMBRES_EXAMEN, etiquetaParte, type Destreza, type Examen } from '../banco/tipos';
 
 /**
  * Notas que pone Adam (speaking, writing…). Viven en `public/notas/notas.json`, que Adam actualiza con
@@ -24,7 +24,7 @@ export interface NotaProfe {
 export type NotasProfe = Record<string, NotaProfe[]>;
 
 const CLAVE = 'english-lab.notas';
-const EXAMENES: readonly string[] = ['c1', 'pau'];
+const EXAMENES: readonly string[] = TODOS_EXAMENES;
 const DESTREZAS: readonly string[] = ['reading-use', 'writing', 'listening', 'speaking', 'prueba'];
 
 function esNota(x: unknown): x is NotaProfe {

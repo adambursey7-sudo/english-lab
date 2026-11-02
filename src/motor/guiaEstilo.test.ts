@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { BANCO } from '../banco';
-import { GUIA, extraerJson, guiaDe, promptEjercicio } from './guiaEstilo';
+import { GUIA, ejemploDe, extraerJson, guiaDe, promptEjercicio } from './guiaEstilo';
 import { REGLAS } from './validar';
 
 describe('guía de estilo', () => {
@@ -9,7 +9,8 @@ describe('guía de estilo', () => {
       const [examen, destreza, parte] = clave.split('/');
       const g = GUIA.find((x) => x.examen === examen && x.destreza === destreza && x.parte === Number(parte));
       expect(g, clave).toBeDefined();
-      expect(BANCO.some((e) => e.examen === examen && e.destreza === destreza && e.parte === Number(parte)), `${clave} sin ejemplo`).toBe(true);
+      expect(ejemploDe(g!, BANCO), `${clave} sin ejemplo`).toBeDefined();
+      if (g!.forma) expect(g!.nombreParte && g!.minutos, `${clave} con forma prestada necesita nombreParte y minutos`).toBeTruthy();
     }
     expect(GUIA.length).toBe(Object.keys(REGLAS).length);
   });

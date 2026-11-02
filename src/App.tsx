@@ -39,7 +39,7 @@ export function rutaDe(hash: string): Ruta | null {
   if (hacer) return { tipo: 'hacer', payload: hacer[1] };
   const mezcla = /^#\/audio\/mezcla\/([\w.~-]{1,400})\/?$/.exec(hash);
   if (mezcla) return { tipo: 'mezcla', ids: mezcla[1].split('~') };
-  const m = /^#\/(imprimir|audio)\/(c1|pau)\/(\d+)(\/clave)?\/?$/.exec(hash);
+  const m = /^#\/(imprimir|audio)\/(b1|b2|c1|pau)\/(\d+)(\/clave)?\/?$/.exec(hash);
   if (!m) return null;
   const examen = m[2] as Examen;
   const numero = Number(m[3]);

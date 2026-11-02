@@ -3,7 +3,12 @@
 
 import { ES_PRODUCTO } from '../marca';
 
-export type Examen = 'c1' | 'pau';
+export type Examen = 'b1' | 'b2' | 'c1' | 'pau';
+/** Todos los exámenes, en el orden en que se ofrecen. */
+export const EXAMENES: readonly Examen[] = ['b1', 'b2', 'c1', 'pau'];
+export function esExamen(x: unknown): x is Examen {
+  return EXAMENES.includes(x as Examen);
+}
 /** Papel del examen. En la PAU solo hay uno (`prueba`, 6 preguntas sobre un texto). */
 export type Destreza = 'reading-use' | 'writing' | 'listening' | 'speaking' | 'prueba';
 
@@ -159,9 +164,30 @@ export interface Ejercicio {
 export type Respuestas = Record<number, string>;
 
 export const NOMBRES_EXAMEN: Record<Examen, string> = {
+  b1: ES_PRODUCTO ? 'B1 Preliminary' : 'Cambridge B1 Preliminary',
+  b2: ES_PRODUCTO ? 'B2 First' : 'Cambridge B2 First',
   c1: ES_PRODUCTO ? 'C1 Advanced' : 'Cambridge C1 Advanced',
   pau: 'PAU · Inglés',
 };
+
+/** Texto de los botones para elegir examen en las pantallas del profe. */
+export const FICHA_EXAMEN: Record<Examen, string> = { b1: 'B1 Preliminary', b2: 'B2 First', c1: 'C1 Advanced', pau: 'PAU Canarias' };
+
+/** Nombre corto para etiquetas y listas: «B1», «C1», «PAU». */
+export const ETIQUETA_EXAMEN: Record<Examen, string> = { b1: 'B1', b2: 'B2', c1: 'C1', pau: 'PAU' };
+
+/** Papeles que se ofrecen por examen (la PAU solo tiene la prueba escrita). */
+export const DESTREZAS_DE: Record<Examen, Destreza[]> = {
+  b1: ['reading-use', 'writing', 'listening', 'speaking'],
+  b2: ['reading-use', 'writing', 'listening', 'speaking'],
+  c1: ['reading-use', 'writing', 'listening', 'speaking'],
+  pau: ['prueba'],
+};
+
+/** El B1 Preliminary tiene un papel «Reading» a secas; el B2 y el C1, «Reading & Use of English». */
+export function nombreDestreza(examen: Examen, destreza: Destreza): string {
+  return examen === 'b1' && destreza === 'reading-use' ? 'Reading' : NOMBRES_DESTREZA[destreza];
+}
 
 export const NOMBRES_DESTREZA: Record<Destreza, string> = {
   'reading-use': 'Reading & Use of English',

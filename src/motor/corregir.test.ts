@@ -227,6 +227,15 @@ describe('bandaDe', () => {
     expect(bandaDe('c1', 60).etiqueta).toBe('Grade C');
     expect(bandaDe('c1', 45).etiqueta).toBe('Nivel B2');
     expect(bandaDe('c1', 10).etiqueta).toBe('Por debajo de B2');
+    expect(bandaDe('b2', 80).etiqueta).toBe('Grade A');
+    expect(bandaDe('b2', 60).etiqueta).toBe('Grade C');
+    expect(bandaDe('b2', 45).etiqueta).toBe('Nivel B1');
+    expect(bandaDe('b2', 10).etiqueta).toBe('Por debajo de B1');
+    expect(bandaDe('b1', 80).etiqueta).toBe('Pass with Distinction');
+    expect(bandaDe('b1', 70).etiqueta).toBe('Pass with Merit');
+    expect(bandaDe('b1', 60).etiqueta).toBe('Pass');
+    expect(bandaDe('b1', 45).etiqueta).toBe('Nivel A2');
+    expect(bandaDe('b1', 10).etiqueta).toBe('Por debajo de A2');
     expect(bandaDe('pau', 75).etiqueta).toBe('7,5 sobre 10');
     expect(bandaDe('pau', 100).etiqueta).toBe('10,0 sobre 10');
   });

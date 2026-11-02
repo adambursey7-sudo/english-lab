@@ -1,4 +1,4 @@
-import { ORDEN_DESTREZAS } from '../banco/tipos';
+import { ORDEN_DESTREZAS, esExamen } from '../banco/tipos';
 import type { Receta } from './generador';
 
 /** Un examen guardado por el profe: la receta para volver a montarlo igual y los ejercicios que usó (historial). */
@@ -21,7 +21,7 @@ const lista = (v: unknown, max: number): string[] => (Array.isArray(v) ? v.filte
 function recetaValida(r: unknown): Receta | null {
   if (!r || typeof r !== 'object') return null;
   const g = r as Record<string, unknown>;
-  if ((g.examen !== 'c1' && g.examen !== 'pau') || !Array.isArray(g.partes) || typeof g.semilla !== 'number') return null;
+  if (!esExamen(g.examen) || !Array.isArray(g.partes) || typeof g.semilla !== 'number') return null;
   const partes = g.partes
     .filter((p): p is Record<string, unknown> => !!p && typeof p === 'object')
     .filter((p) => ORDEN_DESTREZAS.includes(p.destreza as never) && Number.isInteger(p.parte) && Number.isInteger(p.cuantos) && (p.cuantos as number) > 0 && (p.cuantos as number) <= 20)

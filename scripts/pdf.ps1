@@ -2,7 +2,7 @@
 # Uso: powershell -File scripts/pdf.ps1 -Examen c1 -Numero 1   (salida en salida/<examen>-examen-<n>.pdf y -clave.pdf)
 # Usa el servidor que haya en marcha (5173 de desarrollo o 4173 de vista previa); si no hay ninguno, arranca la vista previa.
 param(
-  [ValidateSet('c1', 'pau')] [string] $Examen = 'c1',
+  [ValidateSet('b1', 'b2', 'c1', 'pau')] [string] $Examen = 'c1',
   [int] $Numero = 1,
   [string] $Chrome = 'C:\Program Files\Google\Chrome\Application\chrome.exe'
 )
