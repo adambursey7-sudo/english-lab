@@ -22,7 +22,7 @@ export const READING_USE_C1_2: Ejercicio[] = [
     items: [
       { n: 1, tipo: 'opciones', opciones: ['rejected', 'dismissed', 'denied', 'refused'], correcta: 1, explicacion: '«Dismiss something as…» = descartar algo como (una tontería, un signo de pereza). «Reject» y «refuse» no llevan «as», y «deny» significa negar.' },
       { n: 2, tipo: 'opciones', opciones: ['least', 'less', 'lowest', 'minimum'], correcta: 0, explicacion: '«At the very least» = como mínimo. Es una expresión fija: «at the very lowest / minimum» no existen con este sentido y «less» no encaja.' },
-      { n: 3, tipo: 'opciones', opciones: ['hold', 'subscribe', 'agree', 'approve'], correcta: 1, explicacion: '«Subscribe to the view that…» = compartir la opinión de que. «Hold the view» va sin «to», «agree» pide «with» y «approve» pide «of».' },
+      { n: 3, tipo: 'opciones', opciones: ['believe', 'subscribe', 'agree', 'approve'], correcta: 1, explicacion: '«Subscribe to the view that…» = compartir la opinión de que. «Believe» no se construye con «to the view», «agree» pide «with» y «approve» pide «of».' },
       { n: 4, tipo: 'opciones', opciones: ['take', 'make', 'play', 'do'], correcta: 2, explicacion: '«Play a part in (doing) something» = contribuir a. Ninguno de los otros tres verbos forma esta colocación con «part».' },
       { n: 5, tipo: 'opciones', opciones: ['much', 'long', 'far', 'deep'], correcta: 2, explicacion: '«Go so far as to do something» = llegar al extremo de hacer algo. Expresión fija con «far».' },
       { n: 6, tipo: 'opciones', opciones: ['unless', 'whereas', 'despite', 'otherwise'], correcta: 1, explicacion: '«Whereas» contrasta la siesta corta (refresca) con la larga (atonta). «Unless» y «otherwise» no tienen sentido aquí, y «despite» exige un sustantivo, no una oración.' },
@@ -46,7 +46,7 @@ export const READING_USE_C1_2: Ejercicio[] = [
       'There may also be a chemical side to it. Music that moves us appears to trigger the release of substances in the brain associated {{15}} comfort and bonding, which would explain why a melancholy song can leave us feeling better rather {{16}} worse. Whatever the reason, it seems the appetite for a good cry set to music is here to stay. Streaming services, which can see exactly what we listen to and when, report that the saddest songs are played most often late at night, and most of all on Sunday evenings.',
     items: [
       { n: 9, tipo: 'palabra', correctas: ['one'], explicacion: '«It is one of the puzzles of…»: «one of + plural». No vale «some» (iría con «of the» pero no con «it is»).' },
-      { n: 10, tipo: 'palabra', correctas: ['one', 'you', 'we'], explicacion: 'Sujeto impersonal: «One / You might expect…» = cabría esperar. «They» no funciona porque no hay a quién se refiera.' },
+      { n: 10, tipo: 'palabra', correctas: ['one', 'you', 'we', 'some', 'many', 'people'], explicacion: 'Sujeto impersonal o general: «One / You / We / People / Some / Many might expect…» = cabría esperar. «They» no funciona porque no hay a quién se refiera.' },
       { n: 11, tipo: 'palabra', correctas: ['forward', 'forth'], explicacion: '«Put forward an explanation» = proponer una explicación. «Put forth» es más formal pero también vale.' },
       { n: 12, tipo: 'palabra', correctas: ['without'], explicacion: '«Without any of the real-life consequences»: sentimos la emoción sin sus consecuencias. La frase siguiente lo confirma: «nobody has actually left us».' },
       { n: 13, tipo: 'palabra', correctas: ['less'], explicacion: '«It makes us feel less alone»: la canción nos hace sentir menos solos, como explica la frase que sigue («oddly comforting»).' },
@@ -66,14 +66,14 @@ export const READING_USE_C1_2: Ejercicio[] = [
     instrucciones: INSTRUCCIONES[3],
     minutos: 10,
     texto:
-      'Not so long ago, buying second-hand clothes was something people did out of {{17}} rather than choice, and few would have admitted to it. Today the situation is almost {{18}}. Markets and online platforms selling used clothing have become hugely {{19}}, especially among the young, who see a vintage jacket as a mark of {{20}} rather than of poverty.\n\n' +
+      'Not so long ago, buying second-hand clothes was something people did out of {{17}} rather than choice, and few would have admitted to it. Today the situation is almost {{18}}. Markets and online platforms selling used clothing have become hugely {{19}}, especially among the young, who see a vintage jacket as a mark of {{20}} rather than of poverty. Some collectors will happily travel across the country for a single rare piece, and swap events, where people exchange clothes instead of paying for them, now draw crowds in many cities.\n\n' +
       'Part of the appeal is {{21}} financial, but there is more to it than price. Many shoppers are {{22}} uneasy about the environmental cost of clothes that are worn a handful of times and thrown away. Buying second-hand feels like a small act of {{23}} against that cycle. There is also the thrill of the hunt: the {{24}} discovery of a perfect coat at the bottom of a pile is a pleasure that no ordinary shop can offer. Retailers have noticed, and several large chains now run second-hand sections of their own, which rather suggests that the trend is here to stay.',
     items: [
       { n: 17, tipo: 'palabra', raiz: 'NECESSARY', correctas: ['necessity'], explicacion: 'Sustantivo tras «out of»: «out of necessity» = por necesidad. Ojo a la ortografía: necess-ity, sin la «a» de «necessary».' },
       { n: 18, tipo: 'palabra', raiz: 'RECOGNISE', correctas: ['unrecognisable', 'unrecognizable'], explicacion: 'Adjetivo con prefijo negativo: un-recognis-able, «casi irreconocible». Se admite la grafía con z.' },
       { n: 19, tipo: 'palabra', raiz: 'FASHION', correctas: ['fashionable'], explicacion: 'Adjetivo después de «hugely»: «hugely fashionable» = muy de moda.' },
       { n: 20, tipo: 'palabra', raiz: 'INDIVIDUAL', correctas: ['individuality'], explicacion: 'Sustantivo: «a mark of individuality» = una señal de personalidad propia. No «individualism», que es una postura ideológica.' },
-      { n: 21, tipo: 'palabra', raiz: 'DOUBT', correctas: ['undoubtedly'], explicacion: 'Adverbio con prefijo negativo que modifica a «financial»: «undoubtedly financial» = sin duda económico.' },
+      { n: 21, tipo: 'palabra', raiz: 'DOUBT', correctas: ['undoubtedly', 'doubtless', 'doubtlessly'], explicacion: 'Adverbio que modifica a «financial»: «undoubtedly financial» = sin duda económico. También valen «doubtless» y «doubtlessly», que son sinónimos.' },
       { n: 22, tipo: 'palabra', raiz: 'INCREASE', correctas: ['increasingly'], explicacion: 'Adverbio que modifica al adjetivo «uneasy»: «increasingly uneasy» = cada vez más incómodos.' },
       { n: 23, tipo: 'palabra', raiz: 'RESIST', correctas: ['resistance'], explicacion: 'Sustantivo tras «act of»: «an act of resistance». No «resistant», que es adjetivo.' },
       { n: 24, tipo: 'palabra', raiz: 'LIKELY', correctas: ['unlikely'], explicacion: 'Adjetivo con prefijo negativo: «the unlikely discovery» = el hallazgo improbable, inesperado.' },
@@ -107,7 +107,7 @@ export const READING_USE_C1_2: Ejercicio[] = [
         n: 27, tipo: 'transformacion', clave: 'RATHER',
         frase: 'I would prefer to stay in tonight instead of going out.',
         inicio: 'I', fin: 'out tonight.',
-        correctas: ['would rather stay in than go', 'would rather stay home than go'],
+        correctas: ['would rather stay in than go', 'would rather stay home than go', 'would rather stay indoors than go', 'would rather stay inside than go', 'would sooner stay in than go', 'would sooner stay home than go', '’d rather stay in than go', "'d rather stay in than go", '’d rather stay home than go', "'d rather stay home than go"],
         explicacion: '«Would rather + infinitivo sin to + than + infinitivo sin to»: «would rather stay in than go out». Ojo: después de «than» va «go», no «going».',
       },
       {
@@ -121,7 +121,7 @@ export const READING_USE_C1_2: Ejercicio[] = [
         n: 29, tipo: 'transformacion', clave: 'DESPITE',
         frase: 'Although he trained very hard, he was not picked for the team.',
         inicio: 'He was not picked for the team', fin: 'he trained.',
-        correctas: ['despite how hard', 'in spite of how hard'],
+        correctas: ['despite how hard', 'in spite of how hard', 'despite how much', 'in spite of how much', 'despite how long', 'in spite of how long', 'despite the way', 'in spite of the way'],
         explicacion: '«Despite» no puede ir seguido de «although» ni de una oración con sujeto y verbo: hace falta un sustantivo o una pregunta indirecta, «despite how hard he trained».',
       },
       {
