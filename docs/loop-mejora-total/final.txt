@@ -1,15 +1,19 @@
-LOOP MEJORA TOTAL · parada en un punto natural (2/11/2026)
+MEJORA TOTAL DE ENGLISH LAB - RESULTADO FINAL (2/11/2026) - rama loop/mejora-total, sin push, sin publicar
 
-HECHO (rama loop/mejora-total en C:\dev\english-lab-t-mejora-total, sin push)
-- Tramo 0: unido origin/master, loop/banco, claves y C1 examen 3. Tests, tsc y build verdes. estado.txt. El producto ya no lleva la dirección del servidor de Adam.
-- Tramo 1: auditoría del banco (0 errores), resolución a ciegas (96,2 %), hueco de relleno «from_PLACEHOLDER» arreglado, minutos de Reading a 90, audios del examen 3. calidad.txt (23 preguntas de vocabulario fino para que las mire un profe).
-- Tramo 2: reanudar si se cierra la app, audio como en el examen (sin retroceder; «Practicar» lo permite), avisos de micro y de audio. Recorrido a 390 px con capturas (docs/loop-mejora-total/capturas/tramo2).
-- Tramo 3: servidor endurecido (null/JSON roto daban 500, bloqueo escalonado, ids sin rutas, notas atómicas, PAU mal clasificada). 40+ pruebas en scripts/probar-servidor.mjs, todas bien.
+HECHO
+Tramo 0 estado e integracion: ver estado.txt.
+Tramo 1 calidad: auditoria sin coste (scripts/auditar-banco.mjs), resolucion a ciegas (resolver-ciego.mjs): 998 preguntas, 96,2 % de acuerdo, 0 errores. Minutos de Reading = 90. Texto de relleno detectado y corregido.
+Tramo 2 alumno en movil: reanudar a medias, audio como en el examen, avisos de micro/audio/red, capturas en capturas/tramo2.
+Tramo 3 servidor: 45 pruebas locales (scripts/probar-servidor.mjs) y revision de seguridad (seguridad.txt); clave de Adam sin bloqueo externo.
+Tramo 4 profesor: academia ficticia de principio a fin (scripts/academia-ficticia.mjs, 20 comprobaciones), tramo4-profesor.txt.
+Tramo 5 fabrica: reanudable, cuenta llamadas y tiempo, rechaza texto de relleno; C1 11 (38 llamadas, ~6 min) y PAU 11 (5 llamadas, ~1 min) nuevos, con audios.
+Tramo 6: tests 101 bien, tsc y builds (normal y producto) bien, test:producto limpio; pagina "Cambios y Mejoras" publicada como Artifact privado.
 
-SIN HACER
-- /security-review: no pudo lanzarse (la sesión no está dentro de un repo git). Lanzarla desde C:\dev\english-lab-t-mejora-total.
-- Tramos 4 (lado profesor), 5 (fábrica), 6 (cierre: /code-review, boceto Artifact, Telegram).
-- «Mi progreso» con perfil y el audio sin red no se probaron en el navegador.
+NO HECHO / MEJORABLE
+- 23 preguntas de vocabulario para revisar por un profesor de inglés (calidad.txt).
+- PIN de 4 cifras debil y bloqueo por alumno provocable desde fuera (seguridad.txt).
+- Color de la academia solo en cabecera y PDF.
+- No probado en iPhone real: Mi progreso con perfil real, audio sin red.
 
-PARA ADAM
-- Copia de seguridad de la clave privada de licencias; probar con 2–3 profes; push y publicar.
+DECIDE ADAM
+Copia de la clave privada de licencias; precio/duracion y nombre; refuerzo de PIN; probar con 2-3 profes; publicar.
