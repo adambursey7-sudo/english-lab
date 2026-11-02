@@ -1,7 +1,8 @@
 import { useEffect, useRef, useState } from 'react';
-import type { ItemHablar } from '../banco/tipos';
+import type { Ejercicio, ItemHablar } from '../banco/tipos';
 import { formatoReloj } from '../motor/entregas';
 import { PROFE } from '../marca';
+import { enviarAudio, hayServidor } from '../motor/servidor';
 
 type Fase = 'quieto' | 'leyendo' | 'hablando' | 'hecho';
 
@@ -9,15 +10,18 @@ interface Props {
   item: ItemHablar;
   valor: string;
   onCambia: (v: string) => void;
+  /** El ejercicio al que pertenece, para decirle a Adam qué parte del speaking es. */
+  ejercicio?: Ejercicio;
 }
 
 /** Una parte del Speaking: lo que dice el examinador, las preguntas o la hoja, un reloj por fases y grabar con el micro (opcional). */
-export function EntradaHablar({ item, valor, onCambia }: Props) {
+export function EntradaHablar({ item, valor, onCambia, ejercicio }: Props) {
   const [fase, setFase] = useState<Fase>(valor === 'hecho' ? 'hecho' : 'quieto');
   const [restante, setRestante] = useState(0);
   const [grabando, setGrabando] = useState(false);
   const [audioUrl, setAudioUrl] = useState<string | null>(null);
   const [avisoMicro, setAvisoMicro] = useState('');
+  const [envio, setEnvio] = useState('');
   const grabadora = useRef<MediaRecorder | null>(null);
   const trozos = useRef<Blob[]>([]);
 
@@ -78,8 +82,17 @@ export function EntradaHablar({ item, valor, onCambia }: Props) {
   };
 
   const compartirAudio = async () => {
-    if (!audioUrl) return;
+    if (!audioUrl || envio === 'Enviando…' || envio.startsWith('Enviado')) return;
     const blob = await (await fetch(audioUrl)).blob();
+    if (ejercicio && hayServidor()) {
+      setEnvio('Enviando…');
+      const r = await enviarAudio(blob, ejercicio, item.n, `${ejercicio.nombreParte}`);
+      if (r === 'enviado') {
+        setEnvio(`Enviado a ${PROFE}. Te pondrá la nota en «Mi progreso».`);
+        return;
+      }
+      setEnvio(`El ordenador de ${PROFE} no responde ahora; elige cómo mandárselo.`);
+    }
     const archivo = new File([blob], `speaking-part-${item.n}.${blob.type.includes('mp4') ? 'm4a' : 'webm'}`, { type: blob.type });
     const nav = navigator as Navigator & { canShare?: (d: { files: File[] }) => boolean; share?: (d: { files: File[]; title?: string }) => Promise<void> };
     if (nav.canShare?.({ files: [archivo] }) && nav.share) {
@@ -157,7 +170,8 @@ export function EntradaHablar({ item, valor, onCambia }: Props) {
       {audioUrl && (
         <div className="fila" style={{ gap: 10, alignItems: 'center' }}>
           <audio controls src={audioUrl} style={{ maxWidth: '100%' }} />
-          <button type="button" className="btn sec chico" onClick={compartirAudio}>Enviar a {PROFE}</button>
+          <button type="button" className="btn sec chico" onClick={compartirAudio} disabled={envio === 'Enviando…' || envio.startsWith('Enviado')}>Enviar a {PROFE}</button>
+          {envio && <span className="silencio pequeno">{envio}</span>}
         </div>
       )}
       {item.modelo && (

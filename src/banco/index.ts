@@ -12,7 +12,7 @@ import { SPEAKING_C1_2 } from './c1/speaking-2';
 import { PAU_EXAMEN_2 } from './pau/examen-2';
 import { PAU_EXAMEN_3 } from './pau/examen-3';
 
-/** Ejercicios que escribió la fábrica (`scripts/fabrica.mjs`): ya pasaron el validador y una resolución a ciegas. */
+/** Exámenes enteros hechos por la fábrica (`generados/examen-<ex>-<N>.json`). */
 const GENERADOS: Ejercicio[] = Object.values(import.meta.glob<Ejercicio[]>('./generados/*.json', { eager: true, import: 'default' })).flat();
 
 /** Todo el banco. Cada archivo de banco/<examen>/ exporta su lista y se suma aquí. */

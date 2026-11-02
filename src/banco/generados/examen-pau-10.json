@@ -1,0 +1,362 @@
+[
+ {
+  "id": "pau-prueba-4-x10",
+  "examen": "pau",
+  "destreza": "prueba",
+  "parte": 4,
+  "nombreParte": "Complete a conversation",
+  "titulo": "Talking about social media and sleep with a classmate",
+  "instrucciones": "4. READ this conversation and COMPLETE your part. Write the numbers (1-6) and complete each sentence on your exam paper. (1.5 points) If a gap ends with a question mark, you must write a question.",
+  "minutos": 10,
+  "texto": "Your classmate: You look really tired today. Did you sleep badly?\nYou: Yes, I did. {{1}}\nYour classmate: I was watching videos on my phone until two in the morning.\nYou: That’s not good for you. And {{2}}?\nYour classmate: Almost every night, to be honest. I can’t stop scrolling.\nYou: I read an article about it. {{3}}\nYour classmate: Really? I didn’t know the light from the screen was a problem.\nYou: Yes, it is. {{4}}\nYour classmate: That’s a good idea, but my phone is also my alarm clock.\nYou: Then why {{5}}?\nYour classmate: Good question. I’ll buy a cheap one this weekend and try it.\nYour classmate: Thanks for the advice. I’ll tell you how it goes.\nYou: {{6}}",
+  "items": [
+   {
+    "n": 1,
+    "tipo": "redaccion",
+    "tipoTexto": "dialogue",
+    "enunciado": "Hueco 1",
+    "minPalabras": 2,
+    "maxPalabras": 25,
+    "modelo": "I only slept four hours last night.  /  I went to bed very late. What about you?",
+    "criterios": [
+     "Lo que escribo encaja con la situación o con la conversación (si el hueco acaba en «?», es una pregunta).",
+     "Sin errores de gramática ni de ortografía: cada error baja la nota (0,25 → 0,20 → 0,15 → 0).",
+     "Ni muy corto ni muy largo: en las situaciones, entre 10 y 25 palabras."
+    ],
+    "explicacion": "El amigo explica a continuación qué hizo hasta las dos de la mañana: el hueco da el motivo del cansancio o cuenta que dormiste poco."
+   },
+   {
+    "n": 2,
+    "tipo": "redaccion",
+    "tipoTexto": "dialogue",
+    "enunciado": "Hueco 2 (acaba en «?»: tiene que ser una pregunta)",
+    "minPalabras": 2,
+    "maxPalabras": 25,
+    "modelo": "how often do you stay up late like that  /  how many nights a week do you do that",
+    "criterios": [
+     "Lo que escribo encaja con la situación o con la conversación (si el hueco acaba en «?», es una pregunta).",
+     "Sin errores de gramática ni de ortografía: cada error baja la nota (0,25 → 0,20 → 0,15 → 0).",
+     "Ni muy corto ni muy largo: en las situaciones, entre 10 y 25 palabras."
+    ],
+    "explicacion": "La respuesta «Almost every night» indica que preguntas por la frecuencia. El «And» y el «?» ya están escritos."
+   },
+   {
+    "n": 3,
+    "tipo": "redaccion",
+    "tipoTexto": "dialogue",
+    "enunciado": "Hueco 3",
+    "minPalabras": 2,
+    "maxPalabras": 25,
+    "modelo": "It said that using your phone in bed makes it harder to fall asleep.  /  It explained that screens keep your brain awake.",
+    "criterios": [
+     "Lo que escribo encaja con la situación o con la conversación (si el hueco acaba en «?», es una pregunta).",
+     "Sin errores de gramática ni de ortografía: cada error baja la nota (0,25 → 0,20 → 0,15 → 0).",
+     "Ni muy corto ni muy largo: en las situaciones, entre 10 y 25 palabras."
+    ],
+    "explicacion": "El amigo reacciona con «I didn’t know the light from the screen was a problem»: cuentas lo que decía el artículo."
+   },
+   {
+    "n": 4,
+    "tipo": "redaccion",
+    "tipoTexto": "dialogue",
+    "enunciado": "Hueco 4",
+    "minPalabras": 2,
+    "maxPalabras": 25,
+    "modelo": "You should leave your phone in another room at night.  /  Try to turn it off an hour before bed.",
+    "criterios": [
+     "Lo que escribo encaja con la situación o con la conversación (si el hueco acaba en «?», es una pregunta).",
+     "Sin errores de gramática ni de ortografía: cada error baja la nota (0,25 → 0,20 → 0,15 → 0).",
+     "Ni muy corto ni muy largo: en las situaciones, entre 10 y 25 palabras."
+    ],
+    "explicacion": "La respuesta «That’s a good idea, but my phone is also my alarm clock» muestra que has dado un consejo."
+   },
+   {
+    "n": 5,
+    "tipo": "redaccion",
+    "tipoTexto": "dialogue",
+    "enunciado": "Hueco 5 (acaba en «?»: tiene que ser una pregunta)",
+    "minPalabras": 2,
+    "maxPalabras": 25,
+    "modelo": "don’t you buy a real alarm clock  /  don’t you use a normal alarm clock",
+    "criterios": [
+     "Lo que escribo encaja con la situación o con la conversación (si el hueco acaba en «?», es una pregunta).",
+     "Sin errores de gramática ni de ortografía: cada error baja la nota (0,25 → 0,20 → 0,15 → 0).",
+     "Ni muy corto ni muy largo: en las situaciones, entre 10 y 25 palabras."
+    ],
+    "explicacion": "El amigo responde «I’ll buy a cheap one»: sugieres comprar un despertador. Tras «Then why» la pregunta suele ser «don’t you…?»."
+   },
+   {
+    "n": 6,
+    "tipo": "redaccion",
+    "tipoTexto": "dialogue",
+    "enunciado": "Hueco 6",
+    "minPalabras": 2,
+    "maxPalabras": 25,
+    "modelo": "You’re welcome! I hope you sleep better tonight.  /  No problem. Good luck, and tell me tomorrow!",
+    "criterios": [
+     "Lo que escribo encaja con la situación o con la conversación (si el hueco acaba en «?», es una pregunta).",
+     "Sin errores de gramática ni de ortografía: cada error baja la nota (0,25 → 0,20 → 0,15 → 0).",
+     "Ni muy corto ni muy largo: en las situaciones, entre 10 y 25 palabras."
+    ],
+    "explicacion": "Cierra la conversación respondiendo a «Thanks for the advice. I’ll tell you how it goes» con un deseo o una respuesta amable."
+   }
+  ],
+  "examenNumero": 10
+ },
+ {
+  "id": "pau-prueba-5-x10",
+  "examen": "pau",
+  "destreza": "prueba",
+  "parte": 5,
+  "nombreParte": "Comment on a situation",
+  "instrucciones": "5. Choose ONLY 3 of the following situations and WRITE what you would say in each one to show that you understand the context of the situation. Write between 10 and 25 words. (1.5 points) Only the first three you answer will be marked.",
+  "minutos": 10,
+  "elegir": 3,
+  "items": [
+   {
+    "n": 1,
+    "tipo": "redaccion",
+    "tipoTexto": "situation",
+    "enunciado": "a) Your friend says, “Girls’ football teams are not as important as boys’ teams.” Give your opinion.",
+    "minPalabras": 10,
+    "maxPalabras": 25,
+    "modelo": "I don’t agree with you. Girls’ teams work just as hard, and they deserve the same support and the same facilities as the boys.",
+    "criterios": [
+     "Lo que escribo encaja con la situación o con la conversación (si el hueco acaba en «?», es una pregunta).",
+     "Sin errores de gramática ni de ortografía: cada error baja la nota (0,25 → 0,20 → 0,15 → 0).",
+     "Ni muy corto ni muy largo: en las situaciones, entre 10 y 25 palabras."
+    ],
+    "explicacion": "Acto de habla: dar una opinión («I don’t agree / I think…») con una razón. 10–25 palabras."
+   },
+   {
+    "n": 2,
+    "tipo": "redaccion",
+    "tipoTexto": "situation",
+    "enunciado": "b) Your younger cousin is shy and wants to join a basketball club, but she is afraid. Advise her.",
+    "minPalabras": 10,
+    "maxPalabras": 25,
+    "modelo": "You should go to the first training session. Everyone is friendly there, and I’m sure you’ll make new friends very quickly.",
+    "criterios": [
+     "Lo que escribo encaja con la situación o con la conversación (si el hueco acaba en «?», es una pregunta).",
+     "Sin errores de gramática ni de ortografía: cada error baja la nota (0,25 → 0,20 → 0,15 → 0).",
+     "Ni muy corto ni muy largo: en las situaciones, entre 10 y 25 palabras."
+    ],
+    "explicacion": "Aconsejar: «You should…», «I think you ought to…» con una razón que tranquilice."
+   },
+   {
+    "n": 3,
+    "tipo": "redaccion",
+    "tipoTexto": "situation",
+    "enunciado": "c) You arrive late to volleyball practice because you missed the bus. Apologise to your coach.",
+    "minPalabras": 10,
+    "maxPalabras": 25,
+    "modelo": "I’m very sorry I’m late, coach. My bus didn’t come, so I had to walk. It won’t happen again, I promise.",
+    "criterios": [
+     "Lo que escribo encaja con la situación o con la conversación (si el hueco acaba en «?», es una pregunta).",
+     "Sin errores de gramática ni de ortografía: cada error baja la nota (0,25 → 0,20 → 0,15 → 0).",
+     "Ni muy corto ni muy largo: en las situaciones, entre 10 y 25 palabras."
+    ],
+    "explicacion": "Pedir perdón: «I’m very sorry…», explicar el motivo en pasado y prometer que no se repetirá."
+   },
+   {
+    "n": 4,
+    "tipo": "redaccion",
+    "tipoTexto": "situation",
+    "enunciado": "d) The girls’ team at your school only gets to use the sports hall once a week, but the boys use it three times. Complain to the head teacher.",
+    "minPalabras": 10,
+    "maxPalabras": 25,
+    "modelo": "Excuse me, I’m afraid this isn’t fair. Our team has only one session a week, while the boys have three. Could we have more time?",
+    "criterios": [
+     "Lo que escribo encaja con la situación o con la conversación (si el hueco acaba en «?», es una pregunta).",
+     "Sin errores de gramática ni de ortografía: cada error baja la nota (0,25 → 0,20 → 0,15 → 0).",
+     "Ni muy corto ni muy largo: en las situaciones, entre 10 y 25 palabras."
+    ],
+    "explicacion": "Quejarse con educación: «I’m afraid this isn’t fair…», comparar los datos y pedir un cambio."
+   },
+   {
+    "n": 5,
+    "tipo": "redaccion",
+    "tipoTexto": "situation",
+    "enunciado": "e) A friend invites you to join her hockey club on Saturday mornings, but you already have a family lunch. Refuse politely.",
+    "minPalabras": 10,
+    "maxPalabras": 25,
+    "modelo": "Thanks a lot for inviting me, but I’m afraid I can’t on Saturdays. I have a family lunch. Maybe I can come another day.",
+    "criterios": [
+     "Lo que escribo encaja con la situación o con la conversación (si el hueco acaba en «?», es una pregunta).",
+     "Sin errores de gramática ni de ortografía: cada error baja la nota (0,25 → 0,20 → 0,15 → 0).",
+     "Ni muy corto ni muy largo: en las situaciones, entre 10 y 25 palabras."
+    ],
+    "explicacion": "Rechazar con educación: agradecer, «I’m afraid I can’t…», dar una razón y, si se puede, proponer otra opción."
+   }
+  ],
+  "examenNumero": 10
+ },
+ {
+  "id": "pau-prueba-1-x10",
+  "examen": "pau",
+  "destreza": "prueba",
+  "parte": 1,
+  "nombreParte": "Comprensión del texto",
+  "titulo": "The school where students run the radio",
+  "instrucciones": "Read the text and answer questions 1, 2 and 3. In question 1, copy the exact words from the text as evidence; in question 2, copy no more than 10 words; in question 3, find the word in the text that matches each definition.",
+  "minutos": 25,
+  "texto": "At Hillcrest Secondary School, the loudest place at break time is not the playground but a small room next to the library. Since last September, this room has been home to Radio Hillcrest, a station run entirely by students. Every day at 1.15 p.m., a team of teenagers presents music, news and interviews for the whole school through the speakers in the corridors and the canteen.\n\nThe idea came from Maya Torres, a fifteen-year-old student who loved podcasts but could not find any that talked about school life. “Adults always speak about young people, but they rarely ask us what we think,” she says. She asked her media studies teacher, Mr Collins, for help, and together they persuaded the headteacher to give them an empty storeroom. The school paid for two microphones, while the students collected old computers from their families to build the studio.\n\nToday, more than thirty students take part in the project. Some write scripts, others choose the music, and a few prefer to work behind the scenes, checking the sound or designing posters. Every presenter must attend a short training course, where they learn how to speak clearly and how to prepare questions for guests. Last month, the team even interviewed the mayor about plans for a new skate park near the school.\n\nThe station has changed the atmosphere of the school. Teachers say that shy students have gained confidence, and some pupils who used to arrive late now come early to prepare their programmes. There have also been problems. At the beginning, a few presenters made jokes about classmates, and the headteacher almost closed the station. Since then, a group of students checks every script before it is broadcast.\n\nNext year, Maya hopes to share the programmes online so that families can listen at home. “We are not professionals,” she admits, “but we are learning fast, and everybody wants to hear what we have to say.”",
+  "items": [
+   {
+    "n": 1,
+    "tipo": "verdaderoFalso",
+    "pregunta": "1. Say whether the following sentences are TRUE or FALSE according to the text. COPY the evidence from the text. No marks will be given without the evidence. (1.5 points)",
+    "afirmacion": "a) Radio Hillcrest is managed by the teachers of the school.",
+    "correcta": false,
+    "pruebas": [
+     "a station run entirely by students",
+     "Radio Hillcrest, a station run entirely by students"
+    ],
+    "explicacion": "FALSE: la emisora la dirigen por completo los alumnos, no los profesores. La prueba hay que copiarla tal cual del texto."
+   },
+   {
+    "n": 2,
+    "tipo": "verdaderoFalso",
+    "afirmacion": "b) The students built the studio using computers that came from their families.",
+    "correcta": true,
+    "pruebas": [
+     "the students collected old computers from their families to build the studio",
+     "collected old computers from their families to build the studio"
+    ],
+    "explicacion": "TRUE: «the students collected old computers from their families to build the studio». El colegio solo pagó los micrófonos."
+   },
+   {
+    "n": 3,
+    "tipo": "verdaderoFalso",
+    "afirmacion": "c) The headteacher closed the station after some presenters made jokes about classmates.",
+    "correcta": false,
+    "pruebas": [
+     "the headteacher almost closed the station",
+     "made jokes about classmates, and the headteacher almost closed the station"
+    ],
+    "explicacion": "FALSE: el director estuvo a punto de cerrarla («almost closed»), pero no lo hizo; ahora un grupo revisa los guiones."
+   },
+   {
+    "n": 4,
+    "tipo": "palabra",
+    "pregunta": "2. ANSWER the questions below. COPY no more than 10 words and/or a number from the text to answer each question. (1.5 points)\na) What time does the radio programme start every day?",
+    "correctas": [
+     "1.15 p.m.",
+     "at 1.15 p.m.",
+     "Every day at 1.15 p.m."
+    ],
+    "maxPalabras": 10,
+    "explicacion": "«Every day at 1.15 p.m., a team of teenagers presents music, news and interviews». Se copia la hora tal como aparece."
+   },
+   {
+    "n": 5,
+    "tipo": "palabra",
+    "pregunta": "b) What must every presenter do before starting?",
+    "correctas": [
+     "attend a short training course",
+     "Every presenter must attend a short training course",
+     "must attend a short training course"
+    ],
+    "maxPalabras": 10,
+    "explicacion": "«Every presenter must attend a short training course»."
+   },
+   {
+    "n": 6,
+    "tipo": "palabra",
+    "pregunta": "c) What does Maya hope to do next year?",
+    "correctas": [
+     "share the programmes online",
+     "to share the programmes online",
+     "share the programmes online so that families can listen at home",
+     "to share the programmes online so that families can listen at home"
+    ],
+    "maxPalabras": 10,
+    "explicacion": "«Maya hopes to share the programmes online so that families can listen at home»."
+   },
+   {
+    "n": 7,
+    "tipo": "palabra",
+    "pregunta": "3. FIND a word or expression in the text that means… (1 point)\nd) convinced someone to do something by giving reasons (paragraph 2)",
+    "correctas": [
+     "persuaded"
+    ],
+    "explicacion": "«together they persuaded the headteacher to give them an empty storeroom»."
+   },
+   {
+    "n": 8,
+    "tipo": "palabra",
+    "pregunta": "e) in a place where the public cannot see, not on the stage (paragraph 3)",
+    "correctas": [
+     "behind the scenes"
+    ],
+    "explicacion": "«a few prefer to work behind the scenes»."
+   },
+   {
+    "n": 9,
+    "tipo": "palabra",
+    "pregunta": "f) belief in your own ability to do things well (paragraph 4)",
+    "correctas": [
+     "confidence"
+    ],
+    "explicacion": "«shy students have gained confidence»."
+   },
+   {
+    "n": 10,
+    "tipo": "palabra",
+    "pregunta": "g) sent out on radio or television (paragraph 4)",
+    "correctas": [
+     "broadcast"
+    ],
+    "explicacion": "«checks every script before it is broadcast»."
+   }
+  ],
+  "examenNumero": 10
+ },
+ {
+  "id": "pau-prueba-6-x10",
+  "examen": "pau",
+  "destreza": "prueba",
+  "parte": 6,
+  "nombreParte": "Composition",
+  "instrucciones": "6. Choose ONE of the following topics and WRITE a composition of about 140-180 words. If you choose the email, DO NOT SIGN it. (3 points)",
+  "minutos": 30,
+  "elegir": 1,
+  "items": [
+   {
+    "n": 1,
+    "tipo": "redaccion",
+    "tipoTexto": "composition",
+    "enunciado": "a) Should every school have its own radio station? Give your opinion.",
+    "minPalabras": 140,
+    "maxPalabras": 180,
+    "modelo": "Nowadays many schools have a radio station run by students, and I think this is a very good idea. In my opinion, every school should have one, although it needs some organisation.\n\nFirst of all, a radio station helps students learn useful skills. They have to write scripts, speak clearly and work in a team, and these abilities will help them in any job in the future. Moreover, it gives shy students a chance to express themselves without being on a stage in front of everybody.\n\nIn addition, a school radio makes the school community stronger. Students can play music, talk about local news and interview teachers, so everybody feels part of something. Besides, it is a fun way to practise English if some programmes are in this language.\n\nOn the other hand, a radio station needs equipment and a teacher who has time to help. Some schools may not have enough money for it.\n\nTo sum up, I believe the advantages are greater than the problems. With a little help from the town hall, any school could have its own radio.",
+    "criterios": [
+     "Presentación: párrafos claros, puntuación correcta.",
+     "Organización: estructura del tipo de texto (email; for & against; opinion essay), registro adecuado, ideas enlazadas con conectores.",
+     "Contenido: me ciño al tema, ideas suficientes y variadas, sin repeticiones.",
+     "Corrección gramatical: frases bien construidas, variedad de estructuras, sin traducir del español.",
+     "Vocabulario: rico y no copiado del texto; menos de 4 faltas de ortografía (más de 3 restan)."
+    ],
+    "explicacion": "Opinion essay: introducción con la postura, un párrafo por idea con conectores (first of all, moreover, in addition, on the other hand, to sum up), conclusión. Entre 140 y 180 palabras: por debajo de 140 baja el tope de nota."
+   },
+   {
+    "n": 2,
+    "tipo": "redaccion",
+    "tipoTexto": "email",
+    "enunciado": "b) Write an email to a friend from another school telling him or her about your new school radio programme and inviting him or her to be a guest on it.",
+    "minPalabras": 140,
+    "maxPalabras": 180,
+    "modelo": "Hi Lucas,\n\nHow are things going? I hope you are enjoying your new school. I’m writing to tell you some great news and to ask you a favour.\n\nA few weeks ago, some friends and I started a programme on our school radio. It is called “Break Time” and we broadcast it every Friday during the long break. We play music, read the school news and talk about films and video games. Last week we even interviewed our headteacher, and she was really funny!\n\nThe reason I’m writing is that we would love you to be our guest next month. You always have interesting stories about your trips, so you could tell us about your last journey to Scotland. It would only take about fifteen minutes and you could choose a song as well.\n\nWhat do you think? If you can come, you could stay for the weekend and we could go to the beach together.\n\nWrite back soon and tell me if you are free.\n\nBest wishes,",
+    "criterios": [
+     "Presentación: párrafos claros, puntuación correcta.",
+     "Organización: estructura del tipo de texto (email; for & against; opinion essay), registro adecuado, ideas enlazadas con conectores.",
+     "Contenido: me ciño al tema, ideas suficientes y variadas, sin repeticiones.",
+     "Corrección gramatical: frases bien construidas, variedad de estructuras, sin traducir del español.",
+     "Vocabulario: rico y no copiado del texto; menos de 4 faltas de ortografía (más de 3 restan)."
+    ],
+    "explicacion": "Email informal: saludo, motivo, cuerpo contando el programa de radio con tus palabras, invitación («We would love you to…», «What do you think?») y despedida SIN firmar."
+   }
+  ],
+  "examenNumero": 10
+ }
+]

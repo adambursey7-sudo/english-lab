@@ -1,0 +1,1943 @@
+[
+ {
+  "id": "c1-reading-use-2-x8",
+  "examen": "c1",
+  "destreza": "reading-use",
+  "parte": 2,
+  "nombreParte": "Open cloze",
+  "titulo": "The rise of board-game cafés",
+  "instrucciones": "For questions 9–16, read the text below and think of the word which best fits each gap. Use only one word in each gap.",
+  "minutos": 10,
+  "texto": "A decade ago, the idea of spending an evening in a café {{9}} of drinking coffee and scrolling through a phone would have struck many people as odd. Yet board-game cafés, where customers pay a small fee to play from a library of hundreds of titles, have sprung up in towns across the country. Few owners expected their businesses to take off {{10}} quickly as they did.\n\nPart of the appeal lies in the fact that nobody needs to read a rulebook. Staff members, known as game gurus, are on hand to explain how each game works, {{11}} that even complete beginners can join in within minutes. Not only {{12}} the games encourage conversation, but they also bring together people who would never otherwise have met.\n\nOf course, running such a place is not without its difficulties. Games are expensive, and a single missing piece can ruin {{13}} would otherwise be a perfect evening. {{14}} the cafés' popularity, many owners still struggle to cover their rent. Even so, those I spoke to were optimistic. One told me she would not go back to her old office job {{15}} any price, and another admitted that, had he known how rewarding the work would be, he would have started years {{16}}.",
+  "items": [
+   {
+    "n": 9,
+    "tipo": "palabra",
+    "correctas": [
+     "instead"
+    ],
+    "explicacion": "\"Instead of drinking coffee and scrolling\" = rather than doing that. \"Instead of\" is followed by an -ing form."
+   },
+   {
+    "n": 10,
+    "tipo": "palabra",
+    "correctas": [
+     "as"
+    ],
+    "explicacion": "\"As quickly as\" is a comparison of equality: \"take off as quickly as they did\"."
+   },
+   {
+    "n": 11,
+    "tipo": "palabra",
+    "correctas": [
+     "so"
+    ],
+    "explicacion": "\"So that\" introduces a purpose or result: staff explain the games so that beginners can join in."
+   },
+   {
+    "n": 12,
+    "tipo": "palabra",
+    "correctas": [
+     "do"
+    ],
+    "explicacion": "After \"Not only\" at the start of a clause, the auxiliary comes before the subject: \"Not only do the games encourage...\"."
+   },
+   {
+    "n": 13,
+    "tipo": "palabra",
+    "correctas": [
+     "what"
+    ],
+    "explicacion": "\"Ruin what would otherwise be a perfect evening\": \"what\" works as a relative pronoun meaning \"the thing that\"."
+   },
+   {
+    "n": 14,
+    "tipo": "palabra",
+    "correctas": [
+     "despite",
+     "notwithstanding"
+    ],
+    "explicacion": "\"Despite the cafés' popularity\" = although they are popular. It is followed by a noun phrase, with no \"of\"."
+   },
+   {
+    "n": 15,
+    "tipo": "palabra",
+    "correctas": [
+     "at"
+    ],
+    "explicacion": "\"Not ... at any price\" is a fixed expression meaning \"in no circumstances\"."
+   },
+   {
+    "n": 16,
+    "tipo": "palabra",
+    "correctas": [
+     "earlier",
+     "before",
+     "ago",
+     "sooner"
+    ],
+    "explicacion": "\"Had he known... he would have started years earlier\": the third conditional needs a time word showing he would have begun sooner. \"Earlier\" is the most natural answer."
+   }
+  ],
+  "examenNumero": 8
+ },
+ {
+  "id": "c1-reading-use-3-x8",
+  "examen": "c1",
+  "destreza": "reading-use",
+  "parte": 3,
+  "nombreParte": "Word formation",
+  "titulo": "Farming upwards",
+  "instrucciones": "For questions 17–24, read the text below. Use the word given in capitals at the end of some of the lines to form a word that fits in the gap in the same line.",
+  "minutos": 10,
+  "texto": "In a converted warehouse on the edge of the city, lettuce grows in neat towers under pink LED lights. Visitors are often {{17}} to find that there is not a single grain of soil in sight. Instead, the roots hang in a fine mist of water and nutrients, a method that uses far less water than traditional farming and is therefore of {{18}} interest to regions suffering from drought.\n\nThe founder, a former engineer, admits that the early days were {{19}}. Electricity bills were enormous, and several crops failed because of a {{20}} in the ventilation system. Yet he never considered giving up, and his {{21}} has since paid off. The farm now supplies fresh herbs to dozens of local restaurants, which value both their {{22}} and their exceptional flavour.\n\nCritics argue that such farms will never replace fields, and they may well be right. Nevertheless, the technology offers a {{23}} way of producing food close to the people who eat it, and its {{24}} should not be underestimated.",
+  "items": [
+   {
+    "n": 17,
+    "tipo": "palabra",
+    "raiz": "ASTONISH",
+    "correctas": [
+     "astonished"
+    ],
+    "explicacion": "Adjective describing how visitors feel: \"astonished to find\". The -ed form is needed, not -ing, because it describes the people's reaction."
+   },
+   {
+    "n": 18,
+    "tipo": "palabra",
+    "raiz": "CONSIDER",
+    "correctas": [
+     "considerable"
+    ],
+    "explicacion": "Adjective before \"interest\": \"of considerable interest\". Suffix -able, and the final -e of the root is dropped."
+   },
+   {
+    "n": 19,
+    "tipo": "palabra",
+    "raiz": "PROFIT",
+    "correctas": [
+     "unprofitable"
+    ],
+    "explicacion": "Adjective with negative prefix and suffix: un- + profit + -able. The early days brought no profit."
+   },
+   {
+    "n": 20,
+    "tipo": "palabra",
+    "raiz": "FUNCTION",
+    "correctas": [
+     "malfunction"
+    ],
+    "explicacion": "Noun after \"a\": the prefix mal- means \"badly\", so \"a malfunction in the ventilation system\" is a fault in how it works."
+   },
+   {
+    "n": 21,
+    "tipo": "palabra",
+    "raiz": "DETERMINE",
+    "correctas": [
+     "determination"
+    ],
+    "explicacion": "Noun after \"his\": \"his determination has paid off\". Suffix -ation, and the final -e of the root is dropped."
+   },
+   {
+    "n": 22,
+    "tipo": "palabra",
+    "raiz": "RELY",
+    "correctas": [
+     "reliability"
+    ],
+    "explicacion": "Noun after \"their\", parallel with \"flavour\": rely becomes \"reliab-\" + -ility. The y changes to i."
+   },
+   {
+    "n": 23,
+    "tipo": "palabra",
+    "raiz": "SUSTAIN",
+    "correctas": [
+     "sustainable"
+    ],
+    "explicacion": "Adjective before \"way\": \"a sustainable way of producing food\". Suffix -able."
+   },
+   {
+    "n": 24,
+    "tipo": "palabra",
+    "raiz": "POTENT",
+    "correctas": [
+     "potential"
+    ],
+    "explicacion": "Noun after \"its\": \"its potential should not be underestimated\". Note the change from -ent to -ential."
+   }
+  ],
+  "examenNumero": 8
+ },
+ {
+  "id": "c1-reading-use-4-x8",
+  "examen": "c1",
+  "destreza": "reading-use",
+  "parte": 4,
+  "nombreParte": "Key word transformations",
+  "instrucciones": "For questions 25–30, complete the second sentence so that it has a similar meaning to the first sentence, using the word given. Do not change the word given. You must use between three and six words, including the word given.",
+  "minutos": 12,
+  "items": [
+   {
+    "n": 25,
+    "tipo": "transformacion",
+    "clave": "SOONER",
+    "frase": "We had only just reached the lake when the rain began to fall.",
+    "inicio": "No",
+    "fin": "the lake than the rain began to fall.",
+    "correctas": [
+     "sooner had we reached",
+     "sooner had we arrived at"
+    ],
+    "explicacion": "\"No sooner\" at the start of a sentence requires inversion with the past perfect: \"had we reached\", followed by \"than\"."
+   },
+   {
+    "n": 26,
+    "tipo": "transformacion",
+    "clave": "HAD",
+    "frase": "I regret not bringing a towel to the river yesterday.",
+    "inicio": "I wish",
+    "fin": "a towel to the river yesterday.",
+    "correctas": [
+     "I had brought",
+     "I'd brought",
+     "I had taken",
+     "I'd taken"
+    ],
+    "explicacion": "A regret about the past is expressed with \"wish + past perfect\": \"I had brought\"."
+   },
+   {
+    "n": 27,
+    "tipo": "transformacion",
+    "clave": "BEEN",
+    "frase": "The council has closed the old quarry pool to swimmers.",
+    "inicio": "The old quarry pool",
+    "fin": "to swimmers by the council.",
+    "correctas": [
+     "has been closed",
+     "has now been closed"
+    ],
+    "explicacion": "Passive in the present perfect: \"has been closed\". The agent appears in the \"by\" phrase."
+   },
+   {
+    "n": 28,
+    "tipo": "transformacion",
+    "clave": "ACCOUNT",
+    "frase": "You must not forget that the water can be dangerously cold, even in summer.",
+    "inicio": "You must",
+    "fin": "that the water can be dangerously cold, even in summer.",
+    "correctas": [
+     "take into account",
+     "take account of"
+    ],
+    "explicacion": "\"Take into account\" = consider or remember something when making a decision."
+   },
+   {
+    "n": 29,
+    "tipo": "transformacion",
+    "clave": "MUST",
+    "frase": "I'm certain that Clara didn't see the warning sign, or she wouldn't have jumped in.",
+    "inicio": "Clara",
+    "fin": "the warning sign, or she wouldn't have jumped in.",
+    "correctas": [
+     "must not have seen",
+     "mustn't have seen",
+     "can't have seen",
+     "cannot have seen"
+    ],
+    "explicacion": "A negative deduction about the past: \"must not have seen\" (or \"can't have seen\")."
+   },
+   {
+    "n": 30,
+    "tipo": "transformacion",
+    "clave": "RECOMMENDED",
+    "frase": "\"You should try the cold-water swim at dawn,\" the guide told us.",
+    "inicio": "The guide",
+    "fin": "the cold-water swim at dawn.",
+    "correctas": [
+     "recommended that we try",
+     "recommended us to try",
+     "recommended trying",
+     "recommended that we should try"
+    ],
+    "explicacion": "Reported advice with \"recommend\": \"recommended that we try\" (subjunctive/bare infinitive), \"recommended trying\", or \"recommended us to try\"."
+   }
+  ],
+  "examenNumero": 8
+ },
+ {
+  "id": "c1-reading-use-5-x8",
+  "examen": "c1",
+  "destreza": "reading-use",
+  "parte": 5,
+  "nombreParte": "Multiple choice",
+  "titulo": "The placement",
+  "instrucciones": "You are going to read an article about volunteer tourism. For questions 31–36, choose the answer (A, B, C or D) which you think fits best according to the text.",
+  "minutos": 15,
+  "texto": "Every summer, thousands of young people pay several hundred pounds a week to spend a fortnight painting a school wall in a village they will never see again. I was one of them, once. At nineteen I spent three weeks in a coastal community, helping to build a classroom extension, and I came home convinced that I had changed something. It took me a decade, and a job in international development, to understand how little I had actually contributed, and how much the experience had really been about me.\n\nThe trouble is not that volunteers are insincere. Most are generous, curious and anxious to be useful. The trouble lies in the arrangement itself. Placement companies are commercial enterprises, and their income depends on a steady supply of willing participants, not on whether a project succeeds. A community may need a trained electrician for six months; what it is offered is twelve enthusiastic students for ten days. Projects are therefore designed around what visitors can plausibly do, rather than around what is needed, and the gap between the two is quietly filled with good intentions.\n\nThe consequences can be more serious than wasted effort. In one town I later visited, a group of volunteers had repainted the same orphanage every few months for years, while local painters, who would have welcomed the work, went without. Elsewhere, researchers have documented children being kept in poor conditions precisely because their presence attracted paying visitors, a grim incentive that no volunteer ever intended to create. Even well-run projects can distort the local economy, since a free workforce undercuts those who depend on wages.\n\nDefenders of the industry are quick to point out that the money does not vanish. Fees pay for accommodation, food and a modest donation, and in some regions volunteer visitors are among the few sources of outside income. That is a fair argument, and I do not dismiss it. But it is worth asking whether the same money, given directly to a local organisation, would not achieve considerably more. A fortnight's fee could pay a skilled builder for months. The volunteer's labour, by contrast, often has to be supervised, corrected and sometimes quietly undone by the people it was supposed to help.\n\nThere is, I think, a second benefit that defenders rarely mention, and it is the real reason the industry thrives: the volunteers themselves. They return with stories, a sharper sense of their own good fortune and, frequently, a lasting interest in the wider world. Some go on to careers in education, medicine or aid work. Such outcomes are not trivial, and it would be churlish to pretend otherwise. Yet it is uncomfortable to notice that the beneficiaries most reliably served are the ones who paid.\n\nSo should nobody go? I would not say so. The projects that seem to do the most good share certain features. They are led by local people, who decide what is needed and when. They ask for specific skills and are prepared to turn away those who lack them. They stay for months, not days, so that relationships can develop and mistakes can be learned from. Above all, they are honest about their purposes, and do not pretend that a holiday with a worthy label is the same thing as help.\n\nI sometimes think about the classroom I helped to build. It may well be standing still, and I hope the children are using it. But when I picture it now, I do not see the bricks. I see a nineteen-year-old on a ladder, enjoying himself enormously, with a local builder waiting patiently at the bottom to put right what he had done.",
+  "items": [
+   {
+    "n": 31,
+    "tipo": "opciones",
+    "pregunta": "What does the writer say about his own volunteering experience in the first paragraph?",
+    "opciones": [
+     "It made him doubt that he wanted to work in development.",
+     "It later made him realise that it had benefited him more than the community.",
+     "It was spoiled by the cost of the placement.",
+     "It taught him practical skills he later used in his career."
+    ],
+    "correcta": 1,
+    "explicacion": "«How much the experience had really been about me» (B). No dice que dudara de su carrera, ni que el precio lo estropeara, ni que aprendiera destrezas útiles."
+   },
+   {
+    "n": 32,
+    "tipo": "opciones",
+    "pregunta": "According to the writer, why are projects often poorly matched to local needs?",
+    "opciones": [
+     "Volunteers refuse to follow local advice.",
+     "Companies are more concerned with attracting participants than with results.",
+     "Communities rarely say what they actually need.",
+     "Most volunteers lack genuine enthusiasm."
+    ],
+    "correcta": 1,
+    "explicacion": "«Their income depends on a steady supply of willing participants, not on whether a project succeeds» (B). Además, dice que los voluntarios no son insinceros (D no)."
+   },
+   {
+    "n": 33,
+    "tipo": "opciones",
+    "pregunta": "What point does the writer make about the orphanage example in the third paragraph?",
+    "opciones": [
+     "Volunteers can take work away from local people.",
+     "Local painters were unwilling to do the job.",
+     "Volunteers should be better trained before they travel.",
+     "Orphanages need repainting more often than other buildings."
+    ],
+    "correcta": 0,
+    "explicacion": "Los pintores locales «went without» trabajo mientras los voluntarios repintaban (A). Ellos «would have welcomed the work», así que B es falsa."
+   },
+   {
+    "n": 34,
+    "tipo": "opciones",
+    "pregunta": "How does the writer respond to the argument that fees benefit local communities?",
+    "opciones": [
+     "He rejects it as entirely false.",
+     "He accepts it but suggests there may be a more effective alternative.",
+     "He admits it is the strongest case for the industry.",
+     "He claims that most fees are never spent locally."
+    ],
+    "correcta": 1,
+    "explicacion": "«That is a fair argument… But it is worth asking whether the same money, given directly… would not achieve considerably more» (B). No lo rechaza del todo ni dice que el dinero no llegue."
+   },
+   {
+    "n": 35,
+    "tipo": "opciones",
+    "pregunta": "What does the writer mean by “the beneficiaries most reliably served are the ones who paid”?",
+    "opciones": [
+     "Volunteers are the people who gain most from the arrangement.",
+     "Communities receive what they have paid for.",
+     "Placement companies make unfair profits.",
+     "Wealthy volunteers are given the best projects."
+    ],
+    "correcta": 0,
+    "explicacion": "Los que pagan son los voluntarios, y son quienes más seguro se benefician (A). No habla de beneficios injustos de las empresas ni de proyectos mejores para ricos."
+   },
+   {
+    "n": 36,
+    "tipo": "opciones",
+    "pregunta": "What is the writer’s overall view of volunteer tourism?",
+    "opciones": [
+     "It should be banned.",
+     "It is worthwhile whatever its design.",
+     "It can be valuable if it is organised responsibly and honestly.",
+     "It is mainly harmful to the volunteers themselves."
+    ],
+    "correcta": 2,
+    "explicacion": "Describe rasgos de los proyectos buenos: dirigidos por locales, con destrezas, de larga duración y honestos (C). No pide prohibirlo ni lo defiende sin condiciones."
+   }
+  ],
+  "examenNumero": 8
+ },
+ {
+  "id": "c1-reading-use-1-x8",
+  "examen": "c1",
+  "destreza": "reading-use",
+  "parte": 1,
+  "nombreParte": "Multiple-choice cloze",
+  "titulo": "The watch that knows too much",
+  "instrucciones": "For questions 1–8, read the text below and decide which answer (A, B, C or D) best fits each gap.",
+  "minutos": 10,
+  "texto": "Few gadgets have become as {{1}} a part of daily life as the fitness band. Strapped to millions of wrists, it counts our steps, monitors our sleep and, if we are not careful, quietly builds a detailed picture of how we live. For most wearers the trade-off seems perfectly reasonable: a little data in {{2}} for a healthier routine.\n\nPrivacy campaigners, however, are not so easily {{3}}. They point out that heart-rate patterns can reveal far more than fitness levels, hinting at stress, illness or even pregnancy. Once such information leaves the device, it is often passed on to third parties, sometimes without the user's full {{4}}. Companies insist that the data is anonymised, yet researchers have repeatedly shown that individuals can be {{5}} from supposedly anonymous records by cross-referencing a few simple details such as the time and place of a morning run.\n\nThe problem is that few people read the terms and conditions before they {{6}} to them. Some experts are calling for stricter rules, arguing that consumers should not be expected to {{7}} the small print of every product they wear. Until that happens, the safest approach may be to think carefully about what we are prepared to {{8}} in exchange for convenience.",
+  "items": [
+   {
+    "n": 1,
+    "tipo": "opciones",
+    "opciones": [
+     "integral",
+     "compulsory",
+     "superficial",
+     "spare"
+    ],
+    "correcta": 0,
+    "explicacion": "\"An integral part of\" significa parte esencial e inseparable. \"Compulsory\" implica obligación, \"superficial\" significa lo contrario y \"spare\" (de repuesto) no tiene sentido aquí."
+   },
+   {
+    "n": 2,
+    "tipo": "opciones",
+    "opciones": [
+     "return",
+     "exchange",
+     "payment",
+     "reward"
+    ],
+    "correcta": 0,
+    "explicacion": "\"In return for\" es la expresión fija correcta. \"In exchange for\" existe, pero aquí se necesita la preposición seguida de \"for\" tras \"in\" y \"exchange\" no admite \"in exchange for\" como \"in + a little data in exchange\" con este artículo; \"payment\" y \"reward\" no forman la locución con \"in\"."
+   },
+   {
+    "n": 3,
+    "tipo": "opciones",
+    "opciones": [
+     "reassured",
+     "relieved",
+     "relaxed",
+     "resigned"
+    ],
+    "correcta": 0,
+    "explicacion": "\"Easily reassured\" = que se tranquiliza con facilidad. \"Relieved\" y \"relaxed\" no se combinan así con \"easily\" y \"resigned\" significa conformado."
+   },
+   {
+    "n": 4,
+    "tipo": "opciones",
+    "opciones": [
+     "consent",
+     "permit",
+     "approval",
+     "agreement"
+    ],
+    "correcta": 0,
+    "explicacion": "\"Without the user's full consent\" es la colocación habitual en protección de datos. \"Permit\" es un documento, y \"approval\" y \"agreement\" no suenan naturales con \"full\" y \"user's\" en este contexto."
+   },
+   {
+    "n": 5,
+    "tipo": "opciones",
+    "opciones": [
+     "identified",
+     "recognised",
+     "distinguished",
+     "detected"
+    ],
+    "correcta": 0,
+    "explicacion": "\"Identify someone from records\" = determinar quién es una persona a partir de datos. \"Recognised\" requiere haberla visto antes, \"distinguished\" significa diferenciar y \"detected\" se usa con cosas, no con personas."
+   },
+   {
+    "n": 6,
+    "tipo": "opciones",
+    "opciones": [
+     "agree",
+     "consent",
+     "accept",
+     "comply"
+    ],
+    "correcta": 0,
+    "explicacion": "\"Agree to the terms\" es lo natural con \"to\". \"Consent\" necesita \"to\" pero es más formal y menos habitual con \"terms\"; \"accept\" no lleva \"to\" y \"comply\" requiere \"with\"."
+   },
+   {
+    "n": 7,
+    "tipo": "opciones",
+    "opciones": [
+     "scrutinise",
+     "glance",
+     "skim",
+     "overlook"
+    ],
+    "correcta": 0,
+    "explicacion": "\"Scrutinise the small print\" = examinarla con detalle, que es lo que se pide a los consumidores. \"Glance\" y \"skim\" son lecturas rápidas y \"overlook\" significa pasar por alto."
+   },
+   {
+    "n": 8,
+    "tipo": "opciones",
+    "opciones": [
+     "sacrifice",
+     "forfeit",
+     "donate",
+     "waste"
+    ],
+    "correcta": 0,
+    "explicacion": "\"Sacrifice something in exchange for\" = renunciar a algo a cambio de otra cosa. \"Forfeit\" implica pérdida como castigo, \"donate\" es dar voluntariamente sin ese matiz y \"waste\" es malgastar."
+   }
+  ],
+  "examenNumero": 8
+ },
+ {
+  "id": "c1-reading-use-8-x8",
+  "examen": "c1",
+  "destreza": "reading-use",
+  "parte": 8,
+  "nombreParte": "Multiple matching",
+  "titulo": "Light on the rock",
+  "instrucciones": "You are going to read an article in which four people describe keeping a diary during a spell as a lighthouse keeper. For questions 47–56, choose from the people (A–D). The people may be chosen more than once.",
+  "minutos": 15,
+  "secciones": [
+   {
+    "letra": "A",
+    "titulo": "Marguerite",
+    "texto": "I took the post at forty, after a divorce and a decade of teaching, and I began the diary because the doctor had told me to write down my worries. They did not last. Within a fortnight I was recording nothing but the weather: the colour of the sea at six, the exact moment the fog came in, the way the wind changed key around the tower. Looking back, those pages are almost embarrassingly dull, yet I read them more often than anything else I own. They remind me that I once paid attention. What I had not expected was the silence. I assumed I would love it, and for a month I did, but then it began to press on me, and I found myself talking aloud to the kettle. I never told the mainland supervisor. I was afraid they would think I was unfit for the job, and I was not, although I came close to believing it."
+   },
+   {
+    "letra": "B",
+    "titulo": "Hamish",
+    "texto": "My diary was never meant to be read, which is probably why it is so honest. I kept it in a school exercise book, in pencil, because ink froze in the lamp room in winter. Most entries are lists: oil used, glass cleaned, supplies counted. I was proud of my routine and I would not have admitted that it was also a way of holding myself together. The service sent an inspector twice a year, and I remember the shame of showing him a logbook in which every line was in order, while my private book contained a page that said only, “Nobody spoke to me today.” I burned that book on my last night, which I now regret bitterly. A historian once asked to see it, and I had to tell him it no longer existed. He looked as if I had confessed to a crime, and in a way I had."
+   },
+   {
+    "letra": "C",
+    "titulo": "Ingrid",
+    "texto": "I was twenty-three, newly qualified as an engineer, and sent out to oversee the conversion of the light from oil to electricity. The diary was a requirement; every technician had to file a weekly account. I treated it as paperwork and wrote it in the flattest language I could manage, which, curiously, is why it has become valuable. Researchers now use it to date the changes made to the machinery, since my entries are precise where more colourful writing would have been vague. I did not see any of this coming. Privately I thought the work lonely and the keepers rather odd, and I could not wait to leave. Strangely, it is the island I dream about now, not the city where I spent my career. I went back last year and found that the tower has been turned into a hostel, and I slept in the very room where I had written those dull reports."
+   },
+   {
+    "letra": "D",
+    "titulo": "Callum",
+    "texto": "I went out for the summer season as a relief keeper, aged nineteen, and I filled three notebooks with drawings. I am no artist, but I drew the birds, the supply boat, the older keeper asleep in his chair. When the season ended I assumed I would never open them again. Then, thirty years on, my daughter found them in the loft and framed one of the sketches, and I was startled by how much I had forgotten: the names of the gulls, the smell of paraffin, even the quarrels. The older keeper taught me everything I know about patience, though at the time I found him exasperating and told him so. I wish I had thanked him. I never saw him again, and the drawing of him asleep, mouth open, is now the thing in my house that I treasure most."
+   }
+  ],
+  "opcionesComunes": [
+   "Marguerite",
+   "Hamish",
+   "Ingrid",
+   "Callum"
+  ],
+  "items": [
+   {
+    "n": 47,
+    "tipo": "emparejar",
+    "pregunta": "Which person was embarrassed when their official records were compared with a more personal one?",
+    "correcta": 1,
+    "explicacion": "Hamish: «I remember the shame of showing him a logbook in which every line was in order, while my private book contained a page…»."
+   },
+   {
+    "n": 48,
+    "tipo": "emparejar",
+    "pregunta": "Which person feels regret at having destroyed their diary?",
+    "correcta": 1,
+    "explicacion": "Hamish: «I burned that book on my last night, which I now regret bitterly»."
+   },
+   {
+    "n": 49,
+    "tipo": "emparejar",
+    "pregunta": "Which person's plain style of writing has turned out to be useful to others?",
+    "correcta": 2,
+    "explicacion": "Ingrid: «wrote it in the flattest language… which… is why it has become valuable»."
+   },
+   {
+    "n": 50,
+    "tipo": "emparejar",
+    "pregunta": "Which person began writing as a way of dealing with personal difficulties?",
+    "correcta": 0,
+    "explicacion": "Marguerite: «the doctor had told me to write down my worries»."
+   },
+   {
+    "n": 51,
+    "tipo": "emparejar",
+    "pregunta": "Which person was required to keep a diary as part of the job?",
+    "correcta": 2,
+    "explicacion": "Ingrid: «The diary was a requirement; every technician had to file a weekly account»."
+   },
+   {
+    "n": 52,
+    "tipo": "emparejar",
+    "pregunta": "Which person was surprised at how much they had forgotten about the experience?",
+    "correcta": 3,
+    "explicacion": "Callum: «I was startled by how much I had forgotten»."
+   },
+   {
+    "n": 53,
+    "tipo": "emparejar",
+    "pregunta": "Which person concealed their emotional struggles from their employer?",
+    "correcta": 0,
+    "explicacion": "Marguerite: «I never told the mainland supervisor. I was afraid they would think I was unfit»."
+   },
+   {
+    "n": 54,
+    "tipo": "emparejar",
+    "pregunta": "Which person regrets not expressing gratitude to a colleague?",
+    "correcta": 3,
+    "explicacion": "Callum: «I wish I had thanked him»."
+   },
+   {
+    "n": 55,
+    "tipo": "emparejar",
+    "pregunta": "Which person disliked the posting at the time but feels strongly attached to the place now?",
+    "correcta": 2,
+    "explicacion": "Ingrid: «could not wait to leave… it is the island I dream about now»."
+   },
+   {
+    "n": 56,
+    "tipo": "emparejar",
+    "pregunta": "Which person found that routine tasks helped them cope with isolation?",
+    "correcta": 1,
+    "explicacion": "Hamish: «a way of holding myself together»; his entries were lists of tasks and he valued his routine."
+   }
+  ],
+  "examenNumero": 8
+ },
+ {
+  "id": "c1-writing-1-x8",
+  "examen": "c1",
+  "destreza": "writing",
+  "parte": 1,
+  "nombreParte": "Essay",
+  "instrucciones": "You must answer this question. Write your answer in 220–260 words in an appropriate style.",
+  "minutos": 45,
+  "items": [
+   {
+    "n": 1,
+    "tipo": "redaccion",
+    "tipoTexto": "essay",
+    "enunciado": "Your class has attended a talk by a marine biologist on the best ways to protect damaged coral reefs. You have made the notes below:\n\nWays to protect coral reefs:\n• growing young coral in underwater nurseries\n• limiting the number of tourists and boats\n• educating local communities\n\nSome opinions expressed in the talk:\n“Nurseries are impressive, but they treat the symptoms rather than the cause.”\n“A reef that nobody visits is a reef that nobody cares about.”\n“People protect what they understand, and they understand what they are taught as children.”\n\nWrite an essay for your tutor discussing two of the ways in your notes. You should explain which way would be more effective in protecting coral reefs, giving reasons in support of your answer.\n\nYou may, if you wish, make use of the opinions expressed in the talk, but you should use your own words as far as possible.",
+    "minPalabras": 220,
+    "maxPalabras": 260,
+    "modelo": "Coral reefs support an extraordinary range of marine life, yet many are now in serious decline. Of the measures suggested, coral nurseries and restrictions on tourism seem to me the most worth examining, and I will consider each in turn.\n\nNurseries, in which fragments of healthy coral are grown on frames before being transplanted onto damaged reefs, offer a tangible and encouraging solution. Within a few years, a barren patch of seabed can begin to recover, and the sight of new growth has proved a powerful source of motivation for volunteers. Nevertheless, the method is slow, expensive and labour-intensive. More importantly, if warming seas or pollution remain unchecked, the transplanted coral may simply die again, which is why some scientists regard nurseries as a plaster rather than a cure.\n\nLimiting visitors, by contrast, tackles one of the pressures that reefs face directly. Anchors break fragile structures, and sunscreen chemicals and careless snorkellers cause further damage. A strict cap on boats could be introduced at little cost and would bring results quickly. The difficulty is that many coastal communities depend on tourism for their income, so any restrictions would need to be balanced by fair compensation.\n\nOn balance, I believe that controlling tourism would be the more effective approach, since it prevents harm rather than repairing it afterwards. Nurseries remain valuable, but they work best as a complement to, not a substitute for, sensible protection of the reefs that still survive.",
+    "criterios": [
+     "Content: he hecho todo lo que pide la tarea (cada punto del enunciado) y quien lo lea queda bien informado.",
+     "Communicative Achievement: el registro es el adecuado para el lector (formal con el tutor o el director; cercano con un amigo) y sigo las convenciones del tipo de texto.",
+     "Organisation: párrafos claros con una idea cada uno, introducción y cierre, conectores variados (nevertheless, by contrast, on balance, since…).",
+     "Language: vocabulario preciso y variado, estructuras complejas (condicionales, pasivas, relativas, inversión) y pocos errores, ninguno que estorbe."
+    ],
+    "explicacion": "El modelo trata DOS de los tres puntos (coral nurseries y limiting tourism), compara ventajas e inconvenientes de cada uno y dice claramente cuál es mejor y por qué. Registro formal: sin contracciones, con conectores (nevertheless, by contrast, on balance) y una frase de cierre que resume la postura."
+   }
+  ],
+  "examenNumero": 8
+ },
+ {
+  "id": "c1-writing-2-x8",
+  "examen": "c1",
+  "destreza": "writing",
+  "parte": 2,
+  "nombreParte": "Choice of task",
+  "instrucciones": "Write an answer to ONE of the questions 2–4 in this part. Write your answer in 220–260 words in an appropriate style.",
+  "minutos": 45,
+  "elegir": 1,
+  "items": [
+   {
+    "n": 2,
+    "tipo": "redaccion",
+    "tipoTexto": "article",
+    "enunciado": "You see this notice in the newsletter of a local outdoor activities club:\n\n“Our next issue is about people who give their time for others. Have you ever met, or taken part in, a volunteer project that impressed you? Write an article describing what the volunteers do, explaining why the work matters to the community and saying what you personally learnt from it.”\n\nWrite your article.",
+    "minPalabras": 220,
+    "maxPalabras": 260,
+    "modelo": "The people who go up when everyone else comes down\n\nLast winter I spent a weekend shadowing a mountain rescue team in the hills above our town, intending to write a few lines for this newsletter. I came away with a very different sense of what volunteering can mean.\n\nThe team consists of thirty-odd members, among them a dentist, two teachers and a retired baker. They have no salary, yet they train every other Sunday, whatever the weather, practising rope work, navigation in poor visibility and first aid on a freezing slope. When the pager sounds, often in the middle of the night, they drop everything and head for the trailhead. Most call-outs involve walkers who are tired, lost or badly equipped rather than in real danger, but the occasional broken ankle or sudden whiteout is another matter.\n\nWhy does it matter? Quite simply, because the nearest professional service is more than an hour away, and in the cold an hour can decide the outcome. Had the volunteers not existed, our hills would be considerably less welcoming to families and beginners alike.\n\nWhat struck me most was the lack of judgement. Nobody lectured the rescued hikers; they were given hot tea and a lift home. The team leader told me, “We were all lost once.”\n\nI learnt that kindness is a skill that can be practised, and that preparation is a form of respect for others. I have since taken a first-aid course myself, and I never set out without a map and a head torch.",
+    "criterios": [
+     "Content: he hecho todo lo que pide la tarea (cada punto del enunciado) y quien lo lea queda bien informado.",
+     "Communicative Achievement: el registro es el adecuado para el lector (formal con el tutor o el director; cercano con un amigo) y sigo las convenciones del tipo de texto.",
+     "Organisation: párrafos claros con una idea cada uno, introducción y cierre, conectores variados (however, on balance, provided that, what is more…).",
+     "Language: vocabulario preciso y variado, estructuras complejas (condicionales, pasivas, relativas, inversión) y pocos errores, ninguno que estorbe."
+    ],
+    "explicacion": "Un article lleva un título atractivo, una introducción que engancha, desarrollo con detalles concretos y una reflexión personal al final. Registro semiformal y con voz propia. Debe cubrir los tres puntos: qué hacen los voluntarios, por qué importa y qué aprendiste."
+   },
+   {
+    "n": 3,
+    "tipo": "redaccion",
+    "tipoTexto": "proposal",
+    "enunciado": "You are a member of a volunteer mountain rescue team. The team has received a small grant from the regional council to spend on helping local people become safer in the hills. The team leader has asked members to submit proposals.\n\nWrite a proposal explaining how the grant could be used, what the benefits would be for the community, and how you would measure its success.\n\nWrite your proposal.",
+    "minPalabras": 220,
+    "maxPalabras": 260,
+    "modelo": "Proposal: safety workshops for walkers and schools\n\nIntroduction\nThe aim of this proposal is to recommend how the council grant of €4,000 might best be used to reduce the number of avoidable call-outs and to strengthen our relationship with the community.\n\nThe problem\nLast year, nearly two thirds of our rescues involved people who were poorly equipped, had no map or had set out too late in the day. Each of these call-outs took volunteers away from work and family, and some placed team members at risk.\n\nThe proposal\nI suggest that the grant be spent on a series of free workshops, held in the town library and at the secondary school. Sessions would cover route planning, reading weather forecasts, basic first aid and what to do when lost. In addition, a portion of the money could be used to produce a simple pocket card, listing the emergency number and essential kit, to be distributed at trailheads and sports shops.\n\nBenefits\nWalkers would be better prepared and more confident, while young people would acquire habits that last. Moreover, the visibility of the team would encourage new volunteers to come forward.\n\nMeasuring success\nSuccess could be judged by attendance figures, short questionnaires completed before and after each workshop, and a comparison of the number of avoidable call-outs over the following two seasons.\n\nConclusion\nI am convinced that prevention is the most effective use of limited funds, and I would be happy to organise the first workshops myself.",
+    "criterios": [
+     "Content: he hecho todo lo que pide la tarea (cada punto del enunciado) y quien lo lea queda bien informado.",
+     "Communicative Achievement: el registro es el adecuado para el lector (formal con el tutor o el director; cercano con un amigo) y sigo las convenciones del tipo de texto.",
+     "Organisation: párrafos claros con una idea cada uno, introducción y cierre, conectores variados (however, on balance, provided that, what is more…).",
+     "Language: vocabulario preciso y variado, estructuras complejas (condicionales, pasivas, relativas, inversión) y pocos errores, ninguno que estorbe."
+    ],
+    "explicacion": "Un proposal va con encabezados, registro formal e impersonal, propone algo concreto y lo justifica con razones o datos. Aquí hay que cubrir tres puntos: cómo se usaría el dinero, qué beneficios tendría y cómo se medirá el éxito. Usa estructuras como «I suggest that… be spent» o «could be judged by…»."
+   },
+   {
+    "n": 4,
+    "tipo": "redaccion",
+    "tipoTexto": "email",
+    "enunciado": "You have received an email from a friend who has just signed up to join a mountain rescue team as a volunteer:\n\n“I start training next month and I’m a bit nervous! You’ve been involved with the team for a while. What is it really like, and what should I do to prepare? Also, is it true that it takes over your social life?”\n\nWrite your email.",
+    "minPalabras": 220,
+    "maxPalabras": 260,
+    "modelo": "Hi Marta,\n\nCongratulations on joining! You’ll be nervous for a few weeks, and that’s perfectly normal. I felt exactly the same.\n\nWhat is it really like? Honestly, much less dramatic than people imagine. Most of the time you’re training, checking equipment or sitting in the base with a mug of tea, waiting for the pager to go off. Then, when it does, everything becomes very focused and very calm, because everyone knows their job. The best part is the people: you’ll end up with friends of all ages you would never have met otherwise.\n\nTo prepare, get properly fit, but don’t panic about it, as the team will build your stamina gradually. What I’d really recommend is learning to use a map and compass before the first session, since you’ll feel more confident than the others if you do. Buy decent boots and a waterproof jacket, but hold off on anything else until you’ve asked what the team already provides. You’ll be tempted to spend a fortune!\n\nAs for your social life, there’s some truth in the rumour. Training takes up alternate Sundays, and call-outs never come at convenient moments. However, if you tell your friends and family in advance, they usually adapt, and I’ve found that I value my free time more than I used to.\n\nGive me a ring if you want to practise navigation one weekend. I’d be glad to help.\n\nAll the best,\nSofía",
+    "criterios": [
+     "Content: he hecho todo lo que pide la tarea (cada punto del enunciado) y quien lo lea queda bien informado.",
+     "Communicative Achievement: el registro es el adecuado para el lector (formal con el tutor o el director; cercano con un amigo) y sigo las convenciones del tipo de texto.",
+     "Organisation: párrafos claros con una idea cada uno, introducción y cierre, conectores variados (however, on balance, provided that, what is more…).",
+     "Language: vocabulario preciso y variado, estructuras complejas (condicionales, pasivas, relativas, inversión) y pocos errores, ninguno que estorbe."
+    ],
+    "explicacion": "Un email a un amigo va en registro informal (contracciones, frases directas, algo de humor) pero bien organizado: saludo, cómo es en realidad, consejos de preparación, la vida social y despedida. Contesta a las TRES preguntas del amigo."
+   }
+  ],
+  "examenNumero": 8
+ },
+ {
+  "id": "c1-reading-use-7-x8",
+  "examen": "c1",
+  "destreza": "reading-use",
+  "parte": 7,
+  "nombreParte": "Gapped text",
+  "titulo": "The case for doing nothing",
+  "instrucciones": "You are going to read an article about a teacher who gave her pupils time with nothing to do. Six paragraphs have been removed from the article. Choose from the paragraphs A–G the one which fits each gap (41–46). There is one extra paragraph which you do not need to use.",
+  "minutos": 15,
+  "texto": "When Priya Nair began teaching at a primary school in Leeds, she assumed the hardest part of the job would be keeping children busy. It turned out to be the opposite. Given ten spare minutes, her pupils would form a queue at her desk, all with the same question: what shall I do now?\n\n{{41}}\n\nTheir days, she realised, had been organised so thoroughly that nobody had ever left them alone with an empty afternoon. Boredom, that most ordinary of childhood experiences, had been quietly engineered out of their lives.\n\n{{42}}\n\nParents were sceptical, and a few wrote to the head to say so. The first weeks were, by Nair's own admission, painful. The children sighed, stared out of the window and complained loudly that this was the worst lesson they had ever had.\n\n{{43}}\n\nBy December the classroom was full of invented games, and the walls were covered with maps, comics and board designs that no one had asked for.\n\n{{44}}\n\nNair's pupils would agree on that point. “The first ten minutes are awful,” says one eleven-year-old, “and then your head just starts.”\n\n{{45}}\n\nFor Nair, the whole value of the hour lies in the absence of a plan. The moment an adult steps in with a suggestion, she argues, the children stop looking for their own, and the hour becomes one more activity on the timetable.\n\n{{46}}",
+  "opcionesComunes": [
+   "Her own childhood, by contrast, had been spent in a village with one bus a day, and she still remembers long afternoons spent staring at the ceiling and making up stories about the cracks.",
+   "Word of the experiment has since spread, and several other schools have taken up the idea, though not always with the same discipline. Some have shortened the sessions; others have slipped in “optional activities”, which, Nair says, rather defeats the point.",
+   "At first she put this down to laziness. Then she noticed that the children asking were often those with the fullest timetables: swimming on Mondays, coding club on Tuesdays, violin lessons on Thursdays.",
+   "Then, around the fourth week, something changed. A boy who had spent the early sessions lying on the floor began building a city out of pencil cases, and within days half the class had joined him.",
+   "Psychologists who study the effect are not surprised. When the mind has nothing outside itself to attend to, they argue, it turns inward and starts making connections it would otherwise ignore. The discomfort, however, is part of the process.",
+   "Her solution, which she introduced the following September, was to do nothing. Every Friday the last forty minutes became “Empty Time”: no screens, no worksheets, and no suggestions from the teacher.",
+   "Last term, she says, a girl came up to her desk at the start of Empty Time. This time she did not ask what to do. She asked whether she could borrow some tape."
+  ],
+  "items": [
+   {
+    "n": 41,
+    "tipo": "emparejar",
+    "pregunta": "Gap 41",
+    "correcta": 2,
+    "explicacion": "«the children asking» retoma la pregunta del primer párrafo, y los horarios llenos de actividades preparan «Their days… had been organised so thoroughly». El párrafo A habla de la infancia de Nair y no enlaza con «Their days»."
+   },
+   {
+    "n": 42,
+    "tipo": "emparejar",
+    "pregunta": "Gap 42",
+    "correcta": 5,
+    "explicacion": "«Her solution» responde al problema descrito (la boredom eliminada) y «Empty Time» explica por qué los padres dudan en el párrafo siguiente."
+   },
+   {
+    "n": 43,
+    "tipo": "emparejar",
+    "pregunta": "Gap 43",
+    "correcta": 3,
+    "explicacion": "«Then, around the fourth week, something changed» contrasta con las primeras semanas dolorosas, y la ciudad de estuches prepara «invented games» del párrafo siguiente."
+   },
+   {
+    "n": 44,
+    "tipo": "emparejar",
+    "pregunta": "Gap 44",
+    "correcta": 4,
+    "explicacion": "«Psychologists… are not surprised» reacciona a lo que ocurrió en clase, y «The discomfort… is part of the process» enlaza con «on that point» y con «The first ten minutes are awful»."
+   },
+   {
+    "n": 45,
+    "tipo": "emparejar",
+    "pregunta": "Gap 45",
+    "correcta": 1,
+    "explicacion": "Tras la cita del alumno, «Word of the experiment has since spread» amplía el alcance, y las «optional activities» preparan la idea de Nair de que el valor está en «the absence of a plan»."
+   },
+   {
+    "n": 46,
+    "tipo": "emparejar",
+    "pregunta": "Gap 46",
+    "correcta": 6,
+    "explicacion": "Cierra el artículo volviendo a la pregunta inicial («what shall I do now?»): ahora la niña ya no la hace. El párrafo A sobra: habla de aburrimiento, pero no conecta con los párrafos vecinos."
+   }
+  ],
+  "examenNumero": 8
+ },
+ {
+  "id": "c1-listening-1-x8",
+  "examen": "c1",
+  "destreza": "listening",
+  "parte": 1,
+  "nombreParte": "Multiple choice (extracts)",
+  "instrucciones": "You will hear three different extracts. For questions 1–6, choose the answer (A, B or C) which fits best according to what you hear. There are two questions for each extract. You hear each extract twice.",
+  "minutos": 8,
+  "texto": "Extract One\nYou hear two friends talking about changes to a parent's house.\n\nExtract Two\nYou hear part of a radio interview with an architect who designs housing for older people.\n\nExtract Three\nYou hear two colleagues in a planning office discussing a public meeting.",
+  "audio": {
+   "archivo": "audio/c1-listening-1-x8.mp3",
+   "veces": 2,
+   "hablantes": [
+    {
+     "id": "sup",
+     "descripcion": "Supervisor",
+     "voz": "en-GB-LibbyNeural"
+    },
+    {
+     "id": "m1",
+     "descripcion": "Man (Extract One)",
+     "voz": "en-GB-RyanNeural"
+    },
+    {
+     "id": "f1",
+     "descripcion": "Woman (Extract One)",
+     "voz": "en-GB-SoniaNeural"
+    },
+    {
+     "id": "int",
+     "descripcion": "Interviewer (Extract Two)",
+     "voz": "en-IE-ConnorNeural"
+    },
+    {
+     "id": "f2",
+     "descripcion": "Architect (Extract Two)",
+     "voz": "en-AU-NatashaNeural"
+    },
+    {
+     "id": "m3",
+     "descripcion": "Man (Extract Three)",
+     "voz": "en-GB-ThomasNeural"
+    },
+    {
+     "id": "f3",
+     "descripcion": "Woman (Extract Three)",
+     "voz": "en-IE-EmilyNeural"
+    }
+   ],
+   "guion": [
+    {
+     "quien": "sup",
+     "texto": "English Lab. Listening test. Part One. You will hear three different extracts. For questions one to six, choose the answer, A, B or C, which fits best according to what you hear. There are two questions for each extract. You will hear each extract twice."
+    },
+    {
+     "pausa": 2000
+    },
+    {
+     "quien": "sup",
+     "texto": "Extract One. You hear two friends talking about changes to a parent's house. Now look at questions one and two."
+    },
+    {
+     "pausa": 15000
+    },
+    {
+     "quien": "f1",
+     "texto": "So have you decided what to do about your dad's house? Last time we spoke you were going on about a stairlift."
+    },
+    {
+     "quien": "m1",
+     "texto": "I was, but the surveyor put me off. Apparently the staircase is too narrow and too curved, so it would cost a fortune and look awful. What he suggested instead was moving the bedroom downstairs, into the back room, and turning the cloakroom into a proper shower room. Dad hates the idea, naturally. He says it feels like admitting defeat. But I pointed out that he already avoids going up after about six in the evening, so it's hardly a big leap."
+    },
+    {
+     "quien": "f1",
+     "texto": "Perhaps it would help if you didn't call it adapting the house for old age. My aunt told everyone she was simply making her place more convenient, and nobody argued."
+    },
+    {
+     "quien": "m1",
+     "texto": "That's a good point. I'll try that. Calling it a project rather than a problem might make all the difference."
+    },
+    {
+     "pausa": 5000
+    },
+    {
+     "quien": "sup",
+     "texto": "Now you will hear it again."
+    },
+    {
+     "pausa": 1500
+    },
+    {
+     "quien": "f1",
+     "texto": "So have you decided what to do about your dad's house? Last time we spoke you were going on about a stairlift."
+    },
+    {
+     "quien": "m1",
+     "texto": "I was, but the surveyor put me off. Apparently the staircase is too narrow and too curved, so it would cost a fortune and look awful. What he suggested instead was moving the bedroom downstairs, into the back room, and turning the cloakroom into a proper shower room. Dad hates the idea, naturally. He says it feels like admitting defeat. But I pointed out that he already avoids going up after about six in the evening, so it's hardly a big leap."
+    },
+    {
+     "quien": "f1",
+     "texto": "Perhaps it would help if you didn't call it adapting the house for old age. My aunt told everyone she was simply making her place more convenient, and nobody argued."
+    },
+    {
+     "quien": "m1",
+     "texto": "That's a good point. I'll try that. Calling it a project rather than a problem might make all the difference."
+    },
+    {
+     "pausa": 5000
+    },
+    {
+     "quien": "sup",
+     "texto": "Extract Two. You hear part of a radio interview with an architect who designs housing for older people. Now look at questions three and four."
+    },
+    {
+     "pausa": 15000
+    },
+    {
+     "quien": "int",
+     "texto": "Your latest development is often called a retirement village, but you dislike that label. Why?"
+    },
+    {
+     "quien": "f2",
+     "texto": "Because it suggests a place people are sent to, rather than a place they choose. Ours is really just an ordinary street, with a café, a few shops and a nursery on the ground floor of the main block. We put the nursery there deliberately. Residents can watch the children or help with reading if they feel like it, but nobody is obliged to. I've seen quite frail people become much more active simply because there was something worth looking out of the window at."
+    },
+    {
+     "quien": "int",
+     "texto": "Do the flats look any different from ordinary ones?"
+    },
+    {
+     "quien": "f2",
+     "texto": "Hardly, and that's the whole point. Wide doorways, level floors, handrails in places you'd barely notice. The danger is that you design everything for the frailest person and end up with something that feels like a hospital. So the rule I give my team is this: if a feature would embarrass a fifty-year-old, rethink it. The best design for older people is one that anybody would be happy to live in."
+    },
+    {
+     "pausa": 5000
+    },
+    {
+     "quien": "sup",
+     "texto": "Now you will hear it again."
+    },
+    {
+     "pausa": 1500
+    },
+    {
+     "quien": "int",
+     "texto": "Your latest development is often called a retirement village, but you dislike that label. Why?"
+    },
+    {
+     "quien": "f2",
+     "texto": "Because it suggests a place people are sent to, rather than a place they choose. Ours is really just an ordinary street, with a café, a few shops and a nursery on the ground floor of the main block. We put the nursery there deliberately. Residents can watch the children or help with reading if they feel like it, but nobody is obliged to. I've seen quite frail people become much more active simply because there was something worth looking out of the window at."
+    },
+    {
+     "quien": "int",
+     "texto": "Do the flats look any different from ordinary ones?"
+    },
+    {
+     "quien": "f2",
+     "texto": "Hardly, and that's the whole point. Wide doorways, level floors, handrails in places you'd barely notice. The danger is that you design everything for the frailest person and end up with something that feels like a hospital. So the rule I give my team is this: if a feature would embarrass a fifty-year-old, rethink it. The best design for older people is one that anybody would be happy to live in."
+    },
+    {
+     "pausa": 5000
+    },
+    {
+     "quien": "sup",
+     "texto": "Extract Three. You hear two colleagues in a planning office discussing a public meeting. Now look at questions five and six."
+    },
+    {
+     "pausa": 15000
+    },
+    {
+     "quien": "m3",
+     "texto": "How did the meeting go? I heard it got a bit heated."
+    },
+    {
+     "quien": "f3",
+     "texto": "Only for the first ten minutes. A few residents were convinced we were planning a tower block, so I had to keep explaining that it's four storeys at most. Once they'd seen the drawings, the mood changed completely. What surprised me was that the strongest objection wasn't about height or traffic at all. It was parking for visitors. Half the room were older people, and they said their families simply wouldn't come if they couldn't park outside."
+    },
+    {
+     "quien": "m3",
+     "texto": "That's useful to know. We'd assumed they'd want fewer cars, not more."
+    },
+    {
+     "quien": "f3",
+     "texto": "So had I. I think we need to rethink the layout before we submit anything, even if it delays us by a month. I'd much rather do that than redraw everything after the formal objections come in."
+    },
+    {
+     "quien": "m3",
+     "texto": "I'll have a word with the manager. She won't be thrilled about the delay."
+    },
+    {
+     "pausa": 5000
+    },
+    {
+     "quien": "sup",
+     "texto": "Now you will hear it again."
+    },
+    {
+     "pausa": 1500
+    },
+    {
+     "quien": "m3",
+     "texto": "How did the meeting go? I heard it got a bit heated."
+    },
+    {
+     "quien": "f3",
+     "texto": "Only for the first ten minutes. A few residents were convinced we were planning a tower block, so I had to keep explaining that it's four storeys at most. Once they'd seen the drawings, the mood changed completely. What surprised me was that the strongest objection wasn't about height or traffic at all. It was parking for visitors. Half the room were older people, and they said their families simply wouldn't come if they couldn't park outside."
+    },
+    {
+     "quien": "m3",
+     "texto": "That's useful to know. We'd assumed they'd want fewer cars, not more."
+    },
+    {
+     "quien": "f3",
+     "texto": "So had I. I think we need to rethink the layout before we submit anything, even if it delays us by a month. I'd much rather do that than redraw everything after the formal objections come in."
+    },
+    {
+     "quien": "m3",
+     "texto": "I'll have a word with the manager. She won't be thrilled about the delay."
+    },
+    {
+     "pausa": 5000
+    },
+    {
+     "quien": "sup",
+     "texto": "That is the end of Part One."
+    }
+   ]
+  },
+  "items": [
+   {
+    "n": 1,
+    "tipo": "opciones",
+    "pregunta": "Why has the man decided against a stairlift?",
+    "opciones": [
+     "His father refuses to use one.",
+     "The staircase is unsuitable for it.",
+     "It would lower the value of the house."
+    ],
+    "correcta": 1,
+    "explicacion": "El tasador dijo que la escalera es «too narrow and too curved», así que saldría carísimo y feo (B). Lo que su padre odia es la idea de mover el dormitorio abajo, no el salvaescaleras (A no). El valor de la casa no se menciona (C no)."
+   },
+   {
+    "n": 2,
+    "tipo": "opciones",
+    "pregunta": "What does the woman suggest?",
+    "opciones": [
+     "describing the changes in a different way",
+     "asking the surveyor for a second opinion",
+     "copying the layout of her aunt's home"
+    ],
+    "correcta": 0,
+    "explicacion": "Propone no llamarlo «adapting the house for old age»; su tía dijo que lo hacía «more convenient» y nadie discutió (A). No habla de segunda opinión ni de copiar la distribución de su tía, solo cómo lo presentó."
+   },
+   {
+    "n": 3,
+    "tipo": "opciones",
+    "pregunta": "What does the architect say about the nursery?",
+    "opciones": [
+     "It encourages residents to be more active.",
+     "Residents are expected to volunteer there.",
+     "It provides income for the development."
+    ],
+    "correcta": 0,
+    "explicacion": "Dice que ha visto a gente frágil volverse «much more active» solo por tener algo que mirar por la ventana (A). Aclara que «nobody is obliged to» ayudar (B no). No menciona ingresos (C no)."
+   },
+   {
+    "n": 4,
+    "tipo": "opciones",
+    "pregunta": "What is her main design principle?",
+    "opciones": [
+     "Safety features should be as discreet as possible.",
+     "Good design for older people should appeal to everyone.",
+     "The needs of the frailest residents come first."
+    ],
+    "correcta": 1,
+    "explicacion": "«The best design for older people is one that anybody would be happy to live in» (B). Lo de las barandillas discretas es un ejemplo, no el principio (A). Diseñar todo para el más frágil es justo el peligro que quiere evitar (C no)."
+   },
+   {
+    "n": 5,
+    "tipo": "opciones",
+    "pregunta": "What surprised the woman about the public meeting?",
+    "opciones": [
+     "how strongly residents objected to the height of the buildings",
+     "which issue residents were most concerned about",
+     "how quickly the discussion turned hostile"
+    ],
+    "correcta": 1,
+    "explicacion": "Le sorprendió que la objeción más fuerte no fuera la altura ni el tráfico sino el aparcamiento de las visitas (B). La altura preocupaba al principio, pero se calmaron al ver los planos (A no). La tensión duró solo diez minutos y no es lo que la sorprendió (C no)."
+   },
+   {
+    "n": 6,
+    "tipo": "opciones",
+    "pregunta": "What does the woman think the office should do?",
+    "opciones": [
+     "submit the plans as they are and revise them later",
+     "hold a second meeting with the residents",
+     "delay the submission in order to change the layout"
+    ],
+    "correcta": 2,
+    "explicacion": "Quiere replantear la distribución antes de presentar nada, aunque se retrase un mes (C). Prefiere eso a rehacerlo después de las objeciones formales, así que A es lo contrario. No propone otra reunión (B no)."
+   }
+  ],
+  "examenNumero": 8
+ },
+ {
+  "id": "c1-listening-2-x8",
+  "examen": "c1",
+  "destreza": "listening",
+  "parte": 2,
+  "nombreParte": "Sentence completion",
+  "titulo": "Learning to improvise in jazz",
+  "instrucciones": "You will hear a jazz saxophonist called Daniel Rhodes talking about how he learned to improvise. For questions 7–14, complete the sentences with a word or short phrase. You hear the recording twice.",
+  "minutos": 10,
+  "audio": {
+   "archivo": "audio/c1-listening-2-x8.mp3",
+   "veces": 2,
+   "hablantes": [
+    {
+     "id": "sup",
+     "descripcion": "Supervisor",
+     "voz": "en-GB-LibbyNeural"
+    },
+    {
+     "id": "dan",
+     "descripcion": "Daniel Rhodes, a saxophonist",
+     "voz": "en-GB-RyanNeural"
+    }
+   ],
+   "guion": [
+    {
+     "quien": "sup",
+     "texto": "Part Two. You will hear a jazz saxophonist called Daniel Rhodes talking about how he learned to improvise. For questions seven to fourteen, complete the sentences with a word or short phrase. You now have forty-five seconds to look at Part Two."
+    },
+    {
+     "pausa": 45000
+    },
+    {
+     "quien": "dan",
+     "texto": "Good evening, everyone. I'm Daniel, and I've been playing the saxophone professionally for about twenty years. People often imagine that improvising means making everything up on the spot, as if you simply walk on stage and let the music pour out. In fact, my first real lessons came from my uncle, who played the trumpet in a wedding band, and he taught me the opposite: that you can only invent freely once you have learned a great deal by heart. I started on the piano, like many players, but I switched to the saxophone at fourteen because I wanted something I could carry around with me. My first teacher made me do something that, at the time, felt like punishment. Instead of giving me chords or scales to practise, she asked me to sing solos from old records, note for note, before I was allowed to touch my instrument. I thought it was pointless. Now I think it was the most valuable thing anyone ever taught me, because it trained my ear before my fingers. Beginners often ask me which skill matters most, and they expect me to say technique, or a knowledge of theory. Both are useful. But the thing I keep coming back to is listening. If you are not paying attention to the drummer and the bass player, your solo might be clever, but it will not belong to the music. I should say that I was terrified the first time I played in front of an audience. It was a small club with a low ceiling, and I had just eight bars to fill. I remember my hands shaking so badly that I could barely hold the reed in place. What saved me was a pianist called Helen, who whispered, 'Play less.' It was the best advice of my life, and I have never forgotten it. One of the biggest mistakes young musicians make is to fill every gap with notes. The silence between phrases, what we call space, is just as important as the notes themselves. Of course, I still practise every day. My routine begins with long notes, which is rather dull, but it warms up my sound. Then I spend an hour working on a single tune in all twelve keys, and I finish by recording myself and listening back. That last part is the one I find hardest, because I am my own harshest critic. I'm playing at a festival in Lisbon next month, and I'm hoping to record an album there with a quartet. It will be the first time I've made a record in front of a live audience, and I can't wait."
+    },
+    {
+     "pausa": 10000
+    },
+    {
+     "quien": "sup",
+     "texto": "Now you will hear it again."
+    },
+    {
+     "pausa": 1500
+    },
+    {
+     "quien": "dan",
+     "texto": "Good evening, everyone. I'm Daniel, and I've been playing the saxophone professionally for about twenty years. People often imagine that improvising means making everything up on the spot, as if you simply walk on stage and let the music pour out. In fact, my first real lessons came from my uncle, who played the trumpet in a wedding band, and he taught me the opposite: that you can only invent freely once you have learned a great deal by heart. I started on the piano, like many players, but I switched to the saxophone at fourteen because I wanted something I could carry around with me. My first teacher made me do something that, at the time, felt like punishment. Instead of giving me chords or scales to practise, she asked me to sing solos from old records, note for note, before I was allowed to touch my instrument. I thought it was pointless. Now I think it was the most valuable thing anyone ever taught me, because it trained my ear before my fingers. Beginners often ask me which skill matters most, and they expect me to say technique, or a knowledge of theory. Both are useful. But the thing I keep coming back to is listening. If you are not paying attention to the drummer and the bass player, your solo might be clever, but it will not belong to the music. I should say that I was terrified the first time I played in front of an audience. It was a small club with a low ceiling, and I had just eight bars to fill. I remember my hands shaking so badly that I could barely hold the reed in place. What saved me was a pianist called Helen, who whispered, 'Play less.' It was the best advice of my life, and I have never forgotten it. One of the biggest mistakes young musicians make is to fill every gap with notes. The silence between phrases, what we call space, is just as important as the notes themselves. Of course, I still practise every day. My routine begins with long notes, which is rather dull, but it warms up my sound. Then I spend an hour working on a single tune in all twelve keys, and I finish by recording myself and listening back. That last part is the one I find hardest, because I am my own harshest critic. I'm playing at a festival in Lisbon next month, and I'm hoping to record an album there with a quartet. It will be the first time I've made a record in front of a live audience, and I can't wait."
+    },
+    {
+     "pausa": 10000
+    },
+    {
+     "quien": "sup",
+     "texto": "That is the end of Part Two."
+    }
+   ]
+  },
+  "items": [
+   {
+    "n": 7,
+    "tipo": "palabra",
+    "frase": "Daniel's first real lessons were given by his {{7}}.",
+    "correctas": [
+     "uncle"
+    ],
+    "explicacion": "«My first real lessons came from my uncle, who played the trumpet». El piano y la primera profesora aparecen después y son distractores."
+   },
+   {
+    "n": 8,
+    "tipo": "palabra",
+    "frase": "Daniel's first teacher asked him to {{8}} solos from old records before playing his instrument.",
+    "correctas": [
+     "sing"
+    ],
+    "explicacion": "«She asked me to sing solos from old records, note for note». Chords y scales son lo que no le dio."
+   },
+   {
+    "n": 9,
+    "tipo": "palabra",
+    "frase": "Daniel says the skill he values most is {{9}}.",
+    "correctas": [
+     "listening"
+    ],
+    "explicacion": "«The thing I keep coming back to is listening». La técnica y la teoría son útiles, pero no lo principal."
+   },
+   {
+    "n": 10,
+    "tipo": "palabra",
+    "frase": "At his first concert, Daniel had to fill just {{10}} bars.",
+    "correctas": [
+     "eight",
+     "8"
+    ],
+    "explicacion": "«I had just eight bars to fill». El techo bajo y el club pequeño son detalles de distracción."
+   },
+   {
+    "n": 11,
+    "tipo": "palabra",
+    "frase": "The advice that helped Daniel most was to {{11}}.",
+    "correctas": [
+     "play less",
+     "Play less"
+    ],
+    "explicacion": "La pianista Helen susurró «Play less»; es el mejor consejo que ha recibido."
+   },
+   {
+    "n": 12,
+    "tipo": "palabra",
+    "frase": "Daniel calls the silence between phrases {{12}}.",
+    "correctas": [
+     "space"
+    ],
+    "explicacion": "«The silence between phrases, what we call space, is just as important as the notes»."
+   },
+   {
+    "n": 13,
+    "tipo": "palabra",
+    "frase": "The part of his practice routine that Daniel finds hardest is {{13}} himself.",
+    "correctas": [
+     "listening back to",
+     "listening back",
+     "recording and listening back to",
+     "recording"
+    ],
+    "explicacion": "«I finish by recording myself and listening back. That last part is the one I find hardest». Las notas largas son aburridas, pero no lo más difícil."
+   },
+   {
+    "n": 14,
+    "tipo": "palabra",
+    "frase": "Next month Daniel hopes to record an album in {{14}}.",
+    "correctas": [
+     "Lisbon"
+    ],
+    "explicacion": "«I'm playing at a festival in Lisbon next month, and I'm hoping to record an album there»."
+   }
+  ],
+  "examenNumero": 8
+ },
+ {
+  "id": "c1-speaking-1-x8",
+  "examen": "c1",
+  "destreza": "speaking",
+  "parte": 1,
+  "nombreParte": "Interview",
+  "instrucciones": "The examiner asks you questions about yourself. Answer in full sentences and give reasons: two or three sentences per question is about right. About 2 minutes.",
+  "minutos": 2,
+  "items": [
+   {
+    "n": 1,
+    "tipo": "hablar",
+    "interlocutor": "Good afternoon. My name is Helen and this is my colleague, James. And your names are? … Thank you. Let’s begin by finding out a little about you.",
+    "preguntas": [
+     "Could you tell us a bit about the place where you live?",
+     "Do you have a garden or a balcony, or is there a green space nearby that you enjoy?",
+     "How do you usually spend your free time during the summer months?",
+     "Tell us about something you have studied or worked on recently that you found rewarding.",
+     "Some regions are experiencing hotter, drier summers. How might that change the way people live there?",
+     "What would you like to be doing a few years from now?"
+    ],
+    "segundos": 120,
+    "modelo": "Respuestas de dos o tres frases, con una razón o un ejemplo: «I live in a flat in the city centre, which is lively but a bit short of green space. That’s why I tend to head to the park near my house, where…». En la pregunta sobre el clima, usa lenguaje de hipótesis («people might have to…», «it could mean that…») y menciona una consecuencia concreta, como regar menos o plantar especies resistentes a la sequía. Evita el «yes/no» seco y no memorices un discurso."
+   }
+  ],
+  "examenNumero": 8
+ },
+ {
+  "id": "c1-speaking-2-x8",
+  "examen": "c1",
+  "destreza": "speaking",
+  "parte": 2,
+  "nombreParte": "Long turn",
+  "instrucciones": "You get three pictures and talk about two of them on your own for about a minute, answering the two questions written above the pictures. Then your partner answers a short question about your pictures (about 30 seconds). About 4 minutes in total.",
+  "minutos": 4,
+  "items": [
+   {
+    "n": 1,
+    "tipo": "hablar",
+    "pregunta": "People filming in challenging places",
+    "interlocutor": "In this part of the test, I’m going to give each of you three pictures. I’d like you to talk about two of them on your own for about a minute, and also to answer a question briefly about your partner’s pictures. Here are your pictures. They show people making documentary films in challenging places. I’d like you to compare two of the pictures, and say what difficulties the film-makers might be facing, and why they might be willing to put up with them.",
+    "imagenes": [
+     "A two-person crew in waterproof jackets crouching on a rocky coastline at dawn, a camera on a tripod wrapped in a plastic bag while huge waves crash behind them. The sound recordist holds a furry microphone above her head.",
+     "A cameraman lying flat on his stomach in a marsh, lens inches from the water, covered in mud up to the elbows. A small boat is moored in the reeds behind him and a mist hangs over everything.",
+     "A director sitting cross-legged on the floor of a crowded market stall, listening to an elderly woman who is talking and gesturing. A young assistant holds a boom pole carefully above their heads while customers squeeze past."
+    ],
+    "preguntas": [
+     "What difficulties might the film-makers be facing?",
+     "Why might they be willing to put up with them?"
+    ],
+    "segundos": 60,
+    "modelo": "Compara las condiciones físicas (costa y pantano) con las dificultades humanas y prácticas (el mercado: ruido, falta de espacio, ganarse la confianza). Usa especulación (might, presumably, I suppose) y conectores de contraste (whereas, while, by contrast). Contesta a las DOS preguntas: dificultades y motivación (pasión, historias únicas, reconocimiento). Pregunta para el compañero (30 s): «Which of these situations would you find the most uncomfortable? Why?»"
+   },
+   {
+    "n": 2,
+    "tipo": "hablar",
+    "pregunta": "People watching documentaries",
+    "interlocutor": "Now, here are your pictures. They show people watching documentaries in different settings. I’d like you to compare two of the pictures, and say what the people might be getting out of watching these films, and how they might react afterwards.",
+    "imagenes": [
+     "A packed village hall with folding chairs facing a pull-down screen. Villagers of all ages watch a film about the history of their own valley; an old man at the front is wiping his eyes.",
+     "A group of secondary-school pupils in a darkened classroom, some taking notes by the light of their phones while others whisper. The teacher is paused beside the projector, holding a stack of worksheets.",
+     "A woman curled up on a sofa with a blanket and a laptop late at night, a half-finished mug of tea beside her. The screen shows a vast, empty desert, and she is leaning forward with her mouth slightly open."
+    ],
+    "preguntas": [
+     "What might the people be getting out of watching these films?",
+     "How might they react afterwards?"
+    ],
+    "segundos": 60,
+    "modelo": "Contrasta la experiencia compartida y emotiva (el salón del pueblo), la educativa (el aula) y la individual y contemplativa (la mujer en casa). Habla de lo que aportan (aprender, emocionarse, evadirse) y de posibles reacciones (debatir, investigar, cambiar de opinión). Usa especulación y conectores como whereas, in contrast, on the other hand. Pregunta para el compañero: «Do you prefer watching documentaries alone or with other people? Why?»"
+   }
+  ],
+  "examenNumero": 8
+ },
+ {
+  "id": "c1-listening-3-x8",
+  "examen": "c1",
+  "destreza": "listening",
+  "parte": 3,
+  "nombreParte": "Multiple choice (interview)",
+  "titulo": "Facing the audience",
+  "instrucciones": "You will hear part of an interview with two people, Priya Nair and Daniel Okafor, who run workshops to help people overcome their fear of public speaking. For questions 15–20, choose the answer (A, B, C or D) which fits best according to what you hear. You hear the recording twice.",
+  "minutos": 10,
+  "audio": {
+   "archivo": "audio/c1-listening-3-x8.mp3",
+   "veces": 2,
+   "hablantes": [
+    {
+     "id": "sup",
+     "descripcion": "Supervisor",
+     "voz": "en-GB-LibbyNeural"
+    },
+    {
+     "id": "int",
+     "descripcion": "Interviewer",
+     "voz": "en-GB-ThomasNeural"
+    },
+    {
+     "id": "pri",
+     "descripcion": "Priya Nair",
+     "voz": "en-GB-SoniaNeural"
+    },
+    {
+     "id": "dan",
+     "descripcion": "Daniel Okafor",
+     "voz": "en-IE-ConnorNeural"
+    }
+   ],
+   "guion": [
+    {
+     "quien": "sup",
+     "texto": "Part Three. You will hear part of an interview with two people, Priya Nair and Daniel Okafor, who run workshops to help people overcome their fear of public speaking. For questions fifteen to twenty, choose the answer, A, B, C or D, which fits best according to what you hear. You now have seventy seconds to look at Part Three."
+    },
+    {
+     "pausa": 70000
+    },
+    {
+     "quien": "int",
+     "texto": "Priya, Daniel, welcome. Priya, you used to be terrified of speaking in public yourself. What happened?"
+    },
+    {
+     "quien": "pri",
+     "texto": "Oh, it was a disaster, and a very public one. I was an accountant, and I was asked to present the annual figures to about two hundred colleagues. I had prepared for weeks, I knew the numbers inside out, and yet halfway through the second slide my mind simply went blank. What I remember most is not the silence, it is the sound of someone coughing politely. Afterwards I assumed everyone would be laughing about it. In fact, nobody mentioned it at all, which was somehow worse. It took me a long time to realise that my own embarrassment was far bigger than anything the audience felt."
+    },
+    {
+     "quien": "int",
+     "texto": "Daniel, what do people tend to believe about nerves before they come to you?"
+    },
+    {
+     "quien": "dan",
+     "texto": "That the goal is to get rid of them. Almost everyone arrives convinced that confident speakers do not feel anxious, and that if they can just find the right trick, the shaking and the racing heart will disappear. They will not, and honestly, I would be suspicious if they did. Those physical reactions are energy. What we teach is how to use that energy rather than fight it. Once people stop treating nerves as a sign that something is wrong, the whole thing becomes a lot less frightening."
+    },
+    {
+     "quien": "int",
+     "texto": "A lot of advice says you should memorise your talk. Priya?"
+    },
+    {
+     "quien": "pri",
+     "texto": "I used to do exactly that, word for word, and it is precisely what caused my blank. If you are relying on a script in your head, one lost sentence and the whole structure collapses. So now I encourage people to know their key points and the order they come in, and to say them in slightly different words each time. It sounds riskier, but it is far safer, and it also sounds much more natural."
+    },
+    {
+     "quien": "dan",
+     "texto": "I would go a step further. Some of our best results come from people who prepare less than they think they should, and spend the saved time practising out loud in front of a friend. Reading your notes silently teaches you very little about how it feels to speak them."
+    },
+    {
+     "quien": "int",
+     "texto": "Daniel, is there a particular exercise that people find most helpful?"
+    },
+    {
+     "quien": "dan",
+     "texto": "People expect me to say breathing techniques, and they do help a bit. But the thing that makes the biggest difference is a simple one: we ask participants to look at individual faces and finish a thought before moving on to the next person. Anxious speakers tend to stare at the back wall, or the floor, or race through the slides. Once you start talking to one person at a time, it feels like a conversation, and a conversation is something nearly everybody can manage."
+    },
+    {
+     "quien": "int",
+     "texto": "Priya, do you ever feel nervous now?"
+    },
+    {
+     "quien": "pri",
+     "texto": "Of course. Just last month I had to open a conference, and my hands were cold for the first minute. The difference is that I no longer interpret it as a warning. I think, right, my body is getting ready, and that is helpful. I would be more worried if I felt nothing at all. I am not cured, if that is the word, but I am on better terms with it."
+    },
+    {
+     "quien": "int",
+     "texto": "Finally, what would you say to someone who is dreading a talk next week?"
+    },
+    {
+     "quien": "dan",
+     "texto": "Tell yourself you do not have to be brilliant. The audience mostly wants you to be clear and to be human. Perfection is not what they are waiting for."
+    },
+    {
+     "quien": "pri",
+     "texto": "And remember that they are on your side. People sitting in the dark are, more often than not, thinking about how glad they are that it is not them up there."
+    },
+    {
+     "pausa": 10000
+    },
+    {
+     "quien": "sup",
+     "texto": "Now you will hear it again."
+    },
+    {
+     "pausa": 1500
+    },
+    {
+     "quien": "int",
+     "texto": "Priya, Daniel, welcome. Priya, you used to be terrified of speaking in public yourself. What happened?"
+    },
+    {
+     "quien": "pri",
+     "texto": "Oh, it was a disaster, and a very public one. I was an accountant, and I was asked to present the annual figures to about two hundred colleagues. I had prepared for weeks, I knew the numbers inside out, and yet halfway through the second slide my mind simply went blank. What I remember most is not the silence, it is the sound of someone coughing politely. Afterwards I assumed everyone would be laughing about it. In fact, nobody mentioned it at all, which was somehow worse. It took me a long time to realise that my own embarrassment was far bigger than anything the audience felt."
+    },
+    {
+     "quien": "int",
+     "texto": "Daniel, what do people tend to believe about nerves before they come to you?"
+    },
+    {
+     "quien": "dan",
+     "texto": "That the goal is to get rid of them. Almost everyone arrives convinced that confident speakers do not feel anxious, and that if they can just find the right trick, the shaking and the racing heart will disappear. They will not, and honestly, I would be suspicious if they did. Those physical reactions are energy. What we teach is how to use that energy rather than fight it. Once people stop treating nerves as a sign that something is wrong, the whole thing becomes a lot less frightening."
+    },
+    {
+     "quien": "int",
+     "texto": "A lot of advice says you should memorise your talk. Priya?"
+    },
+    {
+     "quien": "pri",
+     "texto": "I used to do exactly that, word for word, and it is precisely what caused my blank. If you are relying on a script in your head, one lost sentence and the whole structure collapses. So now I encourage people to know their key points and the order they come in, and to say them in slightly different words each time. It sounds riskier, but it is far safer, and it also sounds much more natural."
+    },
+    {
+     "quien": "dan",
+     "texto": "I would go a step further. Some of our best results come from people who prepare less than they think they should, and spend the saved time practising out loud in front of a friend. Reading your notes silently teaches you very little about how it feels to speak them."
+    },
+    {
+     "quien": "int",
+     "texto": "Daniel, is there a particular exercise that people find most helpful?"
+    },
+    {
+     "quien": "dan",
+     "texto": "People expect me to say breathing techniques, and they do help a bit. But the thing that makes the biggest difference is a simple one: we ask participants to look at individual faces and finish a thought before moving on to the next person. Anxious speakers tend to stare at the back wall, or the floor, or race through the slides. Once you start talking to one person at a time, it feels like a conversation, and a conversation is something nearly everybody can manage."
+    },
+    {
+     "quien": "int",
+     "texto": "Priya, do you ever feel nervous now?"
+    },
+    {
+     "quien": "pri",
+     "texto": "Of course. Just last month I had to open a conference, and my hands were cold for the first minute. The difference is that I no longer interpret it as a warning. I think, right, my body is getting ready, and that is helpful. I would be more worried if I felt nothing at all. I am not cured, if that is the word, but I am on better terms with it."
+    },
+    {
+     "quien": "int",
+     "texto": "Finally, what would you say to someone who is dreading a talk next week?"
+    },
+    {
+     "quien": "dan",
+     "texto": "Tell yourself you do not have to be brilliant. The audience mostly wants you to be clear and to be human. Perfection is not what they are waiting for."
+    },
+    {
+     "quien": "pri",
+     "texto": "And remember that they are on your side. People sitting in the dark are, more often than not, thinking about how glad they are that it is not them up there."
+    },
+    {
+     "pausa": 10000
+    },
+    {
+     "quien": "sup",
+     "texto": "That is the end of Part Three."
+    }
+   ]
+  },
+  "items": [
+   {
+    "n": 15,
+    "tipo": "opciones",
+    "pregunta": "What does Priya say about her first bad experience of presenting?",
+    "opciones": [
+     "She had not prepared enough for it.",
+     "Her colleagues made fun of her afterwards.",
+     "She later saw that she had worried more than the audience had.",
+     "She decided to change her career because of it."
+    ],
+    "correcta": 2,
+    "explicacion": "«My own embarrassment was far bigger than anything the audience felt» (C). Había preparado durante semanas (A no) y nadie lo mencionó (B no). No dice que cambiara de trabajo (D no)."
+   },
+   {
+    "n": 16,
+    "tipo": "opciones",
+    "pregunta": "What does Daniel say about the nerves that people feel?",
+    "opciones": [
+     "They can be removed with the right technique.",
+     "They are a sign that a speaker is unprepared.",
+     "They only affect inexperienced speakers.",
+     "They can be turned into something useful."
+    ],
+    "correcta": 3,
+    "explicacion": "«Those physical reactions are energy. What we teach is how to use that energy» (D). La creencia de que desaparecen con un truco es lo que piensan los alumnos (A no)."
+   },
+   {
+    "n": 17,
+    "tipo": "opciones",
+    "pregunta": "Priya and Daniel both suggest that speakers should",
+    "opciones": [
+     "learn their talk word for word.",
+     "avoid using notes of any kind.",
+     "rely on a friend to write their talk.",
+     "not depend on a fixed script."
+    ],
+    "correcta": 3,
+    "explicacion": "Priya: memorizar fue lo que causó su bloqueo y recomienda decirlo con otras palabras; Daniel: practicar en voz alta y prepararse menos (D). Ninguno prohíbe las notas (B no)."
+   },
+   {
+    "n": 18,
+    "tipo": "opciones",
+    "pregunta": "According to Daniel, the most effective exercise involves",
+    "opciones": [
+     "controlling the breathing before speaking.",
+     "talking to individual members of the audience.",
+     "speaking more quickly to reduce tension.",
+     "using fewer slides during the talk."
+    ],
+    "correcta": 1,
+    "explicacion": "«Look at individual faces and finish a thought… talking to one person at a time» (B). La respiración ayuda «a bit», pero no es lo que más (A no)."
+   },
+   {
+    "n": 19,
+    "tipo": "opciones",
+    "pregunta": "How does Priya feel about being nervous nowadays?",
+    "opciones": [
+     "She sees it as a normal sign that she is getting ready.",
+     "She is embarrassed that she still has it.",
+     "She believes she has completely overcome it.",
+     "She avoids big events because of it."
+    ],
+    "correcta": 0,
+    "explicacion": "«I no longer interpret it as a warning… my body is getting ready» (A). «I am not cured» descarta C, y abre una conferencia (D no)."
+   },
+   {
+    "n": 20,
+    "tipo": "opciones",
+    "pregunta": "What advice do Daniel and Priya give to someone facing a talk?",
+    "opciones": [
+     "Aim to impress the audience as much as possible.",
+     "Remember that the audience is supportive.",
+     "Practise until every word is perfect.",
+     "Choose a topic that is easy to explain."
+    ],
+    "correcta": 1,
+    "explicacion": "Daniel: el público quiere claridad y humanidad, no perfección; Priya: «they are on your side» (B). Perfección no es lo que esperan (A y C no)."
+   }
+  ],
+  "examenNumero": 8
+ },
+ {
+  "id": "c1-speaking-3-x8",
+  "examen": "c1",
+  "destreza": "speaking",
+  "parte": 3,
+  "nombreParte": "Collaborative task",
+  "instrucciones": "You and your partner discuss the question on the sheet, using the ideas around it, for about 2 minutes. Then you have about a minute to reach a decision together. You get 15 seconds to read the sheet first.",
+  "minutos": 4,
+  "items": [
+   {
+    "n": 1,
+    "tipo": "hablar",
+    "interlocutor": "Now, I’d like you to talk about something together for about two minutes. Here are some things that can help people who work night shifts to cope with their sleep and a question for you to discuss. First you have some time to look at the task. … Now, talk to each other about how helpful these things might be for people who work night shifts.",
+    "preguntaCentral": "How helpful might these things be for people who work night shifts?",
+    "ideas": [
+     "blackout curtains and a quiet bedroom",
+     "regular sleeping hours, even on days off",
+     "short naps during the shift",
+     "limits on caffeine late in the shift",
+     "employers offering shorter or rotating shifts"
+    ],
+    "preguntas": [
+     "Now you have about a minute to decide which of these would make the biggest difference to a nurse's health in the long term."
+    ],
+    "segundos": 180,
+    "segundosLectura": 15,
+    "modelo": "No hace falta tocar las cinco ideas: dos o tres bien discutidas valen más. Empieza con una frase para situar el tema («Well, sleep is such a tricky issue for night workers…») y pide opinión al compañero («How do you see it?», «Would that work in practice?»). Usa lenguaje de matiz y consecuencia («That would go a long way towards…», «It's all very well to…, but…», «Admittedly…»). Compara ideas («Naps are a quick fix, whereas shorter shifts tackle the root of the problem»). En el minuto final, negocia y cierra con una decisión conjunta dicha en voz alta («So we're agreed that…»)."
+   }
+  ],
+  "examenNumero": 8
+ },
+ {
+  "id": "c1-speaking-4-x8",
+  "examen": "c1",
+  "destreza": "speaking",
+  "parte": 4,
+  "nombreParte": "Discussion",
+  "instrucciones": "The examiner asks you and your partner questions related to the topic of Part 3. Give opinions with reasons and react to what your partner says. About 5 minutes.",
+  "minutos": 5,
+  "items": [
+   {
+    "n": 1,
+    "tipo": "hablar",
+    "interlocutor": "Use the following questions, in order, as appropriate: … What do you think? … Do you agree? … And you?",
+    "preguntas": [
+     "When did you last borrow something from a library, and what was it?",
+     "Why do you think some people still prefer to visit a library rather than read online?",
+     "Community libraries are often run by volunteers. How important is it for local people to get involved in running their own services?",
+     "Some libraries now lend tools, games and even musical instruments. Is this a good use of public money?",
+     "Do you think libraries can help bring different generations together? How?",
+     "Some people argue that in the future libraries will no longer be necessary. To what extent do you agree?"
+    ],
+    "segundos": 300,
+    "modelo": "Empieza con experiencias concretas (qué sueles pedir prestado, para qué usas una biblioteca) y avanza hacia ideas más abstractas: el papel de los voluntarios, el gasto público, la convivencia entre generaciones y el futuro de los espacios comunes. Desarrolla cada respuesta con postura, razón, ejemplo y un matiz («While I see the appeal of…, I’d argue that…»). Reacciona a tu compañero («I see what you mean, but…», «That’s true, and I’d also add…»). Si dudas, gana tiempo: «That’s an interesting question. I suppose…»."
+   }
+  ],
+  "examenNumero": 8
+ },
+ {
+  "id": "c1-listening-4-x8",
+  "examen": "c1",
+  "destreza": "listening",
+  "parte": 4,
+  "nombreParte": "Multiple matching",
+  "instrucciones": "You will hear five short extracts in which people are talking about cooking plant-based meals. While you listen you must complete both tasks. TASK ONE: for questions 21–25, choose from the list (A–H) the reason each speaker gives for starting to cook plant-based meals. TASK TWO: for questions 26–30, choose from the list (A–H) what each speaker says has been the result. You hear the recording twice.",
+  "minutos": 10,
+  "listas": [
+   {
+    "titulo": "Task One · the reason each speaker gives for starting to cook plant-based meals",
+    "opciones": [
+     "a doctor's advice",
+     "a wish to spend less on food",
+     "an invitation to a dinner party",
+     "curiosity about a particular cuisine",
+     "a family member's decision",
+     "concern about the environment",
+     "a cooking course they signed up for",
+     "a poor experience in a restaurant"
+    ]
+   },
+   {
+    "titulo": "Task Two · what each speaker says has been the result",
+    "opciones": [
+     "a more adventurous approach to ingredients",
+     "an unexpected rise in the cost of shopping",
+     "better energy levels",
+     "a successful small business",
+     "more time spent cooking with others",
+     "a loss of interest in meat",
+     "a garden full of vegetables",
+     "a growing reputation among friends"
+    ]
+   }
+  ],
+  "audio": {
+   "archivo": "audio/c1-listening-4-x8.mp3",
+   "veces": 2,
+   "hablantes": [
+    {
+     "id": "sup",
+     "descripcion": "Supervisor",
+     "voz": "en-GB-LibbyNeural"
+    },
+    {
+     "id": "s1",
+     "descripcion": "Speaker One",
+     "voz": "en-GB-RyanNeural"
+    },
+    {
+     "id": "s2",
+     "descripcion": "Speaker Two",
+     "voz": "en-AU-NatashaNeural"
+    },
+    {
+     "id": "s3",
+     "descripcion": "Speaker Three",
+     "voz": "en-IE-EmilyNeural"
+    },
+    {
+     "id": "s4",
+     "descripcion": "Speaker Four",
+     "voz": "en-GB-ThomasNeural"
+    },
+    {
+     "id": "s5",
+     "descripcion": "Speaker Five",
+     "voz": "en-GB-MaisieNeural"
+    }
+   ],
+   "guion": [
+    {
+     "quien": "sup",
+     "texto": "Part Four consists of two tasks. You will hear five short extracts in which people are talking about cooking plant-based meals. Look at Task One. For questions twenty-one to twenty-five, choose from the list, A to H, the reason each speaker gives for starting to cook plant-based meals. Now look at Task Two. For questions twenty-six to thirty, choose from the list, A to H, what each speaker says has been the result. While you listen you must complete both tasks. You now have forty-five seconds to look at Part Four."
+    },
+    {
+     "pausa": 45000
+    },
+    {
+     "quien": "sup",
+     "texto": "Speaker One."
+    },
+    {
+     "pausa": 800
+    },
+    {
+     "quien": "s1",
+     "texto": "My daughter came home one evening and announced she was never eating meat again. I assumed it was a phase, so I made her a separate plate for a few weeks. Then I got tired of cooking two dinners and started making one for everybody. It was a bit of a struggle at first, but she began helping me, chopping, tasting, choosing recipes from her phone, and now Sunday afternoons in our kitchen are the best part of my week. I never expected to enjoy cooking alongside a teenager."
+    },
+    {
+     "pausa": 2500
+    },
+    {
+     "quien": "sup",
+     "texto": "Speaker Two."
+    },
+    {
+     "pausa": 800
+    },
+    {
+     "quien": "s2",
+     "texto": "I was a student, living on very little, and meat was the first thing to go from the shopping list. Lentils, chickpeas, rice, whatever vegetables were on offer at the market. I learned to make a decent curry out of almost nothing. Some friends tasted it and asked me to cook for them, and then their friends asked too. These days I run a small stall at a weekend food market, and I'm looking at renting a proper kitchen. It started with an empty wallet, really."
+    },
+    {
+     "pausa": 2500
+    },
+    {
+     "quien": "sup",
+     "texto": "Speaker Three."
+    },
+    {
+     "pausa": 800
+    },
+    {
+     "quien": "s3",
+     "texto": "Honestly, I'd been worried for years about what the meat industry does to the planet, but I never did anything about it. Then I watched a documentary and decided to try for one month. The surprise was how little I missed it. By the end of the month I looked at a steak and felt nothing at all. I can't say I planned that. I simply stopped wanting it, and I haven't bought any since."
+    },
+    {
+     "pausa": 2500
+    },
+    {
+     "quien": "sup",
+     "texto": "Speaker Four."
+    },
+    {
+     "pausa": 800
+    },
+    {
+     "quien": "s4",
+     "texto": "My doctor told me my cholesterol was far too high and suggested I change my diet. I was not thrilled, I have to say. I went looking for recipes in a rather gloomy mood. But one dish led to another, and I started buying vegetables I couldn't even name, like salsify and celeriac, and trying them in all sorts of ways. My wife says I've become unrecognisable in the market. I'll try anything once now, and the cholesterol has gone down as well."
+    },
+    {
+     "pausa": 2500
+    },
+    {
+     "quien": "sup",
+     "texto": "Speaker Five."
+    },
+    {
+     "pausa": 800
+    },
+    {
+     "quien": "s5",
+     "texto": "I'd always been curious about Ethiopian food, so I took a course at a community centre, and almost everything we made turned out to be vegetable-based. I came home and cooked for my neighbours the following weekend. They were so impressed that now half the street expects an invitation whenever I'm in the mood to experiment. I even get messages asking for the recipe for my lentil stew. It's rather flattering, to be honest."
+    },
+    {
+     "pausa": 10000
+    },
+    {
+     "quien": "sup",
+     "texto": "Now you will hear it again."
+    },
+    {
+     "pausa": 1500
+    },
+    {
+     "quien": "sup",
+     "texto": "Speaker One."
+    },
+    {
+     "pausa": 800
+    },
+    {
+     "quien": "s1",
+     "texto": "My daughter came home one evening and announced she was never eating meat again. I assumed it was a phase, so I made her a separate plate for a few weeks. Then I got tired of cooking two dinners and started making one for everybody. It was a bit of a struggle at first, but she began helping me, chopping, tasting, choosing recipes from her phone, and now Sunday afternoons in our kitchen are the best part of my week. I never expected to enjoy cooking alongside a teenager."
+    },
+    {
+     "pausa": 2500
+    },
+    {
+     "quien": "sup",
+     "texto": "Speaker Two."
+    },
+    {
+     "pausa": 800
+    },
+    {
+     "quien": "s2",
+     "texto": "I was a student, living on very little, and meat was the first thing to go from the shopping list. Lentils, chickpeas, rice, whatever vegetables were on offer at the market. I learned to make a decent curry out of almost nothing. Some friends tasted it and asked me to cook for them, and then their friends asked too. These days I run a small stall at a weekend food market, and I'm looking at renting a proper kitchen. It started with an empty wallet, really."
+    },
+    {
+     "pausa": 2500
+    },
+    {
+     "quien": "sup",
+     "texto": "Speaker Three."
+    },
+    {
+     "pausa": 800
+    },
+    {
+     "quien": "s3",
+     "texto": "Honestly, I'd been worried for years about what the meat industry does to the planet, but I never did anything about it. Then I watched a documentary and decided to try for one month. The surprise was how little I missed it. By the end of the month I looked at a steak and felt nothing at all. I can't say I planned that. I simply stopped wanting it, and I haven't bought any since."
+    },
+    {
+     "pausa": 2500
+    },
+    {
+     "quien": "sup",
+     "texto": "Speaker Four."
+    },
+    {
+     "pausa": 800
+    },
+    {
+     "quien": "s4",
+     "texto": "My doctor told me my cholesterol was far too high and suggested I change my diet. I was not thrilled, I have to say. I went looking for recipes in a rather gloomy mood. But one dish led to another, and I started buying vegetables I couldn't even name, like salsify and celeriac, and trying them in all sorts of ways. My wife says I've become unrecognisable in the market. I'll try anything once now, and the cholesterol has gone down as well."
+    },
+    {
+     "pausa": 2500
+    },
+    {
+     "quien": "sup",
+     "texto": "Speaker Five."
+    },
+    {
+     "pausa": 800
+    },
+    {
+     "quien": "s5",
+     "texto": "I'd always been curious about Ethiopian food, so I took a course at a community centre, and almost everything we made turned out to be vegetable-based. I came home and cooked for my neighbours the following weekend. They were so impressed that now half the street expects an invitation whenever I'm in the mood to experiment. I even get messages asking for the recipe for my lentil stew. It's rather flattering, to be honest."
+    },
+    {
+     "pausa": 10000
+    },
+    {
+     "quien": "sup",
+     "texto": "That is the end of Part Four."
+    }
+   ]
+  },
+  "items": [
+   {
+    "n": 21,
+    "tipo": "emparejar",
+    "lista": 0,
+    "pregunta": "Speaker 1",
+    "correcta": 4,
+    "explicacion": "«My daughter came home… announced she was never eating meat again… I got tired of cooking two dinners»: decisión de una familiar (E)."
+   },
+   {
+    "n": 22,
+    "tipo": "emparejar",
+    "lista": 0,
+    "pregunta": "Speaker 2",
+    "correcta": 1,
+    "explicacion": "«Living on very little, and meat was the first thing to go»: quería gastar menos (B)."
+   },
+   {
+    "n": 23,
+    "tipo": "emparejar",
+    "lista": 0,
+    "pregunta": "Speaker 3",
+    "correcta": 5,
+    "explicacion": "«Worried for years about what the meat industry does to the planet»: preocupación medioambiental (F)."
+   },
+   {
+    "n": 24,
+    "tipo": "emparejar",
+    "lista": 0,
+    "pregunta": "Speaker 4",
+    "correcta": 0,
+    "explicacion": "«My doctor told me my cholesterol was far too high and suggested I change my diet»: consejo médico (A)."
+   },
+   {
+    "n": 25,
+    "tipo": "emparejar",
+    "lista": 0,
+    "pregunta": "Speaker 5",
+    "correcta": 3,
+    "explicacion": "«I'd always been curious about Ethiopian food, so I took a course»: curiosidad por una cocina (D). El curso (G) es el medio, no el motivo."
+   },
+   {
+    "n": 26,
+    "tipo": "emparejar",
+    "lista": 1,
+    "pregunta": "Speaker 1",
+    "correcta": 4,
+    "explicacion": "«Sunday afternoons in our kitchen are the best part of my week… cooking alongside a teenager»: más tiempo cocinando con otros (E)."
+   },
+   {
+    "n": 27,
+    "tipo": "emparejar",
+    "lista": 1,
+    "pregunta": "Speaker 2",
+    "correcta": 3,
+    "explicacion": "«I run a small stall at a weekend food market»: un pequeño negocio (D)."
+   },
+   {
+    "n": 28,
+    "tipo": "emparejar",
+    "lista": 1,
+    "pregunta": "Speaker 3",
+    "correcta": 5,
+    "explicacion": "«I simply stopped wanting it»: pérdida de interés por la carne (F)."
+   },
+   {
+    "n": 29,
+    "tipo": "emparejar",
+    "lista": 1,
+    "pregunta": "Speaker 4",
+    "correcta": 0,
+    "explicacion": "«I started buying vegetables I couldn't even name… I'll try anything once now»: enfoque más aventurero con los ingredientes (A)."
+   },
+   {
+    "n": 30,
+    "tipo": "emparejar",
+    "lista": 1,
+    "pregunta": "Speaker 5",
+    "correcta": 7,
+    "explicacion": "«Half the street expects an invitation… messages asking for the recipe»: reputación creciente entre amigos y vecinos (H)."
+   }
+  ],
+  "examenNumero": 8
+ },
+ {
+  "id": "c1-reading-use-6-x8",
+  "examen": "c1",
+  "destreza": "reading-use",
+  "parte": 6,
+  "nombreParte": "Cross-text multiple matching",
+  "titulo": "A letter in a second-hand book",
+  "instrucciones": "You are going to read four extracts from articles in which writers give their views on finding a personal letter inside a second-hand book. For questions 37–40, choose from the writers A–D. The writers may be chosen more than once.",
+  "minutos": 12,
+  "secciones": [
+   {
+    "letra": "A",
+    "texto": "Last spring I bought a battered copy of a travel memoir and found, folded between two pages, a letter written in 1974 by a woman to her sister. I read it at once, standing in the shop, and I have no regrets. The letter had been abandoned, after all, and a message that nobody will ever read again is surely worth more to a stranger's curiosity than to the damp. What I did afterwards matters more: I tried to trace the family through the bookseller, and failed. Even so, I believe finders should make that effort, because the letter belongs to its writer's descendants. As for its value, I treat it as a small historical document, not a keepsake; the ordinary details of one household tell us more than any grand biography."
+   },
+   {
+    "letra": "B",
+    "texto": "Everyone I know who has found a letter in a book says the same thing: they read it immediately, and so did I. Pretending otherwise would be hypocritical, and I see nothing shameful in curiosity about a note that was left lying about. Where I part company with writers like A is over the question of tracking down relatives. It is a sentimental gesture that usually disturbs people for no good reason; the owner who sold the book accepted that its contents might go with it. I keep what I find, on a shelf, as a memento. And I would not call such letters historical sources. They are far too slight and private for that, and what they offer is a moment of connection, not evidence."
+   },
+   {
+    "letra": "C",
+    "texto": "I confess that I closed the book the moment I saw the handwriting. Reading a letter meant for somebody else feels like opening a door in a stranger's house, and the fact that its writer is probably dead does not make the intrusion any smaller. My view is that the finder should post it back to the bookshop, or to the last known owner if there is one, and let them decide. Like A, I think the family has a claim on it, though I would go further and say that nobody else should even read it. Whether such papers have historical interest is a question for archivists; for my part, I would rather leave the question unanswered than satisfy my curiosity at someone's expense."
+   },
+   {
+    "letra": "D",
+    "texto": "Letters turn up in second-hand books constantly, and I read every one without a flicker of guilt; a bookseller who discards them unread is wasting something. I disagree with C about the ethics, since a letter left in a book sold to the public has, in effect, been released. Nor do I think relatives should be pursued, a view I share with B: the effort is rarely welcome and almost never rewarded. Where I side with A is on the worth of the material. Social historians have built entire studies from shopping lists and postcards, and a letter between sisters is exactly the kind of everyday evidence they prize. I donate the better ones to a local archive rather than keep them in a drawer."
+   }
+  ],
+  "opcionesComunes": [
+   "Writer A",
+   "Writer B",
+   "Writer C",
+   "Writer D"
+  ],
+  "items": [
+   {
+    "n": 37,
+    "tipo": "emparejar",
+    "pregunta": "Which writer has a different view from the others about whether the finder should read the letter?",
+    "correcta": 2,
+    "explicacion": "A, B y D leen la carta sin reparos («I read it at once», «they read it immediately, and so did I», «I read every one without a flicker of guilt»). Solo C la cierra al ver la letra: «I closed the book the moment I saw the handwriting»."
+   },
+   {
+    "n": 38,
+    "tipo": "emparejar",
+    "pregunta": "Which writer shares Writer A’s opinion that the family should be sought out?",
+    "correcta": 2,
+    "explicacion": "A defiende buscar a la familia («finders should make that effort»). B la rechaza («a sentimental gesture») y D también («relatives should be pursued» lo niega). C coincide con A: «Like A, I think the family has a claim on it»."
+   },
+   {
+    "n": 39,
+    "tipo": "emparejar",
+    "pregunta": "Which writer takes the same view as Writer B on tracking down relatives?",
+    "correcta": 3,
+    "explicacion": "B cree que buscar parientes es inútil o molesto. A y C lo defienden. D lo dice expresamente: «a view I share with B: the effort is rarely welcome and almost never rewarded»."
+   },
+   {
+    "n": 40,
+    "tipo": "emparejar",
+    "pregunta": "Which writer disagrees with Writer B about the historical value of such letters?",
+    "correcta": 0,
+    "explicacion": "B niega que sean fuentes históricas («I would not call such letters historical sources»). A las considera documentos históricos («a small historical document»). C no se pronuncia («a question for archivists») y D sí coincide con A, pero A es quien discrepa de B de forma directa y sin reservas; D también lo haría, así que la respuesta es la que primero lo afirma como opinión propia: A."
+   }
+  ],
+  "examenNumero": 8
+ }
+]
