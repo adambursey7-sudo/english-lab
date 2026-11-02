@@ -79,5 +79,7 @@ export function marcaConfigurada(): boolean {
 
 /** Pinta el color de la academia en la app (en la versión de clase no se toca). */
 export function aplicarColor(m: Marca = leerMarca()) {
-  if (ES_PRODUCTO) document.documentElement.style.setProperty('--ok', m.color);
+  if (!ES_PRODUCTO) return;
+  document.documentElement.style.setProperty('--ok', m.color);
+  document.documentElement.style.setProperty('--marca', m.color);
 }

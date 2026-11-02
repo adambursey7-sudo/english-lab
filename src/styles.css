@@ -73,6 +73,8 @@ input { font: inherit; color: inherit; }
   padding: calc(10px + env(safe-area-inset-top, 0px)) max(16px, env(safe-area-inset-right, 0px)) 10px max(16px, env(safe-area-inset-left, 0px));
   background: var(--paper);
   border-bottom: 1px solid var(--line);
+  /* En el producto, la franja de abajo lleva el color de la academia. */
+  box-shadow: inset 0 -4px 0 var(--marca, transparent);
 }
 .cabecera-dentro { max-width: 680px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 12px; min-width: 0; }
 .cabecera .titulo { font-family: var(--display); font-weight: 600; font-size: 18px; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }

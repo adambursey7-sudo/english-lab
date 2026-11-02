@@ -99,14 +99,22 @@ export function decodificarEntrega(linea: string): Entrega | null {
 
 /** Pega varias entregas (una por línea): devuelve las válidas y cuántas líneas no se entendieron. */
 export function leerEntregas(pegado: string): { entregas: Entrega[]; ignoradas: number } {
-  const lineas = pegado.split(/\s+/).filter(Boolean);
   const porClave = new Map<string, Entrega>();
   let ignoradas = 0;
-  for (const l of lineas) {
-    const e = decodificarEntrega(l);
-    // Si el mismo alumno aparece dos veces con el mismo examen, vale la última.
-    if (e) porClave.set(`${e.alumno}|${e.titulo}`, e);
-    else ignoradas++;
+  for (const linea of pegado.split(/\r?\n/)) {
+    // Un texto suelto de varias palabras cuenta como una sola cosa que no se entendió, no como una por palabra.
+    let enBasura = false;
+    for (const l of linea.split(/\s+/).filter(Boolean)) {
+      const e = decodificarEntrega(l);
+      // Si el mismo alumno aparece dos veces con el mismo examen, vale la última.
+      if (e) {
+        porClave.set(`${e.alumno}|${e.titulo}`, e);
+        enBasura = false;
+      } else if (!enBasura) {
+        ignoradas++;
+        enBasura = true;
+      }
+    }
   }
   const entregas = [...porClave.values()];
   return { entregas, ignoradas };
