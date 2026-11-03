@@ -33,6 +33,8 @@ export interface Cuadernillo {
 export const TITULO_EXAMEN: Record<Examen, string> = {
   c1: 'C1 Advanced · Practice test',
   pau: 'Prueba de inglés · PAU Canarias (modelo de práctica)',
+  b1: 'English B1 · Practice test',
+  b2: 'English B2 · Practice test',
 };
 
 export const PAPELES_DE: Record<Examen, { destreza: Destreza; titulo: string; minutos: number }[]> = {
@@ -43,6 +45,18 @@ export const PAPELES_DE: Record<Examen, { destreza: Destreza; titulo: string; mi
     { destreza: 'speaking', titulo: 'Speaking', minutos: 15 },
   ],
   pau: [{ destreza: 'prueba', titulo: 'Prueba escrita', minutos: 90 }],
+  b1: [
+    { destreza: 'comprension-escrita', titulo: 'Reading', minutos: 60 },
+    { destreza: 'listening', titulo: 'Listening', minutos: 35 },
+    { destreza: 'writing', titulo: 'Writing', minutos: 75 },
+    { destreza: 'mediacion', titulo: 'Written mediation', minutos: 35 },
+  ],
+  b2: [
+    { destreza: 'comprension-escrita', titulo: 'Reading', minutos: 70 },
+    { destreza: 'listening', titulo: 'Listening', minutos: 40 },
+    { destreza: 'writing', titulo: 'Writing', minutos: 90 },
+    { destreza: 'mediacion', titulo: 'Written mediation', minutos: 35 },
+  ],
 };
 
 /** Números de examen que se pueden montar enteros (hay al menos una parte con ese número). */

@@ -13,6 +13,8 @@ import { examenesDe, type Perfil } from '../motor/perfiles';
 const DESTREZAS: Record<Examen, Destreza[]> = {
   c1: ['reading-use', 'writing', 'listening', 'speaking'],
   pau: ['prueba'],
+  b1: ['comprension-escrita', 'listening', 'writing', 'mediacion'],
+  b2: ['comprension-escrita', 'listening', 'writing', 'mediacion'],
 };
 
 /** Una frase corta por destreza para la tarjeta. */
@@ -21,6 +23,8 @@ const LEMA: Record<Destreza, string> = {
   writing: 'Essay y una tarea a elegir',
   listening: 'Cuatro partes con audio',
   speaking: 'Con reloj y micro',
+  'comprension-escrita': 'Tres textos y 25 preguntas',
+  mediacion: 'Resumir en inglés un texto dado',
   prueba: 'Texto, diálogo, situaciones y redacción',
 };
 
@@ -248,8 +252,10 @@ function IconoDestreza({ destreza }: { destreza: Destreza }) {
   const comun = { width: 26, height: 26, viewBox: '0 0 24 24', fill: 'none', stroke: 'currentColor', strokeWidth: 1.8, strokeLinecap: 'round' as const, strokeLinejoin: 'round' as const };
   switch (destreza) {
     case 'reading-use':
+    case 'comprension-escrita':
       return <svg {...comun}><path d="M3 5h7a2 2 0 0 1 2 2v13a2 2 0 0 0-2-2H3z" /><path d="M21 5h-7a2 2 0 0 0-2 2v13a2 2 0 0 1 2-2h7z" /></svg>;
     case 'writing':
+    case 'mediacion':
       return <svg {...comun}><path d="M4 20h4l10-10-4-4L4 16z" /><path d="M12.5 7.5l4 4" /></svg>;
     case 'listening':
       return <svg {...comun}><path d="M4 14v-2a8 8 0 0 1 16 0v2" /><rect x="3" y="14" width="4" height="6" rx="1.5" /><rect x="17" y="14" width="4" height="6" rx="1.5" /></svg>;

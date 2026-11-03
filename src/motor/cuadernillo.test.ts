@@ -22,7 +22,7 @@ describe('cuadernillo', () => {
   });
 
   it('cada cuadernillo solo lleva partes de su número y ninguna repetida', () => {
-    for (const examen of ['c1', 'pau'] as const) {
+    for (const examen of ['c1', 'pau', 'b1', 'b2'] as const) {
       for (const n of numerosCuadernillo(examen)) {
         const c = montarCuadernillo(examen, n);
         expect(c).toBeDefined();
@@ -31,6 +31,17 @@ describe('cuadernillo', () => {
           expect(new Set(p.partes.map((e) => e.parte)).size).toBe(p.partes.length);
         }
       }
+    }
+  });
+
+  it('el examen 1 de B1 y B2 trae lectura, escritura y mediación en el orden del examen', () => {
+    for (const examen of ['b1', 'b2'] as const) {
+      const c = montarCuadernillo(examen, 1);
+      expect(c, examen).toBeDefined();
+      expect(c?.papeles.map((p) => p.destreza)).toEqual(['comprension-escrita', 'writing', 'mediacion']);
+      const lectura = c?.papeles[0];
+      expect(lectura?.partes.map((e) => e.parte)).toEqual([1, 2, 3]);
+      expect(lectura?.minutos).toBe(examen === 'b1' ? 60 : 70);
     }
   });
 

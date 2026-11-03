@@ -8,7 +8,7 @@ describe('notas de Adam', () => {
   it('se queda solo con lo que tiene forma de nota e ignora la ayuda del archivo', () => {
     const crudo = {
       _como: 'texto de ayuda',
-      eduardo: [nota({}), { fecha: '2026-10-29', examen: 'b2', destreza: 'speaking', nota: 5 }, { fecha: 1, nota: 'x' }, null],
+      eduardo: [nota({}), { fecha: '2026-10-29', examen: 'a1', destreza: 'speaking', nota: 5 }, { fecha: 1, nota: 'x' }, null],
       josito: 'no es una lista',
     };
     const limpio = filtrarNotas(crudo);

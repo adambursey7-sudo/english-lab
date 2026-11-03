@@ -29,6 +29,14 @@ const PLANTILLAS: Record<Examen, Plantilla[]> = {
     { id: 'completo', nombre: 'Prueba completa', ayuda: 'Las seis preguntas', destrezas: 'todas', soloAutomaticos: false },
     { id: 'auto', nombre: 'Se corrige solo', ayuda: 'Sin redacción: corrección automática', destrezas: 'todas', soloAutomaticos: true },
   ],
+  b1: [
+    { id: 'completo', nombre: 'Examen completo', ayuda: 'Todos los papeles del B1', destrezas: 'todas', soloAutomaticos: false },
+    { id: 'auto', nombre: 'Se corrige solo', ayuda: 'Sin writing ni mediación: corrección automática', destrezas: 'todas', soloAutomaticos: true },
+  ],
+  b2: [
+    { id: 'completo', nombre: 'Examen completo', ayuda: 'Todos los papeles del B2', destrezas: 'todas', soloAutomaticos: false },
+    { id: 'auto', nombre: 'Se corrige solo', ayuda: 'Sin writing ni mediación: corrección automática', destrezas: 'todas', soloAutomaticos: true },
+  ],
 };
 
 function recetaDe(examen: Examen, plantilla: Plantilla, semilla: number, banco: Ejercicio[]): Receta {

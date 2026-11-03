@@ -24,10 +24,10 @@ describe('perfiles con PIN', () => {
 
 describe('qué examen ve cada uno', () => {
   it('cada alumno solo el suyo; Adam y el invitado, los dos', () => {
-    for (const p of PERFILES) expect(examenesDe(p)).toEqual(p.profe ? ['c1', 'pau'] : [p.examen]);
+    for (const p of PERFILES) expect(examenesDe(p)).toEqual(p.profe ? ['c1', 'pau', 'b1', 'b2'] : [p.examen]);
     expect(examenesDe(PERFILES.find((p) => p.id === 'maria'))).toEqual(['pau']);
     expect(examenesDe(PERFILES.find((p) => p.id === 'eduardo'))).toEqual(['c1']);
-    expect(examenesDe(undefined)).toEqual(['c1', 'pau']);
+    expect(examenesDe(undefined)).toEqual(['c1', 'pau', 'b1', 'b2']);
   });
 });
 

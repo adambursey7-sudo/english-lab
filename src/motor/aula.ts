@@ -28,13 +28,13 @@ export function codificarExamen(x: ExamenAula): string {
 export function decodificarExamen(t: string): ExamenAula | null {
   try {
     const g = desdeBase64(t) as Record<string, unknown>;
-    if (!g || g.v !== 1 || (g.examen !== 'c1' && g.examen !== 'pau') || !Array.isArray(g.ids)) return null;
+    if (!g || g.v !== 1 || !['c1', 'pau', 'b1', 'b2'].includes(g.examen as string) || !Array.isArray(g.ids)) return null;
     const ids = [...new Set(g.ids.filter((i): i is string => typeof i === 'string' && /^[\w.-]{1,80}$/.test(i)))].slice(0, 60);
     if (ids.length === 0) return null;
     const marca = (g.marca ?? {}) as Record<string, unknown>;
     return {
       v: 1,
-      examen: g.examen,
+      examen: g.examen as Examen,
       titulo: texto(g.titulo, 80) || 'Examen',
       ids,
       version: g.version === 'B' ? 'B' : 'A',

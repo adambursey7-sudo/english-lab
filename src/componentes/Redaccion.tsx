@@ -16,6 +16,10 @@ const NOMBRE_TIPO: Record<ItemRedaccion['tipoTexto'], string> = {
   composition: 'Composition',
   situation: 'Situación',
   dialogue: 'Diálogo',
+  story: 'Story',
+  blog: 'Blog post',
+  note: 'Note / message',
+  mediation: 'Mediación escrita',
 };
 
 export function Enunciado({ texto }: { texto: string }) {

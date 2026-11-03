@@ -332,6 +332,7 @@ function ItemImpreso({ e, it }: { e: Ejercicio; it: Item }) {
 const NOMBRE_TIPO: Record<ItemRedaccion['tipoTexto'], string> = {
   essay: 'Essay', email: 'Email', letter: 'Letter', proposal: 'Proposal', report: 'Report', review: 'Review',
   composition: 'Composition', situation: 'Situation', dialogue: 'Dialogue',
+  story: 'Story', blog: 'Blog post', note: 'Note / message', mediation: 'Written mediation',
 };
 
 function RedaccionImpresa({ it }: { it: ItemRedaccion }) {

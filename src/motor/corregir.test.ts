@@ -230,4 +230,9 @@ describe('bandaDe', () => {
     expect(bandaDe('pau', 75).etiqueta).toBe('7,5 sobre 10');
     expect(bandaDe('pau', 100).etiqueta).toBe('10,0 sobre 10');
   });
+  it('B1 y B2: nota sobre 10 y aviso de que cada actividad debe llegar a 5', () => {
+    expect(bandaDe('b1', 72).etiqueta).toBe('7,2 sobre 10');
+    expect(bandaDe('b2', 49).detalle).toContain('Por debajo del 5');
+    expect(bandaDe('b2', 50).detalle).toContain('Aprobada');
+  });
 });

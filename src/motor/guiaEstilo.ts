@@ -24,6 +24,14 @@ export const ESTILO_GENERAL: Record<Examen, string[]> = {
     'The reading text is about 300–350 words on a current issue for young people (technology, health, environment, education, society, culture). Original text only.',
     'Everything is in English, as in the real test; only the field `explicacion` is written in Spanish, for the teacher.',
   ],
+  b1: [
+    'Level: CEFR B1. Clear, current English: common vocabulary, short and medium sentences, familiar topics (daily life, hobbies, travel, study, health, technology). No idioms that need explaining.',
+    'Original content only: invent the topic, the people and the facts. Everything is in English; only `explicacion` is in Spanish.',
+  ],
+  b2: [
+    'Level: CEFR B2. Natural English with some abstract topics (society, work, environment, culture, science), clear argument structure and a wider range of vocabulary and linking words.',
+    'Original content only: invent the topic, the people and the facts. Everything is in English; only `explicacion` is in Spanish.',
+  ],
 };
 
 export const GUIA: GuiaParte[] = [
@@ -136,6 +144,66 @@ export const GUIA: GuiaParte[] = [
     examen: 'pau', destreza: 'prueba', parte: 6,
     tarea: 'Composition: two topics (`elegir` = 1), about 140–180 words; one is an opinion or for-and-against composition, the other an email or informal letter (not to be signed).',
     estilo: ['`minPalabras` 140, `maxPalabras` 180, a model answer of about 160 words in B1 English with linking words, and `criterios` for presentation, organisation, content, grammar and vocabulary.'],
+  },
+  {
+    examen: 'b1', destreza: 'comprension-escrita', parte: 1,
+    tarea: 'Matching: eight short advertisements or notices A–H (about 50 words each, in `secciones`) and 6 situations about different people; the student chooses the one that suits each person. Two texts are not used.',
+    estilo: ['`opcionesComunes` = ["A",…,"H"]; each item is an `emparejar` with the situation in `pregunta`. Each situation must fit exactly one text on at least two details (age, price, day, level), and the distractors share some words with it.'],
+  },
+  {
+    examen: 'b1', destreza: 'comprension-escrita', parte: 2,
+    tarea: 'Multiple choice: an article of about 350–400 words and 8–9 questions with three options (A–C), in the order of the text.',
+    estilo: ['Everyday topic told as a short story or profile. Options are paraphrases, never copied phrases; the wrong ones reuse words of the text but say something different. Each item has `pregunta`, `opciones`, `correcta` and a Spanish `explicacion`.'],
+  },
+  {
+    examen: 'b1', destreza: 'comprension-escrita', parte: 3,
+    tarea: 'True or false: a text of about 330–380 words and 10–11 statements.',
+    estilo: ['Use `opciones` ["True","False"] with `correcta` 0 or 1. Statements paraphrase the text in order; about half are false because one detail is changed (more/less, earlier/later) or reversed. Explain in Spanish where the answer is.'],
+  },
+  {
+    examen: 'b1', destreza: 'writing', parte: 1,
+    tarea: 'Short message of 90–110 words (email, note, chat) with four bullet points to cover.',
+    estilo: ['One item `redaccion` with `tipoTexto` "email" or "note", `minPalabras` 90, `maxPalabras` 110, a model inside the range and `criterios` for adecuación, organización, gramática y léxico.'],
+  },
+  {
+    examen: 'b1', destreza: 'writing', parte: 2,
+    tarea: 'Longer text of 130–160 words: story, blog post, description or standard report.',
+    estilo: ['One item `redaccion` (`tipoTexto` "story", "blog", "report"…), `minPalabras` 130, `maxPalabras` 160, a B1 model with linking words and `criterios` for the four scales.'],
+  },
+  {
+    examen: 'b1', destreza: 'mediacion', parte: 1,
+    tarea: 'Written mediation: a source text of 110–130 words and a short answer of 50–60 words for a reader who cannot understand the original.',
+    estilo: ['One item `redaccion` with `tipoTexto` "mediation"; put the source text in the `enunciado`. The model selects the key facts and rewords them, without translating line by line.'],
+  },
+  {
+    examen: 'b2', destreza: 'comprension-escrita', parte: 1,
+    tarea: 'Matching: seven short texts A–G (about 60–70 words each, in `secciones`, by different people) and 6 statements; one text is not used.',
+    estilo: ['`opcionesComunes` = ["A",…,"G"]; each statement is an `emparejar` item paraphrasing an idea (never the same words), so the student must read for meaning. Include a text that fits no statement.'],
+  },
+  {
+    examen: 'b2', destreza: 'comprension-escrita', parte: 2,
+    tarea: 'Multiple choice: an article of about 450–550 words and 8–9 questions with four options (A–D), in the order of the text.',
+    estilo: ['Test detail, purpose, attitude, reference and the meaning of a phrase; the last question may be about tone. Options are paraphrases and the distractors are plausible. Spanish `explicacion` for each item.'],
+  },
+  {
+    examen: 'b2', destreza: 'comprension-escrita', parte: 3,
+    tarea: 'Short answers: a text of about 380–450 words and 10 questions answered with no more than three words taken from the text.',
+    estilo: ['Each item is a `palabra` with `maxPalabras` 3 and `correctas` listing every accepted form that appears in the text (with or without article). Questions follow the order of the text and have one clear answer.'],
+  },
+  {
+    examen: 'b2', destreza: 'writing', parte: 1,
+    tarea: 'Short text of 100–120 words (formal or informal email, message) with four points to cover.',
+    estilo: ['One item `redaccion` with `tipoTexto` "email", `minPalabras` 100, `maxPalabras` 120, a model within the range and `criterios` for the four scales.'],
+  },
+  {
+    examen: 'b2', destreza: 'writing', parte: 2,
+    tarea: 'Longer text of 230–275 words: essay, review, letter to the editor or story.',
+    estilo: ['One item `redaccion`, `minPalabras` 230, `maxPalabras` 275, a B2 model with a clear structure and varied linkers, and `criterios` for the four scales.'],
+  },
+  {
+    examen: 'b2', destreza: 'mediacion', parte: 1,
+    tarea: 'Written mediation: a source text of 150–170 words and a summary of 70–80 words for a reader who cannot understand the original.',
+    estilo: ['One item `redaccion` with `tipoTexto` "mediation"; put the source text in the `enunciado` and name the points the answer must cover. The model rewords and leaves out secondary figures.'],
   },
 ];
 

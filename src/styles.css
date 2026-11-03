@@ -322,6 +322,8 @@ input { font: inherit; color: inherit; }
 .tono-listening { --tono: var(--tono-listening); --tono-soft: var(--tono-listening-soft); }
 .tono-speaking { --tono: var(--tono-speaking); --tono-soft: var(--tono-speaking-soft); }
 .tono-prueba { --tono: var(--tono-prueba); --tono-soft: var(--tono-prueba-soft); }
+.tono-comprension-escrita { --tono: var(--tono-reading-use); --tono-soft: var(--tono-reading-use-soft); }
+.tono-mediacion { --tono: var(--tono-speaking); --tono-soft: var(--tono-speaking-soft); }
 
 .cabecera.aula { background: var(--navy); color: var(--navy-ink); border-bottom: none; position: relative; overflow: hidden; padding-bottom: 18px; }
 .cabecera.aula::after { content: ''; position: absolute; right: -60px; top: -70px; width: 200px; height: 200px; border-radius: 50%; background: var(--navy2); }
