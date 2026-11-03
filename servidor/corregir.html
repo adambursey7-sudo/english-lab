@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>English Lab · Corregir</title>
+<style>
+  :root { --navy:#1b2a49; --crema:#fbf6ec; --verde:#2f8f5b; --gris:#6b7280; }
+  body { font-family: system-ui, sans-serif; background: var(--crema); color: #222; margin: 0; }
+  header { background: var(--navy); color: #fff; padding: 14px 18px; }
+  header h1 { margin: 0; font-size: 1.15rem; }
+  main { max-width: 760px; margin: 0 auto; padding: 16px; }
+  .tarjeta { background: #fff; border-radius: 12px; padding: 14px 16px; margin: 0 0 14px; box-shadow: 0 1px 4px rgba(0,0,0,.12); }
+  .tarjeta.hecha { opacity: .6; }
+  .quien { font-weight: 700; }
+  .meta { color: var(--gris); font-size: .85rem; }
+  pre { white-space: pre-wrap; font: inherit; background: #f7f7f2; padding: 10px; border-radius: 8px; }
+  audio { width: 100%; margin: 8px 0; }
+  .fila { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; margin-top: 8px; }
+  input, textarea, button { font: inherit; padding: 8px 10px; border-radius: 8px; border: 1px solid #c8c8c0; }
+  input[type=number] { width: 80px; }
+  textarea { flex: 1 1 100%; min-height: 60px; }
+  button { background: var(--navy); color: #fff; border: 0; cursor: pointer; }
+  .ok { color: var(--verde); font-weight: 600; }
+  .filtros label { margin-right: 14px; }
+</style>
+</head>
+<body>
+<header><h1>English Lab · entregas de los alumnos</h1></header>
+<main>
+  <div class="tarjeta" id="acceso">
+    <div class="fila"><input id="clave" type="password" placeholder="Clave de Adam" autocomplete="off"><button id="entrar">Entrar</button><span id="msg" class="meta"></span></div>
+  </div>
+  <div class="filtros" id="filtros" hidden><label><input type="checkbox" id="verHechas"> Ver también las corregidas</label> <button id="recargar">Actualizar</button></div>
+  <div id="lista"></div>
+</main>
+<script>
+const $ = (id) => document.getElementById(id);
+let clave = '';
+try { clave = sessionStorage.getItem('el-clave') || ''; } catch (e) {}
+const cab = () => ({ Authorization: 'Bearer ' + clave });
+
+async function cargar() {
+  $('msg').textContent = '';
+  const r = await fetch('/api/admin/entregas', { headers: cab() });
+  if (!r.ok) { $('msg').textContent = r.status === 401 ? 'Clave no válida.' : 'Error ' + r.status; return; }
+  try { sessionStorage.setItem('el-clave', clave); } catch (e) {}
+  $('acceso').hidden = true; $('filtros').hidden = false;
+  pintar(await r.json());
+}
+
+function elem(tag, texto, clase) { const e = document.createElement(tag); if (texto != null) e.textContent = texto; if (clase) e.className = clase; return e; }
+
+function pintar(entregas) {
+  const lista = $('lista'); lista.replaceChildren();
+  const ver = $('verHechas').checked;
+  const visibles = entregas.filter((e) => ver || !e.corregida);
+  if (!visibles.length) lista.append(elem('p', 'No hay nada pendiente.', 'meta'));
+  for (const e of visibles) {
+    const t = elem('div', null, 'tarjeta' + (e.corregida ? ' hecha' : ''));
+    const f = new Date(e.fecha).toLocaleString('es-ES', { dateStyle: 'medium', timeStyle: 'short' });
+    t.append(elem('div', e.alumno, 'quien'), elem('div', f + ' · ' + (e.titulo || e.ejercicio) + (e.n ? ' · tarea ' + e.n : ''), 'meta'));
+    if (e.tipo === 'texto') t.append(elem('pre', e.texto));
+    else {
+      const a = document.createElement('audio'); a.controls = true; t.append(a);
+      fetch('/api/admin/audio/' + encodeURIComponent(e.alumno) + '/' + encodeURIComponent(e.audio), { headers: cab() })
+        .then((r) => r.blob()).then((b) => { a.src = URL.createObjectURL(b); });
+    }
+    if (e.corregida) t.append(elem('div', 'Corregida: ' + e.corregida.nota + '/' + e.corregida.sobre + (e.corregida.comentario ? ' · ' + e.corregida.comentario : ''), 'ok'));
+    else {
+      const nota = document.createElement('input'); nota.type = 'number'; nota.step = '0.5'; nota.min = '0'; nota.placeholder = 'Nota';
+      const sobre = document.createElement('input'); sobre.type = 'number'; sobre.value = '10'; sobre.min = '1';
+      const com = document.createElement('textarea'); com.placeholder = 'Comentario para el alumno (opcional)';
+      const b = elem('button', 'Guardar nota'); const estado = elem('span', '', 'meta');
+      b.onclick = async () => {
+        const r = await fetch('/api/admin/nota', { method: 'POST', headers: { ...cab(), 'Content-Type': 'application/json' }, body: JSON.stringify({ alumno: e.alumno, id: e.id, nota: nota.value, sobre: sobre.value, comentario: com.value }) });
+        if (r.ok) cargar(); else estado.textContent = (await r.json()).error || 'Error';
+      };
+      const fila = elem('div', null, 'fila'); fila.append(nota, elem('span', 'sobre'), sobre, b, estado);
+      t.append(fila, com);
+    }
+    lista.append(t);
+  }
+}
+
+$('entrar').onclick = () => { clave = $('clave').value.trim(); cargar(); };
+$('recargar').onclick = cargar;
+$('verHechas').onchange = cargar;
+if (clave) cargar();
+</script>
+</body>
+</html>

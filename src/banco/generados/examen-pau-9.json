@@ -1,0 +1,361 @@
+[
+ {
+  "id": "pau-prueba-5-x9",
+  "examen": "pau",
+  "destreza": "prueba",
+  "parte": 5,
+  "nombreParte": "Comment on a situation",
+  "instrucciones": "5. Choose ONLY 3 of the following situations and WRITE what you would say in each one to show that you understand the context of the situation. Write between 10 and 25 words. (1.5 points) Only the first three you answer will be marked.",
+  "minutos": 10,
+  "elegir": 3,
+  "items": [
+   {
+    "n": 1,
+    "tipo": "redaccion",
+    "tipoTexto": "situation",
+    "enunciado": "a) Your neighbours are having a loud party and it is midnight. You have an exam tomorrow. Complain to them politely.",
+    "minPalabras": 10,
+    "maxPalabras": 25,
+    "modelo": "Excuse me, I’m sorry to bother you, but the music is very loud and I have an exam tomorrow. Could you turn it down, please?",
+    "criterios": [
+     "Lo que escribo encaja con la situación o con la conversación (si el hueco acaba en «?», es una pregunta).",
+     "Sin errores de gramática ni de ortografía: cada error baja la nota (0,25 → 0,20 → 0,15 → 0).",
+     "Ni muy corto ni muy largo: en las situaciones, entre 10 y 25 palabras."
+    ],
+    "explicacion": "Quejarse con educación: «Excuse me…», explicar el problema y pedir algo concreto («Could you…?»). 10–25 palabras."
+   },
+   {
+    "n": 2,
+    "tipo": "redaccion",
+    "tipoTexto": "situation",
+    "enunciado": "b) Your friend can’t sleep because of the traffic noise outside her bedroom. Advise her.",
+    "minPalabras": 10,
+    "maxPalabras": 25,
+    "modelo": "You should try wearing earplugs at night. Also, if you close the window and use a fan, it might be quieter and more comfortable.",
+    "criterios": [
+     "Lo que escribo encaja con la situación o con la conversación (si el hueco acaba en «?», es una pregunta).",
+     "Sin errores de gramática ni de ortografía: cada error baja la nota (0,25 → 0,20 → 0,15 → 0).",
+     "Ni muy corto ni muy largo: en las situaciones, entre 10 y 25 palabras."
+    ],
+    "explicacion": "Aconsejar: «You should…», «Why don’t you…?», «If I were you, I’d…». Dar una o dos ideas útiles."
+   },
+   {
+    "n": 3,
+    "tipo": "redaccion",
+    "tipoTexto": "situation",
+    "enunciado": "c) Your classmate says, “Cities would be better without any street music.” Give your opinion.",
+    "minPalabras": 10,
+    "maxPalabras": 25,
+    "modelo": "I don’t think so. Street music makes the city more lively, and as long as it isn’t too loud, I really enjoy listening to it.",
+    "criterios": [
+     "Lo que escribo encaja con la situación o con la conversación (si el hueco acaba en «?», es una pregunta).",
+     "Sin errores de gramática ni de ortografía: cada error baja la nota (0,25 → 0,20 → 0,15 → 0).",
+     "Ni muy corto ni muy largo: en las situaciones, entre 10 y 25 palabras."
+    ],
+    "explicacion": "Dar una opinión: «I think / I don’t agree because…» con una razón. 10–25 palabras."
+   },
+   {
+    "n": 4,
+    "tipo": "redaccion",
+    "tipoTexto": "situation",
+    "enunciado": "d) You were playing the drums at home and your neighbour knocks on the door to complain. Apologise.",
+    "minPalabras": 10,
+    "maxPalabras": 25,
+    "modelo": "I’m really sorry, I didn’t realise the noise was so loud. I’ll stop now, and from now on I’ll only practise in the afternoon.",
+    "criterios": [
+     "Lo que escribo encaja con la situación o con la conversación (si el hueco acaba en «?», es una pregunta).",
+     "Sin errores de gramática ni de ortografía: cada error baja la nota (0,25 → 0,20 → 0,15 → 0).",
+     "Ni muy corto ni muy largo: en las situaciones, entre 10 y 25 palabras."
+    ],
+    "explicacion": "Pedir perdón: «I’m really sorry…», explicar brevemente y ofrecer una solución futura."
+   },
+   {
+    "n": 5,
+    "tipo": "redaccion",
+    "tipoTexto": "situation",
+    "enunciado": "e) Your friends invite you to a concert in the park, but you hate crowded, noisy places. Refuse politely.",
+    "minPalabras": 10,
+    "maxPalabras": 25,
+    "modelo": "Thanks for inviting me, but I’m afraid I can’t come. I find big crowds too noisy, but let’s do something quieter next weekend!",
+    "criterios": [
+     "Lo que escribo encaja con la situación o con la conversación (si el hueco acaba en «?», es una pregunta).",
+     "Sin errores de gramática ni de ortografía: cada error baja la nota (0,25 → 0,20 → 0,15 → 0).",
+     "Ni muy corto ni muy largo: en las situaciones, entre 10 y 25 palabras."
+    ],
+    "explicacion": "Rechazar con educación: agradecer, «I’m afraid I can’t…», dar una razón y, si se puede, proponer otra cosa."
+   }
+  ],
+  "examenNumero": 9
+ },
+ {
+  "id": "pau-prueba-4-x9",
+  "examen": "pau",
+  "destreza": "prueba",
+  "parte": 4,
+  "nombreParte": "Complete a conversation",
+  "titulo": "Choosing a film for Saturday night",
+  "instrucciones": "4. READ this conversation and COMPLETE your part. Write the numbers (1-6) and complete each sentence on your exam paper. (1.5 points) If a gap ends with a question mark, you must write a question.",
+  "minutos": 10,
+  "texto": "Your friend: Shall we do something on Saturday night? I’d love to watch a film.\nYou: Good idea! {{1}}\nYour friend: I’d prefer the cinema. The screen is huge and the sound is amazing.\nYou: But {{2}}?\nYour friend: Around ten euros. It’s expensive, but I think it’s worth it for a new film.\nYou: I see. {{3}}\nYour friend: Yes, I have a subscription. We could watch a comedy at my place, but it’s not the same.\nYou: Well, {{4}}\nYour friend: That’s true. And we could have pizza afterwards!\nYou: Sounds great! {{5}}?\nYour friend: At eight, so we have time to buy the tickets.\nYou: {{6}}",
+  "items": [
+   {
+    "n": 1,
+    "tipo": "redaccion",
+    "tipoTexto": "dialogue",
+    "enunciado": "Hueco 1",
+    "minPalabras": 2,
+    "maxPalabras": 25,
+    "modelo": "Do you want to go to the cinema or stay at home?  /  Where would you like to watch it?",
+    "criterios": [
+     "Lo que escribo encaja con la situación o con la conversación (si el hueco acaba en «?», es una pregunta).",
+     "Sin errores de gramática ni de ortografía: cada error baja la nota (0,25 → 0,20 → 0,15 → 0).",
+     "Ni muy corto ni muy largo: en las situaciones, entre 10 y 25 palabras."
+    ],
+    "explicacion": "El amigo responde «I’d prefer the cinema», así que preguntas dónde ver la película."
+   },
+   {
+    "n": 2,
+    "tipo": "redaccion",
+    "tipoTexto": "dialogue",
+    "enunciado": "Hueco 2 (acaba en «?»: tiene que ser una pregunta)",
+    "minPalabras": 2,
+    "maxPalabras": 25,
+    "modelo": "how much is a ticket  /  how much does it cost",
+    "criterios": [
+     "Lo que escribo encaja con la situación o con la conversación (si el hueco acaba en «?», es una pregunta).",
+     "Sin errores de gramática ni de ortografía: cada error baja la nota (0,25 → 0,20 → 0,15 → 0).",
+     "Ni muy corto ni muy largo: en las situaciones, entre 10 y 25 palabras."
+    ],
+    "explicacion": "La respuesta «Around ten euros» indica que preguntas el precio. El «But» y el «?» ya están escritos."
+   },
+   {
+    "n": 3,
+    "tipo": "redaccion",
+    "tipoTexto": "dialogue",
+    "enunciado": "Hueco 3",
+    "minPalabras": 2,
+    "maxPalabras": 25,
+    "modelo": "Do you have a streaming subscription at home?  /  Can you watch new films online?",
+    "criterios": [
+     "Lo que escribo encaja con la situación o con la conversación (si el hueco acaba en «?», es una pregunta).",
+     "Sin errores de gramática ni de ortografía: cada error baja la nota (0,25 → 0,20 → 0,15 → 0).",
+     "Ni muy corto ni muy largo: en las situaciones, entre 10 y 25 palabras."
+    ],
+    "explicacion": "«Yes, I have a subscription» responde a una pregunta sobre si tiene plataforma de streaming."
+   },
+   {
+    "n": 4,
+    "tipo": "redaccion",
+    "tipoTexto": "dialogue",
+    "enunciado": "Hueco 4",
+    "minPalabras": 2,
+    "maxPalabras": 25,
+    "modelo": "I think the cinema is more fun with friends.  /  We can watch comedies at home any day.",
+    "criterios": [
+     "Lo que escribo encaja con la situación o con la conversación (si el hueco acaba en «?», es una pregunta).",
+     "Sin errores de gramática ni de ortografía: cada error baja la nota (0,25 → 0,20 → 0,15 → 0).",
+     "Ni muy corto ni muy largo: en las situaciones, entre 10 y 25 palabras."
+    ],
+    "explicacion": "El amigo contesta «That’s true», así que das un argumento a favor del cine."
+   },
+   {
+    "n": 5,
+    "tipo": "redaccion",
+    "tipoTexto": "dialogue",
+    "enunciado": "Hueco 5 (acaba en «?»: tiene que ser una pregunta)",
+    "minPalabras": 2,
+    "maxPalabras": 25,
+    "modelo": "What time shall we meet  /  What time does the film start",
+    "criterios": [
+     "Lo que escribo encaja con la situación o con la conversación (si el hueco acaba en «?», es una pregunta).",
+     "Sin errores de gramática ni de ortografía: cada error baja la nota (0,25 → 0,20 → 0,15 → 0).",
+     "Ni muy corto ni muy largo: en las situaciones, entre 10 y 25 palabras."
+    ],
+    "explicacion": "La respuesta «At eight» indica que preguntas la hora. El «?» ya está escrito."
+   },
+   {
+    "n": 6,
+    "tipo": "redaccion",
+    "tipoTexto": "dialogue",
+    "enunciado": "Hueco 6",
+    "minPalabras": 2,
+    "maxPalabras": 25,
+    "modelo": "Perfect! See you on Saturday at eight.  /  OK, I’ll be there on time. See you!",
+    "criterios": [
+     "Lo que escribo encaja con la situación o con la conversación (si el hueco acaba en «?», es una pregunta).",
+     "Sin errores de gramática ni de ortografía: cada error baja la nota (0,25 → 0,20 → 0,15 → 0).",
+     "Ni muy corto ni muy largo: en las situaciones, entre 10 y 25 palabras."
+    ],
+    "explicacion": "Cierras la conversación confirmando la cita y despidiéndote."
+   }
+  ],
+  "examenNumero": 9
+ },
+ {
+  "id": "pau-prueba-1-x9",
+  "examen": "pau",
+  "destreza": "prueba",
+  "parte": 1,
+  "nombreParte": "Comprensión del texto",
+  "titulo": "Tourists and neighbours: sharing the island",
+  "instrucciones": "Read the text and answer questions 1, 2 and 3. In question 1, copy the exact words from the text as evidence; in question 2, copy no more than 10 words; in question 3, find the word in the text that matches each definition.",
+  "minutos": 25,
+  "texto": "Every year, more than twelve million visitors arrive in the Canary Islands. They come for the sun, the beaches and the volcanoes, and tourism provides jobs for thousands of families. However, in some towns the number of visitors has become so high that many locals are starting to feel uncomfortable in their own streets.\n\nIn a fishing village on the north coast of Tenerife, Marta Hernández, a teacher, says that prices have risen quickly. “Many flats are now rented to tourists for a few days, so young people cannot find a home they can afford,” she explains. “My cousin has lived here all his life, and he had to move to another town because the rent was too high.” Last year, several groups organised peaceful marches to ask the government for stricter rules about holiday flats.\n\nThe local council has listened to some of these worries. It has limited the number of new holiday flats in the centre of the village and has asked tourists to respect the quiet hours at night. It has also started a programme in which visitors can join activities with local people, such as cooking traditional dishes or helping to clean the beach on Saturday mornings.\n\nNot everybody agrees that tourism is the problem. Carlos Díaz, who owns a small restaurant, believes that the islands simply cannot live without visitors. “Half of my customers are tourists,” he says. “If they stopped coming, I would have to close and my five employees would lose their jobs.” He thinks the solution is not to reduce the number of visitors, but to attract those who stay longer, spend money in local shops and care about the environment.\n\nExperts say that both sides have a point. A recent study suggests that the islands should aim for a more sustainable model, with fewer short trips and more visitors who want to understand the local culture. For Marta, this is a hopeful idea. “Tourists are welcome,” she says, “as long as they remember that this is not only a destination for holidays, but also our home.”",
+  "items": [
+   {
+    "n": 1,
+    "tipo": "verdaderoFalso",
+    "pregunta": "1. Say whether the following sentences are TRUE or FALSE according to the text. COPY the evidence from the text. No marks will be given without the evidence. (1.5 points)",
+    "afirmacion": "a) Tourism does not create work for people in the Canary Islands.",
+    "correcta": false,
+    "pruebas": [
+     "tourism provides jobs for thousands of families",
+     "and tourism provides jobs for thousands of families"
+    ],
+    "explicacion": "FALSE: el texto dice que el turismo da trabajo a miles de familias. La prueba hay que copiarla tal cual del texto, sin puntos suspensivos ni número de línea."
+   },
+   {
+    "n": 2,
+    "tipo": "verdaderoFalso",
+    "afirmacion": "b) The council has put some limits on new holiday flats in the village centre.",
+    "correcta": true,
+    "pruebas": [
+     "It has limited the number of new holiday flats in the centre of the village",
+     "limited the number of new holiday flats in the centre of the village"
+    ],
+    "explicacion": "TRUE: «It has limited the number of new holiday flats in the centre of the village»."
+   },
+   {
+    "n": 3,
+    "tipo": "verdaderoFalso",
+    "afirmacion": "c) Carlos thinks the best solution is to reduce the number of visitors.",
+    "correcta": false,
+    "pruebas": [
+     "He thinks the solution is not to reduce the number of visitors",
+     "not to reduce the number of visitors, but to attract those who stay longer"
+    ],
+    "explicacion": "FALSE: Carlos propone atraer a visitantes que se queden más tiempo, no reducir su número."
+   },
+   {
+    "n": 4,
+    "tipo": "palabra",
+    "pregunta": "2. ANSWER the questions below. COPY no more than 10 words and/or a number from the text to answer each question. (1.5 points)\na) How many visitors arrive in the Canary Islands every year?",
+    "correctas": [
+     "more than twelve million visitors",
+     "more than twelve million",
+     "more than twelve million visitors arrive in the Canary Islands"
+    ],
+    "maxPalabras": 10,
+    "explicacion": "«more than twelve million visitors arrive in the Canary Islands». Hay que copiar del texto, no parafrasear."
+   },
+   {
+    "n": 5,
+    "tipo": "palabra",
+    "pregunta": "b) Why did Marta's cousin have to move to another town?",
+    "correctas": [
+     "the rent was too high",
+     "because the rent was too high",
+     "he had to move to another town because the rent was too high"
+    ],
+    "maxPalabras": 10,
+    "explicacion": "«he had to move to another town because the rent was too high»."
+   },
+   {
+    "n": 6,
+    "tipo": "palabra",
+    "pregunta": "c) What can visitors do on Saturday mornings?",
+    "correctas": [
+     "helping to clean the beach",
+     "clean the beach",
+     "helping to clean the beach on Saturday mornings"
+    ],
+    "maxPalabras": 10,
+    "explicacion": "«helping to clean the beach on Saturday mornings» (actividad del programa con vecinos)."
+   },
+   {
+    "n": 7,
+    "tipo": "palabra",
+    "pregunta": "3. FIND a word or expression in the text that means… (1 point)\nd) more strict or severe (paragraph 2)",
+    "correctas": [
+     "stricter"
+    ],
+    "explicacion": "«stricter rules about holiday flats»."
+   },
+   {
+    "n": 8,
+    "tipo": "palabra",
+    "pregunta": "e) to show consideration for something (paragraph 3)",
+    "correctas": [
+     "respect"
+    ],
+    "explicacion": "«asked tourists to respect the quiet hours at night»."
+   },
+   {
+    "n": 9,
+    "tipo": "palabra",
+    "pregunta": "f) to make people want to come (paragraph 4)",
+    "correctas": [
+     "attract"
+    ],
+    "explicacion": "«to attract those who stay longer»."
+   },
+   {
+    "n": 10,
+    "tipo": "palabra",
+    "pregunta": "g) able to continue for a long time without damaging the environment (paragraph 5)",
+    "correctas": [
+     "sustainable"
+    ],
+    "explicacion": "«a more sustainable model»."
+   }
+  ],
+  "examenNumero": 9
+ },
+ {
+  "id": "pau-prueba-6-x9",
+  "examen": "pau",
+  "destreza": "prueba",
+  "parte": 6,
+  "nombreParte": "Composition",
+  "instrucciones": "6. Choose ONE of the following topics and WRITE a composition of about 140-180 words. If you choose the email, DO NOT SIGN it. (3 points)",
+  "minutos": 30,
+  "elegir": 1,
+  "items": [
+   {
+    "n": 1,
+    "tipo": "redaccion",
+    "tipoTexto": "composition",
+    "enunciado": "a) Tourism brings money to the Canary Islands, but it also changes daily life for local people. Do you think the advantages of tourism are greater than the disadvantages? Give your opinion.",
+    "minPalabras": 140,
+    "maxPalabras": 180,
+    "modelo": "The Canary Islands receive millions of visitors every year, so tourism is a very important topic for all of us. In my opinion, tourism is good for the islands, but only if it is controlled carefully.\n\nFirst of all, tourism creates thousands of jobs in hotels, restaurants, shops and transport. Many young people can find work without leaving their island, and the money that visitors spend helps to keep local businesses open. Moreover, tourists often discover our traditions, our food and our music, and this makes us proud of our culture.\n\nHowever, there are also serious problems. Rents are rising, so many families cannot afford a flat in their own town. In addition, beaches and mountains are sometimes crowded and dirty, and local people have to put up with traffic and noise. Besides, nature can be damaged if too many people walk on fragile places.\n\nTo sum up, I believe the advantages are greater, as long as the authorities limit the number of visitors in the most delicate areas and protect the environment and local housing.",
+    "criterios": [
+     "Presentación: párrafos claros, puntuación correcta.",
+     "Organización: estructura del tipo de texto (email; for & against; opinion essay), registro adecuado, ideas enlazadas con conectores.",
+     "Contenido: me ciño al tema, ideas suficientes y variadas, sin repeticiones.",
+     "Corrección gramatical: frases bien construidas, variedad de estructuras, sin traducir del español.",
+     "Vocabulario: rico y no copiado del texto; menos de 4 faltas de ortografía (más de 3 restan)."
+    ],
+    "explicacion": "Opinion essay: introducción con la postura, un párrafo con las ventajas y otro con los inconvenientes, usando conectores (first of all, moreover, however, in addition, to sum up), y conclusión con opinión clara. Entre 140 y 180 palabras: por debajo de 140 baja el tope de nota."
+   },
+   {
+    "n": 2,
+    "tipo": "redaccion",
+    "tipoTexto": "email",
+    "enunciado": "b) Write an email to a friend from another country who is coming to the Canary Islands on holiday. Tell him or her how you can enjoy the islands like a local and suggest some places and activities you could do together.",
+    "minPalabras": 140,
+    "maxPalabras": 180,
+    "modelo": "Hi Emma,\n\nHow are you? I can’t believe you’re finally coming to the Canary Islands next month! I’m so excited to see you again.\n\nI’d like to show you the real side of my island, not only the busy tourist areas. First of all, we could have breakfast in a small café in my neighbourhood, where they make delicious coffee and fresh bread. Then we can take a local bus to a village in the mountains. The views are amazing and the people there are very friendly.\n\nIn the evening, we could go to a family restaurant and try typical dishes like wrinkled potatoes with mojo sauce. If you like walking, there is a quiet path along the coast where we can watch the sunset without crowds. Don’t forget to bring comfortable shoes and a hat!\n\nAlso, a local festival will take place that weekend, with music and dancing in the square. Why don’t we go together? I’m sure you’ll love it.\n\nTell me when your plane arrives and I’ll pick you up.\n\nSee you soon,",
+    "criterios": [
+     "Presentación: párrafos claros, puntuación correcta.",
+     "Organización: estructura del tipo de texto (email; for & against; opinion essay), registro adecuado, ideas enlazadas con conectores.",
+     "Contenido: me ciño al tema, ideas suficientes y variadas, sin repeticiones.",
+     "Corrección gramatical: frases bien construidas, variedad de estructuras, sin traducir del español.",
+     "Vocabulario: rico y no copiado del texto; menos de 4 faltas de ortografía (más de 3 restan)."
+    ],
+    "explicacion": "Email informal: saludo, motivo de la carta, cuerpo con ideas concretas de cómo vivir las islas como un local (comida, transporte, lugares, fiestas), propuesta («Why don’t we…?», «We could…») y despedida SIN firmar. Registro informal con contracciones."
+   }
+  ],
+  "examenNumero": 9
+ }
+]

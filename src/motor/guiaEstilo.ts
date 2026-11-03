@@ -98,6 +98,26 @@ export const GUIA: GuiaParte[] = [
     estilo: ['Two different aspects of the same speakers (for example the reason and the result). Use `listas` with two lists and `lista` in each item.'],
   },
   {
+    examen: 'c1', destreza: 'speaking', parte: 1,
+    tarea: 'Interview: the examiner asks personal questions (one item with the opening lines of the examiner and 6 questions on everyday topics: home, free time, studies or work, plans).',
+    estilo: ['One item of type `hablar` with `interlocutor`, `preguntas`, `segundos` 120 and a Spanish `modelo` with tips. Questions are open and invite two or three sentences.'],
+  },
+  {
+    examen: 'c1', destreza: 'speaking', parte: 2,
+    tarea: 'Long turn: two items; each gives three pictures (described in text) on one theme, two written questions to answer while comparing two of them for one minute, and a short follow-up question for the partner.',
+    estilo: ['Items of type `hablar` with `imagenes` (three vivid descriptions, no real people or brands), `preguntas` (two questions) and `segundos` 60. The two items use different themes. The `interlocutor` text follows the example. Spanish `modelo` explains how to compare.'],
+  },
+  {
+    examen: 'c1', destreza: 'speaking', parte: 3,
+    tarea: 'Collaborative task: one item with a central question and five ideas around it; two candidates discuss for two minutes and decide in one minute.',
+    estilo: ['`preguntaCentral` plus 5 `ideas` (short noun phrases), `segundos` 180, `segundosLectura` 15, `interlocutor` as in the example and a Spanish `modelo` with useful language.'],
+  },
+  {
+    examen: 'c1', destreza: 'speaking', parte: 4,
+    tarea: 'Discussion: one item with 6 opinion questions that widen the topic of Part 3, put to each candidate and to both.',
+    estilo: ['`preguntas` go from concrete to abstract (society, future, values); `segundos` 300; Spanish `modelo` with ideas for developing answers.'],
+  },
+  {
     examen: 'pau', destreza: 'prueba', parte: 1,
     tarea: 'Questions 1–3 on one text of about 300–350 words: 1) three TRUE/FALSE with the evidence copied from the text; 2) three short questions answered by copying at most 10 words; 3) four «find a word or expression that means…» items.',
     estilo: ['True/false statements paraphrase the text and the proof must be copied exactly from it (each `pruebas` entry is an exact fragment of `texto`). Short-question answers are exact fragments of 10 words or fewer.', 'Vocabulary definitions point to a word that appears in the text, in the same form; mention the lines or paragraph to look in.', 'The text is divided in paragraphs and reads like an adapted newspaper article.'],

@@ -1,0 +1,362 @@
+[
+ {
+  "id": "pau-prueba-5-x4",
+  "examen": "pau",
+  "destreza": "prueba",
+  "parte": 5,
+  "nombreParte": "Comment on a situation",
+  "instrucciones": "5. Choose ONLY 3 of the following situations and WRITE what you would say in each one to show that you understand the context of the situation. Write between 10 and 25 words. (1.5 points) Only the first three you answer will be marked.",
+  "minutos": 10,
+  "elegir": 3,
+  "items": [
+   {
+    "n": 1,
+    "tipo": "redaccion",
+    "tipoTexto": "situation",
+    "enunciado": "a) A group of tourists leaves plastic bottles on a beach in Tenerife. Complain to them politely.",
+    "minPalabras": 10,
+    "maxPalabras": 25,
+    "modelo": "Excuse me, you have left your bottles on the sand. Could you please pick them up? We all need to keep this beach clean.",
+    "criterios": [
+     "Lo que escribo encaja con la situación o con la conversación (si el hueco acaba en «?», es una pregunta).",
+     "Sin errores de gramática ni de ortografía: cada error baja la nota (0,25 → 0,20 → 0,15 → 0).",
+     "Ni muy corto ni muy largo: en las situaciones, entre 10 y 25 palabras."
+    ],
+    "explicacion": "Quejarse con educación: «Excuse me…», «Could you please…?» y una razón. 10–25 palabras."
+   },
+   {
+    "n": 2,
+    "tipo": "redaccion",
+    "tipoTexto": "situation",
+    "enunciado": "b) A British tourist asks you which village in your island is best to visit. Give a recommendation.",
+    "minPalabras": 10,
+    "maxPalabras": 25,
+    "modelo": "I think you should visit Teguise. It has beautiful old streets, a lively Sunday market and some excellent restaurants with local food.",
+    "criterios": [
+     "Lo que escribo encaja con la situación o con la conversación (si el hueco acaba en «?», es una pregunta).",
+     "Sin errores de gramática ni de ortografía: cada error baja la nota (0,25 → 0,20 → 0,15 → 0).",
+     "Ni muy corto ni muy largo: en las situaciones, entre 10 y 25 palabras."
+    ],
+    "explicacion": "Recomendar: «I think you should…», «You should definitely…» con un motivo."
+   },
+   {
+    "n": 3,
+    "tipo": "redaccion",
+    "tipoTexto": "situation",
+    "enunciado": "c) Your friend says, “Too many tourists are ruining our islands.” Give your opinion.",
+    "minPalabras": 10,
+    "maxPalabras": 25,
+    "modelo": "I partly agree with you. Tourism creates many jobs here, but we should limit the number of visitors to protect nature.",
+    "criterios": [
+     "Lo que escribo encaja con la situación o con la conversación (si el hueco acaba en «?», es una pregunta).",
+     "Sin errores de gramática ni de ortografía: cada error baja la nota (0,25 → 0,20 → 0,15 → 0).",
+     "Ni muy corto ni muy largo: en las situaciones, entre 10 y 25 palabras."
+    ],
+    "explicacion": "Dar una opinión: «I agree / I don’t agree because…» con una razón. 10–25 palabras."
+   },
+   {
+    "n": 4,
+    "tipo": "redaccion",
+    "tipoTexto": "situation",
+    "enunciado": "d) You arrive late to meet a tourist group you are guiding because your bus broke down. Apologise.",
+    "minPalabras": 10,
+    "maxPalabras": 25,
+    "modelo": "I’m terribly sorry I’m late. My bus broke down on the way here. Thank you for waiting, and let’s start the tour now.",
+    "criterios": [
+     "Lo que escribo encaja con la situación o con la conversación (si el hueco acaba en «?», es una pregunta).",
+     "Sin errores de gramática ni de ortografía: cada error baja la nota (0,25 → 0,20 → 0,15 → 0).",
+     "Ni muy corto ni muy largo: en las situaciones, entre 10 y 25 palabras."
+    ],
+    "explicacion": "Pedir perdón: «I’m terribly sorry…», explicar el motivo y compensar."
+   },
+   {
+    "n": 5,
+    "tipo": "redaccion",
+    "tipoTexto": "situation",
+    "enunciado": "e) A hotel manager offers you a summer job, but you must study for an exam. Refuse politely.",
+    "minPalabras": 10,
+    "maxPalabras": 25,
+    "modelo": "Thank you very much for the offer, but I’m afraid I can’t accept it. I have an important exam in September and I must study.",
+    "criterios": [
+     "Lo que escribo encaja con la situación o con la conversación (si el hueco acaba en «?», es una pregunta).",
+     "Sin errores de gramática ni de ortografía: cada error baja la nota (0,25 → 0,20 → 0,15 → 0).",
+     "Ni muy corto ni muy largo: en las situaciones, entre 10 y 25 palabras."
+    ],
+    "explicacion": "Rechazar con educación: agradecer, «I’m afraid I can’t…» y dar una razón."
+   }
+  ],
+  "examenNumero": 4
+ },
+ {
+  "id": "pau-prueba-4-x4",
+  "examen": "pau",
+  "destreza": "prueba",
+  "parte": 4,
+  "nombreParte": "Complete a conversation",
+  "titulo": "A problem with a mobile phone at school",
+  "instrucciones": "4. READ this conversation and COMPLETE your part. Write the numbers (1-6) and complete each sentence on your exam paper. (1.5 points) If a gap ends with a question mark, you must write a question.",
+  "minutos": 10,
+  "texto": "Your teacher: Hello. I saw you using your phone during the lesson today. Can we talk for a minute?\nYou: Of course. {{1}}\nYour teacher: You were looking at the screen while I was explaining the exercise.\nYou: I’m sorry. {{2}}\nYour teacher: I understand, but the rule is clear. Phones must stay in your bag in class.\nYou: And {{3}}?\nYour teacher: Yes, you can use them in the break or at lunchtime.\nYou: Good. {{4}}\nYour teacher: Well, if the teacher asks you to use it for an activity, that is fine.\nYou: I see. And {{5}}?\nYour teacher: This time I will only give you a warning, but next time I will call your parents.\nYou: {{6}}",
+  "items": [
+   {
+    "n": 1,
+    "tipo": "redaccion",
+    "tipoTexto": "dialogue",
+    "enunciado": "Hueco 1",
+    "minPalabras": 2,
+    "maxPalabras": 25,
+    "modelo": "What exactly did I do wrong?  /  Is there a problem?",
+    "criterios": [
+     "Lo que escribo encaja con la situación o con la conversación (si el hueco acaba en «?», es una pregunta).",
+     "Sin errores de gramática ni de ortografía: cada error baja la nota (0,25 → 0,20 → 0,15 → 0).",
+     "Ni muy corto ni muy largo: en las situaciones, entre 10 y 25 palabras."
+    ],
+    "explicacion": "El profesor explica qué hacía el alumno con el móvil, así que el alumno pregunta cuál es el problema."
+   },
+   {
+    "n": 2,
+    "tipo": "redaccion",
+    "tipoTexto": "dialogue",
+    "enunciado": "Hueco 2",
+    "minPalabras": 2,
+    "maxPalabras": 25,
+    "modelo": "I was checking a message from my mother.  /  I only wanted to look at the time.",
+    "criterios": [
+     "Lo que escribo encaja con la situación o con la conversación (si el hueco acaba en «?», es una pregunta).",
+     "Sin errores de gramática ni de ortografía: cada error baja la nota (0,25 → 0,20 → 0,15 → 0).",
+     "Ni muy corto ni muy largo: en las situaciones, entre 10 y 25 palabras."
+    ],
+    "explicacion": "Tras pedir perdón, el alumno da una excusa; el profesor contesta «I understand, but the rule is clear»."
+   },
+   {
+    "n": 3,
+    "tipo": "redaccion",
+    "tipoTexto": "dialogue",
+    "enunciado": "Hueco 3 (acaba en «?»: tiene que ser una pregunta)",
+    "minPalabras": 2,
+    "maxPalabras": 25,
+    "modelo": "can we use our phones in the break  /  are we allowed to use them outside class",
+    "criterios": [
+     "Lo que escribo encaja con la situación o con la conversación (si el hueco acaba en «?», es una pregunta).",
+     "Sin errores de gramática ni de ortografía: cada error baja la nota (0,25 → 0,20 → 0,15 → 0).",
+     "Ni muy corto ni muy largo: en las situaciones, entre 10 y 25 palabras."
+    ],
+    "explicacion": "El profesor responde «Yes, you can use them in the break», así que preguntas cuándo se pueden usar. El «And» y el «?» ya están."
+   },
+   {
+    "n": 4,
+    "tipo": "redaccion",
+    "tipoTexto": "dialogue",
+    "enunciado": "Hueco 4",
+    "minPalabras": 2,
+    "maxPalabras": 25,
+    "modelo": "But is there any case when we can use them in class?  /  Are there any exceptions to the rule?",
+    "criterios": [
+     "Lo que escribo encaja con la situación o con la conversación (si el hueco acaba en «?», es una pregunta).",
+     "Sin errores de gramática ni de ortografía: cada error baja la nota (0,25 → 0,20 → 0,15 → 0).",
+     "Ni muy corto ni muy largo: en las situaciones, entre 10 y 25 palabras."
+    ],
+    "explicacion": "El profesor habla de una excepción («if the teacher asks you to use it»), por lo que el alumno pregunta si hay excepciones."
+   },
+   {
+    "n": 5,
+    "tipo": "redaccion",
+    "tipoTexto": "dialogue",
+    "enunciado": "Hueco 5 (acaba en «?»: tiene que ser una pregunta)",
+    "minPalabras": 2,
+    "maxPalabras": 25,
+    "modelo": "what will happen if I do it again  /  what is going to be my punishment",
+    "criterios": [
+     "Lo que escribo encaja con la situación o con la conversación (si el hueco acaba en «?», es una pregunta).",
+     "Sin errores de gramática ni de ortografía: cada error baja la nota (0,25 → 0,20 → 0,15 → 0).",
+     "Ni muy corto ni muy largo: en las situaciones, entre 10 y 25 palabras."
+    ],
+    "explicacion": "El profesor contesta con un aviso y una consecuencia futura: el alumno pregunta qué pasará."
+   },
+   {
+    "n": 6,
+    "tipo": "redaccion",
+    "tipoTexto": "dialogue",
+    "enunciado": "Hueco 6",
+    "minPalabras": 2,
+    "maxPalabras": 25,
+    "modelo": "Thank you for the warning. It won’t happen again.  /  I promise I will keep my phone in my bag.",
+    "criterios": [
+     "Lo que escribo encaja con la situación o con la conversación (si el hueco acaba en «?», es una pregunta).",
+     "Sin errores de gramática ni de ortografía: cada error baja la nota (0,25 → 0,20 → 0,15 → 0).",
+     "Ni muy corto ni muy largo: en las situaciones, entre 10 y 25 palabras."
+    ],
+    "explicacion": "Cierra la conversación aceptando el aviso y prometiendo cambiar de actitud."
+   }
+  ],
+  "examenNumero": 4
+ },
+ {
+  "id": "pau-prueba-1-x4",
+  "examen": "pau",
+  "destreza": "prueba",
+  "parte": 1,
+  "nombreParte": "Comprensión del texto",
+  "titulo": "When playing video games becomes a lesson",
+  "instrucciones": "Read the text and answer questions 1, 2 and 3. In question 1, copy the exact words from the text as evidence; in question 2, copy no more than 10 words; in question 3, find the word in the text that matches each definition.",
+  "minutos": 25,
+  "texto": "For many years, parents and teachers have worried that video games are a waste of time. Now, some schools in northern Spain are using them as part of their lessons, and the results are surprising. In a pilot project that began last September, students aged fourteen and fifteen play a history game for one hour every Friday instead of reading a textbook.\n\nThe game takes players to ancient Rome, where they must run a small city. They collect food, build roads and solve problems such as a shortage of water or an attack from a neighbouring village. To succeed, students need to understand how Roman society worked. “They remember facts much better when they have to use them,” says Marta Quintero, the history teacher who suggested the idea. “Nobody forgets what an aqueduct is after building one.”\n\nThe project has also changed the atmosphere in the classroom. Students who normally sit quietly at the back now take part in discussions, because the game encourages them to work in teams and share decisions. At the end of the first term, the average mark in history rose from 5.8 to 6.9. Marta admits that other factors may have helped, but she believes the game played a major role.\n\nNot everybody is happy, however. Some parents fear that their children will spend even more hours in front of a screen at home. The school has answered this concern by limiting the game to class time and asking students to complete a written summary after each session. Doctors also remind families that young people need to sleep well and do sport, whatever they are learning.\n\nDespite these doubts, other schools have already asked to join the project next year. Marta hopes that, in the future, teachers will have more games to choose from, covering subjects such as biology, geography or even grammar. “A game is only a tool,” she says. “What matters is that students stay curious and keep asking questions.”",
+  "items": [
+   {
+    "n": 1,
+    "tipo": "verdaderoFalso",
+    "pregunta": "1. Say whether the following sentences are TRUE or FALSE according to the text. COPY the evidence from the text. No marks will be given without the evidence. (1.5 points)",
+    "afirmacion": "a) Students in the project play the history game every day.",
+    "correcta": false,
+    "pruebas": [
+     "students aged fourteen and fifteen play a history game for one hour every Friday",
+     "play a history game for one hour every Friday"
+    ],
+    "explicacion": "FALSE: juegan una hora cada viernes, no todos los días. La prueba hay que copiarla tal cual del texto, sin puntos suspensivos ni número de línea."
+   },
+   {
+    "n": 2,
+    "tipo": "verdaderoFalso",
+    "afirmacion": "b) Marks in history were higher at the end of the first term.",
+    "correcta": true,
+    "pruebas": [
+     "the average mark in history rose from 5.8 to 6.9",
+     "At the end of the first term, the average mark in history rose from 5.8 to 6.9"
+    ],
+    "explicacion": "TRUE: la nota media subió de 5,8 a 6,9. Vale cualquiera de los dos fragmentos copiados exactamente."
+   },
+   {
+    "n": 3,
+    "tipo": "verdaderoFalso",
+    "afirmacion": "c) Marta believes that the game is more important than the teacher.",
+    "correcta": false,
+    "pruebas": [
+     "A game is only a tool",
+     "“A game is only a tool,” she says",
+     "What matters is that students stay curious and keep asking questions"
+    ],
+    "explicacion": "FALSE: Marta dice que el juego es solo una herramienta; lo que importa es que los alumnos sigan siendo curiosos."
+   },
+   {
+    "n": 4,
+    "tipo": "palabra",
+    "pregunta": "2. ANSWER the questions below. COPY no more than 10 words and/or a number from the text to answer each question. (1.5 points)\na) What must players do in the game?",
+    "correctas": [
+     "run a small city",
+     "they must run a small city",
+     "must run a small city"
+    ],
+    "maxPalabras": 10,
+    "explicacion": "«they must run a small city»: el juego se ambienta en la antigua Roma y hay que gestionar una pequeña ciudad."
+   },
+   {
+    "n": 5,
+    "tipo": "palabra",
+    "pregunta": "b) What do some parents fear?",
+    "correctas": [
+     "their children will spend even more hours in front of a screen at home",
+     "that their children will spend even more hours in front of a screen at home"
+    ],
+    "maxPalabras": 10,
+    "explicacion": "«Some parents fear that their children will spend even more hours in front of a screen at home» (hasta 10 palabras copiadas)."
+   },
+   {
+    "n": 6,
+    "tipo": "palabra",
+    "pregunta": "c) What does the school ask students to do after each session?",
+    "correctas": [
+     "complete a written summary",
+     "to complete a written summary",
+     "complete a written summary after each session",
+     "to complete a written summary after each session"
+    ],
+    "maxPalabras": 10,
+    "explicacion": "«asking students to complete a written summary after each session»."
+   },
+   {
+    "n": 7,
+    "tipo": "palabra",
+    "pregunta": "3. FIND a word or expression in the text that means… (1 point)\nd) not enough of something that people need (paragraph 2)",
+    "correctas": [
+     "shortage"
+    ],
+    "explicacion": "«a shortage of water». Hay que escribir la palabra tal cual aparece en el texto."
+   },
+   {
+    "n": 8,
+    "tipo": "palabra",
+    "pregunta": "e) the feeling or mood of a place (paragraph 3)",
+    "correctas": [
+     "atmosphere"
+    ],
+    "explicacion": "«changed the atmosphere in the classroom»."
+   },
+   {
+    "n": 9,
+    "tipo": "palabra",
+    "pregunta": "f) worry or fear about something (paragraph 4)",
+    "correctas": [
+     "concern"
+    ],
+    "explicacion": "«The school has answered this concern»."
+   },
+   {
+    "n": 10,
+    "tipo": "palabra",
+    "pregunta": "g) wanting to learn or know more (paragraph 5)",
+    "correctas": [
+     "curious"
+    ],
+    "explicacion": "«students stay curious and keep asking questions»."
+   }
+  ],
+  "examenNumero": 4
+ },
+ {
+  "id": "pau-prueba-6-x4",
+  "examen": "pau",
+  "destreza": "prueba",
+  "parte": 6,
+  "nombreParte": "Composition",
+  "instrucciones": "6. Choose ONE of the following topics and WRITE a composition of about 140-180 words. If you choose the email, DO NOT SIGN it. (3 points)",
+  "minutos": 30,
+  "elegir": 1,
+  "items": [
+   {
+    "n": 1,
+    "tipo": "redaccion",
+    "tipoTexto": "composition",
+    "enunciado": "a) Can video games help young people learn? Give your opinion.",
+    "minPalabras": 140,
+    "maxPalabras": 180,
+    "modelo": "Many teenagers spend hours playing video games every week, so it is worth asking whether this time can also be useful for learning. In my opinion, video games can help us learn, but only if we choose them carefully.\n\nFirst of all, many games make players think and solve problems. For example, strategy games teach us to plan, and games about history or geography can make us curious about the world. Moreover, some games are played in English, so players practise reading and listening without noticing it.\n\nHowever, not every game is educational. Some of them are very violent or simply a waste of time, and playing too much can make students tired and affect their marks at school. In addition, young people sometimes forget to do their homework or to go out with their friends.\n\nIn conclusion, I think video games are a good tool for learning when we play them in moderation and choose the right ones. Teachers and parents should help young people find games that are fun and useful at the same time.",
+    "criterios": [
+     "Presentación: párrafos claros, puntuación correcta.",
+     "Organización: estructura del tipo de texto (email; for & against; opinion essay), registro adecuado, ideas enlazadas con conectores.",
+     "Contenido: me ciño al tema, ideas suficientes y variadas, sin repeticiones.",
+     "Corrección gramatical: frases bien construidas, variedad de estructuras, sin traducir del español.",
+     "Vocabulario: rico y no copiado del texto; menos de 4 faltas de ortografía (más de 3 restan)."
+    ],
+    "explicacion": "Opinion essay: introducción con la postura, un párrafo a favor, otro con los inconvenientes y conclusión, con conectores (first of all, moreover, however, in addition, in conclusion). Entre 140 y 180 palabras: por debajo de 140 baja el tope de nota."
+   },
+   {
+    "n": 2,
+    "tipo": "redaccion",
+    "tipoTexto": "email",
+    "enunciado": "b) Write an email to a friend from another country telling him or her about a video game your class has used at school and inviting your friend to try it too.",
+    "minPalabras": 140,
+    "maxPalabras": 180,
+    "modelo": "Hi Jack,\n\nHow are you? I hope you are enjoying the summer. I’m writing to tell you about something new we did at school that I think you’ll like.\n\nLast month our English teacher asked us to play a game called “City Builders” in class. We worked in small groups and had to build a town with a limited budget. We had to decide where to put hospitals, schools and parks, and we discussed our ideas in English all the time. It was great fun, and I learnt a lot of new words about the city and the environment.\n\nThe best thing was the final competition. My group came second, but our teacher said we had the greenest town of all! Now everybody in my class wants to play again.\n\nWhy don’t you try it too? You can download it for free and we could play together online next weekend. We could even build a town between the two of us.\n\nWrite back soon and tell me what you think.\n\nBest wishes,",
+    "criterios": [
+     "Presentación: párrafos claros, puntuación correcta.",
+     "Organización: estructura del tipo de texto (email; for & against; opinion essay), registro adecuado, ideas enlazadas con conectores.",
+     "Contenido: me ciño al tema, ideas suficientes y variadas, sin repeticiones.",
+     "Corrección gramatical: frases bien construidas, variedad de estructuras, sin traducir del español.",
+     "Vocabulario: rico y no copiado del texto; menos de 4 faltas de ortografía (más de 3 restan)."
+    ],
+    "explicacion": "Email informal: saludo, motivo, cuerpo contando la experiencia con el videojuego con tus propias palabras, invitación («Why don’t you…?») y despedida SIN firmar."
+   }
+  ],
+  "examenNumero": 4
+ }
+]

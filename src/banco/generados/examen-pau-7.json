@@ -1,0 +1,364 @@
+[
+ {
+  "id": "pau-prueba-5-x7",
+  "examen": "pau",
+  "destreza": "prueba",
+  "parte": 5,
+  "nombreParte": "Comment on a situation",
+  "instrucciones": "5. Choose ONLY 3 of the following situations and WRITE what you would say in each one to show that you understand the context of the situation. Write between 10 and 25 words. (1.5 points) Only the first three you answer will be marked.",
+  "minutos": 10,
+  "elegir": 3,
+  "items": [
+   {
+    "n": 1,
+    "tipo": "redaccion",
+    "tipoTexto": "situation",
+    "enunciado": "a) Your friend says, “Summer camps abroad are a waste of money because you can learn English at home.” Give your opinion.",
+    "minPalabras": 10,
+    "maxPalabras": 25,
+    "modelo": "I don’t think so. At a camp you speak English all day with people from other countries, and that is much harder to do at home.",
+    "criterios": [
+     "Lo que escribo encaja con la situación o con la conversación (si el hueco acaba en «?», es una pregunta).",
+     "Sin errores de gramática ni de ortografía: cada error baja la nota (0,25 → 0,20 → 0,15 → 0).",
+     "Ni muy corto ni muy largo: en las situaciones, entre 10 y 25 palabras."
+    ],
+    "explicacion": "Dar una opinión: «I don’t think so / I disagree because…» con una razón concreta. 10–25 palabras."
+   },
+   {
+    "n": 2,
+    "tipo": "redaccion",
+    "tipoTexto": "situation",
+    "enunciado": "b) Your cousin is nervous about going to a camp in Ireland for the first time. Advise him.",
+    "minPalabras": 10,
+    "maxPalabras": 25,
+    "modelo": "Don’t worry too much. You should talk to everyone on the first day, and I’m sure you’ll make friends very quickly.",
+    "criterios": [
+     "Lo que escribo encaja con la situación o con la conversación (si el hueco acaba en «?», es una pregunta).",
+     "Sin errores de gramática ni de ortografía: cada error baja la nota (0,25 → 0,20 → 0,15 → 0).",
+     "Ni muy corto ni muy largo: en las situaciones, entre 10 y 25 palabras."
+    ],
+    "explicacion": "Aconsejar: «You should…», «Why don’t you…?», «I’d…» con ánimo y una sugerencia."
+   },
+   {
+    "n": 3,
+    "tipo": "redaccion",
+    "tipoTexto": "situation",
+    "enunciado": "c) At the camp, the food is cold and the portions are very small. Complain to the camp manager.",
+    "minPalabras": 10,
+    "maxPalabras": 25,
+    "modelo": "Excuse me, I’m afraid there is a problem with the food. It is always cold and the portions are too small for us.",
+    "criterios": [
+     "Lo que escribo encaja con la situación o con la conversación (si el hueco acaba en «?», es una pregunta).",
+     "Sin errores de gramática ni de ortografía: cada error baja la nota (0,25 → 0,20 → 0,15 → 0).",
+     "Ni muy corto ni muy largo: en las situaciones, entre 10 y 25 palabras."
+    ],
+    "explicacion": "Quejarse con educación: «Excuse me, I’m afraid…», explicar el problema y, si se puede, pedir una solución."
+   },
+   {
+    "n": 4,
+    "tipo": "redaccion",
+    "tipoTexto": "situation",
+    "enunciado": "d) You arrive late to the first activity at the camp because you got lost. Apologise to the monitor.",
+    "minPalabras": 10,
+    "maxPalabras": 25,
+    "modelo": "I’m so sorry I’m late. I got lost on my way here because the building is huge. It won’t happen again.",
+    "criterios": [
+     "Lo que escribo encaja con la situación o con la conversación (si el hueco acaba en «?», es una pregunta).",
+     "Sin errores de gramática ni de ortografía: cada error baja la nota (0,25 → 0,20 → 0,15 → 0).",
+     "Ni muy corto ni muy largo: en las situaciones, entre 10 y 25 palabras."
+    ],
+    "explicacion": "Pedir perdón: «I’m so sorry…», dar la razón en pasado («I got lost») y prometer que no se repetirá."
+   },
+   {
+    "n": 5,
+    "tipo": "redaccion",
+    "tipoTexto": "situation",
+    "enunciado": "e) A new friend at the camp invites you to go swimming in the lake at night. Refuse politely.",
+    "minPalabras": 10,
+    "maxPalabras": 25,
+    "modelo": "Thanks for asking, but I’d rather not. It’s dangerous to swim in the dark, and the monitors told us not to go.",
+    "criterios": [
+     "Lo que escribo encaja con la situación o con la conversación (si el hueco acaba en «?», es una pregunta).",
+     "Sin errores de gramática ni de ortografía: cada error baja la nota (0,25 → 0,20 → 0,15 → 0).",
+     "Ni muy corto ni muy largo: en las situaciones, entre 10 y 25 palabras."
+    ],
+    "explicacion": "Rechazar con educación: agradecer, «I’d rather not / I’m afraid I can’t» y dar una razón."
+   }
+  ],
+  "examenNumero": 7
+ },
+ {
+  "id": "pau-prueba-1-x7",
+  "examen": "pau",
+  "destreza": "prueba",
+  "parte": 1,
+  "nombreParte": "Comprensión del texto",
+  "titulo": "Training after class: how students balance sport and study",
+  "instrucciones": "Read the text and answer questions 1, 2 and 3. In question 1, copy the exact words from the text as evidence; in question 2, copy no more than 10 words; in question 3, find the word in the text that matches each definition.",
+  "minutos": 25,
+  "texto": "At seventeen, Lucía Marín gets up at six every morning. She has swimming practice before school, lessons until three, and then two more hours of training in the evening. Her homework is usually done on the bus or after dinner. Lucía is one of a growing number of young people in Spain who combine serious sport with their studies, and she admits that it is not always easy.\n\nSchools and sports clubs are starting to help students like her. In some towns, young athletes can attend a special timetable that allows them to leave class early for training. Teachers also send notes and exercises by email when a student has to travel to a competition. “Without this support, I would have given up my studies or my sport,” Lucía says. “Now I can keep doing both.”\n\nExperts say that the benefits are clear. According to Dr Hugo Salas, a sports psychologist, students who train regularly are usually better at organising their time. “They learn that every hour counts, so they waste less of it,” he explains. Sport also teaches them to deal with pressure and to accept failure, two skills that are very useful during exams.\n\nHowever, the risks should not be ignored. Many young athletes sleep fewer than seven hours a night, and some suffer from constant tiredness or injuries. Dr Salas warns that parents and teachers must watch for signs of stress. “A talented teenager is still a teenager,” he says. “Rest and friends are as important as medals.”\n\nFor the moment, only a small number of schools offer flexible timetables, and most families have to pay for private classes to help their children catch up. Lucía hopes this will change soon. She wants to study physiotherapy at university, and she is determined to continue swimming at the same time. “It is hard work,” she says, “but I would not change it for anything.”",
+  "items": [
+   {
+    "n": 1,
+    "tipo": "verdaderoFalso",
+    "pregunta": "1. Say whether the following sentences are TRUE or FALSE according to the text. COPY the evidence from the text. No marks will be given without the evidence. (1.5 points)",
+    "afirmacion": "a) Lucía does all her homework at school before training.",
+    "correcta": false,
+    "pruebas": [
+     "Her homework is usually done on the bus or after dinner",
+     "homework is usually done on the bus or after dinner"
+    ],
+    "explicacion": "FALSE: Lucía hace los deberes en el autobús o después de cenar, no en el colegio. La prueba hay que copiarla tal cual del texto, sin puntos suspensivos ni número de línea."
+   },
+   {
+    "n": 2,
+    "tipo": "verdaderoFalso",
+    "afirmacion": "b) Teachers sometimes help athletes who are away at competitions.",
+    "correcta": true,
+    "pruebas": [
+     "Teachers also send notes and exercises by email when a student has to travel to a competition",
+     "send notes and exercises by email when a student has to travel to a competition"
+    ],
+    "explicacion": "TRUE: los profesores envían apuntes y ejercicios por correo cuando el alumno viaja a una competición."
+   },
+   {
+    "n": 3,
+    "tipo": "verdaderoFalso",
+    "afirmacion": "c) Most schools in Spain already offer flexible timetables for athletes.",
+    "correcta": false,
+    "pruebas": [
+     "only a small number of schools offer flexible timetables",
+     "For the moment, only a small number of schools offer flexible timetables"
+    ],
+    "explicacion": "FALSE: solo unos pocos colegios ofrecen horarios flexibles, no la mayoría."
+   },
+   {
+    "n": 4,
+    "tipo": "palabra",
+    "pregunta": "2. ANSWER the questions below. COPY no more than 10 words and/or a number from the text to answer each question. (1.5 points)\na) What time does Lucía get up every morning?",
+    "correctas": [
+     "six",
+     "at six",
+     "gets up at six every morning",
+     "at six every morning",
+     "six every morning"
+    ],
+    "maxPalabras": 10,
+    "explicacion": "«Lucía Marín gets up at six every morning». Basta con copiar «six» o «at six»."
+   },
+   {
+    "n": 5,
+    "tipo": "palabra",
+    "pregunta": "b) What does Dr Hugo Salas do?",
+    "correctas": [
+     "a sports psychologist",
+     "sports psychologist",
+     "Dr Hugo Salas, a sports psychologist"
+    ],
+    "maxPalabras": 10,
+    "explicacion": "«Dr Hugo Salas, a sports psychologist»."
+   },
+   {
+    "n": 6,
+    "tipo": "palabra",
+    "pregunta": "c) How do most families help their children catch up?",
+    "correctas": [
+     "pay for private classes",
+     "have to pay for private classes",
+     "most families have to pay for private classes",
+     "to pay for private classes"
+    ],
+    "maxPalabras": 10,
+    "explicacion": "«most families have to pay for private classes to help their children catch up»."
+   },
+   {
+    "n": 7,
+    "tipo": "palabra",
+    "pregunta": "3. FIND a word or expression in the text that means… (1 point)\nd) accepts that something is true, often unwillingly (paragraph 1)",
+    "correctas": [
+     "admits"
+    ],
+    "explicacion": "«she admits that it is not always easy»."
+   },
+   {
+    "n": 8,
+    "tipo": "palabra",
+    "pregunta": "e) advantages or good results (paragraph 3)",
+    "correctas": [
+     "benefits"
+    ],
+    "explicacion": "«the benefits are clear»."
+   },
+   {
+    "n": 9,
+    "tipo": "palabra",
+    "pregunta": "f) gives a warning about a danger (paragraph 4)",
+    "correctas": [
+     "warns"
+    ],
+    "explicacion": "«Dr Salas warns that parents and teachers must watch for signs of stress»."
+   },
+   {
+    "n": 10,
+    "tipo": "palabra",
+    "pregunta": "g) very sure about what you want to do (paragraph 5)",
+    "correctas": [
+     "determined"
+    ],
+    "explicacion": "«she is determined to continue swimming»."
+   }
+  ],
+  "examenNumero": 7
+ },
+ {
+  "id": "pau-prueba-6-x7",
+  "examen": "pau",
+  "destreza": "prueba",
+  "parte": 6,
+  "nombreParte": "Composition",
+  "instrucciones": "6. Choose ONE of the following topics and WRITE a composition of about 140-180 words. If you choose the email, DO NOT SIGN it. (3 points)",
+  "minutos": 30,
+  "elegir": 1,
+  "items": [
+   {
+    "n": 1,
+    "tipo": "redaccion",
+    "tipoTexto": "composition",
+    "enunciado": "a) Should students have a part-time job or play a sport while they study? Give your opinion.",
+    "minPalabras": 140,
+    "maxPalabras": 180,
+    "modelo": "Nowadays many students are very busy with homework and exams, so it is worth asking whether they should also do a part-time activity such as sport. In my opinion, playing a sport is a great idea, as long as it does not take too much time.\n\nFirst of all, sport is good for our health. After sitting in class for hours, we need to move and breathe fresh air. Moreover, training with a team teaches us to cooperate and to accept defeat, which are useful skills for life.\n\nSecondly, exercise helps us study better. When I go for a run in the afternoon, I feel less stressed and I can concentrate more easily. Besides, a timetable with sport forces us to organise our time well.\n\nHowever, some students have too many activities and get tired, so their marks go down. For this reason, it is important to choose only one or two days a week.\n\nIn conclusion, I think combining study and sport is positive for young people because it keeps body and mind healthy, but we must find a balance.",
+    "criterios": [
+     "Presentación: párrafos claros, puntuación correcta.",
+     "Organización: estructura del tipo de texto (email; for & against; opinion essay), registro adecuado, ideas enlazadas con conectores.",
+     "Contenido: me ciño al tema, ideas suficientes y variadas, sin repeticiones.",
+     "Corrección gramatical: frases bien construidas, variedad de estructuras, sin traducir del español.",
+     "Vocabulario: rico y no copiado del texto; menos de 4 faltas de ortografía (más de 3 restan)."
+    ],
+    "explicacion": "Opinion essay: introducción con la postura, un párrafo por idea con conectores (first of all, moreover, besides, however, in conclusion), conclusión. Entre 140 y 180 palabras: por debajo de 140 baja el tope de nota."
+   },
+   {
+    "n": 2,
+    "tipo": "redaccion",
+    "tipoTexto": "email",
+    "enunciado": "b) Write an email to a friend telling him or her about the new sports club you have joined after school and inviting your friend to try a free class with you.",
+    "minPalabras": 140,
+    "maxPalabras": 180,
+    "modelo": "Hi Daniel,\n\nHow are things? I hope you are enjoying the new school year. I’m writing to tell you about something I started a few weeks ago and that I’m really excited about.\n\nI have joined a basketball club that meets twice a week after school. At first I was a bit nervous because I had never played in a team, but the coach is very patient and the other players are really friendly. We practise for an hour and then we usually have a snack together. The best thing is that I feel more energetic and I sleep much better than before.\n\nThe club offers a free class for newcomers every Thursday. Why don’t you come with me next week? You don’t need any special clothes, only trainers and a bottle of water. Afterwards we could go for an ice cream and chat about everything.\n\nTell me if you can come. I’m sure you’ll have a great time!\n\nSee you soon,",
+    "criterios": [
+     "Presentación: párrafos claros, puntuación correcta.",
+     "Organización: estructura del tipo de texto (email; for & against; opinion essay), registro adecuado, ideas enlazadas con conectores.",
+     "Contenido: me ciño al tema, ideas suficientes y variadas, sin repeticiones.",
+     "Corrección gramatical: frases bien construidas, variedad de estructuras, sin traducir del español.",
+     "Vocabulario: rico y no copiado del texto; menos de 4 faltas de ortografía (más de 3 restan)."
+    ],
+    "explicacion": "Email informal: saludo, motivo, cuerpo contando el club con tus palabras (qué haces, cómo te sientes), invitación («Why don’t you come…?») y despedida SIN firmar."
+   }
+  ],
+  "examenNumero": 7
+ },
+ {
+  "id": "pau-prueba-4-x7",
+  "examen": "pau",
+  "destreza": "prueba",
+  "parte": 4,
+  "nombreParte": "Complete a conversation",
+  "titulo": "Using the new bike-sharing system in our city",
+  "instrucciones": "4. READ this conversation and COMPLETE your part. Write the numbers (1-6) and complete each sentence on your exam paper. (1.5 points) If a gap ends with a question mark, you must write a question.",
+  "minutos": 10,
+  "texto": "Your classmate: Have you heard about the new bike-sharing system that the council has introduced downtown?\nYou: Yes, I read about it yesterday. {{1}}\nYour classmate: I think so, but I’m not sure how the registration works.\nYou: It’s quite straightforward. {{2}}\nYour classmate: That sounds convenient. And {{3}}?\nYour classmate: It costs only thirty euros a year, and the first half hour of every journey is free.\nYou: That’s a reasonable price compared with public transport. {{4}}\nYour classmate: Probably on Saturday, because I have an important exam on Friday.\nYou: Excellent idea. And {{5}}?\nYour classmate: There are about fifty stations around the city, and one is just outside our school.\nYou: {{6}}",
+  "items": [
+   {
+    "n": 1,
+    "tipo": "redaccion",
+    "tipoTexto": "dialogue",
+    "enunciado": "Hueco 1",
+    "minPalabras": 2,
+    "maxPalabras": 25,
+    "modelo": "Are you interested in becoming a member?  /  Would you like to try it with me?",
+    "criterios": [
+     "Lo que escribo encaja con la situación o con la conversación (si el hueco acaba en «?», es una pregunta).",
+     "Sin errores de gramática ni de ortografía: cada error baja la nota (0,25 → 0,20 → 0,15 → 0).",
+     "Ni muy corto ni muy largo: en las situaciones, entre 10 y 25 palabras."
+    ],
+    "explicacion": "El compañero responde «I think so, but I’m not sure how the registration works», así que la pregunta trata sobre si quiere participar o apuntarse."
+   },
+   {
+    "n": 2,
+    "tipo": "redaccion",
+    "tipoTexto": "dialogue",
+    "enunciado": "Hueco 2",
+    "minPalabras": 2,
+    "maxPalabras": 25,
+    "modelo": "You just download the application and create an account.  /  You can register online in a few minutes.",
+    "criterios": [
+     "Lo que escribo encaja con la situación o con la conversación (si el hueco acaba en «?», es una pregunta).",
+     "Sin errores de gramática ni de ortografía: cada error baja la nota (0,25 → 0,20 → 0,15 → 0).",
+     "Ni muy corto ni muy largo: en las situaciones, entre 10 y 25 palabras."
+    ],
+    "explicacion": "Explicas cómo funciona el registro, porque el compañero dice «That sounds convenient»."
+   },
+   {
+    "n": 3,
+    "tipo": "redaccion",
+    "tipoTexto": "dialogue",
+    "enunciado": "Hueco 3 (acaba en «?»: tiene que ser una pregunta)",
+    "minPalabras": 2,
+    "maxPalabras": 25,
+    "modelo": "how much does the annual membership cost  /  how much do we have to pay",
+    "criterios": [
+     "Lo que escribo encaja con la situación o con la conversación (si el hueco acaba en «?», es una pregunta).",
+     "Sin errores de gramática ni de ortografía: cada error baja la nota (0,25 → 0,20 → 0,15 → 0).",
+     "Ni muy corto ni muy largo: en las situaciones, entre 10 y 25 palabras."
+    ],
+    "explicacion": "La respuesta «It costs only thirty euros a year» indica que preguntas por el precio. El «And» y el «?» ya están escritos."
+   },
+   {
+    "n": 4,
+    "tipo": "redaccion",
+    "tipoTexto": "dialogue",
+    "enunciado": "Hueco 4",
+    "minPalabras": 2,
+    "maxPalabras": 25,
+    "modelo": "When are you planning to use it for the first time?  /  When could we go for a ride together?",
+    "criterios": [
+     "Lo que escribo encaja con la situación o con la conversación (si el hueco acaba en «?», es una pregunta).",
+     "Sin errores de gramática ni de ortografía: cada error baja la nota (0,25 → 0,20 → 0,15 → 0).",
+     "Ni muy corto ni muy largo: en las situaciones, entre 10 y 25 palabras."
+    ],
+    "explicacion": "El compañero contesta «Probably on Saturday», así que preguntas cuándo piensa usar las bicicletas."
+   },
+   {
+    "n": 5,
+    "tipo": "redaccion",
+    "tipoTexto": "dialogue",
+    "enunciado": "Hueco 5 (acaba en «?»: tiene que ser una pregunta)",
+    "minPalabras": 2,
+    "maxPalabras": 25,
+    "modelo": "where can we collect the bicycles  /  how many stations are there in the city",
+    "criterios": [
+     "Lo que escribo encaja con la situación o con la conversación (si el hueco acaba en «?», es una pregunta).",
+     "Sin errores de gramática ni de ortografía: cada error baja la nota (0,25 → 0,20 → 0,15 → 0).",
+     "Ni muy corto ni muy largo: en las situaciones, entre 10 y 25 palabras."
+    ],
+    "explicacion": "La respuesta habla de unas cincuenta estaciones y de una cerca del colegio: preguntas dónde se recogen o cuántas hay."
+   },
+   {
+    "n": 6,
+    "tipo": "redaccion",
+    "tipoTexto": "dialogue",
+    "enunciado": "Hueco 6",
+    "minPalabras": 2,
+    "maxPalabras": 25,
+    "modelo": "Wonderful! That’s extremely convenient for both of us.  /  Great! We can cycle home together after classes.",
+    "criterios": [
+     "Lo que escribo encaja con la situación o con la conversación (si el hueco acaba en «?», es una pregunta).",
+     "Sin errores de gramática ni de ortografía: cada error baja la nota (0,25 → 0,20 → 0,15 → 0).",
+     "Ni muy corto ni muy largo: en las situaciones, entre 10 y 25 palabras."
+    ],
+    "explicacion": "Cierras la conversación reaccionando con entusiasmo a que haya una estación junto al colegio."
+   }
+  ],
+  "examenNumero": 7
+ }
+]

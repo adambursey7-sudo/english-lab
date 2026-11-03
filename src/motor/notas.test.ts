@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { filtrarNotas, mediaNotas, notasDe, sobreDiez, textoNota, tituloNota, type NotaProfe } from './notas';
+import { filtrarNotas, mezclarNotas, mediaNotas, notasDe, sobreDiez, textoNota, tituloNota, type NotaProfe } from './notas';
 import { PERFILES, perfilDe, perfilesDe } from './perfiles';
 
 const nota = (extra: Partial<NotaProfe>): NotaProfe => ({ fecha: '2026-10-29', examen: 'c1', destreza: 'speaking', nota: 7.5, ...extra });
@@ -45,5 +45,14 @@ describe('perfiles', () => {
     expect(new Set(PERFILES.map((p) => p.id)).size).toBe(PERFILES.length);
     expect(perfilDe('josito')?.examen).toBe('pau');
     expect(perfilDe('nadie')).toBeUndefined();
+  });
+});
+
+describe('mezclarNotas', () => {
+  const n = (nota: number): NotaProfe => ({ fecha: '2026-11-01', examen: 'c1', destreza: 'speaking', nota });
+  it('une las publicadas con las del servidor sin repetir', () => {
+    const r = mezclarNotas({ eduardo: [n(7)] }, { eduardo: [n(7), n(8)], gabriela: [n(6)] });
+    expect(r.eduardo).toEqual([n(7), n(8)]);
+    expect(r.gabriela).toEqual([n(6)]);
   });
 });

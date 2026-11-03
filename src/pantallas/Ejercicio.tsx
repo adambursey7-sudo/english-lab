@@ -162,6 +162,7 @@ export function PantallaEjercicio({ ejercicio, posicion, respuestas, onCambia, o
                 cupoLleno={cupoLleno}
                 onElegir={() => setElegidas((l) => (l.includes(item.n) ? l : [...l, item.n]))}
                 onQuitar={() => quitar(item.n)}
+                ejercicio={ejercicio}
               />
             </div>
           ))}
@@ -199,9 +200,10 @@ interface PropsItem {
   cupoLleno?: boolean;
   onElegir?: () => void;
   onQuitar?: () => void;
+  ejercicio?: Ejercicio;
 }
 
-function ItemEntrada({ item, valor, onCambia, comunes = [], elegible, abierta, cupoLleno, onElegir, onQuitar }: PropsItem) {
+function ItemEntrada({ item, valor, onCambia, comunes = [], elegible, abierta, cupoLleno, onElegir, onQuitar, ejercicio }: PropsItem) {
   if (item.tipo === 'emparejar') {
     const cortas = comunes.every((o) => o.length <= 24);
     return (
@@ -299,7 +301,7 @@ function ItemEntrada({ item, valor, onCambia, comunes = [], elegible, abierta, c
   }
 
   if (item.tipo === 'hablar') {
-    return <EntradaHablar item={item} valor={valor} onCambia={onCambia} />;
+    return <EntradaHablar item={item} valor={valor} onCambia={onCambia} ejercicio={ejercicio} />;
   }
 
   if (item.tipo === 'verdaderoFalso') {

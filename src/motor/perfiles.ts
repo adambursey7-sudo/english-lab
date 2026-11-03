@@ -52,6 +52,18 @@ export function perfilActivo(): Perfil | undefined {
   }
 }
 
+/** Id y PIN de la sesión, para identificarse ante el servidor de entregas del PC de Adam. */
+export function credencialesActivas(): { id: string; pin: string } | undefined {
+  const perfil = perfilActivo();
+  if (!perfil) return undefined;
+  try {
+    const [, pin] = (localStorage.getItem(CLAVE) ?? '').split(':');
+    return pin ? { id: perfil.id, pin } : undefined;
+  } catch {
+    return undefined;
+  }
+}
+
 export function huellaPin(id: string, pin: string): string {
   return sha256(`english-lab:${id}:${pin}`);
 }
