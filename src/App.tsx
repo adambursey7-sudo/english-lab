@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
-import type { Ejercicio, Respuestas } from './banco/tipos';
+import type { Destreza, Ejercicio, Respuestas } from './banco/tipos';
+import { Consejos } from './pantallas/Consejos';
 import { apuntarVistos } from './motor/examen';
 import { elegirPerfil, examenesDe, perfilActivo, salirPerfil, type Perfil } from './motor/perfiles';
 import { Inicio } from './pantallas/Inicio';
@@ -23,7 +24,8 @@ type Estado =
   | { pantalla: 'inicio' }
   | { pantalla: 'resultados' }
   | { pantalla: 'ejercicio'; lista: Ejercicio[]; i: number; respuestas: Record<string, Respuestas> }
-  | { pantalla: 'resultado'; lista: Ejercicio[]; respuestas: Record<string, Respuestas> };
+  | { pantalla: 'resultado'; lista: Ejercicio[]; respuestas: Record<string, Respuestas>; /** Ya apuntado y con el pop-up visto (se vuelve de Consejos). */ visto?: boolean }
+  | { pantalla: 'consejos'; destreza?: Destreza; parte?: number; atras: Estado };
 
 /** Rutas por hash que viven fuera del flujo normal: el cuadernillo imprimible y la página de audio del QR. */
 type Ruta = { tipo: 'imprimir'; examen: Examen; numero: number; modo: 'cuadernillo' | 'clave' } | { tipo: 'audio'; examen: Examen; numero: number } | { tipo: 'mezcla'; ids: string[] } | { tipo: 'crear' } | { tipo: 'editor' } | { tipo: 'licencia' } | { tipo: 'aula' } | { tipo: 'hacer'; payload: string };
@@ -120,7 +122,11 @@ export function App() {
 
   // «Mi progreso» es solo de quien tiene cuenta.
   if (estado.pantalla === 'inicio' || (estado.pantalla === 'resultados' && !perfil)) {
-    return <Inicio perfil={perfil} onEmpezar={empezar} onResultados={() => setEstado({ pantalla: 'resultados' })} onCambiarPerfil={cambiarPerfil} />;
+    return <Inicio perfil={perfil} onEmpezar={empezar} onResultados={() => setEstado({ pantalla: 'resultados' })} onCambiarPerfil={cambiarPerfil} onConsejos={() => setEstado({ pantalla: 'consejos', atras: { pantalla: 'inicio' } })} />;
+  }
+
+  if (estado.pantalla === 'consejos') {
+    return <Consejos destreza={estado.destreza} parte={estado.parte} onVolver={() => setEstado(estado.atras)} />;
   }
 
   if (estado.pantalla === 'resultados') {
@@ -161,6 +167,8 @@ export function App() {
       respuestas={estado.respuestas}
       onRepetir={() => setEstado({ pantalla: 'ejercicio', lista: estado.lista, i: 0, respuestas: {} })}
       onInicio={() => setEstado({ pantalla: 'inicio' })}
+      onConsejos={(destreza, parte) => setEstado({ pantalla: 'consejos', destreza, parte, atras: { ...estado, visto: true } })}
+      visto={estado.visto}
       onEmpezar={(lista) => (lista.length > 0 ? empezar(lista) : setEstado({ pantalla: 'inicio' }))}
     />
   );

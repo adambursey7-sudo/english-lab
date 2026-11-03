@@ -30,9 +30,10 @@ interface Props {
   onEmpezar: (lista: Ejercicio[]) => void;
   onResultados: () => void;
   onCambiarPerfil: () => void;
+  onConsejos: () => void;
 }
 
-export function Inicio({ perfil, onEmpezar, onResultados, onCambiarPerfil }: Props) {
+export function Inicio({ perfil, onEmpezar, onResultados, onCambiarPerfil, onConsejos }: Props) {
   const marca = leerMarca();
   const examenes = examenesDe(perfil);
   const [examen, setExamen] = useState<Examen>(perfil?.examen ?? 'c1');
@@ -226,6 +227,14 @@ export function Inicio({ perfil, onEmpezar, onResultados, onCambiarPerfil }: Pro
               })}
             </div>
           </section>
+        )}
+
+        {examenes.includes('c1') && (
+          <button type="button" className="tarjeta" onClick={onConsejos}>
+            <b>Consejos para el examen</b>
+            <small>Qué hacer en cada parte, según Cambridge</small>
+            <span className="flecha" aria-hidden="true">›</span>
+          </button>
         )}
 
         <Instalar />

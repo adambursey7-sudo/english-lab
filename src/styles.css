@@ -573,3 +573,27 @@ button:focus-visible, [role='button']:focus-visible { outline: 2px solid var(--t
 /* Fotos de perfil (29/10) */
 .avatar, .avatar-grande { overflow: visible; }
 .avatar img, .avatar-grande img { display: block; width: 100%; height: 100%; border-radius: 50%; object-fit: cover; }
+
+/* Pop-up con fallos: la viñeta se encoge y debajo va el resumen de por qué falló cada uno. */
+.kate-velo.con-fallos { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; padding: 16px; overflow-y: auto; }
+.kate-mini { width: min(38vw, 150px); height: auto; filter: drop-shadow(0 6px 12px rgba(40, 30, 15, 0.35)); animation: velo-entra 0.4s ease; }
+.resumen-fallos {
+  width: min(100%, 460px); max-height: 70vh; overflow-y: auto; display: grid; gap: 10px;
+  background: var(--paper2); border: 1px solid var(--line); border-radius: var(--radio); padding: 16px;
+  box-shadow: 0 10px 30px rgba(40, 30, 15, 0.4); animation: velo-entra 0.4s ease;
+}
+.resumen-fallos h2 { font-size: 19px; }
+.resumen-fallos ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.resumen-fallos li { border-left: 3px solid var(--pen); background: var(--pen-soft); border-radius: 0 8px 8px 0; padding: 6px 10px; display: grid; gap: 2px; }
+.resumen-fallos .tuya { text-decoration: line-through; color: var(--pen); }
+.resumen-fallos .buena { font-weight: 700; color: var(--ok); }
+.resumen-fallos .porque { font-size: 14px; color: var(--ink2); }
+
+/* Consejos */
+.consejo ul { margin: 0; padding-left: 20px; display: grid; gap: 6px; }
+.consejo .checklist { list-style: none; padding: 0; }
+.consejo .checklist label { display: flex; gap: 10px; align-items: flex-start; }
+.consejo .checklist input { margin-top: 5px; width: 18px; height: 18px; flex: none; }
+.consejo.plegable summary { cursor: pointer; font-weight: 600; }
+.consejo.plegable[open] summary { margin-bottom: 8px; }
+.consejo.plegable h3 { font-size: 15px; margin: 8px 0 4px; }

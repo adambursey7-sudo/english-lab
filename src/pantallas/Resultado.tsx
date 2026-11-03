@@ -1,6 +1,6 @@
 import { MODO_CLASE, PROFE } from '../marca';
 import { useEffect, useState } from 'react';
-import type { Ejercicio, Respuestas } from '../banco/tipos';
+import type { Destreza, Ejercicio, Respuestas } from '../banco/tipos';
 import { apuntarResultado } from '../motor/historial';
 import { NOMBRES_EXAMEN, etiquetaParte } from '../banco/tipos';
 import { TextoHuecos } from '../componentes/TextoHuecos';
@@ -10,6 +10,7 @@ import { compartir, textoEjercicioParaCompartir } from '../motor/entregas';
 import { perfilActivo } from '../motor/perfiles';
 import { montarExamen, practicarParte } from '../motor/examen';
 import { partesDe } from '../banco';
+import { anclaFallo, fallosDe, type Fallo } from '../motor/fallos';
 
 interface Props {
   lista: Ejercicio[];
@@ -18,10 +19,15 @@ interface Props {
   onInicio: () => void;
   /** Empezar otra lista (otro de esta parte, la siguiente parte, otro examen completo). */
   onEmpezar: (lista: Ejercicio[]) => void;
+  /** Abrir los consejos de la parte (solo C1). */
+  onConsejos?: (destreza: Destreza, parte: number) => void;
+  /** Ya se apuntó y se vio el pop-up (se vuelve de Consejos): no repetir ninguna de las dos cosas. */
+  visto?: boolean;
 }
 
-export function Resultado({ lista, respuestas, onRepetir, onInicio, onEmpezar }: Props) {
+export function Resultado({ lista, respuestas, onRepetir, onInicio, onEmpezar, onConsejos, visto }: Props) {
   const corregidos = lista.map((e) => corrigeEjercicio(e, respuestas[e.id] ?? {}));
+  const fallos = fallosDe(corregidos);
   const aciertos = corregidos.reduce((n, c) => n + c.aciertos, 0);
   const total = corregidos.reduce((n, c) => n + c.total, 0);
   const porcentaje = total === 0 ? 0 : Math.round((aciertos / total) * 100);
@@ -38,13 +44,16 @@ export function Resultado({ lista, respuestas, onRepetir, onInicio, onEmpezar }:
 
   // Se apunta una vez por corrección, al entrar en la pantalla (el inicio enseña el progreso con esto).
   useEffect(() => {
+    if (visto) return;
     apuntarResultado(corregidos.map((c) => ({ id: c.ejercicio.id, aciertos: c.aciertos, total: c.total })));
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
     <div className="app">
-      {!soloLibre && MODO_CLASE && <KatePopup vineta={vinetaDe(porcentaje)} />}
+      {!soloLibre && !visto && (MODO_CLASE || fallos.length > 0) && (
+        <ResumenPopup vineta={MODO_CLASE ? vinetaDe(porcentaje) : undefined} fallos={fallos} onVerTodo={() => irAlFallo(fallos[0]?.ancla)} />
+      )}
       <header className={`cabecera aula compacta tono-${destreza}`}>
         <div className="cabecera-dentro">
           <div>
@@ -168,13 +177,18 @@ export function Resultado({ lista, respuestas, onRepetir, onInicio, onEmpezar }:
                     </div>
                   );
                 }
-                return <ResultadoItem key={ic.item.n} ic={ic} comunes={comunesDe(c.ejercicio, ic.item)} />;
+                return <ResultadoItem key={ic.item.n} ic={ic} comunes={comunesDe(c.ejercicio, ic.item)} ancla={anclaFallo(c.ejercicio.id, ic.item.n)} />;
               })}
             </div>
           </section>
         ))}
 
         <div className="acciones">
+          {onConsejos && examen === 'c1' && destreza !== 'prueba' && (
+            <button type="button" className="btn sec" onClick={() => onConsejos(destreza, unaParte ? primero.parte : 0)}>
+              {unaParte ? `Consejos para ${etiquetaParte(examen, primero.parte)}` : 'Consejos para este papel'}
+            </button>
+          )}
           {siguiente ? (
             <button className="btn" onClick={() => onEmpezar(practicarParte(examen, destreza, siguiente.parte))}>
               Siguiente parte · {etiquetaParte(examen, siguiente.parte)}
@@ -195,11 +209,22 @@ export function Resultado({ lista, respuestas, onRepetir, onInicio, onEmpezar }:
   );
 }
 
-/** Kate recortada (sin fondo, con borde de pegatina) baja desde arriba al terminar; se va sola o al tocarla. */
-function KatePopup({ vineta }: { vineta: 1 | 2 | 3 | 4 | 5 }) {
+/** Lleva la vista al primer fallo de la corrección (el resumen del pop-up dice qué, aquí está el porqué completo). */
+function irAlFallo(ancla?: string) {
+  if (!ancla) return;
+  window.setTimeout(() => document.getElementById(ancla)?.scrollIntoView({ behavior: 'smooth', block: 'center' }), 450);
+}
+
+/**
+ * Al terminar: Kate recortada baja desde arriba (solo en la versión de clase) y, si hubo fallos, debajo va un resumen
+ * corto de por qué falló cada uno. Sin fallos se va sola a los 4 s; con fallos se queda hasta que se cierra, y
+ * «Ver las correcciones» baja al primero (la pantalla de debajo tiene todas, con su explicación entera).
+ */
+function ResumenPopup({ vineta, fallos, onVerTodo }: { vineta?: 1 | 2 | 3 | 4 | 5; fallos: Fallo[]; onVerTodo: () => void }) {
   const [fase, setFase] = useState<'dentro' | 'saliendo' | 'fuera'>('dentro');
+  const conFallos = fallos.length > 0;
   useEffect(() => {
-    if (fase === 'dentro') {
+    if (fase === 'dentro' && !conFallos) {
       const t = window.setTimeout(() => setFase('saliendo'), 4000);
       return () => window.clearTimeout(t);
     }
@@ -207,16 +232,41 @@ function KatePopup({ vineta }: { vineta: 1 | 2 | 3 | 4 | 5 }) {
       const t = window.setTimeout(() => setFase('fuera'), 400);
       return () => window.clearTimeout(t);
     }
-  }, [fase]);
+  }, [fase, conFallos]);
   if (fase === 'fuera') return null;
+  const cerrar = () => setFase('saliendo');
+  const mostrados = fallos.slice(0, MAX_EN_POPUP);
   return (
-    <div className={`kate-velo${fase === 'saliendo' ? ' saliendo' : ''}`} onClick={() => setFase('saliendo')}>
-      <button type="button" className="kate-popup" aria-label="Cerrar">
-        <img src={`${import.meta.env.BASE_URL}img/vineta-${vineta}.png`} alt={FRASES_VINETA[vineta]} />
-      </button>
+    <div className={`kate-velo${fase === 'saliendo' ? ' saliendo' : ''}${conFallos ? ' con-fallos' : ''}`} onClick={cerrar}>
+      {vineta && !conFallos && (
+        <button type="button" className="kate-popup" aria-label="Cerrar">
+          <img src={`${import.meta.env.BASE_URL}img/vineta-${vineta}.png`} alt={FRASES_VINETA[vineta]} />
+        </button>
+      )}
+      {vineta && conFallos && <img className="kate-mini" src={`${import.meta.env.BASE_URL}img/vineta-${vineta}.png`} alt={FRASES_VINETA[vineta]} />}
+      {conFallos && (
+        <div className="resumen-fallos" role="dialog" aria-label="Por qué fallaste" onClick={(e) => e.stopPropagation()}>
+          <h2>{fallos.length === 1 ? 'Un fallo' : `${fallos.length} fallos`}: esto es lo que pasó</h2>
+          <ul>
+            {mostrados.map((f) => (
+              <li key={f.ancla}>
+                <div className="que"><b>{f.parte} · {f.n}</b> <span className="tuya">{f.tuya || 'sin contestar'}</span> → <span className="buena">{f.buena}</span></div>
+                {f.motivo && <div className="porque">{f.motivo}</div>}
+              </li>
+            ))}
+          </ul>
+          {fallos.length > mostrados.length && <p className="silencio pequeno">… y {fallos.length - mostrados.length} más, abajo.</p>}
+          <div className="fila-botones">
+            <button type="button" className="btn" onClick={() => { cerrar(); onVerTodo(); }}>Ver las correcciones</button>
+            <button type="button" className="btn sec" onClick={cerrar}>Cerrar</button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
+
+const MAX_EN_POPUP = 3;
 
 /** Diálogo de la PAU: un solo botón para mandarle a Adam todas las réplicas juntas. */
 function EnviarDialogo({ ejercicio, respuestas }: { ejercicio: Ejercicio; respuestas: Respuestas }) {
@@ -235,7 +285,7 @@ function EnviarDialogo({ ejercicio, respuestas }: { ejercicio: Ejercicio; respue
   );
 }
 
-function ResultadoItem({ ic, comunes = [] }: { ic: ItemCorregido; comunes?: string[] }) {
+function ResultadoItem({ ic, comunes = [], ancla }: { ic: ItemCorregido; comunes?: string[]; ancla?: string }) {
   const tuya = textoRespuesta(ic, comunes);
   const buena = ic.item.tipo === 'opciones' ? `${letra(ic.item.correcta)} ${ic.solucion}` : ic.solucion;
   const alternativas = alternativasDe(ic.item);
@@ -244,7 +294,7 @@ function ResultadoItem({ ic, comunes = [] }: { ic: ItemCorregido; comunes?: stri
     ? (partesVerdaderoFalso(ic.respuesta).prueba.trim() === '' ? 'TRUE/FALSE bien, pero sin prueba copiada no puntúa.' : 'TRUE/FALSE bien, pero la prueba copiada no es la que lo demuestra.')
     : '';
   return (
-    <div className={`resultado-item${ic.correcto ? '' : ' mal'}`}>
+    <div id={ancla} className={`resultado-item${ic.correcto ? '' : ' mal'}`}>
       {ic.item.pregunta && ic.item.tipo !== 'emparejar' && <p className="pregunta">{ic.item.pregunta}</p>}
       {ic.item.pregunta && ic.item.tipo === 'emparejar' && !/^Gap \d+$/.test(ic.item.pregunta) && <p className="pregunta">{ic.item.pregunta}</p>}
       {ic.item.tipo === 'verdaderoFalso' && <p className="afirmacion">{ic.item.afirmacion}</p>}

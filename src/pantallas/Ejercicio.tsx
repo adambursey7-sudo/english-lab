@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import type { Ejercicio, Item, Respuestas } from '../banco/tipos';
 import { NOMBRES_EXAMEN, TIPOS_EVALUABLES, etiquetaParte } from '../banco/tipos';
+import { ChecklistWriting, ConsejosParte } from '../componentes/ConsejosParte';
 import { EntradaHablar } from '../componentes/Hablar';
 import { EntradaRedaccion } from '../componentes/Redaccion';
 import { Reproductor } from '../componentes/Reproductor';
@@ -166,6 +167,9 @@ export function PantallaEjercicio({ ejercicio, posicion, respuestas, onCambia, o
           ))}
         </div>
         </div>
+
+        {ejercicio.examen === 'c1' && <ConsejosParte destreza={ejercicio.destreza} parte={ejercicio.parte} />}
+        {ejercicio.examen === 'c1' && ejercicio.destreza === 'writing' && <ChecklistWriting />}
 
         <div className="pie">
           <button className="btn" onClick={terminar}>
