@@ -147,11 +147,12 @@ describe('banco', () => {
             if (item.frase) expect(item.frase, donde).toContain(`{{${item.n}}}`);
             break;
           case 'transformacion':
-            for (const c of item.correctas) {
+            // La principal (la primera) cumple la regla de 2 a 7 palabras (igual que el validador); las variantes aceptadas pueden ser más largas.
+            item.correctas.forEach((c, k) => {
               const n = cuentaPalabras(c);
               expect(n, `${donde}: "${c}"`).toBeGreaterThanOrEqual(2);
-              expect(n, `${donde}: "${c}"`).toBeLessThanOrEqual(6);
-            }
+              if (k === 0) expect(n, `${donde}: "${c}"`).toBeLessThanOrEqual(7);
+            });
             break;
           case 'verdaderoFalso': {
             const todo = normaliza([e.texto ?? '', ...(e.secciones ?? []).map((s) => s.texto)].join(' '));

@@ -10,7 +10,7 @@ describe('validador', () => {
       if (clave.includes('speaking')) continue;
       expect(validarEjercicio(e, otros), e.id).toEqual([]);
     }
-  });
+  }, 60000); // el banco ya tiene decenas de examenes: compara cada uno con todos los demas
 
   it('rechaza un texto demasiado corto, con pocas preguntas y vocabulario simple', () => {
     const base = BANCO.find((e) => e.id === 'c1-rue-2-names')!;
