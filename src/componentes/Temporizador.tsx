@@ -4,9 +4,15 @@ import { useEffect, useState } from 'react';
  * Cuenta atrás en minutos. Al llegar a cero no corta nada: se pone en rojo y sigue contando en negativo, como un
  * reloj de examen. En los dos últimos minutos avisa (amarillo).
  */
-export function Temporizador({ minutos }: { minutos: number }) {
-  const [inicio] = useState(() => Date.now());
-  const [ahora, setAhora] = useState(inicio);
+export function Temporizador({ minutos, desde, alArrancar }: { minutos: number; desde?: number; alArrancar?: (t: number) => void }) {
+  // `desde`: cuándo arrancó el reloj si el alumno cerró la app y sigue donde lo dejó (el examen no se para por cerrar).
+  const [inicio] = useState(() => desde ?? Date.now());
+  const [ahora, setAhora] = useState(() => Math.max(inicio, Date.now()));
+
+  useEffect(() => {
+    if (desde === undefined) alArrancar?.(inicio);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   useEffect(() => {
     const id = setInterval(() => setAhora(Date.now()), 1000);

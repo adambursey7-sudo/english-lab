@@ -48,5 +48,8 @@ describe('aula', () => {
     const { entregas, ignoradas } = leerEntregas(`${codificarEntrega(a)}\n  ${codificarEntrega(b)} basura`);
     expect(entregas).toHaveLength(2);
     expect(ignoradas).toBe(1);
+    // Una frase suelta de varias palabras es una sola cosa que no se entendió, no una por palabra.
+    expect(leerEntregas(`${codificarEntrega(a)}
+esto no es un resultado`).ignoradas).toBe(1);
   });
 });

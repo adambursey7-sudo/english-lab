@@ -1,5 +1,5 @@
 import type { Ejercicio, Examen, Item, Respuestas } from '../banco/tipos';
-import { TIPOS_EVALUABLES } from '../banco/tipos';
+import { TIPOS_EVALUABLES, esCanarias } from '../banco/tipos';
 
 /** Deja una respuesta escrita lista para comparar: minúsculas, sin espacios de más, sin puntuación de los extremos, comillas rectas. */
 export function normaliza(texto: string): string {
@@ -170,17 +170,31 @@ export function vinetaDe(porcentaje: number): Vineta {
   return 1;
 }
 
-/** Nota «como en el examen» a partir del porcentaje de lo que se corrige solo: banda estimada del C1 o nota sobre 10 en la PAU. */
+/** Nota «como en el examen» a partir del porcentaje de lo que se corrige solo: banda estimada de Cambridge (B1, B2, C1) o nota sobre 10 en la PAU. */
 export function bandaDe(examen: Examen, porcentaje: number): { etiqueta: string; detalle: string } {
   if (examen === 'pau') {
     const nota = Math.round(porcentaje / 10 * 10) / 10;
     const texto = nota.toFixed(1).replace('.', ',');
     return { etiqueta: `${texto} sobre 10`, detalle: nota >= 5 ? 'Aprobado en lo que se corrige solo; el diálogo, las situaciones y la redacción los puntúa Adam.' : 'Por debajo del 5 en lo que se corrige solo; repasa las explicaciones.' };
   }
-  if (examen === 'b1' || examen === 'b2') {
+  if (esCanarias(examen)) {
     const nota = Math.round(porcentaje / 10 * 10) / 10;
     const texto = nota.toFixed(1).replace('.', ',');
     return { etiqueta: `${texto} sobre 10`, detalle: nota >= 5 ? 'Aprobada esta actividad (cada una debe sacar 5 o más y la media, 6,5). La escritura y la mediación las puntúa Adam.' : 'Por debajo del 5: en el examen real cada actividad debe llegar a 5. Repasa las explicaciones.' };
+  }
+  if (examen === 'b1') {
+    if (porcentaje >= 80) return { etiqueta: 'Pass with Distinction', detalle: 'Estimación: con esto en el examen de verdad estarías ya en nivel B2.' };
+    if (porcentaje >= 70) return { etiqueta: 'Pass with Merit', detalle: 'Estimación: aprobado holgado del B1.' };
+    if (porcentaje >= 60) return { etiqueta: 'Pass', detalle: 'Estimación: justo el aprobado del B1.' };
+    if (porcentaje >= 45) return { etiqueta: 'Nivel A2', detalle: 'Estimación: no llega al B1, pero certificaría A2.' };
+    return { etiqueta: 'Por debajo de A2', detalle: 'Estimación: todavía lejos del aprobado; repasa cada explicación.' };
+  }
+  if (examen === 'b2') {
+    if (porcentaje >= 80) return { etiqueta: 'Grade A', detalle: 'Estimación: con esto en el examen de verdad estarías ya en nivel C1.' };
+    if (porcentaje >= 70) return { etiqueta: 'Grade B', detalle: 'Estimación: aprobado holgado del B2.' };
+    if (porcentaje >= 60) return { etiqueta: 'Grade C', detalle: 'Estimación: justo el aprobado del B2.' };
+    if (porcentaje >= 45) return { etiqueta: 'Nivel B1', detalle: 'Estimación: no llega al B2, pero certificaría B1.' };
+    return { etiqueta: 'Por debajo de B1', detalle: 'Estimación: todavía lejos del aprobado; repasa cada explicación.' };
   }
   if (porcentaje >= 80) return { etiqueta: 'Grade A', detalle: 'Estimación: con esto en el examen de verdad serías nivel C2.' };
   if (porcentaje >= 70) return { etiqueta: 'Grade B', detalle: 'Estimación: aprobado holgado del C1.' };

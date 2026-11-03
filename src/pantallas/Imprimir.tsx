@@ -37,7 +37,7 @@ export function Imprimir({ examen, numero, modo }: Props) {
     );
   }
   return (
-    <div className={`imprimir ${modo}`}>
+    <div className={`imprimir ahorro ${modo}`}>
       {ES_PRODUCTO && !pro && numero !== 1 && <div className="marca-agua" aria-hidden="true">DEMO</div>}
       {/* El tamaño de página solo se aplica mientras esta vista está montada: no afecta a imprimir otras pantallas. */}
       <style>{reglaPagina(leerMarca().nombre, cuadernillo.titulo)}</style>
@@ -91,7 +91,7 @@ export function CuadernilloAlumno({ c }: { c: Cuadernillo }) {
           <tbody>
             {c.papeles.map((p, i) => (
               <tr key={p.destreza}>
-                <td>{c.examen === 'c1' ? `Paper ${i + 1} · ` : ''}{p.titulo}</td>
+                <td>{c.examen !== 'pau' ? `Paper ${i + 1} · ` : ''}{p.titulo}</td>
                 <td>{p.partes.length}</td>
                 <td>{p.preguntas > 0 ? p.preguntas : '—'}</td>
                 <td>{minutos(p.minutos)}</td>
@@ -141,7 +141,7 @@ function PapelImpreso({ c, papel, indice, audio }: { c: Cuadernillo; papel: Pape
   return (
     <section className="papel">
       <header className="papel-cabecera">
-        <div className="papel-nombre">{c.examen === 'c1' ? `Paper ${indice + 1}` : 'PAU · Inglés'}</div>
+        <div className="papel-nombre">{c.examen !== 'pau' ? `Paper ${indice + 1}` : 'PAU · Inglés'}</div>
         <h2>{papel.titulo}</h2>
         <div className="papel-datos">
           {papel.destreza === 'listening' ? 'approximately ' : ''}{minutos(papel.minutos)}

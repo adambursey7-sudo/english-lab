@@ -3,8 +3,8 @@ import type { Ejercicio, ItemRedaccion } from '../banco/tipos';
 import { palabrasRedaccion } from '../motor/corregir';
 import { avisoPalabras, bandaPalabras, compartir, textoParaCompartir } from '../motor/entregas';
 import { perfilActivo } from '../motor/perfiles';
-import { enviarTexto, hayServidor } from '../motor/servidor';
 import { PROFE } from '../marca';
+import { enviarTexto, hayServidor } from '../motor/servidor';
 
 const NOMBRE_TIPO: Record<ItemRedaccion['tipoTexto'], string> = {
   essay: 'Essay',
@@ -128,6 +128,7 @@ export function ResultadoRedaccion({ ejercicio, item, texto }: PropsResultado) {
   const escrito = texto.trim() !== '';
 
   const enviar = async () => {
+    if (aviso === 'Enviando…' || aviso.startsWith('Enviado')) return;
     if (hayServidor()) {
       setAviso('Enviando…');
       const r = await enviarTexto(ejercicio, item.n, texto, `${ejercicio.nombreParte} (${item.tipoTexto})`);
@@ -152,7 +153,7 @@ export function ResultadoRedaccion({ ejercicio, item, texto }: PropsResultado) {
         <>
           <div className="tu-texto">{texto.split(/\n\n+/).map((p, i) => <p key={i}>{p}</p>)}</div>
           <div className="fila" style={{ gap: 8 }}>
-            <button type="button" className="btn chico" onClick={enviar}>Enviar a {PROFE}</button>
+            <button type="button" className="btn chico" onClick={enviar} disabled={aviso === 'Enviando…' || aviso.startsWith('Enviado')}>Enviar a {PROFE}</button>
             {aviso && <span className="silencio pequeno">{aviso}</span>}
           </div>
           <p className="silencio pequeno">La corrección de los writings la hace {PROFE}. Mientras, compárala con el modelo y repasa la lista.</p>

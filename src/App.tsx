@@ -1,4 +1,6 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
+import { BANCO } from './banco';
+import { borrarBorrador, guardarBorrador, leerBorrador, tieneRespuestas } from './motor/borrador';
 import type { Destreza, Ejercicio, Respuestas } from './banco/tipos';
 import { Consejos } from './pantallas/Consejos';
 import { apuntarVistos } from './motor/examen';
@@ -23,7 +25,7 @@ import { aplicarColor, ES_PRODUCTO, MODO_CLASE, marcaConfigurada } from './marca
 type Estado =
   | { pantalla: 'inicio' }
   | { pantalla: 'resultados' }
-  | { pantalla: 'ejercicio'; lista: Ejercicio[]; i: number; respuestas: Record<string, Respuestas> }
+  | { pantalla: 'ejercicio'; lista: Ejercicio[]; i: number; respuestas: Record<string, Respuestas>; inicios: Record<string, number> }
   | { pantalla: 'resultado'; lista: Ejercicio[]; respuestas: Record<string, Respuestas>; /** Ya apuntado y con el pop-up visto (se vuelve de Consejos). */ visto?: boolean }
   | { pantalla: 'consejos'; destreza?: Destreza; parte?: number; atras: Estado };
 
@@ -39,7 +41,7 @@ export function rutaDe(hash: string): Ruta | null {
   if (hacer) return { tipo: 'hacer', payload: hacer[1] };
   const mezcla = /^#\/audio\/mezcla\/([\w.~-]{1,400})\/?$/.exec(hash);
   if (mezcla) return { tipo: 'mezcla', ids: mezcla[1].split('~') };
-  const m = /^#\/(imprimir|audio)\/(c1|pau)\/(\d+)(\/clave)?\/?$/.exec(hash);
+  const m = /^#\/(imprimir|audio)\/(b1can|b2can|b1|b2|c1|pau)\/(\d+)(\/clave)?\/?$/.exec(hash);
   if (!m) return null;
   const examen = m[2] as Examen;
   const numero = Number(m[3]);
@@ -66,6 +68,17 @@ export function App() {
   const [asistente, setAsistente] = useState(() => ES_PRODUCTO && !marcaConfigurada());
   useEffect(() => aplicarColor(), []);
   const paso = estado.pantalla === 'ejercicio' ? estado.i : -1;
+
+  // Si el alumno cierra la app a mitad de un ejercicio, se guarda lo contestado y el reloj para que pueda seguir.
+  const perfilId = perfil?.id;
+  useEffect(() => {
+    if (estado.pantalla !== 'ejercicio' || !tieneRespuestas(estado.respuestas)) return;
+    guardarBorrador(perfilId, { ids: estado.lista.map((e) => e.id), i: estado.i, respuestas: estado.respuestas, inicios: estado.inicios });
+  }, [estado, perfilId]);
+  const borrador = useMemo(
+    () => (estado.pantalla === 'inicio' ? leerBorrador(perfilId, (id) => BANCO.some((e) => e.id === id)) : undefined),
+    [estado.pantalla, perfilId],
+  );
 
   // Cada pantalla nueva empieza arriba del todo (si no, se hereda el scroll de la anterior).
   useEffect(() => {
@@ -118,11 +131,32 @@ export function App() {
     setPerfil(undefined);
     setInvitado(false);
   };
-  const empezar = (lista: Ejercicio[]) => setEstado({ pantalla: 'ejercicio', lista, i: 0, respuestas: {} });
+  const empezar = (lista: Ejercicio[]) => {
+    borrarBorrador(perfilId);
+    setEstado({ pantalla: 'ejercicio', lista, i: 0, respuestas: {}, inicios: {} });
+  };
+  const continuar = () => {
+    if (!borrador) return;
+    const lista = borrador.ids.map((id) => BANCO.find((e) => e.id === id)).filter((e): e is Ejercicio => e !== undefined);
+    setEstado({ pantalla: 'ejercicio', lista, i: borrador.i, respuestas: borrador.respuestas, inicios: borrador.inicios });
+  };
 
   // «Mi progreso» es solo de quien tiene cuenta.
   if (estado.pantalla === 'inicio' || (estado.pantalla === 'resultados' && !perfil)) {
-    return <Inicio perfil={perfil} onEmpezar={empezar} onResultados={() => setEstado({ pantalla: 'resultados' })} onCambiarPerfil={cambiarPerfil} onConsejos={() => setEstado({ pantalla: 'consejos', atras: { pantalla: 'inicio' } })} />;
+    return (
+      <Inicio
+        perfil={perfil}
+        borrador={borrador ? { titulo: BANCO.find((e) => e.id === borrador.ids[borrador.i])?.nombreParte ?? '', i: borrador.i + 1, total: borrador.ids.length } : undefined}
+        onContinuar={continuar}
+        onDescartar={() => {
+          borrarBorrador(perfilId);
+          setEstado({ pantalla: 'inicio' });
+        }}
+        onEmpezar={empezar} onResultados={() => setEstado({ pantalla: 'resultados' })}
+        onCambiarPerfil={cambiarPerfil}
+        onConsejos={() => setEstado({ pantalla: 'consejos', atras: { pantalla: 'inicio' } })}
+      />
+    );
   }
 
   if (estado.pantalla === 'consejos') {
@@ -143,6 +177,8 @@ export function App() {
         ejercicio={ejercicio}
         posicion={{ i: estado.i + 1, total: estado.lista.length }}
         respuestas={estado.respuestas[ejercicio.id] ?? {}}
+        inicio={estado.inicios[ejercicio.id]}
+        onInicio={(t) => setEstado((e) => (e.pantalla !== 'ejercicio' || e.inicios[ejercicio.id] !== undefined ? e : { ...e, inicios: { ...e.inicios, [ejercicio.id]: t } }))}
         onCambia={(n, valor) =>
           setEstado((e) =>
             e.pantalla !== 'ejercicio' ? e : { ...e, respuestas: { ...e.respuestas, [ejercicio.id]: { ...(e.respuestas[ejercicio.id] ?? {}), [n]: valor } } },
@@ -151,12 +187,16 @@ export function App() {
         onSiguiente={() => {
           if (ultimo) {
             apuntarVistos(estado.lista.map((e) => e.id));
+            borrarBorrador(perfilId);
             setEstado({ pantalla: 'resultado', lista: estado.lista, respuestas: estado.respuestas });
           } else {
             setEstado({ ...estado, i: estado.i + 1 });
           }
         }}
-        onSalir={() => setEstado({ pantalla: 'inicio' })}
+        onSalir={() => {
+          borrarBorrador(perfilId);
+          setEstado({ pantalla: 'inicio' });
+        }}
       />
     );
   }
@@ -165,7 +205,7 @@ export function App() {
     <Resultado
       lista={estado.lista}
       respuestas={estado.respuestas}
-      onRepetir={() => setEstado({ pantalla: 'ejercicio', lista: estado.lista, i: 0, respuestas: {} })}
+      onRepetir={() => setEstado({ pantalla: 'ejercicio', lista: estado.lista, i: 0, respuestas: {}, inicios: {} })}
       onInicio={() => setEstado({ pantalla: 'inicio' })}
       onConsejos={(destreza, parte) => setEstado({ pantalla: 'consejos', destreza, parte, atras: { ...estado, visto: true } })}
       visto={estado.visto}

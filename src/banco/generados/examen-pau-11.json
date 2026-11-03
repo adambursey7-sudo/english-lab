@@ -1,0 +1,363 @@
+[
+ {
+  "id": "pau-prueba-4-x11",
+  "examen": "pau",
+  "destreza": "prueba",
+  "parte": 4,
+  "nombreParte": "Complete a conversation",
+  "titulo": "Talking about healthy lunches at school",
+  "instrucciones": "4. READ this conversation and COMPLETE your part. Write the numbers (1-6) and complete each sentence on your exam paper. (1.5 points) If a gap ends with a question mark, you must write a question.",
+  "minutos": 10,
+  "texto": "Your friend: Have you seen the new menu in the school canteen? They have changed everything this month.\nYou: Yes, I saw it yesterday. {{1}}\nYour friend: There are more salads and fruit now, and the chips have gone.\nYou: Really? And {{2}}?\nYour friend: Not really. The pasta is the same as before, but the portions are smaller.\nYou: I see. {{3}}\nYour friend: I used to buy a sandwich, but now I bring a lunch box from home.\nYou: That sounds like a good idea. {{4}}\nYour friend: Usually some rice, chicken and an apple. My mother prepares it the night before.\nYou: Nice! And {{5}}?\nYour friend: About two euros a day. It’s much cheaper than the canteen.\nYour friend: Why don’t you try it next week?\nYou: {{6}}",
+  "items": [
+   {
+    "n": 1,
+    "tipo": "redaccion",
+    "tipoTexto": "dialogue",
+    "enunciado": "Hueco 1",
+    "minPalabras": 2,
+    "maxPalabras": 25,
+    "modelo": "I think the menu is much healthier than before.  /  What do you think about the changes?",
+    "criterios": [
+     "Lo que escribo encaja con la situación o con la conversación (si el hueco acaba en «?», es una pregunta).",
+     "Sin errores de gramática ni de ortografía: cada error baja la nota (0,25 → 0,20 → 0,15 → 0).",
+     "Ni muy corto ni muy largo: en las situaciones, entre 10 y 25 palabras."
+    ],
+    "explicacion": "El amigo responde describiendo qué hay de nuevo en el menú («more salads and fruit»), así que das tu opinión o preguntas qué ha cambiado."
+   },
+   {
+    "n": 2,
+    "tipo": "redaccion",
+    "tipoTexto": "dialogue",
+    "enunciado": "Hueco 2 (acaba en «?»: tiene que ser una pregunta)",
+    "minPalabras": 2,
+    "maxPalabras": 25,
+    "modelo": "is the pasta different too  /  have they changed the hot dishes",
+    "criterios": [
+     "Lo que escribo encaja con la situación o con la conversación (si el hueco acaba en «?», es una pregunta).",
+     "Sin errores de gramática ni de ortografía: cada error baja la nota (0,25 → 0,20 → 0,15 → 0).",
+     "Ni muy corto ni muy largo: en las situaciones, entre 10 y 25 palabras."
+    ],
+    "explicacion": "La respuesta («Not really. The pasta is the same…») indica una pregunta de sí/no sobre si la pasta o los platos calientes han cambiado."
+   },
+   {
+    "n": 3,
+    "tipo": "redaccion",
+    "tipoTexto": "dialogue",
+    "enunciado": "Hueco 3",
+    "minPalabras": 2,
+    "maxPalabras": 25,
+    "modelo": "What do you usually eat for lunch now?  /  Do you still eat in the canteen?",
+    "criterios": [
+     "Lo que escribo encaja con la situación o con la conversación (si el hueco acaba en «?», es una pregunta).",
+     "Sin errores de gramática ni de ortografía: cada error baja la nota (0,25 → 0,20 → 0,15 → 0).",
+     "Ni muy corto ni muy largo: en las situaciones, entre 10 y 25 palabras."
+    ],
+    "explicacion": "El amigo cuenta qué compraba antes y qué hace ahora: preguntas por su comida habitual."
+   },
+   {
+    "n": 4,
+    "tipo": "redaccion",
+    "tipoTexto": "dialogue",
+    "enunciado": "Hueco 4",
+    "minPalabras": 2,
+    "maxPalabras": 25,
+    "modelo": "What is in your lunch box today?  /  What do you usually put in it?",
+    "criterios": [
+     "Lo que escribo encaja con la situación o con la conversación (si el hueco acaba en «?», es una pregunta).",
+     "Sin errores de gramática ni de ortografía: cada error baja la nota (0,25 → 0,20 → 0,15 → 0).",
+     "Ni muy corto ni muy largo: en las situaciones, entre 10 y 25 palabras."
+    ],
+    "explicacion": "La respuesta («Usually some rice, chicken and an apple») contesta a una pregunta sobre el contenido de la fiambrera."
+   },
+   {
+    "n": 5,
+    "tipo": "redaccion",
+    "tipoTexto": "dialogue",
+    "enunciado": "Hueco 5 (acaba en «?»: tiene que ser una pregunta)",
+    "minPalabras": 2,
+    "maxPalabras": 25,
+    "modelo": "how much does it cost  /  how much money do you spend",
+    "criterios": [
+     "Lo que escribo encaja con la situación o con la conversación (si el hueco acaba en «?», es una pregunta).",
+     "Sin errores de gramática ni de ortografía: cada error baja la nota (0,25 → 0,20 → 0,15 → 0).",
+     "Ni muy corto ni muy largo: en las situaciones, entre 10 y 25 palabras."
+    ],
+    "explicacion": "Contesta «About two euros a day»: preguntas por el precio o el gasto."
+   },
+   {
+    "n": 6,
+    "tipo": "redaccion",
+    "tipoTexto": "dialogue",
+    "enunciado": "Hueco 6",
+    "minPalabras": 2,
+    "maxPalabras": 25,
+    "modelo": "Good idea! I will ask my father to help me on Sunday.  /  OK, I would like to try it next week.",
+    "criterios": [
+     "Lo que escribo encaja con la situación o con la conversación (si el hueco acaba en «?», es una pregunta).",
+     "Sin errores de gramática ni de ortografía: cada error baja la nota (0,25 → 0,20 → 0,15 → 0).",
+     "Ni muy corto ni muy largo: en las situaciones, entre 10 y 25 palabras."
+    ],
+    "explicacion": "Respondes a la sugerencia «Why don’t you try it next week?» aceptándola y, si quieres, añadiendo un detalle."
+   }
+  ],
+  "examenNumero": 11
+ },
+ {
+  "id": "pau-prueba-5-x11",
+  "examen": "pau",
+  "destreza": "prueba",
+  "parte": 5,
+  "nombreParte": "Comment on a situation",
+  "instrucciones": "5. Choose ONLY 3 of the following situations and WRITE what you would say in each one to show that you understand the context of the situation. Write between 10 and 25 words. (1.5 points) Only the first three you answer will be marked.",
+  "minutos": 10,
+  "elegir": 3,
+  "items": [
+   {
+    "n": 1,
+    "tipo": "redaccion",
+    "tipoTexto": "situation",
+    "enunciado": "a) Your friend says, “Buying clothes online is always cheaper than buying them in a shop.” Give your opinion.",
+    "minPalabras": 10,
+    "maxPalabras": 25,
+    "modelo": "I’m not sure I agree. Online prices can be low, but you often have to pay for delivery, and returning clothes can be annoying.",
+    "criterios": [
+     "Lo que escribo encaja con la situación o con la conversación (si el hueco acaba en «?», es una pregunta).",
+     "Sin errores de gramática ni de ortografía: cada error baja la nota (0,25 → 0,20 → 0,15 → 0).",
+     "Ni muy corto ni muy largo: en las situaciones, entre 10 y 25 palabras."
+    ],
+    "explicacion": "Dar una opinión: «I’m not sure I agree / I think…» con una razón concreta. 10–25 palabras."
+   },
+   {
+    "n": 2,
+    "tipo": "redaccion",
+    "tipoTexto": "situation",
+    "enunciado": "b) The trainers you ordered online arrived two weeks late and the box is damaged. Complain to the customer service worker.",
+    "minPalabras": 10,
+    "maxPalabras": 25,
+    "modelo": "Hello, my trainers arrived two weeks late and the box was damaged. I’m very disappointed, so I would like a refund, please.",
+    "criterios": [
+     "Lo que escribo encaja con la situación o con la conversación (si el hueco acaba en «?», es una pregunta).",
+     "Sin errores de gramática ni de ortografía: cada error baja la nota (0,25 → 0,20 → 0,15 → 0).",
+     "Ni muy corto ni muy largo: en las situaciones, entre 10 y 25 palabras."
+    ],
+    "explicacion": "Quejarse: exponer el problema («arrived late», «damaged»), mostrar disgusto y pedir una solución con educación."
+   },
+   {
+    "n": 3,
+    "tipo": "redaccion",
+    "tipoTexto": "situation",
+    "enunciado": "c) Your younger cousin wants to buy a video game with his parents’ credit card without asking them. Advise him.",
+    "minPalabras": 10,
+    "maxPalabras": 25,
+    "modelo": "If I were you, I would ask your parents first. Using their card without permission could cause a big problem at home.",
+    "criterios": [
+     "Lo que escribo encaja con la situación o con la conversación (si el hueco acaba en «?», es una pregunta).",
+     "Sin errores de gramática ni de ortografía: cada error baja la nota (0,25 → 0,20 → 0,15 → 0).",
+     "Ni muy corto ni muy largo: en las situaciones, entre 10 y 25 palabras."
+    ],
+    "explicacion": "Aconsejar: «If I were you, I would… / You should… / You’d better…» y una razón."
+   },
+   {
+    "n": 4,
+    "tipo": "redaccion",
+    "tipoTexto": "situation",
+    "enunciado": "d) A classmate asks you to lend him money to buy a jacket online. You don’t want to. Refuse politely.",
+    "minPalabras": 10,
+    "maxPalabras": 25,
+    "modelo": "I’m sorry, but I’d rather not lend money to anyone. Why don’t you wait for the sales? The jacket might be cheaper soon.",
+    "criterios": [
+     "Lo que escribo encaja con la situación o con la conversación (si el hueco acaba en «?», es una pregunta).",
+     "Sin errores de gramática ni de ortografía: cada error baja la nota (0,25 → 0,20 → 0,15 → 0).",
+     "Ni muy corto ni muy largo: en las situaciones, entre 10 y 25 palabras."
+    ],
+    "explicacion": "Rechazar con educación: disculparse, «I’d rather not…» y, si se puede, ofrecer una alternativa."
+   },
+   {
+    "n": 5,
+    "tipo": "redaccion",
+    "tipoTexto": "situation",
+    "enunciado": "e) You ordered a birthday present for your mother online, but you chose the wrong size and it will not arrive on time. Apologise to her.",
+    "minPalabras": 10,
+    "maxPalabras": 25,
+    "modelo": "Mum, I’m really sorry. I chose the wrong size and the present won’t arrive on time, but I’ll change it as soon as possible.",
+    "criterios": [
+     "Lo que escribo encaja con la situación o con la conversación (si el hueco acaba en «?», es una pregunta).",
+     "Sin errores de gramática ni de ortografía: cada error baja la nota (0,25 → 0,20 → 0,15 → 0).",
+     "Ni muy corto ni muy largo: en las situaciones, entre 10 y 25 palabras."
+    ],
+    "explicacion": "Pedir perdón: «I’m really sorry…», explicar lo ocurrido y prometer arreglarlo."
+   }
+  ],
+  "examenNumero": 11
+ },
+ {
+  "id": "pau-prueba-1-x11",
+  "examen": "pau",
+  "destreza": "prueba",
+  "parte": 1,
+  "nombreParte": "Comprensión del texto",
+  "titulo": "The school where plastic is not allowed",
+  "instrucciones": "Read the text and answer questions 1, 2 and 3. In question 1, copy the exact words from the text as evidence; in question 2, copy no more than 10 words; in question 3, find the word in the text that matches each definition.",
+  "minutos": 25,
+  "texto": "At Hillcrest Secondary School, the canteen no longer sells anything wrapped in plastic. Since September, students have been drinking from metal bottles, eating lunch from reusable boxes and carrying their books in cloth bags. The change began with Marta Quintero, a science teacher who was shocked by the amount of rubbish her classes produced in a single week.\n\n“We counted more than two thousand plastic items in five days,” Marta says. “Most of them were used for ten minutes and then thrown away.” After sharing the results with the headteacher, she formed a student committee of twelve members. They visited local shops, asked for advice from an environmental group and wrote a plan for the whole school year. The school now provides water fountains in every corridor, and the canteen buys fruit and sandwiches from a bakery that uses paper packaging.\n\nNot all students were happy at first. Some complained that reusable boxes were heavy and difficult to clean, and a few parents worried that healthy snacks would cost more. However, the committee found that the opposite was true. Families spend less on drinks and wrapping, and the canteen has reduced its monthly bill by almost a fifth. “I was sceptical,” admits Luis, a fifteen-year-old student. “Now I forget my bottle and feel strange without it.”\n\nThe project has also changed how students see their daily habits. Every Friday, volunteers collect any plastic found in the playground and turn it into art for the main hall. Marta believes this is the most valuable result of the scheme. “We wanted to reduce waste,” she says. “What we did not expect was to see younger children teaching their parents to recycle.” Other schools in the region are now asking to visit Hillcrest, and the local council is studying whether to offer similar help to ten more centres next year.",
+  "items": [
+   {
+    "n": 1,
+    "tipo": "verdaderoFalso",
+    "pregunta": "1. Say whether the following sentences are TRUE or FALSE according to the text. COPY the evidence from the text. No marks will be given without the evidence. (1.5 points)",
+    "afirmacion": "a) The school canteen still sells some food in plastic wrappers.",
+    "correcta": false,
+    "pruebas": [
+     "the canteen no longer sells anything wrapped in plastic",
+     "no longer sells anything wrapped in plastic"
+    ],
+    "explicacion": "FALSE: la cantina ya no vende nada envuelto en plástico. La prueba hay que copiarla tal cual del texto, sin puntos suspensivos ni número de línea."
+   },
+   {
+    "n": 2,
+    "tipo": "verdaderoFalso",
+    "afirmacion": "b) The student committee asked an environmental group for help.",
+    "correcta": true,
+    "pruebas": [
+     "asked for advice from an environmental group",
+     "They visited local shops, asked for advice from an environmental group"
+    ],
+    "explicacion": "TRUE: el comité pidió consejo a un grupo ecologista («asked for advice from an environmental group»)."
+   },
+   {
+    "n": 3,
+    "tipo": "verdaderoFalso",
+    "afirmacion": "c) The canteen has spent more money since the changes began.",
+    "correcta": false,
+    "pruebas": [
+     "the canteen has reduced its monthly bill by almost a fifth",
+     "Families spend less on drinks and wrapping"
+    ],
+    "explicacion": "FALSE: la cantina ha reducido su factura mensual casi una quinta parte, así que gasta menos, no más."
+   },
+   {
+    "n": 4,
+    "tipo": "palabra",
+    "pregunta": "2. ANSWER the questions below. COPY no more than 10 words and/or a number from the text to answer each question. (1.5 points)\na) How many plastic items did Marta's classes count in five days?",
+    "correctas": [
+     "more than two thousand plastic items",
+     "more than two thousand",
+     "more than two thousand plastic items in five days"
+    ],
+    "maxPalabras": 10,
+    "explicacion": "«We counted more than two thousand plastic items in five days». Hay que copiar del texto, no parafrasear («2,000» no vale si no está escrito así)."
+   },
+   {
+    "n": 5,
+    "tipo": "palabra",
+    "pregunta": "b) What do volunteers do with the plastic they find in the playground? (Where do they start? Look at what they collect.)",
+    "correctas": [
+     "collect any plastic found in the playground",
+     "turn it into art",
+     "turn it into art for the main hall",
+     "collect any plastic"
+    ],
+    "maxPalabras": 10,
+    "explicacion": "«volunteers collect any plastic found in the playground and turn it into art for the main hall». Se copian como máximo 10 palabras."
+   },
+   {
+    "n": 6,
+    "tipo": "palabra",
+    "pregunta": "c) What is the local council studying?",
+    "correctas": [
+     "whether to offer similar help to ten more centres",
+     "to offer similar help to ten more centres next year",
+     "offer similar help to ten more centres",
+     "whether to offer similar help to ten more centres next year"
+    ],
+    "maxPalabras": 10,
+    "explicacion": "«the local council is studying whether to offer similar help to ten more centres next year» (hasta 10 palabras copiadas)."
+   },
+   {
+    "n": 7,
+    "tipo": "palabra",
+    "pregunta": "3. FIND a word or expression in the text that means… (1 point)\nd) very surprised and upset by something (paragraph 1)",
+    "correctas": [
+     "shocked"
+    ],
+    "explicacion": "«a science teacher who was shocked by the amount of rubbish». Hay que escribir la palabra tal cual aparece en el texto."
+   },
+   {
+    "n": 8,
+    "tipo": "palabra",
+    "pregunta": "e) made smaller or lower (paragraph 3)",
+    "correctas": [
+     "reduced"
+    ],
+    "explicacion": "«the canteen has reduced its monthly bill»."
+   },
+   {
+    "n": 9,
+    "tipo": "palabra",
+    "pregunta": "f) doubtful, not easily convinced (paragraph 3)",
+    "correctas": [
+     "sceptical"
+    ],
+    "explicacion": "«“I was sceptical,” admits Luis»."
+   },
+   {
+    "n": 10,
+    "tipo": "palabra",
+    "pregunta": "g) an organised plan or programme (paragraph 4)",
+    "correctas": [
+     "scheme"
+    ],
+    "explicacion": "«the most valuable result of the scheme»."
+   }
+  ],
+  "examenNumero": 11
+ },
+ {
+  "id": "pau-prueba-6-x11",
+  "examen": "pau",
+  "destreza": "prueba",
+  "parte": 6,
+  "nombreParte": "Composition",
+  "instrucciones": "6. Choose ONE of the following topics and WRITE a composition of about 140-180 words. If you choose the email, DO NOT SIGN it. (3 points)",
+  "minutos": 30,
+  "elegir": 1,
+  "items": [
+   {
+    "n": 1,
+    "tipo": "redaccion",
+    "tipoTexto": "composition",
+    "enunciado": "a) Should schools ban single-use plastic completely? Give your opinion.",
+    "minPalabras": 140,
+    "maxPalabras": 180,
+    "modelo": "Every day, schools throw away thousands of plastic bottles, wrappers and cups, so the idea of banning single-use plastic is becoming more and more popular. In my opinion, schools should ban it, although it will not be easy at the beginning.\n\nFirst of all, a plastic-free school sets a good example. Students spend many hours there, and what they see every day shapes their habits. If they learn to use a metal bottle and a lunch box, they will probably do the same at home. Moreover, schools can save money in the long run, because they will not need to buy so many disposable products.\n\nHowever, some people say that a total ban is unrealistic. Reusable bottles are expensive for some families, and the canteen may need new equipment. For this reason, the school should offer help, for example free water fountains or a second-hand bottle shop.\n\nIn conclusion, I believe a plastic-free school is a small change that can have a big effect on the planet and on our daily habits.",
+    "criterios": [
+     "Presentación: párrafos claros, puntuación correcta.",
+     "Organización: estructura del tipo de texto (email; for & against; opinion essay), registro adecuado, ideas enlazadas con conectores.",
+     "Contenido: me ciño al tema, ideas suficientes y variadas, sin repeticiones.",
+     "Corrección gramatical: frases bien construidas, variedad de estructuras, sin traducir del español.",
+     "Vocabulario: rico y no copiado del texto; menos de 4 faltas de ortografía (más de 3 restan)."
+    ],
+    "explicacion": "Opinion essay: introducción con la postura, un párrafo por idea con conectores (first of all, moreover, however, in conclusion), reconocer el argumento contrario y conclusión. Entre 140 y 180 palabras: por debajo de 140 baja el tope de nota."
+   },
+   {
+    "n": 2,
+    "tipo": "redaccion",
+    "tipoTexto": "email",
+    "enunciado": "b) Write an email to a friend from another school telling him or her about the plastic-free week at your school and asking him or her to start a similar project at his or her school.",
+    "minPalabras": 140,
+    "maxPalabras": 180,
+    "modelo": "Hi Lucas,\n\nHow are things going? I hope you are enjoying the new school year. I’m writing to tell you about something exciting that happened at my school last week.\n\nWe had a “plastic-free week”, and everybody took part. Students brought water in reusable bottles and snacks in lunch boxes instead of plastic bags. In the canteen, there were no disposable cups or straws, and the teachers even used paper instead of plastic folders. At the end of the week, we counted the rubbish and we had thrown away about 70% less plastic than usual. We were really surprised!\n\nThe best thing was that it was not difficult, and it made us think about how much we waste. Now the headteacher wants to continue the project all year.\n\nWhy don’t you try something similar at your school? You could start by talking to your teachers and your classmates. I’m sure they will like the idea, and I can send you some of our posters if you want.\n\nWrite soon and tell me what you think.\n\nBest wishes,",
+    "criterios": [
+     "Presentación: párrafos claros, puntuación correcta.",
+     "Organización: estructura del tipo de texto (email; for & against; opinion essay), registro adecuado, ideas enlazadas con conectores.",
+     "Contenido: me ciño al tema, ideas suficientes y variadas, sin repeticiones.",
+     "Corrección gramatical: frases bien construidas, variedad de estructuras, sin traducir del español.",
+     "Vocabulario: rico y no copiado del texto; menos de 4 faltas de ortografía (más de 3 restan)."
+    ],
+    "explicacion": "Email informal: saludo, motivo, cuerpo contando la semana sin plástico con tus palabras, petición clara («Why don’t you…?», «You could…») y despedida SIN firmar."
+   }
+  ],
+  "examenNumero": 11
+ }
+]

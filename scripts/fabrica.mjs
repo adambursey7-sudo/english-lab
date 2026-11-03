@@ -26,7 +26,7 @@ if (!todas && !clave) {
 
 const vite = await createServer({ server: { middlewareMode: true }, appType: 'custom', logLevel: 'error' });
 const { BANCO } = await vite.ssrLoadModule('/src/banco/index.ts');
-const { GUIA, promptEjercicio, extraerJson } = await vite.ssrLoadModule('/src/motor/guiaEstilo.ts');
+const { GUIA, ejemploDe, promptEjercicio, extraerJson } = await vite.ssrLoadModule('/src/motor/guiaEstilo.ts');
 const { validarEjercicio } = await vite.ssrLoadModule('/src/motor/validar.ts');
 
 const carpetaGenerados = 'src/banco/generados';
@@ -88,7 +88,7 @@ for (const objetivo of objetivos) {
   const [examen, destreza, parteTxt] = objetivo.split('/');
   const parte = Number(parteTxt);
   const guia = GUIA.find((g) => g.examen === examen && g.destreza === destreza && g.parte === parte);
-  const ejemplo = BANCO.find((e) => e.examen === examen && e.destreza === destreza && e.parte === parte);
+  const ejemplo = guia && ejemploDe(guia, BANCO);
   if (!guia || !ejemplo) {
     console.error(`No se puede generar ${objetivo}: no hay guía o ejemplo.`);
     continue;
@@ -108,8 +108,8 @@ for (const objetivo of objetivos) {
         e.examen = examen;
         e.destreza = destreza;
         e.parte = parte;
-        e.nombreParte = ejemplo.nombreParte;
-        e.minutos = ejemplo.minutos;
+        e.nombreParte = guia.nombreParte ?? ejemplo.nombreParte;
+        e.minutos = guia.minutos ?? ejemplo.minutos;
         delete e.examenNumero;
         e.id = `gen-${examen}-${destreza}-${parte}-${Date.now().toString(36)}${n}`;
         if (e.audio) e.audio = { ...e.audio, archivo: `audio/${e.id}.mp3` };

@@ -140,7 +140,7 @@ export const READING_C1: Ejercicio[] = [
     titulo: 'Working from home',
     instrucciones:
       'You are going to read four extracts from articles in which writers give their views on working from home. For questions 37–40, choose from the writers A–D. The writers may be chosen more than once.',
-    minutos: 12,
+    minutos: 9,
     secciones: [
       {
         letra: 'A',

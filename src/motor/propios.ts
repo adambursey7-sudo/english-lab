@@ -1,6 +1,6 @@
 import { BANCO } from '../banco';
 import { problemas } from './validar';
-import type { Destreza, Ejercicio, Examen, Item, ItemOpciones, ItemPalabra, ItemVerdaderoFalso } from '../banco/tipos';
+import { esExamen, type Destreza, type Ejercicio, type Examen, type Item, type ItemOpciones, type ItemPalabra, type ItemVerdaderoFalso } from '../banco/tipos';
 
 // Ejercicios que escribe el profe. Se guardan en su navegador con la misma forma que los del banco, así el generador, el
 // PDF y la clave los tratan igual. Sus ids empiezan por «mio-».
@@ -81,7 +81,7 @@ export function montarPropio(d: DatosPropio, items: Item[], texto: string | unde
 export function propioValido(v: unknown): Ejercicio | null {
   if (!v || typeof v !== 'object') return null;
   const e = v as Ejercicio;
-  if (typeof e.id !== 'string' || !esPropio(e.id) || !['c1', 'pau', 'b1', 'b2'].includes(e.examen) || !Array.isArray(e.items)) return null;
+  if (typeof e.id !== 'string' || !esPropio(e.id) || !esExamen(e.examen) || !Array.isArray(e.items)) return null;
   if (typeof e.instrucciones !== 'string' || typeof e.nombreParte !== 'string' || !Number.isInteger(e.parte) || typeof e.destreza !== 'string') return null;
   if (e.audio || e.items.some((i) => typeof i !== 'object' || i === null)) return null;
   try {

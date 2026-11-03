@@ -18,9 +18,12 @@ interface Props {
   onCambia: (n: number, valor: string) => void;
   onSiguiente: () => void;
   onSalir: () => void;
+  /** Cuándo arrancó el reloj de este ejercicio (si se está retomando) y aviso de cuándo arranca uno nuevo. */
+  inicio?: number;
+  onInicio?: (t: number) => void;
 }
 
-export function PantallaEjercicio({ ejercicio, posicion, respuestas, onCambia, onSiguiente, onSalir }: Props) {
+export function PantallaEjercicio({ ejercicio, posicion, respuestas, onCambia, onSiguiente, onSalir, inicio, onInicio }: Props) {
   const [activo, setActivo] = useState<number | null>(null);
   const [confirmarSalida, setConfirmarSalida] = useState(false);
   // Con «elige 1 de 3» o «3 de 5», las tareas abiertas: las que ya tengan texto o las que se elijan, hasta `elegir`.
@@ -56,7 +59,7 @@ export function PantallaEjercicio({ ejercicio, posicion, respuestas, onCambia, o
             </div>
             <div className="titulo">{etiquetaParte(ejercicio.examen, ejercicio.parte)} · {ejercicio.nombreParte}</div>
           </div>
-          <Temporizador minutos={ejercicio.minutos} />
+          <Temporizador minutos={ejercicio.minutos} desde={inicio} alArrancar={onInicio} />
         </div>
         <div className="avance" aria-label={`${contestados} de ${porContestar} contestadas`}>
           <span style={{ width: `${porContestar === 0 ? 0 : Math.min(100, (contestados / porContestar) * 100)}%` }} />

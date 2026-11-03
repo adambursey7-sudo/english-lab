@@ -77,6 +77,54 @@ En la app: reloj por parte con las fases (15 s de lectura, 2 min, 1 min…), las
 dibujadas (pregunta en el centro, ideas alrededor); las fotos de la parte 2 se describen en texto o se dibujan en
 SVG propio (sin fotos con derechos). Grabar con el micro es opcional y se comparte con Adam.
 
+## Cambridge B1 Preliminary (PET) · formato 2020
+
+Escrito desde el conocimiento del examen y las guías de estilo de la app (`src/motor/guiaEstilo.ts`); **pendiente de contrastar con el handbook oficial** (en especial las partes 2 y 4 del Listening).
+
+### Paper 1 · Reading · 45 min · 6 partes · 32 preguntas
+1. 5 textos cortos reales (mensaje, aviso, anuncio…), 1 pregunta de 3 opciones cada uno (5).
+2. Emparejar 5 personas con 8 textos cortos A–H (5).
+3. Texto largo (≈ 350–450 palabras), 5 preguntas de 3 opciones (5).
+4. Texto con 5 frases quitadas y 8 frases A–H para colocar (5).
+5. Cloze de elección múltiple, 6 huecos de 4 opciones (6).
+6. Cloze abierto, 6 huecos de una palabra (6).
+
+### Paper 2 · Writing · 45 min · 2 partes · ≈ 100 palabras cada una
+1. Email obligatorio en respuesta a un mensaje de un amigo con 4 notas.
+2. A elegir: un artículo o un relato.
+
+### Paper 3 · Listening · ≈ 35 min · 4 partes · 25 preguntas
+1. 7 diálogos o monólogos cortos, 1 pregunta de 3 opciones cada uno (en el examen real con dibujos; en la app, frases cortas).
+2. Charla o entrevista, 6 preguntas de 3 opciones.
+3. Monólogo, 6 huecos de una palabra o un número.
+4. Conversación entre dos personas, 6 preguntas de 3 opciones.
+
+### Paper 4 · Speaking · ≈ 12 min por pareja · 4 partes
+1. Entrevista personal. 2. Situación simulada: decidir juntos con 5 ideas. 3. Descripción de una foto por candidato (≈ 1 min). 4. Conversación sobre el tema de la parte 3.
+
+Nota estimada en la app (`bandaDe`, por porcentaje de lo que se corrige solo): ≥ 80 % Pass with Distinction, ≥ 70 % Pass with Merit, ≥ 60 % Pass, ≥ 45 % Nivel A2.
+
+## Cambridge B2 First (FCE)
+
+Mismo aviso: pendiente de contrastar con el handbook oficial.
+
+### Paper 1 · Reading and Use of English · 1 h 15 min · 7 partes · 52 preguntas
+1. Cloze de elección múltiple, 8 huecos de 4 opciones. 2. Cloze abierto, 8 huecos. 3. Formación de palabras, 8 huecos.
+4. Transformaciones con palabra clave, 6 (de **2 a 5 palabras**). 5. Texto largo, 6 preguntas de 4 opciones.
+6. Texto con 6 párrafos quitados y 7 párrafos A–G (uno sobra). 7. Emparejar 10 enunciados con secciones A–E.
+
+### Paper 2 · Writing · 1 h 20 min · 2 partes · 140–190 palabras cada una
+1. Ensayo obligatorio con dos ideas dadas y una propia. 2. A elegir una de tres tareas (artículo, email o carta, informe, reseña).
+
+### Paper 3 · Listening · ≈ 40 min · 4 partes · 30 preguntas
+1. 8 extractos cortos, 1 pregunta de 3 opciones cada uno. 2. Monólogo, 10 huecos con palabra o frase corta.
+3. Cinco hablantes, emparejar con 8 opciones A–H (5). 4. Entrevista o debate, 7 preguntas de 3 opciones.
+
+### Paper 4 · Speaking · 14 min por pareja · 4 partes
+1. Entrevista. 2. Turno largo comparando dos fotos (1 min). 3. Tarea colaborativa con 5 ideas. 4. Debate.
+
+Nota estimada en la app: ≥ 80 % Grade A (nivel C1), ≥ 70 % Grade B, ≥ 60 % Grade C, ≥ 45 % Nivel B1.
+
 ## PAU de Canarias · Inglés (EBAU, Distrito Universitario de Canarias)
 
 Prueba escrita de **90 minutos**, una sola opción, nivel **B1** del MCER, sin diccionario, **6 preguntas obligatorias**
@@ -124,15 +172,16 @@ Fuentes (leídas el 02/11/2026, investigación en `C:\dev\loops-diarios\ingles-b
 **Rúbricas de producción escrita** (apéndice V de las pruebas): cuatro criterios —léxica, gramatical, discursiva/organizativa y adecuación a la tarea— en bandas de 1 a 5. Las bandas exactas de B1/B2 y las de mediación (apéndice VII) están **por verificar**; los `criterios` del banco (`CRITERIOS_B1`, `CRITERIOS_B2`, `CRITERIOS_MEDIACION`) son una lista de autoevaluación basada en esas cuatro escalas.
 
 ### Cómo se modela en la app
-- `Examen` = `'b1' | 'b2'` y dos destrezas nuevas: `comprension-escrita` y `mediacion`. Escritura y oral usan `writing` y `listening`; el speaking de B1/B2 aún no está en el banco.
+- `Examen` = `'b1can' | 'b2can'` (desde la unión del 3/11/2026; `b1`/`b2` son Cambridge B1 Preliminary y B2 First) y dos destrezas nuevas: `comprension-escrita` y `mediacion`. Escritura y oral usan `writing` y `listening`; el speaking de B1/B2 aún no está en el banco.
 - Comprensión escrita T1: ejercicio con `secciones` (anuncios o textos A–H) y `opcionesComunes` con las letras; cada ítem es `emparejar`. T2: `opciones` (3 opciones en B1, 4 en B2) o `emparejar` si fueran huecos con banco. T3: V/F como `opciones` «True/False» (B1; sin copiar la prueba, a diferencia de la PAU) o respuesta abierta ≤ 3 palabras como `palabra` con `maxPalabras: 3` y todas las variantes en `correctas` (B2).
 - Producción escrita: un `redaccion` por tarea, con modelo dentro del rango de palabras (se cuentan las contracciones como dos).
 - Mediación escrita: `redaccion` con `tipoTexto: 'mediation'` y el texto fuente dentro del `enunciado`. El idioma de la fuente en la prueba real está **por confirmar**; en el banco la fuente va en español y la respuesta en inglés.
-- Cada ejercicio lleva `examenNumero`; el cuadernillo del examen 1 se monta con `#/imprimir/b1/1` y `#/imprimir/b2/1`. Minutos de cada papel en `PAPELES_DE` (`cuadernillo.ts`).
+- Cada ejercicio lleva `examenNumero`; el cuadernillo del examen 1 se monta con `#/imprimir/b1can/1` y `#/imprimir/b2can/1`. Minutos de cada papel en `PAPELES_DE` (`cuadernillo.ts`).
 - Banco hecho: examen 1 de B1 y de B2 con comprensión escrita (3 partes), producción escrita (2 tareas) y mediación escrita. Pendiente: comprensión oral (guion y audio) y producción/mediación oral.
 
 ## Mapa del banco (cómo se organiza en la app)
-- Examen → destreza (papel) → parte → ejercicio. C1: `reading-use` (8 partes), `writing` (2), `listening` (4),
+- Examen → destreza (papel) → parte → ejercicio. B1: `reading-use` (6 partes), `writing` (2), `listening` (4), `speaking` (4). B2: `reading-use` (7), `writing` (2),
+  `listening` (4), `speaking` (4). C1: `reading-use` (8 partes), `writing` (2), `listening` (4),
   `speaking` (4). PAU: una sola destreza `prueba` con 6 partes (preguntas 1–6); «examen completo» = las 6 sobre el
   mismo texto (las preguntas 1–3 comparten texto, así que van en un único ejercicio con tres bloques).
 - Cada ejercicio lleva el número de examen (`examenNumero`) para poder montar «el examen 1 de C1» entero en PDF.

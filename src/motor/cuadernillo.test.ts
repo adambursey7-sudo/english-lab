@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { BANCO } from '../banco';
-import { TIPOS_EVALUABLES } from '../banco/tipos';
+import { EXAMENES, TIPOS_EVALUABLES } from '../banco/tipos';
 import { claveDe, montarCuadernillo, numerosCuadernillo, partesListening } from './cuadernillo';
 
 describe('cuadernillo', () => {
@@ -22,7 +22,7 @@ describe('cuadernillo', () => {
   });
 
   it('cada cuadernillo solo lleva partes de su número y ninguna repetida', () => {
-    for (const examen of ['c1', 'pau', 'b1', 'b2'] as const) {
+    for (const examen of EXAMENES) {
       for (const n of numerosCuadernillo(examen)) {
         const c = montarCuadernillo(examen, n);
         expect(c).toBeDefined();
@@ -34,14 +34,14 @@ describe('cuadernillo', () => {
     }
   });
 
-  it('el examen 1 de B1 y B2 trae lectura, escritura y mediación en el orden del examen', () => {
-    for (const examen of ['b1', 'b2'] as const) {
+  it('el examen 1 de B1 y B2 de Canarias trae lectura, escritura y mediación en el orden del examen', () => {
+    for (const examen of ['b1can', 'b2can'] as const) {
       const c = montarCuadernillo(examen, 1);
       expect(c, examen).toBeDefined();
       expect(c?.papeles.map((p) => p.destreza)).toEqual(['comprension-escrita', 'writing', 'mediacion']);
       const lectura = c?.papeles[0];
       expect(lectura?.partes.map((e) => e.parte)).toEqual([1, 2, 3]);
-      expect(lectura?.minutos).toBe(examen === 'b1' ? 60 : 70);
+      expect(lectura?.minutos).toBe(examen === 'b1can' ? 60 : 70);
     }
   });
 

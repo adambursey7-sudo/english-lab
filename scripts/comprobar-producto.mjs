@@ -5,7 +5,7 @@ import { join, sep } from 'node:path';
 
 const RAIZ = 'dist-producto';
 const PROHIBIDOS_EN_NOMBRE = [/perfil-/, /^notas\//, /^intro\//, /nota-\d/, /vineta-\d/, /logo/];
-const PROHIBIDOS_EN_TEXTO = ['Eduardo', 'Gabriela', 'Josito', 'Laurita', 'Aroa', 'Aprende Inglés con Kate', 'english-lab:adam', '3574df32b00d'];
+const PROHIBIDOS_EN_TEXTO = ['Eduardo', 'Gabriela', 'Josito', 'Laurita', 'Aroa', 'Aprende Inglés con Kate', 'english-lab:adam', '3574df32b00d', 'tail0b94b8', 'Alba'];
 
 function archivos(dir) {
   return readdirSync(dir).flatMap((n) => {

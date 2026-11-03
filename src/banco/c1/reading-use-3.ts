@@ -15,7 +15,7 @@ export const READING_USE_C1_3: Ejercicio[] = [
     examenNumero: 3,
     titulo: 'Losing the stars',
     instrucciones: INSTRUCCIONES[1],
-    minutos: 10,
+    minutos: 8,
     texto:
       'For most of human history, anyone who looked up on a clear night could see the Milky Way arching overhead like a river of pale light. Today, a growing number of people have never seen it. Streetlights, illuminated signs and floodlit car parks combine to produce a permanent glow that {{1}} out the stars, a problem {{2}} as light pollution.\n\n' +
       'Campaigners are now {{3}} pressure on councils to create “dark sky reserves”, areas where outdoor lighting is strictly controlled. Visitors to one such reserve often {{4}} the experience as deeply moving, and some say it has changed the way they think about their place in the universe. Local businesses have been quick to {{5}} advantage of the new interest by offering stargazing weekends. Critics argue that dimming the lights will make streets feel less safe, but the evidence {{6}} that this fear is largely unfounded. In fact, well-designed lighting, which shines downwards and only where it is needed, can be both safer and cheaper, and several councils are now {{7}} to the idea. Progress is likely to be slow, however, since many residents {{8}} to the belief that bright streets are safe streets.',
@@ -39,7 +39,7 @@ export const READING_USE_C1_3: Ejercicio[] = [
     examenNumero: 3,
     titulo: 'The surprising power of handwriting',
     instrucciones: INSTRUCCIONES[2],
-    minutos: 10,
+    minutos: 8,
     texto:
       'In an age of keyboards and touchscreens, it would be easy to assume that handwriting is a skill {{9}} is dying out. {{10}} the contrary, a growing body of research suggests that writing by hand may be more valuable than ever. In one well-known experiment, students who took notes with a pen remembered considerably {{11}} of a lecture than those who typed, apparently because they could not write down every word and were forced to decide what mattered.\n\n' +
       'Handwriting also seems to help young children learn to read. Those who practise forming letters {{12}} hand recognise them faster than children who only see them on a screen. {{13}} the benefits, however, many schools have cut back on handwriting lessons to make room for computer skills. Teachers who regret this point out that the two do not have to be taught {{14}} the expense of each other.\n\n' +
@@ -64,7 +64,7 @@ export const READING_USE_C1_3: Ejercicio[] = [
     examenNumero: 3,
     titulo: 'The museum of today',
     instrucciones: INSTRUCCIONES[3],
-    minutos: 10,
+    minutos: 8,
     texto:
       'Museums used to have a reputation for being {{17}} places, full of glass cases and hushed voices. Today, many of them are doing everything they can to change that image. Visitors are encouraged to touch objects, to take part in {{18}} workshops and even to sleep overnight among the exhibits. The {{19}} of this approach is clear: attendance figures have risen sharply wherever it has been tried.\n\n' +
       'Some experts, however, are {{20}} about the trend, arguing that a museum’s first duty is the {{21}} of its collections rather than the entertainment of its visitors. They fear that too much emphasis on fun may make people less {{22}} to concentrate on the objects themselves. Defenders of the new style point out that a museum that nobody visits is of little {{23}} to anyone. It is {{24}}, then, that most directors now see the future in a compromise.',
@@ -212,7 +212,7 @@ export const READING_USE_C1_3: Ejercicio[] = [
     titulo: 'Public libraries',
     instrucciones:
       'You are going to read four extracts from articles in which writers give their views on the future of public libraries. For questions 37–40, choose from the writers A–D. The writers may be chosen more than once.',
-    minutos: 12,
+    minutos: 9,
     secciones: [
       {
         letra: 'A',

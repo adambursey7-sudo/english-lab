@@ -1,6 +1,6 @@
 // «Aula» sin servidor: el profe comparte un examen con un enlace (o QR) y los alumnos devuelven su resultado como un texto
 // que el profe pega en su tabla de clase. Todo viaja en el propio texto: no hay cuentas ni datos en ningún servidor.
-import type { Ejercicio, Examen } from '../banco/tipos';
+import { esExamen, type Ejercicio, type Examen } from '../banco/tipos';
 import { base64url, desdeBase64url } from './licencia';
 import { versionB } from './generador';
 
@@ -28,7 +28,7 @@ export function codificarExamen(x: ExamenAula): string {
 export function decodificarExamen(t: string): ExamenAula | null {
   try {
     const g = desdeBase64(t) as Record<string, unknown>;
-    if (!g || g.v !== 1 || !['c1', 'pau', 'b1', 'b2'].includes(g.examen as string) || !Array.isArray(g.ids)) return null;
+    if (!g || g.v !== 1 || !esExamen(g.examen) || !Array.isArray(g.ids)) return null;
     const ids = [...new Set(g.ids.filter((i): i is string => typeof i === 'string' && /^[\w.-]{1,80}$/.test(i)))].slice(0, 60);
     if (ids.length === 0) return null;
     const marca = (g.marca ?? {}) as Record<string, unknown>;
@@ -99,14 +99,22 @@ export function decodificarEntrega(linea: string): Entrega | null {
 
 /** Pega varias entregas (una por línea): devuelve las válidas y cuántas líneas no se entendieron. */
 export function leerEntregas(pegado: string): { entregas: Entrega[]; ignoradas: number } {
-  const lineas = pegado.split(/\s+/).filter(Boolean);
   const porClave = new Map<string, Entrega>();
   let ignoradas = 0;
-  for (const l of lineas) {
-    const e = decodificarEntrega(l);
-    // Si el mismo alumno aparece dos veces con el mismo examen, vale la última.
-    if (e) porClave.set(`${e.alumno}|${e.titulo}`, e);
-    else ignoradas++;
+  for (const linea of pegado.split(/\r?\n/)) {
+    // Un texto suelto de varias palabras cuenta como una sola cosa que no se entendió, no como una por palabra.
+    let enBasura = false;
+    for (const l of linea.split(/\s+/).filter(Boolean)) {
+      const e = decodificarEntrega(l);
+      // Si el mismo alumno aparece dos veces con el mismo examen, vale la última.
+      if (e) {
+        porClave.set(`${e.alumno}|${e.titulo}`, e);
+        enBasura = false;
+      } else if (!enBasura) {
+        ignoradas++;
+        enBasura = true;
+      }
+    }
   }
   const entregas = [...porClave.values()];
   return { entregas, ignoradas };

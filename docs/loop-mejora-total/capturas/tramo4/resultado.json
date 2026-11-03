@@ -1,0 +1,105 @@
+{
+ "resultados": [
+  {
+   "nombre": "Producto: sale el asistente de primera vez",
+   "ok": true,
+   "detalle": ""
+  },
+  {
+   "nombre": "Producto: sin nada de Kate en la pantalla",
+   "ok": true,
+   "detalle": ""
+  },
+  {
+   "nombre": "La cabecera lleva el nombre de la academia",
+   "ok": true,
+   "detalle": "ACADEMIA SOL Exámenes de inglés"
+  },
+  {
+   "nombre": "El logo de la academia está en la cabecera",
+   "ok": true,
+   "detalle": ""
+  },
+  {
+   "nombre": "La marca se recuerda al recargar",
+   "ok": true,
+   "detalle": ""
+  },
+  {
+   "nombre": "Sin licencia: marca de agua DEMO",
+   "ok": true,
+   "detalle": ""
+  },
+  {
+   "nombre": "Sin licencia: tope de exámenes guardados",
+   "ok": true,
+   "detalle": "En la versión de prueba se guardan 3 exámenes como máximo. Borra alguno o activa"
+  },
+  {
+   "nombre": "Licencia manipulada: se rechaza",
+   "ok": true,
+   "detalle": ""
+  },
+  {
+   "nombre": "Licencia caducada: avisa",
+   "ok": true,
+   "detalle": ""
+  },
+  {
+   "nombre": "Licencia buena: se activa para la academia",
+   "ok": true,
+   "detalle": ""
+  },
+  {
+   "nombre": "Con licencia: sin marca de agua",
+   "ok": true,
+   "detalle": ""
+  },
+  {
+   "nombre": "Enlace del examen creado",
+   "ok": true,
+   "detalle": "337 caracteres"
+  },
+  {
+   "nombre": "QR del examen dibujado",
+   "ok": true,
+   "detalle": ""
+  },
+  {
+   "nombre": "PDF del cuadernillo generado",
+   "ok": true,
+   "detalle": "106 KB"
+  },
+  {
+   "nombre": "PDF: lleva el nombre de la academia y no dice DEMO",
+   "ok": true,
+   "detalle": ""
+  },
+  {
+   "nombre": "El alumno ve el nombre de la academia",
+   "ok": true,
+   "detalle": ""
+  },
+  {
+   "nombre": "El alumno obtiene su código de resultado",
+   "ok": true,
+   "detalle": "282 caracteres"
+  },
+  {
+   "nombre": "Resultado con QR para el profe",
+   "ok": true,
+   "detalle": ""
+  },
+  {
+   "nombre": "Mi clase: sale el alumno con su nota",
+   "ok": true,
+   "detalle": "Alumno Examen Aciertos Nota Lucía Pérez Prueba de inglés · PAU Canarias (modelo "
+  },
+  {
+   "nombre": "Mi clase: avisa de la línea que no entendió",
+   "ok": true,
+   "detalle": ""
+  }
+ ],
+ "errores": []
+}

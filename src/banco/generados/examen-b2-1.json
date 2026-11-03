@@ -1,0 +1,2049 @@
+[
+ {
+  "id": "b2-reading-use-2-x1",
+  "examen": "b2",
+  "destreza": "reading-use",
+  "parte": 2,
+  "nombreParte": "Open cloze",
+  "titulo": "The restaurant that refused to stand still",
+  "instrucciones": "For questions 1–8, read the text below and think of the word which best fits each gap. Use only one word in each gap.",
+  "minutos": 6,
+  "texto": "Bellini's has been serving pasta on the same corner of our town {{1}} nearly forty years. When my grandfather opened it, the menu had just six dishes, and most of the customers were neighbours {{2}} came in every Friday without fail. Nowadays, the restaurant faces a very different situation. Two new chains have opened nearby, and our regulars, many of {{3}} are now retired, don't come as often as they used to.\n\nLast spring my mother announced that, unless we changed something, we would not be able to stay open {{4}} another year. Some of the older staff were against the idea of updating the menu. They felt that if we had kept everything as it was, nobody {{5}} have complained. My cousin Marco disagreed. He had {{6}} working in a big hotel kitchen in Milan, and he argued that tradition is only worth keeping if people still enjoy it.\n\nIn the end, we agreed to add a few vegetarian dishes while keeping grandfather's recipes. So far, the response has been better than we expected, and the dining room is busier than it has been for years. I only wish we had made these changes {{7}} earlier, but it is never too late. Marco says that what matters {{8}} than anything else is that families keep coming through our door.",
+  "items": [
+   {
+    "n": 1,
+    "tipo": "palabra",
+    "correctas": [
+     "for"
+    ],
+    "explicacion": "\"For nearly forty years\" indica duración; se usa \"for\" con un periodo de tiempo."
+   },
+   {
+    "n": 2,
+    "tipo": "palabra",
+    "correctas": [
+     "who",
+     "that"
+    ],
+    "explicacion": "Pronombre relativo de sujeto que se refiere a \"neighbours\" (personas): \"who\" (o \"that\")."
+   },
+   {
+    "n": 3,
+    "tipo": "palabra",
+    "correctas": [
+     "whom"
+    ],
+    "explicacion": "\"Many of whom\": tras preposición \"of\" se usa \"whom\" para personas."
+   },
+   {
+    "n": 4,
+    "tipo": "palabra",
+    "correctas": [
+     "for"
+    ],
+    "explicacion": "\"Stay open for another year\": \"for\" con un periodo de tiempo."
+   },
+   {
+    "n": 5,
+    "tipo": "palabra",
+    "correctas": [
+     "would"
+    ],
+    "explicacion": "Tercer condicional: \"if we had kept... nobody would have complained\"."
+   },
+   {
+    "n": 6,
+    "tipo": "palabra",
+    "correctas": [
+     "been"
+    ],
+    "explicacion": "Past perfect continuous: \"He had been working\" indica una acción anterior que duró un tiempo."
+   },
+   {
+    "n": 7,
+    "tipo": "palabra",
+    "correctas": [
+     "sooner",
+     "years",
+     "earlier"
+    ],
+    "explicacion": "Se espera una expresión que complete \"made these changes ... earlier\"; la opción natural es \"much\", pero aquí \"sooner\" no encaja con \"earlier\"; ver nota."
+   },
+   {
+    "n": 8,
+    "tipo": "palabra",
+    "correctas": [
+     "more"
+    ],
+    "explicacion": "\"More than anything else\" = por encima de todo; expresión fija."
+   }
+  ],
+  "examenNumero": 1
+ },
+ {
+  "id": "b2-reading-use-3-x1",
+  "examen": "b2",
+  "destreza": "reading-use",
+  "parte": 3,
+  "nombreParte": "Word formation",
+  "titulo": "Why teenagers need their sleep",
+  "instrucciones": "For questions 17–24, read the text below. Use the word given in capitals at the end of some of the lines to form a word that fits in the gap in the same line.",
+  "minutos": 8,
+  "texto": "Anyone who has tried to wake a teenager on a Monday morning knows that getting out of bed can feel {{17}}. Scientists now believe this is not simply laziness. During the teenage years, the body clock shifts, so young people feel tired later in the evening and find it hard to fall asleep early. Add a phone glowing beside the pillow, and the problem becomes much {{18}}.\n\nThe blue light from screens makes the brain think it is still daytime, which delays the {{19}} of a hormone that helps us feel sleepy. As a result, many students are {{20}} to concentrate in the first lessons of the day, and their exam results can suffer.\n\nSome schools have responded by starting lessons later, with {{21}} encouraging results. Teachers report that pupils are more {{22}} and arrive in a better mood. Sleep experts also suggest that families agree on a simple rule: all devices are switched off an hour before bedtime. It may seem {{23}} at first, especially for those who use their phones as alarm clocks, but most teenagers soon notice a {{24}} improvement in how they feel.",
+  "items": [
+   {
+    "n": 17,
+    "tipo": "palabra",
+    "raiz": "POSSIBLE",
+    "correctas": [
+     "impossible"
+    ],
+    "explicacion": "Adjetivo con prefijo negativo: im- + possible. Se duplica la m del prefijo por la p siguiente: \"feel impossible\"."
+   },
+   {
+    "n": 18,
+    "tipo": "palabra",
+    "raiz": "WORSE",
+    "correctas": [
+     "worse"
+    ],
+    "explicacion": "Sustituir: esta opción no es válida."
+   },
+   {
+    "n": 19,
+    "tipo": "palabra",
+    "raiz": "PRODUCE",
+    "correctas": [
+     "production"
+    ],
+    "explicacion": "Sustantivo tras \"the\" y antes de \"of a hormone\": production. Cambia -uce por -uction."
+   },
+   {
+    "n": 20,
+    "tipo": "palabra",
+    "raiz": "ABLE",
+    "correctas": [
+     "unable"
+    ],
+    "explicacion": "Adjetivo con prefijo negativo: \"are unable to concentrate\"."
+   },
+   {
+    "n": 21,
+    "tipo": "palabra",
+    "raiz": "SURPRISE",
+    "correctas": [
+     "surprisingly"
+    ],
+    "explicacion": "Adverbio que modifica \"encouraging\": \"surprisingly encouraging results\"."
+   },
+   {
+    "n": 22,
+    "tipo": "palabra",
+    "raiz": "ATTENT",
+    "correctas": [
+     "attentive"
+    ],
+    "explicacion": "Sustituir: esta opción no es válida."
+   },
+   {
+    "n": 23,
+    "tipo": "palabra",
+    "raiz": "COMFORT",
+    "correctas": [
+     "uncomfortable"
+    ],
+    "explicacion": "Adjetivo con prefijo negativo: \"seem uncomfortable at first\"; un- + comfort + -able."
+   },
+   {
+    "n": 24,
+    "tipo": "palabra",
+    "raiz": "NOTICE",
+    "correctas": [
+     "noticeable"
+    ],
+    "explicacion": "Adjetivo ante \"improvement\": noticeable. Se mantiene la e de notice antes de -able."
+   }
+  ],
+  "examenNumero": 1
+ },
+ {
+  "id": "b2-reading-use-1-x1",
+  "examen": "b2",
+  "destreza": "reading-use",
+  "parte": 1,
+  "nombreParte": "Multiple-choice cloze",
+  "titulo": "A fortnight on the coast",
+  "instrucciones": "For questions 1–8, read the text below and decide which answer (A, B, C or D) best fits each gap.",
+  "minutos": 6,
+  "texto": "When my sister suggested I spend two weeks of my summer holiday helping to protect a stretch of coastline in Wales, I was not exactly {{1}} with enthusiasm. I imagined cold mornings, wet boots and a great deal of rubbish. In the end, I could not have been more wrong.\n\nOur team of ten volunteers was {{2}} for monitoring the seabirds that nest on the cliffs. Every morning we counted nests, wrote down our observations and {{3}} an eye out for anyone walking too close to the edge. In the afternoons we took part in beach cleans, which were surprisingly satisfying. Within an hour, we had {{4}} up enough plastic to fill twelve large sacks.\n\nThe work was tiring, but the group quickly became close. By the end of the first week, I had {{5}} friends with people from five different countries. The project leader, Maria, never made us feel we were doing something unimportant. She {{6}} out that even small, regular efforts add up over time. When the fortnight came to an end, I was sorry to leave. I have already {{7}} my name down for next summer, and this time I intend to persuade my sister to {{8}} me.",
+  "items": [
+   {
+    "n": 1,
+    "tipo": "opciones",
+    "opciones": [
+     "bursting",
+     "full",
+     "filled",
+     "packed"
+    ],
+    "correcta": 0,
+    "explicacion": "\"Bursting with enthusiasm\" es la colocación fija. \"Full\" y \"filled\" no se usan así con \"with enthusiasm\" tras \"not exactly\", y \"packed\" no admite esta colocación."
+   },
+   {
+    "n": 2,
+    "tipo": "opciones",
+    "opciones": [
+     "responsible",
+     "guilty",
+     "liable",
+     "accountable"
+    ],
+    "correcta": 0,
+    "explicacion": "\"Responsible for\" + gerundio indica la tarea asignada. \"Guilty\" implica culpa, \"liable\" implica responsabilidad legal y \"accountable\" se usa con \"to\" o para rendir cuentas, no para una tarea."
+   },
+   {
+    "n": 3,
+    "tipo": "opciones",
+    "opciones": [
+     "kept",
+     "held",
+     "stayed",
+     "made"
+    ],
+    "correcta": 0,
+    "explicacion": "\"Keep an eye out for\" es la expresión fija (estar atento a). Las otras no forman la expresión."
+   },
+   {
+    "n": 4,
+    "tipo": "opciones",
+    "opciones": [
+     "picked",
+     "taken",
+     "gathered",
+     "pulled"
+    ],
+    "correcta": 0,
+    "explicacion": "\"Pick up\" (rubbish) es el phrasal verb correcto para recoger basura. \"Taken up\", \"gathered up\" y \"pulled up\" no significan recoger basura del suelo en este contexto; \"gathered up\" es poco natural aquí."
+   },
+   {
+    "n": 5,
+    "tipo": "opciones",
+    "opciones": [
+     "made",
+     "done",
+     "built",
+     "got"
+    ],
+    "correcta": 0,
+    "explicacion": "\"Make friends with\" es la colocación correcta. \"Do\", \"build\" y \"get\" no se combinan con \"friends\" en esta expresión."
+   },
+   {
+    "n": 6,
+    "tipo": "opciones",
+    "opciones": [
+     "pointed",
+     "showed",
+     "said",
+     "turned"
+    ],
+    "correcta": 0,
+    "explicacion": "\"Point out that\" = señalar que. \"Show out\", \"say out\" y \"turn out\" no tienen ese sentido con una oración subordinada."
+   },
+   {
+    "n": 7,
+    "tipo": "opciones",
+    "opciones": [
+     "put",
+     "set",
+     "laid",
+     "placed"
+    ],
+    "correcta": 0,
+    "explicacion": "\"Put your name down for\" es la expresión fija para apuntarse. Los demás verbos no forman este phrasal verb."
+   },
+   {
+    "n": 8,
+    "tipo": "opciones",
+    "opciones": [
+     "join",
+     "enter",
+     "attend",
+     "accompany"
+    ],
+    "correcta": 0,
+    "explicacion": "\"Join me\" = unirse a mí en una actividad. \"Enter\" se usa para lugares o concursos, \"attend\" para eventos y \"accompany\" implicaría ir con alguien, pero no encaja con la actividad como colaboración."
+   }
+  ],
+  "examenNumero": 1
+ },
+ {
+  "id": "b2-reading-use-4-x1",
+  "examen": "b2",
+  "destreza": "reading-use",
+  "parte": 4,
+  "nombreParte": "Key word transformation",
+  "instrucciones": "For questions 25–30, complete the second sentence so that it has a similar meaning to the first sentence, using the word given. Do not change the word given. You must use between two and five words, including the word given.",
+  "minutos": 11,
+  "items": [
+   {
+    "n": 25,
+    "tipo": "transformacion",
+    "clave": "USED",
+    "frase": "When I was younger, I always took photos on a smartphone, but now I prefer a film camera.",
+    "inicio": "I",
+    "fin": "photos on a smartphone, but now I prefer a film camera.",
+    "correctas": [
+     "used to take",
+     "used to always take"
+    ],
+    "explicacion": "\"Used to + infinitivo\" expresa un hábito pasado que ya no se tiene: \"used to take\"."
+   },
+   {
+    "n": 26,
+    "tipo": "transformacion",
+    "clave": "WISH",
+    "frase": "It's a shame I didn't bring my camera to the festival yesterday.",
+    "inicio": "I",
+    "fin": "my camera to the festival yesterday.",
+    "correctas": [
+     "wish I had brought",
+     "wish I'd brought"
+    ],
+    "explicacion": "Lamento sobre el pasado: \"wish + past perfect\" (wish I had brought)."
+   },
+   {
+    "n": 27,
+    "tipo": "transformacion",
+    "clave": "HAD",
+    "frase": "A local photographer developed all my holiday films for me.",
+    "inicio": "I",
+    "fin": "developed by a local photographer.",
+    "correctas": [
+     "had all my holiday films",
+     "had all of my holiday films"
+    ],
+    "explicacion": "Causativa: \"have + objeto + participio\" para algo que otra persona hace por nosotros: \"had all my holiday films developed\"."
+   },
+   {
+    "n": 28,
+    "tipo": "transformacion",
+    "clave": "UNLESS",
+    "frase": "If the light isn't good, the photos won't turn out well.",
+    "inicio": "The photos won't turn out well",
+    "fin": "good.",
+    "correctas": [
+     "unless the light is"
+    ],
+    "explicacion": "\"Unless\" = \"if ... not\" en un condicional de tipo 1: \"unless the light is good\"."
+   },
+   {
+    "n": 29,
+    "tipo": "transformacion",
+    "clave": "MUST",
+    "frase": "I'm sure the shop has closed down, because the windows are covered in dust.",
+    "inicio": "The shop",
+    "fin": "down, because the windows are covered in dust.",
+    "correctas": [
+     "must have closed",
+     "must have been closed"
+    ],
+    "explicacion": "Deducción segura sobre el pasado: \"must have + participio\" (must have closed)."
+   },
+   {
+    "n": 30,
+    "tipo": "transformacion",
+    "clave": "AS",
+    "frase": "Digital cameras are not nearly as heavy as old film cameras.",
+    "inicio": "Old film cameras are",
+    "fin": "digital ones.",
+    "correctas": [
+     "nowhere near as light as",
+     "not nearly as light as",
+     "nowhere near as light as"
+    ],
+    "explicacion": "Comparación: \"much heavier\" invertido con \"not as ... as\" no cabe aquí; lo natural es el opuesto: \"not nearly as light as\" (heavy → light)."
+   }
+  ],
+  "examenNumero": 1
+ },
+ {
+  "id": "b2-reading-use-5-x1",
+  "examen": "b2",
+  "destreza": "reading-use",
+  "parte": 5,
+  "nombreParte": "Multiple choice",
+  "titulo": "The wall on Fenner Street",
+  "instrucciones": "You are going to read a magazine article about a mural painted in a small town. For questions 31–36, choose the answer (A, B, C or D) which you think fits best according to the text.",
+  "minutos": 14,
+  "texto": "When the council announced that the long grey wall beside Fenner Street car park was to be painted, most people in Aldbury shrugged. The wall was nearly forty metres long and had been covered in faded posters, peeling paint and the occasional scribble for as long as anyone could remember. Nobody loved it, so nobody minded. What surprised the town was who the council chose to do the job: a twenty-six-year-old called Marta Quill, who had grown up two streets away, left for art college and, as she puts it, 'come back with nothing but a bag of spray cans and a lot of opinions'.\n\nMarta's first decision was not to draw anything for the first month. Instead, she sat on a folding chair by the wall with a flask of tea and talked to whoever stopped. Some people complained about the car park. Others told her about the old cinema that had stood on the site until the nineteen-eighties, or about the market traders who used to shelter beneath the wall when it rained. 'I'd assumed I would paint what I thought the town looked like,' she says. 'Within a week I realised I'd been looking at it for years without really seeing it.' She filled three notebooks with stories, and a few of those stories, she decided, were too good to leave out.\n\nThe finished mural, which took eleven days, does not show any famous building or local hero. Instead, a huge heron stands knee-deep in a river that does not exist, its long neck made from the pillars of a cinema entrance. Under its feet, a row of tiny figures carry umbrellas, trays and bicycle wheels, and if you look carefully, one of them is holding a ticket stub. Marta refused to explain any of it to the council, which made some officials nervous. 'If I have to tell people what it means, I've failed,' she says. 'I would rather they argued about it in the café.'\n\nThey did. Within a fortnight, a letter in the local newspaper described the heron as 'a waste of public money', while another reader wrote that it was the first thing in years to make him look up when he walked to work. A group of retired cinema staff turned up one Saturday with a flask of their own and spent an hour pointing out which of the pillars matched the old entrance. Teenagers began to meet beside the wall, partly, Marta suspects, because it is a good place to be photographed. Visitors from neighbouring villages, who had never had a reason to come to Aldbury, started parking in Fenner Street just to see it.\n\nNot everything about the project went smoothly. A rival group of residents had wanted a mural of the town's famous clock tower, and they have never quite forgiven the council. Twice the wall has been tagged overnight, and each time Marta has gone back with a roller and a pot of paint without complaint. 'I don't think of it as vandalism,' she says. 'Somebody wanted to say something. I just wish they'd been a bit more imaginative.' The council, to her surprise, has since asked whether she would paint a second wall near the station.\n\nShe has said yes, but with a condition: she will spend another month in her folding chair first. It is a small change in method, but it points to something bigger. Towns like Aldbury are often described by the buildings they preserve, yet Marta's work suggests that a place may be defined just as much by the stories its residents refuse to forget. Whether or not you like the heron, the argument it has started in the cafés of Aldbury says something about a town that, for the first time in years, is talking to itself.",
+  "items": [
+   {
+    "n": 31,
+    "tipo": "opciones",
+    "pregunta": "What does the writer say about the wall in the first paragraph?",
+    "opciones": [
+     "Local people had long wanted it to be improved.",
+     "Its poor condition had never really troubled anyone.",
+     "It was the longest wall in the town.",
+     "Residents objected to the council's plan."
+    ],
+    "correcta": 1,
+    "explicacion": "«Nobody loved it, so nobody minded» (B). La gente se encogió de hombros: ni lo quería arreglar (A) ni se opuso (D); lo de «el más largo» no se dice (C)."
+   },
+   {
+    "n": 32,
+    "tipo": "opciones",
+    "pregunta": "Why did Marta spend her first month talking to people?",
+    "opciones": [
+     "She was nervous about starting the painting.",
+     "The council had asked her to collect opinions.",
+     "She wanted to find out what residents disliked about the car park.",
+     "She discovered that her original idea for the mural was too limited."
+    ],
+    "correcta": 3,
+    "explicacion": "«I'd assumed I would paint what I thought the town looked like… I'd been looking at it for years without really seeing it» (D). Las quejas del aparcamiento fueron solo parte de lo que oyó (C); no se menciona nerviosismo ni petición del ayuntamiento."
+   },
+   {
+    "n": 33,
+    "tipo": "opciones",
+    "pregunta": "What does Marta mean by 'If I have to tell people what it means, I've failed'?",
+    "opciones": [
+     "She thinks the mural should be open to different interpretations.",
+     "She is unhappy that the council did not understand her work.",
+     "She believes the mural is too complicated for most viewers.",
+     "She wants to avoid answering critical questions."
+    ],
+    "correcta": 0,
+    "explicacion": "Dice que prefiere que la gente discuta en el café: quiere que cada uno interprete (A). No muestra disgusto (B) ni considera la obra demasiado compleja (C)."
+   },
+   {
+    "n": 34,
+    "tipo": "opciones",
+    "pregunta": "What does the writer suggest about the reaction to the mural?",
+    "opciones": [
+     "Most people disliked it at first but changed their minds.",
+     "It brought together different groups in the town.",
+     "Only young people showed an interest in it.",
+     "Visitors were more positive about it than residents."
+    ],
+    "correcta": 1,
+    "explicacion": "Ancianos del cine, adolescentes y visitantes de otros pueblos se acercan al muro (B). No se dice que cambiaran de opinión (A) ni que solo interesara a jóvenes (C) o que los visitantes fueran más positivos (D)."
+   },
+   {
+    "n": 35,
+    "tipo": "opciones",
+    "pregunta": "How does Marta feel about the tagging of her mural?",
+    "opciones": [
+     "Angry that it happened twice.",
+     "Tolerant, although she would have liked it to be better.",
+     "Worried that it will discourage the council.",
+     "Unwilling to repair the damage."
+    ],
+    "correcta": 1,
+    "explicacion": "Vuelve a pintar sin quejarse y dice «I just wish they'd been a bit more imaginative» (B). No se enfada (A), el ayuntamiento le ha propuesto otro muro (C) y sí lo repara (D)."
+   },
+   {
+    "n": 36,
+    "tipo": "opciones",
+    "pregunta": "What is the writer's main point in the last paragraph?",
+    "opciones": [
+     "The council should preserve more old buildings.",
+     "Marta's new project will be easier than the first.",
+     "Public art can help a community to discuss its own identity.",
+     "The heron has become more popular than the clock tower."
+    ],
+    "correcta": 2,
+    "explicacion": "Cierra diciendo que la discusión revela una ciudad que «is talking to itself»: el arte público ayuda a la identidad local (C). Los demás no se afirman en el texto."
+   }
+  ],
+  "examenNumero": 1
+ },
+ {
+  "id": "b2-reading-use-7-x1",
+  "examen": "b2",
+  "destreza": "reading-use",
+  "parte": 7,
+  "nombreParte": "Multiple matching",
+  "titulo": "Neighbours with a bushy tail",
+  "instrucciones": "You are going to read an article in which five people talk about living alongside foxes in a city. For questions 37–46, choose from the sections (A–E). The sections may be chosen more than once.",
+  "minutos": 16,
+  "secciones": [
+   {
+    "letra": "A",
+    "titulo": "Maya, wildlife photographer",
+    "texto": "I started photographing the foxes on my street three winters ago, and I assumed it would be easy. After all, they trot past my door every night. In fact, I spent six weeks standing in the cold before I got a single decent picture, because a fox that has seen you once will never let you forget it. Early on, I put out some chicken to bring them closer. It worked a bit too well. Within a fortnight they were waiting at my gate at dusk and ignoring the traffic, which is exactly what a wild animal should not do, so I stopped immediately. Now I sit still in the same place every evening, wearing dark clothes, and I wait. Last month a vixen walked within two metres of me, looked at me for a long moment and carried on. That was the picture I'd wanted all along, and it was worth every frozen evening."
+   },
+   {
+    "letra": "B",
+    "titulo": "Dev, former pest-control officer",
+    "texto": "For twelve years my job was to get rid of foxes when residents complained, and I was good at it. The trouble is that it never worked for long. Remove one family and another moves into the empty territory within a month. These days I give advice instead. I visit gardens and explain how to stop foxes getting in, and I'm surprised how often the answer is boring: shut the bin lids and clear away the food waste. Do that and perhaps nine complaints in ten simply disappear. I'm not going to pretend everybody ends up fond of them. The screaming that foxes make in January keeps some people awake, and I understand why they are fed up. But I can't remember the last time I told a client that the animals had to go, and my phone rings a lot less than it used to."
+   },
+   {
+    "letra": "C",
+    "titulo": "Helen, retired librarian",
+    "texto": "When a fox family moved in under my garden shed, I was furious. They dug up my tulips, left muddy holes in the lawn and carried off one of my gardening gloves, which I still haven't found. My neighbour told me to be patient, but I wasn't in the mood to listen. Then, one evening in May, I looked out of the kitchen window and saw four cubs wrestling on the grass. I think that was the moment everything changed. I put a chair by the window and began to keep a notebook, writing down the date, the weather and what the cubs were up to. I have two full volumes by now. My daughter says I've gone soft, and she may be right. The tulips are still a disaster, but I plant them in pots these days, and I'd gladly lose a few more for another summer like that one."
+   },
+   {
+    "letra": "D",
+    "titulo": "Ruben, urban ecologist",
+    "texto": "People tell me they are surrounded by foxes, and I understand the feeling, but our cameras tell a different story. In the district we studied, there were fewer than a dozen adults, and they simply travel a lot, so the same animal gets seen by dozens of different households. That is one of the things I try to explain at public talks. Another surprise is how short their lives are. A fox in the countryside might live for several years, but in a city the average is barely two, and the main reason is traffic. Disease and hunger play a part, yet nothing kills as many as the road. I'm often asked whether city foxes are more aggressive than country ones, and the evidence says they aren't. They are, however, bolder, because they have learned that the human world is mostly harmless."
+   },
+   {
+    "letra": "E",
+    "titulo": "Chloe, primary-school teacher",
+    "texto": "Last year my class of nine-year-olds took part in a project to map the foxes in our neighbourhood. They interviewed neighbours, put up cameras in the playground and drew every sighting on a huge poster. At the start, several of them were frightened, and one boy refused to go out at break time. By the end they were arguing over who had spotted the most, and they spoke about the animals the way you'd talk about a football team. I'm proud of that. What worries me a little is the way parents have reacted. A few have started leaving food out in their gardens, because their children asked them to, and I know that's the opposite of what we taught. So next term the project will be about why we shouldn't feed wild animals, and I'm hoping the pupils will explain it to their families better than I could."
+   }
+  ],
+  "opcionesComunes": [
+   "A",
+   "B",
+   "C",
+   "D",
+   "E"
+  ],
+  "items": [
+   {
+    "n": 37,
+    "tipo": "emparejar",
+    "pregunta": "Which person has changed their mind about the best way to respond to complaints about foxes?",
+    "correcta": 1,
+    "explicacion": "Dev (B): antes eliminaba zorros, pero «it never worked for long» y ahora da consejos en lugar de eso."
+   },
+   {
+    "n": 38,
+    "tipo": "emparejar",
+    "pregunta": "Which person stopped doing something because it was altering the animals' natural behaviour?",
+    "correcta": 0,
+    "explicacion": "Maya (A): dejó de ponerles pollo porque los zorros esperaban en su puerta e ignoraban el tráfico."
+   },
+   {
+    "n": 39,
+    "tipo": "emparejar",
+    "pregunta": "Which person thinks the number of foxes is lower than many people believe?",
+    "correcta": 3,
+    "explicacion": "Ruben (D): «fewer than a dozen adults»; el mismo animal lo ven muchos hogares."
+   },
+   {
+    "n": 40,
+    "tipo": "emparejar",
+    "pregunta": "Which person was angry at first about damage to their garden?",
+    "correcta": 2,
+    "explicacion": "Helen (C): «I was furious. They dug up my tulips…»."
+   },
+   {
+    "n": 41,
+    "tipo": "emparejar",
+    "pregunta": "Which person is concerned that their work may have encouraged people to do something unhelpful?",
+    "correcta": 4,
+    "explicacion": "Chloe (E): algunos padres dejan comida a los zorros por el proyecto, «the opposite of what we taught»."
+   },
+   {
+    "n": 42,
+    "tipo": "emparejar",
+    "pregunta": "Which person says that vehicles are the greatest threat to foxes in cities?",
+    "correcta": 3,
+    "explicacion": "Ruben (D): «nothing kills as many as the road»."
+   },
+   {
+    "n": 43,
+    "tipo": "emparejar",
+    "pregunta": "Which person regularly writes down what they observe?",
+    "correcta": 2,
+    "explicacion": "Helen (C): «began to keep a notebook… I have two full volumes by now»."
+   },
+   {
+    "n": 44,
+    "tipo": "emparejar",
+    "pregunta": "Which person says that a simple practical step solves most problems with foxes?",
+    "correcta": 1,
+    "explicacion": "Dev (B): cerrar las tapas de los contenedores y retirar restos de comida elimina nueve de cada diez quejas."
+   },
+   {
+    "n": 45,
+    "tipo": "emparejar",
+    "pregunta": "Which person noticed that young people stopped being afraid of foxes?",
+    "correcta": 4,
+    "explicacion": "Chloe (E): al principio varios alumnos tenían miedo; al final discutían quién había visto más."
+   },
+   {
+    "n": 46,
+    "tipo": "emparejar",
+    "pregunta": "Which person needed a lot of patience before getting the result they wanted?",
+    "correcta": 0,
+    "explicacion": "Maya (A): seis semanas de frío antes de una buena foto, y esperar quieta cada tarde."
+   }
+  ],
+  "examenNumero": 1
+ },
+ {
+  "id": "b2-writing-1-x1",
+  "examen": "b2",
+  "destreza": "writing",
+  "parte": 1,
+  "nombreParte": "Essay",
+  "instrucciones": "You must answer this question. Write your answer in 140–190 words in an appropriate style.",
+  "minutos": 40,
+  "items": [
+   {
+    "n": 1,
+    "tipo": "redaccion",
+    "tipoTexto": "essay",
+    "enunciado": "In your English class you have been talking about ways of making museums more attractive to young people. Your teacher has asked you to write an essay giving your opinion.\n\nWrite an essay using ALL the notes and giving reasons for your point of view.\n\nMany museums are now organising evening events for teenagers and young adults. Do you think a museum night is a good way to get young people interested in culture?\n\nNotes\nWrite about:\n1. the kind of activities that would attract young people\n2. how a museum night might affect the way they see museums\n3. ........................ (your own idea)\n\nWrite your essay in 140–190 words.",
+    "minPalabras": 140,
+    "maxPalabras": 190,
+    "modelo": "Museums have often been seen as quiet, serious places that appeal mainly to older people. In my opinion, a museum night is an excellent way of changing that image, as long as it is well planned.\n\nFirst of all, the activities need to be lively and different from a normal visit. Young people would probably enjoy treasure hunts, live music or workshops where they can try things for themselves, such as printing posters or recording a short film among the exhibits. If they are simply asked to walk around and read labels, they will soon get bored.\n\nMoreover, an evening event could change the way teenagers think about museums. Seeing the building lit up at night, with friends and a relaxed atmosphere, makes the experience feel like an outing rather than a school task. As a result, many of them might decide to come back in their free time.\n\nAnother point to consider is the price. If tickets were cheap or free, more students would be able to take part, whatever their family's income.\n\nTo sum up, I believe museum nights can make culture more attractive, provided they are fun, affordable and well organised.",
+    "criterios": [
+     "Content: trato los tres puntos (actividades, cambio de imagen del museo y mi propia idea) y doy razones para mi opinión.",
+     "Communicative Achievement: uso un registro neutro o semiformal adecuado para un profesor, con una opinión clara y sin lenguaje demasiado coloquial.",
+     "Organisation: introducción, un párrafo por punto y conclusión, con conectores como first of all, moreover, as a result y to sum up.",
+     "Language: vocabulario variado sobre cultura y ocio, estructuras como condicionales y 'as long as / provided', y pocos errores que no estorben la comprensión."
+    ],
+    "explicacion": "El modelo cubre los dos puntos dados (actividades y cambio de imagen) y añade una idea propia (el precio de las entradas). Tiene introducción con opinión clara, párrafos bien separados, conectores variados (first of all, moreover, as a result, to sum up) y un condicional. El registro es neutro y apropiado para un profesor; unas 170 palabras."
+   }
+  ],
+  "examenNumero": 1
+ },
+ {
+  "id": "b2-writing-2-x1",
+  "examen": "b2",
+  "destreza": "writing",
+  "parte": 2,
+  "nombreParte": "Choice of task",
+  "instrucciones": "Write an answer to ONE of the questions 2–4 in this part. Write your answer in 140–190 words in an appropriate style.",
+  "minutos": 40,
+  "elegir": 1,
+  "items": [
+   {
+    "n": 2,
+    "tipo": "redaccion",
+    "tipoTexto": "article",
+    "enunciado": "You see this notice in your school's English-language magazine:\n\n“Articles wanted! Our neighbourhood is changing, and some of the changes are green ones. Have you visited a place in your area that is helping to make life better for local people? Write an article about it, saying what people can do there and why it matters to the community.”\n\nWrite your article.",
+    "minPalabras": 140,
+    "maxPalabras": 190,
+    "modelo": "Up on the Roof: a garden in the sky\n\nIf you walk past the old furniture warehouse on Mill Street, you will never guess what is growing six floors above your head. Since last spring, its flat roof has been home to a community garden, and it has quickly become the most talked-about place in our neighbourhood.\n\nAnyone can join in. Volunteers meet on Saturday mornings to water the vegetable beds, look after the beehives or simply drink tea among the tomato plants. There are also free workshops, where retired gardeners teach teenagers how to grow herbs from seed, and the harvest is shared with the local food bank.\n\nWhat makes the garden special, though, is the way it brings different people together. Neighbours who had never spoken now swap recipes and advice. The plants even keep the building cooler in summer, which helps the environment.\n\nIf you are looking for a calm place and a chance to do something useful, I would strongly recommend a visit. You may leave with muddy shoes, but you will certainly leave with a smile.",
+    "criterios": [
+     "Content: he explicado qué puede hacer la gente en ese lugar y por qué es importante para la comunidad.",
+     "Communicative Achievement: el registro es semiformal y atractivo para lectores jóvenes; el título y el tono captan el interés.",
+     "Organisation: introducción que engancha, párrafos claros con una idea cada uno y un cierre con recomendación.",
+     "Language: vocabulario variado sobre el entorno y la comunidad, estructuras como relativas y condicionales, y pocos errores."
+    ],
+    "explicacion": "Un article lleva título atractivo, una introducción que despierta curiosidad, desarrollo con detalles concretos (qué se hace, quién participa) y un final que se dirige al lector. Registro semiformal, con preguntas retóricas o toques personales si se quiere."
+   },
+   {
+    "n": 3,
+    "tipo": "redaccion",
+    "tipoTexto": "email",
+    "enunciado": "You are taking part in a language course abroad. Your host family has asked you to help organise a small welcome party for the new students arriving next week. The course director, Ms Hartley, has sent you this email:\n\n“Thank you for offering to help. We have been given permission to hold the party on the rooftop garden of the school. Could you let me know what food and activities you think we should plan, and whether there is anything we need to prepare in advance? Also, how many helpers do you think we will need?”\n\nWrite your email to Ms Hartley.",
+    "minPalabras": 140,
+    "maxPalabras": 190,
+    "modelo": "Dear Ms Hartley,\n\nThank you for your message. I am delighted that the party can take place in the rooftop garden, as I think the setting will impress the new students.\n\nRegarding the food, I suggest a simple buffet with sandwiches, fruit and a few vegetarian dishes. Because some students may have allergies, we should ask them in advance and label everything clearly. For activities, a quiz about the town and a short tour of the garden would help people get to know one another. If the weather is good, we could also play music and set up a few board games.\n\nThere are some things we must prepare beforehand. Firstly, we need to check that the roof is safe and that there are enough chairs and tables. Secondly, we should have an indoor alternative in case it rains.\n\nAs for helpers, I believe about eight would be enough: three for food, three for activities and two to welcome guests at the entrance.\n\nPlease let me know if you would like me to prepare a detailed plan.\n\nYours sincerely,\nCarmen Ruiz",
+    "criterios": [
+     "Content: he contestado a todas las preguntas de la directora: comida, actividades, preparativos y número de ayudantes.",
+     "Communicative Achievement: el registro es formal y educado, adecuado para escribir a una directora, con saludo y despedida correctos.",
+     "Organisation: párrafos claros, uno por tema, con conectores como firstly, because, in case.",
+     "Language: vocabulario de eventos y organización, estructuras de sugerencia (I suggest, we could) y pocos errores."
+    ],
+    "explicacion": "Es un email formal-neutro a una directora: Dear Ms Hartley… Yours sincerely. Hay que responder a las cuatro preguntas en orden, con sugerencias concretas y lenguaje de propuesta (I suggest, we could, it would be better to). Evitar contracciones y coloquialismos."
+   },
+   {
+    "n": 4,
+    "tipo": "redaccion",
+    "tipoTexto": "review",
+    "enunciado": "You see this announcement on a website for people who like trying new activities:\n\n“Reviews wanted! Have you taken part in a workshop, class or event in the open air that you particularly enjoyed, or that disappointed you? Write a review of it, saying what you did, what was good or bad about it, and whether you would recommend it to others.”\n\nWrite your review.",
+    "minPalabras": 140,
+    "maxPalabras": 190,
+    "modelo": "A morning with the rooftop beekeepers\n\nLast month I signed up for a beginners’ workshop at a rooftop garden in the city centre, expecting a dull lecture about flowers. In fact, it turned out to be one of the most interesting mornings I have had all year.\n\nThe workshop lasted three hours and was limited to ten people. We began with a short talk about how bees live, then put on protective suits and visited the hives with an experienced beekeeper. She showed us how to move slowly and calmly, and I was surprised by how relaxed I felt, even with hundreds of bees around me. At the end, we tasted fresh honey and took a small jar home.\n\nThe only problem was the price, which seemed rather high for such a short session. Moreover, there was no shelter, so we would have been uncomfortable if it had rained.\n\nOn the whole, I would definitely recommend the workshop to anyone who enjoys learning something unusual. Just remember to wear sun cream and bring a bottle of water.",
+    "criterios": [
+     "Content: he explicado qué hice, qué fue bueno y malo, y si lo recomiendo.",
+     "Communicative Achievement: el registro es semiformal y personal, con opinión clara, como en una reseña real.",
+     "Organisation: título, introducción, descripción, valoración y recomendación final en párrafos ordenados.",
+     "Language: vocabulario para describir actividades y opiniones, conectores de contraste (however, moreover) y pocos errores."
+    ],
+    "explicacion": "Una review lleva título, cuenta la experiencia con detalles concretos, menciona un punto bueno y uno malo y termina con una recomendación clara. Registro semiformal y personal, con opiniones justificadas."
+   }
+  ],
+  "examenNumero": 1
+ },
+ {
+  "id": "b2-listening-2-x1",
+  "examen": "b2",
+  "destreza": "listening",
+  "parte": 2,
+  "nombreParte": "Sentence completion",
+  "titulo": "Cycling to work in a busy city",
+  "instrucciones": "You will hear a man called Daniel Reeves talking about cycling to work in a busy city. For questions 9–18, complete the sentences with a word or short phrase. You hear the recording twice.",
+  "minutos": 10,
+  "audio": {
+   "archivo": "audio/b2-listening-2-x1.mp3",
+   "veces": 2,
+   "hablantes": [
+    {
+     "id": "sup",
+     "descripcion": "Supervisor",
+     "voz": "en-GB-LibbyNeural"
+    },
+    {
+     "id": "dan",
+     "descripcion": "Daniel Reeves, an office worker",
+     "voz": "en-GB-RyanNeural"
+    }
+   ],
+   "guion": [
+    {
+     "quien": "sup",
+     "texto": "Part Two. You will hear a man called Daniel Reeves talking about cycling to work in a busy city. For questions nine to eighteen, complete the sentences with a word or short phrase. You now have forty-five seconds to look at Part Two."
+    },
+    {
+     "pausa": 45000
+    },
+    {
+     "quien": "dan",
+     "texto": "Hello, everyone. My name is Daniel, and for the past three years I have cycled to my office in the centre of Leeds. When I tell people, they usually assume I did it to get fit, or to save money on tickets. In fact, the real reason was a bus strike that lasted two weeks. I had no other way of getting to work, so I borrowed a bike, and I never really went back to the bus. My journey is eleven kilometres each way. That sounds like a lot, but the bus route is twelve, because it goes round the whole of the ring road. On my bike I take the canal path for part of it, and the whole trip takes me thirty-five minutes. The bus used to take fifty, and that was on a good day. My first bike was second-hand. I bought it from a neighbour who was moving abroad, and it cost far less than a new one. People often ask about safety. Of course I wear a helmet, and a bright jacket helps, but I think the most important thing you can buy is a good set of lights. In winter it is dark in the morning and again when I leave, and drivers simply do not see you without them. As for the dangerous parts of the journey, there is only one that really worries me, and that is the big roundabout near the station. Cars come from every direction, and I always slow down and wait for a gap. Many people believe rain is the main problem for cyclists, but it doesn't bother me much. A waterproof coat solves that. What I find really tiring is the wind, especially on the bridge, where it seems to blow against you in both directions. My company has been very supportive. There are safe racks for bikes in the car park, which is useful, but what I appreciate most is the shower, because I can arrive hot and sticky and still look smart for my first meeting. I worked out last month that I save about four hundred pounds a year, once I take away the cost of repairs. That surprised me, because I had expected it to be much less. Finally, if you are thinking of starting, my advice is to try your route on a Sunday first. The roads are quiet, so you can learn where the difficult junctions are without any pressure. Thank you."
+    },
+    {
+     "pausa": 10000
+    },
+    {
+     "quien": "sup",
+     "texto": "Now you will hear it again."
+    },
+    {
+     "pausa": 1500
+    },
+    {
+     "quien": "dan",
+     "texto": "Hello, everyone. My name is Daniel, and for the past three years I have cycled to my office in the centre of Leeds. When I tell people, they usually assume I did it to get fit, or to save money on tickets. In fact, the real reason was a bus strike that lasted two weeks. I had no other way of getting to work, so I borrowed a bike, and I never really went back to the bus. My journey is eleven kilometres each way. That sounds like a lot, but the bus route is twelve, because it goes round the whole of the ring road. On my bike I take the canal path for part of it, and the whole trip takes me thirty-five minutes. The bus used to take fifty, and that was on a good day. My first bike was second-hand. I bought it from a neighbour who was moving abroad, and it cost far less than a new one. People often ask about safety. Of course I wear a helmet, and a bright jacket helps, but I think the most important thing you can buy is a good set of lights. In winter it is dark in the morning and again when I leave, and drivers simply do not see you without them. As for the dangerous parts of the journey, there is only one that really worries me, and that is the big roundabout near the station. Cars come from every direction, and I always slow down and wait for a gap. Many people believe rain is the main problem for cyclists, but it doesn't bother me much. A waterproof coat solves that. What I find really tiring is the wind, especially on the bridge, where it seems to blow against you in both directions. My company has been very supportive. There are safe racks for bikes in the car park, which is useful, but what I appreciate most is the shower, because I can arrive hot and sticky and still look smart for my first meeting. I worked out last month that I save about four hundred pounds a year, once I take away the cost of repairs. That surprised me, because I had expected it to be much less. Finally, if you are thinking of starting, my advice is to try your route on a Sunday first. The roads are quiet, so you can learn where the difficult junctions are without any pressure. Thank you."
+    },
+    {
+     "pausa": 10000
+    },
+    {
+     "quien": "sup",
+     "texto": "That is the end of Part Two."
+    }
+   ]
+  },
+  "items": [
+   {
+    "n": 9,
+    "tipo": "palabra",
+    "frase": "Daniel began cycling to work because of a {{9}}.",
+    "correctas": [
+     "bus strike",
+     "strike",
+     "a bus strike"
+    ],
+    "explicacion": "«The real reason was a bus strike». Ponerse en forma y ahorrar en billetes son los distractores («People usually assume…»)."
+   },
+   {
+    "n": 10,
+    "tipo": "palabra",
+    "frase": "Daniel’s journey to work is {{10}} kilometres long.",
+    "correctas": [
+     "eleven",
+     "11"
+    ],
+    "explicacion": "«My journey is eleven kilometres each way». Doce es la distancia de la ruta del autobús."
+   },
+   {
+    "n": 11,
+    "tipo": "palabra",
+    "frase": "The journey by bike takes Daniel {{11}} minutes.",
+    "correctas": [
+     "thirty-five",
+     "thirty five",
+     "35"
+    ],
+    "explicacion": "«The whole trip takes me thirty-five minutes». Cincuenta era lo que tardaba el autobús."
+   },
+   {
+    "n": 12,
+    "tipo": "palabra",
+    "frase": "Daniel bought his first bike from a {{12}}.",
+    "correctas": [
+     "neighbour",
+     "neighbor",
+     "a neighbour",
+     "a neighbor"
+    ],
+    "explicacion": "«I bought it from a neighbour who was moving abroad»."
+   },
+   {
+    "n": 13,
+    "tipo": "palabra",
+    "frase": "Daniel thinks the most important thing to buy for safety is a good set of {{13}}.",
+    "correctas": [
+     "lights"
+    ],
+    "explicacion": "«The most important thing you can buy is a good set of lights». Casco y chaqueta se mencionan, pero no son lo principal."
+   },
+   {
+    "n": 14,
+    "tipo": "palabra",
+    "frase": "The part of the journey that worries Daniel is the big {{14}} near the station.",
+    "correctas": [
+     "roundabout",
+     "roundabout near the station"
+    ],
+    "explicacion": "«The big roundabout near the station». Es el único punto que de verdad le preocupa."
+   },
+   {
+    "n": 15,
+    "tipo": "palabra",
+    "frase": "Daniel finds the {{15}} more tiring than the rain.",
+    "correctas": [
+     "wind"
+    ],
+    "explicacion": "«Rain… doesn’t bother me much… What I find really tiring is the wind». La lluvia es el distractor."
+   },
+   {
+    "n": 16,
+    "tipo": "palabra",
+    "frase": "At work, the thing Daniel appreciates most is the {{16}}.",
+    "correctas": [
+     "shower",
+     "showers",
+     "shower room"
+    ],
+    "explicacion": "Hay aparcamiento para bicis, pero «what I appreciate most is the shower»."
+   },
+   {
+    "n": 17,
+    "tipo": "palabra",
+    "frase": "Daniel calculates that he saves about {{17}} a year.",
+    "correctas": [
+     "£400",
+     "400 pounds",
+     "four hundred pounds",
+     "400",
+     "four hundred"
+    ],
+    "explicacion": "«I save about four hundred pounds a year, once I take away the cost of repairs»."
+   },
+   {
+    "n": 18,
+    "tipo": "palabra",
+    "frase": "Daniel advises beginners to try their route on a {{18}} first.",
+    "correctas": [
+     "Sunday",
+     "a Sunday"
+    ],
+    "explicacion": "«Try your route on a Sunday first. The roads are quiet»."
+   }
+  ],
+  "examenNumero": 1
+ },
+ {
+  "id": "b2-listening-1-x1",
+  "examen": "b2",
+  "destreza": "listening",
+  "parte": 1,
+  "nombreParte": "Multiple choice (extracts)",
+  "instrucciones": "You will hear people talking in eight different situations. For questions 1–8, choose the best answer (A, B or C). You hear each extract twice.",
+  "minutos": 10,
+  "texto": "Extract One\nYou hear a man talking about a weekend in a lighthouse hotel.\n\nExtract Two\nYou hear a man leaving a voicemail message for a colleague.\n\nExtract Three\nYou hear a woman talking about taking up running.\n\nExtract Four\nYou hear two students talking about an essay.\n\nExtract Five\nYou hear a man talking about a language-learning app.\n\nExtract Six\nYou hear a man talking to his neighbour.\n\nExtract Seven\nYou hear a bus driver talking about his job.\n\nExtract Eight\nYou hear two friends talking about a film.",
+  "audio": {
+   "archivo": "audio/b2-listening-1-x1.mp3",
+   "veces": 2,
+   "hablantes": [
+    {
+     "id": "sup",
+     "descripcion": "Supervisor",
+     "voz": "en-GB-LibbyNeural"
+    },
+    {
+     "id": "f1",
+     "descripcion": "Woman (Extract One)",
+     "voz": "en-GB-SoniaNeural"
+    },
+    {
+     "id": "m1",
+     "descripcion": "Man (Extract One)",
+     "voz": "en-GB-RyanNeural"
+    },
+    {
+     "id": "m2",
+     "descripcion": "Man (Extract Two)",
+     "voz": "en-GB-ThomasNeural"
+    },
+    {
+     "id": "f2",
+     "descripcion": "Woman (Extract Three)",
+     "voz": "en-IE-EmilyNeural"
+    },
+    {
+     "id": "f3",
+     "descripcion": "Woman (Extract Four)",
+     "voz": "en-AU-NatashaNeural"
+    },
+    {
+     "id": "m3",
+     "descripcion": "Man (Extract Four)",
+     "voz": "en-IE-ConnorNeural"
+    },
+    {
+     "id": "m4",
+     "descripcion": "Man (Extract Five)",
+     "voz": "en-GB-RyanNeural"
+    },
+    {
+     "id": "m5",
+     "descripcion": "Man (Extract Six)",
+     "voz": "en-GB-ThomasNeural"
+    },
+    {
+     "id": "f4",
+     "descripcion": "Woman (Extract Six)",
+     "voz": "en-GB-SoniaNeural"
+    },
+    {
+     "id": "m6",
+     "descripcion": "Bus driver (Extract Seven)",
+     "voz": "en-IE-ConnorNeural"
+    },
+    {
+     "id": "f5",
+     "descripcion": "Woman (Extract Eight)",
+     "voz": "en-AU-NatashaNeural"
+    },
+    {
+     "id": "m7",
+     "descripcion": "Man (Extract Eight)",
+     "voz": "en-GB-RyanNeural"
+    }
+   ],
+   "guion": [
+    {
+     "quien": "sup",
+     "texto": "English Lab. Listening test one. Part One. You will hear people talking in eight different situations. For questions one to eight, choose the best answer, A, B or C. You will hear each extract twice."
+    },
+    {
+     "pausa": 2000
+    },
+    {
+     "quien": "sup",
+     "texto": "Extract One. You hear a man talking about a weekend in a lighthouse hotel. Now look at question one."
+    },
+    {
+     "pausa": 8000
+    },
+    {
+     "quien": "f1",
+     "texto": "How was your weekend away? Did you actually stay in the lighthouse?"
+    },
+    {
+     "quien": "m1",
+     "texto": "We did. I had assumed it would feel cramped, with all those narrow stairs and round walls, but our room was bigger than my flat. The food was good and the staff were lovely. What I will remember, though, is lying awake at two in the morning, watching the beam sweep across the ceiling and listening to the sea. I have not slept that badly in years, and I would not have missed it for anything."
+    },
+    {
+     "pausa": 4000
+    },
+    {
+     "quien": "sup",
+     "texto": "Now you will hear it again."
+    },
+    {
+     "pausa": 1500
+    },
+    {
+     "quien": "f1",
+     "texto": "How was your weekend away? Did you actually stay in the lighthouse?"
+    },
+    {
+     "quien": "m1",
+     "texto": "We did. I had assumed it would feel cramped, with all those narrow stairs and round walls, but our room was bigger than my flat. The food was good and the staff were lovely. What I will remember, though, is lying awake at two in the morning, watching the beam sweep across the ceiling and listening to the sea. I have not slept that badly in years, and I would not have missed it for anything."
+    },
+    {
+     "pausa": 5000
+    },
+    {
+     "quien": "sup",
+     "texto": "Extract Two. You hear a man leaving a voicemail message for a colleague. Now look at question two."
+    },
+    {
+     "pausa": 8000
+    },
+    {
+     "quien": "m2",
+     "texto": "Hi Priya, it's Dan. I'm calling about Thursday. The caterers have rung to say they can't deliver until after lunch, so the buffet won't be ready for the staff meeting. I've tried two other firms, but they're fully booked. So I wondered whether we could move the meeting to three o'clock instead. If that's no good, let me know and I'll just order sandwiches from the shop. Call me back when you can."
+    },
+    {
+     "pausa": 4000
+    },
+    {
+     "quien": "sup",
+     "texto": "Now you will hear it again."
+    },
+    {
+     "pausa": 1500
+    },
+    {
+     "quien": "m2",
+     "texto": "Hi Priya, it's Dan. I'm calling about Thursday. The caterers have rung to say they can't deliver until after lunch, so the buffet won't be ready for the staff meeting. I've tried two other firms, but they're fully booked. So I wondered whether we could move the meeting to three o'clock instead. If that's no good, let me know and I'll just order sandwiches from the shop. Call me back when you can."
+    },
+    {
+     "pausa": 5000
+    },
+    {
+     "quien": "sup",
+     "texto": "Extract Three. You hear a woman talking about taking up running. Now look at question three."
+    },
+    {
+     "pausa": 8000
+    },
+    {
+     "quien": "f2",
+     "texto": "People ask me how I got into running, and the honest answer is that I did not choose it. My doctor suggested I get more exercise, and I thought a few weeks of jogging round the park would do. Then I entered a ten-kilometre race just to give myself a deadline, and somewhere between the start and the finish line I stopped dreading it. I still do not love the early mornings, but now I would feel strange if I did not go."
+    },
+    {
+     "pausa": 4000
+    },
+    {
+     "quien": "sup",
+     "texto": "Now you will hear it again."
+    },
+    {
+     "pausa": 1500
+    },
+    {
+     "quien": "f2",
+     "texto": "People ask me how I got into running, and the honest answer is that I did not choose it. My doctor suggested I get more exercise, and I thought a few weeks of jogging round the park would do. Then I entered a ten-kilometre race just to give myself a deadline, and somewhere between the start and the finish line I stopped dreading it. I still do not love the early mornings, but now I would feel strange if I did not go."
+    },
+    {
+     "pausa": 5000
+    },
+    {
+     "quien": "sup",
+     "texto": "Extract Four. You hear two students talking about an essay. Now look at question four."
+    },
+    {
+     "pausa": 8000
+    },
+    {
+     "quien": "f3",
+     "texto": "Have you finished the essay on urban transport?"
+    },
+    {
+     "quien": "m3",
+     "texto": "Nearly. I've got all the research done, but the conclusion keeps defeating me. Every time I write it, it sounds as if I'm just repeating the introduction."
+    },
+    {
+     "quien": "f3",
+     "texto": "Mine did too. What helped was leaving it for a day. Then I wrote it by saying what I'd found out, rather than what I'd said I would do."
+    },
+    {
+     "quien": "m3",
+     "texto": "That's not a bad idea. I'll give it a go tonight. The deadline's tomorrow at noon, so I don't have much choice."
+    },
+    {
+     "pausa": 4000
+    },
+    {
+     "quien": "sup",
+     "texto": "Now you will hear it again."
+    },
+    {
+     "pausa": 1500
+    },
+    {
+     "quien": "f3",
+     "texto": "Have you finished the essay on urban transport?"
+    },
+    {
+     "quien": "m3",
+     "texto": "Nearly. I've got all the research done, but the conclusion keeps defeating me. Every time I write it, it sounds as if I'm just repeating the introduction."
+    },
+    {
+     "quien": "f3",
+     "texto": "Mine did too. What helped was leaving it for a day. Then I wrote it by saying what I'd found out, rather than what I'd said I would do."
+    },
+    {
+     "quien": "m3",
+     "texto": "That's not a bad idea. I'll give it a go tonight. The deadline's tomorrow at noon, so I don't have much choice."
+    },
+    {
+     "pausa": 5000
+    },
+    {
+     "quien": "sup",
+     "texto": "Extract Five. You hear a man talking about a language-learning app. Now look at question five."
+    },
+    {
+     "pausa": 8000
+    },
+    {
+     "quien": "m4",
+     "texto": "I downloaded the app expecting a gimmick. Five minutes a day, little games, a cartoon owl telling you off if you skip a day. But after three months I can order a meal and ask for directions in Portuguese, which I couldn't before. Will it make me fluent? No chance. For that I'd need to talk to real people. But as a way of getting started, it's better than any textbook I've tried."
+    },
+    {
+     "pausa": 4000
+    },
+    {
+     "quien": "sup",
+     "texto": "Now you will hear it again."
+    },
+    {
+     "pausa": 1500
+    },
+    {
+     "quien": "m4",
+     "texto": "I downloaded the app expecting a gimmick. Five minutes a day, little games, a cartoon owl telling you off if you skip a day. But after three months I can order a meal and ask for directions in Portuguese, which I couldn't before. Will it make me fluent? No chance. For that I'd need to talk to real people. But as a way of getting started, it's better than any textbook I've tried."
+    },
+    {
+     "pausa": 5000
+    },
+    {
+     "quien": "sup",
+     "texto": "Extract Six. You hear a man talking to his neighbour. Now look at question six."
+    },
+    {
+     "pausa": 8000
+    },
+    {
+     "quien": "m5",
+     "texto": "Morning, Mrs Hall. I wanted to warn you before it starts. The builders are coming on Monday to do the roof, so there'll be quite a lot of noise from about eight."
+    },
+    {
+     "quien": "f4",
+     "texto": "Thank you for telling me. How long will it go on?"
+    },
+    {
+     "quien": "m5",
+     "texto": "Two weeks, they say, though it's probably more like three. If it gets too much, you're welcome to use our garden room. There's a kettle and everything."
+    },
+    {
+     "quien": "f4",
+     "texto": "That's kind. I'm out most days anyway, so it won't bother me."
+    },
+    {
+     "pausa": 4000
+    },
+    {
+     "quien": "sup",
+     "texto": "Now you will hear it again."
+    },
+    {
+     "pausa": 1500
+    },
+    {
+     "quien": "m5",
+     "texto": "Morning, Mrs Hall. I wanted to warn you before it starts. The builders are coming on Monday to do the roof, so there'll be quite a lot of noise from about eight."
+    },
+    {
+     "quien": "f4",
+     "texto": "Thank you for telling me. How long will it go on?"
+    },
+    {
+     "quien": "m5",
+     "texto": "Two weeks, they say, though it's probably more like three. If it gets too much, you're welcome to use our garden room. There's a kettle and everything."
+    },
+    {
+     "quien": "f4",
+     "texto": "That's kind. I'm out most days anyway, so it won't bother me."
+    },
+    {
+     "pausa": 5000
+    },
+    {
+     "quien": "sup",
+     "texto": "Extract Seven. You hear a bus driver talking about his job. Now look at question seven."
+    },
+    {
+     "pausa": 8000
+    },
+    {
+     "quien": "m6",
+     "texto": "People assume the hardest part of driving a bus is the traffic. It isn't. I've done the same route for eleven years and I could do it with my eyes shut. What I like are the regulars: the girl who always says good morning, the old man who brings me a biscuit on Fridays. If I'm honest, what gets to me is when the timetable doesn't leave time for a proper break. Even five minutes at the end of the route makes a big difference."
+    },
+    {
+     "pausa": 4000
+    },
+    {
+     "quien": "sup",
+     "texto": "Now you will hear it again."
+    },
+    {
+     "pausa": 1500
+    },
+    {
+     "quien": "m6",
+     "texto": "People assume the hardest part of driving a bus is the traffic. It isn't. I've done the same route for eleven years and I could do it with my eyes shut. What I like are the regulars: the girl who always says good morning, the old man who brings me a biscuit on Fridays. If I'm honest, what gets to me is when the timetable doesn't leave time for a proper break. Even five minutes at the end of the route makes a big difference."
+    },
+    {
+     "pausa": 5000
+    },
+    {
+     "quien": "sup",
+     "texto": "Extract Eight. You hear two friends talking about a film. Now look at question eight."
+    },
+    {
+     "pausa": 8000
+    },
+    {
+     "quien": "m7",
+     "texto": "So what did you think of the film? You were very quiet on the way out."
+    },
+    {
+     "quien": "f5",
+     "texto": "I'm still working it out. The acting was brilliant and the photography was stunning. But the story kept jumping about in time, and by the end I wasn't sure who had done what."
+    },
+    {
+     "quien": "m7",
+     "texto": "I enjoyed that, to be honest. It made me pay attention. I'd happily see it again."
+    },
+    {
+     "quien": "f5",
+     "texto": "Maybe, with a notebook."
+    },
+    {
+     "pausa": 4000
+    },
+    {
+     "quien": "sup",
+     "texto": "Now you will hear it again."
+    },
+    {
+     "pausa": 1500
+    },
+    {
+     "quien": "m7",
+     "texto": "So what did you think of the film? You were very quiet on the way out."
+    },
+    {
+     "quien": "f5",
+     "texto": "I'm still working it out. The acting was brilliant and the photography was stunning. But the story kept jumping about in time, and by the end I wasn't sure who had done what."
+    },
+    {
+     "quien": "m7",
+     "texto": "I enjoyed that, to be honest. It made me pay attention. I'd happily see it again."
+    },
+    {
+     "quien": "f5",
+     "texto": "Maybe, with a notebook."
+    },
+    {
+     "pausa": 5000
+    },
+    {
+     "quien": "sup",
+     "texto": "That is the end of Part One."
+    }
+   ]
+  },
+  "items": [
+   {
+    "n": 1,
+    "tipo": "opciones",
+    "pregunta": "What did the man like best about his stay at the lighthouse?",
+    "opciones": [
+     "the atmosphere at night",
+     "the size of the room",
+     "the service from the staff"
+    ],
+    "correcta": 0,
+    "explicacion": "Esperaba una habitación pequeña, pero era grande; la comida y el personal eran buenos (B y C son cosas que menciona de pasada). Lo que recordará es estar despierto viendo el haz de luz y oyendo el mar: «I would not have missed it» (A)."
+   },
+   {
+    "n": 2,
+    "tipo": "opciones",
+    "pregunta": "Why is Dan phoning Priya?",
+    "opciones": [
+     "to cancel a meeting",
+     "to ask if the meeting time can be changed",
+     "to complain about the caterers"
+    ],
+    "correcta": 1,
+    "explicacion": "Dice «I wondered whether we could move the meeting to three o'clock instead» (B). No cancela la reunión (A) y solo informa del problema del catering, sin quejarse (C)."
+   },
+   {
+    "n": 3,
+    "tipo": "opciones",
+    "pregunta": "What does the woman say about running?",
+    "opciones": [
+     "She started because she has always enjoyed sport.",
+     "She finds getting up early easy.",
+     "It has become a habit she would miss."
+    ],
+    "correcta": 2,
+    "explicacion": "Empezó por consejo del médico (A no) y dice «I still do not love the early mornings» (B no). Al final: «now I would feel strange if I did not go» (C)."
+   },
+   {
+    "n": 4,
+    "tipo": "opciones",
+    "pregunta": "What problem does the man have with his essay?",
+    "opciones": [
+     "He has not done enough research.",
+     "He cannot make the conclusion different from the introduction.",
+     "He does not have enough time to finish it."
+    ],
+    "correcta": 1,
+    "explicacion": "Ya tiene la investigación hecha (A no). Su problema es que la conclusión suena a repetir la introducción (B). Menciona la fecha límite, pero no dice que le falte tiempo para terminarlo (C no)."
+   },
+   {
+    "n": 5,
+    "tipo": "opciones",
+    "pregunta": "What is the man's opinion of the app?",
+    "opciones": [
+     "It is only a gimmick.",
+     "It can make learners fluent.",
+     "It is a good way to begin learning."
+    ],
+    "correcta": 2,
+    "explicacion": "Esperaba un «gimmick» pero cambió de opinión (A no). Dice «Will it make me fluent? No chance» (B no). Concluye que para empezar es mejor que cualquier libro de texto (C)."
+   },
+   {
+    "n": 6,
+    "tipo": "opciones",
+    "pregunta": "Why is the man talking to Mrs Hall?",
+    "opciones": [
+     "to complain about noise",
+     "to ask for help with a repair",
+     "to warn her about building work"
+    ],
+    "correcta": 2,
+    "explicacion": "«I wanted to warn you before it starts. The builders are coming on Monday» (C). No se queja (A) y no pide ayuda; al contrario, le ofrece su cuarto del jardín (B no)."
+   },
+   {
+    "n": 7,
+    "tipo": "opciones",
+    "pregunta": "What does the bus driver find difficult about his job?",
+    "opciones": [
+     "not having enough time for breaks",
+     "dealing with heavy traffic",
+     "remembering the route"
+    ],
+    "correcta": 0,
+    "explicacion": "Dice que el tráfico no es lo más difícil (B no) y que podría hacer la ruta con los ojos cerrados (C no). Lo que le afecta es que el horario no deje tiempo para un descanso (A)."
+   },
+   {
+    "n": 8,
+    "tipo": "opciones",
+    "pregunta": "What does the woman say about the film?",
+    "opciones": [
+     "The acting was disappointing.",
+     "She found the story hard to follow.",
+     "She would like to see it again."
+    ],
+    "correcta": 1,
+    "explicacion": "Elogia la interpretación (A no) y dice que la historia saltaba en el tiempo y no sabía quién había hecho qué (B). Quien quiere volver a verla es él; ella solo bromea «Maybe, with a notebook» (C no)."
+   }
+  ],
+  "examenNumero": 1
+ },
+ {
+  "id": "b2-listening-4-x1",
+  "examen": "b2",
+  "destreza": "listening",
+  "parte": 4,
+  "nombreParte": "Multiple choice (interview)",
+  "titulo": "Adopting a rescue dog",
+  "instrucciones": "You will hear an interview with a woman called Priya Nair, who adopted a rescue dog, and Tom Hale, who works at a dog rescue centre. For questions 24–30, choose the best answer (A, B or C). You hear the recording twice.",
+  "minutos": 10,
+  "audio": {
+   "archivo": "audio/b2-listening-4-x1.mp3",
+   "veces": 2,
+   "hablantes": [
+    {
+     "id": "sup",
+     "descripcion": "Supervisor",
+     "voz": "en-GB-LibbyNeural"
+    },
+    {
+     "id": "int",
+     "descripcion": "Interviewer",
+     "voz": "en-GB-ThomasNeural"
+    },
+    {
+     "id": "pri",
+     "descripcion": "Priya Nair",
+     "voz": "en-GB-SoniaNeural"
+    },
+    {
+     "id": "tom",
+     "descripcion": "Tom Hale",
+     "voz": "en-IE-ConnorNeural"
+    }
+   ],
+   "guion": [
+    {
+     "quien": "sup",
+     "texto": "Part Four. You will hear an interview with a woman called Priya Nair, who adopted a rescue dog, and Tom Hale, who works at a dog rescue centre. For questions twenty-four to thirty, choose the best answer, A, B or C. You now have forty-five seconds to look at Part Four."
+    },
+    {
+     "pausa": 45000
+    },
+    {
+     "quien": "int",
+     "texto": "Priya, Tom, welcome. Priya, you adopted Biscuit, a rescue dog, last spring. Why did you choose a rescue dog rather than a puppy?"
+    },
+    {
+     "quien": "pri",
+     "texto": "Honestly, I had never planned to. I always assumed I would buy a puppy from a breeder, because I thought I would have more control over how it turned out. Then a friend dragged me along to the rescue centre just to keep her company, and Biscuit sat in the corner of his kennel and wouldn't even look at me. I went back three times that week. I can't really explain it."
+    },
+    {
+     "quien": "int",
+     "texto": "Tom, you work at the centre. What do you tell people before they adopt?"
+    },
+    {
+     "quien": "tom",
+     "texto": "That the first weeks are rarely what they imagine. People picture a grateful dog curled up on the sofa. What they get is a nervous animal that hides, won't eat, and might chew the furniture. The dog usually relaxes after a couple of months, but it's the early behaviour that catches people out. That's what they are least prepared for, much more than the cost or the time involved."
+    },
+    {
+     "quien": "int",
+     "texto": "Priya, what were those first weeks like?"
+    },
+    {
+     "quien": "pri",
+     "texto": "Exhausting. Biscuit wouldn't go through doors, and he howled every time I left the flat. I nearly gave up in the second week. I rang Tom in tears, and he told me to stop trying to cheer the dog up and just sit quietly in the room, doing nothing. It felt completely wrong, and I was sure it was pointless, but it worked."
+    },
+    {
+     "quien": "int",
+     "texto": "Tom, was that unusual?"
+    },
+    {
+     "quien": "tom",
+     "texto": "Not at all. Owners want to do something, anything. But a dog that has been moved around needs to learn that nothing bad is going to happen. Priya was better than most, actually. She listened, which not everybody does. Some people want a quick fix, and I'm afraid there isn't one."
+    },
+    {
+     "quien": "int",
+     "texto": "Priya, has having Biscuit changed your daily life?"
+    },
+    {
+     "quien": "pri",
+     "texto": "Completely. I used to work from home and hardly leave the flat for days. Now I'm out twice a day whatever the weather, and I've got to know people on my street, which I never expected. Mind you, I'd be lying if I said it was all lovely. Holidays are a headache now, and my sister's cat will never forgive me."
+    },
+    {
+     "quien": "int",
+     "texto": "Tom, some people bring their dogs back. How common is that?"
+    },
+    {
+     "quien": "tom",
+     "texto": "Less common than people think, about one in ten, and it's rarely because of the dog. Usually it's a change in the owner's circumstances, a new job, or a house move to somewhere that doesn't allow pets. What upsets me is when somebody returns a dog after a week because it isn't what they pictured. We could prevent that by asking better questions, and we're changing our forms to do just that."
+    },
+    {
+     "quien": "int",
+     "texto": "Last question. Priya, what would you say to someone thinking about adopting?"
+    },
+    {
+     "quien": "pri",
+     "texto": "Be honest with yourself about why you want a dog. If it's for a perfect pet, don't. I thought I was rescuing Biscuit, but if anything it was the other way round. He's the reason I'm calmer, and a lot less lonely, than I was."
+    },
+    {
+     "quien": "tom",
+     "texto": "I'd only add that patience matters more than experience. Priya had never owned a dog, and look at the two of them now."
+    },
+    {
+     "pausa": 10000
+    },
+    {
+     "quien": "sup",
+     "texto": "Now you will hear it again."
+    },
+    {
+     "pausa": 1500
+    },
+    {
+     "quien": "int",
+     "texto": "Priya, Tom, welcome. Priya, you adopted Biscuit, a rescue dog, last spring. Why did you choose a rescue dog rather than a puppy?"
+    },
+    {
+     "quien": "pri",
+     "texto": "Honestly, I had never planned to. I always assumed I would buy a puppy from a breeder, because I thought I would have more control over how it turned out. Then a friend dragged me along to the rescue centre just to keep her company, and Biscuit sat in the corner of his kennel and wouldn't even look at me. I went back three times that week. I can't really explain it."
+    },
+    {
+     "quien": "int",
+     "texto": "Tom, you work at the centre. What do you tell people before they adopt?"
+    },
+    {
+     "quien": "tom",
+     "texto": "That the first weeks are rarely what they imagine. People picture a grateful dog curled up on the sofa. What they get is a nervous animal that hides, won't eat, and might chew the furniture. The dog usually relaxes after a couple of months, but it's the early behaviour that catches people out. That's what they are least prepared for, much more than the cost or the time involved."
+    },
+    {
+     "quien": "int",
+     "texto": "Priya, what were those first weeks like?"
+    },
+    {
+     "quien": "pri",
+     "texto": "Exhausting. Biscuit wouldn't go through doors, and he howled every time I left the flat. I nearly gave up in the second week. I rang Tom in tears, and he told me to stop trying to cheer the dog up and just sit quietly in the room, doing nothing. It felt completely wrong, and I was sure it was pointless, but it worked."
+    },
+    {
+     "quien": "int",
+     "texto": "Tom, was that unusual?"
+    },
+    {
+     "quien": "tom",
+     "texto": "Not at all. Owners want to do something, anything. But a dog that has been moved around needs to learn that nothing bad is going to happen. Priya was better than most, actually. She listened, which not everybody does. Some people want a quick fix, and I'm afraid there isn't one."
+    },
+    {
+     "quien": "int",
+     "texto": "Priya, has having Biscuit changed your daily life?"
+    },
+    {
+     "quien": "pri",
+     "texto": "Completely. I used to work from home and hardly leave the flat for days. Now I'm out twice a day whatever the weather, and I've got to know people on my street, which I never expected. Mind you, I'd be lying if I said it was all lovely. Holidays are a headache now, and my sister's cat will never forgive me."
+    },
+    {
+     "quien": "int",
+     "texto": "Tom, some people bring their dogs back. How common is that?"
+    },
+    {
+     "quien": "tom",
+     "texto": "Less common than people think, about one in ten, and it's rarely because of the dog. Usually it's a change in the owner's circumstances, a new job, or a house move to somewhere that doesn't allow pets. What upsets me is when somebody returns a dog after a week because it isn't what they pictured. We could prevent that by asking better questions, and we're changing our forms to do just that."
+    },
+    {
+     "quien": "int",
+     "texto": "Last question. Priya, what would you say to someone thinking about adopting?"
+    },
+    {
+     "quien": "pri",
+     "texto": "Be honest with yourself about why you want a dog. If it's for a perfect pet, don't. I thought I was rescuing Biscuit, but if anything it was the other way round. He's the reason I'm calmer, and a lot less lonely, than I was."
+    },
+    {
+     "quien": "tom",
+     "texto": "I'd only add that patience matters more than experience. Priya had never owned a dog, and look at the two of them now."
+    },
+    {
+     "pausa": 10000
+    },
+    {
+     "quien": "sup",
+     "texto": "That is the end of Part Four."
+    }
+   ]
+  },
+  "items": [
+   {
+    "n": 24,
+    "tipo": "opciones",
+    "pregunta": "Why did Priya adopt a rescue dog?",
+    "opciones": [
+     "She had been planning to do so for a long time.",
+     "She was unexpectedly drawn to one particular dog.",
+     "A friend persuaded her that it was a good idea."
+    ],
+    "correcta": 1,
+    "explicacion": "Siempre pensó comprar un cachorro; fue al centro solo para acompañar a su amiga y volvió tres veces por Biscuit: «I can't really explain it» (B). A no: «never planned to». C no: la amiga solo la llevó de compañía."
+   },
+   {
+    "n": 25,
+    "tipo": "opciones",
+    "pregunta": "Tom says that new owners are least prepared for",
+    "opciones": [
+     "how much the dog will cost.",
+     "how the dog behaves at first.",
+     "how much exercise the dog needs."
+    ],
+    "correcta": 1,
+    "explicacion": "«It's the early behaviour that catches people out… much more than the cost or the time» (B). El coste y el tiempo se mencionan como lo que preocupa menos (A y C no)."
+   },
+   {
+    "n": 26,
+    "tipo": "opciones",
+    "pregunta": "What helped Priya most when she nearly gave up?",
+    "opciones": [
+     "spending more time playing with Biscuit",
+     "following advice that seemed wrong at first",
+     "taking Biscuit to a professional trainer"
+    ],
+    "correcta": 1,
+    "explicacion": "Tom le dijo que se sentara tranquila sin hacer nada: «It felt completely wrong… but it worked» (B). Intentar animarlo era justo lo que Tom le dijo que dejara (A no). No se menciona ningún adiestrador (C no)."
+   },
+   {
+    "n": 27,
+    "tipo": "opciones",
+    "pregunta": "What does Tom say about Priya?",
+    "opciones": [
+     "She was more willing to take advice than many owners.",
+     "She faced more serious problems than most owners.",
+     "She expected quick results from the dog."
+    ],
+    "correcta": 0,
+    "explicacion": "«Priya was better than most… She listened, which not everybody does» (A). Lo de los resultados rápidos lo dice de «some people», no de ella (C no); no compara la gravedad de sus problemas (B no)."
+   },
+   {
+    "n": 28,
+    "tipo": "opciones",
+    "pregunta": "What does Priya say about her life since she got Biscuit?",
+    "opciones": [
+     "She now has more contact with other people.",
+     "She has had to stop going on holiday.",
+     "She has become bored with the daily routine."
+    ],
+    "correcta": 0,
+    "explicacion": "«I've got to know people on my street, which I never expected» (A). Las vacaciones son «a headache», no ha dejado de ir (B no). Sale a diario por gusto, no hay aburrimiento (C no)."
+   },
+   {
+    "n": 29,
+    "tipo": "opciones",
+    "pregunta": "According to Tom, dogs are usually returned to the centre because",
+    "opciones": [
+     "their behaviour is too difficult to manage.",
+     "their owners' circumstances change.",
+     "the centre gave owners too little information."
+    ],
+    "correcta": 1,
+    "explicacion": "«It's rarely because of the dog. Usually it's a change in the owner's circumstances» (B). Admite que pueden mejorar las preguntas, pero solo para evitar devoluciones tras una semana, no como causa habitual (C no)."
+   },
+   {
+    "n": 30,
+    "tipo": "opciones",
+    "pregunta": "How does Priya feel about adopting Biscuit?",
+    "opciones": [
+     "She is proud of having done something good for him.",
+     "She believes he has helped her more than she has helped him.",
+     "She thinks she was foolish to expect a perfect pet."
+    ],
+    "correcta": 1,
+    "explicacion": "«I thought I was rescuing Biscuit, but… it was the other way round. He's the reason I'm calmer» (B). Cambia de opinión sobre quién rescató a quién (A no). Aconseja no buscar la mascota perfecta, pero no dice que ella fuera tonta (C no)."
+   }
+  ],
+  "examenNumero": 1
+ },
+ {
+  "id": "b2-listening-3-x1",
+  "examen": "b2",
+  "destreza": "listening",
+  "parte": 3,
+  "nombreParte": "Multiple matching",
+  "instrucciones": "You will hear five short extracts in which people are talking about a music festival held every summer in their small town. For questions 15–19, choose from the list (A–H) the main effect the festival has had, according to each speaker. There are three extra options which you do not need to use. You hear the recording twice.",
+  "minutos": 10,
+  "opcionesComunes": [
+   "Shops and cafés now stay open all year round.",
+   "Young people are choosing to stay in the town.",
+   "Getting around by car has become much harder.",
+   "Residents feel proud of their local traditions.",
+   "Local families earn extra money from visitors.",
+   "The town is noisy and crowded for a week.",
+   "An old building has been brought back to life.",
+   "Visitors have learnt to respect local customs."
+  ],
+  "audio": {
+   "archivo": "audio/b2-listening-3-x1.mp3",
+   "veces": 2,
+   "hablantes": [
+    {
+     "id": "sup",
+     "descripcion": "Supervisor",
+     "voz": "en-GB-LibbyNeural"
+    },
+    {
+     "id": "s1",
+     "descripcion": "Speaker One",
+     "voz": "en-GB-MaisieNeural"
+    },
+    {
+     "id": "s2",
+     "descripcion": "Speaker Two",
+     "voz": "en-GB-RyanNeural"
+    },
+    {
+     "id": "s3",
+     "descripcion": "Speaker Three",
+     "voz": "en-IE-EmilyNeural"
+    },
+    {
+     "id": "s4",
+     "descripcion": "Speaker Four",
+     "voz": "en-GB-ThomasNeural"
+    },
+    {
+     "id": "s5",
+     "descripcion": "Speaker Five",
+     "voz": "en-AU-NatashaNeural"
+    }
+   ],
+   "guion": [
+    {
+     "quien": "sup",
+     "texto": "Part Three. You will hear five short extracts in which people are talking about a music festival held every summer in their small town. For questions fifteen to nineteen, choose from the list, A to H, the main effect the festival has had, according to each speaker. There are three extra options which you do not need to use. You now have thirty seconds to look at Part Three."
+    },
+    {
+     "pausa": 30000
+    },
+    {
+     "quien": "sup",
+     "texto": "Speaker One."
+    },
+    {
+     "pausa": 800
+    },
+    {
+     "quien": "s1",
+     "texto": "I teach at the local secondary school, and a few years ago most of my students talked about moving to the city as soon as they finished their exams. Now several of them help to organise the festival, designing posters, running the sound desk, even managing a small stage. They have realised there are real opportunities here. Last month one of them told me she'd rather start a business in the town than go anywhere else."
+    },
+    {
+     "pausa": 2500
+    },
+    {
+     "quien": "sup",
+     "texto": "Speaker Two."
+    },
+    {
+     "pausa": 800
+    },
+    {
+     "quien": "s2",
+     "texto": "My wife and I have a spare bedroom and a small garden at the back, and for festival week we turn them into a bed and breakfast. People book months in advance. It pays for our heating through the winter, and last year it even covered a new roof. Honestly, a lot of our neighbours do the same thing, and it makes a real difference to how comfortable we all feel when January comes."
+    },
+    {
+     "pausa": 2500
+    },
+    {
+     "quien": "sup",
+     "texto": "Speaker Three."
+    },
+    {
+     "pausa": 800
+    },
+    {
+     "quien": "s3",
+     "texto": "I drive the number twelve bus, and during the festival it's a nightmare. The main road is closed for half the day, the car parks fill up by ten in the morning, and I spend hours stuck behind coaches. People who live here and just want to get to work or the doctor's get really frustrated. I enjoy the atmosphere, I do, but I'm always glad when the barriers come down on Monday."
+    },
+    {
+     "pausa": 2500
+    },
+    {
+     "quien": "sup",
+     "texto": "Speaker Four."
+    },
+    {
+     "pausa": 800
+    },
+    {
+     "quien": "s4",
+     "texto": "For years the old cinema on the square was just a pile of broken glass and pigeons. Everybody said somebody should do something about it. Then the festival committee decided to put the profits from the first three years into it. There's a new roof, a proper stage, and last week I saw a film there with my daughter. I never thought I'd see the place with its lights on again."
+    },
+    {
+     "pausa": 2500
+    },
+    {
+     "quien": "sup",
+     "texto": "Speaker Five."
+    },
+    {
+     "pausa": 800
+    },
+    {
+     "quien": "s5",
+     "texto": "My grandmother used to dance at village celebrations, but when she got older nobody carried on with it. This year the festival invited local people to teach the old dances to anyone who wanted to join in, and hundreds of people turned up, including lots of children. Seeing my gran in the middle of the square, showing them the steps, I felt really proud of where I come from."
+    },
+    {
+     "pausa": 10000
+    },
+    {
+     "quien": "sup",
+     "texto": "Now you will hear it again."
+    },
+    {
+     "pausa": 1500
+    },
+    {
+     "quien": "sup",
+     "texto": "Speaker One."
+    },
+    {
+     "pausa": 800
+    },
+    {
+     "quien": "s1",
+     "texto": "I teach at the local secondary school, and a few years ago most of my students talked about moving to the city as soon as they finished their exams. Now several of them help to organise the festival, designing posters, running the sound desk, even managing a small stage. They have realised there are real opportunities here. Last month one of them told me she'd rather start a business in the town than go anywhere else."
+    },
+    {
+     "pausa": 2500
+    },
+    {
+     "quien": "sup",
+     "texto": "Speaker Two."
+    },
+    {
+     "pausa": 800
+    },
+    {
+     "quien": "s2",
+     "texto": "My wife and I have a spare bedroom and a small garden at the back, and for festival week we turn them into a bed and breakfast. People book months in advance. It pays for our heating through the winter, and last year it even covered a new roof. Honestly, a lot of our neighbours do the same thing, and it makes a real difference to how comfortable we all feel when January comes."
+    },
+    {
+     "pausa": 2500
+    },
+    {
+     "quien": "sup",
+     "texto": "Speaker Three."
+    },
+    {
+     "pausa": 800
+    },
+    {
+     "quien": "s3",
+     "texto": "I drive the number twelve bus, and during the festival it's a nightmare. The main road is closed for half the day, the car parks fill up by ten in the morning, and I spend hours stuck behind coaches. People who live here and just want to get to work or the doctor's get really frustrated. I enjoy the atmosphere, I do, but I'm always glad when the barriers come down on Monday."
+    },
+    {
+     "pausa": 2500
+    },
+    {
+     "quien": "sup",
+     "texto": "Speaker Four."
+    },
+    {
+     "pausa": 800
+    },
+    {
+     "quien": "s4",
+     "texto": "For years the old cinema on the square was just a pile of broken glass and pigeons. Everybody said somebody should do something about it. Then the festival committee decided to put the profits from the first three years into it. There's a new roof, a proper stage, and last week I saw a film there with my daughter. I never thought I'd see the place with its lights on again."
+    },
+    {
+     "pausa": 2500
+    },
+    {
+     "quien": "sup",
+     "texto": "Speaker Five."
+    },
+    {
+     "pausa": 800
+    },
+    {
+     "quien": "s5",
+     "texto": "My grandmother used to dance at village celebrations, but when she got older nobody carried on with it. This year the festival invited local people to teach the old dances to anyone who wanted to join in, and hundreds of people turned up, including lots of children. Seeing my gran in the middle of the square, showing them the steps, I felt really proud of where I come from."
+    },
+    {
+     "pausa": 10000
+    },
+    {
+     "quien": "sup",
+     "texto": "That is the end of Part Three."
+    }
+   ]
+  },
+  "items": [
+   {
+    "n": 15,
+    "tipo": "emparejar",
+    "pregunta": "Speaker 1",
+    "correcta": 1,
+    "explicacion": "Sus alumnos antes querían irse a la ciudad y ahora quieren montar un negocio allí: los jóvenes se quedan (B)."
+   },
+   {
+    "n": 16,
+    "tipo": "emparejar",
+    "pregunta": "Speaker 2",
+    "correcta": 4,
+    "explicacion": "Alquilan su habitación libre en la semana del festival y eso paga la calefacción y el tejado: ingresos extra para las familias (E)."
+   },
+   {
+    "n": 17,
+    "tipo": "emparejar",
+    "pregunta": "Speaker 3",
+    "correcta": 2,
+    "explicacion": "Carretera cortada, aparcamientos llenos, atascos: moverse en coche es difícil (C). Menciona el ambiente, pero no habla de ruido ni de masificación como efecto principal."
+   },
+   {
+    "n": 18,
+    "tipo": "emparejar",
+    "pregunta": "Speaker 4",
+    "correcta": 6,
+    "explicacion": "Con los beneficios se reformó el viejo cine abandonado: un edificio recuperado (G)."
+   },
+   {
+    "n": 19,
+    "tipo": "emparejar",
+    "pregunta": "Speaker 5",
+    "correcta": 3,
+    "explicacion": "Las danzas tradicionales se enseñan de nuevo y siente orgullo de su lugar de origen (D)."
+   }
+  ],
+  "examenNumero": 1
+ },
+ {
+  "id": "b2-speaking-1-x1",
+  "examen": "b2",
+  "destreza": "speaking",
+  "parte": 1,
+  "nombreParte": "Interview",
+  "instrucciones": "The examiner asks you questions about yourself. Answer in full sentences and give reasons: two or three sentences per question is about right. About 2 minutes.",
+  "minutos": 2,
+  "items": [
+   {
+    "n": 1,
+    "tipo": "hablar",
+    "interlocutor": "Good afternoon. My name is Helen and this is my colleague, Mark. And your names are? … Thank you. First, we’d like to know something about you.",
+    "preguntas": [
+     "Where do you live, and what do you like about the area?",
+     "Do you prefer reading books on paper or on a screen? Why?",
+     "Tell us about a place in your town where you enjoy spending free time.",
+     "What do you usually do on a day off with your friends or family?",
+     "Would you like to travel to a different country to study or work? Why, or why not?",
+     "What are you looking forward to doing in the next few months?"
+    ],
+    "segundos": 120,
+    "modelo": "Respuestas de dos o tres frases, con una razón o un ejemplo: «I live in a lively neighbourhood near the centre, and what I like most is that everything is within walking distance. I also enjoy the fact that…». Usa conectores (because, although, so) y vocabulario variado; evita respuestas de una sola palabra y no recites un discurso memorizado. Si no entiendes una pregunta, pide que te la repitan con naturalidad: “Sorry, could you repeat that, please?”."
+   }
+  ],
+  "examenNumero": 1
+ },
+ {
+  "id": "b2-speaking-3-x1",
+  "examen": "b2",
+  "destreza": "speaking",
+  "parte": 3,
+  "nombreParte": "Collaborative task",
+  "instrucciones": "You and your partner discuss the question on the sheet, using the ideas around it, for about 2 minutes. Then you have about a minute to decide together. You get 15 seconds to read the sheet first.",
+  "minutos": 4,
+  "items": [
+   {
+    "n": 1,
+    "tipo": "hablar",
+    "interlocutor": "Now, I'd like you to talk about something together for about two minutes. Here are some things that people often mention when they talk about working from home, and a question for you to discuss. First you have some time to look at the task. … Now, talk to each other about how much these things affect the quality of working life when people work from home.",
+    "preguntaCentral": "How much do these things affect the quality of working life when people work from home?",
+    "ideas": [
+     "saving time on travelling",
+     "contact with colleagues",
+     "a quiet place to concentrate",
+     "the cost of heating and equipment",
+     "a balance between work and free time"
+    ],
+    "preguntas": [
+     "Now you have about a minute to decide which of these is the most important for a person who works from home every day."
+    ],
+    "segundos": 180,
+    "segundosLectura": 15,
+    "modelo": "No hace falta comentar las cinco ideas: dos o tres bien desarrolladas valen más que cinco de pasada. Pide la opinión de tu compañero («What do you think about…?», «Do you agree?») y reacciona con matices («That's true, but on the other hand…», «I see what you mean, although…»). Da ejemplos personales o imaginados («If you live in a small flat, it can be hard to…»). En el último minuto, negociad y llegad a una decisión común, y dila claramente («So we both think that… is the most important, because…»)."
+   }
+  ],
+  "examenNumero": 1
+ },
+ {
+  "id": "b2-speaking-2-x1",
+  "examen": "b2",
+  "destreza": "speaking",
+  "parte": 2,
+  "nombreParte": "Long turn",
+  "instrucciones": "You get two pictures on one theme and compare them on your own for about a minute, answering the question written above the pictures. Then your partner answers a short question about your pictures (about 30 seconds). About 4 minutes in total.",
+  "minutos": 4,
+  "items": [
+   {
+    "n": 1,
+    "tipo": "hablar",
+    "pregunta": "Living in small spaces",
+    "interlocutor": "In this part of the test, I'm going to give each of you two pictures. I'd like you to compare the pictures on your own for about a minute, and also to answer a short question about your partner's pictures. Here are your pictures. They show people living in small spaces. I'd like you to compare the two pictures, and say why the people might have chosen to live like this, and how comfortable it might be.",
+    "imagenes": [
+     "A young couple inside a tiny wooden house on wheels, parked beside a field. A sleeping loft is reached by a ladder, a folding table is attached to the wall, and the woman is cooking at a two-ring stove while the man hangs his coat on one of the few hooks.",
+     "A man in his sixties sitting in a very bare flat with white walls: one armchair, a lamp, a shelf with a dozen books and a single plant on the windowsill. Boxes marked \"charity shop\" are stacked by the door."
+    ],
+    "preguntas": [
+     "Why might the people have chosen to live like this?",
+     "How comfortable might it be?"
+    ],
+    "segundos": 60,
+    "modelo": "Compara en vez de describir cada foto por separado: «Whereas the couple seem to have chosen the house on wheels for the freedom it gives them, the man might simply be tired of owning so much…». Especula con might, could, perhaps, I imagine. Contesta a las DOS preguntas (por qué y cuán cómodo). Pregunta para el compañero (30 s): «Would you like to live in a very small home? Why (not)?»"
+   },
+   {
+    "n": 2,
+    "tipo": "hablar",
+    "pregunta": "Getting rid of things",
+    "interlocutor": "Now, here are your pictures. They show people getting rid of things they own. I'd like you to compare the two pictures, and say why the people might be doing this, and how they might be feeling.",
+    "imagenes": [
+     "A woman kneeling in front of an open wardrobe with clothes piled up on the bed in three heaps. She is holding a jumper up to the light and smiling slightly, with a large bin bag beside her.",
+     "Two teenage brothers at a car boot sale on a sunny morning, standing behind a table of old video games, toys and trainers. One is counting coins into a tin while the other waves at a passing customer."
+    ],
+    "preguntas": [
+     "Why might the people be getting rid of these things?",
+     "How might they be feeling?"
+    ],
+    "segundos": 60,
+    "modelo": "Contrasta los motivos: ordenar la casa y decidir qué conservar (la mujer) frente a ganar dinero y soltar cosas que ya no usan (los hermanos). Usa lenguaje de contraste (while, on the other hand, in contrast) y de especulación (might, probably, they seem to). Habla también de los sentimientos: alivio, nostalgia, emoción. Pregunta para el compañero (30 s): «Do you find it easy to throw away things you don't need? Why (not)?»"
+   }
+  ],
+  "examenNumero": 1
+ },
+ {
+  "id": "b2-speaking-4-x1",
+  "examen": "b2",
+  "destreza": "speaking",
+  "parte": 4,
+  "nombreParte": "Discussion",
+  "instrucciones": "The examiner asks you and your partner questions related to the topic of Part 3. Give opinions with reasons and react to what your partner says. About 5 minutes.",
+  "minutos": 4,
+  "items": [
+   {
+    "n": 1,
+    "tipo": "hablar",
+    "interlocutor": "Use the following questions, in order, as appropriate: … What do you think? … Do you agree? … And you?",
+    "preguntas": [
+     "Would you enjoy spending several days on a train to get to your destination? Why / why not?",
+     "What do you usually do to pass the time on a long journey?",
+     "Do you think people should travel by train more often instead of flying? Why?",
+     "Is it better to plan every detail of a long trip or to leave some things to chance?",
+     "Some people say that travelling slowly helps you understand a country better. Do you agree?",
+     "In the future, do you think people will spend more or less time travelling? Why?"
+    ],
+    "segundos": 240,
+    "modelo": "Opiniones desarrolladas: postura, razón y ejemplo personal (por ejemplo, un viaje largo que hayas hecho). En las preguntas más abstractas (medio ambiente, futuro, valores) usa matices («On the one hand…, but on the other…»). Reacciona al compañero («I see what you mean, but…», «I’d say the same, because…»). Si dudas, gana tiempo: «That’s an interesting question. I suppose…»."
+   }
+  ],
+  "examenNumero": 1
+ },
+ {
+  "id": "b2-reading-use-6-x1",
+  "examen": "b2",
+  "destreza": "reading-use",
+  "parte": 6,
+  "nombreParte": "Gapped text",
+  "titulo": "Two weeks on turtle watch",
+  "instrucciones": "You are going to read an article about a woman who volunteered on a turtle conservation project. Six paragraphs have been removed from the article. Choose from the paragraphs A–G the one which fits each gap (31–36). There is one extra paragraph which you do not need to use.",
+  "minutos": 14,
+  "texto": "When I booked two weeks on a turtle conservation project in southern Greece, I imagined long, lazy days on the beach and the occasional photograph of a baby turtle. My friends, who know me better than that, gave me a week before I would be on the first flight home.\n\n{{31}}\n\nOur job was to walk the two kilometres of beach before sunrise, looking for the wide, scuffed trails that female loggerhead turtles leave when they haul themselves ashore at night. Each trail had to be followed to the nest, which we marked with a numbered stake and protected with a wire cage against foxes.\n\n{{32}}\n\nDimitra, the project's coordinator, had a remedy for this. She showed us how to push a thin rod into the sand and feel for the looser, damper soil where a nest had been filled in. It took me four days to feel the difference, and when I finally did, I almost shouted with delight.\n\n{{33}}\n\nWe sat thirty metres away for nearly an hour, hardly daring to breathe, while she dug, laid and covered her eggs with her back flippers. When she finally dragged herself back to the water, nobody spoke. I had to wipe my eyes with my sleeve.\n\n{{34}}\n\nThe ones who arrive in August, however, have jobs of their own. They guard the nests at night, and when the hatchlings emerge they watch the beach to make sure the tiny turtles head for the sea rather than towards the bright lights of the nearby hotels.\n\n{{35}}\n\nThis summer, for the first time, six of the eight hotels have agreed, and the beach is noticeably darker at night. Dimitra describes it as the project's greatest success, and she says it came not from rules but from patient conversations, many of them started by volunteers who stayed on to chat with the staff.\n\n{{36}}",
+  "opcionesComunes": [
+   "What I had not realised was that I would never see any of those eggs hatch. That happens in late August, and volunteers who come in July leave long before the first hatchlings appear, a fact Dimitra had mentioned in the briefing and I had politely ignored.",
+   "My friends were right to be doubtful, but not for the reasons they gave. The problem was not boredom; it was the alarm clock, which went off at half past four every morning, long before the sand had had time to warm.",
+   "Not everyone enjoys the work, of course. Several volunteers left after the first week, complaining about the heat, the early starts and the basic accommodation, and Dimitra says this happens every summer.",
+   "These lights are, in fact, the project's biggest headache. Hatchlings use the glow over the sea to find the water, and a hotel terrace can send them in exactly the wrong direction. Persuading the owners to switch off or shield their lamps has taken Dimitra years.",
+   "That was easier said than done. Turtles often dig several false nests before they lay, so a trail did not always lead to eggs, and some mornings ended with nothing to show for three hours of walking.",
+   "As for my friends, they are still waiting for me to give up. I have already booked a return trip for August, when I hope to see the hatchlings I missed, and I have bought two alarm clocks to be safe.",
+   "Even that was nothing compared with what happened a week later. A message arrived at midnight that a turtle was nesting below the harbour wall, and half the camp crept down there, using only red torches because white light can frighten the animals back into the sea."
+  ],
+  "items": [
+   {
+    "n": 31,
+    "tipo": "emparejar",
+    "pregunta": "Gap 31",
+    "correcta": 1,
+    "explicacion": "«My friends were right to be doubtful» responde a que los amigos le daban una semana. «The alarm clock» enlaza con el siguiente párrafo, que describe el trabajo antes del amanecer («before sunrise»). El párrafo C sobra: habla de voluntarios que se van, pero no enlaza con el resto."
+   },
+   {
+    "n": 32,
+    "tipo": "emparejar",
+    "pregunta": "Gap 32",
+    "correcta": 4,
+    "explicacion": "«That was easier said than done» se refiere a seguir el rastro hasta el nido. Los falsos nidos son el problema, y «a remedy for this» en el párrafo siguiente es la solución de Dimitra."
+   },
+   {
+    "n": 33,
+    "tipo": "emparejar",
+    "pregunta": "Gap 33",
+    "correcta": 6,
+    "explicacion": "«Even that» retoma la alegría de notar la diferencia en la arena. El mensaje de medianoche presenta a la tortuga, y «she dug, laid…» del párrafo siguiente continúa esa escena."
+   },
+   {
+    "n": 34,
+    "tipo": "emparejar",
+    "pregunta": "Gap 34",
+    "correcta": 0,
+    "explicacion": "«Those eggs» se refiere a los huevos de la tortuga anterior. «The ones who arrive in August» del párrafo siguiente contrasta con los voluntarios de julio que se van antes de la eclosión."
+   },
+   {
+    "n": 35,
+    "tipo": "emparejar",
+    "pregunta": "Gap 35",
+    "correcta": 3,
+    "explicacion": "«These lights» retoma las luces de los hoteles del párrafo anterior. El siguiente párrafo («six of the eight hotels have agreed») es la consecuencia de convencer a los dueños."
+   },
+   {
+    "n": 36,
+    "tipo": "emparejar",
+    "pregunta": "Gap 36",
+    "correcta": 5,
+    "explicacion": "«As for my friends» cierra el artículo volviendo a la apuesta del primer párrafo. Además, «the hatchlings I missed» recoge lo dicho en el hueco 34."
+   }
+  ],
+  "examenNumero": 1
+ }
+]

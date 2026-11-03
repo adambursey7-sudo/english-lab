@@ -1,0 +1,19 @@
+ESTADO REAL (2/11/2026, tramo 0)
+
+Que habia:
+- origin/master (2 commits): f9ecd13 banco de 14 examenes generados (C1 4-10, PAU 4-10) con audios y servidor de entregas, SIN la version de venta; 6cb4457 boton "Enviar a Adam" bloqueado mientras envia.
+- master local (24 por delante): version de venta (producto, generador, licencias, web, manual).
+- loop/banco (0714099): la misma fabrica de 14 examenes, 4 minutos ANTES que la publicada. Tres json (c1-6, c1-8, c1-10) difieren: la publicada trae claves alternativas mas afinadas. Se quedo la publicada.
+- tablon/english-lab-claves: respuestas alternativas en C1 ex2, PAU 2 y 3. Unida sin conflicto.
+- tablon/english-lab-c1-3(-master): C1 examen 3 escrito a mano (reading/use, writing, listening, speaking). Unida; unico cambio en src/banco/index.ts, sin choque porque los generados entran por glob.
+- loop/mejorar: ya esta en origin (no se toca).
+
+Choques resueltos:
+- Hablar.tsx, Redaccion.tsx: se junta el envio al servidor (origin) con la marca PROFE (venta). Mensajes con PROFE, no con "Adam" fijo.
+- config.ts: URL_SERVIDOR + enlaceAudioMezcla.
+- CLAUDE.md: las dos secciones.
+- src/banco/index.ts: texto del comentario de GENERADOS.
+
+Resultado: C1 exámenes 1-10, PAU 1-10. Tests, tsc y build verdes.
+
+Pendiente de vigilar: URL_SERVIDOR apunta al PC de Adam; en el modo producto no debe usarla otra academia (ver tramo 4).

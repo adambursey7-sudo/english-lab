@@ -14,6 +14,18 @@ interface Props {
   ejercicio?: Ejercicio;
 }
 
+/** Qué decirle al alumno según por qué falló el micro (permiso denegado, sin micro, sin HTTPS, navegador antiguo…). */
+export function avisoDeMicro(e: unknown): string {
+  const nombre = e instanceof DOMException ? e.name : e instanceof Error ? e.name : '';
+  const sinGrabar = ' Puedes hacer la parte igualmente, sin grabar.';
+  if (typeof navigator === 'undefined' || !navigator.mediaDevices?.getUserMedia) return 'Este navegador no deja usar el micro (hace falta una conexión segura https o un móvil más nuevo).' + sinGrabar;
+  if (nombre === 'NotAllowedError' || nombre === 'SecurityError') return 'Has bloqueado el micro. Actívalo en Ajustes del móvil › Safari (o Chrome) › Micrófono y vuelve a probar.' + sinGrabar;
+  if (nombre === 'NotFoundError' || nombre === 'OverconstrainedError') return 'No encuentro ningún micro en este dispositivo.' + sinGrabar;
+  if (nombre === 'NotReadableError' || nombre === 'AbortError') return 'El micro lo está usando otra app (una llamada, por ejemplo). Ciérrala y vuelve a probar.' + sinGrabar;
+  if (typeof MediaRecorder === 'undefined') return 'Este móvil no sabe grabar audio desde el navegador.' + sinGrabar;
+  return 'No se pudo usar el micro.' + sinGrabar;
+}
+
 /** Una parte del Speaking: lo que dice el examinador, las preguntas o la hoja, un reloj por fases y grabar con el micro (opcional). */
 export function EntradaHablar({ item, valor, onCambia, ejercicio }: Props) {
   const [fase, setFase] = useState<Fase>(valor === 'hecho' ? 'hecho' : 'quieto');
@@ -55,14 +67,16 @@ export function EntradaHablar({ item, valor, onCambia, ejercicio }: Props) {
   };
 
   const grabar = async () => {
+    let flujo: MediaStream | undefined;
     try {
-      const flujo = await navigator.mediaDevices.getUserMedia({ audio: true });
+      if (typeof MediaRecorder === 'undefined') throw new Error('sin-grabadora');
+      flujo = await navigator.mediaDevices.getUserMedia({ audio: true });
       const tipo = ['audio/mp4', 'audio/webm;codecs=opus', 'audio/webm'].find((t) => MediaRecorder.isTypeSupported(t));
       const g = new MediaRecorder(flujo, tipo ? { mimeType: tipo } : undefined);
       trozos.current = [];
       g.ondataavailable = (e) => trozos.current.push(e.data);
       g.onstop = () => {
-        flujo.getTracks().forEach((p) => p.stop());
+        flujo?.getTracks().forEach((p) => p.stop());
         const blob = new Blob(trozos.current, { type: g.mimeType });
         setAudioUrl(URL.createObjectURL(blob));
         setGrabando(false);
@@ -72,17 +86,29 @@ export function EntradaHablar({ item, valor, onCambia, ejercicio }: Props) {
       setGrabando(true);
       setAvisoMicro('');
       if (fase === 'quieto') empezar();
-    } catch {
-      setAvisoMicro('No se pudo usar el micro. Puedes practicar sin grabar.');
+    } catch (e) {
+      flujo?.getTracks().forEach((p) => p.stop());
+      setAvisoMicro(avisoDeMicro(e));
+      if (fase === 'quieto') empezar();
     }
   };
+
+  // Si se sale de la pantalla mientras se graba, se suelta el micro (si no, el iPhone sigue con el punto naranja).
+  useEffect(() => () => {
+    const g = grabadora.current;
+    if (g && g.state !== 'inactive') {
+      g.onstop = null;
+      g.stream.getTracks().forEach((p) => p.stop());
+      g.stop();
+    }
+  }, []);
 
   const pararGrabacion = () => {
     if (grabadora.current && grabadora.current.state !== 'inactive') grabadora.current.stop();
   };
 
   const compartirAudio = async () => {
-    if (!audioUrl) return;
+    if (!audioUrl || envio === 'Enviando…' || envio.startsWith('Enviado')) return;
     const blob = await (await fetch(audioUrl)).blob();
     if (ejercicio && hayServidor()) {
       setEnvio('Enviando…');
@@ -170,7 +196,7 @@ export function EntradaHablar({ item, valor, onCambia, ejercicio }: Props) {
       {audioUrl && (
         <div className="fila" style={{ gap: 10, alignItems: 'center' }}>
           <audio controls src={audioUrl} style={{ maxWidth: '100%' }} />
-          <button type="button" className="btn sec chico" onClick={compartirAudio}>Enviar a {PROFE}</button>
+          <button type="button" className="btn sec chico" onClick={compartirAudio} disabled={envio === 'Enviando…' || envio.startsWith('Enviado')}>Enviar a {PROFE}</button>
           {envio && <span className="silencio pequeno">{envio}</span>}
         </div>
       )}

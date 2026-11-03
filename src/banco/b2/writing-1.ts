@@ -15,7 +15,7 @@ export const CRITERIOS_B2 = [
 export const WRITING_B2_1: Ejercicio[] = [
   {
     id: 'b2-pro-1-1-volunteer',
-    examen: 'b2',
+    examen: 'b2can',
     destreza: 'writing',
     parte: 1,
     nombreParte: 'Short text',
@@ -48,7 +48,7 @@ export const WRITING_B2_1: Ejercicio[] = [
   },
   {
     id: 'b2-pro-1-2-letter-editor',
-    examen: 'b2',
+    examen: 'b2can',
     destreza: 'writing',
     parte: 2,
     nombreParte: 'Letter to the editor',

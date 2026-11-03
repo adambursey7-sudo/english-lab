@@ -22,7 +22,7 @@ import { WRITING_B2_1 } from './b2/writing-1';
 import { MEDIACION_B1_1 } from './b1/mediacion-1';
 import { MEDIACION_B2_1 } from './b2/mediacion-1';
 
-/** Ejercicios que escribió la fábrica (`scripts/fabrica.mjs`): ya pasaron el validador y una resolución a ciegas. */
+/** Exámenes enteros hechos por la fábrica (`generados/examen-<ex>-<N>.json`). */
 const GENERADOS: Ejercicio[] = Object.values(import.meta.glob<Ejercicio[]>('./generados/*.json', { eager: true, import: 'default' })).flat();
 
 /** Todo el banco. Cada archivo de banco/<examen>/ exporta su lista y se suma aquí. */

@@ -3,9 +3,22 @@
 
 import { ES_PRODUCTO } from '../marca';
 
-export type Examen = 'c1' | 'pau' | 'b1' | 'b2';
+/**
+ * `b1`/`b2`: Cambridge B1 Preliminary y B2 First. `b1can`/`b2can`: pruebas de certificación B1 y B2 de Canarias
+ * (comprensión escrita, producción escrita y mediación; formato en docs/formatos.md).
+ */
+export type Examen = 'b1' | 'b2' | 'b1can' | 'b2can' | 'c1' | 'pau';
+/** Todos los exámenes, en el orden en que se ofrecen. */
+export const EXAMENES: readonly Examen[] = ['b1', 'b2', 'b1can', 'b2can', 'c1', 'pau'];
+/** Exámenes de Canarias (B1/B2): nota sobre 10 por actividad y destrezas propias. */
+export function esCanarias(examen: Examen): boolean {
+  return examen === 'b1can' || examen === 'b2can';
+}
+export function esExamen(x: unknown): x is Examen {
+  return EXAMENES.includes(x as Examen);
+}
 /** Papel del examen. En la PAU solo hay uno (`prueba`, 6 preguntas sobre un texto). */
-/** `comprension-escrita` y `mediacion` son de B1/B2 (Canarias); `writing` y `listening` valen para todos los exámenes. */
+/** `comprension-escrita` y `mediacion` son de B1/B2 de Canarias (`b1can`, `b2can`); `writing` y `listening` valen para todos los exámenes. */
 export type Destreza = 'reading-use' | 'comprension-escrita' | 'writing' | 'listening' | 'speaking' | 'mediacion' | 'prueba';
 
 interface ItemBase {
@@ -160,11 +173,34 @@ export interface Ejercicio {
 export type Respuestas = Record<number, string>;
 
 export const NOMBRES_EXAMEN: Record<Examen, string> = {
+  b1: ES_PRODUCTO ? 'B1 Preliminary' : 'Cambridge B1 Preliminary',
+  b2: ES_PRODUCTO ? 'B2 First' : 'Cambridge B2 First',
   c1: ES_PRODUCTO ? 'C1 Advanced' : 'Cambridge C1 Advanced',
   pau: 'PAU · Inglés',
-  b1: 'Inglés B1 · Canarias',
-  b2: 'Inglés B2 · Canarias',
+  b1can: 'Inglés B1 · Canarias',
+  b2can: 'Inglés B2 · Canarias',
 };
+
+/** Texto de los botones para elegir examen en las pantallas del profe. */
+export const FICHA_EXAMEN: Record<Examen, string> = { b1: 'B1 Preliminary', b2: 'B2 First', b1can: 'B1 Canarias', b2can: 'B2 Canarias', c1: 'C1 Advanced', pau: 'PAU Canarias' };
+
+/** Nombre corto para etiquetas y listas: «B1», «C1», «PAU». */
+export const ETIQUETA_EXAMEN: Record<Examen, string> = { b1: 'B1', b2: 'B2', b1can: 'B1 Can.', b2can: 'B2 Can.', c1: 'C1', pau: 'PAU' };
+
+/** Papeles que se ofrecen por examen (la PAU solo tiene la prueba escrita). */
+export const DESTREZAS_DE: Record<Examen, Destreza[]> = {
+  b1: ['reading-use', 'writing', 'listening', 'speaking'],
+  b2: ['reading-use', 'writing', 'listening', 'speaking'],
+  b1can: ['comprension-escrita', 'listening', 'writing', 'mediacion'],
+  b2can: ['comprension-escrita', 'listening', 'writing', 'mediacion'],
+  c1: ['reading-use', 'writing', 'listening', 'speaking'],
+  pau: ['prueba'],
+};
+
+/** El B1 Preliminary tiene un papel «Reading» a secas; el B2 y el C1, «Reading & Use of English». */
+export function nombreDestreza(examen: Examen, destreza: Destreza): string {
+  return examen === 'b1' && destreza === 'reading-use' ? 'Reading' : NOMBRES_DESTREZA[destreza];
+}
 
 export const NOMBRES_DESTREZA: Record<Destreza, string> = {
   'reading-use': 'Reading & Use of English',

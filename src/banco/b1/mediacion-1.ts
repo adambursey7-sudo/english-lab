@@ -8,7 +8,7 @@ import { CRITERIOS_MEDIACION } from '../b2/mediacion-1';
 export const MEDIACION_B1_1: Ejercicio[] = [
   {
     id: 'b1-med-1-1-excursion',
-    examen: 'b1',
+    examen: 'b1can',
     destreza: 'mediacion',
     parte: 1,
     nombreParte: 'Written mediation',

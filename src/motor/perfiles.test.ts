@@ -1,7 +1,8 @@
 import { createHash } from 'node:crypto';
 import { describe, expect, it, vi } from 'vitest';
+import { EXAMENES } from '../banco/tipos';
 import { sha256 } from './sha256';
-import { PERFILES, elegirPerfil, examenesDe, huellaPin, perfilActivo, pinCorrecto } from './perfiles';
+import { PERFILES, elegirPerfil, etiquetaExamenes, examenesDe, huellaPin, perfilActivo, perfilesDe, pinCorrecto } from './perfiles';
 
 describe('perfiles con PIN', () => {
   it('sha256 coincide con el de Node (el que usa scripts/pin.mjs)', () => {
@@ -24,10 +25,20 @@ describe('perfiles con PIN', () => {
 
 describe('qué examen ve cada uno', () => {
   it('cada alumno solo el suyo; Adam y el invitado, los dos', () => {
-    for (const p of PERFILES) expect(examenesDe(p)).toEqual(p.profe ? ['c1', 'pau', 'b1', 'b2'] : [p.examen]);
+    for (const p of PERFILES) expect(examenesDe(p)).toEqual(p.profe ? [...EXAMENES] : (p.examenes ?? [p.examen]));
     expect(examenesDe(PERFILES.find((p) => p.id === 'maria'))).toEqual(['pau']);
     expect(examenesDe(PERFILES.find((p) => p.id === 'eduardo'))).toEqual(['c1']);
-    expect(examenesDe(undefined)).toEqual(['c1', 'pau', 'b1', 'b2']);
+    expect(examenesDe(PERFILES.find((p) => p.id === 'alba'))).toEqual(['b1', 'b2']);
+    expect(examenesDe(undefined)).toEqual([...EXAMENES]);
+  });
+
+  it('Alba sale en B1 y en B2 y en ningún otro examen', () => {
+    expect(perfilesDe('b1').map((p) => p.id)).toEqual(['alba']);
+    expect(perfilesDe('b2').map((p) => p.id)).toEqual(['alba']);
+    expect(perfilesDe('c1').map((p) => p.id)).not.toContain('alba');
+    expect(perfilesDe('pau').map((p) => p.id)).not.toContain('alba');
+    expect(etiquetaExamenes(PERFILES.find((p) => p.id === 'alba')!)).toBe('Cambridge B1 + B2');
+    expect(etiquetaExamenes(PERFILES.find((p) => p.id === 'maria')!)).toBe('PAU · Inglés');
   });
 });
 

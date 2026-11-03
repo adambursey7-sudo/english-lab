@@ -1,7 +1,7 @@
 import { useMemo, useState } from 'react';
 import { BANCO } from '../banco';
 import { bancoCompleto } from '../motor/propios';
-import { etiquetaParte, type Ejercicio, type Examen } from '../banco/tipos';
+import { EXAMENES, ETIQUETA_EXAMEN, FICHA_EXAMEN, etiquetaParte, type Ejercicio, type Examen } from '../banco/tipos';
 import { PAPELES_DE } from '../motor/cuadernillo';
 import { PARTES_GENERABLES } from '../motor/guiaEstilo';
 import { useLicencia } from '../motor/useLicencia';
@@ -83,6 +83,7 @@ export function Editor() {
   const elegirPlantilla = (p: Plantilla) => setF((x) => ({ ...x, plantilla: p, datos: { ...x.datos, instrucciones: PLANTILLAS.find((q) => q.id === p)?.instrucciones ?? '' } }));
   const elegirExamen = (examen: Examen) => {
     const primero = lugares(examen)[0];
+    if (!primero) return; // todavía no hay ejercicios de ese examen en el banco
     setF((x) => ({ ...x, datos: { ...x.datos, examen, destreza: primero.destreza, parte: primero.parte } }));
   };
 
@@ -162,7 +163,7 @@ export function Editor() {
           <select className="campo-crear" aria-label="Qué parte crear" value={claveParte} onChange={(e) => setClaveParte(e.target.value)}>
             {PARTES_GENERABLES.map((g) => {
               const nombre = BANCO.find((e) => e.examen === g.examen && e.destreza === g.destreza && e.parte === g.parte)?.nombreParte ?? '';
-              return <option key={`${g.examen}/${g.destreza}/${g.parte}`} value={`${g.examen}/${g.destreza}/${g.parte}`}>{g.examen === 'c1' ? 'C1' : 'PAU'} · {etiquetaParte(g.examen, g.parte)} · {nombre}</option>;
+              return <option key={`${g.examen}/${g.destreza}/${g.parte}`} value={`${g.examen}/${g.destreza}/${g.parte}`}>{ETIQUETA_EXAMEN[g.examen]} · {etiquetaParte(g.examen, g.parte)} · {nombre}</option>;
             })}
           </select>
           <input className="campo-crear" aria-label="Tema" placeholder="Tema (opcional)" maxLength={80} value={tema} onChange={(e) => setTema(e.target.value)} />
@@ -191,8 +192,9 @@ export function Editor() {
 
           <h2>Dónde se mezcla</h2>
           <div className="fichas" role="group" aria-label="Examen">
-            <button type="button" className="ficha" aria-pressed={f.datos.examen === 'c1'} onClick={() => elegirExamen('c1')}>C1 Advanced</button>
-            <button type="button" className="ficha" aria-pressed={f.datos.examen === 'pau'} onClick={() => elegirExamen('pau')}>PAU Canarias</button>
+            {EXAMENES.filter((x) => lugares(x).length > 0).map((x) => (
+              <button key={x} type="button" className="ficha" aria-pressed={f.datos.examen === x} onClick={() => elegirExamen(x)}>{FICHA_EXAMEN[x]}</button>
+            ))}
           </div>
           <select className="campo-crear" aria-label="Parte del examen" value={`${f.datos.destreza}/${f.datos.parte}`} onChange={(e) => { const [d, n] = e.target.value.split('/'); cambiaDatos({ destreza: d as Fuente['datos']['destreza'], parte: Number(n) }); }}>
             {sitios.map((s) => <option key={`${s.destreza}/${s.parte}`} value={`${s.destreza}/${s.parte}`}>{s.texto}</option>)}
@@ -227,7 +229,7 @@ export function Editor() {
               {propios.map((e) => (
                 <li key={e.id}>
                   <b>{e.nombreParte}</b>
-                  <small>{e.examen === 'c1' ? 'C1' : 'PAU'} · {etiquetaParte(e.examen, e.parte)} · {e.items.length} {e.items.length === 1 ? 'pregunta' : 'preguntas'}</small>
+                  <small>{ETIQUETA_EXAMEN[e.examen]} · {etiquetaParte(e.examen, e.parte)} · {e.items.length} {e.items.length === 1 ? 'pregunta' : 'preguntas'}</small>
                   <span className="acciones">
                     <button type="button" className="btn sec chico" onClick={() => editar(e)}>Editar</button>
                     <button type="button" className="btn sec chico" onClick={() => borrar(e)}>Borrar</button>

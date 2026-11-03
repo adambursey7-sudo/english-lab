@@ -23,6 +23,5 @@ export function enlaceAudioMezcla(ids: string[], base: string = baseApp()): stri
 /**
  * El servidor de entregas del PC de Adam (`servidor/servidor.mjs`, abierto con Tailscale Funnel): recibe writings y
  * grabaciones de speaking y devuelve las notas. Vacío = no hay servidor y se comparte por WhatsApp como antes.
- * No se usa en la versión de producto: cada academia no tiene un PC de Adam.
  */
-export const URL_SERVIDOR = ES_PRODUCTO ? '' : 'https://msi.tail0b94b8.ts.net:10000';
+export const URL_SERVIDOR: string = import.meta.env.MODE === 'producto' ? '' : 'https://msi.tail0b94b8.ts.net:10000';

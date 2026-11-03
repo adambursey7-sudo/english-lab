@@ -31,13 +31,27 @@ export interface Cuadernillo {
 }
 
 export const TITULO_EXAMEN: Record<Examen, string> = {
+  b1: 'B1 Preliminary · Practice test',
+  b2: 'B2 First · Practice test',
   c1: 'C1 Advanced · Practice test',
   pau: 'Prueba de inglés · PAU Canarias (modelo de práctica)',
-  b1: 'English B1 · Practice test',
-  b2: 'English B2 · Practice test',
+  b1can: 'English B1 · Practice test (Canarias)',
+  b2can: 'English B2 · Practice test (Canarias)',
 };
 
 export const PAPELES_DE: Record<Examen, { destreza: Destreza; titulo: string; minutos: number }[]> = {
+  b1: [
+    { destreza: 'reading-use', titulo: 'Reading', minutos: 45 },
+    { destreza: 'writing', titulo: 'Writing', minutos: 45 },
+    { destreza: 'listening', titulo: 'Listening', minutos: 35 },
+    { destreza: 'speaking', titulo: 'Speaking', minutos: 12 },
+  ],
+  b2: [
+    { destreza: 'reading-use', titulo: 'Reading and Use of English', minutos: 75 },
+    { destreza: 'writing', titulo: 'Writing', minutos: 80 },
+    { destreza: 'listening', titulo: 'Listening', minutos: 40 },
+    { destreza: 'speaking', titulo: 'Speaking', minutos: 14 },
+  ],
   c1: [
     { destreza: 'reading-use', titulo: 'Reading and Use of English', minutos: 90 },
     { destreza: 'writing', titulo: 'Writing', minutos: 90 },
@@ -45,13 +59,13 @@ export const PAPELES_DE: Record<Examen, { destreza: Destreza; titulo: string; mi
     { destreza: 'speaking', titulo: 'Speaking', minutos: 15 },
   ],
   pau: [{ destreza: 'prueba', titulo: 'Prueba escrita', minutos: 90 }],
-  b1: [
+  b1can: [
     { destreza: 'comprension-escrita', titulo: 'Reading', minutos: 60 },
     { destreza: 'listening', titulo: 'Listening', minutos: 35 },
     { destreza: 'writing', titulo: 'Writing', minutos: 75 },
     { destreza: 'mediacion', titulo: 'Written mediation', minutos: 35 },
   ],
-  b2: [
+  b2can: [
     { destreza: 'comprension-escrita', titulo: 'Reading', minutos: 70 },
     { destreza: 'listening', titulo: 'Listening', minutos: 40 },
     { destreza: 'writing', titulo: 'Writing', minutos: 90 },

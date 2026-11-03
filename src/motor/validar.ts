@@ -31,7 +31,7 @@ export function problemas(e: Ejercicio): string[] {
       // La principal (la primera) es la que sale en la clave: debe cumplir la regla del examen. Las demás son variantes aceptadas.
       const c = i.correctas[0] ?? '';
       const n = c.trim().split(/\s+/).length;
-      if (n < 2 || n > 7) fallos.push(`La transformación ${i.n}: «${c}» debe tener entre 3 y 6 palabras.`);
+      if (n < 2 || n > 7) fallos.push(`La transformación ${i.n}: «${c}» debe tener entre 2 y 6 palabras.`);
       if (!`${i.inicio} ${c} ${i.fin}`.toLowerCase().split(/\s+/).includes(i.clave.toLowerCase())) fallos.push(`La transformación ${i.n}: «${c}» no usa la palabra clave ${i.clave}.`);
     } else if (i.tipo === 'verdaderoFalso') {
       if (i.pruebas.length === 0) fallos.push(`La afirmación ${i.n} necesita la frase del texto que la prueba.`);
@@ -62,6 +62,41 @@ export interface ReglasParte {
 }
 
 export const REGLAS: Record<string, ReglasParte> = {
+  // B1 Preliminary (Reading 6 partes, Writing 2, Listening 4, Speaking 4)
+  'b1/reading-use/1': { preguntas: [5, 5], palabrasTexto: [120, 420], tipos: ['opciones'] },
+  'b1/reading-use/2': { preguntas: [5, 5], palabrasTexto: [300, 800], tipos: ['emparejar'] },
+  'b1/reading-use/3': { preguntas: [5, 5], palabrasTexto: [280, 600], tipos: ['opciones'] },
+  'b1/reading-use/4': { preguntas: [5, 5], palabrasTexto: [120, 450], tipos: ['emparejar'] },
+  'b1/reading-use/5': { preguntas: [6, 6], palabrasTexto: [70, 230], tipos: ['opciones'] },
+  'b1/reading-use/6': { preguntas: [6, 6], palabrasTexto: [70, 230], tipos: ['palabra'] },
+  'b1/writing/1': { preguntas: [1, 1], tipos: ['redaccion'] },
+  'b1/writing/2': { preguntas: [2, 2], tipos: ['redaccion'] },
+  'b1/listening/1': { preguntas: [7, 7], tipos: ['opciones'] },
+  'b1/listening/2': { preguntas: [6, 6], tipos: ['opciones'] },
+  'b1/listening/3': { preguntas: [6, 6], tipos: ['palabra'] },
+  'b1/listening/4': { preguntas: [6, 6], tipos: ['opciones'] },
+  'b1/speaking/1': { preguntas: [1, 1], tipos: ['hablar'] },
+  'b1/speaking/2': { preguntas: [1, 1], tipos: ['hablar'] },
+  'b1/speaking/3': { preguntas: [2, 2], tipos: ['hablar'] },
+  'b1/speaking/4': { preguntas: [1, 1], tipos: ['hablar'] },
+  // B2 First (Reading and Use of English 7 partes, Writing 2, Listening 4, Speaking 4)
+  'b2/reading-use/1': { preguntas: [8, 8], palabrasTexto: [120, 260], tipos: ['opciones'] },
+  'b2/reading-use/2': { preguntas: [8, 8], palabrasTexto: [120, 260], tipos: ['palabra'] },
+  'b2/reading-use/3': { preguntas: [8, 8], palabrasTexto: [100, 260], tipos: ['palabra'] },
+  'b2/reading-use/4': { preguntas: [6, 6], tipos: ['transformacion'] },
+  'b2/reading-use/5': { preguntas: [6, 6], palabrasTexto: [450, 800], tipos: ['opciones'] },
+  'b2/reading-use/6': { preguntas: [6, 6], palabrasTexto: [200, 800], tipos: ['emparejar'] },
+  'b2/reading-use/7': { preguntas: [10, 10], palabrasTexto: [400, 900], tipos: ['emparejar'] },
+  'b2/writing/1': { preguntas: [1, 1], tipos: ['redaccion'] },
+  'b2/writing/2': { preguntas: [3, 3], tipos: ['redaccion'] },
+  'b2/listening/1': { preguntas: [8, 8], tipos: ['opciones'] },
+  'b2/listening/2': { preguntas: [10, 10], tipos: ['palabra'] },
+  'b2/listening/3': { preguntas: [5, 5], tipos: ['emparejar'] },
+  'b2/listening/4': { preguntas: [7, 7], tipos: ['opciones'] },
+  'b2/speaking/1': { preguntas: [1, 1], tipos: ['hablar'] },
+  'b2/speaking/2': { preguntas: [2, 2], tipos: ['hablar'] },
+  'b2/speaking/3': { preguntas: [1, 1], tipos: ['hablar'] },
+  'b2/speaking/4': { preguntas: [1, 1], tipos: ['hablar'] },
   'c1/reading-use/1': { preguntas: [8, 8], palabrasTexto: [120, 260], tipos: ['opciones'] },
   'c1/reading-use/2': { preguntas: [8, 8], palabrasTexto: [120, 260], tipos: ['palabra'] },
   'c1/reading-use/3': { preguntas: [8, 8], palabrasTexto: [100, 260], tipos: ['palabra'] },
@@ -84,18 +119,18 @@ export const REGLAS: Record<string, ReglasParte> = {
   'pau/prueba/4': { preguntas: [6, 6], palabrasTexto: [60, 220], tipos: ['redaccion'] },
   'pau/prueba/5': { preguntas: [5, 5], tipos: ['redaccion'] },
   'pau/prueba/6': { preguntas: [2, 2], tipos: ['redaccion'] },
-  'b1/comprension-escrita/1': { preguntas: [6, 6], palabrasTexto: [250, 450], tipos: ['emparejar'] },
-  'b1/comprension-escrita/2': { preguntas: [8, 9], palabrasTexto: [280, 450], tipos: ['opciones', 'emparejar'] },
-  'b1/comprension-escrita/3': { preguntas: [10, 11], palabrasTexto: [280, 450], tipos: ['opciones', 'palabra'] },
-  'b1/writing/1': { preguntas: [1, 1], tipos: ['redaccion'] },
-  'b1/writing/2': { preguntas: [1, 1], tipos: ['redaccion'] },
-  'b1/mediacion/1': { preguntas: [1, 1], tipos: ['redaccion'] },
-  'b2/comprension-escrita/1': { preguntas: [6, 6], palabrasTexto: [350, 600], tipos: ['emparejar'] },
-  'b2/comprension-escrita/2': { preguntas: [8, 9], palabrasTexto: [400, 650], tipos: ['opciones', 'emparejar'] },
-  'b2/comprension-escrita/3': { preguntas: [10, 11], palabrasTexto: [350, 650], tipos: ['palabra', 'opciones'] },
-  'b2/writing/1': { preguntas: [1, 1], tipos: ['redaccion'] },
-  'b2/writing/2': { preguntas: [1, 1], tipos: ['redaccion'] },
-  'b2/mediacion/1': { preguntas: [1, 1], tipos: ['redaccion'] },
+  'b1can/comprension-escrita/1': { preguntas: [6, 6], palabrasTexto: [250, 450], tipos: ['emparejar'] },
+  'b1can/comprension-escrita/2': { preguntas: [8, 9], palabrasTexto: [280, 450], tipos: ['opciones', 'emparejar'] },
+  'b1can/comprension-escrita/3': { preguntas: [10, 11], palabrasTexto: [280, 450], tipos: ['opciones', 'palabra'] },
+  'b1can/writing/1': { preguntas: [1, 1], tipos: ['redaccion'] },
+  'b1can/writing/2': { preguntas: [1, 1], tipos: ['redaccion'] },
+  'b1can/mediacion/1': { preguntas: [1, 1], tipos: ['redaccion'] },
+  'b2can/comprension-escrita/1': { preguntas: [6, 6], palabrasTexto: [350, 600], tipos: ['emparejar'] },
+  'b2can/comprension-escrita/2': { preguntas: [8, 9], palabrasTexto: [400, 650], tipos: ['opciones', 'emparejar'] },
+  'b2can/comprension-escrita/3': { preguntas: [10, 11], palabrasTexto: [350, 650], tipos: ['palabra', 'opciones'] },
+  'b2can/writing/1': { preguntas: [1, 1], tipos: ['redaccion'] },
+  'b2can/writing/2': { preguntas: [1, 1], tipos: ['redaccion'] },
+  'b2can/mediacion/1': { preguntas: [1, 1], tipos: ['redaccion'] },
 };
 
 /** Palabras de 8 letras o más sobre el total: una medida burda de si el vocabulario está a la altura (C1 más que PAU). */
@@ -104,7 +139,7 @@ export function densidadLarga(texto: string): number {
   return p.length === 0 ? 0 : p.filter((w) => w.length >= 8).length / p.length;
 }
 
-const MINIMO_LARGAS: Record<string, number> = { c1: 0.05, pau: 0.03, b1: 0.03, b2: 0.04 };
+const MINIMO_LARGAS: Record<string, number> = { b1: 0.02, b2: 0.035, b1can: 0.03, b2can: 0.04, c1: 0.05, pau: 0.03 };
 
 /** Texto del ejercicio que hay que cuidar (el principal o todas las secciones). */
 function textoDe(e: Ejercicio): string {
@@ -138,6 +173,7 @@ export function validarEjercicio(e: Ejercicio, otros: Iterable<string> = []): st
   const fallos = problemas(e);
   const r = REGLAS[`${e.examen}/${e.destreza}/${e.parte}`];
   if (!r) return [...fallos, `No hay regla para ${e.examen}/${e.destreza}/${e.parte}: esa parte no se puede generar.`];
+  if ((/placeholder|lorem ipsum/i.test(JSON.stringify(e.items)) || /\bTODO\b/.test(JSON.stringify(e.items)))) fallos.push('Hay texto de relleno sin terminar (PLACEHOLDER, TODO…) en las preguntas.');
   const n = e.items.length;
   if (n < r.preguntas[0] || n > r.preguntas[1]) fallos.push(`Debe tener ${r.preguntas[0] === r.preguntas[1] ? r.preguntas[0] : `${r.preguntas[0]}–${r.preguntas[1]}`} preguntas y tiene ${n}.`);
   for (const i of e.items) if (!r.tipos.includes(i.tipo)) fallos.push(`La pregunta ${i.n} es de tipo «${i.tipo}», que esta parte no usa.`);

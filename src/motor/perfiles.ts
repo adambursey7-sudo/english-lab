@@ -1,4 +1,4 @@
-import type { Examen } from '../banco/tipos';
+import { EXAMENES, ETIQUETA_EXAMEN, NOMBRES_EXAMEN, type Examen } from '../banco/tipos';
 import { sha256 } from './sha256';
 
 /** Un alumno de Adam: su nombre, el examen que prepara (el que se abre por defecto) y la huella de su PIN. */
@@ -6,6 +6,8 @@ export interface Perfil {
   id: string;
   nombre: string;
   examen: Examen;
+  /** Si prepara más de uno (Alba: B1 y B2), todos, con `examen` el primero. Si falta, solo `examen`. */
+  examenes?: Examen[];
   /** sha256 de `english-lab:<id>:<PIN>`; el PIN de 4 cifras lo da Adam y se cambia con `node scripts/pin.mjs`. */
   pin: string;
   /** Foto redonda en `public/img/` (opcional; si falta, sale la inicial). Adam decidió publicarlas (29/10). */
@@ -27,6 +29,7 @@ export const PERFILES: Perfil[] = import.meta.env.MODE === 'producto' ? [] : [
   { id: 'laurita', nombre: 'Laurita', examen: 'pau', foto: 'perfil-laurita.jpg', pin: '50bbf9689ff85f26db13a397d9967c3394c574ea17eb51bf126d3bcc43390a6a' },
   { id: 'maria', nombre: 'María', examen: 'pau', foto: 'perfil-maria.jpg', pin: '6ee6c012193a4670182be25642d37ef8ca709b079a5e3548c055d0e27e386ccd' },
   { id: 'aroa', nombre: 'Aroa', examen: 'pau', foto: 'perfil-aroa.jpg', pin: 'd82551e641f71547880c4964467bee263c237adf5575df046fd284598fdfc9e2' },
+  { id: 'alba', nombre: 'Alba', examen: 'b1', examenes: ['b1', 'b2'], pin: '62bf07e23547c31938e0a9c4a88684a2e22b2163a71fa1463e66ea0514e26339' },
 ];
 
 // La sesión guarda `<id>:<PIN>` y se vuelve a comprobar al abrir: con solo el id cualquiera podía escribirlo a mano
@@ -119,12 +122,25 @@ export function salirPerfil(): void {
  * el invitado y Adam ven los dos.
  */
 export function examenesDe(perfil: Perfil | undefined): Examen[] {
-  return !perfil || perfil.profe ? ['c1', 'pau', 'b1', 'b2'] : [perfil.examen];
+  return !perfil || perfil.profe ? [...EXAMENES] : examenesPropios(perfil);
+}
+
+/** Los exámenes que prepara el alumno (Adam, solo el suyo; para todos los que ve, `examenesDe`). */
+export function examenesPropios(perfil: Perfil): Examen[] {
+  return perfil.examenes ?? [perfil.examen];
 }
 
 /** Perfiles de un examen, en el orden de la lista. */
 export function perfilesDe(examen: Examen): Perfil[] {
-  return PERFILES.filter((p) => p.examen === examen);
+  return PERFILES.filter((p) => examenesPropios(p).includes(examen));
+}
+
+/** Examen o exámenes del alumno para la cabecera: «Cambridge B1 Preliminary» o «Cambridge B1 + B2». */
+export function etiquetaExamenes(perfil: Perfil): string {
+  const propios = examenesPropios(perfil);
+  if (propios.length === 1) return NOMBRES_EXAMEN[propios[0]];
+  const cambridge = propios.every((x) => x !== 'pau');
+  return `${cambridge ? 'Cambridge ' : ''}${propios.map((x) => ETIQUETA_EXAMEN[x]).join(' + ')}`;
 }
 
 /** Lo de dentro del círculo del alumno: su foto o, si no tiene, su inicial. */

@@ -15,7 +15,7 @@ export const CRITERIOS_MEDIACION = [
 export const MEDIACION_B2_1: Ejercicio[] = [
   {
     id: 'b2-med-1-1-four-day-week',
-    examen: 'b2',
+    examen: 'b2can',
     destreza: 'mediacion',
     parte: 1,
     nombreParte: 'Written mediation',

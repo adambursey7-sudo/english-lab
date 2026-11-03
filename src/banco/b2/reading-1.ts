@@ -7,7 +7,7 @@ import type { Ejercicio } from '../tipos';
 export const READING_B2_1: Ejercicio[] = [
   {
     id: 'b2-cte-1-1-remote-work',
-    examen: 'b2',
+    examen: 'b2can',
     destreza: 'comprension-escrita',
     parte: 1,
     nombreParte: 'Matching',
@@ -108,7 +108,7 @@ export const READING_B2_1: Ejercicio[] = [
   },
   {
     id: 'b2-cte-1-2-river',
-    examen: 'b2',
+    examen: 'b2can',
     destreza: 'comprension-escrita',
     parte: 2,
     nombreParte: 'Multiple choice',
@@ -191,7 +191,7 @@ export const READING_B2_1: Ejercicio[] = [
   },
   {
     id: 'b2-cte-1-3-boredom',
-    examen: 'b2',
+    examen: 'b2can',
     destreza: 'comprension-escrita',
     parte: 3,
     nombreParte: 'Short answers',

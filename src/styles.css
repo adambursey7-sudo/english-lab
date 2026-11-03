@@ -73,6 +73,8 @@ input { font: inherit; color: inherit; }
   padding: calc(10px + env(safe-area-inset-top, 0px)) max(16px, env(safe-area-inset-right, 0px)) 10px max(16px, env(safe-area-inset-left, 0px));
   background: var(--paper);
   border-bottom: 1px solid var(--line);
+  /* En el producto, la franja de abajo lleva el color de la academia. */
+  box-shadow: inset 0 -4px 0 var(--marca, transparent);
 }
 .cabecera-dentro { max-width: 680px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 12px; min-width: 0; }
 .cabecera .titulo { font-family: var(--display); font-weight: 600; font-size: 18px; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
@@ -599,3 +601,9 @@ button:focus-visible, [role='button']:focus-visible { outline: 2px solid var(--t
 .consejo.plegable summary { cursor: pointer; font-weight: 600; }
 .consejo.plegable[open] summary { margin-bottom: 8px; }
 .consejo.plegable h3 { font-size: 15px; margin: 8px 0 4px; }
+/* «Lo dejaste a medias»: seguir un ejercicio que se cerró a medias. */
+.retomar { display: grid; gap: 6px; padding: 14px 16px; border-radius: var(--radio); border-left: 6px solid var(--tono, var(--ink)); background: linear-gradient(90deg, var(--tono-soft, var(--paper2)), var(--paper2) 70%); }
+.retomar small { text-transform: uppercase; letter-spacing: .06em; font-size: 11.5px; font-weight: 700; color: var(--tono, var(--ink2)); }
+.retomar b { font-family: var(--display); font-size: 19px; }
+.retomar .silencio { font-size: 13.5px; }
+.retomar-botones { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 4px; }

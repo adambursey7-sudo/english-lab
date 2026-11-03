@@ -1,9 +1,10 @@
 // Fábrica de EXÁMENES ENTEROS numerados (en el PC de Adam, con Claude Code): escribe todas las partes del examen N,
 // las valida y hace que otra llamada las resuelva a ciegas (como scripts/fabrica.mjs), les pone `examenNumero` y las
-// guarda juntas en src/banco/generados/examen-<c1|pau>-<N>.json. Se puede repetir: salta las partes que ya están hechas.
+// guarda juntas en src/banco/generados/examen-<b1|b2|c1|pau>-<N>.json. Se puede repetir: salta las partes que ya están hechas.
 // Después: node scripts/exportar-guiones.mjs && python scripts/audios.py  (mp3 del listening del C1).
 //
 // Uso:  node scripts/examen-completo.mjs c1 4 [--paralelo 3]      node scripts/examen-completo.mjs pau 4
+//       node scripts/examen-completo.mjs b1 1      node scripts/examen-completo.mjs b2 1
 //       --seco: enseña los temas elegidos y no llama a la IA.   --solo reading-use/5: una sola parte.
 import { spawn } from 'node:child_process';
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
@@ -18,8 +19,8 @@ const solo = opt('--solo');
 const pos = args.filter((a, i) => !a.startsWith('--') && !args[i - 1]?.startsWith('--'));
 const examen = pos[0];
 const numero = Number(pos[1]);
-if (!['c1', 'pau'].includes(examen) || !numero) {
-  console.error('Uso: node scripts/examen-completo.mjs <c1|pau> <número del examen> [--paralelo 3] [--seco] [--solo destreza/parte]');
+if (!['b1', 'b2', 'c1', 'pau'].includes(examen) || !numero) {
+  console.error('Uso: node scripts/examen-completo.mjs <b1|b2|c1|pau> <número del examen> [--paralelo 3] [--seco] [--solo destreza/parte]');
   process.exit(1);
 }
 
@@ -36,6 +37,22 @@ const TEMAS_C1 = [
   'apprenticeships versus university', 'a letter found in a second-hand book', 'water-saving gardens', 'the science of laughter',
   'cycling cities', 'a fishing community and tourism', 'creativity and boredom', 'documentary film-making in the field',
 ];
+const TEMAS_B1 = [
+  'a school trip to a science museum', 'joining a new sports club', 'a surprise birthday party', 'learning to cook with a grandparent',
+  'a weekend at a campsite', 'a part-time job in a café', 'a lost phone at the train station', 'a new student from another country',
+  'a local music festival', 'planning a trip to the mountains', 'volunteering at an animal shelter', 'a school photography competition',
+  'moving to a new flat', 'a funny misunderstanding on holiday', 'a bike ride along the coast', 'starting an online English club',
+  'a cooking competition at school', 'a rainy day at the shopping centre', 'learning to play the guitar', 'a visit to a farm',
+  'a summer language course abroad', 'a friend who is always late', 'a charity run in the park', 'keeping fit without a gym',
+];
+const TEMAS_B2 = [
+  'the return of independent bookshops', 'a gap year spent working abroad', 'learning to surf as an adult', 'street art and city identity',
+  'a lighthouse that became a hotel', 'tiny houses and minimalist living', 'a young inventor and her first start-up', 'volunteering on a conservation project',
+  'a teenager who runs a podcast', 'cycling to work in a busy city', 'the pros and cons of working from home', 'learning to play chess online',
+  'a family restaurant facing change', 'urban foxes and wildlife in cities', 'festivals and their effect on small towns', 'a long train journey across a country',
+  'second-hand shopping and style', 'sleep, screens and teenagers', 'a museum night for young people', 'a rescue dog and its new owner',
+  'learning a language through music', 'a hiking trip that went wrong', 'photography without a smartphone', 'a community garden on a rooftop',
+];
 const TEMAS_PAU = [
   'social media and sleep', 'teenagers and part-time jobs', 'plastic-free schools', 'video games and learning', 'a new bike-sharing system',
   'sports clubs for girls', 'young volunteers and animal shelters', 'healthy lunches at school', 'mobile phones in class', 'summer camps abroad',
@@ -46,7 +63,7 @@ const TEMAS_PAU = [
 
 const vite = await createServer({ server: { middlewareMode: true }, appType: 'custom', logLevel: 'error' });
 const { BANCO } = await vite.ssrLoadModule('/src/banco/index.ts');
-const { GUIA, promptEjercicio, extraerJson } = await vite.ssrLoadModule('/src/motor/guiaEstilo.ts');
+const { GUIA, ejemploDe, promptEjercicio, extraerJson } = await vite.ssrLoadModule('/src/motor/guiaEstilo.ts');
 const { validarEjercicio } = await vite.ssrLoadModule('/src/motor/validar.ts');
 
 mkdirSync('src/banco/generados', { recursive: true });
@@ -54,7 +71,10 @@ const archivo = join('src/banco/generados', `examen-${examen}-${numero}.json`);
 const hechos = existsSync(archivo) ? JSON.parse(readFileSync(archivo, 'utf8')) : [];
 const textosDe = (e) => [e.texto ?? '', ...(e.secciones?.map((s) => s.texto) ?? [])];
 
+const inicioTotal = Date.now();
+let llamadas = 0;
 function preguntar(texto) {
+  llamadas++;
   return new Promise((resolver, rechazar) => {
     const p = spawn('claude', ['-p', '--model', 'sonnet', '--tools', '', '--no-session-persistence'], { shell: process.platform === 'win32' });
     let out = '';
@@ -98,7 +118,7 @@ async function coincidenciaCiega(e) {
 }
 
 // Temas: una lista barajada de forma estable por examen, distinta para cada parte.
-const pool = examen === 'c1' ? TEMAS_C1 : TEMAS_PAU;
+const pool = { b1: TEMAS_B1, b2: TEMAS_B2, c1: TEMAS_C1, pau: TEMAS_PAU }[examen];
 const temaDe = (k) => pool[(numero * 7 + k * 5) % pool.length];
 let guias = GUIA.filter((g) => g.examen === examen);
 if (solo) guias = guias.filter((g) => `${g.destreza}/${g.parte}` === solo);
@@ -118,7 +138,7 @@ let fallidos = 0;
 
 async function hacer({ g, tema }) {
   if (yaEsta(g)) return console.log(`= ${g.destreza}/${g.parte} ya estaba`);
-  const ejemplo = BANCO.find((e) => e.examen === examen && e.destreza === g.destreza && e.parte === g.parte);
+  const ejemplo = ejemploDe(g, BANCO);
   if (!ejemplo) return console.log(`✘ ${g.destreza}/${g.parte}: no hay ejemplo en el banco`);
   let errores = [];
   for (let intento = 1; intento <= 3; intento++) {
@@ -127,8 +147,8 @@ async function hacer({ g, tema }) {
       e.examen = examen;
       e.destreza = g.destreza;
       e.parte = g.parte;
-      e.nombreParte = ejemplo.nombreParte;
-      e.minutos = ejemplo.minutos;
+      e.nombreParte = g.nombreParte ?? ejemplo.nombreParte;
+      e.minutos = g.minutos ?? ejemplo.minutos;
       e.examenNumero = numero;
       e.id = `${examen}-${g.destreza}-${g.parte}-x${numero}`;
       if (e.audio) e.audio = { ...e.audio, archivo: `audio/${e.id}.mp3` };
@@ -158,4 +178,6 @@ const cola = [...tareas];
 await Promise.all(Array.from({ length: paralelo }, async () => { for (let t = cola.shift(); t; t = cola.shift()) await hacer(t); }));
 await vite.close();
 console.log(`Examen ${examen} ${numero}: ${guardados} partes nuevas, ${fallidos} fallidas, ${hechos.length}/${tareas.length} en el archivo.`);
+const min = ((Date.now() - inicioTotal) / 60000).toFixed(1);
+console.log(`Gasto: ${llamadas} llamadas a Claude (sonnet) en ${min} min.`);
 process.exit(fallidos > 0 ? 2 : 0);

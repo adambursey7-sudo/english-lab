@@ -5,7 +5,7 @@
 # Gasta cuota de Claude (unas 40 llamadas el C1, 8 la PAU). Si alguna parte falla, se puede repetir el mismo comando: salta lo hecho.
 # Para que los alumnos lo vean hay que subirlo a master (se publica solo) y entonces el QR ya abre su audio.
 param(
-  [ValidateSet('c1', 'pau')] [string] $Examen = 'c1',
+  [ValidateSet('b1', 'b2', 'c1', 'pau')] [string] $Examen = 'c1',
   [int] $Numero = 0
 )
 $ErrorActionPreference = 'Stop'
@@ -17,6 +17,7 @@ if ($Numero -eq 0) {
   foreach ($f in Get-ChildItem -Recurse -Path 'src/banco' -Include *.ts) {
     $dentro = Get-Content $f.FullName -Raw
     $esPau = $f.FullName -match '[\/]pau[\/]'
+    if ($Examen -in 'b1', 'b2') { continue }  # B1 y B2 solo tienen exámenes generados
     if (($Examen -eq 'pau') -eq $esPau) { foreach ($m in [regex]::Matches($dentro, 'examenNumero:\s*(\d+)')) { $usados += [int]$m.Groups[1].Value } }
   }
   foreach ($f in Get-ChildItem 'src/banco/generados' -Filter "examen-$Examen-*.json" -ErrorAction SilentlyContinue) { $usados += [int]($f.BaseName -replace "examen-$Examen-", '') }
@@ -28,7 +29,7 @@ node scripts/examen-completo.mjs $Examen $Numero --paralelo 3
 $codigo = $LASTEXITCODE
 if ($codigo -ne 0) { Write-Warning "Faltan partes (código $codigo). Repite el comando para que complete las que faltan."; exit $codigo }
 
-if ($Examen -eq 'c1') {
+if ($Examen -ne 'pau') {
   node scripts/exportar-guiones.mjs
   python scripts/audios.py
 }

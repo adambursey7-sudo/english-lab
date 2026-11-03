@@ -26,7 +26,7 @@ export const USE_OF_ENGLISH_C1: Ejercicio[] = [
     examenNumero: 1,
     titulo: 'The quiet revival of the public library',
     instrucciones: INSTRUCCIONES[1],
-    minutos: 10,
+    minutos: 8,
     texto:
       'Public libraries were, not so long ago, widely {{1}} as being on their way out. With information just a few clicks away, the argument {{2}}, who would bother to visit a building full of paper? Yet the predictions have proved {{3}} premature. Across many countries, visitor numbers are rising again, and the reasons have little to do with books.\n\n' +
       'Libraries have quietly {{4}} themselves as the last genuinely free indoor public spaces: somewhere to work, to keep warm, to meet, or simply to be left alone. Many now run coding clubs, language exchanges and legal advice sessions {{5}} with the usual lending service. Critics argue that this stretches the {{6}} of what a library is for, and that local councils are using libraries to paper over cuts made elsewhere. Librarians, for their {{7}}, see things differently. The institution, they say, has always adapted to whatever its community {{8}} in need of, and that community now needs a room with a door that is open to everyone.',
@@ -50,7 +50,7 @@ export const USE_OF_ENGLISH_C1: Ejercicio[] = [
     examenNumero: 1,
     titulo: 'Why we forget names',
     instrucciones: INSTRUCCIONES[2],
-    minutos: 10,
+    minutos: 8,
     texto:
       'Most of us have, at {{9}} time or another, been introduced to someone and forgotten their name within seconds. {{10}} embarrassing as this is, it is not a sign of a failing memory. Names are simply hard to remember, and the reason has {{11}} to do with how the brain stores information. A face, a job or an accent all carry meaning that can be linked to things we already know. A name, {{12}} the other hand, is arbitrary: there is nothing about a person called Sarah that makes her any more Sarah-like than Emma.\n\n' +
       '{{13}} is more, we are usually distracted at the moment of introduction, busy thinking about what to say {{14}} than listening. Memory experts suggest repeating the name aloud straight away and using it in conversation. It may feel forced, but it gives the brain a second chance to make a connection it would {{15}} have missed. Failing that, there is always the time-honoured strategy of asking a friend to find {{16}} for you.',
@@ -74,7 +74,7 @@ export const USE_OF_ENGLISH_C1: Ejercicio[] = [
     examenNumero: 1,
     titulo: 'The appeal of difficult puzzles',
     instrucciones: INSTRUCCIONES[3],
-    minutos: 10,
+    minutos: 8,
     texto:
       'There is something {{17}} about a puzzle that refuses to be solved. Psychologists have long been {{18}} by the fact that people willingly spend hours on tasks that bring no obvious reward. One {{19}} is that the brain treats an unsolved problem as a kind of unfinished business, which produces a mild but {{20}} sense of tension. Solving the puzzle brings relief, and the {{21}} that follows is out of all proportion to the achievement itself.\n\n' +
       'This may be why puzzle apps are so {{22}} successful: they offer a steady supply of small, {{23}} goals. There is, however, a darker side. Designers know exactly how to keep users hooked, and the line between a healthy hobby and a {{24}} habit can be surprisingly thin.',

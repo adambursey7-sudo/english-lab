@@ -153,7 +153,9 @@ body:has(.imprimir) { background: #fff; }
 
 /* Marca de la academia en la portada y datos escritos a máquina (clase, fecha) */
 .imprimir .portada-marca { display: flex; align-items: center; gap: 8pt; }
-.imprimir .portada-logo { max-height: 28pt; max-width: 90pt; object-fit: contain; }
+.imprimir .portada-logo { max-height: 46pt; max-width: 110pt; object-fit: contain; }
+/* El papel se imprime en blanco y negro: el logo a color pasa a grises con más contraste. */
+.imprimir .portada-logo { filter: grayscale(1) contrast(1.2); }
 .imprimir .firma .dato { font-weight: 400; }
 /* Ahorrar tinta: sin fondos grises ni bordes gruesos */
 .imprimir.ahorro { --fondo-suave: #fff; }

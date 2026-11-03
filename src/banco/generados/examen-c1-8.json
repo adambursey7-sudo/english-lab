@@ -7,7 +7,7 @@
   "nombreParte": "Open cloze",
   "titulo": "The rise of board-game cafés",
   "instrucciones": "For questions 9–16, read the text below and think of the word which best fits each gap. Use only one word in each gap.",
-  "minutos": 10,
+  "minutos": 8,
   "texto": "A decade ago, the idea of spending an evening in a café {{9}} of drinking coffee and scrolling through a phone would have struck many people as odd. Yet board-game cafés, where customers pay a small fee to play from a library of hundreds of titles, have sprung up in towns across the country. Few owners expected their businesses to take off {{10}} quickly as they did.\n\nPart of the appeal lies in the fact that nobody needs to read a rulebook. Staff members, known as game gurus, are on hand to explain how each game works, {{11}} that even complete beginners can join in within minutes. Not only {{12}} the games encourage conversation, but they also bring together people who would never otherwise have met.\n\nOf course, running such a place is not without its difficulties. Games are expensive, and a single missing piece can ruin {{13}} would otherwise be a perfect evening. {{14}} the cafés' popularity, many owners still struggle to cover their rent. Even so, those I spoke to were optimistic. One told me she would not go back to her old office job {{15}} any price, and another admitted that, had he known how rewarding the work would be, he would have started years {{16}}.",
   "items": [
    {
@@ -89,7 +89,7 @@
   "nombreParte": "Word formation",
   "titulo": "Farming upwards",
   "instrucciones": "For questions 17–24, read the text below. Use the word given in capitals at the end of some of the lines to form a word that fits in the gap in the same line.",
-  "minutos": 10,
+  "minutos": 8,
   "texto": "In a converted warehouse on the edge of the city, lettuce grows in neat towers under pink LED lights. Visitors are often {{17}} to find that there is not a single grain of soil in sight. Instead, the roots hang in a fine mist of water and nutrients, a method that uses far less water than traditional farming and is therefore of {{18}} interest to regions suffering from drought.\n\nThe founder, a former engineer, admits that the early days were {{19}}. Electricity bills were enormous, and several crops failed because of a {{20}} in the ventilation system. Yet he never considered giving up, and his {{21}} has since paid off. The farm now supplies fresh herbs to dozens of local restaurants, which value both their {{22}} and their exceptional flavour.\n\nCritics argue that such farms will never replace fields, and they may well be right. Nevertheless, the technology offers a {{23}} way of producing food close to the people who eat it, and its {{24}} should not be underestimated.",
   "items": [
    {
@@ -182,11 +182,10 @@
     "clave": "SOONER",
     "frase": "We had only just reached the lake when the rain began to fall.",
     "inicio": "No",
-    "fin": "the rain began to fall.",
+    "fin": "the lake than the rain began to fall.",
     "correctas": [
-     "sooner had we reached the lake than",
-     "sooner had we reached the lake when",
-     "sooner had we arrived at the lake than"
+     "sooner had we reached",
+     "sooner had we arrived at"
     ],
     "explicacion": "\"No sooner\" at the start of a sentence requires inversion with the past perfect: \"had we reached\", followed by \"than\"."
    },
@@ -364,7 +363,7 @@
   "nombreParte": "Multiple-choice cloze",
   "titulo": "The watch that knows too much",
   "instrucciones": "For questions 1–8, read the text below and decide which answer (A, B, C or D) best fits each gap.",
-  "minutos": 10,
+  "minutos": 8,
   "texto": "Few gadgets have become as {{1}} a part of daily life as the fitness band. Strapped to millions of wrists, it counts our steps, monitors our sleep and, if we are not careful, quietly builds a detailed picture of how we live. For most wearers the trade-off seems perfectly reasonable: a little data in {{2}} for a healthier routine.\n\nPrivacy campaigners, however, are not so easily {{3}}. They point out that heart-rate patterns can reveal far more than fitness levels, hinting at stress, illness or even pregnancy. Once such information leaves the device, it is often passed on to third parties, sometimes without the user's full {{4}}. Companies insist that the data is anonymised, yet researchers have repeatedly shown that individuals can be {{5}} from supposedly anonymous records by cross-referencing a few simple details such as the time and place of a morning run.\n\nThe problem is that few people read the terms and conditions before they {{6}} to them. Some experts are calling for stricter rules, arguing that consumers should not be expected to {{7}} the small print of every product they wear. Until that happens, the safest approach may be to think carefully about what we are prepared to {{8}} in exchange for convenience.",
   "items": [
    {
@@ -1884,7 +1883,7 @@
   "nombreParte": "Cross-text multiple matching",
   "titulo": "A letter in a second-hand book",
   "instrucciones": "You are going to read four extracts from articles in which writers give their views on finding a personal letter inside a second-hand book. For questions 37–40, choose from the writers A–D. The writers may be chosen more than once.",
-  "minutos": 12,
+  "minutos": 9,
   "secciones": [
    {
     "letra": "A",

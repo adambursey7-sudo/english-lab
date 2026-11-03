@@ -7,7 +7,7 @@
   "nombreParte": "Word formation",
   "titulo": "Gardening beneath the waves",
   "instrucciones": "For questions 17–24, read the text below. Use the word given in capitals at the end of some of the lines to form a word that fits in the gap in the same line.",
-  "minutos": 10,
+  "minutos": 8,
   "texto": "Coral reefs have suffered a {{17}} decline over the past few decades, but a growing network of underwater nurseries is offering fresh hope. Divers collect small fragments of coral that have broken off naturally and attach them to frames, where they are left to grow in {{18}} conditions. Within months, these fragments can multiply, and the results are often {{19}} faster than anyone predicted.\n\nThe work is far from simple. Marine biologists must monitor water temperature and quality constantly, and a sudden change can prove {{20}} for the young colonies. Volunteers also play a vital role, though their {{21}} needs careful training, since a clumsy movement can cause irreparable damage. Some critics argue that the nurseries merely treat the symptoms rather than the causes of the problem, and that without a serious reduction in {{22}}, the reefs will never recover fully. Yet supporters remain {{23}}. As one project leader put it, even a modest recovery would be a(n) {{24}} for the countless species that depend on these fragile habitats.",
   "items": [
    {
@@ -95,7 +95,7 @@
   "nombreParte": "Open cloze",
   "titulo": "The keeper's diary",
   "instrucciones": "For questions 9–16, read the text below and think of the word which best fits each gap. Use only one word in each gap.",
-  "minutos": 10,
+  "minutos": 8,
   "texto": "When the old lighthouse on the headland was finally automated, a box of diaries was found in the cellar, {{9}} of them written by a keeper called Thomas Reeve. Reading them today, one is struck not by the storms he describes but by the sheer ordinariness of his days. He mends lamps, scrubs the stairs and records the weather with a precision {{10}} would impress any modern forecaster.\n\nYet the entries are far from dull. On one page, Reeve complains that the nearest village is so remote that he has not spoken to {{11}} for three weeks. On another, he confesses that, had he known how lonely the job would be, he would never {{12}} applied for it. {{13}} his grumbling, however, there is a clear affection for the place. He notes with pride that not a single ship was lost on his watch, and he takes great pleasure in the way the beam sweeps across the water {{14}} dusk.\n\nHistorians believe the diaries are valuable {{15}} for what they say about shipping routes but also for the picture they paint of a vanished way of life. A local museum plans to display them, and visitors will no doubt find {{16}} hard to put them down.",
   "items": [
    {
@@ -120,8 +120,7 @@
     "tipo": "palabra",
     "correctas": [
      "anyone",
-     "anybody",
-     "a soul"
+     "anybody"
     ],
     "explicacion": "After the negative \"has not spoken\", \"anyone\" is the natural pronoun for a person."
    },
@@ -187,9 +186,7 @@
     "correctas": [
      "would not have reached",
      "wouldn't have reached",
-     "would never have reached",
-     "would not have been able to reach",
-     "wouldn't have been able to reach"
+     "would never have reached"
     ],
     "explicacion": "A third conditional with inversion: \"Had + subject + not + past participle…, … would not have reached\". The key word HAD is already in the first part, so the gap needs the result clause. NOTE: the answer must still make sense with the key word given in the sentence start."
    },
@@ -214,7 +211,6 @@
     "inicio": "The search",
     "fin": "because it was getting dark.",
     "correctas": [
-     "was called off by the team leader",
      "was called off by the leader",
      "was called off"
     ],
@@ -502,7 +498,7 @@
   "nombreParte": "Cross-text multiple matching",
   "titulo": "Improvisation in jazz",
   "instrucciones": "You are going to read four extracts from articles in which writers give their views on improvisation in jazz. For questions 37–40, choose from the writers A–D. The writers may be chosen more than once.",
-  "minutos": 12,
+  "minutos": 9,
   "secciones": [
    {
     "letra": "A",
@@ -1795,7 +1791,7 @@
   "nombreParte": "Multiple-choice cloze",
   "titulo": "In praise of doing nothing",
   "instrucciones": "For questions 1–8, read the text below and decide which answer (A, B, C or D) best fits each gap.",
-  "minutos": 10,
+  "minutos": 8,
   "texto": "Boredom has a poor reputation. Parents dread the summer holidays because children will {{1}} complain that there is nothing to do, and employers treat idle moments as a problem to be eliminated. Yet psychologists increasingly argue that a little boredom is the {{2}} of creative thought. When the mind is not occupied with a task, it begins to wander, and it is often during these aimless moments that unexpected connections are {{3}}.\n\nOne experiment asked volunteers to copy numbers out of a telephone directory for twenty minutes before taking a test of imaginative thinking. Those who had endured the dull task came up with far more original ideas than a group who had {{4}} straight into the test. The researchers concluded that boredom pushes us to {{5}} for stimulation, and that we find it in our own imagination.\n\nThe lesson is not that we should seek out tedium, but that we should stop {{6}} every spare minute with a screen. Many writers and inventors describe their best ideas arriving in the shower or on a long walk, when their attention was not {{7}} on anything in particular. Perhaps it is time to {{8}} ourselves the occasional empty afternoon.",
   "items": [
    {
