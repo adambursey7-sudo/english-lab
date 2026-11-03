@@ -30,6 +30,7 @@ export const PERFILES: Perfil[] = import.meta.env.MODE === 'producto' ? [] : [
   { id: 'maria', nombre: 'María', examen: 'pau', foto: 'perfil-maria.jpg', pin: '6ee6c012193a4670182be25642d37ef8ca709b079a5e3548c055d0e27e386ccd' },
   { id: 'aroa', nombre: 'Aroa', examen: 'pau', foto: 'perfil-aroa.jpg', pin: 'd82551e641f71547880c4964467bee263c237adf5575df046fd284598fdfc9e2' },
   { id: 'alba', nombre: 'Alba', examen: 'b1', examenes: ['b1', 'b2'], pin: '62bf07e23547c31938e0a9c4a88684a2e22b2163a71fa1463e66ea0514e26339' },
+  { id: 'sergio', nombre: 'Sergio', examen: 'b2', pin: '6ec60d8062bc57620033f630d348aaa97182d5b05ca3e0bc7a0c160e4097b9fa' },
 ];
 
 // La sesión guarda `<id>:<PIN>` y se vuelve a comprobar al abrir: con solo el id cualquiera podía escribirlo a mano
