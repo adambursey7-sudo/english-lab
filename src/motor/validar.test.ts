@@ -3,6 +3,11 @@ import { BANCO } from '../banco';
 import { densidadLarga, solapamiento, validarEjercicio } from './validar';
 
 describe('validador', () => {
+  it('no hay dos ejercicios con el mismo id en el banco', () => {
+    const ids = BANCO.map((e) => e.id);
+    expect(ids.filter((id, i) => ids.indexOf(id) !== i)).toEqual([]);
+  });
+
   it('todo el banco actual pasa (el banco es la vara de medir)', () => {
     for (const e of BANCO) {
       const otros = BANCO.filter((x) => x.id !== e.id).flatMap((x) => [x.texto ?? '', ...(x.secciones?.map((s) => s.texto) ?? [])]);
