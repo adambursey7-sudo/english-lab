@@ -39,9 +39,9 @@ describe('notas de Adam', () => {
 });
 
 describe('perfiles', () => {
-  it('hay tres del C1 y cuatro de la PAU, con ids únicos', () => {
+  it('hay tres del C1 y cinco de la PAU, con ids únicos', () => {
     expect(perfilesDe('c1').map((p) => p.nombre)).toEqual(['Eduardo', 'Gabriela', 'Adam']);
-    expect(perfilesDe('pau').map((p) => p.nombre)).toEqual(['Josito', 'Laurita', 'María', 'Aroa']);
+    expect(perfilesDe('pau').map((p) => p.nombre)).toEqual(['Josito', 'Laurita', 'María', 'Aroa', 'Claudia']);
     expect(new Set(PERFILES.map((p) => p.id)).size).toBe(PERFILES.length);
     expect(perfilDe('josito')?.examen).toBe('pau');
     expect(perfilDe('nadie')).toBeUndefined();

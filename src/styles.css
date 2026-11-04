@@ -607,3 +607,6 @@ button:focus-visible, [role='button']:focus-visible { outline: 2px solid var(--t
 .retomar b { font-family: var(--display); font-size: 19px; }
 .retomar .silencio { font-size: 13.5px; }
 .retomar-botones { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 4px; }
+
+.buscar-usuario { display: grid; gap: 10px; padding: 4px 0 8px; }
+.buscar-usuario input { font: inherit; font-size: 17px; padding: 12px 14px; border: 1px solid #c9ced8; border-radius: 12px; }

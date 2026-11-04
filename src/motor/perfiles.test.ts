@@ -33,8 +33,8 @@ describe('qué examen ve cada uno', () => {
   });
 
   it('Alba sale en B1 y en B2 y en ningún otro examen', () => {
-    expect(perfilesDe('b1').map((p) => p.id)).toEqual(['alba']);
-    expect(perfilesDe('b2').map((p) => p.id)).toEqual(['alba', 'sergio']);
+    expect(perfilesDe('b1').map((p) => p.id)).toEqual(['alba', 'maria-l', 'claudia']);
+    expect(perfilesDe('b2').map((p) => p.id)).toEqual(['alba', 'maria-l', 'claudia', 'sergio']);
     expect(perfilesDe('c1').map((p) => p.id)).not.toContain('alba');
     expect(perfilesDe('pau').map((p) => p.id)).not.toContain('alba');
     expect(etiquetaExamenes(PERFILES.find((p) => p.id === 'alba')!)).toBe('Cambridge B1 + B2');

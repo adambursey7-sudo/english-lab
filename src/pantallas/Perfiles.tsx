@@ -1,8 +1,7 @@
 import { leerMarca, urlLogo } from '../marca';
 import { useEffect, useRef, useState } from 'react';
-import { EXAMENES, NOMBRES_EXAMEN } from '../banco/tipos';
 import { Cara } from '../componentes/Cara';
-import { apuntarFallo, esperaPin, etiquetaExamenes, perfilesDe, pinCorrecto, type Perfil } from '../motor/perfiles';
+import { apuntarFallo, esperaPin, etiquetaExamenes, PERFILES, pinCorrecto, type Perfil } from '../motor/perfiles';
 
 interface Props {
   onEntrar: (perfil: Perfil, pin: string) => void;
@@ -13,6 +12,14 @@ interface Props {
 export function Perfiles({ onEntrar, onInvitado }: Props) {
   const marca = leerMarca();
   const [elegido, setElegido] = useState<Perfil>();
+  const [texto, setTexto] = useState('');
+  const [noHay, setNoHay] = useState(false);
+  const buscar = (e: React.FormEvent) => {
+    e.preventDefault();
+    const hallado = PERFILES.find((p) => limpia(p.nombre) === limpia(texto));
+    if (hallado) setElegido(hallado);
+    else setNoHay(true);
+  };
 
   if (elegido) return <TecladoPin perfil={elegido} onBien={(pin) => onEntrar(elegido, pin)} onVolver={() => setElegido(undefined)} />;
 
@@ -25,27 +32,19 @@ export function Perfiles({ onEntrar, onInvitado }: Props) {
             <div>
               <div className="sub">{marca.nombre}</div>
               <div className="titulo">¿Quién eres?</div>
-              <div className="racha">Entra en tu perfil con el PIN que te dio Adam</div>
+              <div className="racha">Busca tu usuario y entra con el PIN que te dio Adam</div>
             </div>
           </div>
         </div>
       </header>
 
       <main className="contenido inicio">
-        {EXAMENES.filter((x) => perfilesDe(x).length > 0).map((x) => (
-          <section key={x} className="bloque">
-            <h2>{NOMBRES_EXAMEN[x]}</h2>
-            <div className="perfiles">
-              {perfilesDe(x).map((p) => (
-                <button key={p.id} type="button" className={`perfil tono-${x === 'pau' ? 'prueba' : 'reading-use'}`} onClick={() => setElegido(p)}>
-                  <span className="avatar" aria-hidden="true"><Cara perfil={p} /></span>
-                  <b>{p.nombre}</b>
-                  <span className="candado" aria-label="con PIN"><IconoCandado /></span>
-                </button>
-              ))}
-            </div>
-          </section>
-        ))}
+        <form className="buscar-usuario" onSubmit={buscar}>
+          <label htmlFor="buscar-usuario"><b>Buscar usuario</b></label>
+          <input id="buscar-usuario" type="text" autoComplete="off" autoCapitalize="words" placeholder="Tu nombre (y la inicial de tu apellido)" value={texto} onChange={(e) => { setTexto(e.target.value); setNoHay(false); }} />
+          <button type="submit" className="btn">Buscar</button>
+          {noHay && <p className="aviso-pin mal" role="status">No encuentro ese usuario. Revisa cómo está escrito o pídeselo a Adam.</p>}
+        </form>
 
         <section className="invitado-entrar">
           <button type="button" className="btn sec" onClick={onInvitado}>Entrar sin cuenta</button>
@@ -54,6 +53,11 @@ export function Perfiles({ onEntrar, onInvitado }: Props) {
       </main>
     </div>
   );
+}
+
+/** Sin mayúsculas, tildes ni espacios de más: «maria l» vale para «María L». */
+function limpia(t: string): string {
+  return t.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/\s+/g, ' ').trim();
 }
 
 function TecladoPin({ perfil, onBien, onVolver }: { perfil: Perfil; onBien: (pin: string) => void; onVolver: () => void }) {
@@ -139,14 +143,5 @@ function TecladoPin({ perfil, onBien, onVolver }: { perfil: Perfil; onBien: (pin
         <p className="silencio pequeno centrado">¿No te acuerdas? Pídeselo a Adam.</p>
       </main>
     </div>
-  );
-}
-
-function IconoCandado() {
-  return (
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-      <rect x="5" y="11" width="14" height="10" rx="2" />
-      <path d="M8 11V8a4 4 0 0 1 8 0v3" />
-    </svg>
   );
 }
